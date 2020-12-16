@@ -1,0 +1,60 @@
+
+global:
+  imageTagSuffix: boards-production
+  imagePullSecret: dockerhub
+  env:
+    APP_URI: https://boards.example.com
+    COTE_DISCOVERY_REDIS_HOST: boards-redis
+    API_GATEWAY: https://api.boards.example.com
+    S3_ENDPOINT:
+    S3_ACCESS_KEY:
+    S3_SECRET_KEY:
+    S3_PORT: "443"
+    S3_SECURE: "true"
+    S3_BUCKET: kudos-boards
+    REDIS_CACHE_HOST: boards-redis
+
+boards:
+  ingress:
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    hosts:
+      - api.boards.example.com
+    tls:
+     - hosts:
+         - api.boards.example.com
+       secretName: kudosboards-domain-secret
+  webfront:
+    ingress:
+      annotations:
+        kubernetes.io/ingress.class: nginx
+      hosts:
+        - boards.example.com
+      tls:
+       - hosts:
+          - boards.example.com
+         secretName: kudosboards-domain-secret
+  core:
+    env:
+      APP_ID: kudos.boards
+      NOTIFIER_EMAIL_HOST:
+      NOTIFIER_EMAIL_USERNAME:
+      NOTIFIER_EMAIL_PASSWORD:
+  app:
+    env:
+      MONGO_URI: mongodb://replset:port/db?options
+  licence:
+    env:
+      MONGO_URI: mongodb://replset:port/db?options
+  notification:
+    env:
+      MONGO_URI: mongodb://replset:port/db?options
+  user:
+    env:
+      MONGO_URI: mongodb://replset:port/db?options
+      LEGACY_CALLBACK_URI: "true"
+  provider:
+    env:
+      REDIS_HOST: boards-redis
+  redis:
+    fullnameOverride: boards-redis

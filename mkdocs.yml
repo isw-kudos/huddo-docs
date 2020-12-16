@@ -1,0 +1,174 @@
+site_name: Huddo Docs
+site_description: Enterprise productivity solutions
+site_author: Andrew Reynolds
+site_url: https://docs.huddo.com/
+repo_url: https://www.huddo.com
+repo_name: huddo.com
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: "https://github.com/isw-kudos"
+    - icon: fontawesome/brands/twitter
+      link: "https://twitter.com/kudosbadges"
+    - icon: fontawesome/brands/linkedin
+      link: "https://www.linkedin.com/company/isw_2/about/"
+    - icon: fontawesome/brands/youtube
+      link: "https://www.youtube.com/channel/UC_9nMUcp6jcweQZML2qIy8A"
+nav:
+  - Welcome: index.md
+  # - Huddo Analytics:
+  #   - Installation:
+  #     - FAQ: analytics/websphere-faq.md
+  - Huddo Badges:
+     - Details: badges/index.md
+     - Installation:
+        - Overview: badges/install/overview.md
+        - Install Application: badges/install/app.md
+        - Widgets: badges/install/install-widgets.md
+        - Mobile: badges/install/mobile.md
+        - Apply Changes: badges/install/apply-changes.md
+        - Add Widgets: badges/install/add-widgets.md
+        - Community Properties: badges/install/comm-properties.md
+        - Licence: badges/install/licence.md
+        - Defaults: badges/install/load-defaults.md
+        - Leaderboard: badges/install/leaderboard.md
+        - Awards: badges/install/awards.md
+        - Engine: badges/install/engine.md
+        - Customising: badges/install/customising.md
+        #- Embedded Experience: badges/install/embedded-exp.md
+        - FAQ: badges/websphere-faq.md
+     - Update:
+        - Overview: badges/update/overview.md
+        - Update the Application: badges/update/update_app.md
+        - Refresh Widget Cache: badges/update/refresh_cache.md
+  - Huddo Boards:
+      - Versions: boards/index.md
+      - Boards Cloud:
+          - Overview: boards/cloud.md
+          - Integrations:
+              - HCL Connections On-Prem:
+                  - Authentication: boards/connections/auth-hybrid.md
+                  - Connections Header: boards/connections/header-hybrid.md
+                  - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
+                  - Connections Widgets: boards/connections/widgets-hybrid.md
+                  - Connections Search Integration: boards/connections/customizer-search-app.md
+                  - Connections Mobile App: boards/connections/mobile-app-hybrid.md
+              - HCL Verse: boards/verse/addin-hybrid.md
+              - Office 365 for Business:
+                  - Overview: boards/msgraph/overview.md
+                  - Getting Started: boards/msgraph/getting-started.md
+                  - App Tile: boards/msgraph/custom-tiles.md
+                  - Teams Integration: boards/msgraph/teams.md
+                  - Outlook Plugin: boards/msgraph/outlook.md
+                  - Sharepoint Pages: boards/msgraph/sharepoint.md
+              - Auth0: boards/auth0/index.md
+      - Boards Docker:
+          - For HCL Connections: boards/cp/index.md
+          - For Kubernetes: boards/kubernetes/index.md
+          - Common Config:
+              - Environment: boards/env/common.md
+              - Team Logins: boards/env/teams.md
+          - Integrations:
+              - HCL Connections On-Prem:
+                  - Activity Migration: boards/connections/migration.md
+                  - Authentication: boards/connections/auth-on-prem.md
+                  - Connections Header: boards/connections/header-on-prem.md
+                  - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
+                  - Connections Widgets: boards/connections/widgets-on-prem.md
+                  - Connections Mobile App: boards/connections/mobile-app-on-prem.md
+                  - Web Server Config: boards/connections/httpd.md
+              - HCL Verse: boards/verse/addin-on-prem.md
+              - Office 365:
+                  - Authentication: boards/msgraph/auth.md
+                  - Teams Notification Bot: boards/msgraph/notification-bot.md
+                  - Teams App: boards/msgraph/teams-on-prem.md
+      - Boards Hybrid: boards/hybrid.md
+      - FAQ:
+          - Languages: boards/faq/languages.md
+      - Troubleshooting:
+          - Activities Plus: boards/troubleshooting/activities-plus-install.md
+          - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
+          - Boards Docker: boards/troubleshooting/conn-on-prem.md
+          - Boards WebSphere: boards/troubleshooting/websphere.md
+          - Office 365: boards/troubleshooting/office365.md
+          - Notifications: boards/troubleshooting/notifications.md
+          - Browsers:
+              - Safari: boards/troubleshooting/safari.md
+      # - API Documentation: /assets/boards/api-documentation.html
+      - How To Guide:
+          - Knowledge Base & Support: boards/howto/knowledgebase.md
+          - Getting Started: boards/howto/getting-started-with-kudos-boards.md
+          - Quick Tips: boards/howto/quick-tips-for-boards.md
+          - Starting a trial: boards/howto/start-a-trial.md
+          - Mobile App: boards/howto/mobile-app.md
+          - Home Page: boards/howto/home-page.md
+          - Creating Boards:
+              - Create a Template: boards/howto/creating-templates.md
+              - Use a Template: boards/howto/accessing-global-templates.md
+              - Import an Activity: boards/howto/kudos-boards-import-activity.md
+          - Working in a Board:
+              - Adding Members: boards/howto/adding-members-to-a-board.md
+              - Member Permissions: boards/howto/permissions.md
+              - Archiving and Restoring: boards/howto/archiving-and-restoring.md
+              - Attaching Files to Cards: boards/howto/attaching-files.md
+              - Mind Map: boards/howto/mind-map-view.md
+              - Timeline: boards/howto/timeline-view-in-boards.md
+          - Boards in other Apps:
+              - HCL Verse: boards/howto/use-verse.md
+              - Login with Auth0: boards/howto/use-auth0.md
+              - Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
+              - Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
+              - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
+              - Microsoft Teams: boards/howto/adding-boards-to-teams.md
+              - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
+          - Administation:
+              - Manage Config: boards/howto/org-config.md
+              - Manage Licences: boards/howto/manage-licences.md
+
+  - Huddo Ideas: ideas/howto.md
+  - Buzzy:
+      # - Overview: buzzy/index.md
+    - Overview: buzzy/buzzy-icp.md
+    - Connections OAuth Config: buzzy/buzzy-oauth.md
+    - WAS Config: buzzy/buzzy-wasconfig.md
+    - Header Config: buzzy/buzzy-header.md
+    - Connections Widgets: buzzy/buzzy-widgets.md
+    - Mongo: buzzy/mongo.md
+    - Minio: buzzy/minio.md
+  # - Docker Swarm:
+      # - Installation: swarm/index.md
+      # - Storage: swarm/storage.md
+      # - Advanced: swarm/advanced.md
+      # - Troubleshooting: swarm/troubleshooting.md
+  # - Kubernetes:
+  # - Installation: kubernetes/index.md
+  # - Advanced: kubernetes/advanced.md
+  # - Troubleshooting: kubernetes/troubleshooting.md
+
+  - CCM Migrator:
+    - Installation: ccm-migrator/install.md
+    - Usage: ccm-migrator/usage.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+
+theme:
+  name: material
+  features:
+    - tabs
+  palette:
+    primary: light blue
+    accent: amber
+  favicon: assets/images/favicon.ico
+
+extra_css:
+  - "/assets/css/custom.css"
+
+extra_javascript:
+  - "//js.hs-scripts.com/6268180.js"
+
+google_analytics:
+  - "UA-1747668-5"
+  - "auto"

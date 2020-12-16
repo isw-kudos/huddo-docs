@@ -1,0 +1,19 @@
+# In order to customise the context root of the Boards application, please merge the following into your boards.yaml file
+# Note: replace /boards with the custom UI path, and /api-boards with the route for the API
+global:
+  env:
+    APP_URI: https://example.com/boards
+    APP_URI_PATH: /boards
+
+core:
+  ingress:
+    path: /api-boards/(.*)
+  env:
+    API_URI_PATH: /api-boards
+
+webfront:
+  ingress:
+    path: /boards/(.*)
+  env:
+    API_GATEWAY: https://example.com/api-boards
+

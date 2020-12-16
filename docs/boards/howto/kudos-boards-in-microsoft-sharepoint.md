@@ -1,0 +1,52 @@
+<img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
+
+## Embedding Huddo Boards in a SharePoint Site Page
+
+Huddo Boards' integration with Microsoft Office 365 allows you to add Huddo Boards to a SharePoint site page and work directly on the board from the page.
+
+In the example below, we've created a site page called "Where to Eat in Melbourne" and added our Food Objectives 2019 board to it. When added, you and your colleagues can work directly from a site page on a board.
+
+![](/assets/boards/sharepoint1.PNG)
+
+
+Before proceeding, you will need a site admin to enable security settings as described [here](/boards/msgraph/sharepoint_admin/)
+
+
+1. From Sharepoint main menu, go to `Pages` -> `New` -> `Site Page`
+
+      ![example](/assets/msgraph/sharepoint1.png)
+
+
+1. Give your page a name, then click the `+`
+
+      ![example](/assets/msgraph/sharepoint2.png)
+
+1. Choose `Embed` from the drop down menu
+
+      ![example](/assets/msgraph/sharepoint3.png)
+
+1. Open [Huddo Boards](https://boards.huddo.com/auth/signin) and select the board you wish to embed in the sharepoint page.  Click the `Board Options` button
+
+      ![example](/assets/msgraph/sharepoint4.png)
+
+1. Click `Copy embed code`
+
+      ![example](/assets/msgraph/sharepoint5.png)
+
+1. Go back to sharepoint and paste the code you copied in the box provided
+
+      ![example](/assets/msgraph/sharepoint6.png)
+
+> <img style="float: left;" src="/assets/msgraph/sharepoint6.5.png" /> Note, if you don't see the input box above, you can get it back by clicking the embed you added previously and clicking it's edit button. <br><br><br><br>
+
+1. To make a small amount of extra room on your page, you may wish to edit the title and choose `Plain` as it's layout.
+
+      ![example](/assets/msgraph/sharepoint7.png)
+
+1. Once you are happy with the page, click 'Publish' to make it visible to other members of your site.
+
+      ![example](/assets/msgraph/sharepoint8.png)
+
+1. Promote your new page by following the recommendations
+
+      ![example](/assets/msgraph/sharepoint9.png)

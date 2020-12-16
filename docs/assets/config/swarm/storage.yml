@@ -1,0 +1,41 @@
+version: '3.5'
+
+x-minio-access: &minio-access <ACCESS_KEY>
+x-minio-secret: &minio-secret <SECRET_KEY>
+
+networks:
+  # used for internal communication between services/db/s3
+  # security requires this should never be exposed to external traffic
+  storage:
+    internal: true
+    external: false
+    name: storage
+
+services:
+  # Shared DB for business data
+  mongo:
+    image: bitnami/mongodb:4.0.10-r1
+    environment:
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_ADVERTISED_HOSTNAME: mongo
+    networks:
+      storage:
+        aliases:
+          - mongo
+    volumes:
+     - /data/nfs/mongo:/bitnami
+
+  # s3 storage for cached images (profile, group) etc
+  minio:
+    image: minio/minio
+    restart: always
+    networks:
+      storage:
+        aliases:
+          - minio
+    volumes:
+     - /data/nfs/minio:/data
+    environment:
+      MINIO_ACCESS_KEY: *minio-access
+      MINIO_SECRET_KEY: *minio-secret
+    command: server /data
