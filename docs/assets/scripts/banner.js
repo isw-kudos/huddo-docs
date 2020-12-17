@@ -32,7 +32,7 @@ banner.innerHTML = `
 @media (max-width: 1920px) {
   .huddo-banner {
     top: initial;
-    bottom: 0;
+    bottom: 180px;
   }
 }
 
