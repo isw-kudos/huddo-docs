@@ -13,7 +13,7 @@
 
 1. Select `I have a URL for the manifest file.`
 
-        https://kudosboards.com/office/outlook/add-in.xml
+        https://boards.huddo.com/office/outlook/add-in.xml
 
       Click `Next`
 

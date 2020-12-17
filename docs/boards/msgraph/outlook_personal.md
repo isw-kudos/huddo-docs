@@ -17,7 +17,7 @@
 
       ![example](/assets/msgraph/outlook_personal3.png)
 
-1. Provide the url: `https://kudosboards.com/office/outlook/add-in.xml` and click OK.
+1. Provide the url: `https://boards.huddo.com/office/outlook/add-in.xml` and click OK.
 
       ![example](/assets/msgraph/outlook_personal4.png)
 

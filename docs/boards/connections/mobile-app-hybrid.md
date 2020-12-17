@@ -17,13 +17,13 @@ Basic instructions for adding Huddo Boards into the HCL Connections mobile appli
             <Application name="Boards" enabled="true">
               <ApplicationIcon>
                 <Android>
-                  <Hdpi>http://kudosboards.com/img/logo-small.png</Hdpi>
-                  <Mdpi>http://kudosboards.com/img/logo-small.png</Mdpi>
-                  <Ldpi>http://kudosboards.com/img/logo-small.png</Ldpi>
+                  <Hdpi>http://boards.huddo.com/img/logo-small.png</Hdpi>
+                  <Mdpi>http://boards.huddo.com/img/logo-small.png</Mdpi>
+                  <Ldpi>http://boards.huddo.com/img/logo-small.png</Ldpi>
                 </Android>
                 <IOS>
-                  <Reg>http://kudosboards.com/img/logo-small.png</Reg>
-                  <Retina>http://kudosboards.com/img/logo-small.png</Retina>
+                  <Reg>http://boards.huddo.com/img/logo-small.png</Reg>
+                  <Retina>http://boards.huddo.com/img/logo-small.png</Retina>
                 </IOS>
                 <DefaultLocation>http://boards.huddo.com/img/logo-small.png</DefaultLocation>
               </ApplicationIcon>

@@ -16,18 +16,18 @@
 
         --%><tr><%--
           --%><th scope="row" class="lotusNowrap"><%--
-            --%><img width="16" src="https://kudosboards.com/img/logo-small.png" /><%--
-            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]"><%--
+            --%><img width="16" src="https://boards.huddo.com/img/logo-small.png" /><%--
+            --%><a href="https://boards.huddo.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]"><%--
               --%><strong><fmt:message key="connections.component.name.kudos.boards" /></strong><%--
             --%></a><%--
           --%></th><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/todos/assigned"><%--
+            --%><a href="https://boards.huddo.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/todos/assigned"><%--
               --%><fmt:message key="label.menu.kudos.boards.todos" /><%--
             --%></a><%--
           --%></td><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/templates/public"><%--
+            --%><a href="https://boards.huddo.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/templates/public"><%--
               --%><fmt:message key="label.menu.kudos.boards.templates" /><%--
             --%></a><%--
           --%></td><%--

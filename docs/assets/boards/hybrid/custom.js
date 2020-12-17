@@ -13,7 +13,7 @@
         }
 
         var frame = document.createElement('iframe');
-        var boardsURL = 'https://kudosboards.com/auth/connections/' + btoa(location.hostname);
+        var boardsURL = 'https://boards.huddo.com/auth/connections/' + btoa(location.hostname);
         if (data.type==='community')
           frame.src = boardsURL+'?redirect_to=/group/connections/' + data.uid+'&nav=false';
         else

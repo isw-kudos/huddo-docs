@@ -41,7 +41,7 @@ The requested permissions are:
 | Have full access to all files user can access       | Allows us to link to your OneDrive files                                                                                            |
 | Read items in all site collections                  | Allows us to link to OneDrive files owned by your Groups or Teams                                                                   |
 
-> You can also go to [Your Admin Page](https://kudosboards.com/admin/clients/manage) to approve the above.
+> You can also go to [Your Admin Page](https://boards.huddo.com/admin/clients/manage) to approve the above.
 
 ![Manage Client](/assets/msgraph/manage-org.png)
 

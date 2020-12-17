@@ -24,7 +24,7 @@ The steps below will test a Huddo Boards / Activities Plus oauth setup.
 
   | KEY           | VALUE                                                      |
   | ------------- | ---------------------------------------------------------- |
-  | client_id     | kudosboards                                                |
+  | client_id     | huddoboards                                                |
   | client_secret | your client secret                                         |
   | redirect_uri  | https://(connections url)/boards/auth/connections/callback |
   | grant_type    | authorization_code                                         |
@@ -34,7 +34,7 @@ The steps below will test a Huddo Boards / Activities Plus oauth setup.
 
   replace connections url in both places below
 
-    https://(connections url)/oauth2/endpoint/connectionsProvider/authorize?client_id=kudosboards&redirect_uri=https%3A%2F%2F(connections url)%2Fapi-boards%2Fauth%2Fconnections%2Fcallback&response_type=code&state=1234
+    https://(connections url)/oauth2/endpoint/connectionsProvider/authorize?client_id=huddoboards&redirect_uri=https%3A%2F%2F(connections url)%2Fapi-boards%2Fauth%2Fconnections%2Fcallback&response_type=code&state=1234
 
 #### Click approve
 

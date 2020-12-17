@@ -25,7 +25,7 @@ This is usually accessible through a URL like:
 1. Set the following details and click `OK`
 
         EXTERNAL_APPS_CONFIG
-        {"boards":"https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]"}
+        {"boards":"https://boards.huddo.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]"}
 
     Where `[CONNECTIONS_HOSTNAME_BASE64]` is
 

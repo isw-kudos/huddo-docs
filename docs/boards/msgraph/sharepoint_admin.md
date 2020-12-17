@@ -17,7 +17,7 @@ Embedding Huddo Boards in sharepoint requires iframe permissions for users, it i
 
   ![example](/assets/msgraph/sharepointadmin2.png)
 
-1. Type in kudosboards.com and click `Add`
+1. Type in boards.huddo.com and click `Add`
 
   ![example](/assets/msgraph/sharepointadmin3.png)
 

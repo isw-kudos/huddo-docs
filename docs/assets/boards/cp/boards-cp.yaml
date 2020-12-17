@@ -52,7 +52,7 @@ licence:
 user:
   env:
     # CONNECTIONS_NAME: HCL Connections
-    CONNECTIONS_CLIENT_ID: kudosboards
+    CONNECTIONS_CLIENT_ID: huddoboards
     CONNECTIONS_URL: https://[CONNECTIONS_URL]
     CONNECTIONS_CLIENT_SECRET: [CLIENT_SECRET]
     CONNECTIONS_ADMINS: "[\"<ADMIN_EMAIL>\"]"

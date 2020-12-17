@@ -70,8 +70,8 @@ Update DNS records with a CNAME entry pointing to your swarm URL.
 
 For example:
 
-    kudosboards.com -> swarm.isw.net.au
-    api.kudosboards.com -> swarm.isw.net.au
+    boards.huddo.com -> swarm.isw.net.au
+    boards.api.huddo.com -> swarm.isw.net.au
 
 ---
 

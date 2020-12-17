@@ -31,13 +31,13 @@ In order for Huddo Boards to authenticate with your Connections environment, you
 
 1. To view the uniquely created client clientSecret
 
-        OAuthApplicationRegistrationService.getApplicationById('kudosboards')
+        OAuthApplicationRegistrationService.getApplicationById('huddoboards')
 
 
     These commands will print the definition. Please take note of the `clientSecret`.  We will use this later on as
 
         CONNECTIONS_URL=https://connections.example.com
-        CONNECTIONS_CLIENT_ID=kudosboards
+        CONNECTIONS_CLIENT_ID=huddoboards
         CONNECTIONS_CLIENT_SECRET=[VALUE_PRINTED]
 
 ## Configure Auto Auth
@@ -49,10 +49,10 @@ Steps to configure the Huddo Boards application for auto-authorize (also [docume
 1. Add the new line to the following section in `[cellname]/oauth20/connectionsProvider.xml`
 
         <parameter name="oauth20.autoauthorize.clients" type="ws" customizable="true">
-          <value>kudosboards</value>
+          <value>huddoboards</value>
         </parameter>
 
-    > ** Note:** keep any existing values and add the new line for `kudosboards`
+    > ** Note:** keep any existing values and add the new line for `huddoboards`
 
 1. Recreate the provider via this command:
 

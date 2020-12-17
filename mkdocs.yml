@@ -7,14 +7,16 @@ repo_name: huddo.com
 
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: "https://github.com/isw-kudos"
-    - icon: fontawesome/brands/twitter
-      link: "https://twitter.com/kudosbadges"
-    - icon: fontawesome/brands/linkedin
-      link: "https://www.linkedin.com/company/isw_2/about/"
-    - icon: fontawesome/brands/youtube
-      link: "https://www.youtube.com/channel/UC_9nMUcp6jcweQZML2qIy8A"
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/HuddoApps
+  - icon: fontawesome/brands/facebook
+    link: https://www.facebook.com/huddoapps
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/company/huddoapps
+  - icon: fontawesome/brands/youtube
+    link: https://www.youtube.com/channel/UCiDj7UkYGqm41VUssa1FUrw
+  - icon: fontawesome/brands/github
+    link: https://github.com/isw-kudos
 nav:
   - Welcome: index.md
   # - Huddo Analytics:
@@ -136,15 +138,6 @@ nav:
     - Connections Widgets: buzzy/buzzy-widgets.md
     - Mongo: buzzy/mongo.md
     - Minio: buzzy/minio.md
-  # - Docker Swarm:
-      # - Installation: swarm/index.md
-      # - Storage: swarm/storage.md
-      # - Advanced: swarm/advanced.md
-      # - Troubleshooting: swarm/troubleshooting.md
-  # - Kubernetes:
-  # - Installation: kubernetes/index.md
-  # - Advanced: kubernetes/advanced.md
-  # - Troubleshooting: kubernetes/troubleshooting.md
 
   - CCM Migrator:
     - Installation: ccm-migrator/install.md

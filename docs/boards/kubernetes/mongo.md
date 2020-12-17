@@ -4,7 +4,7 @@ Huddo Boards requires a Mongo database. This documentation will deploy a MongoDB
 
 If you already have externally hosted Mongo database please skip to the [Outcomes section](/boards/kubernetes/mongo/#outcomes) to determine your equivalent connection parameters.
 
-You can also email us for support at [support@kudosboards.com](mailto:support@kudosboards.com)
+You can also email us for support at [support@huddo.com](mailto:support@huddo.com)
 
 ### Prerequisites
 

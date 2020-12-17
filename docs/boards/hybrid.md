@@ -16,7 +16,7 @@ Setting up the Hybrid Boards Cloud involves:
         Contact name:
         Contact email address:
         CONNECTIONS_URL: https://connections.example.com
-        CONNECTIONS_CLIENT_ID: kudosboards
+        CONNECTIONS_CLIENT_ID: huddoboards
         CONNECTIONS_CLIENT_SECRET: [VALUE_PRINTED]
         CONNECTIONS_HOSTNAME_BASE64:
 

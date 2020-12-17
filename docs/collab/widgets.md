@@ -21,7 +21,7 @@ Adding Activities Plus widgets into HCL Connections Multi-Tenant environments
                 <item name="resourceId" value="{resourceId}"/>
                 <item name="width" value="100%"/>
                 <item name="height" value="500px"/>
-                <item name="url" value="https://kudosboards.com/community/collab"/>
+                <item name="url" value="https://boards.huddo.com/community/collab"/>
             </itemSet>
         </widgetDef>
         <!-- END Activities Plus -->
@@ -45,7 +45,7 @@ Register the Gadget
 
     execfile("newsAdmin.py")
 
-    NewsWidgetCatalogService.addWidget(isGadget=1, policyFlags=["GADGET_BASE", "GADGET_TRUSTED", "GADGET_SSO"], proxyPolicy=ProxyPolicy.INTRANET_ACCESS, appContexts=[WidgetContexts.EMBEDXP], title="Activities Plus", url="https://kudosboards.com/widgets/connections/url-gadget.xml", enabled=1, isDefaultOpened=0, prereqs=[])
+    NewsWidgetCatalogService.addWidget(isGadget=1, policyFlags=["GADGET_BASE", "GADGET_TRUSTED", "GADGET_SSO"], proxyPolicy=ProxyPolicy.INTRANET_ACCESS, appContexts=[WidgetContexts.EMBEDXP], title="Activities Plus", url="https://boards.huddo.com/widgets/connections/url-gadget.xml", enabled=1, isDefaultOpened=0, prereqs=[])
 
 This will output a Widget ID, for example `'3562a039-0d03-43cd-8a1b-3eb3cbc9ab14'`. Use this id in the next command to bind the OAuth provider.
 
