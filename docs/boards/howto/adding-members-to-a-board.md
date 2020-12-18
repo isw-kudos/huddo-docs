@@ -1,4 +1,4 @@
-<img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
+<img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
 
 Adding members to your board allows you to collaborate with your team, your whole organisation and even external parties outside of your company. There is no limit to the number of people you can have as members of a board.
 

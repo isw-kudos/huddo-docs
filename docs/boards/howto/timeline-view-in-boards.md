@@ -1,4 +1,4 @@
-<img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
+<img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
 
 Huddo Boards has multiple views to help you get your tasks done, whether you’re working individually, as a team or as an organisation. The Timeline view is a unique component of Boards and we’ll explore it here, to demonstrate how it can help you stay on track to meet your deadlines.
 

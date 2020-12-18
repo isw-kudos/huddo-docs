@@ -1,4 +1,4 @@
-<img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
+<img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
 
 You can access a library of global templates already available from Huddo Boards to use as inspiration for your own work.
 

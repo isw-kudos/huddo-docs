@@ -1,4 +1,4 @@
-<img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
+<img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
 
 If you find that your Microsoft Teams team `Conversations` tab is getting a bit crowded with all the updates your team are making in Huddo Boards, it is possible to control whether or not team notifications are posted in `Conversations` for each board in your team.
 ![Conversations](/assets/msgraph/teams/bot_conversations.png)

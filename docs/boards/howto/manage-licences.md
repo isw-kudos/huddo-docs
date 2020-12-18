@@ -1,4 +1,4 @@
-<img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
+<img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
 
 # Manage Licences
 
