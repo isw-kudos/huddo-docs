@@ -29,7 +29,7 @@ banner.innerHTML = `
   padding: 5px;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1910px) {
   .huddo-banner {
     top: initial;
     bottom: 180px;
