@@ -91,8 +91,14 @@ Click on _Members_ in the right sidebar to open the Board Members view. You can 
 
 Huddo Boards allows you to colour code your tasks by simply dragging and dropping the colours from the right sidebar onto cards. You can also assign custom text labels to each of the colours by simply clicking the edit icon in the _Colour Labels_ section in the right sidebar. These labels are set at the board level and everyone in the board will see the same labels.
 
+![Board Members Example](/assets/boards/colour-coding-huddo-boards.png)
 ---
 
-### Colour Code Your Boards
+### Colour Code Your Boards in MyBoards Dashboard
 
-Huddo Boards let's you colour code all your boards to help you personally manage and categorise your work. To colour code a board tile in the _My Boards_ view, simply drag a colour from the left sidebar and drop it on a board. Much like card colour labels, you can also add custom text labels to these colours, however, this is for your personal organisation and as such will only be visible to you. To edit the board colour labels, click the edit icon in the _Tile Colours_ section in the left sidebar.
+Huddo Boards let's you colour code all your boards to help you personally manage and categorise your work. To colour code a board tile in the _MyBoards Dashboard_, simply drag a colour from the left sidebar and drop it on a board. Much like card colour labels, you can also add custom text labels to these colours, however, this is for your personal organisation and as such will only be visible to you. To edit the board colour labels, click the edit icon in the _Colours_ section in the left sidebar. Filter to see boards from one or more specific colours by clicking on the colour. 
+
+To see your boards organised by colour, set your `View` to Colours.
+
+![Board Members Example](/assets/boards/huddo-boards-myboards-dashboard-colour-view.png)
+
