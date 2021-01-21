@@ -1,19 +1,28 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
 
-#Starting a trial of Huddo Boards Cloud
+#Starting a trial of Huddo Boards Cloud 
 
-The first time you sign in to Huddo Boards Cloud as an individual user, you will not have a licence to use the product.
-This means you will not have the ability to create new boards. The New Board tile/button will not be functional and will appear to be greyed out. Hovering the mouse over this button will present the following tooltip message:
+You can use your O365, LinkedIn, Facebook, AppleID or HCL Connections Collab Cloud to access Huddo Boards Cloud.
 
-![example](/assets/boards/unlicensed-my-boards-view.png)
+The first time you log in to Huddo Boards Cloud as an individual user, you will not have access to the Huddo Boards Premium Views (Kanban Board, MindMap, and Timeline), only the free Activity View (simple drop down list). 
 
-As the message states, you have the option to start a free trial on first sign in.
-To start the trial, either click the `START A TRIAL` button presented at the bottom of the screen:
+There are two ways to activate a free 30 day trial in order to access the premium views. 
 
-![example](/assets/boards/start-trial-toast.png)
+### Activate free trial via MyBoards Dashboard:
+1. Login to [boards.huddo.com](https://boards.huddo.com) to enter the MyBoards Dashboard.
+2. In the top right corner, click the profile icon to open `User Options` and then select `View Subscriptions`. 
+3. Then select `Start My Trial` to activate your free 30 day trial. 
 
-Or click the user menu icon in the top right corner, then click `Start my trial`:
+You can return to  `View Subscription` at any point to purchase a licence for Huddo Boards for yourself or for a number of people in your organisation.     
 
-![example](/assets/boards/start-my-trial.png)
+![example](/assets/boards/start-huddo-boards-free-trial-3rd-party-cloud-app.png)
 
-Once you start the trial you will have unrestricted access to use Huddo boards for the period of one month. The option to purchase a subscription to the product is also an available option by clicking `View Subscriptions` under the same user menu, as seen above.
+
+### Activate free trial when you create a board:
+1. Login to [boards.huddo.com](https://boards.huddo.com) to enter the MyBoards Dashboard.
+2. Use the `Create` button to start a new board.
+![example](/assets/boards/start-free-trial-huddo-boards-new-board.png)
+3. Follow the steps to creating a board, including selecting a template, adding a name, and more information like a description and members (these can also be added to your board later.) Click `Save` when you are done. 
+4. When your new board opens, `Board` `MindMap` and `Timeline` in the right hand menu will be greyed out with the words `Preview Available` under each. Select any of these and follow prompts to start your free trial. 
+
+![example](/assets/boards/huddo-boards-free-trial-activation-2.png)
