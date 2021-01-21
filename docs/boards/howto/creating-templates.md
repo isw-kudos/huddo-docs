@@ -5,34 +5,34 @@
 Made a fantastic board and want to keep a copy for future use? Save time and brain power by creating a template of your board.
 
 ### Create a Template From an Existing Board
-Within your board, click the pencil icon on the right-hand side under the question mark, to `Open Board Options.` Next, click the fourth option in the right-hand side menu, `Create Board from Template.`
+Within your board, click the title of your board to `Open Board Options.` Find this located between the Huddo Boards logo and the search bar. Next, click, `Create Template from Board.`
 
 ![](/assets/boards/createtemplate1.png)
 
-In the next window, you can update the name, description, tags, decide if you want to reference the source template (ie the board you’re making it from), and add a due date if you wish. Click `Create.` The template will open in a new screen.
+In the next window, you can update the name, description, and choose to keep Board Members as is, remove or add Board Members. Click `Save.` The template will open in a new screen.
 
 ![](/assets/boards/createtemplate2.png)
 
-You’ll be able to locate it in your template library via the main dashboard or when you create a new board and search the name.
+You’ll be able to locate your template in your template library via the MyBoards Dashboard or when you create a new board and search the name.
 
-**Important**: When the template opens in a new screen, any editing will you do will apply to the template. Click in to the `Open Board Options` icon as you did above and select, `Create Board from Template.` When the new window opens, you’ll start a new board instead of editing the template you’ve just created.
+**Important**: When the template opens in a new screen, any editing you do will apply to the template. Click in to the `Open Board Options` icon as you did above and select, `Create Board from Template.` When the new window opens, you’ll start a new board instead of editing the template you’ve just created.
 
 ### Create a New Template from Scratch
 
-From your main *My Boards* dashboard, navigate to `Templates` via the left-hand side menu.
-You’ll land on the Public Templates page and see global templates or templates from your organisation.
+From your main *MyBoards* dashboard, navigate to `Templates` via the left-hand side menu.
+You’ll land on the My Templates page and see templates you have created.
 
 ![](/assets/boards/createtemplate3.png)
 
-Click the `+ New Template` button to start your creation.
+Click the `+ New Template` button to start your creation. You have the option to select `Source Board / Template` in the creation process, meaning you can make a template from another template that already exists. Leave this blank if you prefer to build your template from scratch in the board. 
 
-**Public Template Access:** Making a template in the public area, will not automatically make it public. Within the template you create, you’ll be able to select if you wish for it to be public. This option is found in the `Members` section on the right-hand side menu.
+**Public Template Access:** Making a template in the public area, will not automatically make it public. Within the template you create, you’ll be able to select if you wish for it to be public. You can do this in the template creation window or later when it is created by finding `Public` in the `Members` section on the right-hand side menu.
 
 Complete the required information for your template, then click `Create`.  
 
 ![](/assets/boards/createtemplate4.png)
 
-Your new template will open as a blank board template. From here, you can add your required lists, cards, colour labels, tags and more.
+Your new template will open as a blank board template or with lists and cards if you selected from a Source Board/Template. From here, customise your template by editing or adding required lists, cards, colour labels, tags and more.
 
 In future, when creating a new board, type in the template name in the `Search All Templates` field, during the New Board creation phase.
 
