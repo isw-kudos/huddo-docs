@@ -8,7 +8,7 @@ You can add members when you first create a board.
 
 In the *New Board* creation phase, type in the name of any colleague or group in your organisation in the Add People field, or type in an email address of someone who is external to your organisation.
 
-You can also decide if you would like the board to have Public Access, meaning anyone in your organisation will be able to view the board (although not able to contribute unless they have been invited.)
+You can also decide if you would like the board to have Public Access, meaning anyone in your organisation will be able to view the board and participate depending on what level of permission you have set (reader, author, editor.)
 
 ![](/assets/boards/adding-members-to-boards1.png)
 
@@ -28,16 +28,10 @@ New members will be notified that they have been invited to your board.
 
 [A board can be added to a channel within Teams](/boards/howto/adding-boards-to-teams/) to help track progress on tasks and create a collaborative work environment.
 
-When members are added to a channel, this automatically adds them as a member of the board.
+Members of a Team or a Channel will be inherited automatically in to your Huddo Board. 
 
-![](/assets/boards/adding-members-to-boards3.png)
+![](/assets/boards/adding-members-to-boards3.jpg)
 
-You can add members to a channel when you first create it, or at any point after that. When a board is connected to the channel, the members will automatically be added to the board.
 
-Click the` …` to the right of your channel. Then select `Manage Team.` From here, you’ll see existing members and have the opportunity to `Add Members,` using the button on the right-hand side of the screen.
+You can also add members directly to the board by searching them in the `Members` area on the right hand side of the board. Adding members this way, be they in your organisation or external to your organisation, will add them just to the board. Not to the Channel or Team. 
 
-![](/assets/boards/adding-members-to-boards4.png)
-
-Note, that adding members from this location, will allow you to only add members or groups from within your organisation, as this is adding them to both the channel in Microsoft Teams and the board.
-
-To add people external to your organisation, do so directly from the board. They will have access only to the board, not to the Microsoft Team Channel.
