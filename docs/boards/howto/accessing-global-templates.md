@@ -14,6 +14,6 @@ Feel free to click in to different templates to see what they contain.
 
 When you’ve found the template you’re looking for, return to your original New Board screen and start typing in the template name. It will appear and you can select it.
 
-You still have the option to select the Starting View, from Kanban, Mind Map or Time Line.
+You still have the option to select the Starting View, from Kanban, MindMap, Timeline or Activty.
 
-Click `Create` and you’ll be taken to your new Board.
+Click `Next` to give your board a name and then `Save` and you’ll be taken to your new Board.
