@@ -2,13 +2,13 @@
 
 To get the most out of Huddo Boards in your Office 365 tenant, there are a few steps to take to make the experience seamless for your users.
 
-> The Steps on this page (other than just logging in) require that you are an admin in your Office 365 tenant. if you are not an admin, please refer this page to your Administrator, Manager or IT department.
+> The Steps on this page (other than just logging in) require that you are an admin in your Office 365 tenant. If you are not an admin, please refer this page to your Administrator, Manager or IT department.
 
 ---
 
 ### Login
 
-Huddo Boards uses OAuth for login and user access, This means your users can just click the Office 365 logo at [boards.huddo.com](https://boards.huddo.com) and use their existing Microsoft credentials.
+Huddo Boards uses OAuth for login and user access. This means your users can just click the Office 365 logo at [boards.huddo.com](https://boards.huddo.com) and use their existing Microsoft credentials.
 
 > If you would like to link to Huddo Boards from another site, you can use [https://boards.huddo.com/auth/msgraph ](https://boards.huddo.com/auth/msgraph) which will skip the list of login options.
 
