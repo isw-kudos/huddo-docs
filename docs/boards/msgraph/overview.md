@@ -42,7 +42,7 @@ Add boards tabs to Microsoft Teams
 
 ![Teams Tabs](/assets/msgraph/teams_tabs.png)
 
-Share boards with your Team
+See all of the boards your team is working on.
 
 ![Teams Board Tabs](/assets/msgraph/teams_tab-board.png)
 
