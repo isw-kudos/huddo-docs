@@ -1,6 +1,6 @@
 ## Add Huddo Boards plugin
 
-1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/Settings/ServicesAndAddIns)
+1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/Settings/AddIns)
 
       Click `Settings` -> `Services & add-ins` -> `Deploy Add-in`
 
