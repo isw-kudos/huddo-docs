@@ -6,7 +6,7 @@ Before proceeding, you will need a site admin to enable security settings as des
 
 1. From Sharepoint main menu, go to `Pages` -> `New` -> `Site Page`
 
-      ![example](/assets/msgraph/sharepoint1.png)
+       ![example](/assets/msgraph/sharepoint1.png)
 
 
 1. Give your page a name, then click the `+`
@@ -17,7 +17,7 @@ Before proceeding, you will need a site admin to enable security settings as des
 
       ![example](/assets/msgraph/sharepoint3.png)
 
-1. Open [Huddo Boards](https://boards.huddo.com/auth/signin) and select the board you wish to embed in the sharepoint page.  Click the `Board Options` button
+1. Open [Huddo Boards](https://boards.huddo.com/) and select the board you wish to embed in the sharepoint page.  Click the `Board Options` button
 
       ![example](/assets/msgraph/sharepoint4.png)
 
