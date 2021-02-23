@@ -27,9 +27,12 @@ Then proceed to add the following Application definition under the `<Application
         <ApplicationURL>http://<YOUR_CONNECTIONS_SERVER>/Huddo/mobile</ApplicationURL>
     </Application>
 
-Add the following to the `<ApplicationList>` node: Huddo.
+Add the following to the `<ApplicationList>` or `DefaultNavigationOrder` node: Huddo.
 
 The result should be similar to: `<ApplicationsList>profiles,communities,files,wikis,activities,forums,blogs,bookmarks,Huddo</ApplicationsList>`
+or `<DefaultNavigationOrder>profiles,communities,files,filesync,wikis,activities,forums,blogs,bookmarks,Huddo</DefaultNavigationOrder>`
+
+
 
 **Please Note:** Make sure you replace `<YOUR_CONNECTIONS_SERVER>` in all places with the URL of your Connections Environment.
 If you use a custom context root for Huddo, please ensure you update the references above appropriately.

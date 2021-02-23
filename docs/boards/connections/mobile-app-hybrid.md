@@ -34,9 +34,12 @@ Basic instructions for adding Huddo Boards into the HCL Connections mobile appli
     > where `[CONNECTIONS_HOSTNAME_BASE64]` is your Connections hostname base64 encoded.  E.g.</br>
           `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
 
-    - Find the `ApplicationsList` element and append `Boards`. For example:
+    - Find the `ApplicationsList` or `DefaultNavigationOrder` element and append `Boards`. For example:
 
             <ApplicationsList>profiles,communities,files,filesync,wikis,activities,forums,blogs,bookmarks,Boards</ApplicationsList>
+or
+
+            <DefaultNavigationOrder>profiles,communities,files,filesync,wikis,activities,forums,blogs,bookmarks,Boards</DefaultNavigationOrder>
 
 
 1. Save and check-in `mobile-config.xml`
