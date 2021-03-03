@@ -14,9 +14,10 @@ A member with Author permissions, has the ability to create new cards, edit thei
 
 ### Editor
 An Editor has the ability to edit existing content, and create new content.
+Editors can invite and manage other members with the roles Reader, Author and Editor (they cannot change Owners)
 
 ### Owner
-The Owner of a board has the ability to invite members to the board,  and edit all cards and lists in the board.
+Owners have full rights to all properties on a board, they can add, edit and delete all other members, lists and cards in the board.
 
 [Find out more about how to add members to a board.](/boards/howto/adding-members-to-a-board)
 
