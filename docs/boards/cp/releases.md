@@ -24,6 +24,134 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 ---
 
+#### 2021-03-05
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-05)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-03-05
+iswkudos/kudos-boards:provider-2021-03-05
+iswkudos/kudos-boards:licence-2021-03-05
+iswkudos/kudos-boards:notification-2021-03-05
+iswkudos/kudos-boards:webfront-2021-03-05
+iswkudos/kudos-boards:core-2021-03-05
+iswkudos/kudos-boards:boards-2021-03-05
+iswkudos/kudos-boards:activity-migration-2021-03-05
+```
+
+Features
+
+- New Huddo branding!
+- [New API with docs!](https://boards.api.huddo.com)
+- API integrations with
+
+    - Zapier
+    - Power Automate
+- Leave a Board
+- Card description lock (one-at-a-time editing)
+- Embed Cards/Boards in third party apps (e.g. Sharepoint)
+
+Fixes:
+
+- Prevent file upload with zero size
+- Support migrated folders
+
+---
+
+#### 2021-03-03
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-03)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-03-03
+iswkudos/kudos-boards:provider-2021-03-03
+iswkudos/kudos-boards:licence-2021-03-03
+iswkudos/kudos-boards:notification-2021-03-03
+iswkudos/kudos-boards:webfront-2021-03-03
+iswkudos/kudos-boards:core-2021-03-03
+iswkudos/kudos-boards:boards-2021-03-03
+iswkudos/kudos-boards:activity-migration-2021-03-03
+```
+
+Improvements:
+
+- Ability to sync profiles from Connections & Microsoft (please follow the steps on the Admin page of each Client)
+- Ability to automatically link user aliases in 2 different clients (eg Connections & Microsoft)
+- Support for Activity URL with entryId
+
+Fixes:
+
+- Redirect to login if required when accessing Activity URL
+- Board ACL updates for membership escallation
+
+---
+
+#### 2021-02-19
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-02-19)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-02-19
+iswkudos/kudos-boards:provider-2021-02-19
+iswkudos/kudos-boards:licence-2021-02-19
+iswkudos/kudos-boards:notification-2021-02-19
+iswkudos/kudos-boards:webfront-2021-02-19
+iswkudos/kudos-boards:core-2021-02-19
+iswkudos/kudos-boards:boards-2021-02-19
+iswkudos/kudos-boards:activity-migration-2021-02-19
+```
+
+Improvements:
+
+- Todos view
+    - hide sub-cards which are not applicable
+    - hide multi-assigned tasks I have completed (assigned view)
+
+Fixes:
+
+- Disable notification for Communities with 'owner-only' membership
+- Notifications when creating a Board & members at the same time
+- Protect against imported data for assignments without users & nodes without creator
+- Mindmap - expand/collapse icons
+- Redirect from Activity URL to Board URL in the Connections header frame
+- Show all public members when multiple
+
+---
+
+#### 2021-01-19
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-01-19)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-01-19
+iswkudos/kudos-boards:provider-2021-01-19
+iswkudos/kudos-boards:licence-2021-01-19
+iswkudos/kudos-boards:notification-2021-01-19
+iswkudos/kudos-boards:webfront-2021-01-19
+iswkudos/kudos-boards:core-2021-01-19
+iswkudos/kudos-boards:boards-2021-01-19
+iswkudos/kudos-boards:activity-migration-2021-01-19
+```
+
+Improvements:
+
+- Show login page on file download when unauthorized
+- Login options for Verse/Outlook integration
+
+Fixes:
+
+- Tile color popup positioning and scrolling for small screens
+- Protect against null assignment value after import
+- PDF downloads inside the community widget
+- Show new cards added in assignments view
+- Show assigned cards in Timeline view (only affects some users with multiple linked accounts)
+
+---
+
 #### 2020-12-14
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-12-14)
 
