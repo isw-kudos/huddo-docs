@@ -15,7 +15,7 @@ global:
     S3_ENDPOINT: minio-service
     S3_ACCESS_KEY: ioueygr4t589
     S3_SECRET_KEY: 7a863d41-2d8f-4143-bc8a-02501edbea6f
-    S3_BUCKET: huddo-boards
+    S3_BUCKET: kudos-boards
 
 licence:
   env:
