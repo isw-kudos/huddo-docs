@@ -89,6 +89,7 @@ nav:
       - Boards Hybrid: boards/hybrid.md
       - FAQ:
           - Languages: boards/faq/languages.md
+          - Notifications: boards/faq/notifications.md
       - Troubleshooting:
           - Activities Plus: boards/troubleshooting/activities-plus-install.md
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
