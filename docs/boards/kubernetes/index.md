@@ -38,7 +38,7 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 Huddo Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
-You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
+You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
 
 | Provider                        | Registration / Documentation                                                                                  | Callback URL                             |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
