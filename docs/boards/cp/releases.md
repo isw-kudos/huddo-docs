@@ -44,6 +44,7 @@ Fixes:
 
 - Groups not saving expanded members (affects imported Activities)
 - Issue where homepage didnt reload after login from secondary alias
+- Improved support for imported community owner + reader role
 
 Activity Migration
 
