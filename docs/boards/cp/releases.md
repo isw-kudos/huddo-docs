@@ -24,6 +24,33 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 ---
 
+#### 2021-03-10
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-10)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-03-10
+iswkudos/kudos-boards:provider-2021-03-10
+iswkudos/kudos-boards:licence-2021-03-10
+iswkudos/kudos-boards:notification-2021-03-10
+iswkudos/kudos-boards:webfront-2021-03-10
+iswkudos/kudos-boards:core-2021-03-10
+iswkudos/kudos-boards:boards-2021-03-10
+iswkudos/kudos-boards:activity-migration-2021-03-10
+```
+
+Fixes:
+
+- Groups not saving expanded members (affects imported Activities)
+- Issue where homepage didnt reload after login from secondary alias
+
+Activity Migration
+
+- Updated Mongoose version to fix 'module exports inside circular dependency' warning
+
+---
+
 #### 2021-03-05
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-05)
 
@@ -60,7 +87,7 @@ Fixes:
 ---
 
 #### 2021-03-04
-[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-03)
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-04)
 
 Images:
 
