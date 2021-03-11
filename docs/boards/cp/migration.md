@@ -4,6 +4,12 @@ As part of the installation process for Huddo Boards (Activities Plus) you must 
 
 > Note: please review the [Roles page](/boards/cp/roles/) for details on how Community Activity membership is interpreted & presented by Boards
 
+## Difference between the individual import
+
+There is an individual import, when you hover over the orange _Create_ button and click _Import from Activities_. It can be accessed by end-users, but only usess the Activities API. While this works for basic Activitiy functionality, it **doesn't include** any extra features from Huddo Boards for WebSphere. Card colors are one example of those features.
+
+So you'll need to use the migration service described here to import **all** data in the new Boards.
+
 ## Process Overview
 
 This service will:
