@@ -1,33 +1,29 @@
 ## Add Huddo Boards plugin
 
-1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/Settings/AddIns)
+1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/Settings/IntegratedApps)
 
-      Click `Settings` -> `Services & add-ins` -> `Deploy Add-in`
+      Click `Settings` -> `Integrated apps` -> `Upload custom apps`
 
       ![example](/assets/msgraph/outlook1.png)
 
 
-1. Click `Next`
-
-      ![example](/assets/msgraph/outlook2.png)
-
-1. Select `I have a URL for the manifest file.`
+1. Select `Provide link to manifest file`
 
         https://boards.huddo.com/office/outlook/add-in.xml
 
-      Click `Next`
+      Click `Validate` then click `Next`
 
       ![example](/assets/msgraph/outlook3.png)
 
-1. Specify who has access and click `Deploy now`
+1. Specify who has access and click `Next`
 
       ![example](/assets/msgraph/outlook4.png)
 
-1. Click `Next`
+      1. Click `Finish Deployment`
 
       ![example](/assets/msgraph/outlook5.png)
 
-1. Click `Close`
+1. Click `Done`
 
       ![example](/assets/msgraph/outlook6.png)
 
