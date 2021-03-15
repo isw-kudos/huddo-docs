@@ -69,9 +69,7 @@ nav:
           - For HCL Connections: boards/cp/index.md
           - For Kubernetes: boards/kubernetes/index.md
           - Standalone: boards/standalone.md
-          - Common Config:
-              - Environment: boards/env/common.md
-              - Team Logins: boards/env/teams.md
+          - Common Env: boards/env/common.md
           - Integrations:
               - HCL Connections On-Prem:
                   - Activity Migration: boards/connections/migration.md
