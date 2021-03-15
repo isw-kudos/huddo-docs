@@ -129,6 +129,13 @@ nav:
           - Administation:
               - Manage Config: boards/howto/org-config.md
               - Manage Licences: boards/howto/manage-licences.md
+              - Transition Providers:
+                - Overview: boards/howto/admin/transition-between-providers.md
+                - Synchronise Profiles: boards/howto/admin/sync-profiles.md
+                - Link User Accounts: boards/howto/admin/link-users.md
+                - Replace Group Membership: boards/howto/admin/replace-group-membership.md
+                - Transfer Ownership & Unlink: boards/howto/admin/transfer-ownership-unlink.md
+                - Deactivate Login: boards/howto/admin/deactivate-login.md
 
   - Huddo Ideas: ideas/howto.md
   - Buzzy:
