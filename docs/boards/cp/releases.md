@@ -45,9 +45,9 @@ Improvements
 - Handle legacy Boards WebSphere URL redirect (hashes)
 - Ability to [transition between providers](/boards/howto/admin/transition-between-providers/)
 
-  - Link User accounts by full email address
-  - Map Groups by CSV file
-  - Transfer Ownership & Unlink accounts
+    - Link User accounts by full email address
+    - Map Groups by CSV file
+    - Transfer Ownership & Unlink accounts
 
 Fixes:
 
