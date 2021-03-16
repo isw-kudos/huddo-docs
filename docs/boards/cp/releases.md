@@ -24,6 +24,37 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 ---
 
+#### 2021-03-16
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-16)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-03-16
+iswkudos/kudos-boards:provider-2021-03-16
+iswkudos/kudos-boards:licence-2021-03-16
+iswkudos/kudos-boards:notification-2021-03-16
+iswkudos/kudos-boards:webfront-2021-03-16
+iswkudos/kudos-boards:core-2021-03-16
+iswkudos/kudos-boards:boards-2021-03-16
+iswkudos/kudos-boards:activity-migration-2021-03-16
+```
+
+Improvements
+
+- Handle legacy Boards WebSphere URL redirect (hashes)
+- Ability to [transition between providers](/boards/howto/admin/transition-between-providers/)
+
+  - Link User accounts by full email address
+  - Map Groups by CSV file
+  - Transfer Ownership & Unlink accounts
+
+Fixes:
+
+- Verse integration
+
+---
+
 #### 2021-03-10
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-10)
 
