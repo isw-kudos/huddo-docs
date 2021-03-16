@@ -10,7 +10,7 @@ pipeline {
   }
   
   environment {
-    SLACK_CHANNEL_NAME = '#kudos-devops-alerts'
+    SLACK_CHANNEL_NAME = '#devops-alerts'
     FAILURE_STAGE = 'Unknown'
   }
   
