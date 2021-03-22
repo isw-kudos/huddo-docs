@@ -24,6 +24,33 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 ---
 
+#### 2021-03-22
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-22)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-03-22
+iswkudos/kudos-boards:provider-2021-03-22
+iswkudos/kudos-boards:licence-2021-03-22
+iswkudos/kudos-boards:notification-2021-03-22
+iswkudos/kudos-boards:webfront-2021-03-22
+iswkudos/kudos-boards:core-2021-03-22
+iswkudos/kudos-boards:boards-2021-03-22
+iswkudos/kudos-boards:activity-migration-2021-03-22
+```
+
+Improvements:
+
+- Board loading performance
+
+Fixes:
+
+- Locking of description when socket fails
+- Activity migration - protect against old public data
+
+---
+
 #### 2021-03-16
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-16)
 
@@ -40,7 +67,7 @@ iswkudos/kudos-boards:boards-2021-03-16
 iswkudos/kudos-boards:activity-migration-2021-03-16
 ```
 
-Improvements
+Improvements:
 
 - Handle legacy Boards WebSphere URL redirect (hashes)
 - Ability to [transition between providers](/boards/howto/admin/transition-between-providers/)
@@ -77,7 +104,7 @@ Fixes:
 - Issue where homepage didnt reload after login from secondary alias
 - Improved support for imported community owner + reader role
 
-Activity Migration
+Activity Migration:
 
 - Updated Mongoose version to fix 'module exports inside circular dependency' warning
 
@@ -99,7 +126,7 @@ iswkudos/kudos-boards:boards-2021-03-05
 iswkudos/kudos-boards:activity-migration-2021-03-05
 ```
 
-Features
+Features:
 
 - New Huddo branding!
 - [New API with docs!](https://boards.api.huddo.com)
