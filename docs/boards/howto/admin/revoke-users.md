@@ -1,6 +1,6 @@
 # Revoke Users
 
-When a user leaves the organisation, you may want to deactivate their current login sessions with Boards. You may also need to remove their private information (name, email and images) from the Boards database. This can be achieved with the following steps:
+When a user leaves the organisation, you may want to deactivate their current login sessions with Boards. You may also need to remove their private information (name, email and image) from the Boards database. This can be achieved with the following steps:
 
 1. Open `Admin Settings`, then your `Organisation`
 
