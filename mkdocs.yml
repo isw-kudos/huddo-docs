@@ -127,6 +127,7 @@ nav:
           - Administation:
               - Manage Config: boards/howto/org-config.md
               - Manage Licences: boards/howto/manage-licences.md
+              - Revoke Users: boards/howto/admin/revoke-users.md
               - Transition Providers:
                 - Overview: boards/howto/admin/transition-between-providers.md
                 - Synchronise Profiles: boards/howto/admin/sync-profiles.md
