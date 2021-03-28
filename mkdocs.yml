@@ -92,7 +92,7 @@ nav:
       - Troubleshooting:
           - Activities Plus: boards/troubleshooting/activities-plus-install.md
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
-          - Boards Docker: boards/troubleshooting/conn-on-prem.md
+          - Boards Docker: boards/troubleshooting/docker.md
           - Boards WebSphere: boards/troubleshooting/websphere.md
           - Office 365: boards/troubleshooting/office365.md
           - Notifications: boards/troubleshooting/notifications.md

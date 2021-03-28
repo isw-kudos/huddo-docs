@@ -33,9 +33,10 @@ webfront:
   ingress:
     hosts:
       - example.com
-    path: /boards
+    # Kube ingress controller version >= 0.22 requires /(.*) in the path and /$1 in the rewrite-target
+    path: /boards/(.*)
     annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: /
+      nginx.ingress.kubernetes.io/rewrite-target: /$1
 core:
   image:
     tag: core
@@ -49,9 +50,10 @@ core:
   ingress:
     hosts:
       - example.com
-    path: /api-boards
+    # Kube ingress controller version >= 0.22 requires /(.*) in the path and /$1 in the rewrite-target
+    path: /api-boards/(.*)
     annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: /
+      nginx.ingress.kubernetes.io/rewrite-target: /$1
 app:
   image:
     tag: boards
