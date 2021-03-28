@@ -2,7 +2,7 @@
 
 Huddo Boards connects to your Connections servers over HTTPS via OAuth.
 
-## IP Whitelisting
+## IP Allow List
 
 Our servers use a static outbound IP address. If your environment uses a firewall to access the Connections servers you will need to add the following IP to your allow-list
 
