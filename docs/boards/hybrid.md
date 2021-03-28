@@ -10,6 +10,8 @@ Setting up the Hybrid Boards Cloud involves:
 
 1. [Configure Authentication](/boards/connections/auth-hybrid/)
 
+1. [Review Security](/boards/connections/security/)
+
 1. [Contact the Huddo Team](mailto:support@huddo.com?subject=Boards%20Hybrid%20Setup) with these details
 
         Company name:
