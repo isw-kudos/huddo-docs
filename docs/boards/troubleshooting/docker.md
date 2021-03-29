@@ -37,7 +37,7 @@ Example
       Repository: https://github.com/kubernetes/ingress-nginx
     -------------------------------------------------------------------------------
 
-As of 0.22 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include the regular expression like so:
+As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include the regular expression like below. This is already the default in the `kudos-boards-cp-2.0.1.tgz` chart.
 
     webfront:
       ingress:
@@ -50,3 +50,8 @@ As of 0.22 the Ingress controller rewrite-target definition changed. If Boards i
         path: /api-boards/(.*)
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: /$1
+          # Default annotations below which should be included such that they are not overwritten
+          nginx.ingress.kubernetes.io/proxy-body-size: 50m
+          nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+          nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+          nginx.ingress.kubernetes.io/affinity: cookie
