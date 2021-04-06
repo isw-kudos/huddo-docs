@@ -11,3 +11,5 @@ Clearing the oh2p cache allows the user to login again.
     DELETE from homepage.oh2p_cache where username='<username>' and clientid='<huddo_client_id>'
 
 Please Note: You need to replace `<username>` and `<huddo_client_id>` with the correct values
+
+For more details, please see a [blog post here.](https://blog.martdj.nl/2019/07/15/overflowing-oauth-token-cache/)
