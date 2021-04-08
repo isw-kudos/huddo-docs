@@ -63,9 +63,9 @@ Under 'Licences' select to 'Buy Online.'
 
 ## Request a Quote or Invoice for Payment
 
-On-premise Huddo Boards installs can contact us for quote requests and licence activation keys at `sales@huddo.com`
+On-premise Huddo Boards installs can contact us for quote requests and licence activation keys at `hello@huddo.com`
 
-Huddo Boards cloud users can request a quote via Huddo Boards Admin Settings in web or MS Teams, or via email at `sales@huddo.com`. Please do not hesitate to ask questions or request a call to discuss your subscription requirements further.
+Huddo Boards cloud users can request a quote via Huddo Boards Admin Settings in web or MS Teams, or via email at `hello@huddo.com`. Please do not hesitate to ask questions or request a call to discuss your subscription requirements further.
 
 In addition to online check out, we can receive purchase orders and provide invoices for payment.
 
