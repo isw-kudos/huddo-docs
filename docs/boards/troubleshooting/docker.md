@@ -44,8 +44,6 @@ As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards
         path: /boards/(.*)
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: /$1
-          # Add for CP7.0 - use the shared ingress-nginx
-          kubernetes.io/ingress.class: "nginx"
 
     core:
       ingress:
@@ -57,4 +55,5 @@ As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards
           nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
           nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
           nginx.ingress.kubernetes.io/affinity: cookie
+          # Flag the cookie as secure - fix SameSite=none issue
           nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
