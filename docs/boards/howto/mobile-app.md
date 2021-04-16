@@ -1,6 +1,6 @@
 #Mobile app
 
-You can access and work with Huddo Boards on your mobile device.
+You can access and work with Huddo Boards Cloud on your mobile device.
 
 ##Download the app to your device
 
@@ -10,7 +10,7 @@ For iPhone: [Huddo Boards Cloud App](https://apps.apple.com/au/app/huddo-boards-
 
 For Android: [Huddo / Kudos Boards Cloud App](https://play.google.com/store/apps/details?id=com.kudosboards.pwa&hl=en_AU)
 
-Note: The Huddo Boards App for Android is in the approval process. Use Kudos Boards Cloud App in the meantime to access Boards via mobile. 
+Note: The Huddo Boards App for Android is in the approval process. Use Kudos Boards Cloud App in the meantime to access Boards Cloud via mobile. 
 
 ##Login to the Huddo / Kudos Boards Cloud App
 
