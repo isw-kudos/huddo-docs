@@ -43,13 +43,14 @@
         widget.height = container.find('input[name=height]').val();
       }
 
-      XCC.W.registerCustomWidget(
-        'Huddo Boards',
-        'th-large',
-        render,
-        editConfig,
-        saveConfig
-      );
+      XCC.W.registerCustomWidget({
+        id: 'boards',
+        name: 'Huddo Boards',
+        icon: 'th-large',
+        createCustomWidget: render,
+        customEditor: editConfig,
+        synchUiTowidgetDataObject: saveConfig,
+      });
     },
   };
 })(window);
