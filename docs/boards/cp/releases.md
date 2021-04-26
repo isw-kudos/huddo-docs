@@ -24,6 +24,40 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 ---
 
+#### 2021-04-26
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-04-26)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-04-26
+iswkudos/kudos-boards:provider-2021-04-26
+iswkudos/kudos-boards:licence-2021-04-26
+iswkudos/kudos-boards:notification-2021-04-26
+iswkudos/kudos-boards:webfront-2021-04-26
+iswkudos/kudos-boards:core-2021-04-26
+iswkudos/kudos-boards:boards-2021-04-26
+iswkudos/kudos-boards:activity-migration-2021-04-26
+```
+
+Improvements:
+
+- Updates to Rich Text Editor & editor locking mechanism
+- Card icon for scheduled start/end dates
+- Admin revoke & anonymise user function
+- API for email to Card/Entry parsing
+- API for file upload as new Card
+
+Fixes:
+
+- Highlights widget update for C7
+- Updated German translation
+
+Activity Migration
+
+- Use Connections Shared Drive to load Activity long descriptions and files (new variables & volume/mount required in yaml)
+
+---
 #### 2021-03-22
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-22)
 
