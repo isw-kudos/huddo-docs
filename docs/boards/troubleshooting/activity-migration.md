@@ -2,8 +2,8 @@
 
 ## Missing Long Descriptions
 
-This process will find links to long descriptions which were not imported correctly, mand attach missing long description content 
-> Note: this process requires images from our Docker repository with date tags on or after 2021-03-22
+This process will find and fix cards with long descriptions which were not imported correctly due to an incorrect HTTP 404 response from the HCL Connections API
+> Note: this requires Boards images with date tags on or after 2021-03-22
 
 ### Process Overview
 
