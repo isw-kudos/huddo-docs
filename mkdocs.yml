@@ -91,6 +91,7 @@ nav:
           - Notifications: boards/faq/notifications.md
       - Troubleshooting:
           - Activities Plus: boards/troubleshooting/activities-plus-install.md
+          - Activity Migration: boards/troubleshooting/activity-migration.md
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
           - Boards Docker: boards/troubleshooting/docker.md
           - Boards WebSphere: boards/troubleshooting/websphere.md
