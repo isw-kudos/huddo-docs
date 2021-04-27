@@ -5,15 +5,22 @@ global:
     APP_URI: https://example.com/boards
     APP_URI_PATH: /boards
 
-core:
-  ingress:
-    path: /api-boards/(.*)
-  env:
-    API_URI_PATH: /api-boards
-
 webfront:
   ingress:
     path: /boards/(.*)
   env:
     API_GATEWAY: https://example.com/api-boards
 
+core:
+  ingress:
+    path: /api-boards/(.*)
+    annotations:
+      nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
+      # Default annotations below which should be included such that they are not overwritten
+      nginx.ingress.kubernetes.io/rewrite-target: /$1
+      nginx.ingress.kubernetes.io/proxy-body-size: 50m
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+      nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+      nginx.ingress.kubernetes.io/affinity: cookie
+  env:
+    API_URI_PATH: /api-boards
