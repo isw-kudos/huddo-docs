@@ -143,7 +143,7 @@ Click `Yes`
 
     [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 
-        helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-2.0.1.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
 

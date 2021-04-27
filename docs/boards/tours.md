@@ -51,7 +51,7 @@ boards.setTours([{
       title: 'Welcome to Boards',
       body: ["Let's get started", 'Click here'],
       actions: [
-        { title: 'More information', url: 'https://docs.kudosapps.com' },
+        { title: 'More information', url: 'https://huddo.com/boards' },
       ],
     },
     {

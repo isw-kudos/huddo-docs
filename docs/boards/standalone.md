@@ -36,5 +36,5 @@ If using the included services, you will need to map directories for mongo and s
 
 Most required variables are in the template, for more information see the Kubernetes docs 
 
- - [Global config](https://docs.kudosapps.com/boards/kubernetes/#update-config-file)
- - [Boards variables](https://docs.kudosapps.com/boards/env/common/)
+ - [Global config](/boards/kubernetes/#update-config-file)
+ - [Boards variables](/boards/env/common/)
