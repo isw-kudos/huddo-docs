@@ -52,7 +52,7 @@ Please deploy the following chart with the same configuration `boards-cp.yaml` f
 
     helm upgrade kudos-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
-> Note: the configuration file has changed as of Chart v3. Please add the new sharedDrive parameters described above
+> **Note:** the configuration file has changed as of the v3 chart. Please add the new `sharedDrive` parameters described above
 
 ---
 
