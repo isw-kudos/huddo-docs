@@ -29,14 +29,16 @@
 
     This process links users in 2 difference clients.  We utilise environment variables to initialise the process, e.g.
 
-        user:
-          replicaCount: 1
-          env:
-            PROFILE_LINK_CLIENT_PRIMARY=5ef2d52f6283afc12efd55a4
-            PROFILE_LINK_CLIENT_SECONDARY=5fd6974dd7c5ede08711432d
-            # Determines if user accounts are linked on the email prefix (before the @ symbol), default is false
-            # i.e. jsmith@huddo.com & jsmith@isw.net.au
-            # PROFILE_LINK_EMAIL_PREFIX_ONLY=true
+    ```yaml
+    user:
+      replicaCount: 1
+      env:
+        PROFILE_LINK_CLIENT_PRIMARY: 5ef2d52f6283afc12efd55a4
+        PROFILE_LINK_CLIENT_SECONDARY: 5fd6974dd7c5ede08711432d
+        # Determines if user accounts are linked on the email prefix (before the @ symbol), default is false
+        # i.e. jsmith@huddo.com & jsmith@isw.net.au
+        # PROFILE_LINK_EMAIL_PREFIX_ONLY: true
+    ```
 
 1. Redeploy the Helm chart
 
