@@ -22,42 +22,39 @@ This service will:
 
 Ensure you have updated the following variables as applicable in the `global.env` section of your `boards.yaml` file downloaded previously
 
-|                                          | Example                                                 | Description                                                                                                                                                                                                               |
-| ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CONNECTIONS_URL`                        | `httsp://connections.example.com`                       | URL of your Connections environment                                                                                                                                                                                       |
-| `FILE_PATH_ACTIVITIES_CONTENT_STORE`     | `/data/activities/content`                              | Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</br>Ensure you set the IP and path for the NFS volume mount. |
-| `API_GATEWAY`                            | `https://[CONNECTIONS_URL]/api-boards`                  | URL of the Boards API.</br>Used by files attached to a board. URL.                                                                                                                                                        |
-| `CONNECTIONS_ACTIVITIES_ADMIN_USERNAME`  | `connectionsadmin`                                      | Credentials for user with `admin` role </br>on the Activities application.</br>See `ISC` => `Applications` => </br>`Activities` => </br>`Security role to user mapping`                                                   |
-| `CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD`  | `adminpassword`                                         | Password for the Activities administrator                                                                                                                                                                                 |
-| `CONNECTIONS_DB_TYPE`                    | `db2` or `mssql` or `oracle`                            | SQL database type hosting Activities.                                                                                                                                                                                     |
-| `CONNECTIONS_DB_HOST`                    | `dbserver.company.com`                                  | SQL Server hostname                                                                                                                                                                                                       |
-| `CONNECTIONS_DB_PORT`                    | `50000` or `1433` or `1531`                             | SQL Server connection port                                                                                                                                                                                                |
-| `CONNECTIONS_DB_USER`                    | `dbuser`                                                | SQL Server user name                                                                                                                                                                                                      |
-| `CONNECTIONS_DB_PASSWORD`                | `dbpassword`                                            | SQL Server user password                                                                                                                                                                                                  |
-| `CONNECTIONS_DB_SID`                     | `DATABASE`                                              | SQL Server SID</br>**Note: applicable to Oracle**                                                                                                                                                                         |
-| `CONNECTIONS_DB_DOMAIN`                  | `domain`                                                | SQL Server connection string</br>**Note: applicable to Microsoft SQL**                                                                                                                                                    |
-| `CONNECTIONS_DB_CONNECT_STRING`          | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>` | SQL Server connection string</br>**Note: Optional</br>Default is built from other values.</br>Only applicable to DB2 and Oracle**                                                                                         |
-| `PROCESSING_PAGE_SIZE`                   | `10` (default)                                          | Number of Activities to process </br>simultaneously. Value must not exceed </br>the connection pool size supported </br>by the SQL database                                                                               |
-| `PROCESSING_LOG_EVERY`                   | `50` (default)                                          | The migration process logs every 50 Activities completed                                                                                                                                                                  |
-| `IMMEDIATELY_PROCESS_ALL`                | `false` (default)                                       | Process ALL Activities on service startup.                                                                                                                                                                                |
-| `COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                 | Mark the old Activity data as complete                                                                                                                                                                                    |
-| `CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                 | Create link to new Board in old Activity                                                                                                                                                                                  |
+|                                              | Example                                                  | Description                                                                                                                                                                                                               |
+| -------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sharedDrive.server`                         | `192.168.10.1` or `websphereNode1`                       | IP or Hostname of the server with the Connections shared drive mount                                                                                                                                                      |
+| `sharedDrive.path`                           | `/opt/HCL/Connections/data/shared` or `/nfs/data/shared` | Path on the mount to the Connections shared drive                                                                                                                                                                         |
+| `env.CONNECTIONS_URL`                        | `httsp://connections.example.com`                        | URL of your Connections environment                                                                                                                                                                                       |
+| `env.FILE_PATH_ACTIVITIES_CONTENT_STORE`     | `/data/activities/content`                               | Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</br>Ensure you set the IP and path for the NFS volume mount. |
+| `env.API_GATEWAY`                            | `https://[CONNECTIONS_URL]/api-boards`                   | URL of the Boards API.</br>Used by files attached to a board. URL.                                                                                                                                                        |
+| `env.CONNECTIONS_ACTIVITIES_ADMIN_USERNAME`  | `connectionsadmin`                                       | Credentials for user with `admin` role </br>on the Activities application.</br>See `ISC` => `Applications` => </br>`Activities` => </br>`Security role to user mapping`                                                   |
+| `env.CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD`  | `adminpassword`                                          | Password for the Activities administrator                                                                                                                                                                                 |
+| `env.CONNECTIONS_DB_TYPE`                    | `db2` or `mssql` or `oracle`                             | SQL database type hosting Activities.                                                                                                                                                                                     |
+| `env.CONNECTIONS_DB_HOST`                    | `dbserver.company.com`                                   | SQL Server hostname                                                                                                                                                                                                       |
+| `env.CONNECTIONS_DB_PORT`                    | `50000` or `1433` or `1531`                              | SQL Server connection port                                                                                                                                                                                                |
+| `env.CONNECTIONS_DB_USER`                    | `dbuser`                                                 | SQL Server user name                                                                                                                                                                                                      |
+| `env.CONNECTIONS_DB_PASSWORD`                | `dbpassword`                                             | SQL Server user password                                                                                                                                                                                                  |
+| `env.CONNECTIONS_DB_SID`                     | `DATABASE`                                               | SQL Server SID</br>**Note: applicable to Oracle**                                                                                                                                                                         |
+| `env.CONNECTIONS_DB_DOMAIN`                  | `domain`                                                 | SQL Server connection string</br>**Note: applicable to Microsoft SQL**                                                                                                                                                    |
+| `env.CONNECTIONS_DB_CONNECT_STRING`          | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>`  | SQL Server connection string</br>**Note: Optional</br>Default is built from other values.</br>Only applicable to DB2 and Oracle**                                                                                         |
+| `env.PROCESSING_PAGE_SIZE`                   | `10` (default)                                           | Number of Activities to process </br>simultaneously. Value must not exceed </br>the connection pool size supported </br>by the SQL database                                                                               |
+| `env.PROCESSING_LOG_EVERY`                   | `50` (default)                                           | The migration process logs every 50 Activities completed                                                                                                                                                                  |
+| `env.IMMEDIATELY_PROCESS_ALL`                | `false` (default)                                        | Process ALL Activities on service startup.                                                                                                                                                                                |
+| `env.COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                  | Mark the old Activity data as complete                                                                                                                                                                                    |
+| `env.CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                  | Create link to new Board in old Activity                                                                                                                                                                                  |
 
 Example:
 
 ```yaml
 migration:
-  volumes:
-    - name: connections-shared-drive
-      nfs: 
-        # Replace with IP address for the NFS server
-        server: 192.168.10.1
-        # path to the Connections Shared directory
-        # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
-        path: /nfs/data/shared
-  volumeMounts:
-    - name: connections-shared-drive
-      mountPath: /data
+  # configure access to the Connections Shared mount
+  sharedDrive:
+    # Replace with IP address for the NFS server
+    server: 192.168.10.1
+    # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
+    path: /nfs/data/shared
   env:
     FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
     API_GATEWAY: https://example.com/api-boards
@@ -78,7 +75,9 @@ migration:
 
 Please deploy the following chart with the same configuration `boards.yaml` file used to deploy the kudos-boards chart
 
-    helm upgrade kudos-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-activity-migration-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade kudos-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-activity-migration-5.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+
+> Note: the configuration file has changed as of Chart v5. Please add the new sharedDrive parameters described above
 
 ---
 

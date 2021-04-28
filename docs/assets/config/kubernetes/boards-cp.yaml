@@ -62,23 +62,12 @@ user:
     CONNECTIONS_ADMINS: "[\"admin1@company.example.com\", \"boss2@company.example.com\", \"PROF_GUID_3\"]"
 
 migration:
-  volumes:
-    - name: connections-shared-drive
-      nfs: 
-        # Replace with IP address for the NFS server
-        server: 192.168.10.1
-        # path to the Connections Shared directory
-        # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
-        path: /nfs/data/shared
-    - name: mongo-secret-vol
-      secret:
-        secretName: mongo-secret
-        defaultMode: 420
-  volumeMounts:
-    - name: connections-shared-drive
-      mountPath: /data
-    - name: mongo-secret-vol
-      mountPath: /etc/mongodb/x509
+  # configure access to the Connections Shared mount
+  sharedDrive:
+    # Replace with IP address for the NFS server
+    server: 192.168.10.1
+    # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
+    path: /nfs/data/shared
   env:
     # the extension after /data can be found from the WebSphere ACTIVITIES_CONTENT_DIR variable
     FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content

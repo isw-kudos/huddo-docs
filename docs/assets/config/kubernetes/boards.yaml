@@ -74,17 +74,12 @@ user:
 # This section is for deploying the optional Activity Migration chart
 # Please see doc at https://docs.huddo.com/boards/connections/migration/
 migration:
-  volumes:
-    - name: connections-shared-drive
-      nfs: 
-        # Replace with IP address for the NFS server
-        server: 192.168.10.1
-        # path to the Connections Shared directory
-        # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
-        path: /nfs/data/shared
-  volumeMounts:
-    - name: connections-shared-drive
-      mountPath: /data
+  # configure access to the Connections Shared mount
+  sharedDrive:
+    # Replace with IP address for the NFS server
+    server: 192.168.10.1
+    # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
+    path: /nfs/data/shared
   env:
     # the extension after /data can be found from the WebSphere ACTIVITIES_CONTENT_DIR variable
     FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
