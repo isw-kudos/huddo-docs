@@ -12,7 +12,7 @@
 
 1. Notification bot (optional). [See instructions](/boards/msgraph/notification-bot/)
 
-    > **Note:** notifications are **optional** as the bot cannot be configured for internal Huddo Boards deployments
+   > **Note:** notifications are **optional** as the bot cannot be configured for internal Huddo Boards deployments
 
 ---
 
@@ -24,71 +24,73 @@
 
 1. Click the `Configuration` icon and then `Manage Org`
 
-    ![example](/assets/boards/admin.png)
+   ![example](/assets/boards/admin.png)
 
 1. Click on your Organisation
 
-    ![example](/assets/msgraph/teams/admin-orgs.png)
+   ![example](/assets/msgraph/teams/admin-orgs.png)
 
 1. Click on your Microsoft client
 
-    ![example](/assets/msgraph/teams/admin-org.png)
+   ![example](/assets/msgraph/teams/admin-org.png)
 
 1. Click the download button for your configuration
 
-    - `App with Notifications` (if you can and have enabled the [notification bot](/boards/msgraph/notification-bot/))
+   - `App with Notifications` (if you can and have enabled the [notification bot](/boards/msgraph/notification-bot/))
 
-    - `App for Internal Boards Deployment` (if you do not want notifications)
+   - `App for Internal Boards Deployment` (if you do not want notifications)
 
-    ![example](/assets/msgraph/teams/app-download.png)
+   ![example](/assets/msgraph/teams/app-download.png)
 
 ### Install in Teams
 
 1. Open the [Teams App](https://teams.microsoft.com)
 
-    Click `Apps` -> `Upload a custom app` -> `Upload for [COMPANY_NAME]`
-    > where `[COMPANY_NAME]` is the name of your company
+   Click `Apps` -> `Upload a custom app` -> `Upload for [COMPANY_NAME]`
 
-    ![example](/assets/msgraph/teams/teams1.png)
+   > where `[COMPANY_NAME]` is the name of your company
+
+   ![example](/assets/msgraph/teams/teams1.png)
 
 1. Upload the Zip file you downloaded above
 
-    ![example](/assets/msgraph/teams/teams2.png)
+   ![example](/assets/msgraph/teams/teams2.png)
 
 1. The Huddo Boards app will now appear under the section `Built for [COMPANY_NAME]`
 
-    ![example](/assets/msgraph/teams/teams3.png)
-
+   ![example](/assets/msgraph/teams/teams3.png)
 
 ---
 
 ### Configure App ID
 
-1. Open [Team Apps](https://teams.microsoft.com/_#/apps?intent=0&category=16&autoNavigationOnDone=true&filterByPersonal=false&storeLaunchFromChat=false&addAppDialogEntryPoint=7) in your web browser
+1.  Open [Team Apps](https://teams.microsoft.com/_#/apps?intent=0&category=16&autoNavigationOnDone=true&filterByPersonal=false&storeLaunchFromChat=false&addAppDialogEntryPoint=7) in your web browser
 
     Click on `Built for [COMPANY_NAME]` => `Huddo Boards`
 
     ![example](/assets/msgraph/teams/tenant-apps.png)
 
-1. Click `Add`
+1.  Click `Add`
 
     ![example](/assets/msgraph/teams/add-app.png)
 
-1. Huddo Boards personal will now open
+1.  Huddo Boards personal will now open
 
     Copy the App ID from the URL. We will use this shortly.
 
     ![example](/assets/msgraph/teams/appid.png)
 
-1. Open the Boards Helm Chart config used for deployment
+1.  Open the Boards Helm Chart config used for deployment
 
     Add the following environment variable to `provider` (uncomment or add the section as required):
 
-        provider:
-          env:
-            MSGRAPH_TEAMS_APP_ID: "<your_app_id>"
+    ```yaml
+    provider:
+      env:
+        MSGRAPH_TEAMS_APP_ID: "<your_app_id>"
+    ```
 
-1. Redeploy Boards helm chart as per command for Huddo Boards:
+1.  Redeploy Boards helm chart as per command for Huddo Boards:
 
     [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 

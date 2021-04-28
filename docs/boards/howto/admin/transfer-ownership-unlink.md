@@ -17,11 +17,13 @@ In the user interface a user can unlink an account alias and transferring conten
 
     Set the following environment variables
 
-        boards:
-          replicaCount: 1
-          env:
-            TRANSFER_AND_UNLINK_TO_CLIENT=5fd6974dd7c5ede08711432d
-            TRANSFER_AND_UNLINK_FROM_CLIENT=5ef2d52f6283afc12efd55a4
+    ```yaml
+    boards:
+      replicaCount: 1
+      env:
+        TRANSFER_AND_UNLINK_TO_CLIENT: 5fd6974dd7c5ede08711432d
+        TRANSFER_AND_UNLINK_FROM_CLIENT: 5ef2d52f6283afc12efd55a4
+    ```
 
 1. Redeploy the Helm chart
 

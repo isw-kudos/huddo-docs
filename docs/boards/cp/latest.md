@@ -8,10 +8,11 @@ Please register your Dockerhub credentials with the ISW Huddo team and then run 
 
 ### Update config to pull images from Dockerhub
 
-    global
-      env:
-        repository: docker.io/kudos-boards-docker
-
+```yaml
+global
+  env:
+    repository: docker.io/kudos-boards-docker
+```
 ### Deploy
 
 Run the following update command

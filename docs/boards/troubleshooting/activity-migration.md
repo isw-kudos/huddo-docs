@@ -23,32 +23,19 @@ This service will:
 
 1. Add the volume, volume mount & `FILE_PATH_ACTIVITIES_CONTENT_STORE` to the boards yaml config. For example:
 
-        migration:
-          # Ensure only one pod runs
-          replicaCount: 1
-          volumes:
-            - name: connections-shared-drive
-              nfs: 
-                # Replace with IP address for the NFS server
-                server: 192.168.10.1
-                # path to the Connections Shared directory
-                # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
-                path: /nfs/data/shared
-            # CP deploy requires this next volume
-            - name: mongo-secret-vol
-              secret:
-                secretName: mongo-secret
-                defaultMode: 420
-          volumeMounts:
-            - name: connections-shared-drive
-              mountPath: /data
-            # CP deploy requires this next volume mount
-            - name: mongo-secret-vol
-              mountPath: /etc/mongodb/x509
-          env:
-            # the extension after /data can be found from the WebSphere ACTIVITIES_CONTENT_DIR variable
-            FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
+    ```yaml
+    migration:
+      # configure access to the Connections Shared mount
+      sharedDrive:
+        # Replace with IP address for the NFS server
+        server: 192.168.10.56
+        # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
+        path: /nfs/data/shared
+      env:
+        # the extension after /data can be found from the WebSphere ACTIVITIES_CONTENT_DIR variable
+        FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
+    ```
 
-1. Replace the `volumes.nfs.server` IP and the `server.nfs.path` to the shared drive (e.g. `/nfs/data/shared` or `/opt/HCL/data/shared` etc)
-1. Deploy the Activity Migration chart applicable for your deployment ([CP](/boards/cp/migration/) or [standalone Kubernetes](/boards/connections/migration/))
+1. Replace the `sharedDrive.server` IP and the `sharedDrive.path` to the shared drive (e.g. `/nfs/data/shared` or `/opt/HCL/data/shared` etc)
+1. Deploy the Activity Migration chart applicable for your deployment ([CP v3](/boards/cp/migration/) or [standalone Kubernetes v5](/boards/connections/migration/))
 1. Review the pod logs for the status of how many long description were replaced

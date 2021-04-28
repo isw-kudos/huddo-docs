@@ -6,10 +6,12 @@
 
     Comment out the CLIENT_ID for the provider to be deactivated:
 
-        user:
-          env:
-            # CONNECTIONS_CLIENT_ID
-            # MSGRAPH_CLIENT_ID
+    ```yaml
+    user:
+      env:
+        # CONNECTIONS_CLIENT_ID
+        # MSGRAPH_CLIENT_ID
+    ```
 
 1. Redeploy the Helm chart
 

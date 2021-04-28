@@ -133,11 +133,13 @@ Click `Yes`
 
 1. Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
 
-        global:
-          env:
-            MSGRAPH_CLIENT_ID: "<your-application-id>"
-            MSGRAPH_CLIENT_SECRET: "<your-application-secret>"
-            MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
+    ```yaml
+    global:
+      env:
+        MSGRAPH_CLIENT_ID: "<your-application-id>"
+        MSGRAPH_CLIENT_SECRET: "<your-application-secret>"
+        MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
+    ```
 
 1. Redeploy Boards Helm Chart as per command for Huddo Boards:
 
