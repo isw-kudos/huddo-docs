@@ -119,7 +119,7 @@ Follow instructions on [this page](/boards/env/common/)
 
 Install the Boards services via our Helm chart
 
-    helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 

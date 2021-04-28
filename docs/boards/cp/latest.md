@@ -16,4 +16,4 @@ Please register your Dockerhub credentials with the ISW Huddo team and then run 
 
 Run the following update command
 
-    helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-2.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods

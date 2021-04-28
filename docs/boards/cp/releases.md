@@ -4,18 +4,17 @@
 
 
 ### Update Notes:
-**Note: As of 2020-09-18 all updates must use the new Helm chart**
 
 Please use the appropriate update command. For example:
 
 Huddo Boards in Kubernetes
 ```
-helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 ```
 
 Component Pack (Activities Plus)
 ```
-helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-2.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 ```
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.

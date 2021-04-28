@@ -37,23 +37,18 @@ Example
       Repository: https://github.com/kubernetes/ingress-nginx
     -------------------------------------------------------------------------------
 
-As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include the regular expression like below. This is already the default in the `kudos-boards-cp-2.0.1.tgz` chart.
+As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include a regular expression which is now set as the default as of the helm chart v2.0.1.  We recommend using the latest `kudos-boards-cp-3.0.0.tgz` which includes all required annotations (including socket.io cookie fix).
 
-    webfront:
-      ingress:
-        path: /boards/(.*)
-        annotations:
-          nginx.ingress.kubernetes.io/rewrite-target: /$1
+---
 
-    core:
-      ingress:
-        path: /api-boards/(.*)
-        annotations:
-          nginx.ingress.kubernetes.io/rewrite-target: /$1
-          # Default annotations below which should be included such that they are not overwritten
-          nginx.ingress.kubernetes.io/proxy-body-size: 50m
-          nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-          nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
-          nginx.ingress.kubernetes.io/affinity: cookie
-          # Flag the cookie as secure - fix SameSite=none issue
-          nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
+## Customizing Boards Context Root
+
+If you wish to deploy boards at a path other than `/boards` & `/api-boards` please see [this example file](/assets/config/kubernetes/custom-context-root.yaml) of all the variables to merge into your YAML config file.
+
+---
+
+## Rich Text not editable (No real time updates)
+
+Some deployments may encounter an issue where you are unable to edit the rich text of a card, or you do not see any real time updates.  If this is the case, it is likely that the socket is unable to connect or authenticate. Please update to the latest Boards helm chart (`kudos-boards-cp-3.0.0.tgz` or `kudos-boards-5.0.0.tgz`) which includes new annotations for increased browser cookie security requirements.
+
+> Note: if you have a `core.annotations` section in your yaml configuration our updates will be overwritten. Custom annotations should only be required when customizing the context root as per above. Please remove the `annotations` section otherwise.
