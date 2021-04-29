@@ -43,19 +43,21 @@ If you have an older Ingress controller version (i.e. 0.20) you will need to app
 
 ```yaml
   webfront:
-    path: /boards
-    annotations:
-	  nginx.ingress.kubernetes.io/rewrite-target: /
+    ingress:
+      path: /boards
+      annotations:
+        nginx.ingress.kubernetes.io/rewrite-target: /
 
   core:
-    path: /api-boards
-    annotations:
-	  nginx.ingress.kubernetes.io/rewrite-target: /
-      nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
-      nginx.ingress.kubernetes.io/affinity: cookie
-      nginx.ingress.kubernetes.io/proxy-body-size: 50m
-      nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-      nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    ingress:
+      path: /api-boards
+      annotations:
+        nginx.ingress.kubernetes.io/rewrite-target: /
+        nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
+        nginx.ingress.kubernetes.io/affinity: cookie
+        nginx.ingress.kubernetes.io/proxy-body-size: 50m
+        nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+        nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
 ```
 
 ---
