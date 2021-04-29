@@ -65,8 +65,7 @@ Save emails from Outlook as a card in your board
 
 Attach boards, lists and cards to an email.
 
-<img src="/assets/msgraph/outlook_attach.png" style="border: 1px solid #ccc;" />
-
+![Save email](/assets/msgraph/outlook_attach.png) 
 ---
 
 ### Sharepoint
