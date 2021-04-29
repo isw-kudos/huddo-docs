@@ -42,22 +42,22 @@ As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards
 If you have an older Ingress controller version (i.e. 0.20) you will need to apply the following customisations to fix the ingress with charts as of v2.0.1
 
 ```yaml
-  webfront:
-    ingress:
-      path: /boards
-      annotations:
-        nginx.ingress.kubernetes.io/rewrite-target: /
+webfront:
+  ingress:
+    path: /boards
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
 
-  core:
-    ingress:
-      path: /api-boards
-      annotations:
-        nginx.ingress.kubernetes.io/rewrite-target: /
-        nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
-        nginx.ingress.kubernetes.io/affinity: cookie
-        nginx.ingress.kubernetes.io/proxy-body-size: 50m
-        nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-        nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+core:
+  ingress:
+    path: /api-boards
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
+      nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
+      nginx.ingress.kubernetes.io/affinity: cookie
+      nginx.ingress.kubernetes.io/proxy-body-size: 50m
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+      nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
 ```
 
 ---
