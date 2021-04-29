@@ -86,7 +86,6 @@ provider:
     tag: provider
 
 events:
-  replicaCount: 1
   image:
     name: ""
     tag: boards-event
