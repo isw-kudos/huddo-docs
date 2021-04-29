@@ -23,6 +23,32 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 ---
 
+#### 2021-04-29
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-04-29)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-04-29
+iswkudos/kudos-boards:provider-2021-04-29
+iswkudos/kudos-boards:licence-2021-04-29
+iswkudos/kudos-boards:notification-2021-04-29
+iswkudos/kudos-boards:webfront-2021-04-29
+iswkudos/kudos-boards:core-2021-04-29
+iswkudos/kudos-boards:boards-2021-04-29
+iswkudos/kudos-boards:activity-migration-2021-04-29
+```
+
+Fixes:
+
+- Allow editing of rich text when sockets fail
+- Opening cards with html imported from Outlook
+- Member assignment on click in menu
+- Remove card theme when deleting file set as card theme
+- Multiple assignments in rapid succession
+
+---
+
 #### 2021-04-26
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-04-26)
 
