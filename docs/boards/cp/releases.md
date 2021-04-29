@@ -21,6 +21,16 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 > **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
+#### Important update (CP v3)
+> **New Event Service: ** as of the Component Pack chart v3.0.0 there is a new Boards service. In order to use the image from our repository you must add the new image tag
+
+```yaml
+events:
+  image:
+    name: ""
+    tag: boards-event
+```
+
 ---
 
 #### 2021-04-29
