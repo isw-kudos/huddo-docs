@@ -8,20 +8,18 @@ Anyone who has access to view the card will be able to view and download the att
 
 ### Office 365 (OneDrive) & HCL Connections (Files)
 
-If you use Office 365 or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
+If you use <a target="_blank" href="https://docs.huddo.com/boards/howto/kudos-boards-and-microsoft-onedrive/">Office 365</a> or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
 
 ### Attaching a File to a Card
 
-Open your desired card, click the + next to Links and Attachments
+Open your desired card, click the `Links and Attachments`
 ![](/assets/boards/attaching1.png)
 
-In the menu that appears, choose Upload.
-
-![](/assets/boards/attaching2.png)
-
-Locate the file(s) you wish to attach and click open, Huddo Boards will examine the selected files and prompt you where to upload them as below. choose `Upload to Huddo Boards` and click `Upload`.
+In the menu that appears, choose `Upload to this board.`
 
 ![](/assets/boards/attaching3.png)
+
+Locate the file(s) you wish to attach and click open. 
 
 Your file will now appear in the Links and Attachments list.
 
@@ -29,7 +27,7 @@ Your file will now appear in the Links and Attachments list.
 
 ### Removing an Attached File
 
-To remove an attached file, hover over the file in the card and click the `X` to remove the link. The file will be deleted and the link will no longer work. Please ensure you still have a copy of the file if needed before doing this.
+To remove an attached file, navigate to the `...` to the right of the attachment. Click and select Delete to remove the file. The file will be deleted and the link will no longer work. Please ensure you still have a copy of the file if needed before doing this.
 
 ### Who Can Remove Files?
 
