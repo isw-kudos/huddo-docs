@@ -37,7 +37,12 @@ iswkudos/kudos-boards:webfront-2021-04-29
 iswkudos/kudos-boards:core-2021-04-29
 iswkudos/kudos-boards:boards-2021-04-29
 iswkudos/kudos-boards:activity-migration-2021-04-29
+iswkudos/kudos-boards:boards-event-2021-04-29
 ```
+
+New:
+
+- Boards Event service
 
 Fixes:
 
