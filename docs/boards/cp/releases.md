@@ -33,6 +33,40 @@ events:
 
 ---
 
+#### 2021-05-04
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-04)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-05-04
+iswkudos/kudos-boards:provider-2021-05-04
+iswkudos/kudos-boards:licence-2021-05-04
+iswkudos/kudos-boards:notification-2021-05-04
+iswkudos/kudos-boards:webfront-2021-05-04
+iswkudos/kudos-boards:core-2021-05-04
+iswkudos/kudos-boards:boards-2021-05-04
+iswkudos/kudos-boards:activity-migration-2021-05-04
+iswkudos/kudos-boards:boards-event-2021-05-04
+```
+
+Improvements:
+
+- User feedback when assigning tasks to multiple users (no flickering)
+- Reconnect live events after service updates
+- API docs only at root, send 404 for missing/incorrect routes
+- Reduce height of background event loading progress bar
+
+Fixes:
+
+- Archive view loading animation
+- Adding an Admin by email search
+- Dot in Node modal above name input visible with a theme
+- Outlook add-in file updates
+- Deep linking to Community Boards widget in Highlights app
+
+---
+
 #### 2021-04-29
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-04-29)
 
