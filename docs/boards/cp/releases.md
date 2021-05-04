@@ -64,6 +64,8 @@ Fixes:
 - Dot in Node modal above name input visible with a theme
 - Outlook add-in file updates
 - Deep linking to Community Boards widget in Highlights app
+- Authors can no longer assign users to tasks they did not create
+- Authors and Readers can complete 'All Must Complete' tasks they are assigned to
 
 ---
 
