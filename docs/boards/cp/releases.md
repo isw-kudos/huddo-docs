@@ -60,7 +60,7 @@ Improvements:
     - Type to filter
 - Allow custom NodeMailer email options (insecure tls etc)
 
-    - core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"
+    `core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"`
 
 Fixes:
 
