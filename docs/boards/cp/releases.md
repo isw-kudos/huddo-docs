@@ -58,6 +58,7 @@ Improvements:
     - Updated defaults for private Boards
     - Alphabetic ordering of Connections files
     - Type to filter
+
 - Allow custom NodeMailer email options (insecure tls etc)
 
     `core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"`
