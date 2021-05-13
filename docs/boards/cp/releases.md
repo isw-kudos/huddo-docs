@@ -33,6 +33,42 @@ events:
 
 ---
 
+#### 2021-05-13
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-13)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-05-13
+iswkudos/kudos-boards:provider-2021-05-13
+iswkudos/kudos-boards:licence-2021-05-13
+iswkudos/kudos-boards:notification-2021-05-13
+iswkudos/kudos-boards:webfront-2021-05-13
+iswkudos/kudos-boards:core-2021-05-13
+iswkudos/kudos-boards:boards-2021-05-13
+iswkudos/kudos-boards:activity-migration-2021-05-13
+iswkudos/kudos-boards:boards-event-2021-05-13
+```
+
+Improvements:
+
+- Link to Files / Upload to Files
+
+    - Show options for all member Groups (Communities)
+    - Updated defaults for private Boards
+    - Alphabetic ordering of Connections files
+    - Type to filter
+- Allow custom NodeMailer email options (insecure tls etc)
+
+    - core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"
+
+Fixes:
+
+- Color tag menu positioning on small screen
+- Boards image on file uploads (context root)
+
+---
+
 #### 2021-05-04
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-04)
 
