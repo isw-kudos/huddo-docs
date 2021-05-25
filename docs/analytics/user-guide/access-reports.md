@@ -1,9 +1,6 @@
+This section covers the fundamental how-tos for accessing reports within Huddo Analytics
 
-#### How to Access Reports
-
-This section covers the fundamental how-tos for accessing reports within Kudos Analytics.
-
-##### View Reports
+### View Reports
 
 In order to view a report, you will need to add the Analytics widget applicable to your access level, select a report category and select a report.
 
