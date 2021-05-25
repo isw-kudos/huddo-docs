@@ -51,7 +51,7 @@ There is also a Huddo report category for Huddo Badges/Thanks/Awards.
 **Huddo** Huddo reports help quantify Badges/Thanks/Awards received on Badge and User<br>
 _e.g. Total Awarded Badges, Thanks Awarded usage, Huddo Summary Report_
 
-## Default Available Reports.
+## Default Available Reports
 
 Below is a full list of all reports provided as part of Huddo Analytics, organised by _Report Access Level_ and _Category_.
 
