@@ -13,40 +13,38 @@ Examples - _My Most visited Blogs, My Recent Network Contact, My Recent Follower
 
 #### Community Level Analytics
 
-Community managers are presented with reports that help monitor their Community’s usage and adoption. These reports can be accessed through the Kudos Community
+Community managers/owners are presented with reports that help monitor their Community’s usage and adoption. These reports can be accessed through the Huddo Community
 Analytics widget. These reports can only be accessed and customised by the Owners of the Community.
 
 Examples – _Most Popular Ideas, Number of Visits Over Time, Most Recent Members, etc._
 
-#### Overall Connections Analytics
+#### Overall (admin) Connections Analytics
 
 Overall Connections Reports focus on usage and adoption of the entire Connections environment. These reports are accessed in a very similar way to Community reports
-but they are only available within the ‘KudosAnalytics’ community as defined in the _widgets-config.xml_ file during installation. Please see the Installation guide for more
+but they are only available within the ‘Huddo Analytics’ community as defined in the _widgets-config.xml_ file during installation. Please see the Installation guide for more
 details.
 
 Examples - _Most Active Users, Most Active Content, Percentage of Users Active in BUILDING, Connections Usage by Application, etc._
 
-
 ### Categories of Reports
 
-Kudos Analytics includes over 100 pre-defined graphs and data reports to help monitor user-adoption within Connections. In addition, further reports can be created by
+Huddo Analytics includes over 100 pre-defined graphs and data reports to help monitor user-adoption and usage within Connections. In addition, further reports can be created by
 Connections Administrators and Community Managers using the Custom Report templates. All reports are organised into the five main categories as listed below.
 
-```
-Connections Reports Examples in this category provide an overview of user activity within - Number of Visit Events Over Time, Number of Create Events by A Connections activity. pplication
-```
-```
-Demographics These ExampleReports s - Connections Usage by Country are based on user groups defined by Profile attributes, , Connections Usage by Building^ , Percentage of Users Active in Each Building
-```
-```
-Content Content Examples Reports - Most Created Types of Content provide an insight into the different types of content , Most Followed Content, Most Visited Content^ as well as content with specific attributes within Connections.^
-```
-```
-User These rExamples eports – Inactive Users, Users Ranked by Number of Visits are aimed at enabling the viewer to identify users based on their usage of Connection , Most Active Users.^
-```
-```
-Community Community reports help identify communities based on usage and adoption related attributes such as size, Examples – Largest Communities, Most Active Communities usage, contributions, etc.^
-```
+**Connections** - Reports in this category provide an overview of user activity within Connections<br>
+_e.g. Number of Visit Events Over Time, Number of Create Events by Application_
+
+**Demographics** - These Reports are based on user groups defined by Profile attributes<br>
+_e.g. _Connections Usage by Country, Connections Usage by Building, Percentage of Users Active in Each Building_
+
+**Content** Content Reports provide an insight into the different types of content as well as content with specific attributes within Connections<br>
+_e.g. Most Created Types of Content, Most Followed Content, Most Visited Content_
+
+**User** - These Reports –  are aimed at enabling the viewer to identify users based on their usage of Connections<br>
+_e.g. Inactive Users, Users Ranked by Number of Visits, Most Active Users_
+
+**Community** Community reports help identify communities based on usage and adoption related attributes such as size, contributions<br>
+_e.g. Largest Communities, Most Active Communities usage_
 
 ##### Default Available Reports...................................................................................
 
