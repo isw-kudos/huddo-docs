@@ -20,15 +20,15 @@ extra:
 nav:
   - Welcome: index.md
   - Huddo Analytics:
+    - Installation:
+      - FAQ: analytics/websphere-faq.md
     - User Guide :
       - Introduction: analytics/user-guide/introduction.md 
       - Using Reports: analytics/user-guide/using-reports.md 
       - Available Reports: analytics/user-guide/available-reports.md 
       - How to Access Reports: analytics/user-guide/access-reports.md 
       - Glossary of Terms: analytics/user-guide/terms.md 
-  #    - Event Map: analytics/user-guide/itemtype-map.md 
-  #   - Installation:
-  #     - FAQ: analytics/websphere-faq.md
+      - Event Map: analytics/user-guide/itemtype-map.md 
   - Huddo Badges:
      - Details: badges/index.md
      - Installation:
