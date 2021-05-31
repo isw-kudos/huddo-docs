@@ -33,6 +33,41 @@ events:
 
 ---
 
+#### 2021-05-31
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-31)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-05-31
+iswkudos/kudos-boards:provider-2021-05-31
+iswkudos/kudos-boards:licence-2021-05-31
+iswkudos/kudos-boards:notification-2021-05-31
+iswkudos/kudos-boards:webfront-2021-05-31
+iswkudos/kudos-boards:core-2021-05-31
+iswkudos/kudos-boards:boards-2021-05-31
+iswkudos/kudos-boards:activity-migration-2021-05-31
+iswkudos/kudos-boards:boards-event-2021-05-31
+```
+
+Improvements:
+
+- Microsoft (Teams & Sharepoint) - detect owners vs members (authors)
+- Creating board in Sharepoint sites
+- Comment create/delete UI performance
+- Card completion performance
+
+Fixes:
+
+- ACL for Readers/Commenters
+- Protect against removing an assignment while still creating
+- Showing image pasted in description with no text
+- Linking to files in folders
+- Description lock issues when framed (Connections, Sharepoint etc)
+- Wrap long comments instead of sideways scrolling
+
+---
+
 #### 2021-05-13
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-13)
 
