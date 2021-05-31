@@ -21,7 +21,15 @@ nav:
   - Welcome: index.md
   - Huddo Analytics:
     - Installation:
-      - FAQ: analytics/websphere-faq.md
+      - Overview: analytics/install/overview.md
+      - Install Application: analytics/install/app.md
+      - Widgets: analytics/install/install-widgets.md
+      - Apply Changes: analytics/install/apply-changes.md
+      - Add Widgets: analytics/install/add-widgets.md
+      - Community Properties: analytics/install/comm-properties.md
+      - Licence: analytics/install/licence.md
+      - Customising: analytics/install/customising.md
+      - FAQ: analytics/install/websphere-faq.md
     - User Guide :
       - Introduction: analytics/user-guide/introduction.md 
       - Using Reports: analytics/user-guide/using-reports.md 
