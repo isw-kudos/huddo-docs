@@ -33,6 +33,34 @@ events:
 
 ---
 
+#### 2021-06-02
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-02)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-06-02
+iswkudos/kudos-boards:provider-2021-06-02
+iswkudos/kudos-boards:licence-2021-06-02
+iswkudos/kudos-boards:notification-2021-06-02
+iswkudos/kudos-boards:webfront-2021-06-02
+iswkudos/kudos-boards:core-2021-06-02
+iswkudos/kudos-boards:boards-2021-06-02
+iswkudos/kudos-boards:activity-migration-2021-06-02
+iswkudos/kudos-boards:boards-event-2021-06-02
+```
+
+Improvements:
+
+- Only load Descriptions when required (less data, faster loading times)
+- Styling/positioning of Date selection
+
+Fixes
+
+- Missing Boards when viewed by Color (if never opened)
+
+---
+
 #### 2021-05-31
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-31)
 
