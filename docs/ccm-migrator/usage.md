@@ -4,6 +4,8 @@ The application can be accessed from your HCL Connections site using a URL like
 `{connections domain}/isw-connections-ccm/`, where `{connections domain}` is the
 protocol and domain name of your Connections site.
 
+## API Settings
+
 On first use, the application loads on its "API Settings" page, and requires settings
 to be confirmed before it can be used. Most settings have sensible defaults, but some
 may need to be changed depending on your environment and on how you intend to use the
@@ -66,25 +68,71 @@ page, the "Home" page will load. The application saves all settings in the web b
 local storage, so it will remember settings and will load the "Home" page by default
 on all subsequent use in the same browser, unless local storage is cleared.
 
-On first use of the "Home" page, click &quot;Analyze Communities&quot; to initiate the process.
+## Analysis and Migration
 
-Depending on the size of your environment, the analysis may take some time.
+On first use before migrating, it's necessary to perform an analysis to build a
+list of communities. Click "Analyze Communities" to do this.
 
-Once complete, the list of Communities will be displayed.  This includes filtering that defaults to show only Communities valid for migration from CCM to Files.
+By default, analysis retrieves the following information for each community:
 
-Current details for quota and current size of Files within each Community is shown.
+- Community title;
+- Whether the community has any CCM Libraries;
+- Whether the community has a Files app (which is the migration target unless migrating to file system);
+- The total size of all files in the Files app; and
+- The quota and quota usage of the Files app;
 
-Test mode is provided to give a detailed analysis of each Community prior to the actual migration. Note that a licence key is required to disable test mode and perform a real migration, and the licence key (if provided to you) must be installed as described in the &quot;Configuring the Application&quot; section of this document.
+With this default behaviour, analysis running time is proportional to the number
+of communities in your environment. As a rough guide to performance, analysis in an
+ISW test environment with 270 communities takes about 20 seconds.
 
-To migrate one or more Communities CCM to Files, select the checkbox next to each Community name and click &quot;Migrate Communities&quot;. (Test mode should be disabled for the actual migration.)
+The left-hand pane of the "Home" page contains several options under the heading
+"Migration Settings". Most of these options only apply to migration, but the option
+"Analysis reads library size" applies to analysis and causes it to also retrieve and
+display the total size of CCM Libraries in each community. **Note this is very slow
+as it's greatly affected by the number of folders and files in all CCM Libraries.**
+For example in the ISW test environment where analysis takes 20 seconds without this
+option, it takes about 5 minutes with this option, for a total of about 8000 files.
 
-The status log will provide details while processing, showing all Library files and Files folders during the migration set-up (if test mode is selected this is where the process ends).
+Once analysis is complete, the list of Communities will be displayed. This includes
+filtering that defaults to show only Communities valid for migration from CCM to Files.
 
-Details are provided for each file processed as files and folders are migrated to Files.
+At this point, you can migrate any number of communities by checking the box next
+to each Community name and clicking "Migrate Communities", but you should first review
+the "Migration Settings" in the left-hand pane. The settings are:
 
-Once a Migration run has completed an entry will be logged showing a summary of each Community processed and the files and folders found within CCM along with those created in Files.  This log file is saved under the &quot;Temporary Files Storage&quot; location.  The detailed log is cleared when starting each new analysis, if required, for this log should be manually copied from the page prior to refreshing or closing.
+- "Test Mode" - Enabled by default. Performing migration with this enabled means
+that nothing is really migrated, but the migration process will retrieve and display
+a list of all folders and files in the selected communities. Note that a licence key
+is required to disable test mode and perform a real migration, and the licence key
+(if provided to you) must be installed as described in the Installation document.
+- "Include Tags" - Whether or not to migrate file tags.
+- "Include Comments" - Whether or not to migrate file comments.
+- "Include Drafts" - Whether or not to migrate draft files. Note that the Connections
+Files app doesn't allow drafts, so drafts from CCM will become the latest file
+version when migrated.
+- "Include Versions" - Whether or not to migrate file versions. When enabled,
+you will also see an option to specify how many versions are migrated.
+- "Rename Conflicting Files" - If enabled, and the Files app in a community already
+has files matching the name of files being migrated, the migrated files will be
+renamed by appending the specified "Filename-Number Separator" followed by a number.<br>
+If disabled, files with a conflicting name won't be migrated.<br>
+If a migrated *folder* matches the name of an existing folder in the File app, this
+option doesn't apply. The migration simply uses the existing folder.
+- "Replacement for Invalid Characters" - If CCM folder or file names contain
+characters which aren't permitted in the Connections Files app, those characters
+are replaced by the specified replacement character.
 
-The process of analysis can be re-started by refreshing the page, however, as noted above, this will clear the detailed log.
+The "Status Log" provides details while processing. For each community, it lists all
+Library files (including what folder they belong to) and existing folders in the
+Files app during an information-gathering phase, then (if Test Mode is disabled)
+performs the actual migration, listing all files again with an icon and text indicating
+whether each file was migrated. This log persists after migration, but is cleared if
+either an analysis is performed or the application is restarted on the server.
+
+Once a Migration run has completed, an entry for each migrated community is added to
+the "History" page of the application, showing the community title and migration status.
+A file containing the history is saved under the "Temporary Files Storage" location on
+the server, and persists unless deleted by some means outside the application.
 
 ## Regarding file name conflicts
 
@@ -93,16 +141,11 @@ When migrating files, the application makes some attempt to work around file nam
 - One CCM library has files of the same name in different folders; or
 - One community has two or more CCM libraries with files of the same name.
 
-**HCL Connections Files** permits files of the same name in different folders, but doesn&#39;t permit a top-level file (not in any folders) to have the same name as a file in a folder.
+**HCL Connections Files** permits files of the same name in different folders, but doesn't permit a top-level file (not in any folders) to have the same name as a file in a folder.
 
-By default, if the CCM Migrator tries to migrate a file and finds that there is already a file of that name in Community Files, it will rename the new migrated file by appending an underscore (\_) followed by a number. It will use the number 2 for the first renamed file, increasing the number if the first rename also produces a conflict, and will try up to 20 renames on each conflicting file before giving up. For example, if the file name &quot;My Document.doc&quot; conflicts with an existing Community File, it will be renamed to &quot;My Document\_2.doc&quot;.
+By default, if CCM Migrator tries to migrate a file and finds that there is already a file of that name in Community Files, it will rename the new migrated file by appending an underscore (\_) followed by a number. It will use the number 2 for the first renamed file, increasing the number if the first rename also produces a conflict, and will try up to 20 renames on each conflicting file before giving up. For example, if the file name "My Document.doc" conflicts with an existing Community File, it will be renamed to "My Document\_2.doc".
 
 Additionally, for each community, the application checks whether a migration was previously attempted for that community, and avoids repeatedly migrating files which were previously migrated. This means that if a migration of one community was partially successful, but some error prevented completion, the error can be fixed and the migration repeated without having to clear out previously migrated files or producing duplicates.
 **Important: Migrations performed before this functionality was added to CCM Migrator (on 11 Feb 2019) will not be detected, due to the reliance on a new style of system logging.**
 
-The application&#39;s user-interface provides some options to change the above behaviour, as follows:
-
-- **Migrate each community from scratch** – The default (disabled) state detects whether files were migrated for each community in a previous run, to prevent repeatedly migrating the same files. Enabling this options prevents such detection. This will probably never be necessary.
-- **Rename files to avoid name conflicts** – The default (Yes) option causes conflicting files to be renamed as described above. Select &quot;No&quot; to prevent renaming files, and therefore prevent migrating files with conflicting names.
-- **Maximum number of renames per file** – The number of times to try renaming each conflicting file. Defaults to 20, but any number from 1 to 100 is valid. Ignored if the previous option is &quot;No&quot;.
-- **Prefix text before number for renamed files** – The text separating a file&#39;s original name from the number, for any files renamed due to conflicts. Defaults to underscore (\_), but can be longer than one character if desired.
+The application's user-interface provides options to change the above behaviour, and those options are listed earlier in this document.
