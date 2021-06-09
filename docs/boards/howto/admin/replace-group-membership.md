@@ -69,4 +69,3 @@ You have created replacement groups in the target system and have records of the
     ![Group mapping logs](/assets/boards/admin/group-mapping-logs.png)
 
 1. Remove Environment variables above and redeploy the Helm chart
-
