@@ -26,7 +26,7 @@ webfront:
       - "connections.example.com"
       # - "*.example.com"
 
-core:
+events:
   env:
     NOTIFIER_EMAIL_HOST: smtp.example.com
     NOTIFIER_EMAIL_USERNAME: user123
@@ -34,6 +34,8 @@ core:
     # APP_NAME: Huddo Boards # Used for all notifications, e.g. Orient Me
     # NOTIFIER_EMAIL_FROM_NAME: Huddo Boards
     # NOTIFIER_EMAIL_FROM_EMAIL: boards@connections.example.com
+
+core:
   ingress:
     # This hostname must match other Ingresses defined in your CP environment
     # If all ingresses start with * you must match the pattern, or all traffic will be routed to Boards and everything will break

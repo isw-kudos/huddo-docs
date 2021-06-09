@@ -34,15 +34,21 @@ webfront:
     hosts:
       - example.com
 
+events:
+  image:
+    tag: boards-event
+  env:
+    NOTIFIER_EMAIL_HOST: smtp.example.com
+    # NOTIFIER_EMAIL_USERNAME: username
+    # NOTIFIER_EMAIL_PASSWORD: password
+    # NOTIFIER_EMAIL_PORT: 25
+    # NODE_TLS_REJECT_UNAUTHORIZED: "0"
+
 core:
   image:
     tag: core
   env:
     API_URI_PATH: /api-boards
-    NOTIFIER_EMAIL_HOST: smtp.example.com
-    # NOTIFIER_EMAIL_USERNAME: username
-    # NOTIFIER_EMAIL_PASSWORD: password
-    # NOTIFIER_EMAIL_PORT: 25
     # NODE_TLS_REJECT_UNAUTHORIZED: "0"
   ingress:
     hosts:
