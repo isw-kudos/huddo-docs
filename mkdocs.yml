@@ -100,6 +100,7 @@ nav:
                   - Authentication: boards/msgraph/auth.md
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
                   - Teams App: boards/msgraph/teams-on-prem.md
+          - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md
       - FAQ:
           - Languages: boards/faq/languages.md
@@ -143,6 +144,7 @@ nav:
               - Microsoft Teams: boards/howto/adding-boards-to-teams.md
               - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
           - Administation:
+              - Use Dockerhub Releases: boards/cp/dockerhub.md
               - Manage Config: boards/howto/org-config.md
               - Manage Licences: boards/howto/manage-licences.md
               - Revoke Users: boards/howto/admin/revoke-users.md
