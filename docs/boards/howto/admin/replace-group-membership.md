@@ -41,7 +41,7 @@ You have created replacement groups in the target system and have records of the
     Set the following environment variables to mount the secret created above at a file path in the pod.
 
     ```yaml
-    boards:
+    app:
       replicaCount: 1
       volumes:
         - name: group-map-volume
@@ -51,7 +51,7 @@ You have created replacement groups in the target system and have records of the
         - name: group-map-volume
           mountPath: /usr/share/groupmapsecret
       env:
-        GROUP_MAP_CSV_FILE: groupmapsecret/group-map.csv
+        GROUP_MAP_CSV: groupmapsecret/group-map.csv
         GROUP_MAP_TARGET_CLIENT: 5fd6974dd7c5ede08711432d
         GROUP_MAP_SOURCE_CLIENT: 5ef2d52f6283afc12efd55a4
     ```
