@@ -22,14 +22,61 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 > **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
 #### Important update (CP v3)
-> **New Event Service: ** as of the Component Pack chart v3.0.0 there is a new Boards service. In order to use the image from our repository with the component pack v3 chart you must add the new image tag
+> **New Event Service: ** as of the Component Pack chart v3.0.0 there is a new Boards service. In order to use the image from our repository with the component pack v3 chart you must add the new image tag.
+
+> ** Note as of release 2021-06-09: ** please move the NOTIFIER_* environment variables from `core` to `events`
 
 ```yaml
 events:
   image:
     name: ""
     tag: boards-event
+  env:
+    NOTIFIER_EMAIL_HOST: <smtp-email-host>
+    NOTIFIER_EMAIL_USERNAME: <smtp-email-username>
+    NOTIFIER_EMAIL_PASSWORD: <smtp-email-password>
 ```
+
+---
+
+#### 2021-06-09
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-09)
+
+##### Breaking change
+> Emails are now sent by the `events` service. You must move the NOTIFIER_* environment variables from `core` to `events` as shown above
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-06-09
+iswkudos/kudos-boards:provider-2021-06-09
+iswkudos/kudos-boards:licence-2021-06-09
+iswkudos/kudos-boards:notification-2021-06-09
+iswkudos/kudos-boards:webfront-2021-06-09
+iswkudos/kudos-boards:core-2021-06-09
+iswkudos/kudos-boards:boards-2021-06-09
+iswkudos/kudos-boards:activity-migration-2021-06-09
+iswkudos/kudos-boards:boards-event-2021-06-09
+```
+
+New Features:
+
+- Due Date reminder emails
+- Email notification controls
+- Product Tours
+
+Improvements:
+
+- New email styling & full Card/Board representation
+
+Fixes
+
+- Visibility of assignment completion (ticks) when multi-complete
+- Issue where description was hidden if other card attribute updated
+- UI feedback when completing task on Todos view
+- Completion logic when completing last assignment
+- Missing description when post comment, export Board as CSV, create Board from Template (since 06-02)
+- Logout issue (since 06-02)
 
 ---
 
