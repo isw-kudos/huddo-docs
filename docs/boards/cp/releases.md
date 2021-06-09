@@ -5,7 +5,7 @@
 [Guide to upgrade from CP to Dockerhub images](https://docs.huddo.com/boards/cp/dockerhub/)
 
 
-## Update Notes:
+## How To
 
 Please use the appropriate update command. For example:
 
@@ -24,6 +24,7 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 > **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
 ## Important update (CP v3)
+
 > **New Event Service: ** as of the Component Pack chart v3.0.0 there is a new Boards service. In order to use the image from our repository with the component pack v3 chart you must add the new image tag.
 
 > ** Note as of release 2021-06-09: ** please move the NOTIFIER_* environment variables from `core` to `events`
