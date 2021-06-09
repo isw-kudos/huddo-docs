@@ -1,9 +1,11 @@
+# Boards Docker Release Log
+
 ## Huddo Boards for HCL Connections CP
 
 [Guide to upgrade from CP to Dockerhub images](https://docs.huddo.com/boards/cp/dockerhub/)
 
 
-### Update Notes:
+## Update Notes:
 
 Please use the appropriate update command. For example:
 
@@ -21,7 +23,7 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 > **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
-#### Important update (CP v3)
+## Important update (CP v3)
 > **New Event Service: ** as of the Component Pack chart v3.0.0 there is a new Boards service. In order to use the image from our repository with the component pack v3 chart you must add the new image tag.
 
 > ** Note as of release 2021-06-09: ** please move the NOTIFIER_* environment variables from `core` to `events`
@@ -36,13 +38,14 @@ events:
     NOTIFIER_EMAIL_USERNAME: <smtp-email-username>
     NOTIFIER_EMAIL_PASSWORD: <smtp-email-password>
 ```
-
 ---
 
-#### 2021-06-09
+## Releases
+
+### 2021-06-09
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-09)
 
-##### Breaking change
+#### Breaking change
 > Emails are now sent by the `events` service. You must move the NOTIFIER_* environment variables from `core` to `events` as shown above
 
 Images:
@@ -80,7 +83,7 @@ Fixes
 
 ---
 
-#### 2021-06-02
+### 2021-06-02
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-02)
 
 Images:
@@ -108,7 +111,7 @@ Fixes
 
 ---
 
-#### 2021-05-31
+### 2021-05-31
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-31)
 
 Images:
@@ -143,7 +146,7 @@ Fixes:
 
 ---
 
-#### 2021-05-13
+### 2021-05-13
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-13)
 
 Images:
@@ -180,7 +183,7 @@ Fixes:
 
 ---
 
-#### 2021-05-04
+### 2021-05-04
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-05-04)
 
 Images:
@@ -216,7 +219,7 @@ Fixes:
 
 ---
 
-#### 2021-04-29
+### 2021-04-29
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-04-29)
 
 Images:
@@ -247,7 +250,7 @@ Fixes:
 
 ---
 
-#### 2021-04-26
+### 2021-04-26
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-04-26)
 
 Images:
@@ -281,7 +284,7 @@ Activity Migration
 - Use Connections Shared Drive to load Activity long descriptions and files (new variables & volume/mount required in yaml)
 
 ---
-#### 2021-03-22
+### 2021-03-22
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-22)
 
 Images:
@@ -308,7 +311,7 @@ Fixes:
 
 ---
 
-#### 2021-03-16
+### 2021-03-16
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-16)
 
 Images:
@@ -339,7 +342,7 @@ Fixes:
 
 ---
 
-#### 2021-03-10
+### 2021-03-10
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-10)
 
 Images:
@@ -367,7 +370,7 @@ Activity Migration:
 
 ---
 
-#### 2021-03-05
+### 2021-03-05
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-05)
 
 Images:
@@ -402,7 +405,7 @@ Fixes:
 
 ---
 
-#### 2021-03-04
+### 2021-03-04
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-04)
 
 Images:
@@ -424,7 +427,7 @@ Fixes:
 
 ---
 
-#### 2021-03-03
+### 2021-03-03
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-03)
 
 Images:
@@ -453,7 +456,7 @@ Fixes:
 
 ---
 
-#### 2021-02-19
+### 2021-02-19
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-02-19)
 
 Images:
@@ -486,7 +489,7 @@ Fixes:
 
 ---
 
-#### 2021-01-19
+### 2021-01-19
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-01-19)
 
 Images:
@@ -517,7 +520,7 @@ Fixes:
 
 ---
 
-#### 2020-12-14
+### 2020-12-14
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-12-14)
 
 Images:
@@ -550,7 +553,7 @@ Features:
 
 ---
 
-#### 2020-12-12
+### 2020-12-12
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-12-12)
 
 Images:
@@ -572,7 +575,7 @@ Features:
 
 ---
 
-#### 2020-11-13
+### 2020-11-13
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-11-02)
 
 Images:
@@ -594,7 +597,7 @@ Improvements:
 
 ---
 
-#### 2020-11-02
+### 2020-11-02
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-11-02)
 
 Images:
@@ -622,7 +625,7 @@ Fixes:
 
 ---
 
-#### 2020-10-14
+### 2020-10-14
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-10-14)
 
 Images:
@@ -650,7 +653,7 @@ Fixes:
 - Download linked files with .odt extension
 ---
 
-#### 2020-10-05
+### 2020-10-05
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-10-05)
 
 Images:
@@ -691,7 +694,7 @@ Fixes:
 
 ---
 
-#### 2020-09-18
+### 2020-09-18
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-09-18)
 
 Images:
@@ -737,7 +740,7 @@ Fixes:
 
 ---
 
-#### 2020-08-24
+### 2020-08-24
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-08-24)
 
@@ -795,7 +798,7 @@ Fixes:
 - Ordering issue on cards created using past
 ---
 
-#### 2020-07-10
+### 2020-07-10
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-07-10)
 
@@ -827,7 +830,7 @@ Activity Migration:
 
 ---
 
-#### 2020-06-17
+### 2020-06-17
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-17)
 
@@ -860,7 +863,7 @@ Activity Migration:
 
 ---
 
-#### 2020-06-05
+### 2020-06-05
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-05)
 
@@ -900,7 +903,7 @@ Fixes:
 
 ---
 
-#### 2020-04-09
+### 2020-04-09
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-04-09)
 
@@ -922,7 +925,7 @@ Fixes:
 
 ---
 
-#### 2020-03-06
+### 2020-03-06
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-03-06)
 
