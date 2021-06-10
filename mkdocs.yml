@@ -90,6 +90,7 @@ nav:
               - HCL Connections On-Prem:
                   - Activity Migration: boards/connections/migration.md
                   - Authentication: boards/connections/auth-on-prem.md
+                  - Keycloak Authentication: boards/connections/keycloak.md
                   - Connections Header: boards/connections/header-on-prem.md
                   - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
                   - Connections Widgets: boards/connections/widgets-on-prem.md
