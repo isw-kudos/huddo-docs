@@ -41,6 +41,29 @@ events:
 
 ## Releases
 
+### 2021-06-24
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-24)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-06-24
+iswkudos/kudos-boards:provider-2021-06-24
+iswkudos/kudos-boards:licence-2021-06-24
+iswkudos/kudos-boards:notification-2021-06-24
+iswkudos/kudos-boards:webfront-2021-06-24
+iswkudos/kudos-boards:core-2021-06-24
+iswkudos/kudos-boards:boards-2021-06-24
+iswkudos/kudos-boards:activity-migration-2021-06-24
+```
+
+Fixes:
+
+- Added environment variable `FORCE_POLLING` in webfront to avoid issues seen when using IHS as reverse proxy
+- API documentation should now work for cp releases, see `/api-boards/`
+
+---
+
 ### 2021-06-09
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-09)
 
