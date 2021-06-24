@@ -70,8 +70,19 @@ If you wish to deploy boards at a path other than `/boards` & `/api-boards` plea
 
 ---
 
-## Rich Text not editable (No real time updates)
+## No real time updates (eg Rich Text not editable)
 
-Some deployments may encounter an issue where you are unable to edit the rich text of a card, or you do not see any real time updates.  If this is the case, it is likely that the socket is unable to connect or authenticate. Please update to the latest Boards helm chart (`kudos-boards-cp-3.0.0.tgz` or `kudos-boards-5.0.0.tgz`) which includes new annotations for increased browser cookie security requirements.
+Some deployments may encounter an issue where you are unable to see any real time updates.  If this is the case, it is likely that the socket is unable to connect or authenticate. Please update to the latest Boards helm chart (`kudos-boards-cp-3.0.0.tgz` or `kudos-boards-5.0.0.tgz`) which includes new annotations for increased browser cookie security requirements.
 
 > Note: if you have a `core.annotations` section in your yaml configuration our updates will be overwritten. Custom annotations should only be required when customizing the context root as per above. Please remove the `annotations` section otherwise.
+
+
+### Additional for WebSphere IHS
+
+If you are using WebSphere IHS as your reverse proxy in front of Boards, please set the following environment variables to force polling instead of sockets
+
+```yaml
+webfront:
+  env:
+    FORCE_POLLING: true
+```
