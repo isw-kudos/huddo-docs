@@ -3,7 +3,7 @@
 Download Huddo Boards [applications.json file](https://boards.huddo.com/widgets/verse/applications-onprem.json) and use it as a localFileProvider, replacing all instances of `boards.huddo.com` with your Boards URL.
 
 > The information below is an excerpt from
-> [HCL Verse Developers](https://ibmverse.github.io/verse-developer/developers/#registering-an-application-in-ibm-verse)
+> [HCL Verse Developers](https://doc.cwpcollaboration.com/verse-developer/docs/getting-started)
 
 #### Deploying extensions using the built-in endpoint
 Verse On-Premises implemented a built-in endpoint to serve the application’s JSON data from a local file or an HTTP hosted file. If storing the applications JSON data as a static file works for you, this is the way to go.
