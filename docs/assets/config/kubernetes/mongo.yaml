@@ -54,7 +54,7 @@ spec:
       dnsPolicy: ClusterFirst
       containers:
         - name: mongo
-          image: bitnami/mongodb:4.0.10-r1
+          image: bitnami/mongodb:4.4
           imagePullPolicy: Always
           resources:
             limits:
@@ -62,8 +62,6 @@ spec:
           ports:
             - containerPort: 27017
           env:
-          - name: MONGODB_REPLICA_SET_MODE
-            value: primary
           - name: MONGODB_ADVERTISED_HOSTNAME
             value: mongo-service
           volumeMounts:
