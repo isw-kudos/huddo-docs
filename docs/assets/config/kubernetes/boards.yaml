@@ -33,6 +33,11 @@ webfront:
   ingress:
     hosts:
       - example.com
+    # comment the following lines if you are using sub domains instead of paths
+    path: /boards/?(.*)
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /$1
+      
 
 events:
   image:
@@ -53,6 +58,15 @@ core:
   ingress:
     hosts:
       - example.com
+    # comment the following lines if you are using sub domains instead of paths
+    path: /api-boards/?(.*)
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /$1
+      nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
+      nginx.ingress.kubernetes.io/affinity: cookie
+      nginx.ingress.kubernetes.io/proxy-body-size: 50m
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+      nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
 
 app:
   image:
