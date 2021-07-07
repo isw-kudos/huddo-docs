@@ -39,13 +39,17 @@ spec:
 
 ---
 kind: Deployment
-apiVersion: extensions/v1beta1
+# change this to "apiVersion: extensions/v1beta1" if running pre kube 1.16
+apiVersion: apps/v1
 metadata:
   name: mongo
   namespace: boards
 spec:
   revisionHistoryLimit: 1
   replicas: 1
+  selector:
+    matchLabels:
+      app: mongo
   template:
     metadata:
       labels:
