@@ -34,6 +34,7 @@ events:
     tag: boards-event
   env:
     NOTIFIER_EMAIL_HOST: <smtp-email-host>
+    NOTIFIER_EMAIL_PORT: 25
     NOTIFIER_EMAIL_USERNAME: <smtp-email-username>
     NOTIFIER_EMAIL_PASSWORD: <smtp-email-password>
 ```
