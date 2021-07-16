@@ -24,8 +24,9 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 
 > **New Event Service: ** as of the Component Pack chart v3.0.0 there is a new Boards service. In order to use the image from our repository with the component pack v3 chart you must add the new image tag.
 
-> **Note as of release 2021-06-09:** please move the NOTIFIER_* environment variables from `core` to `events`
+> **Note as of release 2021-06-09:** please move all your NOTIFIER_* environment variables from `core` to `events`. See [our documentation](/boards/env/common/) for all supported options.
 
+For example:
 
 ```yaml
 events:
@@ -36,6 +37,7 @@ events:
     NOTIFIER_EMAIL_HOST: <smtp-email-host>
     NOTIFIER_EMAIL_USERNAME: <smtp-email-username>
     NOTIFIER_EMAIL_PASSWORD: <smtp-email-password>
+    # plus all other NOTIFIER options previously defined in core
 ```
 
 
