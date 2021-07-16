@@ -63,6 +63,7 @@ nav:
       - Versions: boards/index.md
       - Boards Cloud:
           - Overview: boards/cloud.md
+          - Updates: boards/cloud-updates.md
           - Integrations:
               - HCL Connections On-Prem:
                   - Authentication: boards/connections/auth-hybrid.md
