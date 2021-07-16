@@ -1,0 +1,95 @@
+---
+#https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kudos-minio
+  labels:
+    app: kudos-minio
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  # persistentVolumeReclaimPolicy: Recycle
+  # storageClassName: slow
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /pv-kudos/minio
+    server: [STORAGE_SERVER_IP]
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kudos-minio-claim
+  namespace: boards
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  selector:
+    matchLabels:
+      app: "kudos-minio"
+
+---
+kind: Deployment
+# change this to "apiVersion: extensions/v1beta1" if running pre kube 1.16
+apiVersion: apps/v1
+metadata:
+  name: minio
+  namespace: boards
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minio
+  template:
+    metadata:
+      labels:
+        app: minio
+    spec:
+      dnsPolicy: ClusterFirst
+      containers:
+        - name: minio
+          image: minio/minio
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 512M
+          args:
+            - server
+            - /data
+          ports:
+            - containerPort: 9000
+          env:
+          - name: MINIO_ACCESS_KEY
+            value: ioueygr4t589
+          - name: MINIO_SECRET_KEY
+            value: 7a863d41-2d8f-4143-bc8a-02501edbea6f
+          volumeMounts:
+          - mountPath: /data
+            name: minio-vol
+      volumes:
+        - name: minio-vol
+          persistentVolumeClaim:
+            claimName: kudos-minio-claim
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: minio-service
+  namespace: boards
+spec:
+  ports:
+    - port: 9000
+      targetPort: 9000
+  selector:
+    app: minio

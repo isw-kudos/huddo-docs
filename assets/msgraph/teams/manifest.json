@@ -1,0 +1,75 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.7",
+    "version": "1.0.6",
+    "id": "1c69a9da-d385-43e3-93c8-297f88c4a5a9",
+    "packageName": "com.huddo.boards",
+    "developer": {
+        "name": "HuddoApps.com by ISW Development",
+        "websiteUrl": "https://huddo.com",
+        "privacyUrl": "https://www.huddo.com/privacy-policy",
+        "termsOfUseUrl": "https://huddo.com/terms-conditions"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Huddo Boards"
+    },
+    "description": {
+        "short": "Huddo Boards makes task management more productive for Teams and Individuals",
+        "full": "Huddo Boards is a collaborative task management solution for Teams, Individuals, and invited External parties. With Kanban, Mind Map and Timeline views, Huddo Boards is fully integrated with Office 365 Teams, OneDrive, Sharepoint, and Outlook. Featuring real-time drag-and-drop, the ability to colour-code assignments, and prioritise tasks, Huddo Boards gives any project a visual and intuitive interface that enables more efficient and effective teamwork."
+    },
+    "accentColor": "#F57C00",
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://[BOARDS_URL]/app/tabconfig/msgraph",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "staticTabs": [
+        {
+            "entityId": "my-boards",
+            "name": "My Boards",
+            "contentUrl": "https://[BOARDS_URL]/auth/msgraph?redirect_to=/boards/my",
+            "websiteUrl": "https://[BOARDS_URL]/auth/msgraph?redirect_to=/boards/my",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "my-todos",
+            "name": "My Todos",
+            "contentUrl": "https://[BOARDS_URL]/auth/msgraph?redirect_to=/todos/assigned",
+            "websiteUrl": "https://[BOARDS_URL]/auth/msgraph?redirect_to=/todos/assigned",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "bots": [
+        {
+            "botId": "[OAUTH_CLIENT_ID]",
+            "scopes": [
+                "team"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": true
+        }
+    ],
+    "webApplicationInfo": {
+        "id": "[OAUTH_CLIENT_ID]"
+    },
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "[BOARDS_URL]",
+        "api.[BOARDS_URL]"
+    ]
+}
