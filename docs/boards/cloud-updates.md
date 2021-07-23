@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-07-23
+- Fix for access to Boards in Teams
+
 #### 2021-07-21
 - Fix for issue where you could not change level of community members
 
