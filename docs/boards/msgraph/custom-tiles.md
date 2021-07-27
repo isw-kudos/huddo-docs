@@ -1,12 +1,12 @@
 ## Add Huddo Boards to tiles
 
+Follow these [steps by Microsoft](https://docs.microsoft.com/en-us/microsoft-365/admin/manage/customize-the-app-launcher?view=o365-worldwide) which we have also outlined below.
+
 1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/companyprofile)
 
-      Click `Settings` -> `Ogranization Profile`
+      Click `Settings` -> `Org Settings` -> `Organization Profile`
 
-      Find `Add custom tiles for your organization`
-
-      Click `Edit`
+      Click `Custom app laucher tiles`
 
       ![example](/assets/msgraph/custom-tiles1.png)
 
@@ -20,8 +20,8 @@
 
         Huddo Boards
         https://boards.huddo.com/auth/msgraph
-        Social collaboration
         https://boards.huddo.com/img/logo-small.png
+        Social collaboration
 
       ![example](/assets/msgraph/custom-tiles3.png)
 
