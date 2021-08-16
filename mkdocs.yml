@@ -59,6 +59,7 @@ nav:
         - Overview: badges/update/overview.md
         - Update the Application: badges/update/update_app.md
         - Refresh Widget Cache: badges/update/refresh_cache.md
+     - Huddo Images: badges/update-images.md
   - Huddo Boards:
       - Versions: boards/index.md
       - Boards Cloud:
