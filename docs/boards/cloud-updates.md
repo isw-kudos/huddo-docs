@@ -4,7 +4,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 #### 2021-08-16
 - Fix for error thrown when assigning colours in a Board
-- Small screen icon posiitions, in particular for attached files
+- Small screen icon positions, in particular for attached files
 - Various performance updates
 
 #### 2021-07-23
