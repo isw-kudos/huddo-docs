@@ -2,6 +2,12 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-08-17
+- Update to user subscriptions allowing emails to be applied
+- User subscriptions now default to purchasing user
+- User subscriptions are now named, not first-come-first-serve
+- Better management options for user subscriptions
+
 #### 2021-08-16
 - Fix for error thrown when assigning colours in a Board
 - Small screen icon positions, in particular for attached files
