@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-08-26
+- Ability to set group permissions for a Board on create in the group
+- More granular user permissions for group membership
+- Fix for ToDo view filtering
+
 #### 2021-08-17
 - Update to user subscriptions allowing emails to be applied
 - User subscriptions now default to purchasing user
