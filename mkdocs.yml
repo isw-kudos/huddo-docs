@@ -108,6 +108,7 @@ nav:
       - FAQ:
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
+          - Roles: boards/cp/roles.md
       - Troubleshooting:
           - Activities Plus: boards/troubleshooting/activities-plus-install.md
           - Activity Migration: boards/troubleshooting/activity-migration.md
