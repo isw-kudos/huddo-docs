@@ -4,6 +4,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 #### 2021-08-31
 - Private Card feature
+- Fix for group membership for private groups
 
 #### 2021-08-30
 - Improved invite handling
