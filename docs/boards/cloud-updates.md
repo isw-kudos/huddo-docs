@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-08-31
+- Private Card feature
+
 #### 2021-08-30
 - Improved invite handling
 
