@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-08-30
+- Improved invite handling
+
 #### 2021-08-26
 - Ability to set group permissions for a Board on create in the group
 - More granular user permissions for group membership
