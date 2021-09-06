@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-09-06
+- Fix for Teams notifications turning back on when they are disabled
+
 #### 2021-08-31
 - Private Card feature
 - Fix for group membership for private groups
