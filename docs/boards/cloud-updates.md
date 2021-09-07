@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-09-07
+- User search performance
+- Community name search improvements
+- Admin page crash fix
+
 #### 2021-09-06
 - Fix for Teams notifications turning back on when they are disabled
 
