@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-09-10
+- Integromat integration
+
 #### 2021-09-07
 - User search performance
 - Community name search improvements
