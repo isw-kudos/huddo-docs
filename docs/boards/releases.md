@@ -43,6 +43,46 @@ events:
 
 ## Releases
 
+### 2021-09-17
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-09-17)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-09-17
+iswkudos/kudos-boards:provider-2021-09-17
+iswkudos/kudos-boards:licence-2021-09-17
+iswkudos/kudos-boards:notification-2021-09-17
+iswkudos/kudos-boards:webfront-2021-09-17
+iswkudos/kudos-boards:core-2021-09-17
+iswkudos/kudos-boards:boards-2021-09-17
+iswkudos/kudos-boards:activity-migration-2021-09-17
+```
+
+Features:
+
+- Private Cards
+
+Improvements:
+
+- Board load performance
+- User/Group search performance
+- more granular user permissions for group membership
+- ability to set group permissions for a Board on create in the group
+- Community name search improvements (handling of names with special characters)
+- added missing German translations
+- MongoDB - refined and reduced total indexes. Be aware that this update will cause a heavy re-index.
+
+Fixes:
+
+- issue where you could not change level of community members
+- issue assigning colours in quick succession
+- issue when removing filters on ToDo view
+- teams notifications turning back on when they are disabled
+- issue accepting email invites for guest/external users
+
+---
+
 ### 2021-06-24
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-24)
 
