@@ -95,7 +95,7 @@ The Activity migration chart will be deployed separately but use the same config
 
 Install the Boards services via our Helm chart
 
-    helm upgrade kudos-boards-cp [PATH_TO_HELM_CHARTS]/kudos-boards-cp-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp [PATH_TO_HELM_CHARTS]/kudos-boards-cp-3.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > Where [PATH_TO_HELM_CHARTS] is the file path to the helm charts,
 > ie `[extractedFolder]/microservices_connections/hybridcloud/helmbuilds/`
@@ -107,9 +107,9 @@ Install the Boards services via our Helm chart
 
 For example:
 
-    helm upgrade kudos-boards-cp ./microservices_connections/hybridcloud/helmbuilds/kudos-boards-cp-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp ./microservices_connections/hybridcloud/helmbuilds/kudos-boards-cp-3.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
-    helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 ---
 

@@ -13,7 +13,7 @@ helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards
 
 Component Pack (Activities Plus)
 ```
-helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 ```
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
