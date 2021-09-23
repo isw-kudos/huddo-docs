@@ -59,6 +59,8 @@ iswkudos/kudos-boards:boards-2021-09-17
 iswkudos/kudos-boards:activity-migration-2021-09-17
 ```
 
+> **Note:** this update performs several schema changes on start-up as a once-off. Board content may be temporarily unavailable for a few minutes. Also be aware that downgrading to a previous release will cause access issues in Community boards with role 'inherit'. Please contact us if you have any issues at support@huddo.com
+
 Features:
 
 - Private Cards
