@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-09-29
+- Adding undo/redo buttons to description toolbar
+
 #### 2021-09-22
 - Fix for trial dialog opening
 - Better caching and performance of my/public groups
