@@ -43,21 +43,28 @@ events:
 
 ## Releases
 
+### 2021-09-29
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-09-29)
+
+Improvements:
+
+- Reduce reliance on Communities application
+
+    - Reduce member lookups
+    - Increase page size of Communities requests
+    - Throttles simultaneous requests to Communities
+    - Increase caching of responses
+
+- Undo / Redo option in Rich Text editor
+
+Fixes:
+
+- Indexing issue when recreating `providerID_1` with new options
+
+---
+
 ### 2021-09-24
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-09-24)
-
-Images:
-
-```
-iswkudos/kudos-boards:user-2021-09-24
-iswkudos/kudos-boards:provider-2021-09-24
-iswkudos/kudos-boards:licence-2021-09-24
-iswkudos/kudos-boards:notification-2021-09-24
-iswkudos/kudos-boards:webfront-2021-09-24
-iswkudos/kudos-boards:core-2021-09-24
-iswkudos/kudos-boards:boards-2021-09-24
-iswkudos/kudos-boards:activity-migration-2021-09-24
-```
 
 Improvements:
 
@@ -71,19 +78,6 @@ Fixes:
 
 ### 2021-09-17
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-09-17)
-
-Images:
-
-```
-iswkudos/kudos-boards:user-2021-09-17
-iswkudos/kudos-boards:provider-2021-09-17
-iswkudos/kudos-boards:licence-2021-09-17
-iswkudos/kudos-boards:notification-2021-09-17
-iswkudos/kudos-boards:webfront-2021-09-17
-iswkudos/kudos-boards:core-2021-09-17
-iswkudos/kudos-boards:boards-2021-09-17
-iswkudos/kudos-boards:activity-migration-2021-09-17
-```
 
 > **Note:** this update performs several schema changes on start-up as a once-off. Board content may be temporarily unavailable for a few minutes. Also be aware that downgrading to a previous release will cause access issues in Community boards with role 'inherit'. Please contact us if you have any issues at support@huddo.com
 
@@ -115,19 +109,6 @@ Fixes:
 
 ### 2021-06-24
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-24)
-
-Images:
-
-```
-iswkudos/kudos-boards:user-2021-06-24
-iswkudos/kudos-boards:provider-2021-06-24
-iswkudos/kudos-boards:licence-2021-06-24
-iswkudos/kudos-boards:notification-2021-06-24
-iswkudos/kudos-boards:webfront-2021-06-24
-iswkudos/kudos-boards:core-2021-06-24
-iswkudos/kudos-boards:boards-2021-06-24
-iswkudos/kudos-boards:activity-migration-2021-06-24
-```
 
 Fixes:
 
