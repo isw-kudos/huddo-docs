@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-10-07
+- User Presence on cards
+- Improved Activities View performance
+- Improved crivate card creation process
+
 #### 2021-09-29
 - Adding undo/redo buttons to description toolbar
 
