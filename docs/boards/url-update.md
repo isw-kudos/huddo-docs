@@ -1,4 +1,6 @@
-## Update Connections URL in database
+# URL Update
+
+## Update content URLs in database
 
 When the URL of the on-prem hosting environment changes, content stored in Huddo Boards may also need to be updated.
 
@@ -10,8 +12,8 @@ Connect to the Mongo DB hosting the Boards database and run the following in the
     // select to the boards database (name is different for CP)
     use kudos-boards-service OR boards-app
 
-    domain = /connections\.example\.com/ig
-    newDomain = 'connections.company.com'
+    domain = /host\.example\.com/ig
+    newDomain = 'host.company.com'
 
 Each 2 lines of code (nodeNames, nodeDesc & nodeLinks) updates one bit of a node and can be run independently of each other.
 
