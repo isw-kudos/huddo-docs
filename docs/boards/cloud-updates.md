@@ -2,6 +2,10 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-10-11
+- Fix for adding Connections/Collab Cloud Communities as members
+- Improved performance by reducing page load size
+
 #### 2021-10-07
 - User Presence on cards
 - Improved Activities View performance
