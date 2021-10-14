@@ -2,6 +2,13 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-10-14
+- Auto Premium Trial
+- Enhancement for msgraph groups which are not teams (owner != member)
+- Unsubscribe emails link
+- Fix for logout/login socket issue
+- Fix for Activity view interact to create list
+
 #### 2021-10-11
 - Fix for adding Connections/Collab Cloud Communities as members
 - Improved performance by reducing page load size
