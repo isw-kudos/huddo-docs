@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-10-18
+- Fix for starting Zaps/Flows with Huddo Boards
+
 #### 2021-10-14
 - Auto Premium Trial
 - Enhancement for msgraph groups which are not teams (owner != member)
