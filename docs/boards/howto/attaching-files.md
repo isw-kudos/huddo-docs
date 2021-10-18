@@ -12,7 +12,9 @@ If you use <a target="_blank" href="https://docs.huddo.com/boards/howto/kudos-bo
 
 ### Attaching a File to a Card
 
-Open your desired card, click the `Links and Attachments`
+Once you have opened your desired card, you can drag&drop a file to upload it, otherwise you can use the UI by:
+
+Clicking the `Links and Attachments`
 ![](/assets/boards/attaching1.png)
 
 In the menu that appears, choose `Upload to this board.`
@@ -44,3 +46,11 @@ If you are using Office 365 or HCL Connections, your files are stored within the
 ### Deleting a Card that has Attachments
 
 When you archive a card, the attachments will still be accessible however, if you delete the card permanently then the attachments will also be deleted.
+
+## Adding Emails as Files
+
+Huddo Boards is an eml dropzone such that you are able to drag & drop emails out of email programs that support dragging as eml and drop them on an open card in Huddo to upload them as a file.
+
+### Outlook
+
+In order to allow Outlook to do this, we are aware of the [Outlook2Web](https://outlook2web.com/) program that can facilitate this.
