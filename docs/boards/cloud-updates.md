@@ -2,6 +2,16 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-10-22
+- Fix for issue where link is inserted at start of description
+- Fix for issue when changing user account tries to loads the previous open Board
+- Added user images by API
+
+#### 2021-10-20
+- Fix for copy/paste lists in Activity view
+- Fix for compatibility with Visual Update One (Collab Cloud)
+- Fix for issue where multiple toasts in quick succession never auto closed
+
 #### 2021-10-18
 - Fix for starting Zaps/Flows with Huddo Boards
 
