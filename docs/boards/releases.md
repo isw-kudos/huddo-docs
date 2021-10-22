@@ -43,6 +43,33 @@ events:
 
 ## Releases
 
+### 2021-10-22
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-10-22)
+
+Features:
+
+- User Presence
+- Private Cards
+
+Improvements:
+
+- Load performance by reducing page size
+- Activities View performance
+- Optional API Rate Limiting
+- Better handling of conflicting CSS from Visual Update One
+- Enhancement for Microsoft Graph groups which are not teams (owner vs member)
+
+Fixes:
+
+- Issue when adding Connections Communities as members
+- Issue when changing user account tries to loads the previous open Board
+- Issue where link is inserted at start of description
+- Issue with authenticated webhooks
+- Issue with S3 "bucket-already-exists" race condition
+- Issue where multiple toasts in quick succession never auto closed
+
+---
+
 ### 2021-09-29
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-09-29)
 
