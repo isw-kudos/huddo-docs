@@ -5,6 +5,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 #### 2021-10-22
 - Fix for issue where link is inserted at start of description
 - Fix for issue when changing user account tries to loads the previous open Board
+- Fix for issue when adding group as board member
 - Added user images by API
 
 #### 2021-10-20
