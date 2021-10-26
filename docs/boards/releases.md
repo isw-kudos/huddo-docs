@@ -43,6 +43,15 @@ events:
 
 ## Releases
 
+### 2021-10-26
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-10-26)
+
+Fixes:
+
+- SSL Issue connecting to Component Pack Mongo
+
+---
+
 ### 2021-10-22
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-10-22)
 
