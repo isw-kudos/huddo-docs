@@ -2,6 +2,10 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-10-29
+- Updated German translations
+- MS Teams login fix
+
 #### 2021-10-22
 - Fix for issue where link is inserted at start of description
 - Fix for issue when changing user account tries to loads the previous open Board
