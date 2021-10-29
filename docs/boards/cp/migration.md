@@ -26,6 +26,7 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | -------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sharedDrive.server`                         | `192.168.10.1` or `websphereNode1`                       | IP or Hostname of the server with the Connections shared drive mount                                                                                                                                                      |
 | `sharedDrive.path`                           | `/opt/HCL/Connections/data/shared` or `/nfs/data/shared` | Path on the mount to the Connections shared drive                                                                                                                                                                         |
+| `sharedDrive.mountOptions`                   | `-nfsvers=4.1`                                           | Any additional sharedDrive mountOptions. All yaml is passed through drive                                                                                                                                                 |
 | `env.FILE_PATH_ACTIVITIES_CONTENT_STORE`     | `/data/activities/content`                               | Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</br>Ensure you set the IP and path for the NFS volume mount. |
 | `env.API_GATEWAY`                            | `https://[CONNECTIONS_URL]/api-boards`                   | URL of the Boards API.</br>Used by files attached to a board. URL.                                                                                                                                                        |
 | `env.CONNECTIONS_ACTIVITIES_ADMIN_USERNAME`  | `connectionsadmin`                                       | Credentials for user with `admin` role </br>on the Activities application.</br>See `ISC` => `Applications` => </br>`Activities` => </br>`Security role to user mapping`                                                   |
@@ -50,7 +51,7 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 
 Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the kudos-boards-cp chart
 
-    helm upgrade kudos-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > **Note:** the configuration file has changed as of the v3 chart. Please add the new `sharedDrive` parameters described above
 
