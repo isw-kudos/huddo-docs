@@ -43,6 +43,15 @@ events:
 
 ## Releases
 
+### 2021-11-02
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-11-02)
+
+Fixes:
+
+- Licence not found errors when adding or removing licences in the LICENCE key environment variable.
+
+---
+
 ### 2021-10-26
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-10-26)
 
