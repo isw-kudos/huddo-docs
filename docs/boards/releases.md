@@ -43,6 +43,16 @@ events:
 
 ## Releases
 
+### 2021-11-18
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-11-18)
+
+Updates:
+
+- All services have been updated to the latest LTS version on Node.js, all dependencies have been updated to their latest supported versions.
+- Updated translations for Arabic and German.
+
+---
+
 ### 2021-11-02
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-11-02)
 
