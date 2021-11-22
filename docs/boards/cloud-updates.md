@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-11-22
+- Added Recent Updates Feed
+
 #### 2021-10-29
 - Updated German translations
 - MS Teams login fix
