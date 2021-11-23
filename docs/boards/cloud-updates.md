@@ -2,6 +2,10 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-11-23
+- Updated Arabic translations
+- Fix for drag&drop assignments creating extra cards
+
 #### 2021-11-22
 - Added Recent Updates Feed
 
