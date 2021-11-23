@@ -43,6 +43,23 @@ events:
 
 ## Releases
 
+### 2021-11-23
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-11-23)
+
+Features:
+
+- Recent Updates (board level and inside cards)
+
+Improvements:
+
+- Arabic language updates
+- MSGraph user searching (inc Guests)
+- Activity Migration: better feedback when invalid content store data
+
+Fixes:
+
+- Assigning a user by drag/drop creates second card from profile image
+
 ### 2021-11-18
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-11-18)
 
