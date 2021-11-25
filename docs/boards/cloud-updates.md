@@ -2,6 +2,10 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-11-25
+- Fix for background when RTE in fullscreen mode
+- Fix for opening cards with a theme set
+
 #### 2021-11-23
 - Updated Arabic translations
 - Fix for drag&drop assignments creating extra cards
