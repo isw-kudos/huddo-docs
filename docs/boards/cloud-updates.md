@@ -2,6 +2,14 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-12-03
+- Fix for adding tags with the same starting letter
+- Mindmap move card & Board name overflow fixes
+- Update comment count when deleting comment
+- Syncing when description is deleted
+- Board history max card title height
+- Updated Arabic translations
+
 #### 2021-11-25
 - Fix for background when RTE in fullscreen mode
 - Fix for opening cards with a theme set
