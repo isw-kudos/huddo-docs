@@ -176,6 +176,8 @@ nav:
     - Installation: ccm-migrator/install.md
     - Usage: ccm-migrator/usage.md
 
+  - log4j: log4j.md
+
 markdown_extensions:
   - toc:
       permalink: true
