@@ -12,7 +12,7 @@ Analytics does not use log4j directly. It does contain commons-logging which con
 Boards WebSphere does not use log4j directly. It does contain commons-logging which contains log4j 1.2 which is not affected by the vulnerability.
 
 ## Boards Docker/Component Pack
-Boards Docker does not contain any Javaand as such is not affected by this vulnerability.
+Boards Docker does not contain any Java and as such is not affected by this vulnerability.
 
 ## Boards Cloud
-Boards Cloud does not contain any Javaand as such is not affected by this vulnerability.
+Boards Cloud does not contain any Java and as such is not affected by this vulnerability.
