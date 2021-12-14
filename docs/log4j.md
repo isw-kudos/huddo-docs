@@ -16,3 +16,6 @@ Boards Docker does not contain any Java and as such is not affected by this vuln
 
 ## Boards Cloud
 Boards Cloud does not contain any Java and as such is not affected by this vulnerability.
+
+## CCM Migrator
+CCM Migrator does not use log4j directly. It does contain commons-logging which can use log4j 1.2/1.3 which is not affected by the vulnerability.
