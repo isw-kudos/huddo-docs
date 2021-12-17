@@ -43,6 +43,24 @@ events:
 
 ## Releases
 
+### 2021-12-17
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-12-17)
+
+Improvements:
+
+- Throttle lookups of members from Communities application
+- Improved description of scheduled cards in Recent Updates history
+- Arabic language updates
+
+Fixes:
+
+- Issue when adding Tag with same starting letter as previous
+- Issue when moving Cards in MindMap
+- Issue where Board title overflowed in MindMap
+- Issue where removing description was not synchronised to other users with modal open
+
+---
+
 ### 2021-11-23
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-11-23)
 
