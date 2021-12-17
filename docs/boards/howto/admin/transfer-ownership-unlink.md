@@ -18,7 +18,7 @@ In the user interface a user can unlink an account alias and transferring conten
     Set the following environment variables
 
     ```yaml
-    boards:
+    app:
       replicaCount: 1
       env:
         TRANSFER_AND_UNLINK_TO_CLIENT: 5fd6974dd7c5ede08711432d
