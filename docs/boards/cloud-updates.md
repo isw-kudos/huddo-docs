@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2021-21-22
+- Fix for completing tasks when multi-assign has been removed
+
 ### 2021-12-21
 - Fix for breadcrumbs not displaying when opening a card node directly
 
