@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+### 2021-12-21
+- Fix for breadcrumbs not displaying when opening a card node directly
+
 #### 2021-12-17
 - Adding generic Create Card functionality
 - Fix for requesting too many Connections community members at once
