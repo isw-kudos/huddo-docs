@@ -48,11 +48,11 @@ events:
 
 Fixes:
 
-Issue where notifications of comments not sent to other commenters
-Issue where emails sent to content creators when users are no longer Board members
-Issue when completing tasks when multi-assign has been removed
-Issue where sub cards not loading when opening a card via url
-Issue where card breadcrumbs (ancestors) not displaying when opening a card via url
+- Issue where notifications of comments not sent to other commenters
+- Issue where emails sent to content creators when users are no longer Board members
+- Issue when completing tasks when multi-assign has been removed
+- Issue where sub cards not loading when opening a card via url
+- Issue where card breadcrumbs (ancestors) not displaying when opening a card via url
 
 ---
 
