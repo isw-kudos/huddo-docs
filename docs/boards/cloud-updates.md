@@ -6,6 +6,9 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Fix for notifications on comments to other commenters
 - Fix for emails when users are no longer Board members
 
+#### 2021-12-23
+- Fix for child nodes not loading when loading a node directly
+
 #### 2021-12-22
 - Fix for completing tasks when multi-assign has been removed
 
