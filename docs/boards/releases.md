@@ -43,6 +43,19 @@ events:
 
 ## Releases
 
+### 2022-01-07
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-01-07)
+
+Fixes:
+
+Issue where notifications of comments not sent to other commenters
+Issue where emails sent to content creators when users are no longer Board members
+Issue when completing tasks when multi-assign has been removed
+Issue where sub cards not loading when opening a card via url
+Issue where card breadcrumbs (ancestors) not displaying when opening a card via url
+
+---
+
 ### 2021-12-17
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-12-17)
 
