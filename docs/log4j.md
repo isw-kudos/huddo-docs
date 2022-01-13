@@ -3,13 +3,13 @@ Recently a severe vulnerability was discovered in the log4j package. Details of 
 The status of the Huddo Applications in regard to the vulnerability are below.
 
 ## Badges
-Badges does not use log4j directly. It does contain commons-logging which contains log4j 1.2 which is not affected by the vulnerability.
+Badges does not use log4j directly. It does contain commons-logging which uses the underlying logging service in WAS.
 
 ## Analytics
-Analytics does not use log4j directly. It does contain commons-logging which contains log4j 1.2 which is not affected by the vulnerability.
+Analytics does not use log4j directly. It does contain commons-logging which uses the underlying logging service in WAS.
 
 ## Boards WebSphere
-Boards WebSphere does not use log4j directly. It does contain commons-logging which contains log4j 1.2 which is not affected by the vulnerability.
+Boards WebSphere does not use log4j directly. It does contain commons-logging which uses the underlying logging service in WAS.
 
 ## Boards Docker/Component Pack
 Boards Docker does not contain any Java and as such is not affected by this vulnerability.
@@ -18,4 +18,4 @@ Boards Docker does not contain any Java and as such is not affected by this vuln
 Boards Cloud does not contain any Java and as such is not affected by this vulnerability.
 
 ## CCM Migrator
-CCM Migrator does not use log4j directly. It does contain commons-logging which can use log4j 1.2/1.3 which is not affected by the vulnerability.
+CCM Migrator does not use log4j directly. It does contain commons-logging which uses the underlying logging service in WAS.
