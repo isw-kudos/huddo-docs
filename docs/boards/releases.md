@@ -8,17 +8,15 @@ Please use the appropriate update command. For example:
 
 Huddo Boards in Kubernetes
 ```
-helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 ```
 
 Component Pack (Activities Plus)
 ```
-helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.0.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 ```
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
-
-> **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
 ## Important update (CP v3)
 
@@ -1165,3 +1163,39 @@ Language support:
   },
     "default": "en"
 ```
+
+
+## Helm Charts
+
+Release notes for each Helm chart utilised by Boards (for Component Pack vs standalone, and Activity Migration)
+
+### kudos-boards
+
+- [4.0.0](/assets/config/kubernetes/kudos-boards-4.0.0.tgz) - Load Balancer (no cote), LivenessProbes, StartupProbes, Rename balancer dns defaults, add Activity Migration env & remove podIP, global.legacyKube
+- [5.0.0](/assets/config/kubernetes/kudos-boards-5.0.0.tgz) - Boards Notifications (webhooks), support service.nodePort
+- [5.2.0](/assets/config/kubernetes/kudos-boards-5.2.0.tgz) - Kube 1.22 support (use Capabilities.APIVersions)
+
+### kudos-boards-activity-migration
+
+- [4.0.0](/assets/config/kubernetes/kudos-boards-activity-migration-4.0.0.tgz) - Load balancer (no cote), add Activity Migration env & remove podIP, global.legacyKube
+- [5.0.0](/assets/config/kubernetes/kudos-boards-activity-migration-5.0.0.tgz) - Support service.nodePort, default volume & mount for share drive
+- [5.2.0](/assets/config/kubernetes/kudos-boards-activity-migration-5.2.0.tgz) - use Capabilities.APIVersions instead of legacyKube
+
+
+### kudos-boards-cp
+
+- [1.0.0](/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz) - Boards CP
+- [1.1.1](/assets/config/kubernetes/kudos-boards-cp-1.1.1.tgz) - Kube v1.17 support - minio v1.1.1
+- [2.0.0](/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz) - Kube v1.17 support, HTTP Requester/Responder, LivenessProbes, legacyKube
+- [2.0.1](/assets/config/kubernetes/kudos-boards-cp-2.0.1.tgz) - Ingress controller 0.22+ support
+- [3.0.0](/assets/config/kubernetes/kudos-boards-cp-3.0.0.tgz) - Webhooks, Annotations for Socket cookie, support service.nodePort
+- [3.0.1](/assets/config/kubernetes/kudos-boards-cp-3.0.1.tgz) - Minio root credentials, nfs mountOptions
+- [3.1.0](/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz) - Kube 1.22 support (use Capabilities.APIVersions)
+### kudos-boards-cp-activity-migration
+
+- [1.0.0](/assets/config/kubernetes/kudos-boards-cp-activity-migration-1.0.0.tgz) - Boards CP Activity Migration
+- [1.1.0](/assets/config/kubernetes/kudos-boards-cp-activity-migration-1.1.0.tgz) - Kude v1.17 support
+- [2.0.0](/assets/config/kubernetes/kudos-boards-cp-activity-migration-2.0.0.tgz) - Kube v1.17 support, HTTP Requester/Responder, LivenessProbes
+- [3.0.0](/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.0.0.tgz) - Support service.nodePort, default volume & mount for share drive
+- [3.0.1](/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.0.1.tgz) - Support mountOptions for share drive
+- [3.1.0](/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.0.tgz) - use Capabilities.APIVersions instead of legacyKube

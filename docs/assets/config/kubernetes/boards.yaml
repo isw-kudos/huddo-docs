@@ -3,8 +3,6 @@ global:
   repository: iswkudos/kudos-boards
   # Uncomment the next line to lock your deployment to a specific release date (YYYY-MM-DD)
   # imageTagSuffix: '2019-11-07'
-  # Uncomment the following line if you are using a legacy version of Kube (ie <= 1.13)
-  # legacyKube: true
   env:
     APP_URI: https://example.com/boards
     APP_URI_PATH: /boards

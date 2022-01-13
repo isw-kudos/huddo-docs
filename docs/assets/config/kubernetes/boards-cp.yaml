@@ -3,8 +3,6 @@
 
 global:
   repository: your-private-docker-repo/connections
-  # Uncomment the following line if you are using a legacy version of Kube (ie <= 1.13)
-  # legacyKube: true
   imageTag: connections-date-tag
   imagePullSecret: myregkey
   env:
