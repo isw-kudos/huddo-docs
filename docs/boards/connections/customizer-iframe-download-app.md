@@ -30,6 +30,8 @@ The script file that is injected by Customizer needs to be copied into a directo
 
 1. Extract files from `boards-iframe-download-customiser.zip`
 
+1. You will need to change the variable `boardsFrameSrc` to the URL (or part there of) of Boards in your environment
+
 1. Copy `iframe-download.js` into `/pv-connections/customizations/huddo-boards-iframe-download`
 
 ---
