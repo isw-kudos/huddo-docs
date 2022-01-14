@@ -73,6 +73,7 @@ nav:
                   - Connections Widgets: boards/connections/widgets-hybrid.md
                   - Connections Search Integration: boards/connections/customizer-search-app.md
                   - Connections Mobile App: boards/connections/mobile-app-hybrid.md
+                  - Connections iFrame Download: boards/connections/customizer-iframe-download-app.md
                   - Security: boards/connections/security.md
               - HCL Verse: boards/verse/addin-hybrid.md
               - Office 365 for Business:
