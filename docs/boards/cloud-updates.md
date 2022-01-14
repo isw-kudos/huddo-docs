@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-01-14
+- Fix link format in card history
+- Fix opening URL from MS-Office add-in
+- Update SunEditor to latest
+
 #### 2022-01-04
 - Fix for notifications on comments to other commenters
 - Fix for emails when users are no longer Board members
