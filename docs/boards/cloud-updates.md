@@ -2,6 +2,14 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-01-31
+- Fix for welcome message in MS Teams Bot
+- Fix for lost descriptions on first edit when pasting an image
+- Improved file upload feedback
+- Fix where you couldn't upload the full 50MB for a file
+- Fix for going to the Boards homepage not group list when in group context
+- Performance improvements
+
 #### 2022-01-14
 - Fix link format in card history
 - Fix opening URL from MS-Office add-in
