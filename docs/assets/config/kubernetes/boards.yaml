@@ -9,7 +9,7 @@ global:
     # MONGO_USER: admin
     # MONGO_PASSWORD: password
     MONGO_HOST: mongo-service:27017
-    MONGO_PARAMS: replicaSet=replicaset
+    # MONGO_PARAMS: replicaSet=replicaset
     S3_ENDPOINT: minio-service
     S3_ACCESS_KEY: ioueygr4t589
     S3_SECRET_KEY: 7a863d41-2d8f-4143-bc8a-02501edbea6f
@@ -35,7 +35,6 @@ webfront:
     path: /boards/?(.*)
     annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /$1
-      
 
 events:
   image:
@@ -85,9 +84,8 @@ user:
     CONNECTIONS_NAME: Connections
     CONNECTIONS_CLIENT_ID: huddoboards
     CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
-    CONNECTIONS_ADMINS: "[\"admin1@company.example.com\", \"boss2@company.example.com\", \"PROF_GUID_3\"]"
+    CONNECTIONS_ADMINS: '["admin1@company.example.com", "boss2@company.example.com", "PROF_GUID_3"]'
     CONNECTIONS_URL: https://connections.example.com
-
 
 # This section is for deploying the optional Activity Migration chart
 # Please see doc at https://docs.huddo.com/boards/connections/migration/
