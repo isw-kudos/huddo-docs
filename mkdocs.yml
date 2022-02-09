@@ -206,3 +206,6 @@ extra_javascript:
 google_analytics:
   - "UA-1747668-5"
   - "auto"
+
+plugins:
+  - rss
