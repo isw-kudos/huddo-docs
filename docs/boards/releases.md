@@ -8,15 +8,13 @@ Please use the appropriate update command. For example:
 
 Huddo Boards in Kubernetes
 ```
-helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.0.tgz -i -f ./boards.yaml --namespace boards
 ```
 
 Component Pack (Activities Plus)
 ```
-helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
-
-> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 
 ## Important update (CP v3)
 
@@ -44,9 +42,10 @@ events:
 ### 2022-02-10
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-10)
 
-CAUTION: When deployed, this release will migrate the minio file store, changing it's structure permanently, we recommend performing a backup of the file store (/pv-connections/kudos-boards-minio) before installation in case there is any need to roll back.
+**CAUTION**: When deployed, this release will migrate the minio file store, changing it's structure permanently, we recommend performing a backup of the file store (/pv-connections/kudos-boards-minio) before installation in case there is any need to roll back.
 
 Improvements:
+
 - File uploads have better user feedback, showing a partial file and track the upload progress
 - File downloads make better use of the original mimetype and no longer use the file name in the url
 - When setting Due, Start and End Dates the picker now supports clicking in the header to choose a year
