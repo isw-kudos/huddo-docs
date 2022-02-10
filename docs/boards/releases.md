@@ -41,6 +41,27 @@ events:
 
 ## Releases
 
+### 2022-02-10
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-10)
+
+CAUTION: When deployed, this release will migrate the minio file store, changing it's structure permanently, we recommend performing a backup of the file store (/pv-connections/kudos-boards-minio) before installation in case there is any need to roll back.
+
+Improvements:
+- File uploads have better user feedback, showing a partial file and track the upload progress
+- File downloads make better use of the original mimetype and no longer use the file name in the url
+- When setting Due, Start and End Dates the picker now supports clicking in the header to choose a year
+
+Fixes:
+
+- Cards created from Outlook / Verse can crash a board
+- Date "chips" on card view need to be clicked twice
+- Pasting an image can wipe a description
+- Boards in a community / team no longer show "My Boards" on error
+- Clicking "Private" sometimes does nothing
+- File size calculation now allows a full 50mb file
+
+---
+
 ### 2022-01-07
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-01-07)
 
