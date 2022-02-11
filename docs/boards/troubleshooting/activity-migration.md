@@ -1,5 +1,57 @@
 # Activity Migration
 
+## Pod will not start - Port in use
+
+Sometimes the pod fails to start with an error `listen EACCES: permission denied`. For example:
+
+```
+checkActitiviesFileStore: found valid content store
+checkOrg: Found 1 OrgId: [ 'a' ]
+checkTenant: Found 1 Tenant: [ '00000000-0000-0000-0000-040508202233' ]
+Please open the UI at 'https://company.example.com/boards/admin/migration' or set env.IMMEDIATELY_PROCESS_ALL='true' to migrate all of your Activities without UI
+events.js:377
+throw er; // Unhandled 'error' event
+^
+Error: listen EACCES: permission denied tcp://10.100.200.104:2641
+at Server.setupListenHandle [as _listen2] (net.js:1314:21)
+at listenInCluster (net.js:1379:12)
+at Server.listen (net.js:1476:5)
+at listen (/usr/src/app/dist/index.js:62:10)
+at /usr/src/app/dist/index.js:106:3
+at processTicksAndRejections (internal/process/task_queues.js:95:5)
+Emitted 'error' event on Server instance at:
+at emitErrorNT (net.js:1358:8)
+at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+code: 'EACCES',
+errno: -13,
+syscall: 'listen',
+address: 'tcp://10.240.27.7:2641',
+port: -1
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
+
+
+This is because the port is already in use. We must change the default port which 
+
+### Resolution
+
+1. Open your Boards yaml file
+
+1. Set `ACTIVITY_MIGRATION_PORT: '<NEW_PORT>'` under `global.env`
+
+    For example
+
+        global:
+          env:
+            ACTIVITY_MIGRATION_PORT: '2651'
+
+1. Redeploy both the Boards helm chart and the Activity Migration charts with the updated yaml
+
+1. Confirm the pod start successfully or change to another random higher port if conflicts still occur.
+
+
 ## Missing Long Descriptions
 
 This process will find and fix cards with long descriptions which were not imported correctly due to an incorrect HTTP 404 response from the HCL Connections API
