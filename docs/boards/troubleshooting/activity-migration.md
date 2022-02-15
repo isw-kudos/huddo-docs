@@ -39,13 +39,16 @@ This is because the port is already in use. We must change the default port whic
 
 1. Open your Boards yaml file
 
-1. Set `ACTIVITY_MIGRATION_PORT: '<NEW_PORT>'` under `global.env`
-
-    For example
+1. Set the new port as per below (merging into existing)
 
         global:
           env:
             ACTIVITY_MIGRATION_PORT: '2651'
+
+        migration:
+          balancer:
+            port: 2651
+            targetPort: 2651
 
 1. Redeploy both the Boards helm chart and the Activity Migration charts with the updated yaml
 
