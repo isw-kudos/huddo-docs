@@ -2,6 +2,13 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-02-17
+- Ability to change Private cards to Public
+- Updated Date pickers with month/year selection
+- Updated Material UI library to latest
+- Fix for saving description on modal closure
+- Fix for transfer membership
+
 #### 2022-01-31
 - Fix for welcome message in MS Teams Bot
 - Fix for lost descriptions on first edit when pasting an image

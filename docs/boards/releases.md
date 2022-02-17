@@ -39,11 +39,37 @@ events:
 
 ## Releases
 
+### 2022-02-17
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-17)
+
+Features:
+
+- Ability to change Private cards to Public
+
+Improvements:
+
+- Updated Date pickers with month/year selection
+- Updated Material UI library to latest
+- Better internationalisation of dates
+
+Fixes:
+
+- Fix for saving description on modal closure
+- Fix for transfer membership
+- Fix detection of descriptions migrated from Activities
+- Fix for entry styling when Visual Update One applied
+
+Activity Migration:
+
+- Uses new FileInfo meta structure
+- Fix to flag cards with description
+
 ### 2022-02-10
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-10)
 
 #### File store migration
-**CAUTION**: When deployed, this release will migrate the minio file store, changing it's structure permanently, we recommend performing a backup of the file store (/pv-connections/kudos-boards-minio) before installation in case there is any need to roll back.
+
+> **CAUTION**: When deployed, this release (and all subsequent) will migrate the minio file store, changing it's structure permanently, we recommend performing a backup of the file store (/pv-connections/kudos-boards-minio) before installation in case there is any need to roll back.
 
 Improvements:
 
