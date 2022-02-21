@@ -17,4 +17,4 @@ global
 
 Run the following update command
 
-    helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods

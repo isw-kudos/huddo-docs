@@ -145,11 +145,11 @@ Click `Yes`
 
     [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 
-        helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
 
-        helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.0.tgz -i -f ./boards.yaml --namespace boards
+        helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards
 
     > **Note:** `--recreate-pods` is not required this time as this is only an env variable change
 

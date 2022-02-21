@@ -17,6 +17,7 @@ core:
     annotations:
       nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
       # Default annotations below which should be included such that they are not overwritten
+      kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/rewrite-target: /$1
       nginx.ingress.kubernetes.io/affinity: cookie
       nginx.ingress.kubernetes.io/proxy-body-size: 50m

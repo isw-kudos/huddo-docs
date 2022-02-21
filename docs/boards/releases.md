@@ -8,12 +8,12 @@ Please use the appropriate update command. For example:
 
 Huddo Boards in Kubernetes
 ```
-helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.0.tgz -i -f ./boards.yaml --namespace boards
+helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards
 ```
 
 Component Pack (Activities Plus)
 ```
-helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
+helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
 
 ## Important update (CP v3)
@@ -1236,6 +1236,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 - [4.0.0](/assets/config/kubernetes/kudos-boards-4.0.0.tgz) - Load Balancer (no cote), LivenessProbes, StartupProbes, Rename balancer dns defaults, add Activity Migration env & remove podIP, global.legacyKube
 - [5.0.0](/assets/config/kubernetes/kudos-boards-5.0.0.tgz) - Boards Notifications (webhooks), support service.nodePort
 - [5.2.0](/assets/config/kubernetes/kudos-boards-5.2.0.tgz) - Kube 1.22 support (use Capabilities.APIVersions)
+- [5.2.1](/assets/config/kubernetes/kudos-boards-5.2.1.tgz) - Added default Ingress.class annotation 'nginx'
 
 ### kudos-boards-activity-migration
 
@@ -1253,6 +1254,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 - [3.0.0](/assets/config/kubernetes/kudos-boards-cp-3.0.0.tgz) - Webhooks, Annotations for Socket cookie, support service.nodePort
 - [3.0.1](/assets/config/kubernetes/kudos-boards-cp-3.0.1.tgz) - Minio root credentials, nfs mountOptions
 - [3.1.0](/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz) - Kube 1.22 support (use Capabilities.APIVersions)
+- [3.1.1](/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz) - Added default Ingress.class annotation 'nginx'
 ### kudos-boards-cp-activity-migration
 
 - [1.0.0](/assets/config/kubernetes/kudos-boards-cp-activity-migration-1.0.0.tgz) - Boards CP Activity Migration

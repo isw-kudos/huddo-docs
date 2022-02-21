@@ -60,7 +60,7 @@ You have created replacement groups in the target system and have records of the
 
     For example:
 
-        helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.0.tgz -i -f ./boards.yaml --namespace boards
+        helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards
 
 1. Review the logs
 
