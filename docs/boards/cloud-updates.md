@@ -2,6 +2,10 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-03-03
+- Fix for crashing when tours are dismissed
+- Fix for private card toggle
+
 #### 2022-02-17
 - Ability to change Private cards to Public
 - Updated Date pickers with month/year selection
