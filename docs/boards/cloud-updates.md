@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-03-09
+- Fix for pasting into edited comment clears comment
+- Fix for loading subscriptions
+- Reducing browser console noise
+
 #### 2022-03-03
 - Fix for crashing when tours are dismissed
 - Fix for private card toggle
