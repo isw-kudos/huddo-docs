@@ -2,6 +2,10 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-03-11
+- Fix for timeline cards sometimes showing a day off
+- Fix when loading a Community widget where the Board has been deleted causing an inifinite loop
+
 #### 2022-03-09
 - Fix for pasting into edited comment clears comment
 - Fix for loading subscriptions
