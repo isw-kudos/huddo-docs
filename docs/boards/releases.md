@@ -39,6 +39,25 @@ events:
 
 ## Releases
 
+### 2022-03-09
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-09)
+
+Improvements:
+
+- Upgraded libraries for performance/security/support (e.g. Material UI, Redis v4)
+- Improved loading perfomance (reduced bundle size)
+
+Fixes:
+
+- issue where pasting into edited comment clears comment
+- issue where loading a Community widget where the Board has been deleted causing an inifinite loop
+
+Activity Migration:
+
+- Added optional variables to reprocess migrated files which had encoding issues
+
+---
+
 ### 2022-02-17
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-17)
 
