@@ -49,6 +49,7 @@ Improvements:
 
 Fixes:
 
+- issue where comments disappear in certain scenarios
 - issue where pasting into edited comment clears comment
 - issue where loading a Community widget where the Board has been deleted causing an inifinite loop
 
