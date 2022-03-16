@@ -5,7 +5,7 @@
 Huddo Boards supports the use of task dependencies within boards. A task dependency is where a task relies on another task or tasks to be completed before it can be completed itself.
 A single task can be dependant on multiple tasks and multiple tasks can be dependant on a single task.
 
-[image showing dependencies here]
+<center>![](/assets/boards/dependencies/dependencies-example.png)</center>
 
 ## Creating a Task Dependency
 Task dependencies can be created in several ways:
