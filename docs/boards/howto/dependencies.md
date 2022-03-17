@@ -14,14 +14,20 @@ Task dependencies can be created in several ways:
 1. Click on a task to open its details
 2. Find and click the `Add Dependency` button in the task bar:
 
-<center>![](/assets/boards/dependencies/add-dependency-node1.png)</center>
+    <center>![](/assets/boards/dependencies/add-dependency-node1.png)</center>
+    
     - Note that depending on your screen size, you may need to use the *More...* menu to access the `Add Dependency` Button:
 
-<center>![](/assets/boards/dependencies/add-dependency-node2.png)</center>
+    <center>![](/assets/boards/dependencies/add-dependency-node2.png)</center>
+
+    - Once dependencies have been added to a task, `Add Dependency` buttons will also be available within the task details view here:
+
+    <center>![](/assets/boards/dependencies/add-dependency-node3.png)</center>
+
 
 3. The Add Dependency Dialog will be shown:
 
-<center>![](/assets/boards/dependencies/add-dependency-dialog.png)</center>
+    <center>![](/assets/boards/dependencies/add-dependency-dialog.png)</center>
 
 4. Select a task that you want to add as a dependency for the current task. The dependency you choose will need to be completed before the current task can be completed. 
     - Note that this relationship can be reversed by clicking the `Swap Direction` button 
@@ -33,21 +39,14 @@ Task dependencies can be created in several ways:
 1. Open the `Timeline` view of your board
 2. Ensure that the parent and child tasks for the dependency you want to create are scheduled and appear on the timeline
 3. Dependencies can be created in either direction. To create a dependency from the parent to the child (parent waits for child to be completed first), first hover the cursor over the parent of the intended dependency to see the add dependency drag icons
-
-<!-- ![](/assets/boards/dependencies/add-dependency-timeline-drag1.png) -->
-
 4. Hover over the left red icon, click and drag the icon to the intended dependency child task. An arrow will be drawn as you drag, and the task you have dragged onto will have a red highlighted border:
-
-<!-- ![](/assets/boards/dependencies/add-dependency-timeline-drag2.png) -->
-
 5. Drop the icon onto the intended task and the dependency relationship will be created.
     - Note that if the icon is dragged and dropped onto a task that is already a dependency of the originating task, then nothing will happen.
 
-<center>![](/assets/boards/dependencies/add-dependency-timeline-drag.gif)</center>
-
+    <center>![](/assets/boards/dependencies/add-dependency-timeline-drag.gif)</center>
 6. Once the dependency has been created then dependency icons can be observed on both the parent and child of the dependency
 
-<center>![](/assets/boards/dependencies/add-dependency-timeline-icons.png)</center>
+    <center>![](/assets/boards/dependencies/add-dependency-timeline-icons.png)</center>
 
 
 
