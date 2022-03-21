@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-03-21
+- Improve file upload feedback (eg when socket unavailable)
+- Fix duplicates appearing in history from live events
+- Fix first comments not live displaying
+
 #### 2022-03-11
 - Fix for timeline cards sometimes showing a day off
 - Fix when loading a Community widget where the Board has been deleted causing an inifinite loop

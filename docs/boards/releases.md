@@ -39,12 +39,27 @@ events:
 
 ## Releases
 
+### 2022-03-21
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-21)
+
+Improvements:
+
+- File upload feedback (eg when socket unavailable)
+
+Fixes:
+
+- WebSocket failure fallback to Polling
+- Prevent duplicates appearing in history from live events
+- First comments not live displaying
+- Issue where Timeline displaying some cards a day out
+- Issue where Subscriber Redis crashes after too many concurrent events
+
 ### 2022-03-09
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-09)
 
 Improvements:
 
-- Upgraded libraries for performance/security/support (e.g. Material UI, Redis v4)
+- Upgraded libraries for performance/security/support (e.g. Material UI, Redis)
 - Improved loading perfomance (reduced bundle size)
 
 Fixes:
