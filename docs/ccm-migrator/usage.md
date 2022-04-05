@@ -149,3 +149,19 @@ Additionally, for each community, the application checks whether a migration was
 **Important: Migrations performed before this functionality was added to CCM Migrator (on 11 Feb 2019) will not be detected, due to the reliance on a new style of system logging.**
 
 The application's user-interface provides options to change the above behaviour, and those options are listed earlier in this document.
+
+## Roll-back
+
+As of 5 April 2022, CCM Migrator has the ability to roll back migrated communities.
+
+Perform a roll-back by selecting desired communities and clicking the "Roll-back Communities"
+button. This will only work for communities which were previously migrated.
+
+If Test Mode is enabled, nothing will be rolled back, and the Status Log will just report
+the number of files and folders which can be rolled back.
+
+Roll-back also only works for communities which were migrated after the roll-back functionality
+was implemented, because it depends on additional data stored in the migration logs on the server.
+If necessary to roll back an older migration then, as long as the migrated files and folders weren't
+deleted or moved, simply repeat the migration. This will create a new migration log which
+contains the required additional data and allows roll-back.
