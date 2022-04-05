@@ -101,6 +101,14 @@ migration:
     tag: activity-migration
   env:
     API_GATEWAY: https://connections.example.com/api-boards
+
+    # Set the Timezone for this container, so dates are understood correctly
+    # Please see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a full list of options
+    # For example, uncomment one of the lines below (or add your own)
+    # TZ: America/New_York
+    # TZ: Australia/Hobart
+    # TZ: Europe/London
+    
     CONNECTIONS_ACTIVITIES_ADMIN_USERNAME: connectionsadmin
     CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD: adminpassword
     CONNECTIONS_DB_HOST: dbserver.company.com
