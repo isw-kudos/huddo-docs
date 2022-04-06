@@ -2,6 +2,14 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-04-06
+- NEW linked-cards micro-app
+- Fix for comment stream entry for Orient Me
+- Fix for updating card title from Boards view in FireFox
+- Fix for deeplinked Connections Community widgets
+- Fix for Boards Search styling
+- Fix for opening filters via icon
+
 #### 2022-03-21
 - Improve file upload feedback (eg when socket unavailable)
 - Fix duplicates appearing in history from live events
