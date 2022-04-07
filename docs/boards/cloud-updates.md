@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-04-07
+- Fix for Moderated Community access
+
 #### 2022-04-06
 - NEW linked-cards micro-app
 - Fix for comment stream entry for Orient Me
