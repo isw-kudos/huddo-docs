@@ -12,6 +12,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Fix for deeplinked Connections Community widgets
 - Fix for Boards Search styling
 - Fix for opening filters via icon
+- Fix for Teams login popup not closing
 
 #### 2022-03-21
 - Improve file upload feedback (eg when socket unavailable)

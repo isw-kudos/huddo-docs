@@ -39,6 +39,27 @@ events:
 
 ## Releases
 
+### 2022-04-07
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-07)
+
+Improvements:
+
+- Reduced number of simultaneous MongoDB connections
+
+Fixes:
+
+- Issue with comment stream entry for Orient Me
+- Issue with updating card title from Boards view in FireFox
+- Issue with deeplinked Connections Community widgets
+- Issue with Boards Search styling
+- Issue with opening filters via icon
+- Issue with Moderated Community ACL
+- Issue with Teams login popup not closing
+
+Activity Migration:
+
+- Fix invisible top level task/entries
+
 ### 2022-03-21
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-21)
 
@@ -53,6 +74,8 @@ Fixes:
 - First comments not live displaying
 - Issue where Timeline displaying some cards a day out
 - Issue where Subscriber Redis crashes after too many concurrent events
+
+---
 
 ### 2022-03-09
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-09)
