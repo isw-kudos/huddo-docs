@@ -128,8 +128,8 @@ At the end of this step you should have the following:
 
     where :
 
-    - DOMAIN_HOSTING_BOARDS is the domain hosting boards, e.g. `boards.company.com` or `company.com`
-    - CLIENT_ID is the Application (client) ID, shown on the `Overview` page
+    - `DOMAIN_HOSTING_BOARDS` is the domain hosting boards, e.g. `boards.company.com` or `company.com`
+    - `CLIENT_ID` is the `Application (client) ID`, shown on the `Overview` page
 
     For example:
 
