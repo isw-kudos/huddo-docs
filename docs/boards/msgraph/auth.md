@@ -109,7 +109,56 @@ Click `Yes`
 
 ![click yes](/assets/msgraph/appreg-consent.png)
 
-## Configure OAuth
+### Configure SSO in Teams
+
+> Note: These steps are extracted from the [official Microsoft guide: steps 5-12](https://docs.microsoft.com/en-gb/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso?WT.mc_id=m365-43962-cxa&tabs=dotnet#develop-an-sso-microsoft-teams-tab)
+
+> Note: This step is optional, but recommended to remove the `Sign in with` page when accessing Huddo Boards.
+
+At the end of this step you should have the following:
+
+![expose-api](/assets/msgraph/expose-api.png)
+
+
+1. Click `Expose an API`
+
+1. Set the Application ID URI as per:
+
+    `api://<DOMAIN_HOSTING_BOARDS>/<CLIENT_ID>`
+
+    where :
+
+    - DOMAIN_HOSTING_BOARDS is the domain hosting boards, e.g. `boards.company.com` or `company.com`
+    - CLIENT_ID is the Application (client) ID, shown on the `Overview` page
+
+    For example:
+
+    `api://boards.huddo.com/5554fe8f-34b6-4694-a09d-6349e6ab6ec9`
+
+    > Note: this requires the domain name to be added & verified in the [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Domains) under `Azure Active Directory` -> `Custom domain names`. See read the [official Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain) for more information.
+
+1. Click `Add a scope`
+
+      Set the following values:
+
+      ![add scope](/assets/msgraph/expose-api-scope.png)
+
+      - Scope name: `access_as_user`
+      - Who can consent: `Admins and users`
+      - Admin consent display name: `Teams can access the user’s profile.`
+      - Admin consent description: `Teams can call the app’s web APIs as the current user.`
+      - User consent display name: `Teams can access your profile and make requests on your behalf.`
+      - User consent description: `Teams can call this app’s APIs with the same rights as you have.`
+      State: `Enabled`
+
+    Click `Save`
+
+1. Add the following Authorized client applications
+
+    - `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+    - `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+## Configure OAuth in Boards
 
 1. Open the `Overview` section
 
@@ -130,56 +179,6 @@ Click `Yes`
     Copy the secret value shown
 
     ![copy the secret](/assets/msgraph/appreg-client-secret3.png)
-
-### Configure SSO in Teams
-
-> Note: These steps are extracted from the [official Microsoft guide](https://docs.microsoft.com/en-gb/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso?WT.mc_id=m365-43962-cxa&tabs=dotnet#develop-an-sso-microsoft-teams-tab)
-
-> Note: This step is optional, but recommended to remove the `Sign in with` page when accessing Huddo Boards.
-
-At the end of this step you should have the following:
-
-![expose-api](/assets/msgraph/expose-api.png)
-
-
-1. Click `Expose an API`
-
-1. Set the Application ID URI as per:
-
-    `api://<DOMAIN_HOSTING_BOARDS>/<CLIENT_ID>`
-
-    where :
-    - DOMAIN_HOSTING_BOARDS is the domain hosting boards, e.g. `boards.company.com` or `company.com`
-    - CLIENT_ID is the Application (client) ID, shown on the 
-
-    For example:
-
-    `api://boards.huddo.com/5554fe8f-34b6-4694-a09d-6349e6ab6ec9`
-
-    > Note: this requires the domain name to be added & verified to [Custom domain names](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Domains) in the `Azure Active Directory` -> `Custom domain names`. See read the [official Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain).
-
-1. Scopes: Add a scope
-
-      Set the following values:
-
-      - Scope name: `access_as_user`
-      - Who can consent: `Admins and users`
-      - Admin consent display name: `Teams can access the user’s profile.`
-      - Admin consent description: `Teams can call the app’s web APIs as the current user.`
-      - User consent display name: `Teams can access your profile and make requests on your behalf.`
-      - User consent description: `Teams can call this app’s APIs with the same rights as you have.`
-      State: `Enabled`
-
-    Click `Save`
-
-      ![add scope](/assets/msgraph/expose-api-scope.png)
-
-1. Add the following Authorized client applications
-
-    - `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
-    - `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
-
-### Add OAuth config to Boards
 
 1. Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
 
