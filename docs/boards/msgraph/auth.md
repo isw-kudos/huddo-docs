@@ -149,7 +149,7 @@ At the end of this step you should have the following:
       - Admin consent description: `Teams can call the app’s web APIs as the current user.`
       - User consent display name: `Teams can access your profile and make requests on your behalf.`
       - User consent description: `Teams can call this app’s APIs with the same rights as you have.`
-      State: `Enabled`
+      - State: `Enabled`
 
     Click `Save`
 
