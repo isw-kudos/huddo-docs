@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-04-19
+- Updated fix for Moderated Community access
+- Fix for crash when updating Board title
+- Fix for description locking in communities
+
 #### 2022-04-07
 - Fix for Moderated Community access
 
