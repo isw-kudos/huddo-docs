@@ -39,6 +39,18 @@ events:
 
 ## Releases
 
+### 2022-04-20
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-20)
+
+Fixes:
+
+- Issue loading Activity Stream gadget
+- Issue with Moderated Community access
+- Issue when updating Board title
+- Issue with lock of description in communities
+
+---
+
 ### 2022-04-07
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-07)
 
@@ -59,6 +71,8 @@ Fixes:
 Activity Migration:
 
 - Fix invisible top level task/entries
+
+---
 
 ### 2022-03-21
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-21)
