@@ -39,6 +39,28 @@ events:
 
 ## Releases
 
+### 2022-04-20
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-20)
+
+Features:
+
+- Login to Boards using Single Sign On (SSO) in Microsoft Teams
+
+
+    > **Note**: you will need to:
+    >
+    > 1. [Configure SSO in Teams](/boards/msgraph/auth/#configure-sso-in-teams) in your existing Azure OAuth application definition
+    > 2. [download the latest app definition from Boards admin section and update it in Teams](/boards/msgraph/teams-on-prem/#configure-application).
+
+Fixes:
+
+- Issue loading Activity Stream gadget
+- Issue with Moderated Community access
+- Issue when updating Board title
+- Issue with lock of description in communities
+
+---
+
 ### 2022-04-07
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-07)
 
@@ -59,6 +81,8 @@ Fixes:
 Activity Migration:
 
 - Fix invisible top level task/entries
+
+---
 
 ### 2022-03-21
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-21)

@@ -149,7 +149,7 @@ nav:
               - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
               - Microsoft Teams: boards/howto/adding-boards-to-teams.md
               - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
-          - Administation:
+          - Administration:
               - Use Dockerhub Releases: boards/cp/dockerhub.md
               - Manage Config: boards/howto/org-config.md
               - Manage Licences: boards/howto/manage-licences.md
