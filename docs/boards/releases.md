@@ -42,7 +42,7 @@ events:
 ### 2022-04-20
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-20)
 
-Improvements:
+Features:
 
 - Login to Boards using Single Sign On (SSO) in Microsoft Teams
 
