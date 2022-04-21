@@ -46,9 +46,11 @@ Improvements:
 
 - Login to Boards using Single Sign On (SSO) in Microsoft Teams
 
+
     > **Note**: you will need to:
-    > - [Configure SSO in Teams](/boards/msgraph/auth/#configure-sso-in-teams) in your existing Azure OAuth application definition
-    > - [download the latest app definition from Boards admin section and update it in Teams](/boards/msgraph/teams-on-prem/#configure-application).
+    >
+    > 1. [Configure SSO in Teams](/boards/msgraph/auth/#configure-sso-in-teams) in your existing Azure OAuth application definition
+    > 2. [download the latest app definition from Boards admin section and update it in Teams](/boards/msgraph/teams-on-prem/#configure-application).
 
 Fixes:
 
