@@ -1,6 +1,6 @@
 # Import Activities
 
-### Import a single activity
+### Import a single activity for Hybrid Installations
 
 Activities that already exist in HCL Connections can be individually imported into Huddo Boards.
 

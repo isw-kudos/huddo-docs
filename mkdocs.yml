@@ -133,7 +133,7 @@ nav:
           - Creating Boards:
               - Create a Template: boards/howto/creating-templates.md
               - Use a Template: boards/howto/accessing-global-templates.md
-              - Import an Activity: boards/howto/kudos-boards-import-activity.md
+              - Hybrid - Import an Activity: boards/howto/kudos-boards-import-activity.md
           - Working in a Board:
               - Adding Members: boards/howto/adding-members-to-a-board.md
               - Member Permissions: boards/howto/permissions.md
