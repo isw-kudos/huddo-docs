@@ -2,6 +2,11 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-04-28
+- Updated RTE to latest
+- New Teams welcome message card
+- New Teams notification cards
+
 #### 2022-04-19
 - Updated fix for Moderated Community access
 - Fix for crash when updating Board title
