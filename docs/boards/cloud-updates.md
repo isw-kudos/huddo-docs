@@ -6,6 +6,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Updated RTE to latest
 - New Teams welcome message card
 - New Teams notification cards
+- Fix for email attachments not attaching
 
 #### 2022-04-19
 - Updated fix for Moderated Community access
