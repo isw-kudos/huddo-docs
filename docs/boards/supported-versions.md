@@ -1,6 +1,6 @@
-# Supported Verions
+# Supported Versions / Compatibility
 
-Huddo Boards Docker supports the following versions
+Huddo Boards Docker has been tested and confirmed working with the following versions
 
 |            | Minimum | Maximum  |
 | ---------- | ------- | -------- |
