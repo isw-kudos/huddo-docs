@@ -352,7 +352,8 @@ Fixes:
 2021-06-09
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-06-09)
 
-#### Breaking change
+**Breaking change:**
+
 > Emails are now sent by the `events` service. You must move the NOTIFIER_* environment variables from `core` to `events` as [shown above](/boards/releases/#important-update-cp-v3)
 
 Images:
