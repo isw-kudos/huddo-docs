@@ -1,4 +1,4 @@
-# Supported Versions / Compatibility
+# Compatibility with Huddo Boards Docker
 
 ## Known Compatible
 
@@ -22,9 +22,9 @@ Huddo Boards Docker has been tested and confirmed working with the following ver
 
 Unfortunately the Azure Cosmos DB only supports a subset of the MongoDB API. They are working on reducing the gaps. There have been many requests to handle nested indexes and we believe Microsoft are working on it;
 
-https://feedback.azure.com/d365community/idea/3ddf6028-0f25-ec11-b6e6-000d3a4f0858
+[https://feedback.azure.com/d365community/idea/3ddf6028-0f25-ec11-b6e6-000d3a4f0858](https://feedback.azure.com/d365community/idea/3ddf6028-0f25-ec11-b6e6-000d3a4f0858)
 
-https://feedback.azure.com/d365community/idea/ad9a64e6-0e25-ec11-b6e6-000d3a4f0858
+[https://feedback.azure.com/d365community/idea/ad9a64e6-0e25-ec11-b6e6-000d3a4f0858](https://feedback.azure.com/d365community/idea/ad9a64e6-0e25-ec11-b6e6-000d3a4f0858)
 
 **Suggestion**
 
