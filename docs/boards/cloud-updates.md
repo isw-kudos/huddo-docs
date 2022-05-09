@@ -2,6 +2,16 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-05-09
+- Can no longer close a page when editing a description
+- Description locking alert moved for better visability
+- Authors no longer appear to be able to edit descriptions when unable to
+- Fix for opening links in description
+- Fix for comment truncation issue in rare circumstances
+- Fix for new link @mentions
+- Fix for focused description loss when immediately moving to comments
+- Fix for showing editor toolbar when selecting all using keyboard
+
 #### 2022-04-28
 - Updated RTE to latest
 - New Teams welcome message card
