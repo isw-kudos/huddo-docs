@@ -2,6 +2,9 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+#### 2022-05-10
+- Fix for Microsoft admin approval
+
 #### 2022-05-09
 - Can no longer close a page when editing a description
 - Description locking alert moved for better visibility
