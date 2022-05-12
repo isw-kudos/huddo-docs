@@ -136,7 +136,7 @@ Activity Migration:
 #### 2022-02-10
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-10)
 
-#### File store migration
+##### File store migration
 
 > **CAUTION**: When deployed, this release (and all subsequent) will migrate the minio file store, changing it's structure permanently, we recommend performing a backup of the file store (/pv-connections/kudos-boards-minio) before installation in case there is any need to roll back.
 
