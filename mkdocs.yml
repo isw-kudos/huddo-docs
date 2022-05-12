@@ -105,6 +105,7 @@ nav:
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
                   - Teams App: boards/msgraph/teams-on-prem.md
           - Releases: boards/releases.md
+          - Helm Charts: boards/helm-charts.md
           - Compatibility: boards/compatibility.md
       - Boards Hybrid: boards/hybrid.md
       - FAQ:

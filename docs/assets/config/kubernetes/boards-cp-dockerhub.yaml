@@ -2,6 +2,7 @@
 # For details of variable meanings, please see https://docs.huddo.com/boards/cp/
 
 global:
+  repository: docker.io/iswkudos/kudos-boards
   imagePullSecret: dockerhub
   # If you would like to subscribe to a fixed version of Huddo Boards you can use the following, see https://hub.docker.com/repository/docker/iswkudos/kudos-boards or contact support for more info
   # imageTagSuffix: 2019-11-20
