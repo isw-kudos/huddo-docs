@@ -7,9 +7,11 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 ### May
 
 2022-05-10
+
 - Fix for Microsoft admin approval
 
 2022-05-09
+
 - Can no longer close a page when editing a description
 - Description locking alert moved for better visibility
 - Authors no longer appear to be able to edit descriptions when unable to
@@ -24,20 +26,24 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 ### April
 
 2022-04-28
+
 - Updated RTE to latest
 - New Teams welcome message card
 - New Teams notification cards
 - Fix for email attachments not attaching
 
 2022-04-19
+
 - Updated fix for Moderated Community access
 - Fix for crash when updating Board title
 - Fix for description locking in communities
 
 2022-04-07
+
 - Fix for Moderated Community access
 
 2022-04-06
+
 - NEW linked-cards micro-app
 - Fix for comment stream entry for Orient Me
 - Fix for updating card title from Boards view in FireFox
@@ -51,20 +57,24 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 ### March
 
 2022-03-21
+
 - Improve file upload feedback (eg when socket unavailable)
 - Fix duplicates appearing in history from live events
 - Fix first comments not live displaying
 
 2022-03-11
+
 - Fix for timeline cards sometimes showing a day off
 - Fix when loading a Community widget where the Board has been deleted causing an inifinite loop
 
 2022-03-09
+
 - Fix for pasting into edited comment clears comment
 - Fix for loading subscriptions
 - Reducing browser console noise
 
 2022-03-03
+
 - Fix for crashing when tours are dismissed
 - Fix for private card toggle
 
@@ -73,6 +83,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 ### February
 
 2022-02-17
+
 - Ability to change Private cards to Public
 - Updated Date pickers with month/year selection
 - Updated Material UI library to latest
@@ -84,19 +95,22 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 ### January
 
 2022-01-31
+
 - Fix for welcome message in MS Teams Bot
 - Fix for lost descriptions on first edit when pasting an image
 - Improved file upload feedback
-- Fix where you couldn't upload the full 50MB for a file
+- Fix where you could not upload the full 50MB for a file
 - Fix for going to the Boards homepage not group list when in group context
 - Performance improvements
 
 2022-01-14
+
 - Fix link format in card history
 - Fix opening URL from MS-Office add-in
 - Update SunEditor to latest
 
 2022-01-04
+
 - Fix for notifications on comments to other commenters
 - Fix for emails when users are no longer Board members
 
@@ -105,6 +119,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 ## 2021
 
 2021-12
+
 - Fix for child nodes not loading when loading a node directly
 - Fix for completing tasks when multi-assign has been removed
 - Fix for breadcrumbs not displaying when opening a card node directly
@@ -118,6 +133,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Updated Arabic translations
 
 2021-11
+
 - Fix for background when RTE in fullscreen mode
 - Fix for opening cards with a theme set
 - Updated Arabic translations
@@ -125,6 +141,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Added Recent Updates Feed
 
 2021-10
+
 - Updated German translations
 - MS Teams login fix
 - Fix for issue where link is inserted at start of description
@@ -147,6 +164,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Improved private card creation process
 
 2021-09
+
 - Adding undo/redo buttons to description toolbar
 - Fix for trial dialog opening
 - Better caching and performance of my/public groups
@@ -157,6 +175,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Fix for Teams notifications turning back on when they are disabled
 
 2021-08
+
 - Private Card feature
 - Fix for group membership for private groups
 - Improved invite handling
@@ -172,10 +191,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Various performance updates
 
 2021-07
+
 - Fix for access to Boards in Teams
 - Fix for issue where you could not change level of community members
 - Fix for issue when accepting email invites for guest/external users
 - Performance relating to loading times
 
 2021-06
+
 - Initial version of this page

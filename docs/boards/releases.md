@@ -16,9 +16,15 @@ Component Pack (Activities Plus)
 helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
 
+See here for the [Helm Charts change log](/boards/helm-charts/).
+
+---
+
 ## Releases
 
-### 2022-04-20
+### 2022
+
+#### 2022-04-20
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-20)
 
 Features:
@@ -40,7 +46,7 @@ Fixes:
 
 ---
 
-### 2022-04-07
+#### 2022-04-07
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-07)
 
 Improvements:
@@ -63,7 +69,7 @@ Activity Migration:
 
 ---
 
-### 2022-03-21
+#### 2022-03-21
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-21)
 
 Improvements:
@@ -80,7 +86,7 @@ Fixes:
 
 ---
 
-### 2022-03-09
+#### 2022-03-09
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-09)
 
 Improvements:
@@ -100,7 +106,7 @@ Activity Migration:
 
 ---
 
-### 2022-02-17
+#### 2022-02-17
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-17)
 
 Features:
@@ -125,7 +131,9 @@ Activity Migration:
 - Uses new FileInfo meta structure
 - Fix to flag cards with description
 
-### 2022-02-10
+---
+
+#### 2022-02-10
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-10)
 
 #### File store migration
@@ -149,7 +157,7 @@ Fixes:
 
 ---
 
-### 2022-01-07
+#### 2022-01-07
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-01-07)
 
 Fixes:
