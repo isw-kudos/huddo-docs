@@ -4,7 +4,7 @@ Deploying Huddo Boards into HCL Connections Component Pack (Kubernetes)
 
 ---
 
-[Release Information](/boards/cp/releases)
+[Release Information](/boards/releases)
 
 ---
 
