@@ -38,8 +38,8 @@ Task dependencies can be created in several ways:
 
 1. Open the `Timeline` view of your board.
 2. Ensure that the parent and child tasks for the dependency you want to create are scheduled and appear on the timeline.
-3. Dependencies can be created in either direction. To create a dependency from the parent to the child (parent waits for child to be completed first), first hover the cursor over the parent of the intended dependency to see the add dependency drag icons.
-4. Hover over the left red icon, click and drag the icon to the intended dependency child task. An arrow will be drawn as you drag, and the task you have dragged onto will have a red highlighted border:
+3. Dependencies can be created from child (starting task) to parent (ending task). The parent waits for child to be completed first. To create a new dependency, first hover the cursor over a task to see the add dependency drag icon appear on the bottom right edge (a blue arrow).
+4. Hover over the arrow icon, then click and drag it to the intended parent dependency task. An arrow will be drawn as you drag, and the task you have dragged onto will have a blue highlighted border.
 5. Drop the icon onto the intended task and the dependency relationship will be created.
     - Note that if the icon is dragged and dropped onto a task that is already a dependency of the originating task, then nothing will happen.
 
@@ -72,36 +72,52 @@ Dependencies for a particular task can be displayed/visualised in various ways d
 ### Board view
 - Hover on the dependencies icon on a task card for a moment to highlight its dependencies.
 ![](/assets/boards/dependencies/show-dependencies-kanban.gif)
+Note that numbers appear in the top right of the highlighted cards to indicate the order that they need to be completed. 
 
 ### Activity view
 - Hover on the dependencies icon on a task card for a moment to highlight its dependencies.
 ![](/assets/boards/dependencies/show-dependencies-activity.gif)
+Note that numbers appear in the top right of the highlighted cards to indicate the order that they need to be completed. 
 
 ### Mindmap
 - Hover on the dependencies icon on a task card for a moment to highlight its dependencies.
 ![](/assets/boards/dependencies/show-dependencies-mindmap.gif)
+Note that numbers appear in the top right of the highlighted cards to indicate the order that they need to be completed. 
 
 ### Timeline
-- Hover anywhere on a card with dependencies for a moment to highlight its dependencies and also visualise the dependency links as arrows to and from the dependant cards.
-![](/assets/boards/dependencies/show-dependencies-timeline.gif)
+Timeline view is the best way to visually observe dependencies as arrows drawn between scheduled tasks. 
 
-![](/assets/boards/dependencies/timeline-show-dependencies-checkbox.png){: style="float: left"} Using the controls in the right sidebar, dependency visualisations can be turned off by unchecking `Show Dependencies`. The arrow display depth slider can be used to increase the number of "levels" (backwards and forwards) to show a chain of dependency link arrows in the Timeline view, originating from the card that is being hovered on. See the image below as an example.
+There are several options available for showing dependency arrows in the timeline view, controlled by settings in the right hand sidebar:
 
-<br/><br/><br/><br/><br/><br/>
-![](/assets/boards/dependencies/show-dependencies-timeline-3-levels.png)
+<center>![](/assets/boards/dependencies/timeline-dependencies-settings.png)</center>
+
+#### Show all dependency arrows
+This is the default setting and will show all dependencies as blue arrows at all times. The arrows will recalculate themselves if tasks are moved or resized, or if dependencies are added or removed.
+![](/assets/boards/dependencies/timeline-dependencies-show-all.png)
+
+
+#### Hover on a task to show its dependencies
+Hover anywhere for a few moments on a task/card that has dependencies to highlight dependent tasks and also visualise the chain of dependency links as arrows to and from the dependant cards. Note that numbers also appear in the top right of the highlighted cards to indicate the order that they need to be completed. 
+
+![](/assets/boards/dependencies/timeline-show-dependencies-checkbox.png){: style="float: left"} When `Hover on a task to show its dependencies` is enabled, the arrow display depth slider will be shown, and can be used to increase the number of "levels" (backwards and forwards) to show a chain of dependency link arrows in the Timeline view, originating from the card that is being hovered on. 
+
+<br/><br/><br/>
+See the animation below as an example of 2 levels of dependency depth.
+
+![](/assets/boards/dependencies/show-dependencies-timeline-hover.gif)
+
+#### Don't show dependencies
+Use this option to hide all dependency arrows in Timeline.
 
 ## Completing a task that has dependencies
 Attempting to complete a task that has incomplete dependencies will trigger the following dialog:
 <center>![](/assets/boards/dependencies/incomplete-dependencies-dialog.png)</center>
 
-Note that individual tasks cannot be completed from this view.
+*Note that individual tasks cannot be completed from this view.
 
 ### Available actions
-#### Complete all Task Dependencies
-Click this to complete **all** preceding dependencies as displayed in the dialog. After performing this action the current task can then be completed successfully.
-
-#### Force Complete
-This action will ignore all preceding dependencies and force the task to complete.
+#### Complete all Task Dependencies and this task
+Click this to complete the task after completing **all** of its preceding dependencies as displayed in the dialog.
 
 #### Cancel
 Close the dialog without taking an action.
