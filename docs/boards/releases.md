@@ -24,6 +24,32 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-05-13
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-05-13)
+
+Features:
+
+- Auto login to Boards if only one provider configured
+
+Improvements:
+
+- Prevent closing page when still editing description
+- Styling of description locked alert for visibility when scrolled
+- New Teams welcome message card
+- New Teams notification cards
+
+Fixes:
+
+- Clickable links in description
+- Moving focus between description and comments
+- Saving description changes when focusing new comment
+- Truncation of comment when posting in some circumstances
+- Prevent authors attempting to edit descriptions when not allowed
+- @mentions on new lines created with shift+enter
+- Showing bubble editor when select all text in comment (ctrl+a)
+- Issue with attachments from EML uploads (e.g. drag from HCL Notes)
+
+---
 #### 2022-04-20
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-20)
 
