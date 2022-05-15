@@ -18,8 +18,7 @@ extra:
   - icon: fontawesome/brands/github
     link: https://github.com/isw-kudos
 nav:
-  #- Welcome: index.md
-  - Welcome: status.md
+  - Welcome: index.md
   - Huddo Analytics:
     - Installation:
       - Overview: analytics/install/overview.md
