@@ -92,17 +92,19 @@ Basic instructions for adding Huddo Boards Docker widgets into HCL Connections o
 
 ---
 
-### ICEC (Community Highlights)
+### CEC (Community Highlights)
 
-![Example](/assets/connections/highlights-communityboards.png)
+Huddo Boards integrates with Connections Engagement Center
+
+![Example](/assets/connections/highlights-boards.png)
 
 1. Download the Boards [CP widget definition file](/assets/boards/cp/custom.js)
 
-1. Open the ICEC (XCC) main admin page
+1. Open the CEC (XCC) main admin page
 
       i.e. `https://connections.company.com/xcc/main`
 
-1. Click `Customize`, `Settings`, expand `Customization Files` & click `Upload File`
+1. Click `Customize`, `Engagement Center Settings`, expand `Customization Files` & click `Upload File`
 
      ![Example](/assets/connections/highlights-fileupload.png)
 
@@ -110,19 +112,15 @@ Basic instructions for adding Huddo Boards Docker widgets into HCL Connections o
 
 1. Select the `custom.js` downloaded previously
 
-     > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents of the `init` function
+     > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents. Copy the `HuddoBoards()` function and make sure to call it in `init()`
 
 1. To validate:
 
       1. Open the `Highlights` application in a Community
-      1. Click `Customize` & then `Create Widget`
+      1. Click `Customize`, `Widgets` and `Huddo Boards`
 
-         ![Example](/assets/connections/highlights-create.png)
+         ![Example](/assets/connections/highlights-add-boards.png)
       
-      1. Select `Huddo Boards` from the menu and enter the ID: `CommunityBoards`
+      1. The Boards Highlights widget should now appear at the end of the page
 
-         ![Example](/assets/connections/highlights-def-community.png)
-
-      1. Click `Create`. The Boards app should now appear
-
-         ![Example](/assets/connections/highlights-communityboards.png)
+         ![Example](/assets/connections/highlights-boards.png)
