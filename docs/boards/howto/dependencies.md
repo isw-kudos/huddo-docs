@@ -95,19 +95,19 @@ There are several options available for showing dependency arrows in the timelin
 This is the default setting and will show all dependencies as blue arrows at all times. The arrows will recalculate themselves if tasks are moved or resized, or if dependencies are added or removed.
 ![](/assets/boards/dependencies/timeline-dependencies-show-all.png)
 
+#### Hide dependency arrows
+Use this option to hide all dependency arrows in Timeline. Hovering on a task to show its dependency chain can still be achieved when arrows are hidden, depending on the setting below.
 
-#### Hover on a task to show its dependencies
+#### Hover on a task to highlight its dependency chain
 Hover anywhere for a few moments on a task/card that has dependencies to highlight dependent tasks and also visualise the chain of dependency links as arrows to and from the dependant cards. Note that numbers also appear in the top right of the highlighted cards to indicate the order that they need to be completed. 
 
-![](/assets/boards/dependencies/timeline-show-dependencies-checkbox.png){: style="float: left"} When `Hover on a task to show its dependencies` is enabled, the arrow display depth slider will be shown, and can be used to increase the number of "levels" (backwards and forwards) to show a chain of dependency link arrows in the Timeline view, originating from the card that is being hovered on. 
+![](/assets/boards/dependencies/timeline-show-dependencies-checkbox.png){: style="float: left"} When `Hover on a task to highlight its dependency chain` is enabled, the arrow display depth slider will be shown, and can be used to increase the number of "levels" (backwards and forwards from the hovered card) to show a chain of dependency link arrows in the Timeline view, originating from the card that is being hovered on. 
 
 <br/><br/><br/>
 See the animation below as an example of 2 levels of dependency depth.
 
 ![](/assets/boards/dependencies/show-dependencies-timeline-hover.gif)
 
-#### Don't show dependencies
-Use this option to hide all dependency arrows in Timeline.
 
 ## Completing a task that has dependencies
 Attempting to complete a task that has incomplete dependencies will trigger the following dialog:
