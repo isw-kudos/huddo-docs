@@ -6,6 +6,10 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2022-05-20
+
+- NEW [Dependencies feature](/boards/howto/dependencies/)
+
 2022-05-10
 
 - Fix for Microsoft admin approval
