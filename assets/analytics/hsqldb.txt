@@ -1,0 +1,31 @@
+There are configuration parameters that allow you to allocate more resources and tune the underlying database for performance in the analytics component.
+You can customise these properties by adding a file named resource.propertiesin the directory <ConnectionsShare>/profiles/statistics/HuddoProperties. These properties will be applied after restarting the Huddo application.
+
+The properties are as follows:
+
+A. Property name: hsqldb_nio_access_size
+Default value: 256
+Recommended value: 1024.  Please check the size of the .data file at <ConnectionsShare>/profiles/statistics/KudosData/AnalyticsDB_HOSTNAME_TIMESTAMP/kudosHsql.dataand set the value to be higher than the size. Use only powers of 2.
+Description: Max size of .data file in MB to allow NIO access for performance. If .data file is larger than this size then non-NIO access methods may be used (resulting in lower performance). Please note that if the amount of memory available to system is less than required then non-NIO access methods will be used as well. This memory is not allocated from JVM heap size.
+
+B. Property name: hsqldb_cache_rows
+Default value: 50000
+Recommended value: 200000. Please note that this is an estimate and optimum value may vary based on environment variables.
+Description: Indicates the maximum number of rows of cached tables that are held in memory.
+
+C. Property name: hsqldb_cache_size
+Default value: 10000
+Recommended value: 50000. Please note that this is an estimate and optimum value may vary based on environment variables.
+Description: Indicates the total size (in kilobytes) of rows in the memory cache used with cached tables. This size is calculated as the binary size of the rows, for example an INTEGER is 4 bytes. The actual memory size used by the objects is 2 to 4 times this value.
+
+D. Property name: hsqldb_connection_pool_size
+Default value: 10
+Recommended value: Please set this to the Connections Pool sizes configured in Datasources in the Websphere ISC.
+Description: Maximum number of Connections available in the hsqldb Connections pool.
+
+For example, a custom properties file may contain the following:
+
+hsqldb_nio_access_size=1024
+hsqldb_cache_rows=200000
+hsqldb_cache_size=50000
+hsqldb_connection_pool_size=20

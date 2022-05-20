@@ -1,0 +1,32 @@
+.md-footer-copyright
+/* .md-footer-nav { */ {
+  display: none;
+}
+
+nav.md-tabs {
+  height: 35px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+/* .md-header, nav.md-tabs {
+  background-color: var(--md-primary-fg-color--dark);
+  color: white;
+} */
+
+.md-tabs__link {
+  opacity: 0.6;
+}
+
+.md-source__repository {
+  font-weight: initial;
+}
+
+.md-tabs__link--active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+[data-md-color-primary="orange"] {
+  --md-primary-bg-color: black;
+}

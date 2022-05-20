@@ -1,0 +1,27 @@
+# In order to customise the context root of the Boards application, please merge the following into your boards.yaml file
+# Note: replace /boards with the custom UI path, and /api-boards with the route for the API
+global:
+  env:
+    APP_URI: https://example.com/boards
+    APP_URI_PATH: /boards
+
+webfront:
+  ingress:
+    path: /boards/?(.*)
+  env:
+    API_GATEWAY: https://example.com/api-boards
+
+core:
+  ingress:
+    path: /api-boards/?(.*)
+    annotations:
+      nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
+      # Default annotations below which should be included such that they are not overwritten
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/rewrite-target: /$1
+      nginx.ingress.kubernetes.io/affinity: cookie
+      nginx.ingress.kubernetes.io/proxy-body-size: 50m
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+      nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+  env:
+    API_URI_PATH: /api-boards

@@ -1,0 +1,4505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Enterprise productivity solutions">
+      
+      
+        <meta name="author" content="Andrew Reynolds">
+      
+      
+        <link rel="canonical" href="https://docs.huddo.com/boards/releases/">
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Releases - Huddo Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="/assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-1747668-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#boards-docker-releases-change-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Huddo Docs" class="md-header__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Huddo Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Releases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://www.huddo.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    huddo.com
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Huddo Docs" class="md-nav__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Huddo Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://www.huddo.com" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    huddo.com
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Huddo Analytics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Huddo Analytics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Huddo Analytics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/app/" class="md-nav__link">
+        Install Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/install-widgets/" class="md-nav__link">
+        Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/apply-changes/" class="md-nav__link">
+        Apply Changes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/add-widgets/" class="md-nav__link">
+        Add Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/comm-properties/" class="md-nav__link">
+        Community Properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/licence/" class="md-nav__link">
+        Licence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/customising/" class="md-nav__link">
+        Customising
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/install/websphere-faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/user-guide/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/user-guide/using-reports/" class="md-nav__link">
+        Using Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/user-guide/available-reports/" class="md-nav__link">
+        Available Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/user-guide/access-reports/" class="md-nav__link">
+        How to Access Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/user-guide/terms/" class="md-nav__link">
+        Glossary of Terms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/user-guide/itemtype-map/" class="md-nav__link">
+        Event Map
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Huddo Badges
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Huddo Badges" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Huddo Badges
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/" class="md-nav__link">
+        Details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/app/" class="md-nav__link">
+        Install Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/install-widgets/" class="md-nav__link">
+        Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/mobile/" class="md-nav__link">
+        Mobile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/apply-changes/" class="md-nav__link">
+        Apply Changes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/add-widgets/" class="md-nav__link">
+        Add Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/comm-properties/" class="md-nav__link">
+        Community Properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/licence/" class="md-nav__link">
+        Licence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/load-defaults/" class="md-nav__link">
+        Defaults
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/leaderboard/" class="md-nav__link">
+        Leaderboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/awards/" class="md-nav__link">
+        Awards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/engine/" class="md-nav__link">
+        Engine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/install/customising/" class="md-nav__link">
+        Customising
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/websphere-faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Update
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Update" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Update
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/update/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/update/update_app/" class="md-nav__link">
+        Update the Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/update/refresh_cache/" class="md-nav__link">
+        Refresh Widget Cache
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../badges/update-images/" class="md-nav__link">
+        Huddo Images
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Huddo Boards
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Huddo Boards" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Huddo Boards
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Versions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Boards Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Boards Cloud" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Boards Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-updates/" class="md-nav__link">
+        Updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_3">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integrations" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3_1" type="checkbox" id="__nav_4_2_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_3_1">
+          HCL Connections On-Prem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HCL Connections On-Prem" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          HCL Connections On-Prem
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/auth-hybrid/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/header-hybrid/" class="md-nav__link">
+        Connections Header
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/apps-menu-hybrid/" class="md-nav__link">
+        Connections Apps Menu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/widgets-hybrid/" class="md-nav__link">
+        Connections Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/customizer-search-app/" class="md-nav__link">
+        Connections Search Integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/mobile-app-hybrid/" class="md-nav__link">
+        Connections Mobile App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/customizer-iframe-download-app/" class="md-nav__link">
+        Connections iFrame Download
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verse/addin-hybrid/" class="md-nav__link">
+        HCL Verse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3_3" type="checkbox" id="__nav_4_2_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_3_3">
+          Office 365 for Business
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Office 365 for Business" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Office 365 for Business
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/custom-tiles/" class="md-nav__link">
+        App Tile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/teams/" class="md-nav__link">
+        Teams Integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/outlook/" class="md-nav__link">
+        Outlook Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/sharepoint/" class="md-nav__link">
+        Sharepoint Pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth0/" class="md-nav__link">
+        Auth0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Boards Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Boards Docker" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Boards Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cp/" class="md-nav__link">
+        For HCL Connections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        For Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standalone/" class="md-nav__link">
+        Standalone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../env/common/" class="md-nav__link">
+        Common Env
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_5" type="checkbox" id="__nav_4_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_5">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integrations" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_5_1" type="checkbox" id="__nav_4_3_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_5_1">
+          HCL Connections On-Prem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HCL Connections On-Prem" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_3_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          HCL Connections On-Prem
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/migration/" class="md-nav__link">
+        Activity Migration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/auth-on-prem/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/keycloak/" class="md-nav__link">
+        Keycloak Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/header-on-prem/" class="md-nav__link">
+        Connections Header
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/apps-menu-on-prem/" class="md-nav__link">
+        Connections Apps Menu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/widgets-on-prem/" class="md-nav__link">
+        Connections Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/mobile-app-on-prem/" class="md-nav__link">
+        Connections Mobile App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/httpd/" class="md-nav__link">
+        Web Server Config
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verse/addin-on-prem/" class="md-nav__link">
+        HCL Verse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_5_3" type="checkbox" id="__nav_4_3_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_5_3">
+          Office 365
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Office 365" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_3_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Office 365
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/auth/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/notification-bot/" class="md-nav__link">
+        Teams Notification Bot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msgraph/teams-on-prem/" class="md-nav__link">
+        Teams App
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Releases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Releases
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-upgrade" class="md-nav__link">
+    How To Upgrade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+    <nav class="md-nav" aria-label="Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2022" class="md-nav__link">
+    2022
+  </a>
+  
+    <nav class="md-nav" aria-label="2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2022-05-13" class="md-nav__link">
+    2022-05-13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-04-20" class="md-nav__link">
+    2022-04-20
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-04-07" class="md-nav__link">
+    2022-04-07
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-03-21" class="md-nav__link">
+    2022-03-21
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-03-09" class="md-nav__link">
+    2022-03-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-02-17" class="md-nav__link">
+    2022-02-17
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-02-10" class="md-nav__link">
+    2022-02-10
+  </a>
+  
+    <nav class="md-nav" aria-label="2022-02-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-store-migration" class="md-nav__link">
+    File store migration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-01-07" class="md-nav__link">
+    2022-01-07
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2021" class="md-nav__link">
+    2021
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2020" class="md-nav__link">
+    2020
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helm-charts/" class="md-nav__link">
+        Helm Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatibility/" class="md-nav__link">
+        Compatibility
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid/" class="md-nav__link">
+        Boards Hybrid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="FAQ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          FAQ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/languages/" class="md-nav__link">
+        Languages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/notifications/" class="md-nav__link">
+        Notifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cp/roles/" class="md-nav__link">
+        Roles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Troubleshooting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Troubleshooting" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Troubleshooting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/activities-plus-install/" class="md-nav__link">
+        Activities Plus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/activity-migration/" class="md-nav__link">
+        Activity Migration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/conn-hybrid/" class="md-nav__link">
+        Boards Hybrid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/docker/" class="md-nav__link">
+        Boards Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/websphere/" class="md-nav__link">
+        Boards WebSphere
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/office365/" class="md-nav__link">
+        Office 365
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/oauth/" class="md-nav__link">
+        OAuth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/nginx/" class="md-nav__link">
+        NGINX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/notifications/" class="md-nav__link">
+        Notifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_10" type="checkbox" id="__nav_4_6_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6_10">
+          Browsers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Browsers" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_10">
+          <span class="md-nav__icon md-icon"></span>
+          Browsers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/safari/" class="md-nav__link">
+        Safari
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          How To Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How To Guide" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          How To Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/knowledgebase/" class="md-nav__link">
+        Knowledge Base & Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/getting-started-with-kudos-boards/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/quick-tips-for-boards/" class="md-nav__link">
+        Quick Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/start-a-trial/" class="md-nav__link">
+        Starting a trial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/mobile-app/" class="md-nav__link">
+        Mobile App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/home-page/" class="md-nav__link">
+        Home Page
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_7" type="checkbox" id="__nav_4_7_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_7">
+          Creating Boards
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Creating Boards" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_7">
+          <span class="md-nav__icon md-icon"></span>
+          Creating Boards
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/creating-templates/" class="md-nav__link">
+        Create a Template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/accessing-global-templates/" class="md-nav__link">
+        Use a Template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/kudos-boards-import-activity/" class="md-nav__link">
+        Hybrid - Import an Activity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_8" type="checkbox" id="__nav_4_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_8">
+          Working in a Board
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Working in a Board" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Working in a Board
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/adding-members-to-a-board/" class="md-nav__link">
+        Adding Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/permissions/" class="md-nav__link">
+        Member Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/archiving-and-restoring/" class="md-nav__link">
+        Archiving and Restoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/attaching-files/" class="md-nav__link">
+        Attaching Files to Cards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/mind-map-view/" class="md-nav__link">
+        Mind Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/timeline-view-in-boards/" class="md-nav__link">
+        Timeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/dependencies/" class="md-nav__link">
+        Task Dependencies
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_9" type="checkbox" id="__nav_4_7_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_9">
+          Boards in other Apps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Boards in other Apps" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_9">
+          <span class="md-nav__icon md-icon"></span>
+          Boards in other Apps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/use-verse/" class="md-nav__link">
+        HCL Verse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/use-auth0/" class="md-nav__link">
+        Login with Auth0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/kudos-boards-and-microsoft-onedrive/" class="md-nav__link">
+        Microsoft OneDrive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/kudos-boards-in-microsoft-outlook/" class="md-nav__link">
+        Microsoft Outlook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/kudos-boards-in-microsoft-sharepoint/" class="md-nav__link">
+        Microsoft SharePoint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/adding-boards-to-teams/" class="md-nav__link">
+        Microsoft Teams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/disable-notifications-teams/" class="md-nav__link">
+        Teams - Disable Notifications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_10" type="checkbox" id="__nav_4_7_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_10">
+          Administration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_10">
+          <span class="md-nav__icon md-icon"></span>
+          Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cp/dockerhub/" class="md-nav__link">
+        Use Dockerhub Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/org-config/" class="md-nav__link">
+        Manage Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/manage-licences/" class="md-nav__link">
+        Manage Licences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/admin/revoke-users/" class="md-nav__link">
+        Revoke Users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7_10_5" type="checkbox" id="__nav_4_7_10_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_10_5">
+          Transition Providers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Transition Providers" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_7_10_5">
+          <span class="md-nav__icon md-icon"></span>
+          Transition Providers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/admin/transition-between-providers/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/admin/sync-profiles/" class="md-nav__link">
+        Synchronise Profiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/admin/link-users/" class="md-nav__link">
+        Link User Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/admin/replace-group-membership/" class="md-nav__link">
+        Replace Group Membership
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/admin/transfer-ownership-unlink/" class="md-nav__link">
+        Transfer Ownership & Unlink
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/admin/deactivate-login/" class="md-nav__link">
+        Deactivate Login
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideas/howto/" class="md-nav__link">
+        Huddo Ideas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Buzzy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Buzzy" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Buzzy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buzzy/buzzy-icp/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buzzy/buzzy-oauth/" class="md-nav__link">
+        Connections OAuth Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buzzy/buzzy-wasconfig/" class="md-nav__link">
+        WAS Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buzzy/buzzy-header/" class="md-nav__link">
+        Header Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buzzy/buzzy-widgets/" class="md-nav__link">
+        Connections Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buzzy/mongo/" class="md-nav__link">
+        Mongo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../buzzy/minio/" class="md-nav__link">
+        Minio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          CCM Migrator
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CCM Migrator" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          CCM Migrator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccm-migrator/install/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ccm-migrator/usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../log4j/" class="md-nav__link">
+        log4j
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-upgrade" class="md-nav__link">
+    How To Upgrade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+    <nav class="md-nav" aria-label="Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2022" class="md-nav__link">
+    2022
+  </a>
+  
+    <nav class="md-nav" aria-label="2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2022-05-13" class="md-nav__link">
+    2022-05-13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-04-20" class="md-nav__link">
+    2022-04-20
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-04-07" class="md-nav__link">
+    2022-04-07
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-03-21" class="md-nav__link">
+    2022-03-21
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-03-09" class="md-nav__link">
+    2022-03-09
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-02-17" class="md-nav__link">
+    2022-02-17
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-02-10" class="md-nav__link">
+    2022-02-10
+  </a>
+  
+    <nav class="md-nav" aria-label="2022-02-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-store-migration" class="md-nav__link">
+    File store migration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2022-01-07" class="md-nav__link">
+    2022-01-07
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2021" class="md-nav__link">
+    2021
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2020" class="md-nav__link">
+    2020
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="boards-docker-releases-change-log">Boards Docker Releases (change log)<a class="headerlink" href="#boards-docker-releases-change-log" title="Permanent link">&para;</a></h1>
+<h2 id="how-to-upgrade">How To Upgrade<a class="headerlink" href="#how-to-upgrade" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Note:</strong> to upgrade from images in the Component Pack download to the latest images hosted by us on Dockerhub please follow <a href="/boards/cp/dockerhub/">this guide</a>.</p>
+</blockquote>
+<p>Please use the appropriate update command. For example:</p>
+<p>Huddo Boards in Kubernetes
+<div class="highlight"><pre><span></span><code>helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards
+</code></pre></div></p>
+<p>Component Pack (Activities Plus)
+<div class="highlight"><pre><span></span><code>helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
+</code></pre></div></p>
+<p>See here for the <a href="/boards/helm-charts/">Helm Charts change log</a>.</p>
+<hr />
+<h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
+<h3 id="2022">2022<a class="headerlink" href="#2022" title="Permanent link">&para;</a></h3>
+<h4 id="2022-05-13">2022-05-13<a class="headerlink" href="#2022-05-13" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-05-13">Dockerhub</a></p>
+<p>Features:</p>
+<ul>
+<li>Auto login to Boards if only one provider configured</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Prevent closing page when still editing description</li>
+<li>Styling of description locked alert for visibility when scrolled</li>
+<li>New Teams welcome message card</li>
+<li>New Teams notification cards</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Clickable links in description</li>
+<li>Moving focus between description and comments</li>
+<li>Saving description changes when focusing new comment</li>
+<li>Truncation of comment when posting in some circumstances</li>
+<li>Prevent authors attempting to edit descriptions when not allowed</li>
+<li>@mentions on new lines created with shift+enter</li>
+<li>Showing bubble editor when select all text in comment (ctrl+a)</li>
+<li>Issue with attachments from EML uploads (e.g. drag from HCL Notes)</li>
+</ul>
+<hr />
+<h4 id="2022-04-20">2022-04-20<a class="headerlink" href="#2022-04-20" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-04-20">Dockerhub</a></p>
+<p>Features:</p>
+<ul>
+<li>
+<p>Login to Boards using Single Sign On (SSO) in Microsoft Teams</p>
+<blockquote>
+<p><strong>Note</strong>: you will need to:</p>
+<ol>
+<li><a href="/boards/msgraph/auth/#configure-sso-in-teams">Configure SSO in Teams</a> in your existing Azure OAuth application definition</li>
+<li><a href="/boards/msgraph/teams-on-prem/#configure-application">download the latest app definition from Boards admin section and update it in Teams</a>.</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Issue loading Activity Stream gadget</li>
+<li>Issue with Moderated Community access</li>
+<li>Issue when updating Board title</li>
+<li>Issue with lock of description in communities</li>
+</ul>
+<hr />
+<h4 id="2022-04-07">2022-04-07<a class="headerlink" href="#2022-04-07" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-04-07">Dockerhub</a></p>
+<p>Improvements:</p>
+<ul>
+<li>Reduced number of simultaneous MongoDB connections</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Issue with comment stream entry for Orient Me</li>
+<li>Issue with updating card title from Boards view in FireFox</li>
+<li>Issue with deeplinked Connections Community widgets</li>
+<li>Issue with Boards Search styling</li>
+<li>Issue with opening filters via icon</li>
+<li>Issue with Moderated Community ACL</li>
+<li>Issue with Teams login popup not closing</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>Fix invisible top level task/entries</li>
+</ul>
+<hr />
+<h4 id="2022-03-21">2022-03-21<a class="headerlink" href="#2022-03-21" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-03-21">Dockerhub</a></p>
+<p>Improvements:</p>
+<ul>
+<li>File upload feedback (eg when socket unavailable)</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>WebSocket failure fallback to Polling</li>
+<li>Prevent duplicates appearing in history from live events</li>
+<li>First comments not live displaying</li>
+<li>Issue where Timeline displaying some cards a day out</li>
+<li>Issue where Subscriber Redis crashes after too many concurrent events</li>
+</ul>
+<hr />
+<h4 id="2022-03-09">2022-03-09<a class="headerlink" href="#2022-03-09" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-03-09">Dockerhub</a></p>
+<p>Improvements:</p>
+<ul>
+<li>Upgraded libraries for performance/security/support (e.g. Material UI, Redis)</li>
+<li>Improved loading perfomance (reduced bundle size)</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>issue where comments disappear in certain scenarios</li>
+<li>issue where pasting into edited comment clears comment</li>
+<li>issue where loading a Community widget where the Board has been deleted causing an inifinite loop</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>Added optional variables to reprocess migrated files which had encoding issues</li>
+</ul>
+<hr />
+<h4 id="2022-02-17">2022-02-17<a class="headerlink" href="#2022-02-17" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-02-17">Dockerhub</a></p>
+<p>Features:</p>
+<ul>
+<li>Ability to change Private cards to Public</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Updated Date pickers with month/year selection</li>
+<li>Updated Material UI library to latest</li>
+<li>Better internationalisation of dates</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Fix for saving description on modal closure</li>
+<li>Fix for transfer membership</li>
+<li>Fix detection of descriptions migrated from Activities</li>
+<li>Fix for entry styling when Visual Update One applied</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>Uses new FileInfo meta structure</li>
+<li>Fix to flag cards with description</li>
+</ul>
+<hr />
+<h4 id="2022-02-10">2022-02-10<a class="headerlink" href="#2022-02-10" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-02-10">Dockerhub</a></p>
+<h5 id="file-store-migration">File store migration<a class="headerlink" href="#file-store-migration" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p><strong>CAUTION</strong>: When deployed, this release (and all subsequent) will migrate the minio file store, changing it's structure permanently, we recommend performing a backup of the file store (/pv-connections/kudos-boards-minio) before installation in case there is any need to roll back.</p>
+</blockquote>
+<p>Improvements:</p>
+<ul>
+<li>File uploads have better user feedback, showing a partial file and track the upload progress</li>
+<li>File downloads make better use of the original mimetype and no longer use the file name in the url</li>
+<li>When setting Due, Start and End Dates the picker now supports clicking in the header to choose a year</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Cards created from Outlook / Verse can crash a board</li>
+<li>Date "chips" on card view need to be clicked twice</li>
+<li>Pasting an image can wipe a description</li>
+<li>Boards in a community / team no longer show "My Boards" on error</li>
+<li>Clicking "Private" sometimes does nothing</li>
+<li>File size calculation now allows a full 50mb file</li>
+</ul>
+<hr />
+<h4 id="2022-01-07">2022-01-07<a class="headerlink" href="#2022-01-07" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-01-07">Dockerhub</a></p>
+<p>Fixes:</p>
+<ul>
+<li>Issue where notifications of comments not sent to other commenters</li>
+<li>Issue where emails sent to content creators when users are no longer Board members</li>
+<li>Issue when completing tasks when multi-assign has been removed</li>
+<li>Issue where sub cards not loading when opening a card via url</li>
+<li>Issue where card breadcrumbs (ancestors) not displaying when opening a card via url</li>
+</ul>
+<hr />
+<h3 id="2021">2021<a class="headerlink" href="#2021" title="Permanent link">&para;</a></h3>
+<p>2021-12-17
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-12-17">Dockerhub</a></p>
+<p>Improvements:</p>
+<ul>
+<li>Throttle lookups of members from Communities application</li>
+<li>Improved description of scheduled cards in Recent Updates history</li>
+<li>Arabic language updates</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Issue when adding Tag with same starting letter as previous</li>
+<li>Issue when moving Cards in MindMap</li>
+<li>Issue where Board title overflowed in MindMap</li>
+<li>Issue where removing description was not synchronised to other users with modal open</li>
+</ul>
+<hr />
+<p>2021-11-23
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-11-23">Dockerhub</a></p>
+<p>Features:</p>
+<ul>
+<li>Recent Updates (board level and inside cards)</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Arabic language updates</li>
+<li>MSGraph user searching (inc Guests)</li>
+<li>Activity Migration: better feedback when invalid content store data</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Assigning a user by drag/drop creates second card from profile image</li>
+</ul>
+<p>2021-11-18
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-11-18">Dockerhub</a></p>
+<p>Updates:</p>
+<ul>
+<li>All services have been updated to the latest LTS version on Node.js, all dependencies have been updated to their latest supported versions.</li>
+<li>Updated translations for Arabic and German.</li>
+</ul>
+<hr />
+<p>2021-11-02
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-11-02">Dockerhub</a></p>
+<p>Fixes:</p>
+<ul>
+<li>Licence not found errors when adding or removing licences in the LICENCE key environment variable.</li>
+</ul>
+<hr />
+<p>2021-10-26
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-10-26">Dockerhub</a></p>
+<p>Fixes:</p>
+<ul>
+<li>SSL Issue connecting to Component Pack Mongo</li>
+</ul>
+<hr />
+<p>2021-10-22
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-10-22">Dockerhub</a></p>
+<p>Features:</p>
+<ul>
+<li>User Presence</li>
+<li>Private Cards</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Load performance by reducing page size</li>
+<li>Activities View performance</li>
+<li>Optional API Rate Limiting</li>
+<li>Better handling of conflicting CSS from Visual Update One</li>
+<li>Enhancement for Microsoft Graph groups which are not teams (owner vs member)</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Issue when adding Connections Communities as members</li>
+<li>Issue when changing user account tries to loads the previous open Board</li>
+<li>Issue where link is inserted at start of description</li>
+<li>Issue with authenticated webhooks</li>
+<li>Issue with S3 "bucket-already-exists" race condition</li>
+<li>Issue where multiple toasts in quick succession never auto closed</li>
+</ul>
+<hr />
+<p>2021-09-29
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-09-29">Dockerhub</a></p>
+<p>Improvements:</p>
+<ul>
+<li>
+<p>Reduce reliance on Communities application</p>
+<ul>
+<li>Reduce member lookups</li>
+<li>Increase page size of Communities requests</li>
+<li>Throttles simultaneous requests to Communities</li>
+<li>Increase caching of responses</li>
+</ul>
+</li>
+<li>
+<p>Undo / Redo option in Rich Text editor</p>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Indexing issue when recreating <code>providerID_1</code> with new options</li>
+</ul>
+<hr />
+<p>2021-09-24
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-09-24">Dockerhub</a></p>
+<p>Improvements:</p>
+<ul>
+<li>Debug logging of 400 errors in webfront</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>issue with index in Component Pack mongo when assigned task name too long</li>
+</ul>
+<hr />
+<p>2021-09-17
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-09-17">Dockerhub</a></p>
+<blockquote>
+<p><strong>Note:</strong> this update performs several schema changes on start-up as a once-off. Board content may be temporarily unavailable for a few minutes. Also be aware that downgrading to a previous release will cause access issues in Community boards with role 'inherit'. Please contact us if you have any issues at support@huddo.com</p>
+<p><strong>Note:</strong> if you encounter 400 bad requests when loading <code>/boards</code>, please see this <a href="/boards/troubleshooting/nginx/">troubleshooting guide</a>.</p>
+</blockquote>
+<p>Features:</p>
+<ul>
+<li>Private Cards</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Board load performance</li>
+<li>User/Group search performance</li>
+<li>more granular user permissions for group membership</li>
+<li>ability to set group permissions for a Board on create in the group</li>
+<li>Community name search improvements (handling of names with special characters)</li>
+<li>added missing German translations</li>
+<li>MongoDB - refined and reduced total indexes. Be aware that this update will cause a heavy re-index.</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>issue where you could not change level of community members</li>
+<li>issue assigning colours in quick succession</li>
+<li>issue when removing filters on ToDo view</li>
+<li>teams notifications turning back on when they are disabled</li>
+<li>issue accepting email invites for guest/external users</li>
+</ul>
+<hr />
+<p>2021-06-24
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-06-24">Dockerhub</a></p>
+<p>Fixes:</p>
+<ul>
+<li>Added environment variable <code>FORCE_POLLING</code> in webfront to avoid issues seen when using IHS as reverse proxy</li>
+<li>API documentation should now work for cp releases, see <code>/api-boards/</code></li>
+</ul>
+<hr />
+<p>2021-06-09
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-06-09">Dockerhub</a></p>
+<p><strong>Breaking change:</strong></p>
+<blockquote>
+<p>Emails are now sent by the <code>events</code> service. You must move the NOTIFIER_* environment variables from <code>core</code> to <code>events</code> as <a href="/boards/releases/#important-update-cp-v3">shown above</a></p>
+</blockquote>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-06-09
+iswkudos/kudos-boards:provider-2021-06-09
+iswkudos/kudos-boards:licence-2021-06-09
+iswkudos/kudos-boards:notification-2021-06-09
+iswkudos/kudos-boards:webfront-2021-06-09
+iswkudos/kudos-boards:core-2021-06-09
+iswkudos/kudos-boards:boards-2021-06-09
+iswkudos/kudos-boards:activity-migration-2021-06-09
+iswkudos/kudos-boards:boards-event-2021-06-09
+</code></pre></div>
+<p>New Features:</p>
+<ul>
+<li>Due Date reminder emails</li>
+<li>Email notification controls</li>
+<li>Product Tours</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>New email styling &amp; full Card/Board representation</li>
+</ul>
+<p>Fixes</p>
+<ul>
+<li>Visibility of assignment completion (ticks) when multi-complete</li>
+<li>Issue where description was hidden if other card attribute updated</li>
+<li>UI feedback when completing task on Todos view</li>
+<li>Completion logic when completing last assignment</li>
+<li>Missing description when post comment, export Board as CSV, create Board from Template (since 06-02)</li>
+<li>Logout issue (since 06-02)</li>
+</ul>
+<hr />
+<p>2021-06-02
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-06-02">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-06-02
+iswkudos/kudos-boards:provider-2021-06-02
+iswkudos/kudos-boards:licence-2021-06-02
+iswkudos/kudos-boards:notification-2021-06-02
+iswkudos/kudos-boards:webfront-2021-06-02
+iswkudos/kudos-boards:core-2021-06-02
+iswkudos/kudos-boards:boards-2021-06-02
+iswkudos/kudos-boards:activity-migration-2021-06-02
+iswkudos/kudos-boards:boards-event-2021-06-02
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Only load Descriptions when required (less data, faster loading times)</li>
+<li>Styling/positioning of Date selection</li>
+</ul>
+<p>Fixes</p>
+<ul>
+<li>Missing Boards when viewed by Color (if never opened)</li>
+</ul>
+<hr />
+<p>2021-05-31
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-05-31">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-05-31
+iswkudos/kudos-boards:provider-2021-05-31
+iswkudos/kudos-boards:licence-2021-05-31
+iswkudos/kudos-boards:notification-2021-05-31
+iswkudos/kudos-boards:webfront-2021-05-31
+iswkudos/kudos-boards:core-2021-05-31
+iswkudos/kudos-boards:boards-2021-05-31
+iswkudos/kudos-boards:activity-migration-2021-05-31
+iswkudos/kudos-boards:boards-event-2021-05-31
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Microsoft (Teams &amp; Sharepoint) - detect owners vs members (authors)</li>
+<li>Creating board in Sharepoint sites</li>
+<li>Comment create/delete UI performance</li>
+<li>Card completion performance</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>ACL for Readers/Commenters</li>
+<li>Protect against removing an assignment while still creating</li>
+<li>Showing image pasted in description with no text</li>
+<li>Linking to files in folders</li>
+<li>Description lock issues when framed (Connections, Sharepoint etc)</li>
+<li>Wrap long comments instead of sideways scrolling</li>
+</ul>
+<hr />
+<p>2021-05-13
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-05-13">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-05-13
+iswkudos/kudos-boards:provider-2021-05-13
+iswkudos/kudos-boards:licence-2021-05-13
+iswkudos/kudos-boards:notification-2021-05-13
+iswkudos/kudos-boards:webfront-2021-05-13
+iswkudos/kudos-boards:core-2021-05-13
+iswkudos/kudos-boards:boards-2021-05-13
+iswkudos/kudos-boards:activity-migration-2021-05-13
+iswkudos/kudos-boards:boards-event-2021-05-13
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>
+<p>Link to Files / Upload to Files</p>
+<ul>
+<li>Show options for all member Groups (Communities)</li>
+<li>Updated defaults for private Boards</li>
+<li>Alphabetic ordering of Connections files</li>
+<li>Type to filter</li>
+</ul>
+</li>
+<li>
+<p>Allow custom NodeMailer email options (insecure tls etc)</p>
+<p><code>core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"</code></p>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Color tag menu positioning on small screen</li>
+<li>Boards image on file uploads (context root)</li>
+</ul>
+<hr />
+<p>2021-05-04
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-05-04">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-05-04
+iswkudos/kudos-boards:provider-2021-05-04
+iswkudos/kudos-boards:licence-2021-05-04
+iswkudos/kudos-boards:notification-2021-05-04
+iswkudos/kudos-boards:webfront-2021-05-04
+iswkudos/kudos-boards:core-2021-05-04
+iswkudos/kudos-boards:boards-2021-05-04
+iswkudos/kudos-boards:activity-migration-2021-05-04
+iswkudos/kudos-boards:boards-event-2021-05-04
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>User feedback when assigning tasks to multiple users (no flickering)</li>
+<li>Reconnect live events after service updates</li>
+<li>API docs only at root, send 404 for missing/incorrect routes</li>
+<li>Reduce height of background event loading progress bar</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Archive view loading animation</li>
+<li>Adding an Admin by email search</li>
+<li>Dot in Node modal above name input visible with a theme</li>
+<li>Outlook add-in file updates</li>
+<li>Deep linking to Community Boards widget in Highlights app</li>
+<li>Authors can no longer assign users to tasks they did not create</li>
+<li>Authors and Readers can complete 'All Must Complete' tasks they are assigned to</li>
+</ul>
+<hr />
+<p>2021-04-29
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-04-29">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-04-29
+iswkudos/kudos-boards:provider-2021-04-29
+iswkudos/kudos-boards:licence-2021-04-29
+iswkudos/kudos-boards:notification-2021-04-29
+iswkudos/kudos-boards:webfront-2021-04-29
+iswkudos/kudos-boards:core-2021-04-29
+iswkudos/kudos-boards:boards-2021-04-29
+iswkudos/kudos-boards:activity-migration-2021-04-29
+iswkudos/kudos-boards:boards-event-2021-04-29
+</code></pre></div>
+<p>New:</p>
+<ul>
+<li>Boards Event service</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Allow editing of rich text when sockets fail</li>
+<li>Opening cards with html imported from Outlook</li>
+<li>Member assignment on click in menu</li>
+<li>Remove card theme when deleting file set as card theme</li>
+<li>Multiple assignments in rapid succession</li>
+</ul>
+<hr />
+<p>2021-04-26
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-04-26">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-04-26
+iswkudos/kudos-boards:provider-2021-04-26
+iswkudos/kudos-boards:licence-2021-04-26
+iswkudos/kudos-boards:notification-2021-04-26
+iswkudos/kudos-boards:webfront-2021-04-26
+iswkudos/kudos-boards:core-2021-04-26
+iswkudos/kudos-boards:boards-2021-04-26
+iswkudos/kudos-boards:activity-migration-2021-04-26
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Updates to Rich Text Editor &amp; editor locking mechanism</li>
+<li>Card icon for scheduled start/end dates</li>
+<li>Admin revoke &amp; anonymise user function</li>
+<li>API for email to Card/Entry parsing</li>
+<li>API for file upload as new Card</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Highlights widget update for C7</li>
+<li>Updated German translation</li>
+</ul>
+<p>Activity Migration</p>
+<ul>
+<li>Use Connections Shared Drive to load Activity long descriptions and files (new variables &amp; volume/mount required in yaml)</li>
+</ul>
+<hr />
+<p>2021-03-22
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-03-22">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-03-22
+iswkudos/kudos-boards:provider-2021-03-22
+iswkudos/kudos-boards:licence-2021-03-22
+iswkudos/kudos-boards:notification-2021-03-22
+iswkudos/kudos-boards:webfront-2021-03-22
+iswkudos/kudos-boards:core-2021-03-22
+iswkudos/kudos-boards:boards-2021-03-22
+iswkudos/kudos-boards:activity-migration-2021-03-22
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Board loading performance</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Locking of description when socket fails</li>
+<li>Activity migration - protect against old public data</li>
+</ul>
+<hr />
+<p>2021-03-16
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-03-16">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-03-16
+iswkudos/kudos-boards:provider-2021-03-16
+iswkudos/kudos-boards:licence-2021-03-16
+iswkudos/kudos-boards:notification-2021-03-16
+iswkudos/kudos-boards:webfront-2021-03-16
+iswkudos/kudos-boards:core-2021-03-16
+iswkudos/kudos-boards:boards-2021-03-16
+iswkudos/kudos-boards:activity-migration-2021-03-16
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Handle legacy Boards WebSphere URL redirect (hashes)</li>
+<li>
+<p>Ability to <a href="/boards/howto/admin/transition-between-providers/">transition between providers</a></p>
+<ul>
+<li>Link User accounts by full email address</li>
+<li>Map Groups by CSV file</li>
+<li>Transfer Ownership &amp; Unlink accounts</li>
+</ul>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Verse integration</li>
+</ul>
+<hr />
+<p>2021-03-10
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-03-10">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-03-10
+iswkudos/kudos-boards:provider-2021-03-10
+iswkudos/kudos-boards:licence-2021-03-10
+iswkudos/kudos-boards:notification-2021-03-10
+iswkudos/kudos-boards:webfront-2021-03-10
+iswkudos/kudos-boards:core-2021-03-10
+iswkudos/kudos-boards:boards-2021-03-10
+iswkudos/kudos-boards:activity-migration-2021-03-10
+</code></pre></div>
+<p>Fixes:</p>
+<ul>
+<li>Groups not saving expanded members (affects imported Activities)</li>
+<li>Issue where homepage didnt reload after login from secondary alias</li>
+<li>Improved support for imported community owner + reader role</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>Updated Mongoose version to fix 'module exports inside circular dependency' warning</li>
+</ul>
+<hr />
+<p>2021-03-05
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-03-05">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-03-05
+iswkudos/kudos-boards:provider-2021-03-05
+iswkudos/kudos-boards:licence-2021-03-05
+iswkudos/kudos-boards:notification-2021-03-05
+iswkudos/kudos-boards:webfront-2021-03-05
+iswkudos/kudos-boards:core-2021-03-05
+iswkudos/kudos-boards:boards-2021-03-05
+iswkudos/kudos-boards:activity-migration-2021-03-05
+</code></pre></div>
+<p>Features:</p>
+<ul>
+<li>New Huddo branding!</li>
+<li><a href="https://boards.api.huddo.com">New API with docs!</a></li>
+<li>
+<p>API integrations with</p>
+<ul>
+<li>Zapier</li>
+<li>Power Automate</li>
+<li>Leave a Board</li>
+<li>Card description lock (one-at-a-time editing)</li>
+<li>Embed Cards/Boards in third party apps (e.g. Sharepoint)</li>
+</ul>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Prevent file upload with zero size</li>
+<li>Support migrated folders</li>
+</ul>
+<hr />
+<p>2021-03-04
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-03-04">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-03-04
+iswkudos/kudos-boards:provider-2021-03-04
+iswkudos/kudos-boards:licence-2021-03-04
+iswkudos/kudos-boards:notification-2021-03-04
+iswkudos/kudos-boards:webfront-2021-03-04
+iswkudos/kudos-boards:core-2021-03-04
+iswkudos/kudos-boards:boards-2021-03-04
+iswkudos/kudos-boards:activity-migration-2021-03-04
+</code></pre></div>
+<p>Fixes:</p>
+<ul>
+<li>Connections login no longer sends redirect_uri (connections will use the one configred in wsadmin)</li>
+</ul>
+<hr />
+<p>2021-03-03
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-03-03">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-03-03
+iswkudos/kudos-boards:provider-2021-03-03
+iswkudos/kudos-boards:licence-2021-03-03
+iswkudos/kudos-boards:notification-2021-03-03
+iswkudos/kudos-boards:webfront-2021-03-03
+iswkudos/kudos-boards:core-2021-03-03
+iswkudos/kudos-boards:boards-2021-03-03
+iswkudos/kudos-boards:activity-migration-2021-03-03
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Ability to sync profiles from Connections &amp; Microsoft (please follow the steps on the Admin page of each Client)</li>
+<li>Ability to automatically link user aliases in 2 different clients (eg Connections &amp; Microsoft)</li>
+<li>Support for Activity URL with entryId</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Redirect to login if required when accessing Activity URL</li>
+<li>Board ACL updates for membership escallation</li>
+</ul>
+<hr />
+<p>2021-02-19
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-02-19">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-02-19
+iswkudos/kudos-boards:provider-2021-02-19
+iswkudos/kudos-boards:licence-2021-02-19
+iswkudos/kudos-boards:notification-2021-02-19
+iswkudos/kudos-boards:webfront-2021-02-19
+iswkudos/kudos-boards:core-2021-02-19
+iswkudos/kudos-boards:boards-2021-02-19
+iswkudos/kudos-boards:activity-migration-2021-02-19
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Todos view<ul>
+<li>hide sub-cards which are not applicable</li>
+<li>hide multi-assigned tasks I have completed (assigned view)</li>
+</ul>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Disable notification for Communities with 'owner-only' membership</li>
+<li>Notifications when creating a Board &amp; members at the same time</li>
+<li>Protect against imported data for assignments without users &amp; nodes without creator</li>
+<li>Mindmap - expand/collapse icons</li>
+<li>Redirect from Activity URL to Board URL in the Connections header frame</li>
+<li>Show all public members when multiple</li>
+</ul>
+<hr />
+<p>2021-01-19
+<a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2021-01-19">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2021-01-19
+iswkudos/kudos-boards:provider-2021-01-19
+iswkudos/kudos-boards:licence-2021-01-19
+iswkudos/kudos-boards:notification-2021-01-19
+iswkudos/kudos-boards:webfront-2021-01-19
+iswkudos/kudos-boards:core-2021-01-19
+iswkudos/kudos-boards:boards-2021-01-19
+iswkudos/kudos-boards:activity-migration-2021-01-19
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Show login page on file download when unauthorized</li>
+<li>Login options for Verse/Outlook integration</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Tile color popup positioning and scrolling for small screens</li>
+<li>Protect against null assignment value after import</li>
+<li>PDF downloads inside the community widget</li>
+<li>Show new cards added in assignments view</li>
+<li>Show assigned cards in Timeline view (only affects some users with multiple linked accounts)</li>
+</ul>
+<hr />
+<h3 id="2020">2020<a class="headerlink" href="#2020" title="Permanent link">&para;</a></h3>
+<p>2020-12-14</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-12-14">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-12-14
+iswkudos/kudos-boards:provider-2020-12-14
+iswkudos/kudos-boards:licence-2020-12-14
+iswkudos/kudos-boards:notification-2020-12-14
+iswkudos/kudos-boards:webfront-2020-12-14
+iswkudos/kudos-boards:core-2020-12-14
+iswkudos/kudos-boards:boards-2020-12-14
+iswkudos/kudos-boards:activity-migration-2020-12-14
+</code></pre></div>
+<p>Features:</p>
+<ul>
+<li>Updated migration service to support the new "Community Owners only" option</li>
+<li>
+<p>Added fix for Activities that had already been imported and used the equivalent permission set in Activities</p>
+<p><code>boards.yaml</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">migration</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># test = report activities and board membership that can be updated</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># true = run the fix and report results</span><span class="w"></span>
+<span class="w">    </span><span class="nt">FIX_COMMUNITY_OWNERS_ONLY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test|true</span><span class="w"></span>
+</code></pre></div>
+</li>
+</ul>
+<hr />
+<p>2020-12-12</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-12-12">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-12-12
+iswkudos/kudos-boards:provider-2020-12-12
+iswkudos/kudos-boards:licence-2020-12-12
+iswkudos/kudos-boards:notification-2020-12-12
+iswkudos/kudos-boards:webfront-2020-12-12
+iswkudos/kudos-boards:core-2020-12-12
+iswkudos/kudos-boards:boards-2020-12-12
+iswkudos/kudos-boards:activity-migration-2020-12-12
+</code></pre></div>
+<p>Features:</p>
+<ul>
+<li>Added group membership option "Community Owners Only" which makes the community owners have owner rights in a board but does not allow any other community members access. This option is available for boards created in a community widget only.</li>
+</ul>
+<hr />
+<p>2020-11-13</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-11-02">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-11-13
+iswkudos/kudos-boards:provider-2020-11-13
+iswkudos/kudos-boards:licence-2020-11-13
+iswkudos/kudos-boards:notification-2020-11-13
+iswkudos/kudos-boards:webfront-2020-11-13
+iswkudos/kudos-boards:core-2020-11-13
+iswkudos/kudos-boards:boards-2020-11-13
+iswkudos/kudos-boards:activity-migration-2020-11-13
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Increase multi-lingual coverage</li>
+</ul>
+<hr />
+<p>2020-11-02</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-11-02">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-11-02
+iswkudos/kudos-boards:provider-2020-11-02
+iswkudos/kudos-boards:licence-2020-11-02
+iswkudos/kudos-boards:notification-2020-11-02
+iswkudos/kudos-boards:webfront-2020-11-02
+iswkudos/kudos-boards:core-2020-11-02
+iswkudos/kudos-boards:boards-2020-11-02
+iswkudos/kudos-boards:activity-migration-2020-11-02
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Increase multi-lingual coverage</li>
+<li>Creating Board from template includes members/description</li>
+<li>Option to disable Welcome emails (user.env.DISABLE_WELCOME_EMAIL)</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Uploading file in iOS Safari</li>
+</ul>
+<hr />
+<p>2020-10-14</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-10-14">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-10-14
+iswkudos/kudos-boards:provider-2020-10-14
+iswkudos/kudos-boards:licence-2020-10-14
+iswkudos/kudos-boards:notification-2020-10-14
+iswkudos/kudos-boards:webfront-2020-10-14
+iswkudos/kudos-boards:core-2020-10-14
+iswkudos/kudos-boards:boards-2020-10-14
+iswkudos/kudos-boards:activity-migration-2020-10-14
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Updated Rich Text Editor</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Re-open last board view</li>
+<li>User trial reminder</li>
+<li>Extension of user trials</li>
+<li>Download linked files with .odt extension</li>
+</ul>
+<hr />
+<p>2020-10-05</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-10-05">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-10-05
+iswkudos/kudos-boards:provider-2020-10-05
+iswkudos/kudos-boards:licence-2020-10-05
+iswkudos/kudos-boards:notification-2020-10-05
+iswkudos/kudos-boards:webfront-2020-10-05
+iswkudos/kudos-boards:core-2020-10-05
+iswkudos/kudos-boards:boards-2020-10-05
+iswkudos/kudos-boards:activity-migration-2020-10-05
+</code></pre></div>
+<p>Features:</p>
+<ul>
+<li>Board Search<ul>
+<li>Increase visibility of filters</li>
+<li>Maintain filters after page reload</li>
+<li>Hide Completed Todos</li>
+<li>Hide Empty Lists</li>
+</ul>
+</li>
+<li>Preview Files, support for<ul>
+<li>Excel (xlsx, xls)</li>
+<li>PDF</li>
+</ul>
+</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Rich Text Editor - allow indenting paragraphs</li>
+<li>Logging updates</li>
+<li>Activity Migration - add default link type</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Default handling of links from migrated Activities</li>
+<li>User Avatar initials fallback</li>
+<li>Include current user as option in user licence search &amp; custom field person</li>
+</ul>
+<hr />
+<p>2020-09-18</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-09-18">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-09-18
+iswkudos/kudos-boards:provider-2020-09-18
+iswkudos/kudos-boards:licence-2020-09-18
+iswkudos/kudos-boards:notification-2020-09-18
+iswkudos/kudos-boards:webfront-2020-09-18
+iswkudos/kudos-boards:core-2020-09-18
+iswkudos/kudos-boards:boards-2020-09-18
+iswkudos/kudos-boards:activity-migration-2020-09-18
+</code></pre></div>
+<p>Features:</p>
+<ul>
+<li>New rich text editor with improved handling for<ul>
+<li>tables</li>
+<li>whitepace</li>
+<li>paste from office</li>
+<li>font, font size, font color</li>
+<li>file upload feedback</li>
+</ul>
+</li>
+<li>Search Board by Custom Fields (Text &amp; People)</li>
+<li>Search improvements - show sub-tasks when parent match filter</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>UI feedback for Chrome Incognito third-party security exception</li>
+<li>Microsoft Teams file preview</li>
+<li>Microsoft Teams file links</li>
+<li>Internal microservice communication (<strong>Note</strong>: this requires a new Helm Chart V2)</li>
+<li>Updated HCL Connections icon</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Issue where page reloads constantly in Connections frame</li>
+<li>Outlook integration issue</li>
+<li>File Preview in Safari</li>
+<li>Board Properties toolbar 'more' menu</li>
+<li>API update for completing a task already completed</li>
+</ul>
+<hr />
+<p>2020-08-24</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-08-24">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-08-24
+iswkudos/kudos-boards:provider-2020-08-24
+iswkudos/kudos-boards:licence-2020-08-24
+iswkudos/kudos-boards:notification-2020-08-24
+iswkudos/kudos-boards:webfront-2020-08-24
+iswkudos/kudos-boards:core-2020-08-24
+iswkudos/kudos-boards:boards-2020-08-24
+iswkudos/kudos-boards:activity-migration-2020-08-24
+</code></pre></div>
+<p>Features:</p>
+<ul>
+<li>Live Board Tile views (my/public/groups)</li>
+<li>Export Board/Cards as CSV</li>
+<li>Upload multiple files at once</li>
+<li>Drag and drop multiple emails into an open card</li>
+<li>Link to Board/List/Card - copies a direct URL to clipboard</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Performance (loading times)</li>
+<li>Use local font files (no external URLs)</li>
+<li>Focused people search results in Connections</li>
+<li>Previewing linked files has link to Connections file info</li>
+<li>Loading Community images</li>
+<li>Support nested comments imported from Activities</li>
+<li>Support pasting images in comments</li>
+<li>Support long board names in left sidenav</li>
+<li>Scroll members area in right sidenav when long</li>
+<li>Show summary numbers in Members dialog</li>
+<li>UI feedback while saving custom fields</li>
+<li>Cookie handling (SameSite)</li>
+<li>Firefox scrollbar styling</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Saving of description on reload &amp; modal change</li>
+<li>Comment duplicate while saving</li>
+<li>Support non-english @mentions</li>
+<li>@mention overflow issue</li>
+<li>Recent boards in left sidenav</li>
+<li>Move and not open page crash issue</li>
+<li>Ordering of links in a card</li>
+<li>Sharing my private file with a public folder</li>
+<li>Previewing of linked Community files</li>
+<li>Activities imported with unknown user assignments</li>
+<li>Dragging color onto tiles</li>
+<li>Allow unassigning users who are no longer members</li>
+<li>Ordering issue on cards created using past</li>
+</ul>
+<hr />
+<p>2020-07-10</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-07-10">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-07-10
+iswkudos/kudos-boards:provider-2020-07-10
+iswkudos/kudos-boards:licence-2020-07-10
+iswkudos/kudos-boards:notification-2020-07-10
+iswkudos/kudos-boards:webfront-2020-07-10
+iswkudos/kudos-boards:core-2020-07-10
+iswkudos/kudos-boards:boards-2020-07-10
+iswkudos/kudos-boards:activity-migration-2020-07-10
+</code></pre></div>
+<p>Improvements:</p>
+<ul>
+<li>Activity Stream deep-linking to Community Boards</li>
+<li>Community Boards - open board links in fullpage</li>
+<li>Fix searching individual Activity imports</li>
+<li>Update individual Activity import grouping of top level entries</li>
+<li>Fix loading of some imported Activities</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>Support migration of Activity files with unicode &amp; whitespace characters in name</li>
+<li>Performance &amp; stability improvements (large activities &amp; filesets, rollback files on failure, extra logging, retry logic)</li>
+</ul>
+<hr />
+<p>2020-06-17</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-06-17">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-06-17
+iswkudos/kudos-boards:provider-2020-06-17
+iswkudos/kudos-boards:licence-2020-06-17
+iswkudos/kudos-boards:notification-2020-06-17
+iswkudos/kudos-boards:webfront-2020-06-17
+iswkudos/kudos-boards:core-2020-06-17
+iswkudos/kudos-boards:boards-2020-06-17
+iswkudos/kudos-boards:activity-migration-2020-06-17
+</code></pre></div>
+<p>Fixes:</p>
+<ul>
+<li>Show newly created comments in Todo view</li>
+<li>Support Activity URL redirects</li>
+<li>Community Boards loading issue</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>UI control options fix</li>
+<li>Support migration of Activity files with special characters in name</li>
+<li>Support for Activity links</li>
+<li>Protect against system tenant IDs '-Ignore-Organization-ID-' etc</li>
+<li>DB2 support for PEOPLEDB on secondary host</li>
+</ul>
+<hr />
+<p>2020-06-05</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-06-05">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-06-05
+iswkudos/kudos-boards:provider-2020-06-05
+iswkudos/kudos-boards:licence-2020-06-05
+iswkudos/kudos-boards:notification-2020-06-05
+iswkudos/kudos-boards:webfront-2020-06-05
+iswkudos/kudos-boards:core-2020-06-05
+iswkudos/kudos-boards:boards-2020-06-05
+</code></pre></div>
+<p>Please see our <a href="https://blog.huddo.com/weve-got-some-kudos-boards-changes-for-you">Cloud blog</a></p>
+<p>Improvements:</p>
+<ul>
+<li>Loading performance</li>
+<li>Rendering performance</li>
+<li>Reduce size of application</li>
+<li>Node view UI refresh</li>
+</ul>
+<p>New Features:</p>
+<ul>
+<li>Card theme from uploaded images</li>
+<li>Preview uploaded files (images, docx, pdf, html etc)</li>
+<li>Todos Overview - <a href="https://blog.huddo.com/part-3-weve-got-some-kudos-boards-changes-for-you">filtering to selected Boards</a></li>
+<li>Drag and drop Email into Cards (ie from HCL Notes)</li>
+<li>Activity Stream Gadget for Boards - <a href="/boards/connections/widgets-on-prem/">config updates required</a></li>
+<li>Multiple Assignment options for Cards</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Email notifications for invited collaborators</li>
+</ul>
+<hr />
+<p>2020-04-09</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-04-09">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-04-09
+iswkudos/kudos-boards:provider-2020-04-09
+iswkudos/kudos-boards:licence-2020-04-09
+iswkudos/kudos-boards:notification-2020-04-09
+iswkudos/kudos-boards:webfront-2020-04-09
+iswkudos/kudos-boards:core-2020-04-09
+iswkudos/kudos-boards:boards-2020-04-09
+</code></pre></div>
+<p>Fixes:</p>
+<ul>
+<li>Connections OAuth issue - missing scope</li>
+</ul>
+<hr />
+<p>2020-03-06</p>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-03-06">Dockerhub</a></p>
+<p>Images:</p>
+<div class="highlight"><pre><span></span><code>iswkudos/kudos-boards:user-2020-03-06
+iswkudos/kudos-boards:provider-2020-03-06
+iswkudos/kudos-boards:licence-2020-03-06
+iswkudos/kudos-boards:notification-2020-03-06
+iswkudos/kudos-boards:webfront-2020-03-06
+iswkudos/kudos-boards:core-2020-03-06
+iswkudos/kudos-boards:boards-2020-03-06
+</code></pre></div>
+<p>Fixes:</p>
+<ul>
+<li>Updating cards permissions</li>
+<li>Boards list - show completed &amp; deleted</li>
+<li>individual import of Activity with emails</li>
+<li>member issue when moving card into new board</li>
+<li>Archived cards appear twice</li>
+<li>Powered by Huddo image</li>
+</ul>
+<p>Language support:
+<div class="highlight"><pre><span></span><code>  &quot;supported&quot;: {
+    &quot;ar&quot;:[],
+    &quot;bg&quot;:[],
+    &quot;ca&quot;:[],
+    &quot;cs&quot;:[],
+    &quot;da&quot;:[],
+    &quot;de&quot;: [],
+    &quot;el&quot;:[],
+    &quot;en&quot;: [&quot;US&quot;],
+    &quot;es&quot;:[],
+    &quot;fi&quot;:[],
+    &quot;fr&quot;:[],
+    &quot;he&quot;:[],
+    &quot;hr&quot;:[],
+    &quot;hu&quot;:[],
+    &quot;it&quot;:[],
+    &quot;ja&quot;:[],
+    &quot;kk&quot;:[],
+    &quot;ko&quot;:[],
+    &quot;nb&quot;:[],
+    &quot;nl&quot;:[],
+    &quot;pl&quot;:[],
+    &quot;pt&quot;:[],
+    &quot;ro&quot;:[],
+    &quot;ru&quot;:[],
+    &quot;sk&quot;:[],
+    &quot;sl&quot;:[],
+    &quot;sv&quot;:[],
+    &quot;th&quot;:[],
+    &quot;tr&quot;:[],
+    &quot;zh&quot;:[&quot;TW&quot;]
+  },
+    &quot;default&quot;: &quot;en&quot;
+</code></pre></div></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2022-05-20
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../msgraph/teams-on-prem/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Teams App" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Teams App
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../helm-charts/" class="md-footer__link md-footer__link--next" aria-label="Next: Helm Charts" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Helm Charts
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/HuddoApps" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/huddoapps" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/huddoapps" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCiDj7UkYGqm41VUssa1FUrw" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/isw-kudos" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+        <script src="//js.hs-scripts.com/6268180.js"></script>
+      
+    
+  </body>
+</html>
