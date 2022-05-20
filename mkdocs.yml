@@ -211,3 +211,8 @@ extra_css:
 extra_javascript:
   - "//js.hs-scripts.com/6268180.js"
   # - "assets/scripts/banner.js"
+
+plugins:
+  - search
+  - git-revision-date:
+      enabled_if_env: CI

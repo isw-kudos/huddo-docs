@@ -12,9 +12,13 @@ Directly commit any changes to the master branch to publish a new version of the
 
 ## Setting Up Local Dev For Previews
 
-1. Run as Docker image
+1. Run in Docker
 
-       docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+       docker-compose up
+
+       # Previously this was command, but addition of plugins breaks
+       # docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+
 
 4. Open Preview
 
@@ -26,7 +30,6 @@ Directly commit any changes to the master branch to publish a new version of the
 2. Make sure your local repo is up to date
 3. Run this command
 
-
     mkdocs gh-deploy
 
 ## More info
@@ -35,3 +38,7 @@ Directly commit any changes to the master branch to publish a new version of the
 2. Check out the docs for [mkdocs](https://www.mkdocs.org) and [mkdocs-material](https://squidfunk.github.io/mkdocs-material)
 
 test jenkins on master
+
+## Adding Plugins
+
+Make sure you add to the `Dockerfile` and the `ci.yml`
