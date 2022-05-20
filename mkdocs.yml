@@ -6,6 +6,9 @@ repo_url: https://www.huddo.com
 repo_name: huddo.com
 
 extra:
+  analytics:
+    provider: google
+    property: UA-1747668-5
   social:
   - icon: fontawesome/brands/twitter
     link: https://twitter.com/HuddoApps
@@ -17,6 +20,7 @@ extra:
     link: https://www.youtube.com/channel/UCiDj7UkYGqm41VUssa1FUrw
   - icon: fontawesome/brands/github
     link: https://github.com/isw-kudos
+
 nav:
   - Welcome: index.md
   - Huddo Analytics:
@@ -207,7 +211,3 @@ extra_css:
 extra_javascript:
   - "//js.hs-scripts.com/6268180.js"
   # - "assets/scripts/banner.js"
-
-google_analytics:
-  - "UA-1747668-5"
-  - "auto"
