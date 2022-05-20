@@ -1,18 +1,53 @@
+# Connections Header Integration
+
+!!! note
+
+    This step is optional
+
 ![Outcome](/assets/connections/header.png)
 
+---
 
-## Download the Application
-The latest .ear from [here](/assets/connections/kudos-boards-frame.ear)
+## Connections Header via SSO
 
-## Login to WebSphere ISC
-This is usually accessible through a URL like:
+To integrate yours Connections Header into Huddo Boards Cloud please follow these steps:
 
-    https://[DEPLOY_MANAGER_ALIAS]:9043/ibm/console/logon.jsp
+1. Reverse Proxy Config
 
-![example](/assets/connections/isc.png)
+    Please follow the instructions as part of the [HTTP Proxy config](/boards/connections/httpd/#connections-sso-header-config).
 
+1. Enable in Boards
 
-## Create Config
+    Open the Boards admin page, select your `Organisation`, and then the `Connections` client
+
+    ![example](/assets/connections/admin-client.png)
+
+    Tick the checkbox for `Load Connections Header via SSO` and click `Save`
+
+    ![example](/assets/connections/header-sso.png)
+
+    Once you reload the page you should see the Connections header!
+
+---
+
+## iFrame App (Deprecated)
+
+!!! warning
+    
+    This option is no longer recommended.
+
+1. Download the Application
+
+    The latest .ear from [here](/assets/connections/kudos-boards-frame.ear)
+
+1. Login to WebSphere ISC
+
+    This is usually accessible through a URL like:
+
+        https://[DEPLOY_MANAGER_ALIAS]:9043/ibm/console/logon.jsp
+
+    ![example](/assets/connections/isc.png)
+
 1. Open `Environment` -> `WebSphere variables`
 
     Ensure the scope is selected as the `Cell`
@@ -38,8 +73,6 @@ This is usually accessible through a URL like:
 
     ![example](/assets/connections/isc-sync.png)
 
-
-## Install the Header App
 1. Open `Applications` -> `Application Types` -> `WebSphere enterprise applications`
 
     Click `Install`
@@ -80,19 +113,20 @@ This is usually accessible through a URL like:
 
     The application should now be installed
 
-## Start the Header App
-Tick the box next to the app name, and click `Start`
+1. Start the Header App
 
-![example](/assets/connections/header/app9.png)
+    Tick the box next to the app name, and click `Start`
 
-The app should now start. Congratulations, you have installed the app!
+    ![example](/assets/connections/header/app9.png)
 
-![example](/assets/connections/header/app10.png)
+    The app should now start. Congratulations, you have installed the app!
 
-You should now be able to load  app can now be loaded at this path
+    ![example](/assets/connections/header/app10.png)
 
-    https://[CONNECTIONS_URL]/boards
+    You should now be able to load  app can now be loaded at this path
 
-For example:
+        https://[CONNECTIONS_URL]/boards
 
-    https://connections.example.com/boards
+    For example:
+
+        https://connections.example.com/boards
