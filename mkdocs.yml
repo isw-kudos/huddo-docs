@@ -169,6 +169,8 @@ nav:
                 - Replace Group Membership: boards/howto/admin/replace-group-membership.md
                 - Transfer Ownership & Unlink: boards/howto/admin/transfer-ownership-unlink.md
                 - Deactivate Login: boards/howto/admin/deactivate-login.md
+          - Development:
+              - Related Tasks: boards/howto/developing/related-tasks.md
 
   - Huddo Ideas: ideas/howto.md
   - Buzzy:
