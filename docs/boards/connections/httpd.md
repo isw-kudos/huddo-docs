@@ -68,13 +68,26 @@ Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
 Header always set Access-Control-Allow-Headers "x-requested-with, Content-Type, origin, authorization, accept, client-security-token, Cache-Control, Content-Language, Expires, Last-Modified, Pragma, slug, X-Update-Nonce,x-ic-cre-request-origin,x-ic-cre-user,x-lconn-auth,x-shindig-st"
 Header always set Access-Control-Expose-Headers "Content-Disposition, Content-Encoding, Content-Length, Date, Transfer-Encoding, Vary, ETag, Set-Cookie, Location, Connection, X-UA-Compatible, X-LConn-Auth, X-LConn-UserId, Authorization,x-ic-cre-user" env=AccessControlAllowOrigin
 
-# Allow LTPAToken usage from Boards domain
+# Allow LtpaToken usage from Boards domain
 Header edit Set-Cookie ^(.*)$ "$1; Secure; SameSite=None"
 ```
 
+
+You may need to apply similar changes anywhere that the LtpaToken is issued. For example:
+
+- via an `nginx` proxy:
+
+    ```nginx
+    # Allow LtpaToken usage from Boards domain
+    proxy_cookie_flags LtpaToken Secure SameSite=None;
+    proxy_cookie_flags LtpaToken2 Secure SameSite=None;
+    ```
+
+- Verse integration - see [HCL Domino documentation](https://help.hcltechsw.com/domino/12.0.0/admin/conf_samesite_cookie.html)
+
 !!! tip
 
-    Users may need to logout and login to Connections again for the LTPAToken cookie to be re-issued with SSO enabled
+    Users may need to logout and login to Connections again for the LtpaToken cookie to be re-issued with SSO enabled
 
 ---
 
