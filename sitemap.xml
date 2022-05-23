@@ -601,6 +601,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/boards/howto/developing/related-tasks/</loc>
+         <lastmod>2022-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/kubernetes/</loc>
          <lastmod>2022-05-23</lastmod>
          <changefreq>daily</changefreq>
