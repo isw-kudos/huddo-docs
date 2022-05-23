@@ -7,7 +7,7 @@ If you want to learn more about using Connections Customizer, have a read of the
 ## Prerequisites
 
 1. Connections Customizer is setup as [per documentation](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/install/cp_config_customizer_intro.html)
-1. Download [boards-iframe-download-customizer.zip](/assets/connections/boards-iframe-download-customiser.zip)
+1. Download [boards-iframe-download-customizer.zip](/assets/connections/boards-task-integration-customiser.zip)
 
 ---
 
@@ -28,11 +28,11 @@ Our Customizer app has integration points in all the standard Connections Applic
 
 The script file that is injected by Customizer needs to be copied into a directory on the `mw-proxy` server.
 
-1. Extract files from `boards-iframe-download-customiser.zip`
+1. Extract files from `boards-task-integration-customiser.zip`
 
-1. You will need to change the variable `boardsFrameSrc` to the URL (or part there of) of Boards in your environment
+1. You will need to change the variable `boardsIntegrationURL` in the common.js to the URL (or part there of) of Boards in your environment
 
-1. Copy `iframe-download.js` into `/pv-connections/customizations/huddo-boards-iframe-download`
+1. Copy `common.js` & `files.js` into `/pv-connections/customizations/huddo-boards-integrations`
 
 ---
 
@@ -48,7 +48,7 @@ The script file that is injected by Customizer needs to be copied into a directo
 
 1. Open Code Editor.
 
-1. Import or copy the entire contents of `appreg-manifest.json` from `boards-iframe-download-customiser.zip` into the code editor and click `Save`.
+1. Import or copy the entire contents of `appreg-manifest.json` from `boards-task-integration-customiser.zip` into the code editor and click `Save`.
 
    > This saves you from completing all of the form fields for creating the app. You can edit the app now to customize names or directories if necessary.
 

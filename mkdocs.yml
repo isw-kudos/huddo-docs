@@ -76,6 +76,7 @@ nav:
                   - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
                   - Connections Widgets: boards/connections/widgets-hybrid.md
                   - Connections Search Integration: boards/connections/customizer-search-app.md
+                  - Connections Task Integration: boards/connections/customizer-integrations.md
                   - Connections Mobile App: boards/connections/mobile-app-hybrid.md
                   - Connections iFrame Download: boards/connections/customizer-iframe-download-app.md
                   - Security: boards/connections/security.md
