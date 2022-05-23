@@ -19,7 +19,7 @@
     
     
       
-        <title>Connections Integrations using Connections Customizer - Huddo Docs</title>
+        <title>Connections Task Integration - Huddo Docs</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connections Integrations using Connections Customizer
+              Connections Task Integration
             
           </span>
         </div>
@@ -913,12 +913,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -953,12 +955,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -1007,12 +1011,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" checked>
       
       
       
@@ -1033,12 +1039,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3_1" type="checkbox" id="__nav_4_2_3_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3_1" type="checkbox" id="__nav_4_2_3_1" checked>
       
       
       
@@ -1120,6 +1128,82 @@
       <a href="../customizer-search-app/" class="md-nav__link">
         Connections Search Integration
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Connections Task Integration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Connections Task Integration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-reverse-proxy" class="md-nav__link">
+    Configure Reverse Proxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-files-to-customizer-server" class="md-nav__link">
+    Copy Files to Customizer Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#register-connections-integrations-in-customizer" class="md-nav__link">
+    Register Connections Integrations in Customizer
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2992,7 +3076,7 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Connections Customizer is setup as <a href="https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/install/cp_config_customizer_intro.html">per documentation</a></li>
-<li>Download <a href="/assets/connections/boards-iframe-download-customiser.zip">boards-iframe-download-customizer.zip</a></li>
+<li>Download <a href="/assets/connections/boards-task-integration-customiser.zip">boards-iframe-download-customizer.zip</a></li>
 </ol>
 <hr />
 <h2 id="configure-reverse-proxy">Configure Reverse Proxy<a class="headerlink" href="#configure-reverse-proxy" title="Permanent link">&para;</a></h2>
@@ -3007,13 +3091,13 @@
 <p>The script file that is injected by Customizer needs to be copied into a directory on the <code>mw-proxy</code> server.</p>
 <ol>
 <li>
-<p>Extract files from <code>boards-iframe-download-customiser.zip</code></p>
+<p>Extract files from <code>boards-task-integration-customiser.zip</code></p>
 </li>
 <li>
-<p>You will need to change the variable <code>boardsFrameSrc</code> to the URL (or part there of) of Boards in your environment</p>
+<p>You will need to change the variable <code>boardsIntegrationURL</code> in the common.js to the URL (or part there of) of Boards in your environment</p>
 </li>
 <li>
-<p>Copy <code>iframe-download.js</code> into <code>/pv-connections/customizations/huddo-boards-iframe-download</code></p>
+<p>Copy <code>common.js</code> &amp; <code>files.js</code> into <code>/pv-connections/customizations/huddo-boards-integrations</code></p>
 </li>
 </ol>
 <hr />
@@ -3033,7 +3117,7 @@
 <p>Open Code Editor.</p>
 </li>
 <li>
-<p>Import or copy the entire contents of <code>appreg-manifest.json</code> from <code>boards-iframe-download-customiser.zip</code> into the code editor and click <code>Save</code>.</p>
+<p>Import or copy the entire contents of <code>appreg-manifest.json</code> from <code>boards-task-integration-customiser.zip</code> into the code editor and click <code>Save</code>.</p>
 </li>
 </ol>
 <blockquote>
@@ -3047,7 +3131,7 @@
   <small>
     
       Last update:
-      2022-01-27
+      2022-05-23
     
   </small>
 </div>
@@ -3060,6 +3144,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../customizer-search-app/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connections Search Integration" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Connections Search Integration
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../mobile-app-hybrid/" class="md-footer__link md-footer__link--next" aria-label="Next: Connections Mobile App" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Connections Mobile App
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
