@@ -3152,12 +3152,25 @@
 <span class="nb">Header</span><span class="w"> </span>always<span class="w"> </span>set<span class="w"> </span>Access-Control-Allow-Headers<span class="w"> </span><span class="s2">&quot;x-requested-with, Content-Type, origin, authorization, accept, client-security-token, Cache-Control, Content-Language, Expires, Last-Modified, Pragma, slug, X-Update-Nonce,x-ic-cre-request-origin,x-ic-cre-user,x-lconn-auth,x-shindig-st&quot;</span><span class="w"></span>
 <span class="nb">Header</span><span class="w"> </span>always<span class="w"> </span>set<span class="w"> </span>Access-Control-Expose-Headers<span class="w"> </span><span class="s2">&quot;Content-Disposition, Content-Encoding, Content-Length, Date, Transfer-Encoding, Vary, ETag, Set-Cookie, Location, Connection, X-UA-Compatible, X-LConn-Auth, X-LConn-UserId, Authorization,x-ic-cre-user&quot;</span><span class="w"> </span>env=AccessControlAllowOrigin<span class="w"></span>
 
-<span class="c"># Allow LTPAToken usage from Boards domain</span><span class="w"></span>
+<span class="c"># Allow LtpaToken usage from Boards domain</span><span class="w"></span>
 <span class="nb">Header</span><span class="w"> </span>edit<span class="w"> </span>Set-Cookie<span class="w"> </span>^(.*)$<span class="w"> </span><span class="s2">&quot;$1; Secure; SameSite=None&quot;</span><span class="w"></span>
 </code></pre></div>
+<p>You may need to apply similar changes anywhere that the LtpaToken is issued. For example:</p>
+<ul>
+<li>
+<p>via an <code>nginx</code> proxy:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Allow LtpaToken usage from Boards domain</span>
+<span class="k">proxy_cookie_flags</span><span class="w"> </span><span class="s">LtpaToken</span><span class="w"> </span><span class="s">Secure</span><span class="w"> </span><span class="s">SameSite=None</span><span class="p">;</span><span class="w"></span>
+<span class="k">proxy_cookie_flags</span><span class="w"> </span><span class="s">LtpaToken2</span><span class="w"> </span><span class="s">Secure</span><span class="w"> </span><span class="s">SameSite=None</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p>Verse integration - see <a href="https://help.hcltechsw.com/domino/12.0.0/admin/conf_samesite_cookie.html">HCL Domino documentation</a></p>
+</li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Users may need to logout and login to Connections again for the LTPAToken cookie to be re-issued with SSO enabled</p>
+<p>Users may need to logout and login to Connections again for the LtpaToken cookie to be re-issued with SSO enabled</p>
 </div>
 <hr />
 <h3 id="b-existing-hcl-connections-domain">b) Existing HCL Connections domain<a class="headerlink" href="#b-existing-hcl-connections-domain" title="Permanent link">&para;</a></h3>
@@ -3188,7 +3201,7 @@
   <small>
     
       Last update:
-      2022-05-20
+      2022-05-23
     
   </small>
 </div>
