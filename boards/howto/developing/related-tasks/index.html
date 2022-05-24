@@ -3035,8 +3035,8 @@
 - <code>&lt;boardsPrimaryLink&gt;</code> is the URL of the page you want to show tasks related to, fully escaped</p>
 <p>e.g. <code>https://boards.huddo.com/app/linkedcards?title=Card%20Name&amp;url=https%3A%2F%2Fexample.com</code></p>
 <p>There is also a message sent with the current number of related tasks if you wish to display this.</p>
-<p>The event data is <code>huddo-task-count</code> </p>
-<p>e.g. </p>
+<p>The event data is in the format <code>huddo-task-count=0</code> </p>
+<p>Example for JavaScript: </p>
 <div class="highlight"><pre><span></span><code>window.addEventListener(&quot;message&quot;, (event) =&gt; {
 
     if(event.origin !== &lt;boardsURL&gt;)
