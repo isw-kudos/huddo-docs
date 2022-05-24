@@ -15,9 +15,9 @@ e.g. `https://boards.huddo.com/app/linkedcards?title=Card%20Name&url=https%3A%2F
 
 There is also a message sent with the current number of related tasks if you wish to display this.
 
-The event data is `huddo-task-count` 
+The event data is in the format `huddo-task-count=0` 
 
-e.g. 
+Example for JavaScript: 
 
     window.addEventListener("message", (event) => {
         
