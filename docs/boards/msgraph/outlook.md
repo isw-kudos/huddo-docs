@@ -32,3 +32,7 @@
       You should now see the `Huddo Boards` option in the menu of an email
 
       ![example](/assets/msgraph/outlook7.png)
+
+### Outlook Desktop Extra Steps
+
+In order for our plugin to work in the desktop version of Outlook the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) need to been installed.
