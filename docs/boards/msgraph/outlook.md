@@ -36,5 +36,3 @@
       You should now see the `Huddo Boards` option in the menu of an email
 
       ![example](/assets/msgraph/outlook7.png)
-
-### Outlook Desktop Extra Steps
