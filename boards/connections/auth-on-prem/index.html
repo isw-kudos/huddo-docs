@@ -1545,6 +1545,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configure-auto-auth" class="md-nav__link">
+    Configure Auto Auth
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3053,6 +3060,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configure-auto-auth" class="md-nav__link">
+    Configure Auto Auth
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3102,35 +3116,34 @@ CONNECTIONS_CLIENT_ID=huddoboards
 CONNECTIONS_CLIENT_SECRET=[VALUE_PRINTED]
 </code></pre></div>
 </li>
-<li>
-<p>Auto Authorize</p>
-<blockquote>
-<p><strong>Note:</strong> this step is optional but recommended and can be done at any time.</p>
-</blockquote>
+</ol>
+<h2 id="configure-auto-auth">Configure Auto Auth<a class="headerlink" href="#configure-auto-auth" title="Permanent link">&para;</a></h2>
 <p>Steps to configure the Huddo Boards application for auto-authorize (also <a href="https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_registeroauthclientwprovider.html">documented here</a>)</p>
-<ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>this step is optional but recommended and can be done at any time.</p>
+</div>
+<ol>
 <li>
 <p>Add the new line to the following section in <code>[cellname]/oauth20/connectionsProvider.xml</code></p>
+<blockquote>
+<p>Note: keep any existing values and add the new line for <code>huddoboards</code></p>
+</blockquote>
 <div class="highlight"><pre><span></span><code>&lt;parameter name=&quot;oauth20.autoauthorize.clients&quot; type=&quot;ws&quot; customizable=&quot;true&quot;&gt;
-  &lt;value&gt;huddoboards&lt;/value&gt;
+    &lt;value&gt;huddoboards&lt;/value&gt;
 &lt;/parameter&gt;
 </code></pre></div>
-<blockquote>
-<p><strong> Note:</strong> keep any existing values and add the new line for <code>huddoboards</code></p>
-</blockquote>
 </li>
 <li>
 <p>Recreate the provider via this command:</p>
+<blockquote>
+<p>Note: update the wsadmin credentials and the <code>[PATH_TO_CONFIG_FILE]</code></p>
+</blockquote>
 <div class="highlight"><pre><span></span><code>./wsadmin.sh -lang jython -conntype SOAP -c &quot;print AdminTask.createOAuthProvider(&#39;[-providerName connectionsProvider -fileName  [PATH_TO_CONFIG_FILE]/oauth20/connectionsProvider.xml]&#39;)&quot; -user connectionsadmin -password passw0rd
 </code></pre></div>
-<blockquote>
-<p><strong>Note:</strong> update the wsadmin credentials and the <code>[PATH_TO_CONFIG_FILE]</code></p>
-</blockquote>
 </li>
 <li>
 <p>Restart the WebSphere servers</p>
-</li>
-</ul>
 </li>
 </ol>
 
@@ -3139,7 +3152,7 @@ CONNECTIONS_CLIENT_SECRET=[VALUE_PRINTED]
   <small>
     
       Last update:
-      2020-12-17
+      2022-06-02
     
   </small>
 </div>

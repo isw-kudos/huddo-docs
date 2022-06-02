@@ -3102,18 +3102,27 @@
 
 
 <h1 id="hcl-connections-widget-setup">HCL Connections Widget Setup<a class="headerlink" href="#hcl-connections-widget-setup" title="Permanent link">&para;</a></h1>
-<p>Basic instructions for adding Huddo Boards Hybrid widgets into HCL Connections on-premise environments</p>
+<p>Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments</p>
 <hr />
 <h3 id="community-widget">Community Widget<a class="headerlink" href="#community-widget" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Check out the widgets-config.xml file.</p>
+<p>SSH to the WAS Deployment Manager</p>
+</li>
+<li>
+<p>Start <code>wsadmin</code></p>
+<div class="highlight"><pre><span></span><code>cd /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin
+./wsadmin.sh -lang jython -user wasadmin -password &lt;password-here&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Check out the <code>widgets-config.xml</code> file.</p>
 <div class="highlight"><pre><span></span><code>execfile(&quot;profilesAdmin.py&quot;)
 ProfilesConfigService.checkOutWidgetConfig(&quot;/LCCheckedOut&quot;, AdminControl.getCell())
 </code></pre></div>
 </li>
 <li>
-<p>Edit the widgets-config.xml file.</p>
+<p>Edit the <code>widgets-config.xml</code> file.</p>
 <p>Find the resource element with the type of community, e.g. <code>&lt;resource ... type="community" ... &gt;</code>, then under <code>&lt;widgets&gt;</code>, then within <code>&lt;definitions&gt;</code> add the following:</p>
 <div class="highlight"><pre><span></span><code>&lt;!-- Huddo Boards --&gt;
 &lt;widgetDef defId=&quot;HuddoBoards&quot; modes=&quot;view fullpage&quot; url=&quot;{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml&quot; themes=&quot;wpthemeNarrow wpthemeWide wpthemeBanner&quot; uniqueInstance=&quot;true&quot;&gt;
@@ -3128,7 +3137,7 @@ ProfilesConfigService.checkOutWidgetConfig(&quot;/LCCheckedOut&quot;, AdminContr
 </code></pre></div>
 </li>
 <li>
-<p>Check in the widgets-config.xml file.</p>
+<p>Check in the <code>widgets-config.xml</code> file.</p>
 <div class="highlight"><pre><span></span><code>ProfilesConfigService.checkInWidgetConfig()
 </code></pre></div>
 </li>
@@ -3253,7 +3262,7 @@ Required for HCL Connections 6.0 CR1 onwards:
   <small>
     
       Last update:
-      2022-05-18
+      2022-06-02
     
   </small>
 </div>
