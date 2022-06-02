@@ -1,5 +1,9 @@
 ## Add Huddo Boards plugin
 
+!!! note
+
+      Desktop Outlook requires the [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/).
+
 1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/Settings/IntegratedApps)
 
       Click `Settings` -> `Integrated apps` -> `Upload custom apps`
