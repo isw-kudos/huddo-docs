@@ -1,17 +1,24 @@
 # HCL Connections Widget Setup
 
-Basic instructions for adding Huddo Boards Hybrid widgets into HCL Connections on-premise environments
+Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
 ---
 
 ### Community Widget
 
-1.  Check out the widgets-config.xml file.
+1. SSH to the WAS Deployment Manager
+
+1. Start `wsadmin`
+
+        cd /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin
+        ./wsadmin.sh -lang jython -user wasadmin -password <password-here>
+
+1.  Check out the `widgets-config.xml` file.
 
         execfile("profilesAdmin.py")
         ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
 
-1.  Edit the widgets-config.xml file.
+1.  Edit the `widgets-config.xml` file.
 
     Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
 
@@ -26,7 +33,7 @@ Basic instructions for adding Huddo Boards Hybrid widgets into HCL Connections o
         </widgetDef>
         <!-- END Huddo Boards -->
 
-1.  Check in the widgets-config.xml file.
+1.  Check in the `widgets-config.xml` file.
 
         ProfilesConfigService.checkInWidgetConfig()
 
