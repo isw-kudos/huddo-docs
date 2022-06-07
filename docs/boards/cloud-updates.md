@@ -4,6 +4,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2022
 
+### June
+
+2022-06-07
+
+- Fix for readers not being able to complete cards
+- Fix for dependencies in Todos view
+
 ### May
 
 2022-05-20
