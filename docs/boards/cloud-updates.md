@@ -11,6 +11,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 - Fix for card toolbar on smaller resolutions
 - Community widget now works is user has no email
 - Highlights widget fix for opening fullpage
+- Fix for visibility of Owners Only group Boards
 
 2022-06-07
 
