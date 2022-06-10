@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2022-06-10
+
+- Fix for card toolbar on smaller resolutions
+- Community widget now works is user has no email
+- Highlights widget fix for opening fullpage
+
 2022-06-07
 
 - Fix for readers not being able to complete cards
