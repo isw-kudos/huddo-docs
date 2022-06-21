@@ -6,10 +6,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2022-06-21
+
+- Fix for viewing user presence
+- Fix for viewing card title when user presence is also displayed
+- Fix for 'Commented on' recent updates not syncing in real-time
+- Fix for displaying changes made in Activity View
+- Updated Recent Boards in side toolbar
+- Fix for auth loop when using Connections Header
+
 2022-06-10
 
 - Fix for card toolbar on smaller resolutions
-- Community widget now works is user has no email
+- Community widget now works if user has no email
 - Highlights widget fix for opening fullpage
 - Fix for visibility of Owners Only group Boards
 
