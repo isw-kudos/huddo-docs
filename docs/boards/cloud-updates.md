@@ -6,6 +6,14 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2022-06-23
+
+- Print feature for Board View
+- Fix for loading ToDo View with deleted groups
+- Fix for 'View' by 'Groups'
+- Fix for description not saving in certain window changing scenarios
+- Fix for character encoding in update streams
+
 2022-06-21
 
 - Fix for viewing user presence
