@@ -42,7 +42,6 @@ Improvements:
 Fixes:
 
 - Styling of user presence when multiple
-- Readers not being able to complete cards
 - Card toolbar on smaller resolutions
 - Community widget now works if user has no email
 - 'Commented on' recent updates not syncing in real-time
