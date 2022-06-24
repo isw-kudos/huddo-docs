@@ -24,6 +24,36 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-06-24
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-06-24)
+
+Features:
+
+- [Dependencies feature](/boards/howto/dependencies/)
+
+Improvements:
+
+- Printing in Board View
+- Highlights widget opening fullpage
+- Updated Recent Boards in side toolbar
+- Viewing user presence
+- Viewing card title when user presence is also displayed
+- Visibility of Owners Only group Boards
+
+Fixes:
+
+- Readers not being able to complete cards
+- Card toolbar on smaller resolutions
+- Community widget now works if user has no email
+- 'Commented on' recent updates not syncing in real-time
+- Displaying changes made in Activity View
+- Auth loop when using Connections Header
+- Loading ToDo View with deleted groups
+- 'View' by 'Groups' when a group has been deleted
+- Description not saving in certain window changing scenarios
+- Character encoding in update streams
+
+---
 #### 2022-05-13
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-05-13)
 
