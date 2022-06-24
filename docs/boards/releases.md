@@ -41,7 +41,7 @@ Improvements:
 
 Fixes:
 
-- Styling of usser presence when multiple
+- Styling of user presence when multiple
 - Readers not being able to complete cards
 - Card toolbar on smaller resolutions
 - Community widget now works if user has no email
