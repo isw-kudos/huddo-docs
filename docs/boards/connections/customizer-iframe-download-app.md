@@ -6,7 +6,7 @@ If you want to learn more about using Connections Customizer, have a read of the
 
 ## Prerequisites
 
-1. Connections Customizer is setup as [per documentation](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/install/cp_config_customizer_intro.html)
+1. Connections Customizer is setup as [per documentation](https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_intro.html)
 1. Download [boards-iframe-download-customizer.zip](/assets/connections/boards-iframe-download-customiser.zip)
 
 ---
