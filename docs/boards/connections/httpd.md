@@ -93,7 +93,7 @@ You may need to apply similar changes anywhere that the LtpaToken is issued. For
 
 ### b) Existing HCL Connections domain
 
-> The following configuration should be set when Huddo Boards is deployed at a context root under the existing HCL Connections domain. a new domain.
+> The following configuration should be set when Huddo Boards is deployed at a context root under the existing HCL Connections domain.
 
 ```apache
 <VirtualHost *:443>
