@@ -12,7 +12,7 @@ In order for Huddo Boards to authenticate with your Connections environment, you
 
         ssh root@[DEPLOY_MANAGER_ALIAS]
 
-1. Start `wsadmin` (substiture your credentials)
+1. Start `wsadmin` (substitute your credentials)
 
         cd /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/
         ./wsadmin.sh -lang jython -username connectionsadmin -password passw0rd
