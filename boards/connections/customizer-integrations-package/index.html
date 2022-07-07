@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1128,7 +1133,7 @@
   
     <li class="md-nav__item">
       <a href="../customizer-integrations/" class="md-nav__link">
-        Connections Task Integration
+        Connections Task Integrations
       </a>
     </li>
   
@@ -1358,14 +1363,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_3">
-          Boards Docker
+          Boards Self-Hosted
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Boards Docker" data-md-level="2">
+      <nav class="md-nav" aria-label="Boards Self-Hosted" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
-          Boards Docker
+          Boards Self-Hosted
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2991,6 +2996,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3005,17 +3032,56 @@
 
   <h1>Customizer integrations package</h1>
 
-<p>Boards adds multiple features to other HCL Connections applications via Connections Customizer. These include: 
-- Related Tasks Pane <!-- INCLUDE LINKS TO USER DOCS -->
-- Share to Boards
-- Include Boards in Search</p>
+<p>Boards adds multiple features to other HCL Connections applications via Connections Customizer. These include: </p>
+<ul>
+<li>Related Tasks Pane <!-- INCLUDE LINKS TO USER DOCS --></li>
+<li>Share to Boards <sup><em>Connections 8</em></sup></li>
+<li>Boards in Search Results</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These features require your Connections envirionment to have Customiser installed. If you're new to Connections Customizer, here's a <a href="https://www.youtube.com/watch?v=CvlpjIE-3TQ">great video introduction</a> and the <a href="https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_intro.html">install documentation</a>.</p>
+</div>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Check the rules in your HTTP proxy that direct traffic to <code>mw-proxy</code> (customizer). See the <a href="https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_setup_nginx.html#:~:text=required%20Customizer%20URLs">relevant section from the install documentation</a>.</p>
+<p>Huddo Boards features appear on every page in Connections where the Connections header appears. Your rules should match every URL that appears in the browser address bar. As mentioned in the documentation above, you may want to avoid mathching some URLs (like API requests) for better performance.</p>
+<p>This example works well. If you have a suggestion for improvement, please <a href="https://github.com/isw-kudos/huddo-docs/issues/new?labels=hcl+connections,documentation">open a GitHub issue</a>.
+<div class="highlight"><pre><span></span><code>files/customizer|files/app|communities/service/html|forums/html|search/web|homepage/web|social/home|mycontacts|wikis/home|blogs|news|activities/service/html|profiles/html|viewer
+</code></pre></div></p>
+</li>
+<li>
+<p>Download and extract <a href="https://docs.huddo.com/boards/connections/boards-extensions.tgz"><code>boards-extensions.tgz</code></a> package to the <code>/pv-connections/customizations/boards-extensions</code> directory on your <code>mw-proxy</code> server.
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /pv-connections/customizations
+mkdir -p boards-extensions
+curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz <span class="p">|</span> tar xvf - -C ./boards-extensions
+</code></pre></div></p>
+</li>
+<li>
+<p><em>If you have your own Boards deployment</em>, replace <code>https://boards.huddo.com</code> with your Boards URL (e.g. <code>https://connections.company.com/boards</code>) in settings files. 
+   <div class="highlight"><pre><span></span><code>sed <span class="s1">&#39;s|https://boards.huddo.com|https://connections.company.com/boards|g&#39;</span> connectionsShare.settings.js <span class="p">|</span> tee connectionsShare.settings.js
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the app to Connections App Registry</p>
+<ul>
+<li>Go to the Connections Customizer App Registry, e.g <code>https://connections.example.com/appreg</code></li>
+<li>Click <img alt="&quot;New App&quot; button" src="../appreg-newapp.png" /></li>
+<li>Open <em>Code Editor</em>.</li>
+<li>Import <code>connections-share-manifest.json</code> from <code>boards-extensions.tgz</code> into the code editor and click <code>Save</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<p>Open a HCL Connections page and click the <em>Huddo Boards</em> option in the Share menu. A dialog for creating a card based on the current page should open. <img alt="Share with Boards" src="../cnx8-share-menu.gif" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-07-01
+      2022-07-07
     
   </small>
 </div>
