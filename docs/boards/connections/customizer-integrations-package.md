@@ -21,7 +21,7 @@ Boards adds multiple features to other HCL Connections applications via Connecti
 ```bash
 cd /pv-connections/customizations
 mkdir -p boards-extensions
-curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz | tar xvf - -C ./boards-extensions
+curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz | tar zxvf - -C ./boards-extensions
 ```
 
 1. _If you have your own Boards deployment_, replace `https://boards.huddo.com` with your Boards URL (e.g. `https://connections.company.com/boards`) in settings files. 
