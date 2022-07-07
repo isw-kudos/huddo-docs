@@ -4,12 +4,6 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2022
 
-### July
-
-2022-07-07
-
-- Compatibility with private Teams channels
-
 ### June
 
 2022-06-23
