@@ -61,9 +61,9 @@ When requesting a licence you will need to supply:
 - For limited (demo) licences: The community UUIDs that will be allowed to migrate their files.
 
 After receiving your key, you will need to create `name space bindings`
-for CMM Migrator using the _exact_ values provided by the Huddo team.
+for CCM Migrator using the _exact_ values provided by the Huddo team.
 _Please ensure you use the exact case and spelling for the name space bindings as stated below._<br>
-All licenced installs require `iswCCMLicenceKey`.<br>
+All licensed installs require `iswCCMLicenceKey`.<br>
 Limited licences also require `iswCCMLicenceCommunities`.
 
 | Binding identifier +<br> Name in name space... | String value |

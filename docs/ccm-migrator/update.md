@@ -2,7 +2,7 @@
 
 ## Updating the Application
 
-This part of the document only applies if you have been provided with a new
+This part of the documentation only applies if you have been provided with a new
 version of the application for the purpose of fixing bugs or adding features.
 
 Log into the ISC for your HCL Connections environment.
@@ -29,12 +29,12 @@ Depending on your WebSphere configuration, the nodes may synchronize immediately
 
 After updating the application and synchronizing nodes, and before using the application again, any users of the application should clear their web browser cache to ensure that changes to client-side files take effect. It is only necessary to clear the cache or "temporary internet files". Clearing cookies or logins is unnecessary.
 
-## Update Licence
+## Updating the Licence
 
 After receiving your new key, you will need to update the `name space bindings`
-for CMM Migrator using the _exact_ values provided by the Huddo team.
+for CCM Migrator using the _exact_ values provided by the Huddo team.
 _Please ensure you use the exact case and spelling for the name space bindings as stated below._<br>
-All licenced installs require `iswCCMLicenceKey`.<br>
+All licensed installs require `iswCCMLicenceKey`.<br>
 Limited licences also require `iswCCMLicenceCommunities`.
 
 | Binding identifier +<br> Name in name space... | String value |
