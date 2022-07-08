@@ -1,5 +1,34 @@
 # Update
 
+## Updating the Application
+
+This part of the document only applies if you have been provided with a new
+version of the application for the purpose of fixing bugs or adding features.
+
+Log into the ISC for your HCL Connections environment.
+
+Navigate to Applications \ Application Types \ WebSphere enterprise applications.
+
+Select the "isw-connections-ccm" application from the list, and click "Update".
+
+![Updating - step 1](/assets/ccm-migrator/update01.png)
+
+Using the default option ("Replace the entire application"), select the new "isw-connections-ccm.ear" file, and click "Next".
+
+![Updating - step 2](/assets/ccm-migrator/update02.png)
+
+Click "Next" at the bottom of each subsequent screen, leaving all options at the default, then click "Finish" upon reaching the "Step 3: Summary" stage.
+
+![Updating - step 3](/assets/ccm-migrator/update03.png)
+
+After clicking "Finish", there will be some delay while the next screen fills in. Click the "Save" link when it appears.
+
+![Updating - step 4](/assets/ccm-migrator/update04.png)
+
+Depending on your WebSphere configuration, the nodes may synchronize immediately or there may be some delay (typically up to 1 minute) while they synchronize in the background. Changes to the application only take effect after nodes have synchronized.
+
+After updating the application and synchronizing nodes, and before using the application again, any users of the application should clear their web browser cache to ensure that changes to client-side files take effect. It is only necessary to clear the cache or "temporary internet files". Clearing cookies or logins is unnecessary.
+
 ## Update Licence
 
 After receiving your new key, you will need to update the `name space bindings`
