@@ -191,6 +191,7 @@ nav:
 
   - CCM Migrator:
     - Installation: ccm-migrator/install.md
+    - Update: ccm-migrator/update.md
     - Usage: ccm-migrator/usage.md
 
   - log4j: log4j.md
