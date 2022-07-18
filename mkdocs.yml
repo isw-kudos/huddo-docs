@@ -70,20 +70,20 @@ nav:
           - Overview: boards/cloud.md
           - Updates: boards/cloud-updates.md
           - Integrations:
-              - HCL Connections On-Prem:
+              - HCL Connections:
                   # TODO Remove 'Connections' from these sub-headings
                   - Authentication: boards/connections/auth-hybrid.md
-                  - Connections Header: boards/connections/header-hybrid.md
-                  - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
-                  - Connections Widgets: boards/connections/widgets-hybrid.md
-                  - Customizer Integrations: boards/connections/customizer-integrations-package.md
+                  - Header: boards/connections/header-hybrid.md
+                  - Apps Menu: boards/connections/apps-menu-hybrid.md
+                  - Widgets: boards/connections/widgets-hybrid.md
+                  - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   # TODO Move search in to Customizer Integrations
-                  - Connections Search Integration: boards/connections/customizer-search-app.md
+                  - Search Integration: boards/connections/customizer-search-app.md
                   # TODO Merge tasks in to Customizer Integrations
-                  - Connections Task Integrations: boards/connections/customizer-integrations.md
-                  - Connections Mobile App: boards/connections/mobile-app-hybrid.md
+                  - Task Integrations: boards/connections/customizer-integrations.md
+                  - Mobile App: boards/connections/mobile-app-hybrid.md
                   # TODO Merge in to Communities Widget - Explain what it does!!
-                  - Connections iFrame Download: boards/connections/customizer-iframe-download-app.md
+                  - iFrame Download: boards/connections/customizer-iframe-download-app.md
                   - Security: boards/connections/security.md
               - HCL Verse: boards/verse/addin-hybrid.md
               - Office 365 for Business:
@@ -100,15 +100,15 @@ nav:
           - Standalone: boards/standalone.md
           - Common Env: boards/env/common.md
           - Integrations:
-              - HCL Connections On-Prem:
+              - HCL Connections:
                   - Activity Migration: boards/connections/migration.md
                   - Authentication: boards/connections/auth-on-prem.md
                   - Keycloak Authentication: boards/connections/keycloak.md
-                  - Connections Header: boards/connections/header-on-prem.md
-                  - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
-                  - Connections Widgets: boards/connections/widgets-on-prem.md
-                  - Connections Mobile App: boards/connections/mobile-app-on-prem.md
-                  - Customizer Integrations: boards/connections/customizer-integrations-package.md
+                  - Header: boards/connections/header-on-prem.md
+                  - Apps Menu: boards/connections/apps-menu-on-prem.md
+                  - Widgets: boards/connections/widgets-on-prem.md
+                  - Mobile App: boards/connections/mobile-app-on-prem.md
+                  - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Web Server Config: boards/connections/httpd.md
               - HCL Verse: boards/verse/addin-on-prem.md
               - Office 365:

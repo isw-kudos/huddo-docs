@@ -10,7 +10,7 @@ Boards adds multiple features to other HCL Connections applications via Connecti
 ## Installation
 1. Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer). See the [relevant section from the install documentation](https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_setup_nginx.html#:~:text=required%20Customizer%20URLs).
 
-    Huddo Boards features appear on every page in Connections where the Connections header appears. Your rules should match every URL that appears in the browser address bar. As mentioned in the documentation above, you may want to avoid mathching some URLs (like API requests) for better performance.
+    Huddo Boards features appear on every page in Connections where the Connections header appears. Your rules should match every URL that appears in the browser address bar. As mentioned in the documentation above, you may want to avoid matching some URLs (like API requests) for better performance.
 
     This example works well. If you have a suggestion for improvement, please [open a GitHub issue](https://github.com/isw-kudos/huddo-docs/issues/new?labels=hcl+connections,documentation).
     ```
@@ -18,11 +18,11 @@ Boards adds multiple features to other HCL Connections applications via Connecti
     ```
 
 1. Download and extract [`boards-extensions.tgz`](https://docs.huddo.com/boards/connections/boards-extensions.tgz) package to the `/pv-connections/customizations/boards-extensions` directory on your `mw-proxy` server.
-```bash
-cd /pv-connections/customizations
-mkdir -p boards-extensions
-curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz | tar zxvf - -C ./boards-extensions
-```
+    ```bash
+    cd /pv-connections/customizations
+    mkdir -p boards-extensions
+    curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz | tar zxvf - -C ./boards-extensions
+    ```
 
 1. _If you have your own Boards deployment_, replace `https://boards.huddo.com` with your Boards URL (e.g. `https://connections.example.com/boards`) in settings files. 
    ```bash
@@ -43,7 +43,9 @@ curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz | tar zx
 
 
 ## Testing
-Open a HCL Connections page and click the _Huddo Boards_ option in the Share menu. A dialog for creating a card based on the current page should open. ![Share with Boards](./cnx8-share-menu.gif)
+Open a HCL Connections page and click the _Huddo Boards_ option in the Share menu. A dialog for creating a card based on the current page should open. 
+
+![Share with Boards](./cnx8-share-menu.gif)
 
 ## Updating
 You can see when this package was last updated [here](https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz). Open `https://connections.example.com/files/customizer/boards-extensions/VERSION` to see your version.
