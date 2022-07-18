@@ -316,11 +316,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/connections/customizer-integrations-package/</loc>
-         <lastmod>2022-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/boards/connections/customizer-integrations/</loc>
          <lastmod>2022-07-18</lastmod>
          <changefreq>daily</changefreq>
@@ -377,6 +372,11 @@
     </url>
     <url>
          <loc>https://docs.huddo.com/boards/connections/widgets-on-prem/</loc>
+         <lastmod>2022-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/connections/customizer/customizer-integrations-package/</loc>
          <lastmod>2022-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
