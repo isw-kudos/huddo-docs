@@ -24,7 +24,7 @@ Boards adds multiple features to other HCL Connections applications via Connecti
     curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz | tar zxvf - -C ./boards-extensions
     ```
 
-1. _If you have your own Boards deployment_, replace `https://boards.huddo.com` with your Boards URL (e.g. `https://connections.example.com/boards`) in settings files. 
+1. _If you have your own Boards deployment_, replace `https://boards.huddo.com` with your Boards URL (e.g. `https://connections.example.com/boards`) in the settings file. 
    ```bash
    sed -i.original 's|https://boards.huddo.com|https://connections.example.com/boards|g' settings.js
    ```

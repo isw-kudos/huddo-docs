@@ -39,6 +39,8 @@ Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
 1.  Restart the `Communities` application via the ISC
 
+1. *Optional*. [Install the extensions for Connections Customizer](./customizer/customizer-integrations-package.md). This includes a fix for the Community Widget that enables attachments to be downloaded as well as multiple new integrations for Connections.
+
 ---
 
 ### Activity Stream widget
