@@ -55,3 +55,20 @@ To update, run
 on your `mw-proxy` server.
 
 Then, copy the updated https://connections.example.com/files/customizer/boards-extensions/manifest.json and overwrite the existing code in the Connections Customizer App Registry.
+
+![App Editor](/assets/connections/appreg2.png)
+
+<!-- ## Testing
+
+TODO: Write user documentation for each of the integrations and refer to them for testing.
+
+
+1. Use the Search Sidebar to search for content in Boards from different paths in Connections (e.g. homepage, profiles, activities, forums)
+
+![Search Sidebar](/assets/connections/search_panel.png)
+
+1. Use advanced search (`/search/web/jsp/advancedSearch.jsp`) to see Boards results integrated in the full search results page.
+
+![Advanced Search Standalone Section](/assets/connections/search_main2.png)
+
+    > Note: you need to have content in Boards to see any results. -->
