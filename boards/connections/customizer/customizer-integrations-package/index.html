@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#customizer-integrations" class="md-skip">
           Skip to content
         </a>
       
@@ -1586,53 +1586,12 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Customizer Integrations
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Customizer Integrations
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    Testing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating" class="md-nav__link">
-    Updating
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3068,35 +3027,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    Testing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating" class="md-nav__link">
-    Updating
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -3110,8 +3042,7 @@
                 
 
 
-  <h1>Customizer Integrations</h1>
-
+<h1 id="customizer-integrations">Customizer Integrations<a class="headerlink" href="#customizer-integrations" title="Permanent link">&para;</a></h1>
 <p>Boards adds multiple features to other HCL Connections applications via Connections Customizer. These include: </p>
 <ul>
 <li>Related Tasks Pane <!-- INCLUDE LINKS TO USER DOCS --></li>
@@ -3122,20 +3053,20 @@
 <p class="admonition-title">Note</p>
 <p>These features require your Connections envirionment to have Customiser installed. If you're new to Connections Customizer, here's a <a href="https://www.youtube.com/watch?v=CvlpjIE-3TQ">great video introduction</a> and the <a href="https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_intro.html">install documentation</a>.</p>
 </div>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
+<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<h2 id="customizer-reverse-proxy-configuration">Customizer Reverse Proxy Configuration<a class="headerlink" href="#customizer-reverse-proxy-configuration" title="Permanent link">&para;</a></h2>
 <p>Check the rules in your HTTP proxy that direct traffic to <code>mw-proxy</code> (customizer). See the <a href="https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_setup_nginx.html#:~:text=required%20Customizer%20URLs">relevant section from the install documentation</a>.</p>
 <p>Huddo Boards features appear on every page in Connections where the Connections header appears. Your rules should match every URL that appears in the browser address bar. As mentioned in the documentation above, you may want to avoid matching some URLs (like API requests) for better performance.</p>
 <p>This example works well. If you have a suggestion for improvement, please <a href="https://github.com/isw-kudos/huddo-docs/issues/new?labels=hcl+connections,documentation">open a GitHub issue</a>.
-<div class="highlight"><pre><span></span><code>files/customizer|files/app|communities/service/html|forums/html|search/web|homepage/web|social/home|mycontacts|wikis/home|blogs|news|activities/service/html|profiles/html|viewer
+  <div class="highlight"><pre><span></span><code>files/customizer|files/app|communities/service/html|forums/html|search/web|homepage/web|social/home|mycontacts|wikis/home|blogs|news|activities/service/html|profiles/html|viewer
 </code></pre></div></p>
-</li>
+<h2 id="add-resources-to-mw-proxy-server">Add Resources to <code>mw-proxy</code> Server<a class="headerlink" href="#add-resources-to-mw-proxy-server" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Get a terminal session to your <code>mw-proxy</code> server. e.g. via <code>ssh</code></li>
 <li>
-<p>Download and extract <a href="https://docs.huddo.com/boards/connections/boards-extensions.tgz"><code>boards-extensions.tgz</code></a> package to the <code>/pv-connections/customizations/boards-extensions</code> directory on your <code>mw-proxy</code> server.
-    <div class="highlight"><pre><span></span><code><span class="nb">cd</span> /pv-connections/customizations
-mkdir -p boards-extensions
-curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz <span class="p">|</span> tar zxvf - -C ./boards-extensions
+<p>Download and extract <a href="../boards-extensions.tgz"><code>boards-extensions.tgz</code></a> package to the <code>/pv-connections/customizations/boards-extensions</code> directory on your <code>mw-proxy</code> server.
+    <div class="highlight"><pre><span></span><code>mkdir -p /pv-connections/customizations/boards-extensions
+curl -s https://docs.huddo.com/boards/connections/customizer/boards-extensions.tgz <span class="p">|</span> tar zxvf - -C /pv-connections/customizations/boards-extensions
 </code></pre></div></p>
 </li>
 <li>
@@ -3143,39 +3074,32 @@ curl -s https://docs.huddo.com/boards/connections/boards-extensions.tgz <span cl
    <div class="highlight"><pre><span></span><code>sed -i.original <span class="s1">&#39;s|https://boards.huddo.com|https://connections.example.com/boards|g&#39;</span> settings.js
 </code></pre></div></p>
 </li>
-<li>
-<p>Add the app to Connections App Registry</p>
-<ul>
-<li>Go to the Connections Customizer App Registry, e.g <code>https://connections.example.com/appreg</code></li>
-<li>Click <img alt="&quot;New App&quot; button" src="../appreg-newapp.png" /></li>
-<li>Open <em>Code Editor</em>.<ul>
-<li>In your <code>mw-proxy</code> server terminal, <code>cat manifest.json</code>, copy the output and paste it in to the code editor.</li>
-<li><em>OR</em> download <a href="https://docs.huddo.com/boards/connections/boards-extensions.tgz"><code>boards-extensions.tgz</code></a> again, to import the contained <code>manifest.json</code> file.</li>
-</ul>
-</li>
-<li>
-<p>Click <em>Save Changes</em></p>
-</li>
-<li>
-<p>Your screen should look something like this:
-    <img alt="Appreg Code Editor" src="../code-editor.png" /></p>
-</li>
-</ul>
-</li>
 </ol>
-<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
-<p>Open a HCL Connections page and click the <em>Huddo Boards</em> option in the Share menu. A dialog for creating a card based on the current page should open. </p>
-<p><img alt="Share with Boards" src="../cnx8-share-menu.gif" /></p>
-<h2 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h2>
-<p>You can see when this package was last updated <a href="https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz">here</a>. Open <code>https://connections.example.com/files/customizer/boards-extensions/VERSION</code> to see your version.</p>
-<p>To update, simply delete the app from App Registry, remove the <code>boards-extensions</code> directory on your <code>mw-proxy</code> server and perform the install steps again.</p>
+<h2 id="add-the-app-to-connections-app-registry">Add the app to Connections App Registry<a class="headerlink" href="#add-the-app-to-connections-app-registry" title="Permanent link">&para;</a></h2>
+<ol>
+<li>In a web browser, open https://connections.example.com/files/customizer/boards-extensions/manifest.json. You should see JSON similar to the screenshot below. Copy this JSON to the clipboard.</li>
+<li>Open the Connections Customizer App Registry: https://connections.example.com/appreg</li>
+<li>Click <img alt="&quot;New App&quot; button" src="../appreg-newapp.png" /></li>
+<li>Open <em>Code Editor</em></li>
+<li>Paste the JSON from the clipboard, in to the editor</li>
+<li>Click <em>Save Changes</em></li>
+<li>Your screen should look something like this:
+  <img alt="Appreg Code Editor" src="../code-editor.png" /></li>
+</ol>
+<h1 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h1>
+<p>You can see when this package was last updated <a href="https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz">here</a>. Open https://connections.example.com/files/customizer/boards-extensions/VERSION to see your version.</p>
+<p>To update, run 
+<div class="highlight"><pre><span></span><code>/pv-connections/customizations/boards-extensions/update.sh
+</code></pre></div>
+on your <code>mw-proxy</code> server.</p>
+<p>Then, copy the updated https://connections.example.com/files/customizer/boards-extensions/manifest.json and overwrite the existing code in the Connections Customizer App Registry.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-07-19
+      2022-07-20
     
   </small>
 </div>
