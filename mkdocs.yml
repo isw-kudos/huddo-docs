@@ -76,8 +76,6 @@ nav:
                   - Apps Menu: boards/connections/apps-menu-hybrid.md
                   - Widgets: boards/connections/widgets-hybrid.md
                   - Customizer Extensions: boards/connections/customizer/customizer-integrations-package.md
-                  # TODO Move search in to Customizer Integrations
-                  - Search Integration: boards/connections/customizer-search-app.md
                   - Mobile App: boards/connections/mobile-app-hybrid.md
                   - Security: boards/connections/security.md
               - HCL Verse: boards/verse/addin-hybrid.md

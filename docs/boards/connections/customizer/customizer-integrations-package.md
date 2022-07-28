@@ -29,12 +29,12 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
     curl -s https://docs.huddo.com/boards/connections/customizer/boards-extensions.tgz | tar zxvf - -C /pv-connections/customizations/boards-extensions
     ```
 
-2. _If you have your own Boards deployment_, replace `https://boards.huddo.com` with your Boards URL (e.g. `https://connections.example.com/boards`) in the settings file. 
+2. <span id="boardsURLConfig">_If you have your own Boards deployment_</span>, replace `https://boards.huddo.com` with your Boards URL (e.g. `https://connections.example.com/boards`) in the settings file. 
    ```bash
    sed -i.original 's|https://boards.huddo.com|https://connections.example.com/boards|g' settings.js
    ```
 
-## Add the app to Connections App Registry
+## <span id="appRegistry">Add the app to Connections App Registry</span>
 
 1. In a web browser, open https://connections.example.com/files/customizer/boards-extensions/manifest.json. You should see JSON similar to the screenshot below. Copy this JSON to the clipboard.
 1. Open the Connections Customizer App Registry: https://connections.example.com/appreg
@@ -46,17 +46,19 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
   ![Appreg Code Editor](./code-editor.png)
 
 # Updating
-You can see when this package was last updated [here](https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz). Open https://connections.example.com/files/customizer/boards-extensions/VERSION to see your version.
+You can see when this package was last updated [here](https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz). Open [https://connections.example.com/files/customizer/boards-extensions/VERSION](https://connections.example.com/files/customizer/boards-extensions/VERSION) to see your version.
 
-To update, run 
-```
-/pv-connections/customizations/boards-extensions/update.sh
-``` 
-on your `mw-proxy` server.
+1. To update, run 
+    ```bash
+    /pv-connections/customizations/boards-extensions/update.sh
+    ``` 
+    on your `mw-proxy` server. 
 
-Then, copy the updated https://connections.example.com/files/customizer/boards-extensions/manifest.json and overwrite the existing code in the Connections Customizer App Registry.
+1. Repeat the [Boards URL configuration](#boardsURLConfig) if necessary. 
 
-![App Editor](/assets/connections/appreg2.png)
+1. Copy the updated [https://connections.example.com/files/customizer/boards-extensions/manifest.json](https://connections.example.com/files/customizer/boards-extensions/manifest.json) and overwrite the existing code in the Connections Customizer App Registry.
+
+![App Editor](./code-editor.png)
 
 <!-- ## Testing
 
