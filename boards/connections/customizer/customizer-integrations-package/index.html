@@ -1134,20 +1134,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customizer-search-app.md" class="md-nav__link">
-        Search Integration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../mobile-app-hybrid/" class="md-nav__link">
         Mobile App
       </a>
@@ -3070,12 +3056,12 @@ curl -s https://docs.huddo.com/boards/connections/customizer/boards-extensions.t
 </code></pre></div></p>
 </li>
 <li>
-<p><em>If you have your own Boards deployment</em>, replace <code>https://boards.huddo.com</code> with your Boards URL (e.g. <code>https://connections.example.com/boards</code>) in the settings file. 
+<p><span id="boardsURLConfig"><em>If you have your own Boards deployment</em></span>, replace <code>https://boards.huddo.com</code> with your Boards URL (e.g. <code>https://connections.example.com/boards</code>) in the settings file. 
    <div class="highlight"><pre><span></span><code>sed -i.original <span class="s1">&#39;s|https://boards.huddo.com|https://connections.example.com/boards|g&#39;</span> settings.js
 </code></pre></div></p>
 </li>
 </ol>
-<h2 id="add-the-app-to-connections-app-registry">Add the app to Connections App Registry<a class="headerlink" href="#add-the-app-to-connections-app-registry" title="Permanent link">&para;</a></h2>
+<h2 id="add-the-app-to-connections-app-registry"><span id="appRegistry">Add the app to Connections App Registry</span><a class="headerlink" href="#add-the-app-to-connections-app-registry" title="Permanent link">&para;</a></h2>
 <ol>
 <li>In a web browser, open https://connections.example.com/files/customizer/boards-extensions/manifest.json. You should see JSON similar to the screenshot below. Copy this JSON to the clipboard.</li>
 <li>Open the Connections Customizer App Registry: https://connections.example.com/appreg</li>
@@ -3087,13 +3073,22 @@ curl -s https://docs.huddo.com/boards/connections/customizer/boards-extensions.t
   <img alt="Appreg Code Editor" src="../code-editor.png" /></li>
 </ol>
 <h1 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h1>
-<p>You can see when this package was last updated <a href="https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz">here</a>. Open https://connections.example.com/files/customizer/boards-extensions/VERSION to see your version.</p>
+<p>You can see when this package was last updated <a href="https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz">here</a>. Open <a href="https://connections.example.com/files/customizer/boards-extensions/VERSION">https://connections.example.com/files/customizer/boards-extensions/VERSION</a> to see your version.</p>
+<ol>
+<li>
 <p>To update, run 
-<div class="highlight"><pre><span></span><code>/pv-connections/customizations/boards-extensions/update.sh
+    <div class="highlight"><pre><span></span><code>/pv-connections/customizations/boards-extensions/update.sh
 </code></pre></div>
-on your <code>mw-proxy</code> server.</p>
-<p>Then, copy the updated https://connections.example.com/files/customizer/boards-extensions/manifest.json and overwrite the existing code in the Connections Customizer App Registry.</p>
-<p><img alt="App Editor" src="/assets/connections/appreg2.png" /></p>
+    on your <code>mw-proxy</code> server. </p>
+</li>
+<li>
+<p>Repeat the <a href="#boardsURLConfig">Boards URL configuration</a> if necessary. </p>
+</li>
+<li>
+<p>Copy the updated <a href="https://connections.example.com/files/customizer/boards-extensions/manifest.json">https://connections.example.com/files/customizer/boards-extensions/manifest.json</a> and overwrite the existing code in the Connections Customizer App Registry.</p>
+</li>
+</ol>
+<p><img alt="App Editor" src="../code-editor.png" /></p>
 <!-- ## Testing
 
 TODO: Write user documentation for each of the integrations and refer to them for testing.
@@ -3114,7 +3109,7 @@ TODO: Write user documentation for each of the integrations and refer to them fo
   <small>
     
       Last update:
-      2022-07-20
+      2022-07-28
     
   </small>
 </div>
