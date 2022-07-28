@@ -36,8 +36,8 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
 
 ## <span id="appRegistry">Add the app to Connections App Registry</span>
 
-1. In a web browser, open https://connections.example.com/files/customizer/boards-extensions/manifest.json. You should see JSON similar to the screenshot below. Copy this JSON to the clipboard.
-1. Open the Connections Customizer App Registry: https://connections.example.com/appreg
+1. In a web browser, open [https://connections.example.com/files/customizer/boards-extensions/manifest.json](https://connections.example.com/files/customizer/boards-extensions/manifest.json). You should see JSON similar to the screenshot below. Copy this JSON to the clipboard.
+1. Open the Connections Customizer App Registry: [https://connections.example.com/appreg](https://connections.example.com/appreg)
 1. Click !["New App" button](./appreg-newapp.png)
 1. Open _Code Editor_
 1. Paste the JSON from the clipboard, in to the editor
