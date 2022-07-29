@@ -45,6 +45,12 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
 1. Your screen should look something like this:
   ![Appreg Code Editor](./code-editor.png)
 
+### Disabling Extensions
+Individual extensions within this package can be disabled using the _Extensions_ screen or by editing the JSON in the _Code Editor_. For example, if you're not using Connections 8, you may want to disable the extensions for Connections 8. There is no major issue in keeping these enabled. However, disabling extensions that are not compatible or needed will stop unnecessarily loading that extension's code.
+
+Keep in mind that any changes made will be discarded when following the _Updating_ steps below.
+![Appreg Extensions Screen](./appreg-extensions.png)
+
 # Updating
 You can see when this package was last updated [here](https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz). Open [https://connections.example.com/files/customizer/boards-extensions/VERSION](https://connections.example.com/files/customizer/boards-extensions/VERSION) to see your version.
 
