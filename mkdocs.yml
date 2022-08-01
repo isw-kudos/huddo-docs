@@ -149,6 +149,7 @@ nav:
               - Timeline: boards/howto/timeline-view-in-boards.md
               - Task Dependencies: boards/howto/dependencies.md
           - Boards in other Apps:
+              - HCL Connections: boards/howto/connections/connections-ui.md
               - HCL Verse: boards/howto/use-verse.md
               - Login with Auth0: boards/howto/use-auth0.md
               - Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
