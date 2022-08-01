@@ -1,14 +1,9 @@
 Customizer Integrations
 =======================
 
-Boards adds multiple features to other HCL Connections applications via Connections Customizer. These include: 
+Boards adds multiple features to other HCL Connections applications via Connections Customizer. For details about what features this adds, see the [usage documentation](../../howto/connections/connections-ui.md).
 
-- Related Tasks Pane <!-- INCLUDE LINKS TO USER DOCS -->
-- Share to Boards <sup>_Connections 8_</sup>
-- Boards in Search Results
-
-!!! note 
-    These features require your Connections envirionment to have Customiser installed. If you're new to Connections Customizer, here's a [great video introduction](https://www.youtube.com/watch?v=CvlpjIE-3TQ) and the [install documentation](https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_intro.html).
+These features require your Connections envirionment to have Customiser installed. If you're new to Connections Customizer, here's a [great video introduction](https://www.youtube.com/watch?v=CvlpjIE-3TQ) and the [install documentation](https://help.hcltechsw.com/connections/v65/admin/install/cp_config_customizer_intro.html).
 
 # Installation
 ## Customizer Reverse Proxy Configuration
