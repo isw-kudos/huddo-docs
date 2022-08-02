@@ -12,7 +12,7 @@ may need to be changed depending on your environment and on how you intend to us
 application. Particularly note:
 
 - "Migration Path" has no default and must be set before first use.
-- "Temporary Files Storage" defaults to a subdirectory of the server's temporary files
+- "Logs and Temporary File Path" defaults to a subdirectory of the server's temporary files
 location (typically "/tmp" on Linux), but you may want to change this. As stated in
 the Installation document, this location should be synchronized between servers if the
 application runs on multiple servers in a cluster.
@@ -28,8 +28,10 @@ authentication aliases** defined in the WebSphere ISC (under Security \ Global S
 aliases must contain credentials for a user with administrative access to Connections,
 because the app uses these credentials to authenticate with APIs and read/write content.
 "Destination Auth Alias" isn't used and is hidden if migrating to the OS file system.
-- If migrating to the OS file system, set "Output File Path" to the server file-system
-location where you want the content and metadata exported.
+- "Output File Path" should be a server file-system location where you want content
+and metadata exported. If migrating to the OS file system, all content and metadata is
+exported to this location. If migrating to Connections Files, metadata is exported to
+this location only if the migration setting to export metadata is enabled.
 
 ![API Settings](/assets/ccm-migrator/api-settings01.png)
 
@@ -44,24 +46,31 @@ performance if all the following conditions are met, but may otherwise cause pro
     servers from which content will be read, have at least as many CPU threads as
     specified.
     - Network connections between servers can handle the additional traffic.
-- "HTTP Request Handler" - The default value of "Apache HttpClient" should always be
-best. The "JVM default" option is retained for testing because older versions of
-CCM Migrator had no other option.
-- "Maximum time to wait for data" - HTTP read timeout in milliseconds. The default
-of -1 means to use an OS-dependent value which we understand to be 1 minute on many
-platforms. The default should be sufficient, but set it to either 0 (no timeout) or
-a value higher than 60000 if you observe timeouts occurring.
-- "Number of times to attempt each HTTP request" - If set higher than 1 and a server-side
-HTTP request fails for a temporary reason (e.g. timeout or internal server error),
-the request will be attempted up to this many times. This setting exists because we
-observed seemingly-random HTTP request failures in one customer environment, but
-retries didn't help in that case.
-- "Delay before retrying failed HTTP request" - Wait about this many milliseconds
-before retrying failed HTTP requests. Only has an effect if a HTTP request fails
-and the previous setting is 2 or higher.
-- "Write XML to file system for CCM library entries" - If enabled, raw XML representing
-"feeds" of CCM library entries will be written to the configured temporary files
-location. This setting exists only for debugging.
+- "HTTP Engine Settings":
+    - "HTTP Request Handler" - The default value of "Apache HttpClient" should always be
+    best. The "JVM default" option is retained for testing because older versions of
+    CCM Migrator had no other option.
+    - "Maximum time to wait for data" - HTTP read timeout in milliseconds. The default
+    of -1 means to use an OS-dependent value which we understand to be 1 minute on many
+    platforms. The default should be sufficient, but set it to either 0 (no timeout) or
+    a value higher than 60000 if you observe timeouts occurring.
+    - "Number of times to attempt each HTTP request" - If set higher than 1 and a server-side
+    HTTP request fails for a temporary reason (e.g. timeout or internal server error),
+    the request will be attempted up to this many times. This setting exists because we
+    observed seemingly-random HTTP request failures in one customer environment, but
+    retries didn't help in that case.
+    - "Delay before retrying failed HTTP request" - Wait about this many milliseconds
+    before retrying failed HTTP requests. Only has an effect if a HTTP request fails
+    and the previous setting is 2 or higher.
+- "Log Settings":
+    - "Show username in server JVM logs" - Makes messages written by CCM Migrator to the
+    server's "SystemOut.log" and "SystemErr.log" files include the username of the user
+    running Analysis, Migration, or Roll-back. The username is always recorded in CCM
+    Migrator's application log files regardless of this setting.
+- "Other Settings":
+    - "Write XML to file system for CCM library entries" - If enabled, raw XML representing
+    "feeds" of CCM library entries will be written to the configured temporary files
+    location. This setting exists only for debugging.
 
 Once the settings are confirmed by clicking "Confirm Settings" at the bottom of the
 page, the "Home" page will load. The application saves all settings in the web browser's
@@ -105,8 +114,14 @@ that nothing is really migrated, but the migration process will retrieve and dis
 a list of all folders and files in the selected communities. Note that a licence key
 is required to disable test mode and perform a real migration, and the licence key
 (if provided to you) must be installed as described in the Installation document.
+- "Per-library migration" - If enabled, the communities table allows expanding each
+community to show libraries in the community, choosing individual libraries to migrate
+(instead of migrating all libraries in each community), and migrating libraries to
+subcommunities instead of to the community.
 - "Include Tags" - Whether or not to migrate file tags.
 - "Include Comments" - Whether or not to migrate file comments.
+- "Include Likes" - Whether or not to migrate file likes.
+- "Include Follows" - Whether or not to migrate file follows.
 - "Include Drafts" - Whether or not to migrate draft files. Note that the Connections
 Files app doesn't allow drafts, so drafts from CCM will become the latest file
 version when migrated.
@@ -121,6 +136,14 @@ option doesn't apply. The migration simply uses the existing folder.
 - "Replacement for Invalid Characters" - If CCM folder or file names contain
 characters which aren't permitted in the Connections Files app, those characters
 are replaced by the specified replacement character.
+- "Migrate libraries to folders" - Whether to migrate every library to a separate folder
+in the target community, regardless of how many libraries exist in the community. By
+default, CCM Migrator will only create a separate folder for each library if the
+community has two or more libraries.
+- "Export metadata to file-system" - Whether to export extra metadata to the server
+file-system when migrating to Connections Files. The metadata includes CCM document types
+and custom fields, which can't be migrated to Connections Files, and is created in the
+"Output File Path" specified in API Settings.
 
 The "Status Log" provides details while processing. For each community, it lists all
 Library files (including what folder they belong to) and existing folders in the
