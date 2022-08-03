@@ -27,24 +27,25 @@ the directory name should minimise the chance of a directory-name conflict.
 
 When migrating to the file system, all folders in a library and the current version of
 all files are placed in a directory structure like the following:<br>
-**\<Community Name>/files/\<Library Name>/\<Folder>/\<Subfolder>**
+**\<Community Name\>/files/\<Library Name\>/\<Folder\>/\<Subfolder\>**
 
 When either migrating to the file system, or exporting metadata during a migration to
 Connections Files, metadata files and folders will be placed in a directory structure like
 the following:<br>
-**\<Community Name>/metadata/\<Library Name>/\<Folder>/\<Subfolder>**
+**\<Community Name\>/metadata/\<Library Name\>/\<Folder\>/\<Subfolder\>**
 
 The metadata location is also used to export most file versions excluding the current
 version, when migrating to the file system.
 
-In both cases above, **\<Subfolder>** may be repeated for as many subfolder levels as
+In both cases above, **\<Subfolder\>** may be repeated for as many subfolder levels as
 were present in CCM.
 
 Within the metadata structure, there will be:
+
 - A **members.csv** file in each library directory, listing the library members;
 - **members.csv** and **meta.csv** files for each folder, listing the folder members and
 metadata; and
-- Directories named like **\<Filename>\<extension>.meta** corresponding with each CCM
+- Directories named like **\<Filename\>\<extension\>.meta** corresponding with each CCM
 file. This directory will contain versions of the CCM file, along with **comments.csv**,
 **members.csv**, and **meta.csv** files listing comments, members, and metadata for that file.
 
@@ -52,7 +53,7 @@ Versions of a CCM file have version numbers in their filename. Version numbers w
 exactly as reported by CCM, which typically uses a major/minor decimal format like "**1.0**".
 
 The filename format for versions will be:<br>
-**\<Original filename>_v\<version number>\<extension>**
+**\<Original filename\>_v\<version number\>\<extension\>**
 
 ### Example:
 
@@ -66,6 +67,7 @@ folder, and file.
 
 These files will be formatted as comma-separated values with one record (user/group) per
 line, with five fields per record. The fields will be:
+
 -	User/group name;
 -	Unique user id;
 -	User email address;
@@ -75,6 +77,7 @@ line, with five fields per record. The fields will be:
 
 The users/groups listed in **members.csv** will be those with explicit access, plus some
 special user names as follows:
+
 -	"\*Community Access\*", indicating the community access setting (one of "public",
 "moderated", or "restricted");
 -	"\*Community Members\*", indicating the access that community members have to a library,
@@ -90,6 +93,7 @@ the metadata structure will also contain a **meta.csv** file.
 
 **comments.csv** contains all comments for the file. Comma-separated fields for each
 comment are:
+
 - File version on which the comment was made.
 -	Date/time, formatted as ISO 8601 in UTC (e.g. "2021-02-26T09:00:00.000Z");
 -	Commenter user name;
@@ -99,6 +103,7 @@ comment are:
 
 **meta.csv** contains any metadata which isn't comments or members. Comma-separated fields
 for each line are:
+
 -	The type of metadata, one of:
 	- "uuid" - CCM file/folder uuid;
 	- "comm_uuid" - Source community uuid;
@@ -136,6 +141,7 @@ version; and
 
 CSV files created by CCM Migrator conform to Microsoft Excel's CSV format, with details
 as follows:
+
 -	Fields are separated by commas.
 -	Text data is contained in double-quote characters.
 -	Text data can contain commas without any type of "escape character", because the
