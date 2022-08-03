@@ -143,7 +143,8 @@ community has two or more libraries.
 - "Export metadata to file-system" - Whether to export extra metadata to the server
 file-system when migrating to Connections Files. The metadata includes CCM document types
 and custom fields, which can't be migrated to Connections Files, and is created in the
-"Output File Path" specified in API Settings.
+"Output File Path" specified in API Settings. [Click here](export-fs.md) for details of
+the export file structure.
 
 The "Status Log" provides details while processing. For each community, it lists all
 Library files (including what folder they belong to) and existing folders in the
@@ -176,6 +177,8 @@ The application's user-interface provides options to change the above behaviour,
 ## Roll-back
 
 As of 5 April 2022, CCM Migrator has the ability to roll back migrated communities.
+Roll-back is only supported when migrating to Connections Files. A file-system migration
+can be rolled back manually by deleting the export from the server file system.
 
 Perform a roll-back by selecting desired communities and clicking the "Roll-back Communities"
 button. This will only work for communities which were previously migrated.
