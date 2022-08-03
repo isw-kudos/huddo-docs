@@ -3200,26 +3200,28 @@ the directory name should minimise the chance of a directory-name conflict.</p>
 <h2 id="directory-structure">Directory structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h2>
 <p>When migrating to the file system, all folders in a library and the current version of
 all files are placed in a directory structure like the following:<br>
-<strong>\<Community Name>/files/\<Library Name>/\<Folder>/\<Subfolder></strong></p>
+<strong>\&lt;Community Name>/files/\&lt;Library Name>/\&lt;Folder>/\&lt;Subfolder></strong></p>
 <p>When either migrating to the file system, or exporting metadata during a migration to
 Connections Files, metadata files and folders will be placed in a directory structure like
 the following:<br>
-<strong>\<Community Name>/metadata/\<Library Name>/\<Folder>/\<Subfolder></strong></p>
+<strong>\&lt;Community Name>/metadata/\&lt;Library Name>/\&lt;Folder>/\&lt;Subfolder></strong></p>
 <p>The metadata location is also used to export most file versions excluding the current
 version, when migrating to the file system.</p>
-<p>In both cases above, <strong>\<Subfolder></strong> may be repeated for as many subfolder levels as
+<p>In both cases above, <strong>\&lt;Subfolder></strong> may be repeated for as many subfolder levels as
 were present in CCM.</p>
-<p>Within the metadata structure, there will be:
-- A <strong>members.csv</strong> file in each library directory, listing the library members;
-- <strong>members.csv</strong> and <strong>meta.csv</strong> files for each folder, listing the folder members and
-metadata; and
-- Directories named like <strong>\<Filename>\<extension>.meta</strong> corresponding with each CCM
+<p>Within the metadata structure, there will be:</p>
+<ul>
+<li>A <strong>members.csv</strong> file in each library directory, listing the library members;</li>
+<li><strong>members.csv</strong> and <strong>meta.csv</strong> files for each folder, listing the folder members and
+metadata; and</li>
+<li>Directories named like <strong>\&lt;Filename>\&lt;extension>.meta</strong> corresponding with each CCM
 file. This directory will contain versions of the CCM file, along with <strong>comments.csv</strong>,
-<strong>members.csv</strong>, and <strong>meta.csv</strong> files listing comments, members, and metadata for that file.</p>
+<strong>members.csv</strong>, and <strong>meta.csv</strong> files listing comments, members, and metadata for that file.</li>
+</ul>
 <p>Versions of a CCM file have version numbers in their filename. Version numbers will be
 exactly as reported by CCM, which typically uses a major/minor decimal format like "<strong>1.0</strong>".</p>
 <p>The filename format for versions will be:<br>
-<strong>\<Original filename>_v\<version number>\<extension></strong></p>
+<strong>\&lt;Original filename>_v\&lt;version number>\&lt;extension></strong></p>
 <h3 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>If the current version is <strong>Proposal.docx</strong>, then version 1 (superseded) will be
 <strong>Proposal_v1.0.docx</strong> in the <strong>Proposal.docx.meta</strong> subdirectory.</p>
@@ -3227,78 +3229,90 @@ exactly as reported by CCM, which typically uses a major/minor decimal format li
 <p>Files named <strong>members.csv</strong> list members (user access) for each community, library,
 folder, and file.</p>
 <p>These files will be formatted as comma-separated values with one record (user/group) per
-line, with five fields per record. The fields will be:
--   User/group name;
--   Unique user id;
--   User email address;
--   Type (either "user" or "group"); and
--   Access level (one of "member" or "owner" for communities, or one of "owner",
-"contributor", "editor", or "reader" for libraries, folders, and files).</p>
+line, with five fields per record. The fields will be:</p>
+<ul>
+<li>User/group name;</li>
+<li>Unique user id;</li>
+<li>User email address;</li>
+<li>Type (either "user" or "group"); and</li>
+<li>Access level (one of "member" or "owner" for communities, or one of "owner",
+"contributor", "editor", or "reader" for libraries, folders, and files).</li>
+</ul>
 <p>The users/groups listed in <strong>members.csv</strong> will be those with explicit access, plus some
-special user names as follows:
--   "*Community Access*", indicating the community access setting (one of "public",
-"moderated", or "restricted");
--   "*Community Members*", indicating the access that community members have to a library,
-folder, or file.
--   "*Community Owners*", indicating the access that community owners have to a library,
-folder, or file.</p>
+special user names as follows:</p>
+<ul>
+<li>"*Community Access*", indicating the community access setting (one of "public",
+"moderated", or "restricted");</li>
+<li>"*Community Members*", indicating the access that community members have to a library,
+folder, or file.</li>
+<li>"*Community Owners*", indicating the access that community owners have to a library,
+folder, or file.</li>
+</ul>
 <h2 id="comments-tags-and-other-metadata">Comments, tags, and other metadata<a class="headerlink" href="#comments-tags-and-other-metadata" title="Permanent link">&para;</a></h2>
 <p>The metadata directory for each CCM file (directory name ending with ".meta") contains
 files named <strong>comments.csv</strong> and <strong>meta.csv</strong>. Directories representing CCM folders within
 the metadata structure will also contain a <strong>meta.csv</strong> file.</p>
 <p><strong>comments.csv</strong> contains all comments for the file. Comma-separated fields for each
-comment are:
-- File version on which the comment was made.
--   Date/time, formatted as ISO 8601 in UTC (e.g. "2021-02-26T09:00:00.000Z");
--   Commenter user name;
--   Commenter unique user id;
--   Commenter email address; and
--   The comment text.</p>
+comment are:</p>
+<ul>
+<li>File version on which the comment was made.</li>
+<li>Date/time, formatted as ISO 8601 in UTC (e.g. "2021-02-26T09:00:00.000Z");</li>
+<li>Commenter user name;</li>
+<li>Commenter unique user id;</li>
+<li>Commenter email address; and</li>
+<li>The comment text.</li>
+</ul>
 <p><strong>meta.csv</strong> contains any metadata which isn't comments or members. Comma-separated fields
-for each line are:
--   The type of metadata, one of:
-    - "uuid" - CCM file/folder uuid;
-    - "comm_uuid" - Source community uuid;
-    - "componentId" - CCM component id (appears in CCM URLs);
-    - "name" - CCM file/folder name;
-    - "renamed" - Migrated file/folder name (always present even if the name wasn't changed);
-    - "created" - Creation date/time, formatted as ISO 8601 in UTC;
-    - "author" - Display name of author/creator;
-    - "modified" - Last-modified date/time, formatted as ISO 8601 in UTC;
-    - "modifier" - Display name of user who last modified the file/folder;
-    - "summary" - File description/summary;
-    - "tag" - File tags (this metadata type is repeated if there are multiple tags);
-    - "draft" - Has the value "true" if the current version is a draft, but is otherwise
-    absent;
-    - "likes" - Number of likes;
-    - "downloads" - Number of downloads;
-    - "link" - CCM file/folder URL as reported by CCM API (may redirect to another URL when
-    used in a web browser);
-    - "link_alt" - Alternate CCM file/folder URL;
-    - "link_ibmscp" - CCM file/folder URL for the ibmscp protocol (Connections Mobile);
-    - "link_content" - CCM file download URL;
-    - "dest_uuid" - Connections file/folder uuid (if migrated to Connections Files);
-    - "dest_comm_uuid" - Destination community uuid (if migrated to Connections Files);
-    - "dest_link" - Connections file/folder URL (if migrated to Connections Files);
-    - "dest_link_content" - Connections file download URL (if migrated to Connections Files);
-    - "doc_type" - CCM document type display name;
-    - "doc_type_uuid" - CCM document type uuid;
-    - <em>Custom fields</em> - Any metadata types different from those above are custom fields
-    defined as part of the CCM document type.
--   The version number to which the metadata applies. This will be blank for the current
-version; and
--   The metadata value.</p>
+for each line are:</p>
+<ul>
+<li>The type of metadata, one of:<ul>
+<li>"uuid" - CCM file/folder uuid;</li>
+<li>"comm_uuid" - Source community uuid;</li>
+<li>"componentId" - CCM component id (appears in CCM URLs);</li>
+<li>"name" - CCM file/folder name;</li>
+<li>"renamed" - Migrated file/folder name (always present even if the name wasn't changed);</li>
+<li>"created" - Creation date/time, formatted as ISO 8601 in UTC;</li>
+<li>"author" - Display name of author/creator;</li>
+<li>"modified" - Last-modified date/time, formatted as ISO 8601 in UTC;</li>
+<li>"modifier" - Display name of user who last modified the file/folder;</li>
+<li>"summary" - File description/summary;</li>
+<li>"tag" - File tags (this metadata type is repeated if there are multiple tags);</li>
+<li>"draft" - Has the value "true" if the current version is a draft, but is otherwise
+absent;</li>
+<li>"likes" - Number of likes;</li>
+<li>"downloads" - Number of downloads;</li>
+<li>"link" - CCM file/folder URL as reported by CCM API (may redirect to another URL when
+used in a web browser);</li>
+<li>"link_alt" - Alternate CCM file/folder URL;</li>
+<li>"link_ibmscp" - CCM file/folder URL for the ibmscp protocol (Connections Mobile);</li>
+<li>"link_content" - CCM file download URL;</li>
+<li>"dest_uuid" - Connections file/folder uuid (if migrated to Connections Files);</li>
+<li>"dest_comm_uuid" - Destination community uuid (if migrated to Connections Files);</li>
+<li>"dest_link" - Connections file/folder URL (if migrated to Connections Files);</li>
+<li>"dest_link_content" - Connections file download URL (if migrated to Connections Files);</li>
+<li>"doc_type" - CCM document type display name;</li>
+<li>"doc_type_uuid" - CCM document type uuid;</li>
+<li><em>Custom fields</em> - Any metadata types different from those above are custom fields
+defined as part of the CCM document type.</li>
+</ul>
+</li>
+<li>The version number to which the metadata applies. This will be blank for the current
+version; and</li>
+<li>The metadata value.</li>
+</ul>
 <h2 id="general-information-csv-files">General information - CSV files<a class="headerlink" href="#general-information-csv-files" title="Permanent link">&para;</a></h2>
 <p>CSV files created by CCM Migrator conform to Microsoft Excel's CSV format, with details
-as follows:
--   Fields are separated by commas.
--   Text data is contained in double-quote characters.
--   Text data can contain commas without any type of "escape character", because the
-enclosing double-quotes ensure those commas aren't interpreted as separators.
--   Literal double-quote characters can be included in text data by doubling them. I.e.
-The double-quote character acts as an "escape character" for itself.
--   Text data can contain literal line breaks, therefore any single record can use multiple
-lines. This is unlikely to occur in this application, but may be possible with metadata.</p>
+as follows:</p>
+<ul>
+<li>Fields are separated by commas.</li>
+<li>Text data is contained in double-quote characters.</li>
+<li>Text data can contain commas without any type of "escape character", because the
+enclosing double-quotes ensure those commas aren't interpreted as separators.</li>
+<li>Literal double-quote characters can be included in text data by doubling them. I.e.
+The double-quote character acts as an "escape character" for itself.</li>
+<li>Text data can contain literal line breaks, therefore any single record can use multiple
+lines. This is unlikely to occur in this application, but may be possible with metadata.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
