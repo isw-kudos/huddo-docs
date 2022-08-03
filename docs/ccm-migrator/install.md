@@ -1,10 +1,40 @@
 # Installation
 
-## Installing the Application for the first time
-
 Log into the WebSphere Integrated Solutions Console (ISC) for your HCL Connections Environment.
 
-Navigate to Applications \ Application Types \ WebSphere enterprise applications and click "Install".
+## Gathering required information
+
+Before starting installation, it's required to know the "JNDI name" for a JDBC data source
+for the Filenet Object Store database. If you already know this, proceed to
+[Installing the Application for the first time](#installing-the-application-for-the-first-time),
+otherwise review the following.
+
+In the ISC, navigate to Resources \ JDBC \ Data sources.
+
+Determine which data source relates to the Filenet Object Store database, and note the
+JNDI name for that data source. The image below shows an example where the data source name
+and JNDI name are "FNOSDS", but it may be different in your environment.
+
+![Installation - JDBC data sources](/assets/ccm-migrator/jdbc-data-sources01.png)
+
+If you're not sure which is the correct data source, check the details of each data source
+as follows:
+
+- Click a data source name in the data source table.
+- Check the "Common and required data source properties" for the data source.
+- The correct data source should have the database name "FNOS", and a server name matching
+your Filenet / CCM database server. Once you find this data source, note the JNDI name,
+and you can then proceed with installation.
+
+If you can't determine the correct JNDI name, the only impact is that CCM Migrator will
+be unable to migrate file follows, but the installation process requires a JNDI name
+to be entered regardless.
+
+![Installation - JDBC data sources](/assets/ccm-migrator/jdbc-data-sources02.png)
+
+## Installing the Application for the first time
+
+In the ISC, navigate to Applications \ Application Types \ WebSphere enterprise applications and click "Install".
 
 ![Installation - step 1](/assets/ccm-migrator/install01.png)
 
@@ -28,9 +58,12 @@ that the log files are up to date regardless of which server the application run
 
 ![Installation - step 3](/assets/ccm-migrator/install03.png)
 
-Step 3: Leave the default values and click "Next".
+Step 3: Enter the JNDI name for the Filenet Object Store database, which you should have
+obtained as described under [Gathering required information](#gathering-required-information).
 
-Step 4: Check summary and Complete installation.
+Step 4: Leave the default values and click "Next".
+
+Step 5: Check summary and Complete installation.
 
 Save the master configuration once complete.
 

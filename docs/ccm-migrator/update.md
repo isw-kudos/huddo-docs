@@ -7,6 +7,12 @@ version of the application for the purpose of fixing bugs or adding features.
 
 Log into the ISC for your HCL Connections environment.
 
+If you're updating from a version of CCM Migrator which can't migrate file follows
+(before 8 July 2022) to a version which can migrate file follows, the update process
+requires some extra information. This is described under
+[Gathering required information](install.md#gathering-required-information) at the top of
+the installation document.
+
 Navigate to Applications \ Application Types \ WebSphere enterprise applications.
 
 Select the "isw-connections-ccm" application from the list, and click "Update".
@@ -17,7 +23,12 @@ Using the default option ("Replace the entire application"), select the new "isw
 
 ![Updating - step 2](/assets/ccm-migrator/update02.png)
 
-Click "Next" at the bottom of each subsequent screen, leaving all options at the default, then click "Finish" upon reaching the "Step 3: Summary" stage.
+Click "Next" at the bottom of most subsequent screens, leaving all options at the default,
+except that you may need to enter the JNDI name for the Filenet Object Store database at
+"Step 3: Map resource environment references to resources".
+
+Click "Finish" upon reaching the "Summary" stage. This may be labelled as "Step 3" or
+"Step 4" depending on whether you needed to enter a JNDI name as above.
 
 ![Updating - step 3](/assets/ccm-migrator/update03.png)
 
