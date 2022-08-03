@@ -19,7 +19,7 @@
     
     
       
-        <title>File-system export structure - Huddo Docs</title>
+        <title>File-system Export - Huddo Docs</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File-system export structure
+              File-system Export
             
           </span>
         </div>
@@ -2907,12 +2907,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -2966,6 +2968,102 @@
       <a href="../usage/" class="md-nav__link">
         Usage
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          File-system Export
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        File-system Export
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rationale" class="md-nav__link">
+    Rationale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-access" class="md-nav__link">
+    User access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments-tags-and-other-metadata" class="md-nav__link">
+    Comments, tags, and other metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-information-csv-files" class="md-nav__link">
+    General information - CSV files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3113,54 +3211,101 @@ version, when migrating to the file system.</p>
 were present in CCM.</p>
 <p>Within the metadata structure, there will be:
 - A <strong>members.csv</strong> file in each library directory, listing the library members;
-- <strong>members.csv</strong> and <strong>meta.csv</strong> files for each folder, listing the folder members and metadata; and
-- Directories named like <strong>\<Filename>\<extension>.meta</strong> corresponding with each CCM file. This directory will contain versions of the CCM file, along with <strong>comments.csv</strong>, <strong>members.csv</strong>, and <strong>meta.csv</strong> files listing comments, members, and metadata for that file.</p>
-<p>Versions of a CCM file have version numbers in their filename. Version numbers will be exactly as reported by CCM, which typically uses a major/minor decimal format like "<strong>1.0</strong>".</p>
+- <strong>members.csv</strong> and <strong>meta.csv</strong> files for each folder, listing the folder members and
+metadata; and
+- Directories named like <strong>\<Filename>\<extension>.meta</strong> corresponding with each CCM
+file. This directory will contain versions of the CCM file, along with <strong>comments.csv</strong>,
+<strong>members.csv</strong>, and <strong>meta.csv</strong> files listing comments, members, and metadata for that file.</p>
+<p>Versions of a CCM file have version numbers in their filename. Version numbers will be
+exactly as reported by CCM, which typically uses a major/minor decimal format like "<strong>1.0</strong>".</p>
 <p>The filename format for versions will be:<br>
 <strong>\<Original filename>_v\<version number>\<extension></strong></p>
 <h3 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<p>If the current version is <strong>Proposal.docx</strong>, then version 1 (superseded) will be <strong>Proposal_v1.0.docx</strong> in the <strong>Proposal.docx.meta</strong> subdirectory.</p>
+<p>If the current version is <strong>Proposal.docx</strong>, then version 1 (superseded) will be
+<strong>Proposal_v1.0.docx</strong> in the <strong>Proposal.docx.meta</strong> subdirectory.</p>
 <h2 id="user-access">User access<a class="headerlink" href="#user-access" title="Permanent link">&para;</a></h2>
-<p>Files named <strong>members.csv</strong> list members (user access) for each community, library, folder, and file.</p>
-<p>These files will be formatted as comma-separated values with one record (user/group) per line, with five fields per record. The fields will be:
+<p>Files named <strong>members.csv</strong> list members (user access) for each community, library,
+folder, and file.</p>
+<p>These files will be formatted as comma-separated values with one record (user/group) per
+line, with five fields per record. The fields will be:
 -   User/group name;
 -   Unique user id;
 -   User email address;
 -   Type (either "user" or "group"); and
--   Access level (one of "member" or "owner" for communities, or one of "owner", "contributor", "editor", or "reader" for libraries, folders, and files).</p>
-<p>The users/groups listed in <strong>members.csv</strong> will be those with explicit access, plus some special user names as follows:
--   "*Community Access*", indicating the community access setting (one of "public", "moderated", or "restricted");
--   "*Community Members*", indicating the access that community members have to a library, folder, or file.
--   "*Community Owners*", indicating the access that community owners have to a library, folder, or file.</p>
+-   Access level (one of "member" or "owner" for communities, or one of "owner",
+"contributor", "editor", or "reader" for libraries, folders, and files).</p>
+<p>The users/groups listed in <strong>members.csv</strong> will be those with explicit access, plus some
+special user names as follows:
+-   "*Community Access*", indicating the community access setting (one of "public",
+"moderated", or "restricted");
+-   "*Community Members*", indicating the access that community members have to a library,
+folder, or file.
+-   "*Community Owners*", indicating the access that community owners have to a library,
+folder, or file.</p>
 <h2 id="comments-tags-and-other-metadata">Comments, tags, and other metadata<a class="headerlink" href="#comments-tags-and-other-metadata" title="Permanent link">&para;</a></h2>
-<p>The metadata directory for each CCM file (directory name ending with ".meta") contains files named <strong>comments.csv</strong> and <strong>meta.csv</strong>. Directories representing CCM folders within the metadata structure will also contain a <strong>meta.csv</strong> file.
-<strong>comments.csv</strong> contains all comments for the file. Comma-separated fields for each comment are:
+<p>The metadata directory for each CCM file (directory name ending with ".meta") contains
+files named <strong>comments.csv</strong> and <strong>meta.csv</strong>. Directories representing CCM folders within
+the metadata structure will also contain a <strong>meta.csv</strong> file.</p>
+<p><strong>comments.csv</strong> contains all comments for the file. Comma-separated fields for each
+comment are:
 - File version on which the comment was made.
 -   Date/time, formatted as ISO 8601 in UTC (e.g. "2021-02-26T09:00:00.000Z");
 -   Commenter user name;
 -   Commenter unique user id;
 -   Commenter email address; and
 -   The comment text.</p>
-<p><strong>meta.csv</strong> contains any metadata which isn't comments or members. Comma-separated fields for each line are:
--   The type of metadata (one of "name", "renamed", "author", "created", "modified", "modifier", "summary", "tag", "draft", "likes", or "downloads");
--   The version number to which the metadata applies. This will be blank for the current version; and
+<p><strong>meta.csv</strong> contains any metadata which isn't comments or members. Comma-separated fields
+for each line are:
+-   The type of metadata, one of:
+    - "uuid" - CCM file/folder uuid;
+    - "comm_uuid" - Source community uuid;
+    - "componentId" - CCM component id (appears in CCM URLs);
+    - "name" - CCM file/folder name;
+    - "renamed" - Migrated file/folder name (always present even if the name wasn't changed);
+    - "created" - Creation date/time, formatted as ISO 8601 in UTC;
+    - "author" - Display name of author/creator;
+    - "modified" - Last-modified date/time, formatted as ISO 8601 in UTC;
+    - "modifier" - Display name of user who last modified the file/folder;
+    - "summary" - File description/summary;
+    - "tag" - File tags (this metadata type is repeated if there are multiple tags);
+    - "draft" - Has the value "true" if the current version is a draft, but is otherwise
+    absent;
+    - "likes" - Number of likes;
+    - "downloads" - Number of downloads;
+    - "link" - CCM file/folder URL as reported by CCM API (may redirect to another URL when
+    used in a web browser);
+    - "link_alt" - Alternate CCM file/folder URL;
+    - "link_ibmscp" - CCM file/folder URL for the ibmscp protocol (Connections Mobile);
+    - "link_content" - CCM file download URL;
+    - "dest_uuid" - Connections file/folder uuid (if migrated to Connections Files);
+    - "dest_comm_uuid" - Destination community uuid (if migrated to Connections Files);
+    - "dest_link" - Connections file/folder URL (if migrated to Connections Files);
+    - "dest_link_content" - Connections file download URL (if migrated to Connections Files);
+    - "doc_type" - CCM document type display name;
+    - "doc_type_uuid" - CCM document type uuid;
+    - <em>Custom fields</em> - Any metadata types different from those above are custom fields
+    defined as part of the CCM document type.
+-   The version number to which the metadata applies. This will be blank for the current
+version; and
 -   The metadata value.</p>
-<p>The metadata type "draft" appears in the <strong>meta.csv</strong> file with the value "true" if the current version is a draft, but is otherwise absent.</p>
-<p>The metadata types "name" and "renamed" always appear. These are respectively the CCM name and migrated name of the folder or file.</p>
 <h2 id="general-information-csv-files">General information - CSV files<a class="headerlink" href="#general-information-csv-files" title="Permanent link">&para;</a></h2>
-<p>CSV files created by CCM Migrator conform to Microsoft Excel's CSV format, with details as follows:
+<p>CSV files created by CCM Migrator conform to Microsoft Excel's CSV format, with details
+as follows:
 -   Fields are separated by commas.
 -   Text data is contained in double-quote characters.
--   Text data can contain commas without any type of "escape character", because the enclosing double-quotes ensure those commas aren't interpreted as separators.
--   Literal double-quote characters can be included in text data by doubling them. I.e. The double-quote character acts as an "escape character" for itself.
--   Text data can contain literal line breaks, therefore any single record can use multiple lines. This is unlikely to occur in this application, but may be possible with metadata.</p>
+-   Text data can contain commas without any type of "escape character", because the
+enclosing double-quotes ensure those commas aren't interpreted as separators.
+-   Literal double-quote characters can be included in text data by doubling them. I.e.
+The double-quote character acts as an "escape character" for itself.
+-   Text data can contain literal line breaks, therefore any single record can use multiple
+lines. This is unlikely to occur in this application, but may be possible with metadata.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-08-02
+      2022-08-03
     
   </small>
 </div>
@@ -3174,6 +3319,42 @@ were present in CCM.</p>
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../usage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Usage" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Usage
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../log4j/" class="md-footer__link md-footer__link--next" aria-label="Next: log4j" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              log4j
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

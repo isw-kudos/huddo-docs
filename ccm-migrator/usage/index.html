@@ -3035,6 +3035,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export-fs/" class="md-nav__link">
+        File-system Export
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3267,7 +3281,8 @@ community has two or more libraries.</li>
 <li>"Export metadata to file-system" - Whether to export extra metadata to the server
 file-system when migrating to Connections Files. The metadata includes CCM document types
 and custom fields, which can't be migrated to Connections Files, and is created in the
-"Output File Path" specified in API Settings.</li>
+"Output File Path" specified in API Settings. <a href="../export-fs/">Click here</a> for details of
+the export file structure.</li>
 </ul>
 <p>The "Status Log" provides details while processing. For each community, it lists all
 Library files (including what folder they belong to) and existing folders in the
@@ -3291,7 +3306,9 @@ the server, and persists unless deleted by some means outside the application.</
 <strong>Important: Migrations performed before this functionality was added to CCM Migrator (on 11 Feb 2019) will not be detected, due to the reliance on a new style of system logging.</strong></p>
 <p>The application's user-interface provides options to change the above behaviour, and those options are listed earlier in this document.</p>
 <h2 id="roll-back">Roll-back<a class="headerlink" href="#roll-back" title="Permanent link">&para;</a></h2>
-<p>As of 5 April 2022, CCM Migrator has the ability to roll back migrated communities.</p>
+<p>As of 5 April 2022, CCM Migrator has the ability to roll back migrated communities.
+Roll-back is only supported when migrating to Connections Files. A file-system migration
+can be rolled back manually by deleting the export from the server file system.</p>
 <p>Perform a roll-back by selecting desired communities and clicking the "Roll-back Communities"
 button. This will only work for communities which were previously migrated.</p>
 <p>If Test Mode is enabled, nothing will be rolled back, and the Status Log will just report
@@ -3309,7 +3326,7 @@ contains the required additional data and allows roll-back.</p>
   <small>
     
       Last update:
-      2022-08-02
+      2022-08-03
     
   </small>
 </div>
@@ -3344,13 +3361,13 @@ contains the required additional data and allows roll-back.</p>
       
       
         
-        <a href="../../log4j/" class="md-footer__link md-footer__link--next" aria-label="Next: log4j" rel="next">
+        <a href="../export-fs/" class="md-footer__link md-footer__link--next" aria-label="Next: File-system Export" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              log4j
+              File-system Export
             </div>
           </div>
           <div class="md-footer__button md-icon">
