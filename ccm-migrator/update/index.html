@@ -3115,12 +3115,21 @@
 <p>This part of the documentation only applies if you have been provided with a new
 version of the application for the purpose of fixing bugs or adding features.</p>
 <p>Log into the ISC for your HCL Connections environment.</p>
+<p>If you're updating from a version of CCM Migrator which can't migrate file follows
+(before 8 July 2022) to a version which can migrate file follows, the update process
+requires some extra information. This is described under
+<a href="../install/#gathering-required-information">Gathering required information</a> at the top of
+the installation document.</p>
 <p>Navigate to Applications \ Application Types \ WebSphere enterprise applications.</p>
 <p>Select the "isw-connections-ccm" application from the list, and click "Update".</p>
 <p><img alt="Updating - step 1" src="/assets/ccm-migrator/update01.png" /></p>
 <p>Using the default option ("Replace the entire application"), select the new "isw-connections-ccm.ear" file, and click "Next".</p>
 <p><img alt="Updating - step 2" src="/assets/ccm-migrator/update02.png" /></p>
-<p>Click "Next" at the bottom of each subsequent screen, leaving all options at the default, then click "Finish" upon reaching the "Step 3: Summary" stage.</p>
+<p>Click "Next" at the bottom of most subsequent screens, leaving all options at the default,
+except that you may need to enter the JNDI name for the Filenet Object Store database at
+"Step 3: Map resource environment references to resources".</p>
+<p>Click "Finish" upon reaching the "Summary" stage. This may be labelled as "Step 3" or
+"Step 4" depending on whether you needed to enter a JNDI name as above.</p>
 <p><img alt="Updating - step 3" src="/assets/ccm-migrator/update03.png" /></p>
 <p>After clicking "Finish", there will be some delay while the next screen fills in. Click the "Save" link when it appears.</p>
 <p><img alt="Updating - step 4" src="/assets/ccm-migrator/update04.png" /></p>
@@ -3164,7 +3173,7 @@ Limited licences also require <code>iswCCMLicenceCommunities</code>.</p>
   <small>
     
       Last update:
-      2022-07-08
+      2022-08-03
     
   </small>
 </div>
