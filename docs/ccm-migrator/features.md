@@ -15,5 +15,5 @@ Features
 | Migration roll-back by community              | ✅        |
 | Migrate between two Connections environments  | ✅        |
 | Export CCM data to file system                | ✅        |
-| Migrate library to sub-community files        | 📅Q3 2022 |
-| Export data for URL redirection               | 📅Q3 2022 |
+| Migrate library to sub-community files        | ✅        |
+| Export data for URL redirection               | ✅        |

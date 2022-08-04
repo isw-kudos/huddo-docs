@@ -12,23 +12,24 @@ or contact your favorite Huddo team member.
 | CCM Data                | Connections Community Files | Filesystem |
 | ----------------------- | :-------------------------: | :--------: |
 | File Data               |             ✅              |     ✅     |
-| File Name               |             ✅              |            |
-| Versions                |             ✅              |            |
-| Version Filenames       |             ✅              |            |
-| Drafts                  |             ✅              |            |
-| Tags                    |             ✅              |            |
-| Description             |             ✅              |            |
-| Comments                |             ✅              |            |
-| Comment Related Version |             ✅              |            |
-| Likes                   |             ✅              |            |
-| Follows                 |             ✅              |            |
-| Created by              |             ✅              |            |
-| Created date            |             ✅              |            |
-| Updated by              |             ✅              |            |
-| Updated date            |             ❌              |            |
-| Custom Metadata         |          📅Q3 2022          | 📅Q3 2022  |
-| Document Types          |          📅Q3 2022          | 📅Q3 2022  |
-| URL Redirects           |          📅Q3 2022          | 📅Q3 2022  |
-| Total Downloads         |             ❌              |     ❌     |
+| File Name               |             ✅              |     ✅     |
+| Versions                |             ✅              |     ✅     |
+| Version Filenames       |             ✅              |     ✅     |
+| Drafts                  |             ✅              |     ✅     |
+| Tags                    |             ✅              |     ✅     |
+| Description             |             ✅              |     ✅     |
+| Comments                |             ✅              |     ✅     |
+| Comment Related Version |             ✅              |     ✅     |
+| Total Likes             |             ✅              |     ✅     |
+| Liked by                |             ✅              |     ❌     |
+| Follows                 |             ✅              |     ❌     |
+| Created by              |             ✅              |     ✅     |
+| Created date            |             ✅              |     ✅     |
+| Updated by              |             ✅              |     ✅     |
+| Updated date            |             ✅              |     ✅     |
+| Custom Metadata         |          📅Q3 2022          |     ✅     |
+| Document Types          |          📅Q3 2022          |     ✅     |
+| URL Redirects           |          📅Q3 2022          |     ✅     |
+| Total Downloads         |             ❌              |     ✅     |
 | Downloaded by           |             ❌              |     ❌     |
-| Sharing permissions     |             ❌              |     ❌     |
+| Sharing permissions     |             ❌              |     ✅     |
