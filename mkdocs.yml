@@ -184,9 +184,11 @@ nav:
     - Minio: buzzy/minio.md
 
   - CCM Migrator:
+    - Features: ccm-migrator/features.md
     - Installation: ccm-migrator/install.md
     - Update: ccm-migrator/update.md
     - Usage: ccm-migrator/usage.md
+    - Supported Data: ccm-migrator/supported-data.md
     - File-system Export: ccm-migrator/export-fs.md
 
   - log4j: log4j.md

@@ -1,5 +1,11 @@
 Features
 --------
+This is a breif list of the features we have implemented or plan to implement in the future.
+
+If you want to know more you're very welcome to [open an issue on
+GitHub](https://github.com/isw-kudos/huddo-docs/issues/new?labels=ccm-migrator)
+or contact your favorite Huddo team member.
+
 
 | Name                                          | Status   |
 | --------------------------------------------- | -------- |
