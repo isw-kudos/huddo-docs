@@ -786,11 +786,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/ccm-migrator/data-support/</loc>
-         <lastmod>2022-08-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/ccm-migrator/export-fs/</loc>
          <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
@@ -802,6 +797,11 @@
     </url>
     <url>
          <loc>https://docs.huddo.com/ccm-migrator/install/</loc>
+         <lastmod>2022-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/ccm-migrator/supported-data/</loc>
          <lastmod>2022-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
