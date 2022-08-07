@@ -32,6 +32,6 @@ or contact your favorite Huddo team member.
 |Document Types         |            🗃             |    ✅     |
 |Total Downloads        |             ❌             |    ✅     |
 |Downloaded by          |             ❌             |    ❌     |
-|Sharing permissions    |             ❌             |    ✅     |
+|Library/Folder/File permissions|     ❌             |    ✅     |
 
 🗃 - Exported to file system
