@@ -33,5 +33,6 @@ or contact your favorite Huddo team member.
 |Total Downloads        |             ❌             |    ✅     |
 |Downloaded by          |             ❌             |    ❌     |
 |Library/Folder/File permissions|     ❌             |    ✅     |
+|Approval workflow state|             ❌             |    ❌     |
 
 🗃 - Exported to file system
