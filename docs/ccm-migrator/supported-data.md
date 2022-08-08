@@ -1,4 +1,5 @@
-## Data Supported in Migrations
+Data Supported in Migrations
+===========================
 
 This document is intended to be a comprehensive list of every piece of metadata
 in CCM that CCM Migrator can extract and whether is is supported when migrating
