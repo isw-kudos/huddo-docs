@@ -24,6 +24,19 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-08-09
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-08-09)
+
+Improvements:
+
+- Compatibility for private channels in Teams
+
+Fixes:
+
+- Attach Card with remembered previous selection
+
+---
+
 #### 2022-06-24
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-06-24)
 
