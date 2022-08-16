@@ -1752,6 +1752,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2022-08-12" class="md-nav__link">
+    2022-08-12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2022-08-09" class="md-nav__link">
     2022-08-09
   </a>
@@ -3254,6 +3261,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2022-08-12" class="md-nav__link">
+    2022-08-12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2022-08-09" class="md-nav__link">
     2022-08-09
   </a>
@@ -3380,16 +3394,27 @@
 <p><strong>Note:</strong> to upgrade from images in the Component Pack download to the latest images hosted by us on Dockerhub please follow <a href="/boards/cp/dockerhub/">this guide</a>.</p>
 </blockquote>
 <p>Please use the appropriate update command. For example:</p>
-<p>Huddo Boards in Kubernetes
+<p>Huddo Boards in Kubernetes</p>
 <div class="highlight"><pre><span></span><code>helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards
-</code></pre></div></p>
-<p>Component Pack (Activities Plus)
+</code></pre></div>
+<p>Component Pack (Activities Plus)</p>
 <div class="highlight"><pre><span></span><code>helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
-</code></pre></div></p>
+</code></pre></div>
 <p>See here for the <a href="/boards/helm-charts/">Helm Charts change log</a>.</p>
 <hr />
 <h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
 <h3 id="2022">2022<a class="headerlink" href="#2022" title="Permanent link">&para;</a></h3>
+<h4 id="2022-08-12">2022-08-12<a class="headerlink" href="#2022-08-12" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-08-12">Dockerhub</a></p>
+<p>Features:</p>
+<ul>
+<li>Domino authentication <a href="/boards/domino/">More info here</a></li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Distorted profile image if not square</li>
+</ul>
+<hr />
 <h4 id="2022-08-09">2022-08-09<a class="headerlink" href="#2022-08-09" title="Permanent link">&para;</a></h4>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-08-09">Dockerhub</a></p>
 <p>Improvements:</p>
@@ -3455,8 +3480,8 @@
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-04-20">Dockerhub</a></p>
 <p>Features:</p>
 <ul>
-<li>
-<p>Login to Boards using Single Sign On (SSO) in Microsoft Teams</p>
+<li>Login to Boards using Single Sign On (SSO) in Microsoft Teams</li>
+</ul>
 <blockquote>
 <p><strong>Note</strong>: you will need to:</p>
 <ol>
@@ -3464,8 +3489,6 @@
 <li><a href="/boards/msgraph/teams-on-prem/#configure-application">download the latest app definition from Boards admin section and update it in Teams</a>.</li>
 </ol>
 </blockquote>
-</li>
-</ul>
 <p>Fixes:</p>
 <ul>
 <li>Issue loading Activity Stream gadget</li>
@@ -3672,12 +3695,14 @@
 <ul>
 <li>
 <p>Reduce reliance on Communities application</p>
-<ul>
-<li>Reduce member lookups</li>
+</li>
+<li>
+<p>Reduce member lookups</p>
+</li>
 <li>Increase page size of Communities requests</li>
 <li>Throttles simultaneous requests to Communities</li>
-<li>Increase caching of responses</li>
-</ul>
+<li>
+<p>Increase caching of responses</p>
 </li>
 <li>
 <p>Undo / Redo option in Rich Text editor</p>
@@ -3843,18 +3868,20 @@ iswkudos/kudos-boards:boards-event-2021-05-13
 <ul>
 <li>
 <p>Link to Files / Upload to Files</p>
-<ul>
-<li>Show options for all member Groups (Communities)</li>
+</li>
+<li>
+<p>Show options for all member Groups (Communities)</p>
+</li>
 <li>Updated defaults for private Boards</li>
 <li>Alphabetic ordering of Connections files</li>
-<li>Type to filter</li>
-</ul>
+<li>
+<p>Type to filter</p>
 </li>
 <li>
 <p>Allow custom NodeMailer email options (insecure tls etc)</p>
-<p><code>core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"</code></p>
 </li>
 </ul>
+<p><code>core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"</code></p>
 <p>Fixes:</p>
 <ul>
 <li>Color tag menu positioning on small screen</li>
@@ -3987,12 +4014,12 @@ iswkudos/kudos-boards:activity-migration-2021-03-16
 <li>Handle legacy Boards WebSphere URL redirect (hashes)</li>
 <li>
 <p>Ability to <a href="/boards/howto/admin/transition-between-providers/">transition between providers</a></p>
-<ul>
-<li>Link User accounts by full email address</li>
+</li>
+<li>
+<p>Link User accounts by full email address</p>
+</li>
 <li>Map Groups by CSV file</li>
 <li>Transfer Ownership &amp; Unlink accounts</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -4040,14 +4067,18 @@ iswkudos/kudos-boards:activity-migration-2021-03-05
 <li><a href="https://boards.api.huddo.com">New API with docs!</a></li>
 <li>
 <p>API integrations with</p>
-<ul>
-<li>Zapier</li>
-<li>Power Automate</li>
-<li>Leave a Board</li>
+</li>
+<li>
+<p>Zapier</p>
+</li>
+<li>
+<p>Power Automate</p>
+</li>
+<li>
+<p>Leave a Board</p>
+</li>
 <li>Card description lock (one-at-a-time editing)</li>
 <li>Embed Cards/Boards in third party apps (e.g. Sharepoint)</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -4110,11 +4141,9 @@ iswkudos/kudos-boards:activity-migration-2021-02-19
 </code></pre></div>
 <p>Improvements:</p>
 <ul>
-<li>Todos view<ul>
+<li>Todos view</li>
 <li>hide sub-cards which are not applicable</li>
 <li>hide multi-assigned tasks I have completed (assigned view)</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -4168,8 +4197,8 @@ iswkudos/kudos-boards:activity-migration-2020-12-14
 <p>Features:</p>
 <ul>
 <li>Updated migration service to support the new "Community Owners only" option</li>
-<li>
-<p>Added fix for Activities that had already been imported and used the equivalent permission set in Activities</p>
+<li>Added fix for Activities that had already been imported and used the equivalent permission set in Activities</li>
+</ul>
 <p><code>boards.yaml</code></p>
 <div class="highlight"><pre><span></span><code><span class="nt">migration</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
@@ -4177,8 +4206,6 @@ iswkudos/kudos-boards:activity-migration-2020-12-14
 <span class="w">    </span><span class="c1"># true = run the fix and report results</span><span class="w"></span>
 <span class="w">    </span><span class="nt">FIX_COMMUNITY_OWNERS_ONLY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test|true</span><span class="w"></span>
 </code></pre></div>
-</li>
-</ul>
 <hr />
 <p>2020-12-12</p>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-12-12">Dockerhub</a></p>
@@ -4275,18 +4302,14 @@ iswkudos/kudos-boards:activity-migration-2020-10-05
 </code></pre></div>
 <p>Features:</p>
 <ul>
-<li>Board Search<ul>
+<li>Board Search</li>
 <li>Increase visibility of filters</li>
 <li>Maintain filters after page reload</li>
 <li>Hide Completed Todos</li>
 <li>Hide Empty Lists</li>
-</ul>
-</li>
-<li>Preview Files, support for<ul>
+<li>Preview Files, support for</li>
 <li>Excel (xlsx, xls)</li>
 <li>PDF</li>
-</ul>
-</li>
 </ul>
 <p>Improvements:</p>
 <ul>
@@ -4315,14 +4338,12 @@ iswkudos/kudos-boards:activity-migration-2020-09-18
 </code></pre></div>
 <p>Features:</p>
 <ul>
-<li>New rich text editor with improved handling for<ul>
+<li>New rich text editor with improved handling for</li>
 <li>tables</li>
 <li>whitepace</li>
 <li>paste from office</li>
 <li>font, font size, font color</li>
 <li>file upload feedback</li>
-</ul>
-</li>
 <li>Search Board by Custom Fields (Text &amp; People)</li>
 <li>Search improvements - show sub-tasks when parent match filter</li>
 </ul>
@@ -4518,7 +4539,7 @@ iswkudos/kudos-boards:boards-2020-03-06
 <li>Archived cards appear twice</li>
 <li>Powered by Huddo image</li>
 </ul>
-<p>Language support:
+<p>Language support:</p>
 <div class="highlight"><pre><span></span><code>  &quot;supported&quot;: {
     &quot;ar&quot;:[],
     &quot;bg&quot;:[],
@@ -4552,14 +4573,14 @@ iswkudos/kudos-boards:boards-2020-03-06
     &quot;zh&quot;:[&quot;TW&quot;]
   },
     &quot;default&quot;: &quot;en&quot;
-</code></pre></div></p>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-08-09
+      2022-08-16
     
   </small>
 </div>
