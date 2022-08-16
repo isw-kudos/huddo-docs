@@ -7,11 +7,13 @@
 Please use the appropriate update command. For example:
 
 Huddo Boards in Kubernetes
+
 ```
 helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards
 ```
 
 Component Pack (Activities Plus)
+
 ```
 helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
@@ -24,7 +26,22 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-08-12
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-08-12)
+
+Features:
+
+- Domino authentication [More info here](/boards/domino/)
+
+Fixes:
+
+- Distorted profile image if not square
+
+---
+
 #### 2022-08-09
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-08-09)
 
 Improvements:
@@ -38,6 +55,7 @@ Fixes:
 ---
 
 #### 2022-06-24
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-06-24)
 
 Features:
@@ -63,7 +81,9 @@ Fixes:
 - Description not saving in certain window changing scenarios
 
 ---
+
 #### 2022-05-13
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-05-13)
 
 Features:
@@ -89,18 +109,19 @@ Fixes:
 - Issue with attachments from EML uploads (e.g. drag from HCL Notes)
 
 ---
+
 #### 2022-04-20
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-20)
 
 Features:
 
 - Login to Boards using Single Sign On (SSO) in Microsoft Teams
 
-
-    > **Note**: you will need to:
-    >
-    > 1. [Configure SSO in Teams](/boards/msgraph/auth/#configure-sso-in-teams) in your existing Azure OAuth application definition
-    > 2. [download the latest app definition from Boards admin section and update it in Teams](/boards/msgraph/teams-on-prem/#configure-application).
+  > **Note**: you will need to:
+  >
+  > 1. [Configure SSO in Teams](/boards/msgraph/auth/#configure-sso-in-teams) in your existing Azure OAuth application definition
+  > 2. [download the latest app definition from Boards admin section and update it in Teams](/boards/msgraph/teams-on-prem/#configure-application).
 
 Fixes:
 
@@ -112,6 +133,7 @@ Fixes:
 ---
 
 #### 2022-04-07
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-04-07)
 
 Improvements:
@@ -135,6 +157,7 @@ Activity Migration:
 ---
 
 #### 2022-03-21
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-21)
 
 Improvements:
@@ -152,6 +175,7 @@ Fixes:
 ---
 
 #### 2022-03-09
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-03-09)
 
 Improvements:
@@ -172,6 +196,7 @@ Activity Migration:
 ---
 
 #### 2022-02-17
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-17)
 
 Features:
@@ -199,6 +224,7 @@ Activity Migration:
 ---
 
 #### 2022-02-10
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-02-10)
 
 ##### File store migration
@@ -223,6 +249,7 @@ Fixes:
 ---
 
 #### 2022-01-07
+
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-01-07)
 
 Fixes:
@@ -334,10 +361,10 @@ Improvements:
 
 - Reduce reliance on Communities application
 
-    - Reduce member lookups
-    - Increase page size of Communities requests
-    - Throttles simultaneous requests to Communities
-    - Increase caching of responses
+  - Reduce member lookups
+  - Increase page size of Communities requests
+  - Throttles simultaneous requests to Communities
+  - Increase caching of responses
 
 - Undo / Redo option in Rich Text editor
 
@@ -406,7 +433,7 @@ Fixes:
 
 **Breaking change:**
 
-> Emails are now sent by the `events` service. You must move the NOTIFIER_* environment variables from `core` to `events` as [shown above](/boards/releases/#important-update-cp-v3)
+> Emails are now sent by the `events` service. You must move the NOTIFIER\_\* environment variables from `core` to `events` as [shown above](/boards/releases/#important-update-cp-v3)
 
 Images:
 
@@ -527,14 +554,14 @@ Improvements:
 
 - Link to Files / Upload to Files
 
-    - Show options for all member Groups (Communities)
-    - Updated defaults for private Boards
-    - Alphabetic ordering of Connections files
-    - Type to filter
+  - Show options for all member Groups (Communities)
+  - Updated defaults for private Boards
+  - Alphabetic ordering of Connections files
+  - Type to filter
 
 - Allow custom NodeMailer email options (insecure tls etc)
 
-    `core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"`
+  `core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"`
 
 Fixes:
 
@@ -644,6 +671,7 @@ Activity Migration
 - Use Connections Shared Drive to load Activity long descriptions and files (new variables & volume/mount required in yaml)
 
 ---
+
 2021-03-22
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-22)
 
@@ -692,9 +720,9 @@ Improvements:
 - Handle legacy Boards WebSphere URL redirect (hashes)
 - Ability to [transition between providers](/boards/howto/admin/transition-between-providers/)
 
-    - Link User accounts by full email address
-    - Map Groups by CSV file
-    - Transfer Ownership & Unlink accounts
+  - Link User accounts by full email address
+  - Map Groups by CSV file
+  - Transfer Ownership & Unlink accounts
 
 Fixes:
 
@@ -752,8 +780,9 @@ Features:
 - [New API with docs!](https://boards.api.huddo.com)
 - API integrations with
 
-    - Zapier
-    - Power Automate
+  - Zapier
+  - Power Automate
+
 - Leave a Board
 - Card description lock (one-at-a-time editing)
 - Embed Cards/Boards in third party apps (e.g. Sharepoint)
@@ -835,8 +864,8 @@ iswkudos/kudos-boards:activity-migration-2021-02-19
 Improvements:
 
 - Todos view
-    - hide sub-cards which are not applicable
-    - hide multi-assigned tasks I have completed (assigned view)
+  - hide sub-cards which are not applicable
+  - hide multi-assigned tasks I have completed (assigned view)
 
 Fixes:
 
@@ -904,15 +933,15 @@ Features:
 - Updated migration service to support the new "Community Owners only" option
 - Added fix for Activities that had already been imported and used the equivalent permission set in Activities
 
-    `boards.yaml`
+  `boards.yaml`
 
-    ```yaml
-    migration:
-      env:
-        # test = report activities and board membership that can be updated
-        # true = run the fix and report results
-        FIX_COMMUNITY_OWNERS_ONLY: test|true
-    ```
+  ```yaml
+  migration:
+    env:
+      # test = report activities and board membership that can be updated
+      # true = run the fix and report results
+      FIX_COMMUNITY_OWNERS_ONLY: test|true
+  ```
 
 ---
 
@@ -1018,6 +1047,7 @@ Fixes:
 - User trial reminder
 - Extension of user trials
 - Download linked files with .odt extension
+
 ---
 
 2020-10-05
@@ -1040,13 +1070,13 @@ iswkudos/kudos-boards:activity-migration-2020-10-05
 Features:
 
 - Board Search
-    - Increase visibility of filters
-    - Maintain filters after page reload
-    - Hide Completed Todos
-    - Hide Empty Lists
+  - Increase visibility of filters
+  - Maintain filters after page reload
+  - Hide Completed Todos
+  - Hide Empty Lists
 - Preview Files, support for
-    - Excel (xlsx, xls)
-    - PDF
+  - Excel (xlsx, xls)
+  - PDF
 
 Improvements:
 
@@ -1082,11 +1112,11 @@ iswkudos/kudos-boards:activity-migration-2020-09-18
 Features:
 
 - New rich text editor with improved handling for
-    - tables
-    - whitepace
-    - paste from office
-    - font, font size, font color
-    - file upload feedback
+  - tables
+  - whitepace
+  - paste from office
+  - font, font size, font color
+  - file upload feedback
 - Search Board by Custom Fields (Text & People)
 - Search improvements - show sub-tasks when parent match filter
 
@@ -1106,11 +1136,9 @@ Fixes:
 - Board Properties toolbar 'more' menu
 - API update for completing a task already completed
 
-
 ---
 
 2020-08-24
-
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-08-24)
 
@@ -1166,10 +1194,10 @@ Fixes:
 - Dragging color onto tiles
 - Allow unassigning users who are no longer members
 - Ordering issue on cards created using past
+
 ---
 
 2020-07-10
-
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-07-10)
 
@@ -1203,7 +1231,6 @@ Activity Migration:
 
 2020-06-17
 
-
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-17)
 
 Images:
@@ -1236,7 +1263,6 @@ Activity Migration:
 ---
 
 2020-06-05
-
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-05)
 
@@ -1278,7 +1304,6 @@ Fixes:
 
 2020-04-09
 
-
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-04-09)
 
 Images:
@@ -1301,7 +1326,6 @@ Fixes:
 
 2020-03-06
 
-
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-03-06)
 
 Images:
@@ -1316,7 +1340,6 @@ iswkudos/kudos-boards:core-2020-03-06
 iswkudos/kudos-boards:boards-2020-03-06
 ```
 
-
 Fixes:
 
 - Updating cards permissions
@@ -1325,8 +1348,9 @@ Fixes:
 - member issue when moving card into new board
 - Archived cards appear twice
 - Powered by Huddo image
- 
+
 Language support:
+
 ```
   "supported": {
     "ar":[],
