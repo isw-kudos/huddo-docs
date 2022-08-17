@@ -7,15 +7,14 @@ global:
   imagePullSecret: myregkey
   env:
     APP_URI: https://[BOARDS_URL]
+    API_GATEWAY: https://[CONNECTIONS_URL]/api-boards
 
 minio:
   useDockerHub: true
   nfs:
     server: 192.168.0.0
-    
-webfront: 
-  env:
-    API_GATEWAY: https://[CONNECTIONS_URL]/api-boards
+
+webfront:
   ingress:
     # This hostname must match other Ingresses defined in your CP environment
     # If all ingresses start with * you must match the pattern, or all traffic will be routed to Boards and everything will break
@@ -55,7 +54,7 @@ user:
     CONNECTIONS_CLIENT_ID: huddoboards
     CONNECTIONS_URL: https://[CONNECTIONS_URL]
     CONNECTIONS_CLIENT_SECRET: [CLIENT_SECRET]
-    CONNECTIONS_ADMINS: "[\"<ADMIN_EMAIL>\"]"
+    CONNECTIONS_ADMINS: '["<ADMIN_EMAIL>"]'
 
 migration:
   env:

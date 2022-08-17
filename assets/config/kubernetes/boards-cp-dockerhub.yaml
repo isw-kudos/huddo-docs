@@ -8,6 +8,7 @@ global:
   # imageTagSuffix: 2019-11-20
   env:
     APP_URI: https://connections.example.com/boards
+    API_GATEWAY: https://connections.example.com/api-boards
 
 minio:
   useDockerHub: true
@@ -28,8 +29,6 @@ webfront:
   image:
     name: ""
     tag: webfront
-  env:
-    API_GATEWAY: https://connections.example.com/api-boards
   ingress:
     # This hostname must match other Ingresses defined in your CP environment
     # If all ingresses start with * you must match the pattern, or all traffic will be routed to Boards and everything will break

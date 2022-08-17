@@ -3,13 +3,12 @@
 global:
   env:
     APP_URI: https://example.com/boards
+    API_GATEWAY: https://example.com/api-boards
     APP_URI_PATH: /boards
 
 webfront:
   ingress:
     path: /boards/?(.*)
-  env:
-    API_GATEWAY: https://example.com/api-boards
 
 core:
   ingress:
