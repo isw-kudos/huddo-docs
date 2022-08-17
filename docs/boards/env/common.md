@@ -4,7 +4,7 @@ Please set the following ENV variables in your config file
 
 | Key                                       | Description                                                                                                                                                               |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `webfront.env.API_GATEWAY`                | Fully qualified URL of the API in the format `https://[API_URL]`                                                                                                          |
+| `global.env.API_GATEWAY`                  | Fully qualified URL of the API in the format `https://[API_URL]`                                                                                                          |
 | `webfront.env.DEFAULT_TEAM`               | Name of the team users will primarily login with.</br>This will be shown on the login page.</br>**Optional**: Only set if you are authenticating with multiple providers. |
 | `events.env.NOTIFIER_EMAIL_HOST`          | SMTP gateway hostname, e.g. `smtp.ethereal.com`                                                                                                                           |
 | `events.env.NOTIFIER_EMAIL_USERNAME`      | **Optional**: SMTP gateway authentication.<br/>Setting a value will enable auth and use the default port of `587`                                                         |
@@ -21,6 +21,6 @@ Please set the following ENV variables in your config file
 | `user.env.CONNECTIONS_CLIENT_SECRET`      | oAuth client-secret as configured in [this step](/boards/connections/auth-on-prem/)                                                                                       |
 | `user.env.CONNECTIONS_URL`                | HCL Connections URL, e.g. `https://connections.example.com`                                                                                                               |
 | `user.env.CONNECTIONS_ADMINS`             | Emails or GUIDs of users to grant admin permissions.<br/>e.g. `"[\"admin1@company.example.com\", \"PROF_GUID_2\"]`"                                                       |
-| `user.env.CONNECTIONS_KEYCLOAK_URL`       | **Optional**: See [keycloak authentication](/boards/connections/keycloak/) for more information                                                                            |
-| `user.env.CONNECTIONS_KEYCLOAK_REALM`     | **Optional**: See [keycloak authentication](/boards/connections/keycloak/) for more information                                                                            |
+| `user.env.CONNECTIONS_KEYCLOAK_URL`       | **Optional**: See [keycloak authentication](/boards/connections/keycloak/) for more information                                                                           |
+| `user.env.CONNECTIONS_KEYCLOAK_REALM`     | **Optional**: See [keycloak authentication](/boards/connections/keycloak/) for more information                                                                           |
 | `user.env.DISABLE_WELCOME_EMAIL`          | **Optional**: Set to disable welcome emails for users                                                                                                                     |

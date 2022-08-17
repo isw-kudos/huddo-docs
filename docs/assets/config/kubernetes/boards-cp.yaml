@@ -7,6 +7,7 @@ global:
   imagePullSecret: myregkey
   env:
     APP_URI: https://connections.example.com/boards
+    API_GATEWAY: https://connections.example.com/api-boards
 
 minio:
   # persistentVolumePath: pv-connections
@@ -14,8 +15,6 @@ minio:
     server: 192.168.0.1
 
 webfront:
-  env:
-    API_GATEWAY: https://connections.example.com/api-boards
   ingress:
     # This hostname must match other Ingresses defined in your CP environment
     # If all ingresses start with * you must match the pattern, or all traffic will be routed to Boards and everything will break
@@ -59,7 +58,7 @@ user:
     # CONNECTIONS_NAME: HCL Connections
     # CONNECTIONS_CLIENT_ID: huddoboards
     CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
-    CONNECTIONS_ADMINS: "[\"admin1@company.example.com\", \"boss2@company.example.com\", \"PROF_GUID_3\"]"
+    CONNECTIONS_ADMINS: '["admin1@company.example.com", "boss2@company.example.com", "PROF_GUID_3"]'
 
 migration:
   # configure access to the Connections Shared mount
@@ -79,7 +78,7 @@ migration:
     # TZ: America/New_York
     # TZ: Australia/Hobart
     # TZ: Europe/London
-    
+
     CONNECTIONS_ACTIVITIES_ADMIN_USERNAME: connectionsadmin
     CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD: adminpassword
     CONNECTIONS_DB_HOST: dbserver.company.com
