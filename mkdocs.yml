@@ -10,60 +10,60 @@ extra:
     provider: google
     property: UA-1747668-5
   social:
-  - icon: fontawesome/brands/twitter
-    link: https://twitter.com/HuddoApps
-  - icon: fontawesome/brands/facebook
-    link: https://www.facebook.com/huddoapps
-  - icon: fontawesome/brands/linkedin
-    link: https://www.linkedin.com/company/huddoapps
-  - icon: fontawesome/brands/youtube
-    link: https://www.youtube.com/channel/UCiDj7UkYGqm41VUssa1FUrw
-  - icon: fontawesome/brands/github
-    link: https://github.com/isw-kudos
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/HuddoApps
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/huddoapps
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/huddoapps
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCiDj7UkYGqm41VUssa1FUrw
+    - icon: fontawesome/brands/github
+      link: https://github.com/isw-kudos
 
 nav:
   - Welcome: index.md
   - Huddo Analytics:
-    - Installation:
-      - Overview: analytics/install/overview.md
-      - Install Application: analytics/install/app.md
-      - Widgets: analytics/install/install-widgets.md
-      - Apply Changes: analytics/install/apply-changes.md
-      - Add Widgets: analytics/install/add-widgets.md
-      - Community Properties: analytics/install/comm-properties.md
-      - Licence: analytics/install/licence.md
-      - Customising: analytics/install/customising.md
-      - FAQ: analytics/install/websphere-faq.md
-    - User Guide :
-      - Introduction: analytics/user-guide/introduction.md
-      - Using Reports: analytics/user-guide/using-reports.md
-      - Available Reports: analytics/user-guide/available-reports.md
-      - How to Access Reports: analytics/user-guide/access-reports.md
-      - Glossary of Terms: analytics/user-guide/terms.md
-      - Event Map: analytics/user-guide/itemtype-map.md
+      - Installation:
+          - Overview: analytics/install/overview.md
+          - Install Application: analytics/install/app.md
+          - Widgets: analytics/install/install-widgets.md
+          - Apply Changes: analytics/install/apply-changes.md
+          - Add Widgets: analytics/install/add-widgets.md
+          - Community Properties: analytics/install/comm-properties.md
+          - Licence: analytics/install/licence.md
+          - Customising: analytics/install/customising.md
+          - FAQ: analytics/install/websphere-faq.md
+      - User Guide:
+          - Introduction: analytics/user-guide/introduction.md
+          - Using Reports: analytics/user-guide/using-reports.md
+          - Available Reports: analytics/user-guide/available-reports.md
+          - How to Access Reports: analytics/user-guide/access-reports.md
+          - Glossary of Terms: analytics/user-guide/terms.md
+          - Event Map: analytics/user-guide/itemtype-map.md
   - Huddo Badges:
-     - Details: badges/index.md
-     - Installation:
-        - Overview: badges/install/overview.md
-        - Install Application: badges/install/app.md
-        - Widgets: badges/install/install-widgets.md
-        - Mobile: badges/install/mobile.md
-        - Apply Changes: badges/install/apply-changes.md
-        - Add Widgets: badges/install/add-widgets.md
-        - Community Properties: badges/install/comm-properties.md
-        - Licence: badges/install/licence.md
-        - Defaults: badges/install/load-defaults.md
-        - Leaderboard: badges/install/leaderboard.md
-        - Awards: badges/install/awards.md
-        - Engine: badges/install/engine.md
-        - Customising: badges/install/customising.md
-        #- Embedded Experience: badges/install/embedded-exp.md
-        - FAQ: badges/websphere-faq.md
-     - Update:
-        - Overview: badges/update/overview.md
-        - Update the Application: badges/update/update_app.md
-        - Refresh Widget Cache: badges/update/refresh_cache.md
-     - Huddo Images: badges/update-images.md
+      - Details: badges/index.md
+      - Installation:
+          - Overview: badges/install/overview.md
+          - Install Application: badges/install/app.md
+          - Widgets: badges/install/install-widgets.md
+          - Mobile: badges/install/mobile.md
+          - Apply Changes: badges/install/apply-changes.md
+          - Add Widgets: badges/install/add-widgets.md
+          - Community Properties: badges/install/comm-properties.md
+          - Licence: badges/install/licence.md
+          - Defaults: badges/install/load-defaults.md
+          - Leaderboard: badges/install/leaderboard.md
+          - Awards: badges/install/awards.md
+          - Engine: badges/install/engine.md
+          - Customising: badges/install/customising.md
+          #- Embedded Experience: badges/install/embedded-exp.md
+          - FAQ: badges/websphere-faq.md
+      - Update:
+          - Overview: badges/update/overview.md
+          - Update the Application: badges/update/update_app.md
+          - Refresh Widget Cache: badges/update/refresh_cache.md
+      - Huddo Images: badges/update-images.md
   - Huddo Boards:
       - Versions: boards/index.md
       - Boards Cloud:
@@ -79,6 +79,7 @@ nav:
                   - Mobile App: boards/connections/mobile-app-hybrid.md
                   - Security: boards/connections/security.md
               - HCL Verse: boards/verse/addin-hybrid.md
+              - HCL Domino: boards/domino.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
                   - Getting Started: boards/msgraph/getting-started.md
@@ -104,6 +105,7 @@ nav:
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Web Server Config: boards/connections/httpd.md
               - HCL Verse: boards/verse/addin-on-prem.md
+              - HCL Domino: boards/domino.md
               - Office 365:
                   - Authentication: boards/msgraph/auth.md
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
@@ -163,33 +165,33 @@ nav:
               - Manage Licences: boards/howto/manage-licences.md
               - Revoke Users: boards/howto/admin/revoke-users.md
               - Transition Providers:
-                - Overview: boards/howto/admin/transition-between-providers.md
-                - Synchronise Profiles: boards/howto/admin/sync-profiles.md
-                - Link User Accounts: boards/howto/admin/link-users.md
-                - Replace Group Membership: boards/howto/admin/replace-group-membership.md
-                - Transfer Ownership & Unlink: boards/howto/admin/transfer-ownership-unlink.md
-                - Deactivate Login: boards/howto/admin/deactivate-login.md
+                  - Overview: boards/howto/admin/transition-between-providers.md
+                  - Synchronise Profiles: boards/howto/admin/sync-profiles.md
+                  - Link User Accounts: boards/howto/admin/link-users.md
+                  - Replace Group Membership: boards/howto/admin/replace-group-membership.md
+                  - Transfer Ownership & Unlink: boards/howto/admin/transfer-ownership-unlink.md
+                  - Deactivate Login: boards/howto/admin/deactivate-login.md
           - Development:
               - Related Tasks: boards/howto/developing/related-tasks.md
 
   - Huddo Ideas: ideas/howto.md
   - Buzzy:
       # - Overview: buzzy/index.md
-    - Overview: buzzy/buzzy-icp.md
-    - Connections OAuth Config: buzzy/buzzy-oauth.md
-    - WAS Config: buzzy/buzzy-wasconfig.md
-    - Header Config: buzzy/buzzy-header.md
-    - Connections Widgets: buzzy/buzzy-widgets.md
-    - Mongo: buzzy/mongo.md
-    - Minio: buzzy/minio.md
+      - Overview: buzzy/buzzy-icp.md
+      - Connections OAuth Config: buzzy/buzzy-oauth.md
+      - WAS Config: buzzy/buzzy-wasconfig.md
+      - Header Config: buzzy/buzzy-header.md
+      - Connections Widgets: buzzy/buzzy-widgets.md
+      - Mongo: buzzy/mongo.md
+      - Minio: buzzy/minio.md
 
   - CCM Migrator:
-    - Features: ccm-migrator/features.md
-    - Installation: ccm-migrator/install.md
-    - Update: ccm-migrator/update.md
-    - Usage: ccm-migrator/usage.md
-    - Supported Data: ccm-migrator/supported-data.md
-    - File-system Export: ccm-migrator/export-fs.md
+      - Features: ccm-migrator/features.md
+      - Installation: ccm-migrator/install.md
+      - Update: ccm-migrator/update.md
+      - Usage: ccm-migrator/usage.md
+      - Supported Data: ccm-migrator/supported-data.md
+      - File-system Export: ccm-migrator/export-fs.md
 
   - log4j: log4j.md
 
