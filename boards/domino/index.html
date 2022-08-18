@@ -3070,8 +3070,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#server-setup" class="md-nav__link">
-    Server setup
+  <a href="#setup" class="md-nav__link">
+    setup
   </a>
   
 </li>
@@ -3113,9 +3113,6 @@
 
 <h1 id="huddo-boards-for-hcl-domino">Huddo Boards for HCL Domino<a class="headerlink" href="#huddo-boards-for-hcl-domino" title="Permanent link">&para;</a></h1>
 <p>Huddo Boards supports authentication, user and group lookup with HCL Domino.</p>
-<blockquote>
-<p>The steps below are still work in progress, this feature is not yet publicly released.</p>
-</blockquote>
 <hr />
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3123,13 +3120,21 @@
 <li>Domino IAM service (AppDev Pack &gt;= 1.0.12) <a href="https://doc.cwpcollaboration.com/appdevpack/docs/en/iam_landing_page.html">Overview</a></li>
 <li>User credentials (PEM certificate and Key) for an application user that Boards will use to read a names.nsf database via the Proton Service.</li>
 </ul>
-<h3 id="server-setup">Server setup<a class="headerlink" href="#server-setup" title="Permanent link">&para;</a></h3>
-<p>We will require 2 domains from you
-- Domino Server domain (that has Proton listening)
-- IAM Server domain</p>
+<h3 id="setup">setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<p>We will require 2 domains from you</p>
+<ul>
+<li>Domino Server domain (that has Proton listening)</li>
+<li>IAM Server domain</li>
+</ul>
 <h3 id="iam-setup">IAM Setup<a class="headerlink" href="#iam-setup" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><strong>Callback id</strong> The Huddo Boards callback uses a base64 encoded version of your Domino Server domain, you can use a service like <a href="https://www.base64encode.org/">https://www.base64encode.org/</a> to achieve this</p>
+<p><strong>Callback URL</strong></p>
+<p><strong>Huddo Boards Cloud</strong>: Boards cloud uses a base64 encoded version of your Domino Server domain, you can use a service like <a href="https://www.base64encode.org/">https://www.base64encode.org/</a> to achieve this, the callback format looks like this: <code>https://boards.huddo.com/auth/domino/[ encoded domain ]/callback</code></p>
+<p><strong>Huddo Boards On Prem</strong>: For an on premise installation we use a global authentication setup so the callback url does not need an id. depending on your deployment it could look like one of the following:</p>
+<ul>
+<li><code>https://boards.your.domain.com/auth/domino/callback</code></li>
+<li><code>https://your.domain.com/boards/auth/domino/callback</code> if you have a context root (i.e. you would access boards application at /boards).</li>
+</ul>
 </blockquote>
 <p>You will need to setup an Application in the IAM Service with the following details</p>
 <table>
@@ -3146,11 +3151,11 @@
 </tr>
 <tr>
 <td>Application Home Page</td>
-<td>https://boards.huddo.com</td>
+<td>https://boards.huddo.com (or your boards url for an on-premise installation)</td>
 </tr>
 <tr>
 <td>Authorization Callback URL</td>
-<td>https://boards.huddo.com/auth/domino/[id above]/callback</td>
+<td>Callback URL above</td>
 </tr>
 <tr>
 <td>Proton Access</td>
@@ -3167,7 +3172,7 @@
 </tbody>
 </table>
 <h3 id="proton-user">Proton User<a class="headerlink" href="#proton-user" title="Permanent link">&para;</a></h3>
-<p>The boards application backend uses a single user to access your names.nsf directory, you will need to setup a user with appropriate access and import a PEM Certificate as detailed below.</p>
+<p>The boards application backend uses a single user to access your names.nsf directory, you will need to setup a user with appropriate access and import a PEM Certificate as detailed below, for more information, see <a href="https://doc.cwpcollaboration.com/appdevpack/docs/en/domino-db-quick-start.html#secure-network-requests">HCL's Documentation</a></p>
 <h3 id="application-process">Application Process<a class="headerlink" href="#application-process" title="Permanent link">&para;</a></h3>
 <p>Please email <a href="mailto://support@huddo.com">support@huddo.com</a> with the following details</p>
 <table>
@@ -3185,6 +3190,10 @@
 <tr>
 <td>Domino domain</td>
 <td><em>https://proton.example.com</em></td>
+</tr>
+<tr>
+<td>Boards url</td>
+<td>For on-premise installations (your licence will be tied to this url)</td>
 </tr>
 <tr>
 <td>Proton Port</td>
@@ -3218,7 +3227,7 @@
   <small>
     
       Last update:
-      2022-03-25
+      2022-08-18
     
   </small>
 </div>
