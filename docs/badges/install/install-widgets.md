@@ -64,9 +64,9 @@ session as the checkout for the changes to take effect.
 
 Checking Out the Widgets-Config.xml File:
 
-[Connections 5.5](http://www-01.ibm.com/support/knowledgecenter/SSYGQH_5.5.0/admin/admin/t_admin_profiles_use_widgets_config.html)
+[Connections 5.5](https://help.hcltechsw.com/connections/v55/admin/admin/t_admin_profiles_changing_admin.html)
 
-[Connections 6.0](https://www.ibm.com/support/knowledgecenter/SSYGQH_6.0.0/admin/admin/t_admin_profiles_use_widgets_config.html)
+[Connections 6.0](https://help.hcltechsw.com/connections/v6/admin/admin/t_admin_profiles_changing_admin.html)
 
 [Connections 6.5](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_profiles_changing_admin.html)
 
@@ -199,9 +199,9 @@ documentation for instructions on how to check in the widgets-config.xml file, l
 
 Checking In the Widgets-Config.xml File:
 
-[Connections 5.5](http://www-01.ibm.com/support/knowledgecenter/SSYGQH_5.5.0/admin/admin/t_admin_profiles_use_widgets_config.html)
+[Connections 5.5](https://help.hcltechsw.com/connections/v55/admin/admin/t_admin_profiles_changing_admin.html)
 
-[Connections 6.0](https://www.ibm.com/support/knowledgecenter/SSYGQH_6.0.0/admin/admin/t_admin_profiles_use_widgets_config.html)
+[Connections 6.0](https://help.hcltechsw.com/connections/v6/admin/admin/t_admin_profiles_changing_admin.html)
 
 [Connections 6.5](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_profiles_changing_admin.html)
 
