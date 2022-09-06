@@ -4,6 +4,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2022
 
+### September
+
+2022-09-05
+
+- Updated translations including notifications
+
 ### July
 
 2022-07-08
