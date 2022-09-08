@@ -26,6 +26,16 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-09-07
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-09-07)
+
+Security Update:
+
+- Full node.js package audit and update
+
+---
+
 #### 2022-08-25
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-08-25)
