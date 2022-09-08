@@ -191,6 +191,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/badges/update/updatev6tov7/</loc>
+         <lastmod>2022-09-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/</loc>
          <lastmod>2022-09-08</lastmod>
          <changefreq>daily</changefreq>
