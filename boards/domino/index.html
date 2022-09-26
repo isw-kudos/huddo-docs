@@ -3300,16 +3300,16 @@
 <li>IAM Server domain</li>
 </ul>
 <h3 id="iam-setup">IAM Setup<a class="headerlink" href="#iam-setup" title="Permanent link">&para;</a></h3>
-<blockquote>
 <p><strong>Callback URL</strong></p>
-<p><strong>Huddo Boards Cloud</strong>: Boards cloud uses a base64 encoded version of your Domino Server domain, you can use a service like <a href="https://www.base64encode.org/">https://www.base64encode.org/</a> to achieve this, the callback format looks like this: <code>https://boards.huddo.com/auth/domino/[ encoded domain ]/callback</code>
-e.g. for domain proton.example.com the callback url would be https://boards.huddo.com/auth/domino/cHJvdG9uLmV4YW1wbGUuY29t/callback</p>
+<p><strong>Huddo Boards Cloud</strong>: Boards cloud uses a base64 encoded version of your Domino Server domain, you can use a service like <a href="https://www.base64encode.org/">https://www.base64encode.org/</a> to achieve this, the callback format looks like this: <code>https://boards.huddo.com/auth/domino/[ encoded domain ]/callback</code></p>
+<blockquote>
+<p>e.g. for domain proton.example.com the callback url would be https://boards.huddo.com/auth/domino/cHJvdG9uLmV4YW1wbGUuY29t/callback</p>
+</blockquote>
 <p><strong>Huddo Boards On Prem</strong>: For an on premise installation we use a global authentication setup so the callback url does not need an id. depending on your deployment it could look like one of the following:</p>
 <ul>
 <li><code>https://boards.your.domain.com/auth/domino/callback</code></li>
 <li><code>https://your.domain.com/boards/auth/domino/callback</code> if you have a context root (i.e. you would access boards application at /boards).</li>
 </ul>
-</blockquote>
 <p>You will need to setup an Application in the IAM Service with the following details</p>
 <table>
 <thead>
