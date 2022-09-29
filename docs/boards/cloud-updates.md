@@ -6,6 +6,10 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### September
 
+2022-09-27
+
+- Fix for not being able to close date picker on mobile
+
 2022-09-05
 
 - Updated translations including notifications
