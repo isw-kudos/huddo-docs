@@ -4,6 +4,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2022
 
+### October
+
+2022-10-04
+
+- Fix for timeline lists not scrolling
+- Updated translations
+
 ### September
 
 2022-09-27
