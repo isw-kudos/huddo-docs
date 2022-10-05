@@ -6,6 +6,10 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### October
 
+2022-10-05
+
+- Fix for opening 'Owners Only' community boards
+
 2022-10-04
 
 - Fix for timeline lists not scrolling
