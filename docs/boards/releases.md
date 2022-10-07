@@ -26,6 +26,29 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-10-07
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-10-07)
+
+API Updates:
+
+- Add `PATCH` method for `/node/{nodeId}` to allow changing any attribute of a card or list
+- Add webhook for card-moved events (`/webhook/card-moved/{boardId}`)
+
+Translations:
+
+- Full translation run for all supported languages
+
+Features / Fixes
+
+- Fixed scolling in the Timeline view when you have too many lists to fit in the view
+- Changed colours on the Timeline view to better show cards when dragging
+- Remade the drag preview on timeline to look more like a card
+- Build process refactor - docker images are much smaller after this update
+- All images updated to pass latest security scan requirements
+
+---
+
 #### 2022-09-07
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-09-07)
