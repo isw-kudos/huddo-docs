@@ -43,6 +43,7 @@ Features / Fixes
 
 - Fixed scolling in the Timeline view when you have too many lists to fit in the view
 - Changed colours on the Timeline view to better show cards when dragging
+- Fix for closing date picker on touch screens
 - Remade the drag preview on timeline to look more like a card
 - Build process refactor - docker images are much smaller after this update
 - All images updated to pass latest security scan requirements
