@@ -10,12 +10,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 - Updates for Timeline
 
-  - animate expand/collapse of scheduled lanes
-  - fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)
-  - highlight multiple instances of same card on hover
-  - remember last view (list/color/members)
-  - live updates of list names, color labels and members
-  - show color labels
+    - animate expand/collapse of scheduled lanes
+    - fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)
+    - highlight multiple instances of same card on hover
+    - remember last view (list/color/members)
+    - live updates of list names, color labels and members
+    - show color labels
 
 2022-10-05
 
