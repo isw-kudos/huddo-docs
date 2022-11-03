@@ -26,6 +26,30 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-10-24
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-10-24)
+
+Fixes:
+
+- webhook api events may not have fired in a specific situation for users with linked accounts
+
+Improvements:
+
+- reduced processing whilst dragging cards
+- Timeline
+
+    - animate expand/collapse of scheduled lanes
+    - fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)
+    - highlight multiple instances of same card on hover
+    - remember last view (list/color/members)
+    - live updates of list names, color labels and members
+    - show color labels
+
+Features:
+
+- /app/createcard micro app - new users can now create a board instead of being stuck with no board to choose
+
 #### 2022-10-10
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-10-07)

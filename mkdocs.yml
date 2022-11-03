@@ -78,7 +78,7 @@ nav:
                   - Customizer Extensions: boards/connections/customizer/customizer-integrations-package.md
                   - Mobile App: boards/connections/mobile-app-hybrid.md
                   - Security: boards/connections/security.md
-              - HCL Verse: boards/verse/addin-hybrid.md
+              - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
@@ -104,7 +104,7 @@ nav:
                   - Mobile App: boards/connections/mobile-app-on-prem.md
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Web Server Config: boards/connections/httpd.md
-              - HCL Verse: boards/verse/addin-on-prem.md
+              - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino.md
               - Office 365:
                   - Authentication: boards/msgraph/auth.md
