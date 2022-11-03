@@ -53,7 +53,9 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 - [3.0.1](/assets/config/kubernetes/kudos-boards-cp-3.0.1.tgz) - Minio root credentials, nfs mountOptions
 - [3.1.0](/assets/config/kubernetes/kudos-boards-cp-3.1.0.tgz) - Kube 1.22 support (use Capabilities.APIVersions)
 - [3.1.1](/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz) - Added default Ingress.class annotation 'nginx'
-
+- [3.1.2](/assets/config/kubernetes/kudos-boards-cp-3.1.2.tgz) - Fix Ingress pathType annotation for old kube versions (v17 etc)
+- [3.1.3](/assets/config/kubernetes/kudos-boards-cp-3.1.3.tgz) - support Kube v1.25 - remove policy/v1beta/PodSecurityPolicy (in minio) and add ingress.ingressClassName
+- [3.1.4](/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz) - version lock Minio for 'fs' storage type support
 
 ### kudos-boards-cp-activity-migration
 

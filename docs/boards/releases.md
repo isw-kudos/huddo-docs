@@ -15,7 +15,7 @@ helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards
 Component Pack (Activities Plus)
 
 ```
-helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
+helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
 
 See here for the [Helm Charts change log](/boards/helm-charts/).
