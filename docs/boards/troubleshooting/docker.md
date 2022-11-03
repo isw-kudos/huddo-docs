@@ -93,7 +93,7 @@ webfront:
 
 ---
 
-### Minio pods fail to start in Boards CP
+## Minio pods fail to start in Boards CP
 
 If the Minio service fails to start with the following error:
 
