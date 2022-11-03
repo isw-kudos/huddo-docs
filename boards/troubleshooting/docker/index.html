@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.huddo.com/boards/troubleshooting/docker/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
     
     
       
@@ -2013,6 +2013,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#minio-pods-fail-to-start-in-boards-cp" class="md-nav__link">
+    Minio pods fail to start in Boards CP
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3233,6 +3240,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#minio-pods-fail-to-start-in-boards-cp" class="md-nav__link">
+    Minio pods fail to start in Boards CP
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3282,7 +3296,7 @@ NGINX Ingress controller
   Repository: https://github.com/kubernetes/ingress-nginx
 -------------------------------------------------------------------------------
 </code></pre></div>
-<p>As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include a regular expression which is now set as the default as of the helm chart v2.0.1.  We recommend using the latest <code>kudos-boards-cp-3.1.1.tgz</code> which includes all required annotations (including socket.io cookie fix).</p>
+<p>As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include a regular expression which is now set as the default as of the helm chart v2.0.1.  We recommend using the latest <code>kudos-boards-cp-3.1.4.tgz</code> which includes all required annotations (including socket.io cookie fix).</p>
 <p>If you have an older Ingress controller version (i.e. 0.20) you will need to apply the following customisations to fix the ingress with charts as of v2.0.1</p>
 <div class="highlight"><pre><span></span><code><span class="nt">webfront</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">ingress</span><span class="p">:</span><span class="w"></span>
@@ -3312,7 +3326,7 @@ NGINX Ingress controller
 </code></pre></div>
 <hr />
 <h2 id="no-real-time-updates-eg-rich-text-not-editable">No real time updates (eg Rich Text not editable)<a class="headerlink" href="#no-real-time-updates-eg-rich-text-not-editable" title="Permanent link">&para;</a></h2>
-<p>Some deployments may encounter an issue where you are unable to see any real time updates.  If this is the case, it is likely that the socket is unable to connect or authenticate. Please update to the latest Boards helm chart (<code>kudos-boards-cp-3.1.1.tgz</code> or <code>kudos-boards-5.2.1.tgz</code>) which includes new annotations for increased browser cookie security requirements.</p>
+<p>Some deployments may encounter an issue where you are unable to see any real time updates.  If this is the case, it is likely that the socket is unable to connect or authenticate. Please update to the latest Boards helm chart which includes annotations for increased browser cookie security requirements as of <code>kudos-boards-cp-3.1.1.tgz</code> | <code>kudos-boards-5.2.1.tgz</code>.</p>
 <blockquote>
 <p>Note: if you have a <code>core.annotations</code> section in your yaml configuration our updates will be overwritten. Custom annotations should only be required when customizing the context root as per above. Please remove the <code>annotations</code> section otherwise.</p>
 </blockquote>
@@ -3322,13 +3336,19 @@ NGINX Ingress controller
 <span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">FORCE_POLLING</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
+<hr />
+<h3 id="minio-pods-fail-to-start-in-boards-cp">Minio pods fail to start in Boards CP<a class="headerlink" href="#minio-pods-fail-to-start-in-boards-cp" title="Permanent link">&para;</a></h3>
+<p>If the Minio service fails to start with the following error:</p>
+<div class="highlight"><pre><span></span><code>ERROR Unable to initialize backend: found backend fs, expected xl
+</code></pre></div>
+<p>Please update to <a href="/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz">kudos-boards-cp-3.1.4.tgz</a> which includes a different image of Minio which supports your existing 'fs' file system.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-02-21
+      2022-11-03
     
   </small>
 </div>
