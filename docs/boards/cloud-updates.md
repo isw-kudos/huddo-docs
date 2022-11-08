@@ -4,6 +4,36 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2022
 
+### November
+
+2022-11-08
+
+- Features
+
+    - installable web app
+
+- Performance
+
+    - faster load
+    - added virtual scroll for Kanban
+    - smoother drag and drop
+    - faster filtering/searching inside a Board
+
+- Improvements
+
+    - improved new user experience in integrations
+    - hide dependency lines while dragging & resizing
+    - usability of tile color label edit/selection
+    - stop auto redirecting expired account
+
+- Fixes
+
+    - fix for drag scrolling lists
+    - fix editing link titles
+    - fix positioning of timeline arrows caused by swimlane animations
+    - fix double click to add list
+
+---
 ### October
 
 2022-10-17
