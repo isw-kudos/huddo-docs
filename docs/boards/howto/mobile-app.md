@@ -8,9 +8,7 @@ Download the Huddo Boards Cloud App from either Apple AppStore or Google Play St
 
 For iPhone: [Huddo Boards Cloud App](https://apps.apple.com/au/app/huddo-boards-for-cloud/id1348187330)
 
-For Android: [Huddo / Kudos Boards Cloud App](https://play.google.com/store/apps/details?id=com.kudosboards.pwa&hl=en_AU)
-
-Note: The Huddo Boards App for Android is in the approval process. Use Kudos Boards Cloud App in the meantime to access Boards Cloud via mobile. 
+For Android: [Huddo Boards](https://play.google.com/store/apps/details?id=com.huddo.boards.twa&hl=en_AU)
 
 ##Login to the Huddo / Kudos Boards Cloud App
 
