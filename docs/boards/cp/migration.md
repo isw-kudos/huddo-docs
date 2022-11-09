@@ -21,6 +21,7 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | `sharedDrive.server`                         | `192.168.10.1` or `websphereNode1`                       | IP or Hostname of the server with the Connections shared drive mount                                                                                                                                                      |
 | `sharedDrive.path`                           | `/opt/HCL/Connections/data/shared` or `/nfs/data/shared` | Path on the mount to the Connections shared drive                                                                                                                                                                         |
 | `sharedDrive.mountOptions`                   | `-nfsvers=4.1`                                           | Any additional sharedDrive mountOptions. All yaml is passed through drive                                                                                                                                                 |
+| `sharedDrive.spec`                           | See [below](#custom-persistent-volume)                   | Using a fully custom spec - e.g. FlexVolume or hostPath                                                                                                                                                                   |
 | `env.FILE_PATH_ACTIVITIES_CONTENT_STORE`     | `/data/activities/content`                               | Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</br>Ensure you set the IP and path for the NFS volume mount. |
 | `env.API_GATEWAY`                            | `https://[CONNECTIONS_URL]/api-boards`                   | URL of the Boards API.</br>Used by files attached to a board. URL.                                                                                                                                                        |
 | `env.TZ`                                     | `Europe/London` or `Australia/Hobart` etc                | 'Local' Timezone</br>Used for date interpretation. See full [list of supported timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)                                                                   |
@@ -40,13 +41,46 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | `env.COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                  | Mark the old Activity data as complete                                                                                                                                                                                    |
 | `env.CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                  | Create link to new Board in old Activity                                                                                                                                                                                  |
 
+### Custom Persistent Volume
+
+The default chart values use an NFS mount. Below are examples custom configuration of the persisent volume definition for access to the Shared Drive using other methods.
+
+> Note: we recommend running the helm chart with `--dry-run --debug` to confirm the yaml output
+
+1. Host path
+
+    Please read the [Kubernetes documenation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume)
+
+        migration:
+          sharedDrive:
+            spec:
+              storageClassName: manual
+              hostPath:
+                path: /data/shared
+
+2. Kubernetes CIFS Volume Driver
+
+    Please read the [CIFS documentation](https://k8scifsvol.morimoto.net.br/)
+
+        migration:
+          sharedDrive:
+            spec:
+            flexVolume:
+              driver: juliohm/cifs
+              options:
+                opts: sec=ntlm,uid=1000
+                server: my-cifs-host
+                share: /MySharedDirectory
+              secretRef:
+                name: my-secret
+
 ---
 
 ## Deploy Helm Chart
 
 Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the kudos-boards-cp chart
 
-    helm upgrade kudos-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > **Note:** the configuration file has changed as of the v3 chart. Please add the new `sharedDrive` parameters described above
 
