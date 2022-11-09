@@ -49,9 +49,9 @@ Improvements:
 - stop auto redirecting expired account
 - debugging added for socket connections and description locking
 
-  > In browser console, you can enter `boards.setDebug(true)` and press Enter to enable this, then reload the page.
-  > You will then get debug logs in the console for all websocket and description lock events
-  > use `boards.setDebug(false)` to turn this off when done
+      > In browser console, you can enter `boards.setDebug(true)` and press Enter to enable this, then reload the page.
+      > You will then get debug logs in the console for all websocket and description lock events.
+      > Use `boards.setDebug(false)` to turn this off when done.
 
 Fixes:
 
