@@ -65,14 +65,14 @@ The default chart values use an NFS mount. Below are examples custom configurati
         migration:
           sharedDrive:
             spec:
-            flexVolume:
-              driver: juliohm/cifs
-              options:
-                opts: sec=ntlm,uid=1000
-                server: my-cifs-host
-                share: /MySharedDirectory
-              secretRef:
-                name: my-secret
+              flexVolume:
+                driver: juliohm/cifs
+                options:
+                  opts: sec=ntlm,uid=1000
+                  server: my-cifs-host
+                  share: /MySharedDirectory
+                secretRef:
+                  name: my-secret
 
 ---
 
