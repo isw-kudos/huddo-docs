@@ -30,30 +30,35 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-11-09)
 
-- Features
+Features:
 
-    - installable web app
+- installable web app
 
-- Performance
+Performance:
 
-    - faster load
-    - added virtual scroll for Kanban
-    - smoother drag and drop
-    - faster filtering/searching inside a Board
+- faster load
+- added virtual scroll for Kanban
+- smoother drag and drop
+- faster filtering/searching inside a Board
 
-- Improvements
+Improvements:
 
-    - improved new user experience in integrations
-    - hide dependency lines while dragging & resizing
-    - usability of tile color label edit/selection
-    - stop auto redirecting expired account
+- improved new user experience in integrations
+- hide dependency lines while dragging & resizing
+- usability of tile color label edit/selection
+- stop auto redirecting expired account
+- debugging added for socket connections and description locking
 
-- Fixes
+  > In browser console, you can enter `boards.setDebug(true)` and press Enter to enable this, then reload the page.
+  > You will then get debug logs in the console for all websocket and description lock events
+  > use `boards.setDebug(false)` to turn this off when done
 
-    - fix for drag scrolling lists on mobile
-    - fix editing link titles
-    - fix positioning of timeline arrows caused by swimlane animations
-    - fix double click to add list
+Fixes:
+
+- fix for drag scrolling lists on mobile
+- fix editing link titles
+- fix positioning of timeline arrows caused by swimlane animations
+- fix double click to add list
 
 ---
 
@@ -61,25 +66,23 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-10-24)
 
-Fixes:
-
-- webhook api events may not have fired in a specific situation for users with linked accounts
-
 Improvements:
 
 - reduced processing whilst dragging cards
-- Timeline
-
-    - animate expand/collapse of scheduled lanes
-    - fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)
-    - highlight multiple instances of same card on hover
-    - remember last view (list/color/members)
-    - live updates of list names, color labels and members
-    - show color labels
-
-Features:
-
 - /app/createcard micro app - new users can now create a board instead of being stuck with no board to choose
+
+Timeline:
+
+- animate expand/collapse of scheduled lanes
+- fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)
+- highlight multiple instances of same card on hover
+- remember last view (list/color/members)
+- live updates of list names, color labels and members
+- show color labels
+
+Fixes:
+
+- webhook api events may not have fired in a specific situation for users with linked accounts
 
 #### 2022-10-10
 
@@ -102,7 +105,7 @@ Translations:
 
 - Full translation run for all supported languages
 
-Features / Fixes
+Features / Fixes:
 
 - Fixed scolling in the Timeline view when you have too many lists to fit in the view
 - Changed colours on the Timeline view to better show cards when dragging
