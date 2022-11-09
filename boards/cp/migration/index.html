@@ -3314,14 +3314,14 @@
 <div class="highlight"><pre><span></span><code>migration:
   sharedDrive:
     spec:
-    flexVolume:
-      driver: juliohm/cifs
-      options:
-        opts: sec=ntlm,uid=1000
-        server: my-cifs-host
-        share: /MySharedDirectory
-      secretRef:
-        name: my-secret
+      flexVolume:
+        driver: juliohm/cifs
+        options:
+          opts: sec=ntlm,uid=1000
+          server: my-cifs-host
+          share: /MySharedDirectory
+        secretRef:
+          name: my-secret
 </code></pre></div>
 </li>
 </ol>
