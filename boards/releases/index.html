@@ -3521,53 +3521,46 @@
 <h3 id="2022">2022<a class="headerlink" href="#2022" title="Permanent link">&para;</a></h3>
 <h4 id="2022-11-09">2022-11-09<a class="headerlink" href="#2022-11-09" title="Permanent link">&para;</a></h4>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-11-09">Dockerhub</a></p>
-<ul>
-<li>
-<p>Features</p>
+<p>Features:</p>
 <ul>
 <li>installable web app</li>
 </ul>
-</li>
-<li>
-<p>Performance</p>
+<p>Performance:</p>
 <ul>
 <li>faster load</li>
 <li>added virtual scroll for Kanban</li>
 <li>smoother drag and drop</li>
 <li>faster filtering/searching inside a Board</li>
 </ul>
-</li>
-<li>
-<p>Improvements</p>
+<p>Improvements:</p>
 <ul>
 <li>improved new user experience in integrations</li>
 <li>hide dependency lines while dragging &amp; resizing</li>
 <li>usability of tile color label edit/selection</li>
 <li>stop auto redirecting expired account</li>
+<li>debugging added for socket connections and description locking</li>
 </ul>
-</li>
-<li>
-<p>Fixes</p>
+<blockquote>
+<p>In browser console, you can enter <code>boards.setDebug(true)</code> and press Enter to enable this, then reload the page.
+You will then get debug logs in the console for all websocket and description lock events
+use <code>boards.setDebug(false)</code> to turn this off when done</p>
+</blockquote>
+<p>Fixes:</p>
 <ul>
 <li>fix for drag scrolling lists on mobile</li>
 <li>fix editing link titles</li>
 <li>fix positioning of timeline arrows caused by swimlane animations</li>
 <li>fix double click to add list</li>
 </ul>
-</li>
-</ul>
 <hr />
 <h4 id="2022-10-24">2022-10-24<a class="headerlink" href="#2022-10-24" title="Permanent link">&para;</a></h4>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-10-24">Dockerhub</a></p>
-<p>Fixes:</p>
-<ul>
-<li>webhook api events may not have fired in a specific situation for users with linked accounts</li>
-</ul>
 <p>Improvements:</p>
 <ul>
 <li>reduced processing whilst dragging cards</li>
-<li>
-<p>Timeline</p>
+<li>/app/createcard micro app - new users can now create a board instead of being stuck with no board to choose</li>
+</ul>
+<p>Timeline:</p>
 <ul>
 <li>animate expand/collapse of scheduled lanes</li>
 <li>fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)</li>
@@ -3576,11 +3569,9 @@
 <li>live updates of list names, color labels and members</li>
 <li>show color labels</li>
 </ul>
-</li>
-</ul>
-<p>Features:</p>
+<p>Fixes:</p>
 <ul>
-<li>/app/createcard micro app - new users can now create a board instead of being stuck with no board to choose</li>
+<li>webhook api events may not have fired in a specific situation for users with linked accounts</li>
 </ul>
 <h4 id="2022-10-10">2022-10-10<a class="headerlink" href="#2022-10-10" title="Permanent link">&para;</a></h4>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-10-07">Dockerhub</a></p>
@@ -3599,7 +3590,7 @@
 <ul>
 <li>Full translation run for all supported languages</li>
 </ul>
-<p>Features / Fixes</p>
+<p>Features / Fixes:</p>
 <ul>
 <li>Fixed scolling in the Timeline view when you have too many lists to fit in the view</li>
 <li>Changed colours on the Timeline view to better show cards when dragging</li>
