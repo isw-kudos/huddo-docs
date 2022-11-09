@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.huddo.com/boards/connections/migration/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
     
     
       
@@ -26,7 +26,7 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.815d1a91.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
           
           
@@ -76,7 +76,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="amber">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="amber">
   
     
     
@@ -3271,6 +3271,11 @@
 <td>Path on the mount to the Connections shared drive</td>
 </tr>
 <tr>
+<td><code>sharedDrive.spec</code></td>
+<td><a href="../cp/migration#custom-persistent-volume">Details</a></td>
+<td>Using a fully custom spec - e.g. FlexVolume or hostPath</td>
+</tr>
+<tr>
 <td><code>env.CONNECTIONS_URL</code></td>
 <td><code>httsp://connections.example.com</code></td>
 <td>URL of your Connections environment</td>
@@ -3386,7 +3391,7 @@
 <hr />
 <h2 id="deploy-helm-chart">Deploy Helm Chart<a class="headerlink" href="#deploy-helm-chart" title="Permanent link">&para;</a></h2>
 <p>Please deploy the following chart with the same configuration <code>boards.yaml</code> file used to deploy the kudos-boards chart</p>
-<div class="highlight"><pre><span></span><code>helm upgrade kudos-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-activity-migration-5.2.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+<div class="highlight"><pre><span></span><code>helm upgrade kudos-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-activity-migration-5.2.1.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 </code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> the configuration file has changed as of the v5 chart. Please add the new <code>sharedDrive</code> parameters described above</p>
@@ -3421,7 +3426,7 @@
   <small>
     
       Last update:
-      2022-01-13
+      2022-11-09
     
   </small>
 </div>
