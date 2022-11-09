@@ -28,7 +28,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 - Fixes
 
-    - fix for drag scrolling lists
+    - fix for drag scrolling lists on mobile
     - fix editing link titles
     - fix positioning of timeline arrows caused by swimlane animations
     - fix double click to add list
