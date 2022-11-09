@@ -30,8 +30,6 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-11-09)
 
-2022-11-08
-
 - Features
 
     - installable web app
