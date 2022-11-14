@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.huddo.com/boards/connections/migration/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
@@ -3271,6 +3271,31 @@
 <td>Path on the mount to the Connections shared drive</td>
 </tr>
 <tr>
+<td><code>sharedDrive.storage</code></td>
+<td><code>10Gi</code> (optional)</td>
+<td>The capacity of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.accessMode</code></td>
+<td><code>ReadOnlyMany</code> (optional)</td>
+<td>The accessMode of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.volumeMode</code></td>
+<td><code>Filesystem</code> (optional)</td>
+<td>The volumeMode of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.persistentVolumeReclaimPolicy</code></td>
+<td><code>Retain</code> (optional)</td>
+<td>The persistentVolumeReclaimPolicy of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.storageClassName</code></td>
+<td><code>manual</code> (optional)</td>
+<td>The storageClassName of the PV and PVC - useful for custom spec (e.g. hostPath)</td>
+</tr>
+<tr>
 <td><code>sharedDrive.spec</code></td>
 <td><a href="/boards/cp/migration#custom-persistent-volume">Example</a></td>
 <td>Using a fully custom spec - e.g. FlexVolume or hostPath</td>
@@ -3426,7 +3451,7 @@
   <small>
     
       Last update:
-      2022-11-09
+      2022-11-14
     
   </small>
 </div>

@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.huddo.com/boards/cp/migration/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
@@ -3191,8 +3191,33 @@
 </tr>
 <tr>
 <td><code>sharedDrive.mountOptions</code></td>
-<td><code>-nfsvers=4.1</code></td>
+<td><code>-nfsvers=4.1</code> (optional)</td>
 <td>Any additional sharedDrive mountOptions. All yaml is passed through drive</td>
+</tr>
+<tr>
+<td><code>sharedDrive.storage</code></td>
+<td><code>10Gi</code> (optional)</td>
+<td>The capacity of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.accessMode</code></td>
+<td><code>ReadOnlyMany</code> (optional)</td>
+<td>The accessMode of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.volumeMode</code></td>
+<td><code>Filesystem</code> (optional)</td>
+<td>The volumeMode of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.persistentVolumeReclaimPolicy</code></td>
+<td><code>Retain</code> (optional)</td>
+<td>The persistentVolumeReclaimPolicy of the PV and PVC</td>
+</tr>
+<tr>
+<td><code>sharedDrive.storageClassName</code></td>
+<td><code>manual</code> (optional)</td>
+<td>The storageClassName of the PV and PVC - useful for custom spec (e.g. hostPath)</td>
 </tr>
 <tr>
 <td><code>sharedDrive.spec</code></td>
@@ -3302,8 +3327,8 @@
 <p>Please read the <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume">Kubernetes documenation</a></p>
 <div class="highlight"><pre><span></span><code>migration:
   sharedDrive:
+    storageClassName: manual
     spec:
-      storageClassName: manual
       hostPath:
         path: /data/shared
 </code></pre></div>
@@ -3360,7 +3385,7 @@
   <small>
     
       Last update:
-      2022-11-09
+      2022-11-14
     
   </small>
 </div>
