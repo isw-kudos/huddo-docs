@@ -85,7 +85,7 @@ The default chart values use an NFS mount. Below are examples custom configurati
 
 Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the kudos-boards-cp chart
 
-    helm upgrade kudos-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.2.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > **Note:** the configuration file has changed as of the v3 chart. Please add the new `sharedDrive` parameters described above
 
