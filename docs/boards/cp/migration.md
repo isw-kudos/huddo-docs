@@ -20,7 +20,12 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | -------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sharedDrive.server`                         | `192.168.10.1` or `websphereNode1`                       | IP or Hostname of the server with the Connections shared drive mount                                                                                                                                                      |
 | `sharedDrive.path`                           | `/opt/HCL/Connections/data/shared` or `/nfs/data/shared` | Path on the mount to the Connections shared drive                                                                                                                                                                         |
-| `sharedDrive.mountOptions`                   | `-nfsvers=4.1`                                           | Any additional sharedDrive mountOptions. All yaml is passed through drive                                                                                                                                                 |
+| `sharedDrive.mountOptions`                   | `-nfsvers=4.1` (optional)                                | Any additional sharedDrive mountOptions. All yaml is passed through drive                                                                                                                                                 |
+| `sharedDrive.storage`                        | `10Gi` (optional)                                        | The capacity of the PV and PVC                                                                                                                                                                                            |
+| `sharedDrive.accessMode`                     | `ReadOnlyMany` (optional)                                | The accessMode of the PV and PVC                                                                                                                                                                                          |
+| `sharedDrive.volumeMode`                     | `Filesystem` (optional)                                  | The volumeMode of the PV and PVC                                                                                                                                                                                          |
+| `sharedDrive.persistentVolumeReclaimPolicy`  | `Retain` (optional)                                      | The persistentVolumeReclaimPolicy of the PV and PVC                                                                                                                                                                       |
+| `sharedDrive.storageClassName`               | `manual` (optional)                                      | The storageClassName of the PV and PVC - useful for custom spec (e.g. hostPath)                                                                                                                                           |
 | `sharedDrive.spec`                           | See [below](#custom-persistent-volume)                   | Using a fully custom spec - e.g. FlexVolume or hostPath                                                                                                                                                                   |
 | `env.FILE_PATH_ACTIVITIES_CONTENT_STORE`     | `/data/activities/content`                               | Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</br>Ensure you set the IP and path for the NFS volume mount. |
 | `env.API_GATEWAY`                            | `https://[CONNECTIONS_URL]/api-boards`                   | URL of the Boards API.</br>Used by files attached to a board. URL.                                                                                                                                                        |
@@ -53,8 +58,8 @@ The default chart values use an NFS mount. Below are examples custom configurati
 
         migration:
           sharedDrive:
+            storageClassName: manual
             spec:
-              storageClassName: manual
               hostPath:
                 path: /data/shared
 

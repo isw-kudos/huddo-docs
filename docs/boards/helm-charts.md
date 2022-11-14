@@ -20,6 +20,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 - [5.0.0](/assets/config/kubernetes/kudos-boards-activity-migration-5.0.0.tgz) - Support service.nodePort, default volume & mount for share drive
 - [5.2.0](/assets/config/kubernetes/kudos-boards-activity-migration-5.2.0.tgz) - use Capabilities.APIVersions instead of legacyKube
 - [5.2.1](/assets/config/kubernetes/kudos-boards-activity-migration-5.2.1.tgz) - support custom spec & custom accessMode/volumeMode/persistentVolumeReclaimPolicy
+- [5.2.2](/assets/config/kubernetes/kudos-boards-activity-migration-5.2.2.tgz) - fix support of storageClassName on PVC
 
 ---
 
@@ -67,3 +68,4 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 - [3.0.1](/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.0.1.tgz) - Support mountOptions for share drive
 - [3.1.0](/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.0.tgz) - use Capabilities.APIVersions instead of legacyKube
 - [3.1.1](/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.1.tgz) - support custom spec & custom accessMode/volumeMode/persistentVolumeReclaimPolicy
+- [3.1.2](/assets/config/kubernetes/kudos-boards-cp-activity-migration-3.1.2.tgz) - fix support of storageClassName on PVC
