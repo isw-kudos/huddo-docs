@@ -26,6 +26,17 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-11-15
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-11-15)
+
+Improvements:
+
+- Redis client reuse
+- Ensure Redis is available on startup
+
+---
+
 #### 2022-11-09
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-11-09)
