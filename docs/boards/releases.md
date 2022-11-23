@@ -555,7 +555,7 @@ Fixes:
 
 **Breaking change:**
 
-> Emails are now sent by the `events` service. You must move the NOTIFIER\_\* environment variables from `core` to `events` as [shown above](/boards/releases/#important-update-cp-v3)
+> Emails are now sent by the `events` service. You must move the NOTIFIER\_\* environment variables from `core` to `events` as shown in [v3 of our chart](/boards/helm-charts/#kudos-boards-cp)
 
 Images:
 
