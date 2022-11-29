@@ -6,6 +6,28 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### November
 
+2022-11-29
+
+- Improvements
+
+    - synchronise dependencies in real time
+    - faster creation of multi cards
+    - presence of users open on card without board open
+    - link to API documentation
+    - adding dependencies between private cards
+    - handling of dependencies where not accessible
+    - make associated comments public when card is made public
+    - synchronise my private tasks between my windows
+
+- Fixes
+
+    - issue where someone online in board remained online if page reloaded
+    - issue where lists hidden when previewing Kanban view while creating a Board
+    - issue where page crashed on logout in Node view
+    - issue where page crashed on logout in Timeline view
+    - issue where files couldn't be downloaded
+    - issue where page reloaded in admin view
+
 2022-11-08
 
 - Features
