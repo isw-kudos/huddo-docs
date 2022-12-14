@@ -101,6 +101,8 @@ Fixes:
 
 - webhook api events may not have fired in a specific situation for users with linked accounts
 
+---
+
 #### 2022-10-10
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-10-07)
@@ -108,6 +110,8 @@ Fixes:
 Fixes:
 
 - API documentation page no longer using local config (all "Try it out" routes would fail).
+
+---
 
 #### 2022-10-07
 
