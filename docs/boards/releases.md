@@ -2,7 +2,9 @@
 
 ## How To Upgrade
 
-> **Note:** to upgrade from images in the Component Pack download to the latest images hosted by us on Dockerhub please follow [this guide](/boards/cp/dockerhub/).
+!!! tip
+
+    To upgrade from images in the Component Pack download to the latest images hosted by us on Dockerhub please follow [this guide](/boards/cp/dockerhub/).
 
 Please use the appropriate update command. For example:
 
@@ -19,6 +21,10 @@ helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kud
 ```
 
 See here for the [Helm Charts change log](/boards/helm-charts/).
+
+!!! note
+
+    Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.
 
 ---
 
