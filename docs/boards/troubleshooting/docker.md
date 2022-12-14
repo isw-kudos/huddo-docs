@@ -100,3 +100,9 @@ If the Minio service fails to start with the following error:
     ERROR Unable to initialize backend: found backend fs, expected xl
 
 Please update to [kudos-boards-cp-3.1.4.tgz](/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz) which includes a different image of Minio which supports your existing 'fs' file system.
+
+## React Minified Issue
+
+![ReactMinifiedError](/assets/boards/application-access.png)
+
+This has been successfully fixed in all reported cases by clearing the local storage of the user's browser.
