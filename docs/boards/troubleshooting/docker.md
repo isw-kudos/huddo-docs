@@ -105,4 +105,4 @@ Please update to [kudos-boards-cp-3.1.4.tgz](/assets/config/kubernetes/kudos-boa
 
 ![ReactMinifiedError](/assets/boards/react-minified-issue.png)
 
-This has been successfully fixed in all reported cases by clearing the local storage of the user's browser.
+This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [this release](/boards/releases/#2022-12-15)
