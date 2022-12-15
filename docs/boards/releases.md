@@ -32,6 +32,34 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ### 2022
 
+#### 2022-12-15
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-12-15)
+
+Improvements:
+
+- synchronise dependencies in real time
+- faster creation of multi cards
+- presence of users open on card without board open
+- link to API documentation
+- adding dependencies between private cards
+- handling of dependencies where not accessible
+- make associated comments public when card is made public
+- synchronise my private tasks between my windows
+
+Fixes:
+
+- issue opening board "Error: Minified React error #185"
+- issue where Community widget shows 'my' boards incorrectly
+- issue where someone online in board remained online if page reloaded
+- issue where lists hidden when previewing Kanban view while creating a Board
+- issue where page crashed on logout in Node view
+- issue where page crashed on logout in Timeline view
+- issue where files couldn't be downloaded
+- issue where page reloaded in admin view
+
+---
+
 #### 2022-11-15
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2022-11-15)
