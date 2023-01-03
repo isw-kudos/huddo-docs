@@ -30,6 +30,22 @@ See here for the [Helm Charts change log](/boards/helm-charts/).
 
 ## Releases
 
+### 2023
+
+#### 2023-01-03
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2023-01-03)
+
+Improvements:
+
+- Security updates (node 18)
+
+Fixes:
+
+- Issue with blank page served on `/boards`
+
+---
+
 ### 2022
 
 #### 2022-12-15
