@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://docs.huddo.com/boards/releases/">
       
+      
+        <link rel="prev" href="../msgraph/teams-on-prem/">
+      
+      
+        <link rel="next" href="../helm-charts/">
+      
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
       
@@ -23,15 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f79797b0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#02a6f2">
-        
       
       
 
@@ -1774,6 +1775,26 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2023" class="md-nav__link">
+    2023
+  </a>
+  
+    <nav class="md-nav" aria-label="2023">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2023-01-03" class="md-nav__link">
+    2023-01-03
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2022" class="md-nav__link">
     2022
   </a>
@@ -3339,6 +3360,26 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2023" class="md-nav__link">
+    2023
+  </a>
+  
+    <nav class="md-nav" aria-label="2023">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2023-01-03" class="md-nav__link">
+    2023-01-03
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2022" class="md-nav__link">
     2022
   </a>
@@ -3531,6 +3572,7 @@
                   
 
 
+
 <h1 id="boards-docker-releases-change-log">Boards Docker Releases (change log)<a class="headerlink" href="#boards-docker-releases-change-log" title="Permanent link">&para;</a></h1>
 <h2 id="how-to-upgrade">How To Upgrade<a class="headerlink" href="#how-to-upgrade" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
@@ -3551,6 +3593,18 @@
 </div>
 <hr />
 <h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
+<h3 id="2023">2023<a class="headerlink" href="#2023" title="Permanent link">&para;</a></h3>
+<h4 id="2023-01-03">2023-01-03<a class="headerlink" href="#2023-01-03" title="Permanent link">&para;</a></h4>
+<p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2023-01-03">Dockerhub</a></p>
+<p>Improvements:</p>
+<ul>
+<li>Security updates (node 18)</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Issue with blank page served on <code>/boards</code></li>
+</ul>
+<hr />
 <h3 id="2022">2022<a class="headerlink" href="#2022" title="Permanent link">&para;</a></h3>
 <h4 id="2022-12-15">2022-12-15<a class="headerlink" href="#2022-12-15" title="Permanent link">&para;</a></h4>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-12-15">Dockerhub</a></p>
@@ -4481,11 +4535,11 @@ iswkudos/kudos-boards:activity-migration-2020-12-14
 <li>Added fix for Activities that had already been imported and used the equivalent permission set in Activities</li>
 </ul>
 <p><code>boards.yaml</code></p>
-<div class="highlight"><pre><span></span><code><span class="nt">migration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># test = report activities and board membership that can be updated</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># true = run the fix and report results</span><span class="w"></span>
-<span class="w">    </span><span class="nt">FIX_COMMUNITY_OWNERS_ONLY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test|true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">migration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># test = report activities and board membership that can be updated</span>
+<span class="w">    </span><span class="c1"># true = run the fix and report results</span>
+<span class="w">    </span><span class="nt">FIX_COMMUNITY_OWNERS_ONLY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test|true</span>
 </code></pre></div>
 <hr />
 <p>2020-12-12</p>
@@ -4861,7 +4915,7 @@ iswkudos/kudos-boards:boards-2020-03-06
   <small>
     
       Last update:
-      2022-12-15
+      2023-01-03
     
   </small>
 </div>
@@ -4882,42 +4936,6 @@ iswkudos/kudos-boards:boards-2020-03-06
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../msgraph/teams-on-prem/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Teams App" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Teams App
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../helm-charts/" class="md-footer__link md-footer__link--next" aria-label="Next: Helm Charts" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Helm Charts
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -4989,14 +5007,13 @@ iswkudos/kudos-boards:boards-2020-03-06
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
-    
     
   </body>
 </html>

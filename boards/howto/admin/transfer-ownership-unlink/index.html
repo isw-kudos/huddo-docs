@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://docs.huddo.com/boards/howto/admin/transfer-ownership-unlink/">
       
+      
+        <link rel="prev" href="../replace-group-membership/">
+      
+      
+        <link rel="next" href="../deactivate-login/">
+      
       <link rel="icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
       
@@ -23,15 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f79797b0.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#02a6f2">
-        
       
       
 
@@ -3177,6 +3178,7 @@
                   
 
 
+
 <h1 id="transfer-ownership-unlink-user-accounts">Transfer Ownership &amp; Unlink User Accounts<a class="headerlink" href="#transfer-ownership-unlink-user-accounts" title="Permanent link">&para;</a></h1>
 <p><strong>Note: admins only - on premise</strong></p>
 <p>In the user interface a user can unlink an account alias and transferring content ownership to their primary. This process is designed to perform the same action in bulk for all users which belong to specific clients (login methods) who have linked accounts. </p>
@@ -3193,11 +3195,11 @@
 <li>
 <p>Environment variables</p>
 <p>Set the following environment variables</p>
-<div class="highlight"><pre><span></span><code><span class="nt">app</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">TRANSFER_AND_UNLINK_TO_CLIENT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5fd6974dd7c5ede08711432d</span><span class="w"></span>
-<span class="w">    </span><span class="nt">TRANSFER_AND_UNLINK_FROM_CLIENT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5ef2d52f6283afc12efd55a4</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">app</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">replicaCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">TRANSFER_AND_UNLINK_TO_CLIENT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5fd6974dd7c5ede08711432d</span>
+<span class="w">    </span><span class="nt">TRANSFER_AND_UNLINK_FROM_CLIENT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5ef2d52f6283afc12efd55a4</span>
 </code></pre></div>
 </li>
 <li>
@@ -3242,42 +3244,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../replace-group-membership/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Replace Group Membership" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Replace Group Membership
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../deactivate-login/" class="md-footer__link md-footer__link--next" aria-label="Next: Deactivate Login" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Deactivate Login
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3349,14 +3315,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["tabs"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["tabs"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
-    
     
   </body>
 </html>

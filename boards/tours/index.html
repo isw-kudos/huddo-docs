@@ -14,8 +14,10 @@
       
         <link rel="canonical" href="https://docs.huddo.com/boards/tours/">
       
+      
+      
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
       
@@ -23,15 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f79797b0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#02a6f2">
-        
       
       
 
@@ -3146,6 +3143,7 @@
                   
 
 
+
   <h1>Tours</h1>
 
 <h2 id="boards-tours">Boards Tours<a class="headerlink" href="#boards-tours" title="Permanent link">&para;</a></h2>
@@ -3253,37 +3251,37 @@
 <li>center (set the target to body)</li>
 </ul>
 <h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nx">boards</span><span class="p">.</span><span class="nx">setTours</span><span class="p">([{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;create-first-board-mobile&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/my&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/public&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="w">  </span><span class="nx">sizes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;isMobile&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="w">  </span><span class="nx">disabled</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">disableAnimation</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">steps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">spotlight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.create-board-fab button&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Welcome to Boards&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Let&#39;s get started&quot;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Click here&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="w">      </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;More information&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://huddo.com/boards&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w">      </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">spotlight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">when</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root .step-1&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pick a template&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Boards can have a template. Select one and click &#39;Next&#39;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">hideArrow</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">placement</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bottom-end&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">spotlight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">when</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root .step-2&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Name the Board&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Invite other members to collaborate with you in this Board.&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="p">],</span><span class="w"></span>
-<span class="p">}])</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nx">boards</span><span class="p">.</span><span class="nx">setTours</span><span class="p">([{</span>
+<span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;create-first-board-mobile&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/my&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/public&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">sizes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;isMobile&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">disabled</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">disableAnimation</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">steps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">spotlight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.create-board-fab button&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Welcome to Boards&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Let&#39;s get started&quot;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Click here&#39;</span><span class="p">],</span>
+<span class="w">      </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;More information&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://huddo.com/boards&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">spotlight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">when</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root .step-1&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pick a template&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Boards can have a template. Select one and click &#39;Next&#39;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">hideArrow</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">placement</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bottom-end&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">spotlight</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">when</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;.template-dialog .MuiPaper-root .step-2&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Name the Board&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Invite other members to collaborate with you in this Board.&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">}])</span>
 </code></pre></div>
 
   <hr>
@@ -3383,14 +3381,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
-    
     
   </body>
 </html>
