@@ -1,7 +1,7 @@
-# Latest Boards releases directly from Dockerhub (DEPRECATED)
+# Latest Boards releases directly from Dockerhub
 
 !!! warning
-    These instructions are deprecated. Please see the [new guide](/boards/images/)
+    These instructions are in the process of being deprecated. We are moving to hosting our images in Quay.io instead of Dockerhub. Please see [these instructions](/boards/cp/latest/).
 
 You can get the latest versions of Huddo Boards Docker by subscribing to our own repository in dockerhub as follows:
 
@@ -13,10 +13,18 @@ You can get the latest versions of Huddo Boards Docker by subscribing to our own
 
 1.  Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
 
-    - Change the `global.imagePullSecret` to `dockerhub`
-    - Remove your customised `global.repository`
-    - Check our [releases](/boards/releases/) page to get the latest release date tag. Add this date tag as `global.imageTagSuffix` and uncomment the line as per the example.
-    - Add (blank) image name and tag for each service as per the example. _Note:_ some of the services (app, provider, notification) will not be in your boards-cp.yaml file, you should ADD THEM.
+    1. At the top set
+
+        - `global.imagePullSecret` to `dockerhub`
+        - remove your customised `global.repository`
+        - `global.imageTagSuffix` as the date of our latest [release](/boards/releases/) and uncomment it
+
+    1. Add `image.name` (blank) and `image.tag` for each service as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
+    
+        !!! tip 
+            Some of the services (`app`, `provider`, `notification`) might not be in your `boards-cp.yaml` file, you must add them.
+
+        ![Example](/assets/boards/cp/image-config-dockerhub.png)
 
 1.  Run helm to apply the changes.
 
