@@ -21,7 +21,7 @@
     
     
       
-        <title>Latest Boards releases directly from Dockerhub (DEPRECATED) - Huddo Docs</title>
+        <title>Latest Boards releases directly from Dockerhub - Huddo Docs</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#latest-boards-releases-directly-from-dockerhub-deprecated" class="md-skip">
+        <a href="#latest-boards-releases-directly-from-dockerhub" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Latest Boards releases directly from Dockerhub (DEPRECATED)
+              Latest Boards releases directly from Dockerhub
             
           </span>
         </div>
@@ -3111,10 +3111,10 @@
 
 
 
-<h1 id="latest-boards-releases-directly-from-dockerhub-deprecated">Latest Boards releases directly from Dockerhub (DEPRECATED)<a class="headerlink" href="#latest-boards-releases-directly-from-dockerhub-deprecated" title="Permanent link">&para;</a></h1>
+<h1 id="latest-boards-releases-directly-from-dockerhub">Latest Boards releases directly from Dockerhub<a class="headerlink" href="#latest-boards-releases-directly-from-dockerhub" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>These instructions are deprecated. Please see the <a href="/boards/images/">new guide</a></p>
+<p>These instructions are in the process of being deprecated. We are moving to hosting our images in Quay.io instead of Dockerhub. Please see <a href="/boards/cp/latest/">these instructions</a>.</p>
 </div>
 <p>You can get the latest versions of Huddo Boards Docker by subscribing to our own repository in dockerhub as follows:</p>
 <ol>
@@ -3127,12 +3127,24 @@
 </li>
 <li>
 <p>Once confirmed by reply email, update your <code>boards-cp.yaml</code> file as per <a href="/assets/config/kubernetes/boards-cp-dockerhub.yaml">this example</a>.</p>
+<ol>
+<li>
+<p>At the top set</p>
 <ul>
-<li>Change the <code>global.imagePullSecret</code> to <code>dockerhub</code></li>
-<li>Remove your customised <code>global.repository</code></li>
-<li>Check our <a href="/boards/releases/">releases</a> page to get the latest release date tag. Add this date tag as <code>global.imageTagSuffix</code> and uncomment the line as per the example.</li>
-<li>Add (blank) image name and tag for each service as per the example. <em>Note:</em> some of the services (app, provider, notification) will not be in your boards-cp.yaml file, you should ADD THEM.</li>
+<li><code>global.imagePullSecret</code> to <code>dockerhub</code></li>
+<li>remove your customised <code>global.repository</code></li>
+<li><code>global.imageTagSuffix</code> as the date of our latest <a href="/boards/releases/">release</a> and uncomment it</li>
 </ul>
+</li>
+<li>
+<p>Add <code>image.name</code> (blank) and <code>image.tag</code> for each service as per <a href="/assets/config/kubernetes/boards-cp-dockerhub.yaml">this example</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Some of the services (<code>app</code>, <code>provider</code>, <code>notification</code>) might not be in your <code>boards-cp.yaml</code> file, you must add them.</p>
+</div>
+<p><img alt="Example" src="/assets/boards/cp/image-config-dockerhub.png" /></p>
+</li>
+</ol>
 </li>
 <li>
 <p>Run helm to apply the changes.</p>
