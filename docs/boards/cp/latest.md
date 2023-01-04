@@ -14,7 +14,7 @@
 
             ![Example](/assets/quay/config-yaml.png)
 
-    1. Add `image.tag` for each service as per [this example](/assets/config/kubernetes/boards-cp-quay.yaml).
+    1. Add `image.name` for each service as per [this example](/assets/config/kubernetes/boards-cp-quay.yaml).
     
         !!! tip 
             Some of the services (`app`, `provider`, `notification`) might not be in your `boards-cp.yaml` file, you must add them.
