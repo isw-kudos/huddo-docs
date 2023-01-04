@@ -1,4 +1,6 @@
-Requirements and considerations before installation of Docker Swarm and Huddo Boards
+# Requirements and considerations before installation of Docker Swarm and Huddo Boards (DEPRECATED)
+!!! warning
+    These instructions are deprecated. Please see [standalone guide](/boards/standalone/) if you do not have either Kubernetes or Component Pack
 
 ## Servers
 
@@ -60,7 +62,7 @@ Huddo Boards is designed to be integrated into your current user management syst
 
 ---
 
-## Dockerhub
+## Dockerhub (Deprecated)
 
 Access to the images for kudos boards is provided through [dockerhub](https://hub.docker.com). Please provide us with your username to grant access and have the credentials at hand for the install.
 

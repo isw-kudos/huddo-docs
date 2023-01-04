@@ -66,9 +66,9 @@ Huddo Boards is designed to be integrated into your current user management syst
 
 ---
 
-## Dockerhub
+## Access to Docker Images
 
-Access to the images for kudos boards is provided through [dockerhub](https://hub.docker.com). Please provide us with your username to grant access and have the credentials at hand for the install.
+[Follow this guide](/boards/images/) to get access to our images
 
 ---
 

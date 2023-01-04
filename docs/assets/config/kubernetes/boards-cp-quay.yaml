@@ -1,0 +1,130 @@
+# Please read every variable and replace with appropriate value
+# For details of variable meanings, please see https://docs.huddo.com/boards/cp/
+
+global:
+  repository: quay.io/huddo
+  imagePullSecret: quay-username-pull-secret
+  imageTag: 2023-01-03
+  env:
+    APP_URI: https://connections.example.com/boards
+    API_GATEWAY: https://connections.example.com/api-boards
+
+minio:
+  useDockerHub: true
+  nfs:
+    server: 192.168.0.1
+
+app:
+  image:
+    name: boards
+
+notification:
+  image:
+    name: notification
+
+webfront:
+  image:
+    name: boards-webfront
+  ingress:
+    # This hostname must match other Ingresses defined in your CP environment
+    # If all ingresses start with * you must match the pattern, or all traffic will be routed to Boards and everything will break
+    # kubectl get ingresses --all-namespaces
+    hosts:
+      - "connections.example.com"
+      # - "*.example.com"
+
+events:
+  image:
+    name: boards-event
+  env:
+    NOTIFIER_EMAIL_HOST: smtp.example.com
+    NOTIFIER_EMAIL_USERNAME: user123
+    NOTIFIER_EMAIL_PASSWORD: passw0rd
+    # APP_NAME: Huddo Boards # Used for all notifications, e.g. Orient Me
+    # NOTIFIER_EMAIL_FROM_NAME: Huddo Boards
+    # NOTIFIER_EMAIL_FROM_EMAIL: boards@connections.example.com
+
+core:
+  image:
+    name: boards-core
+  ingress:
+    # This hostname must match other Ingresses defined in your CP environment
+    # If all ingresses start with * you must match the pattern, or all traffic will be routed to Boards and everything will break
+    # kubectl get ingresses --all-namespaces
+    hosts:
+      - "connections.example.com"
+      # - "*.example.com"
+
+licence:
+  image:
+    name: licence
+  env:
+    # Register your Organisation and download your Free 'Activities Plus' licence key from store.huddo.com
+    LICENCE: secret-string-you-download
+
+# https://docs.huddo.com/boards/msgraph/teams-on-prem/
+# Uncomment/configure the following 3 lines if you are using this Huddo Boards deployment from Microsoft Teams
+# provider:
+#   env:
+#     MSGRAPH_TEAMS_APP_ID: app-id-shown-in-teams-url
+
+user:
+  image:
+    name: user
+  env:
+    # CONNECTIONS_NAME: HCL Connections
+    # CONNECTIONS_CLIENT_ID: huddoboards
+    CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
+    CONNECTIONS_ADMINS: "[\"admin1@company.example.com\", \"boss2@company.example.com\", \"PROF_GUID_3\"]"
+
+provider:
+  image:
+    name: provider
+
+events:
+  image:
+    name: boards-event
+
+migration:
+  image:
+    name: activity-migration
+  env:
+    API_GATEWAY: https://connections.example.com/api-boards
+
+    # Set the Timezone for this container, so dates are understood correctly
+    # Please see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a full list of options
+    # For example, uncomment one of the lines below (or add your own)
+    # TZ: America/New_York
+    # TZ: Australia/Hobart
+    # TZ: Europe/London
+    
+    CONNECTIONS_ACTIVITIES_ADMIN_USERNAME: connectionsadmin
+    CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD: adminpassword
+    CONNECTIONS_DB_HOST: dbserver.company.com
+    CONNECTIONS_DB_USER: db2inst1
+    CONNECTIONS_DB_PASSWORD: dbpassword
+
+    # -------- DB2 variables ------------
+    CONNECTIONS_DB_TYPE: db2
+    CONNECTIONS_DB_PORT: 50000
+    # Connection string is built from other variables:
+    # CONNECTIONS_DB_CONNECT_STRING: HOSTNAME=${host};PORT=${port};PROTOCOL=TCPIP;UID=${user};PWD=${password};CHARSET=UTF8;
+
+    # -------- Microsoft variables -------
+    # CONNECTIONS_DB_TYPE: mssql
+    # CONNECTIONS_DB_PORT: 1433
+    # CONNECTIONS_DB_DOMAIN: domain
+
+    # -------- Oracle variables ----------
+    # CONNECTIONS_DB_TYPE: oracle
+    # CONNECTIONS_DB_PORT: 1531
+    # CONNECTIONS_DB_SID: DATABASE
+    # Connection string is built from other variables:
+    # CONNECTIONS_DB_CONNECT_STRING: ${host}:${port}/${sid}
+
+    # -------- Other options -------------
+    # PROCESSING_PAGE_SIZE: 10
+    # PROCESSING_LOG_EVERY: 50
+    # IMMEDIATELY_PROCESS_ALL: false
+    # COMPLETE_ACTIVITY_AFTER_MIGRATED: false
+    # CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED: false

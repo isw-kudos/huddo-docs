@@ -5,7 +5,6 @@ We are proud to say that Huddo Boards is able to run in many configurations to s
 1. Boards Docker (On-Premise)
     - [HCL Connections Component Pack](/boards/cp/)
     - [Standalone Kubernetes](/boards/kubernetes/)
-    <!-- - [in Docker Swarm](/boards/swarm/) -->
 1. [Boards Hybrid](/boards/hybrid/) (Cloud integrated with HCL Connections On-Premise)
 
 ---

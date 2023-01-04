@@ -1,4 +1,4 @@
-### Boards standalone deployment
+# Boards Standalone Deployment
 
 This document outlines a standalone (all in one) deployment of Huddo Boards. This can be used as a proof of concept, staging deployment or even a production deployment for a limited number of users (e.g. &lt; 500).
 
@@ -6,7 +6,7 @@ You may run all services including database and file storage on one server, or y
 
 Like all other deployments of Huddo Boards, this requires configuration of 2 domains: Application and API. e.g. boards.huddo.com and boards.api.huddo.com
 
-#### Server requirements
+## Server requirements
 
 RHEL (or Centos 7) server with:
 
@@ -16,15 +16,15 @@ RHEL (or Centos 7) server with:
 - 100gb data drive (will be shared for database and file store) <sup>*see Persistence Options below</sup>
 - docker and docker-compose
 
-Please contact support@huddo.com for assistance, providing your Docker Hub ID so that we may give you access to our repositories and templates.
+Please [follow this guide](/boards/images/) to get access to our images in Quay.io so that we may give you access to our repositories and templates.
 
-### Options
+## Options
 
-#### Network
+### Network
 
 You may use an external proxy or send traffic directly to the server. If you are sending traffic directly to the server, you will need pem encoded certificate (with full chain) and key.
 
-#### Persistence
+### Persistence
 
 Boards uses 3 types of persistent data: mongodb, s3 file store and redis cache.
 
@@ -32,7 +32,7 @@ Each of these may use external services or the included services in the template
 
 If using the included services, you will need to map directories for mongo and s3 containers to the data drive above, this data drive should be backed up however you currently backup data
 
-#### Environment Variables
+### Environment Variables
 
 Most required variables are in the template, for more information see the Kubernetes docs 
 

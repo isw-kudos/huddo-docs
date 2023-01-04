@@ -4,7 +4,7 @@
 
 !!! tip
 
-    To upgrade from images in the Component Pack download to the latest images hosted by us on Dockerhub please follow [this guide](/boards/cp/dockerhub/).
+    To upgrade from images in the Component Pack download to the latest images hosted by us on Quay.io please follow [this guide](/boards/cp/latest/).
 
 Please use the appropriate update command. For example:
 

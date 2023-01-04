@@ -89,10 +89,13 @@ nav:
                   - Sharepoint Pages: boards/msgraph/sharepoint.md
               - Auth0: boards/auth0/index.md
       - Boards Self-Hosted:
-          - For HCL Connections: boards/cp/index.md
-          - For Kubernetes: boards/kubernetes/index.md
-          - Standalone: boards/standalone.md
-          - Common Env: boards/env/common.md
+          - a) For HCL Connections: boards/cp/index.md
+          - b) For Kubernetes: boards/kubernetes/index.md
+          - c) Standalone: boards/standalone.md
+          - Access to Images: boards/images.md
+          - Common Config: boards/env/common.md
+          - Compatibility: boards/compatibility.md
+          - Helm Charts: boards/helm-charts.md
           - Integrations:
               - HCL Connections:
                   - Activity Migration: boards/connections/migration.md
@@ -111,8 +114,6 @@ nav:
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
                   - Teams App: boards/msgraph/teams-on-prem.md
           - Releases: boards/releases.md
-          - Helm Charts: boards/helm-charts.md
-          - Compatibility: boards/compatibility.md
       - Boards Hybrid: boards/hybrid.md
       - FAQ:
           - Languages: boards/faq/languages.md
@@ -160,7 +161,7 @@ nav:
               - Microsoft Teams: boards/howto/adding-boards-to-teams.md
               - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
           - Administration:
-              - Use Dockerhub Releases: boards/cp/dockerhub.md
+              - Latest Release in CP: boards/cp/latest.md
               - Manage Config: boards/howto/org-config.md
               - Manage Licences: boards/howto/manage-licences.md
               - Revoke Users: boards/howto/admin/revoke-users.md

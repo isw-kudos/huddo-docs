@@ -1,4 +1,6 @@
-# Huddo Boards for Docker Swarm
+# Boards for Docker Swarm (DEPRECATED)
+!!! warning
+    These instructions are deprecated. Please see [standalone guide](/boards/standalone/) if you do not have either Kubernetes or Component Pack
 
 Basic instructions for deploying Huddo Boards into Docker Swarm for on-premise IBM Connections environments
 

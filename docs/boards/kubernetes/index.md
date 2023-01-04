@@ -11,7 +11,7 @@ Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
-1. [Dockerhub](https://hub.docker.com) account setup with access to Huddo Boards repository.<br>Please send your account details to [support@huddo.com](mailto:support@huddo.com) if you don't already have this.
+1. [Quay.io - Red Hat](https://quay.io) account setup with access to Huddo Boards repository.  Please send your account details to [support@huddo.com](mailto:support@huddo.com) if you do not already have this.
 
 ---
 
@@ -78,11 +78,9 @@ Huddo Boards requires a Mongo database and an S3 file storage. If you already ha
 
 ### Setup secrets
 
-1.  Dockerhub credentials
+1. [Follow this guide](/boards/images/) to get access to our images in Quay.io
 
-        kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=<username> --docker-password=<password> --docker-email=<email> --namespace=boards
-
-1.  SSL certificate details
+1. SSL certificate details
 
     > Only perform this step if you need to resolve certificates in kubernetes
 

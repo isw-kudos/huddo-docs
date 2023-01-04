@@ -1,4 +1,7 @@
-## Moving from your local HCL Connections repository to Huddo Boards latest releases.
+# Latest Boards releases directly from Dockerhub (DEPRECATED)
+
+!!! warning
+    These instructions are deprecated. Please see the [new guide](/boards/images/)
 
 You can get the latest versions of Huddo Boards Docker by subscribing to our own repository in dockerhub as follows:
 

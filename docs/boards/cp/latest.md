@@ -1,20 +1,26 @@
-## Run latest Huddo Boards for Component Pack
+# Moving from your local HCL Connections repository to Huddo Boards latest releases.
 
-### Setup Dockerhub Credentials
+1. [Follow this guide](/boards/images/) to get access to our images.
 
-Please register your Dockerhub credentials with the ISW Huddo team and then run the following command
+1. Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](/assets/config/kubernetes/boards-cp-quay.yaml).
 
-    kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=<username> --docker-password=<password> --docker-email=<email> --namespace=connections
+    1. At the top set
 
-### Update config to pull images from Dockerhub
+        - `global.repository` to `quay.io/huddo`
+        - `global.imageTag` as the date of our latest [release](/boards/releases/)
+        - `global.imagePullSecret` to the name of the secret you created
+        
+            e.g. `<USERNAME>-pull-secret`
 
-```yaml
-global
-  env:
-    repository: docker.io/kudos-boards-docker
-```
-### Deploy
+            ![Example](/assets/quay/config-yaml.png)
 
-Run the following update command
+    1. Add `image.tag` for each service as per [this example](/assets/config/kubernetes/boards-cp-quay.yaml).
+    
+        !!! tip 
+            Some of the services (`app`, `provider`, `notification`) might not be in your `boards-cp.yaml` file, you must add them.
 
-    helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+        ![Example](/assets/boards/cp/image-config.png)
+
+1. Run the Helm upgrade command to apply the changes.
+
+        helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
