@@ -1,6 +1,6 @@
 # Moving from your local HCL Connections repository to Huddo Boards latest releases.
 
-1. [Follow this guide](/boards/images/) to get access to our images.
+1. [Follow this guide](/boards/images/) to configure your Kubernetes with access to our images.
 
 1. Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](/assets/config/kubernetes/boards-cp-quay.yaml).
 
