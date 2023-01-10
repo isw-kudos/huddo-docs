@@ -3633,6 +3633,15 @@
 <p class="admonition-title">Tip</p>
 <p>To upgrade from images in the Component Pack to images hosted by us please follow <a href="/boards/cp/latest/">this guide</a>.</p>
 </div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>New chart for Component Pack</p>
+<p>As of <code>huddo-boards-cp-1.0.0.tgz</code> we have changed the Minio pods to run as <code>user 1000</code> instead of <code>root</code>.
+You must perform the following command on the shared drive (<code>/pv-connections</code> file system) before using this new chart. The change is backwards compatible.</p>
+<div class="highlight"><pre><span></span><code>cd /pv-connections/kudos-boards-minio/
+chown 1000:1000 -R .
+</code></pre></div>
+</div>
 <div class="highlight"><pre><span></span><code>helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections
 </code></pre></div>
 </li>
@@ -4965,7 +4974,7 @@ iswkudos/kudos-boards:boards-2020-03-06
   <small>
     
       Last update:
-      2023-01-10
+      2023-01-11
     
   </small>
 </div>

@@ -3315,6 +3315,14 @@
 <hr />
 <h2 id="for-component-pack">For Component Pack<a class="headerlink" href="#for-component-pack" title="Permanent link">&para;</a></h2>
 <h3 id="huddo-boards-cp">huddo-boards-cp<a class="headerlink" href="#huddo-boards-cp" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>As of <code>huddo-boards-cp-1.0.0.tgz</code> we have changed the Minio pods to run as <code>user 1000</code> instead of <code>root</code>.
+You must perform the following command on the shared drive (<code>/pv-connections</code> file system) before using this new chart. The change is backwards compatible.</p>
+<div class="highlight"><pre><span></span><code>cd /pv-connections/kudos-boards-minio/
+chown 1000:1000 -R .
+</code></pre></div>
+</div>
 <ul>
 <li><a href="/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz">1.0.0</a></li>
 </ul>
@@ -3333,7 +3341,7 @@
   <small>
     
       Last update:
-      2023-01-10
+      2023-01-11
     
   </small>
 </div>
