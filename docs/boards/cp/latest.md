@@ -13,7 +13,7 @@
 
 1. Run the Helm upgrade command with our new Huddo chart to apply the changes.
 
-        helm upgrade boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
     !!! note
         The chart name has changed. You may need to `helm delete kudos-boards-cp` first
