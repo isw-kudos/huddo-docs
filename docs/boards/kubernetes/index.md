@@ -11,7 +11,7 @@ Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
-1. [Quay.io - Red Hat](https://quay.io) account setup with access to Huddo Boards repository.  Please send your account details to [support@huddo.com](mailto:support@huddo.com) if you do not already have this.
+1. [Quay.io - Red Hat](https://quay.io) account setup with access to the [Huddo Boards repository](/boards/images/).  Please send your account details to [support@huddo.com](mailto:support@huddo.com) if you do not already have this.
 
 ---
 
@@ -117,7 +117,7 @@ Follow instructions on [this page](/boards/env/common/)
 
 Install the Boards services via our Helm chart
 
-    helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 

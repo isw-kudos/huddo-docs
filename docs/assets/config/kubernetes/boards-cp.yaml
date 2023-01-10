@@ -2,15 +2,16 @@
 # For details of variable meanings, please see https://docs.huddo.com/boards/cp/
 
 global:
-  repository: your-private-docker-repo/connections
-  imageTag: connections-date-tag
-  imagePullSecret: myregkey
+  imagePullSecret: quay-username-pull-secret
+  imageTag: 2023-01-03
   env:
     APP_URI: https://connections.example.com/boards
     API_GATEWAY: https://connections.example.com/api-boards
 
 minio:
   # persistentVolumePath: pv-connections
+  # useLegacyPodSecurityPolicy: true
+  # useDockerHub: true
   nfs:
     server: 192.168.0.1
 
@@ -58,7 +59,7 @@ user:
     # CONNECTIONS_NAME: HCL Connections
     # CONNECTIONS_CLIENT_ID: huddoboards
     CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
-    CONNECTIONS_ADMINS: '["admin1@company.example.com", "boss2@company.example.com", "PROF_GUID_3"]'
+    CONNECTIONS_ADMINS: "[\"admin1@company.example.com\", \"boss2@company.example.com\", \"PROF_GUID_3\"]"
 
 migration:
   # configure access to the Connections Shared mount

@@ -2,33 +2,34 @@
 
 ## How To Upgrade
 
-!!! tip
+!!! warning "Important - new image hosting"
+    As of January 2023 we have moved our image hosting. Please [follow this guide](/boards/images/) to configure your Kubernetes with access to our images hosted in Quay.io. We have provided new [Huddo charts](/boards/helm-charts/) to utilise these images.
 
-    To upgrade from images in the Component Pack download to the latest images hosted by us on Quay.io please follow [this guide](/boards/cp/latest/).
+Please use the appropriate update command with the latest [helm chart](/boards/helm-charts/).  For example:
 
-Please use the appropriate update command. For example:
+1. Huddo Boards in Kubernetes
 
-Huddo Boards in Kubernetes
+    ```
+    helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
+    ```
 
-```
-helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-5.2.1.tgz -i -f ./boards.yaml --namespace boards
-```
+1. Component Pack (Activities Plus)
 
-Component Pack (Activities Plus)
+    !!! tip
 
-```
-helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz -i -f ./boards-cp.yaml --namespace connections
-```
+        To upgrade from images in the Component Pack to images hosted by us please follow [this guide](/boards/cp/latest/).
 
-See here for the [Helm Charts change log](/boards/helm-charts/).
-
-!!! note
-
-    Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.
+    ```
+    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections
+    ```
 
 ---
 
 ## Releases
+
+!!! note
+
+    Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.
 
 ### 2023
 
