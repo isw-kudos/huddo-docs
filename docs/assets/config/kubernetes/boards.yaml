@@ -1,8 +1,8 @@
 global:
-  # repository: iswkudos/kudos-boards-docker DEPRECRATED AS OF 2019-10-16 RELEASE
-  repository: iswkudos/kudos-boards
-  # Uncomment the next line to lock your deployment to a specific release date (YYYY-MM-DD)
-  # imageTagSuffix: '2019-11-07'
+  # setup authentication by following https://docs.huddo.com/boards/images/
+  imagePullSecret: quay-username-pull-secret
+  # find the latest release date https://docs.huddo.com/boards/releases/
+  imageTag: 2023-01-03
   env:
     APP_URI: https://example.com/boards
     API_GATEWAY: https://example.com/api-boards
@@ -16,18 +16,7 @@ global:
     S3_SECRET_KEY: 7a863d41-2d8f-4143-bc8a-02501edbea6f
     S3_BUCKET: huddo-boards
 
-licence:
-  env:
-    # Register your Organisation and download your Free 'Activities Plus' licence key from store.huddo.com
-    LICENCE: secret-string-you-download
-
 webfront:
-  image:
-    tag: webfront
-  env:
-    # DOCUMENTATION_URL: https://docs.huddo.com/boards/howto/knowledgebase/
-    # PRODUCT_INFO_URL: https://huddo.com/boards
-    # SUPPORT_EMAIL: support@example.com
   ingress:
     hosts:
       - example.com
@@ -36,23 +25,20 @@ webfront:
     annotations:
       kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/rewrite-target: /$1
+  env:
+    # DOCUMENTATION_URL: https://docs.huddo.com/boards/howto/knowledgebase/
+    # PRODUCT_INFO_URL: https://huddo.com/boards
+    # SUPPORT_EMAIL: support@example.com
 
 events:
-  image:
-    tag: boards-event
   env:
     NOTIFIER_EMAIL_HOST: smtp.example.com
-    # NOTIFIER_EMAIL_USERNAME: username
-    # NOTIFIER_EMAIL_PASSWORD: password
+    NOTIFIER_EMAIL_USERNAME: user123
+    NOTIFIER_EMAIL_PASSWORD: passw0rd
     # NOTIFIER_EMAIL_PORT: 25
     # NODE_TLS_REJECT_UNAUTHORIZED: "0"
 
 core:
-  image:
-    tag: core
-  env:
-    API_URI_PATH: /api-boards
-    # NODE_TLS_REJECT_UNAUTHORIZED: "0"
   ingress:
     hosts:
       - example.com
@@ -66,10 +52,14 @@ core:
       nginx.ingress.kubernetes.io/proxy-body-size: 50m
       nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
       nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+  env:
+    API_URI_PATH: /api-boards
+    # NODE_TLS_REJECT_UNAUTHORIZED: "0"
 
-app:
-  image:
-    tag: boards
+licence:
+  env:
+    # Register your Organisation and download your Free 'Activities Plus' licence key from store.huddo.com
+    LICENCE: secret-string-you-download
 
 provider:
   env:
@@ -108,6 +98,13 @@ migration:
     CONNECTIONS_DB_HOST: dbserver.company.com
     CONNECTIONS_DB_USER: db2inst1
     CONNECTIONS_DB_PASSWORD: dbpassword
+
+    # Set the Timezone for this container, so dates are understood correctly
+    # Please see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a full list of options
+    # For example, uncomment one of the lines below (or add your own)
+    # TZ: America/New_York
+    # TZ: Australia/Hobart
+    # TZ: Europe/London
 
     # -------- DB2 variables ------------
     CONNECTIONS_DB_TYPE: db2
