@@ -43,6 +43,13 @@ Please use the appropriate update command with the latest [helm chart](/boards/h
 
 ### 2023
 
+#### 2023-01-17
+
+Improvements:
+
+- Styling for HCL Connections 8 new UI
+
+---
 #### 2023-01-03
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2023-01-03)
