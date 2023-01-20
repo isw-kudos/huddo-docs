@@ -49,7 +49,7 @@ Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
     Click `Add another app`
 
-    ![Example](/assets/connections/homepage-admin.png)
+    ![Example](/assets/connections/homepage/admin.png)
 
 1. Select the following:
 
@@ -60,7 +60,7 @@ Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
     Click the `Add Mapping` button.
 
-    ![Example](/assets/connections/homepage-admin2.png)
+    ![Example](/assets/connections/homepage/admin2.png)
 
 1. Enter values:
 
@@ -81,7 +81,7 @@ Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
 1. Select the newly defined app and click `Enable`
 
-    ![Example](/assets/connections/homepage-admin6.png)
+    ![Example](/assets/connections/homepage/admin6.png)
 
 <!-- This is not needed for the iframe widget
 ### Register Widget
@@ -100,7 +100,7 @@ Required for HCL Connections 6.0 CR1 onwards:
 
 Huddo Boards integrates with Connections Engagement Center
 
-![Example](/assets/connections/highlights-boards.png)
+![Example](/assets/connections/highlights/boards.png)
 
 1. Download the Boards [Hybrid widget definition file](/assets/boards/hybrid/custom.js)
 
@@ -110,7 +110,7 @@ Huddo Boards integrates with Connections Engagement Center
 
 1. Click `Customize`, `Engagement Center Settings`, expand `Customization Files` & click `Upload File`
 
-     ![Example](/assets/connections/highlights-fileupload.png)
+     ![Example](/assets/connections/highlights/fileupload.png)
 
      > Note: you must have the admin role for the `Customize` button to appear
 
@@ -123,8 +123,8 @@ Huddo Boards integrates with Connections Engagement Center
       1. Open the `Highlights` application in a Community
       1. Click `Customize`, `Widgets` and `Huddo Boards`
 
-         ![Example](/assets/connections/highlights-add-boards.png)
+         ![Example](/assets/connections/highlights/add-boards.png)
       
       1. The Boards Highlights widget should now appear at the end of the page
 
-         ![Example](/assets/connections/highlights-boards.png)
+         ![Example](/assets/connections/highlights/boards.png)

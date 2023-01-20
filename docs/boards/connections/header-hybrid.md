@@ -54,7 +54,7 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Click `New`
 
-    ![example](/assets/connections/header/env1.png)
+    ![example](/assets/connections/iframe/env1.png)
 
 
 1. Set the following details and click `OK`
@@ -67,7 +67,7 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
     - your Connections hostname base64 encoded.  E.g.</br>
       `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
 
-    ![example](/assets/connections/header/env-hybrid.png)
+    ![example](/assets/connections/iframe/env-hybrid.png)
 
 1. The config may require saving. Click `Save` if presented
 
@@ -77,15 +77,15 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Click `Install`
 
-    ![example](/assets/connections/header/app1.png)
+    ![example](/assets/connections/iframe/app1.png)
 
 1. Select the file and click `Next`
 
-    ![example](/assets/connections/header/app2.png)
+    ![example](/assets/connections/iframe/app2.png)
 
 1. You can rename the App if you wish, then click `Next`
 
-    ![example](/assets/connections/header/app4.png)
+    ![example](/assets/connections/iframe/app4.png)
 
 1. Select the checkbox for the module
 
@@ -97,19 +97,19 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Click `Next`
 
-    ![example](/assets/connections/header/app5.png)
+    ![example](/assets/connections/iframe/app5.png)
 
 1. Click `Next`
 
-    ![example](/assets/connections/header/app6.png)
+    ![example](/assets/connections/iframe/app6.png)
 
 1. Click `Finish`
 
-    ![example](/assets/connections/header/app7.png)
+    ![example](/assets/connections/iframe/app7.png)
 
 1. The config may prompt to save. Click `Save`
 
-    ![example](/assets/connections/header/app8.png)
+    ![example](/assets/connections/iframe/app8.png)
 
     The application should now be installed
 
@@ -117,11 +117,11 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Tick the box next to the app name, and click `Start`
 
-    ![example](/assets/connections/header/app9.png)
+    ![example](/assets/connections/iframe/app9.png)
 
     The app should now start. Congratulations, you have installed the app!
 
-    ![example](/assets/connections/header/app10.png)
+    ![example](/assets/connections/iframe/app10.png)
 
     You should now be able to load  app can now be loaded at this path
 

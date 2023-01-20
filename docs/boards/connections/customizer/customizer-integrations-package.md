@@ -68,10 +68,10 @@ TODO: Write user documentation for each of the integrations and refer to them fo
 
 1. Use the Search Sidebar to search for content in Boards from different paths in Connections (e.g. homepage, profiles, activities, forums)
 
-![Search Sidebar](/assets/connections/search_panel.png)
+![Search Sidebar](/assets/connections/search/panel.png)
 
 1. Use advanced search (`/search/web/jsp/advancedSearch.jsp`) to see Boards results integrated in the full search results page.
 
-![Advanced Search Standalone Section](/assets/connections/search_main2.png)
+![Advanced Search Standalone Section](/assets/connections/search/main2.png)
 
     > Note: you need to have content in Boards to see any results. -->
