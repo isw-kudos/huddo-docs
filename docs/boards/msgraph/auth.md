@@ -212,11 +212,11 @@ At the end of this step you should have the following:
 
 1. Once logged in, a prompt will appear in Huddo Boards. Click `Approve`
 
-    ![Admin Approval Toast](../../assets/msgraph/administrator_approval_toast.png)
+    ![Admin Approval Toast](/assets/msgraph/administrator_approval_toast.png)
 
 1. Click `Accept` on the following popup to grant the required permissions for Huddo Boards
 
-    ![permission popup](../../assets/msgraph/administrator_approval_view.png)
+    ![permission popup](/assets/msgraph/administrator_approval_view.png)
 
     Congratulations! All users in your tenant can now login to Huddo Boards via Office 365!
 

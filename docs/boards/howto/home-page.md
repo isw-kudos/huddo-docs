@@ -2,7 +2,7 @@
 
 The picture below shows the Myboards Dashboar. This is your start / home page with colourful tiles. Each tile is one Board with a name, when it was last accessed, progress on tasks and more.
 
-![Home Page](../../assets/boards/home-page.png)
+![Home Page](/assets/boards/home-page.png)
 
 ##On this start page you can:
 
