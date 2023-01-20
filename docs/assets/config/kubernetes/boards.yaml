@@ -23,7 +23,6 @@ webfront:
     # comment the following lines if you are using sub domains instead of paths
     path: /boards/?(.*)
     annotations:
-      kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/rewrite-target: /$1
   env:
     # DOCUMENTATION_URL: https://docs.huddo.com/boards/howto/knowledgebase/
@@ -45,7 +44,6 @@ core:
     # comment the following lines if you are using sub domains instead of paths
     path: /api-boards/?(.*)
     annotations:
-      kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/rewrite-target: /$1
       nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
       nginx.ingress.kubernetes.io/affinity: cookie
