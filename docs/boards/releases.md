@@ -1,4 +1,4 @@
-# Boards Docker Releases (change log)
+# Boards Self-Hosted Releases (change log)
 
 ## How To Upgrade
 

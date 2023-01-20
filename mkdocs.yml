@@ -22,53 +22,11 @@ extra:
       link: https://github.com/isw-kudos
 
 nav:
-  - Welcome: index.md
-  - Huddo Analytics:
-      - Installation:
-          - Overview: analytics/install/overview.md
-          - Install Application: analytics/install/app.md
-          - Widgets: analytics/install/install-widgets.md
-          - Apply Changes: analytics/install/apply-changes.md
-          - Add Widgets: analytics/install/add-widgets.md
-          - Community Properties: analytics/install/comm-properties.md
-          - Licence: analytics/install/licence.md
-          - Customising: analytics/install/customising.md
-          - FAQ: analytics/install/websphere-faq.md
-      - User Guide:
-          - Introduction: analytics/user-guide/introduction.md
-          - Using Reports: analytics/user-guide/using-reports.md
-          - Available Reports: analytics/user-guide/available-reports.md
-          - How to Access Reports: analytics/user-guide/access-reports.md
-          - Glossary of Terms: analytics/user-guide/terms.md
-          - Event Map: analytics/user-guide/itemtype-map.md
-  - Huddo Badges:
-      - Details: badges/index.md
-      - Installation:
-          - Overview: badges/install/overview.md
-          - Install Application: badges/install/app.md
-          - Widgets: badges/install/install-widgets.md
-          - Mobile: badges/install/mobile.md
-          - Apply Changes: badges/install/apply-changes.md
-          - Add Widgets: badges/install/add-widgets.md
-          - Community Properties: badges/install/comm-properties.md
-          - Licence: badges/install/licence.md
-          - Defaults: badges/install/load-defaults.md
-          - Leaderboard: badges/install/leaderboard.md
-          - Awards: badges/install/awards.md
-          - Engine: badges/install/engine.md
-          - Customising: badges/install/customising.md
-          #- Embedded Experience: badges/install/embedded-exp.md
-          - FAQ: badges/websphere-faq.md
-      - Update:
-          - Overview: badges/update/overview.md
-          - Update the Application: badges/update/update_app.md
-          - Refresh Widget Cache: badges/update/refresh_cache.md
-      - Huddo Images: badges/update-images.md
-  - Huddo Boards:
-      - Versions: boards/index.md
+  - Boards:
+      - boards/index.md
       - Boards Cloud:
-          - Overview: boards/cloud.md
-          - Updates: boards/cloud-updates.md
+          - boards/cloud/index.md
+          - Updates: boards/cloud/updates.md
           - Integrations:
               - HCL Connections:
                   - Authentication: boards/connections/auth-hybrid.md
@@ -89,6 +47,7 @@ nav:
                   - Sharepoint Pages: boards/msgraph/sharepoint.md
               - Auth0: boards/auth0/index.md
       - Boards Self-Hosted:
+          - boards/kubernetes/index.md
           - a) For HCL Connections: boards/cp/index.md
           - b) For Kubernetes: boards/kubernetes/index.md
           - c) Standalone: boards/standalone.md
@@ -113,26 +72,14 @@ nav:
                   - Authentication: boards/msgraph/auth.md
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
                   - Teams App: boards/msgraph/teams-on-prem.md
+              - Related Tasks: boards/howto/developing/related-tasks.md
           - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md
       - FAQ:
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
           - Roles: boards/cp/roles.md
-      - Troubleshooting:
-          - Activities Plus: boards/troubleshooting/activities-plus-install.md
-          - Activity Migration: boards/troubleshooting/activity-migration.md
-          - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
-          - Boards Docker: boards/troubleshooting/docker.md
-          - Boards WebSphere: boards/troubleshooting/websphere.md
-          - Office 365: boards/troubleshooting/office365.md
-          - OAuth: boards/troubleshooting/oauth.md
-          - NGINX: boards/troubleshooting/nginx.md
-          - Notifications: boards/troubleshooting/notifications.md
-          - Browsers:
-              - Safari: boards/troubleshooting/safari.md
-      # - API Documentation: /assets/boards/api-documentation.html
-      - How To Guide:
+      - Using Boards:
           - Knowledge Base & Support: boards/howto/knowledgebase.md
           - Getting Started: boards/howto/getting-started-with-kudos-boards.md
           - Quick Tips: boards/howto/quick-tips-for-boards.md
@@ -160,31 +107,30 @@ nav:
               - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
               - Microsoft Teams: boards/howto/adding-boards-to-teams.md
               - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
-          - Administration:
-              - Latest Release in CP: boards/cp/latest.md
-              - Manage Config: boards/howto/org-config.md
-              - Manage Licences: boards/howto/manage-licences.md
-              - Revoke Users: boards/howto/admin/revoke-users.md
-              - Transition Providers:
-                  - Overview: boards/howto/admin/transition-between-providers.md
-                  - Synchronise Profiles: boards/howto/admin/sync-profiles.md
-                  - Link User Accounts: boards/howto/admin/link-users.md
-                  - Replace Group Membership: boards/howto/admin/replace-group-membership.md
-                  - Transfer Ownership & Unlink: boards/howto/admin/transfer-ownership-unlink.md
-                  - Deactivate Login: boards/howto/admin/deactivate-login.md
-          - Development:
-              - Related Tasks: boards/howto/developing/related-tasks.md
-
-  - Huddo Ideas: ideas/howto.md
-  - Buzzy:
-      # - Overview: buzzy/index.md
-      - Overview: buzzy/buzzy-icp.md
-      - Connections OAuth Config: buzzy/buzzy-oauth.md
-      - WAS Config: buzzy/buzzy-wasconfig.md
-      - Header Config: buzzy/buzzy-header.md
-      - Connections Widgets: buzzy/buzzy-widgets.md
-      - Mongo: buzzy/mongo.md
-      - Minio: buzzy/minio.md
+      - Administration:
+          - Latest Release in CP: boards/cp/latest.md
+          - Manage Config: boards/howto/org-config.md
+          - Manage Licences: boards/howto/manage-licences.md
+          - Revoke Users: boards/howto/admin/revoke-users.md
+          - Transition Providers:
+              - Overview: boards/howto/admin/transition-between-providers.md
+              - Synchronise Profiles: boards/howto/admin/sync-profiles.md
+              - Link User Accounts: boards/howto/admin/link-users.md
+              - Replace Group Membership: boards/howto/admin/replace-group-membership.md
+              - Transfer Ownership & Unlink: boards/howto/admin/transfer-ownership-unlink.md
+              - Deactivate Login: boards/howto/admin/deactivate-login.md
+          - Troubleshooting:
+              - Activities Plus: boards/troubleshooting/activities-plus-install.md
+              - Activity Migration: boards/troubleshooting/activity-migration.md
+              - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
+              - Boards Docker: boards/troubleshooting/docker.md
+              - Boards WebSphere: boards/troubleshooting/websphere.md
+              - Office 365: boards/troubleshooting/office365.md
+              - OAuth: boards/troubleshooting/oauth.md
+              - NGINX: boards/troubleshooting/nginx.md
+              - Notifications: boards/troubleshooting/notifications.md
+              - Browsers:
+                  - Safari: boards/troubleshooting/safari.md
 
   - CCM Migrator:
       - Features: ccm-migrator/features.md
@@ -194,7 +140,47 @@ nav:
       - Supported Data: ccm-migrator/supported-data.md
       - File-system Export: ccm-migrator/export-fs.md
 
-  - log4j: log4j.md
+  - Analytics:
+      - Installation:
+          - Overview: analytics/install/overview.md
+          - Install Application: analytics/install/app.md
+          - Widgets: analytics/install/install-widgets.md
+          - Apply Changes: analytics/install/apply-changes.md
+          - Add Widgets: analytics/install/add-widgets.md
+          - Community Properties: analytics/install/comm-properties.md
+          - Licence: analytics/install/licence.md
+          - Customising: analytics/install/customising.md
+          - FAQ: analytics/install/websphere-faq.md
+      - User Guide:
+          - Introduction: analytics/user-guide/introduction.md
+          - Using Reports: analytics/user-guide/using-reports.md
+          - Available Reports: analytics/user-guide/available-reports.md
+          - How to Access Reports: analytics/user-guide/access-reports.md
+          - Glossary of Terms: analytics/user-guide/terms.md
+          - Event Map: analytics/user-guide/itemtype-map.md
+  - Badges:
+      - Details: badges/index.md
+      - Installation:
+          - Overview: badges/install/overview.md
+          - Install Application: badges/install/app.md
+          - Widgets: badges/install/install-widgets.md
+          - Mobile: badges/install/mobile.md
+          - Apply Changes: badges/install/apply-changes.md
+          - Add Widgets: badges/install/add-widgets.md
+          - Community Properties: badges/install/comm-properties.md
+          - Licence: badges/install/licence.md
+          - Defaults: badges/install/load-defaults.md
+          - Leaderboard: badges/install/leaderboard.md
+          - Awards: badges/install/awards.md
+          - Engine: badges/install/engine.md
+          - Customising: badges/install/customising.md
+          #- Embedded Experience: badges/install/embedded-exp.md
+          - FAQ: badges/websphere-faq.md
+      - Update:
+          - Overview: badges/update/overview.md
+          - Update the Application: badges/update/update_app.md
+          - Refresh Widget Cache: badges/update/refresh_cache.md
+      - Huddo Images: badges/update-images.md
 
 markdown_extensions:
   - toc:
@@ -209,7 +195,11 @@ markdown_extensions:
 theme:
   name: material
   features:
-    - tabs
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+
   palette:
     primary: light blue
     accent: amber

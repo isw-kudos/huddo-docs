@@ -2,9 +2,10 @@
 We are proud to say that Huddo Boards is able to run in many configurations to suit your individual requirements.
 
 1. [Boards Cloud](/boards/cloud/)
-1. Boards Docker (On-Premise)
+1. Boards Self-Hosted (On-Premise)
     - [HCL Connections Component Pack](/boards/cp/)
-    - [Standalone Kubernetes](/boards/kubernetes/)
+    - [Kubernetes](/boards/kubernetes/)
+    - [Standalone](/boards/standalone/)
 1. [Boards Hybrid](/boards/hybrid/) (Cloud integrated with HCL Connections On-Premise)
 
 ---
@@ -27,7 +28,7 @@ See [here](/boards/cloud/) for more information.
 
 ---
 
-### Boards Docker (On-Premise)
+### Boards Self-Hosted (On-Premise)
 > Our Boards Cloud product, installed locally in your infrastructure
 
 __Advantages__
