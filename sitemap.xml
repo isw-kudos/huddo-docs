@@ -461,17 +461,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/accessing-global-templates/</loc>
+         <loc>https://docs.huddo.com/boards/howto/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/adding-boards-to-teams/</loc>
+         <loc>https://docs.huddo.com/boards/howto/knowledgebase/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/adding-members-to-a-board/</loc>
+         <loc>https://docs.huddo.com/boards/howto/mobile-app/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/howto/use-auth0/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/howto/use-verse/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/howto/adding-members/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -486,7 +501,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/creating-templates/</loc>
+         <loc>https://docs.huddo.com/boards/howto/connections/connections-ui/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -496,37 +511,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/disable-notifications-teams/</loc>
-         <lastmod>2023-01-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/boards/howto/getting-started/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/home-page/</loc>
+         <loc>https://docs.huddo.com/boards/howto/homepage/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/import-activity/</loc>
+         <loc>https://docs.huddo.com/boards/howto/import-activity/import/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/knowledgebase/</loc>
+         <loc>https://docs.huddo.com/boards/howto/microsoft/onedrive/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/mind-map-view/</loc>
+         <loc>https://docs.huddo.com/boards/howto/microsoft/outlook/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/mobile-app/</loc>
+         <loc>https://docs.huddo.com/boards/howto/microsoft/sharepoint/</loc>
+         <lastmod>2023-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/howto/mindmap/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -546,37 +561,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/timeline-view/</loc>
+         <loc>https://docs.huddo.com/boards/howto/teams/adding-boards/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/use-auth0/</loc>
+         <loc>https://docs.huddo.com/boards/howto/teams/disable-notifications/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/use-verse/</loc>
+         <loc>https://docs.huddo.com/boards/howto/templates/creating/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/connections/connections-ui/</loc>
+         <loc>https://docs.huddo.com/boards/howto/templates/global/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/microsoft/onedrive/</loc>
+         <loc>https://docs.huddo.com/boards/howto/timeline/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/howto/microsoft/outlook/</loc>
-         <lastmod>2023-01-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/boards/howto/microsoft/sharepoint/</loc>
+         <loc>https://docs.huddo.com/boards/integrations/</loc>
          <lastmod>2023-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
