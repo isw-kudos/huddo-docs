@@ -30,7 +30,7 @@ If you would like to send emails, Huddo Boards docker requires details of a forw
 
 > In the examples below, replace `example.com` with your actual company domain
 
-Huddo boards requires 2 domains (or redirects) in your network, one for the web application and one for the api. You can use a new domain or subdomain for this or you can use a path on an existing service.
+Huddo Boards requires 2 domains (or redirects) in your network, one for the web application and one for the api. You can use a new domain or subdomain for this or you can use a path on an existing service.
 
 For example:
 

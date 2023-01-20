@@ -1,6 +1,6 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
 
-#Getting Started with Huddo boards
+#Getting Started
 
 Huddo Boards is a intutive to learn and easy to master. It is a powerful addition to any business, whether you're looking to increase your personal productivity, super charge your teams', or collaborate with external parties. Learn quick tips and tricks from our help guides to get the most out of boards. Let's get started!
 

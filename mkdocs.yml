@@ -72,53 +72,53 @@ nav:
                   - Authentication: boards/msgraph/auth.md
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
                   - Teams App: boards/msgraph/teams-on-prem.md
-              - Related Tasks: boards/howto/developing/related-tasks.md
+              - Related Tasks: boards/integrations/developing/related-tasks.md
           - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md
       - FAQ:
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
           - Roles: boards/cp/roles.md
-      - Using Boards:
+      - User Guides:
           - Knowledge Base & Support: boards/howto/knowledgebase.md
-          - Getting Started: boards/howto/getting-started-with-kudos-boards.md
-          - Quick Tips: boards/howto/quick-tips-for-boards.md
+          - Getting Started: boards/howto/getting-started.md
+          - Quick Tips: boards/howto/quick-tips.md
           - Starting a trial: boards/howto/start-a-trial.md
           - Mobile App: boards/howto/mobile-app.md
           - Home Page: boards/howto/home-page.md
           - Creating Boards:
               - Create a Template: boards/howto/creating-templates.md
               - Use a Template: boards/howto/accessing-global-templates.md
-              - Hybrid - Import an Activity: boards/howto/kudos-boards-import-activity.md
+              - Hybrid - Import an Activity: boards/howto/import-activity.md
           - Working in a Board:
               - Adding Members: boards/howto/adding-members-to-a-board.md
               - Member Permissions: boards/howto/permissions.md
               - Archiving and Restoring: boards/howto/archiving-and-restoring.md
               - Attaching Files to Cards: boards/howto/attaching-files.md
               - Mind Map: boards/howto/mind-map-view.md
-              - Timeline: boards/howto/timeline-view-in-boards.md
+              - Timeline: boards/howto/timeline-view.md
               - Task Dependencies: boards/howto/dependencies.md
           - Boards in other Apps:
               - HCL Connections: boards/howto/connections/connections-ui.md
               - HCL Verse: boards/howto/use-verse.md
               - Login with Auth0: boards/howto/use-auth0.md
-              - Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
-              - Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
-              - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
+              - Microsoft OneDrive: boards/howto/microsoft/onedrive.md
+              - Microsoft Outlook: boards/howto/microsoft/outlook.md
+              - Microsoft SharePoint: boards/howto/microsoft/sharepoint.md
               - Microsoft Teams: boards/howto/adding-boards-to-teams.md
               - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
       - Administration:
           - Latest Release in CP: boards/cp/latest.md
-          - Manage Config: boards/howto/org-config.md
-          - Manage Licences: boards/howto/manage-licences.md
-          - Revoke Users: boards/howto/admin/revoke-users.md
+          - Manage Config: boards/admin/org-config.md
+          - Manage Licences: boards/admin/manage-licences.md
+          - Revoke Users: boards/admin/revoke-users.md
           - Transition Providers:
-              - Overview: boards/howto/admin/transition-between-providers.md
-              - Synchronise Profiles: boards/howto/admin/sync-profiles.md
-              - Link User Accounts: boards/howto/admin/link-users.md
-              - Replace Group Membership: boards/howto/admin/replace-group-membership.md
-              - Transfer Ownership & Unlink: boards/howto/admin/transfer-ownership-unlink.md
-              - Deactivate Login: boards/howto/admin/deactivate-login.md
+              - Overview: boards/admin/transition-between-providers.md
+              - Synchronise Profiles: boards/admin/sync-profiles.md
+              - Link User Accounts: boards/admin/link-users.md
+              - Replace Group Membership: boards/admin/replace-group-membership.md
+              - Transfer Ownership & Unlink: boards/admin/transfer-ownership-unlink.md
+              - Deactivate Login: boards/admin/deactivate-login.md
           - Troubleshooting:
               - Activities Plus: boards/troubleshooting/activities-plus-install.md
               - Activity Migration: boards/troubleshooting/activity-migration.md

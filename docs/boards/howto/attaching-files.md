@@ -8,7 +8,7 @@ Anyone who has access to view the card will be able to view and download the att
 
 ### Office 365 (OneDrive) & HCL Connections (Files)
 
-If you use <a target="_blank" href="https://docs.huddo.com/boards/howto/kudos-boards-and-microsoft-onedrive/">Office 365</a> or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
+If you use <a target="_blank" href="https://docs.huddo.com/boards/howto/microsoft/onedrive/">Office 365</a> or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
 
 ### Attaching a File to a Card
 
