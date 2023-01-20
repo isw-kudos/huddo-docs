@@ -159,10 +159,10 @@ nav:
           - Glossary of Terms: analytics/user-guide/terms.md
           - Event Map: analytics/user-guide/itemtype-map.md
   - Badges:
-      - Details: badges/index.md
+      - badges/index.md
       - Installation:
-          - Overview: badges/install/overview.md
-          - Install Application: badges/install/app.md
+          - badges/install/index.md
+          - WebSphere Application: badges/install/app.md
           - Widgets: badges/install/install-widgets.md
           - Mobile: badges/install/mobile.md
           - Apply Changes: badges/install/apply-changes.md
@@ -177,7 +177,7 @@ nav:
           #- Embedded Experience: badges/install/embedded-exp.md
           - FAQ: badges/websphere-faq.md
       - Update:
-          - Overview: badges/update/overview.md
+          - badges/update/index.md
           - Update the Application: badges/update/update_app.md
           - Refresh Widget Cache: badges/update/refresh_cache.md
       - Huddo Images: badges/update-images.md
