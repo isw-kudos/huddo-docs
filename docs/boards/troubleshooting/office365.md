@@ -30,7 +30,7 @@ Access the [Configuration Page](/boards/howto/org-config/) and click through you
 
 Click the `Approve Advanced Features` button:
 
-![](/assets/boards/org-admin-approve-advanced.png)
+![](/assets/boards/admin/org-approve-advanced.png)
 
 This will direct you to the Microsoft Office 365 **Permissions requested - Accept for your organisation** page, allowing you to force the consent of all permissions that Huddo Boards needs for your organisation:
 

@@ -8,12 +8,12 @@ The Timeline view can be set as the *Starting View* when you create a new board 
 
 In your board creation phase, select` Timeline` from the Starting View drop down.
 
-![](/assets/boards/timeline1.png)
+![](./1.png)
 
 
 If your board is already created in either the Mind Map or the Kanban Board view, it is simply a matter of selecting the `Timeline` view from the right-hand side menu.
 
-![](/assets/boards/timeline2.png)
+![](./2.png)
 
 ### How to use the Timeline
 
@@ -25,13 +25,13 @@ If you have cards that are sitting in the Unscheduled Cards area on the bottom r
 
 Once you’ve dropped a card in to its list, you can move it along the timeline in either direction, shorten or lengthen its start and finish dates, or move to a different list.
 
-![](/assets/boards/timeline3.png)
+![](./3.png)
 
 * Add Start and Finish Dates to a Card
 
 Cards sitting in the Unscheduled Cards area can be clicked on to bring up the detailed card view. From here, select `Set Dates`, from the right-hand side menu. Add in a start and finish date under the card title for it to appear on the Timeline. The finish date will automatically fill to three days after start date, but this can be edited.  
 
-![](/assets/boards/timeline4.png)
+![](./4.png)
 
 Note: In the Kanban Board view or Mind Map view, you also have the option to add dates to cards, by clicking in to the detailed card view, selecting `Set Dates,` and adding a Start Date and End Date.  If you then switch over to the Timeline view, your cards will automatically fall on the timeline to the dates you have selected.
 
@@ -39,7 +39,7 @@ Note: In the Kanban Board view or Mind Map view, you also have the option to add
 
 The default view of Timeline is to group by Lists. But you have the option to view the cards on the board by *Colour, Label,* and by *Assigned.* Use the drop-down menu in the top left corner next to Group By to select from `List,` `Colour,` or `Assigned.`
 
-![](/assets/boards/timeline5.png)
+![](./5.png)
 
 ### Helpful Hints for Using the Timeline
 * Cards can run parallel and overlap other cards on the timeline

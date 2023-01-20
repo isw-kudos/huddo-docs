@@ -15,17 +15,17 @@ If you use <a target="_blank" href="https://docs.huddo.com/boards/howto/microsof
 Once you have opened your desired card, you can drag&drop a file to upload it, otherwise you can use the UI by:
 
 Clicking the `Links and Attachments`
-![](/assets/boards/attaching1.png)
+![](./attaching1.png)
 
 In the menu that appears, choose `Upload to this board.`
 
-![](/assets/boards/attaching3.png)
+![](./attaching3.png)
 
 Locate the file(s) you wish to attach and click open. 
 
 Your file will now appear in the Links and Attachments list.
 
-![](/assets/boards/attaching4.png)
+![](./attaching4.png)
 
 ### Removing an Attached File
 

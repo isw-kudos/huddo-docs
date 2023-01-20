@@ -12,11 +12,11 @@ Permanently deleting a card, list or board will remove them completely from the 
 
 Click in to the card you want to archive. Use the `Archive` button at the top of the right-hand corner to archive the card. The screen will show it has been archived and when you click away from it, it will disappear from the board.
 
-![](/assets/boards/archiving1.png)
+![](./archiving1.png)
 
 Example of an archived card:
 
-![](/assets/boards/archiving2.png)
+![](./archiving2.png)
 
 Archived the card by mistake? If you're still in archived card screen, use the `Restore` button in the top right corner to bring the card back to the board.
 
@@ -24,7 +24,7 @@ Archived the card by mistake? If you're still in archived card screen, use the `
 
 To Archive a list, click the vertical `...` icon on the right-hand side of the blue list header and select `Archive.`
 
-  ![](/assets/boards/archiving2.2.png)
+  ![](./archiving2.2.png)
 
   You'll notice that you also have options to archive the list and cards, or just the cards in the list.
 
@@ -34,13 +34,13 @@ If you’ve moved away from the archiving window above, but need to restore / de
 
 Only use the Delete option if you don't need to access the card or list ever again. For example, if you made a mistake. ***You cannot retrieve permanently deleted items.***
 
-![](/assets/boards/archiving3.png)
+![](./archiving3.png)
 
 ### How do I Archive a Board?
 
 Open the board you intend to archive. Navigate to `Open Board Options` found in the title of your board, to the left of the search bar. Here you’ll see the `Archive` button at the bottom of the right-hand menu. Click this button to archive the board.
 
-![](/assets/boards/archiving5.png)
+![](./archiving5.png)
 
 The board will change appearance to indicate it has been archived.
 
@@ -54,4 +54,4 @@ From the screen that indicates the board has been archived, you have the option 
 
 **Option 2:** Restore any board you’ve archived by navigating to the `Archive` tab on your My Boards dashboard page. Click in to the board you want to restore, click the pencil to `Open Board Options,` and click `Restore.`
 
-![](/assets/boards/archiving6.png)  
+![](./archiving6.png)  

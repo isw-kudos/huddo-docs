@@ -10,7 +10,7 @@ In the *New Board* creation phase, type in the name of any colleague or group in
 
 You can also decide if you would like the board to have Public Access, meaning anyone in your organisation will be able to view the board and participate depending on what level of permission you have set (reader, author, editor.)
 
-![](/assets/boards/adding-members-to-boards1.png)
+![](./adding-members-to-boards1.png)
 
 ### Adding Members to an Existing Board
 
@@ -22,15 +22,15 @@ Don’t forget to click the `Add Members` button before closing the window.
 
 New members will be notified that they have been invited to your board.  
 
-![](/assets/boards/adding-members-to-boards2.png)
+![](./adding-members-to-boards2.png)
 
 ### Managing Members in a Microsoft Team Channel and Board
 
-[A board can be added to a channel within Teams](/boards/howto/adding-boards-to-teams/) to help track progress on tasks and create a collaborative work environment.
+[A board can be added to a channel within Teams](/boards/howto/teams/adding-boards/) to help track progress on tasks and create a collaborative work environment.
 
 Members of a Team or a Channel will be inherited automatically in to your Huddo Board. 
 
-![](/assets/boards/adding-members-to-boards3.jpg)
+![](./adding-members-to-boards3.jpg)
 
 
 You can also add members directly to the board by searching them in the `Members` area on the right hand side of the board. Adding members this way, be they in your organisation or external to your organisation, will add them just to the board. Not to the Channel or Team. 

@@ -5,7 +5,7 @@
 ### @Mentions
 You can @mention a team member within the *description* or *comments* area of a card to get their attention. This will send them a notification that they’ve been mentioned and can take action on what you’ve written.  
 
-![](/assets/boards/quicktips1.png)
+![](./quicktips1.png)
 
 ### Move between Board, Mind Map, and Timeline
 
@@ -13,7 +13,7 @@ Chose the Kanban view setting up your board, but decided a Mind Map would be bet
 
 Using the right-hand side menu, transform the view of your board between the Kanban Board, Mind Map, and Timeline. Information in your board remains the same, only your view will change. Change as often as you like or depending on your needs.
 
-![](/assets/boards/quicktips2.png)
+![](./quicktips2.png)
 
 ### Add Members to a Board
 
@@ -30,7 +30,7 @@ This screen allows you to choose the type of rights your members will have: Owne
 
 You can also decide if you want the board to be Public Access, which will enable anyone from your organisation to see it.  
 
-![](/assets/boards/quicktips3.png)
+![](./quicktips3.png)
 
 ### Use Colour Labels to Categorise and Filter
 
@@ -42,10 +42,10 @@ Drag and drop the colour labels on to a card. Do the same action to remove the c
 
 You can also click on a colour or multiple colours to filter the cards.
 
-![](/assets/boards/quicktips4.png)
+![](./quicktips4.png)
 
 <!-- ### Key Board Shortcuts
 Find shortcuts by holding `SHIFT` and pressing `?`
 
-![](/assets/boards/quicktips5.PNG)
+![](./quicktips5.png)
 -->

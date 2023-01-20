@@ -15,14 +15,14 @@ There are two ways to activate a free 30 day trial in order to access the premiu
 
 You can return to  `View Subscription` at any point to purchase a licence for Huddo Boards for yourself or for a number of people in your organisation.     
 
-![example](/assets/boards/start-huddo-boards-free-trial-3rd-party-cloud-app.png)
+![example](./3rd-party-cloud-app.png)
 
 
 ### Activate free trial when you create a board:
 1. Login to [boards.huddo.com](https://boards.huddo.com) to enter the MyBoards Dashboard.
 2. Use the `Create` button to start a new board.
-![example](/assets/boards/start-free-trial-huddo-boards-new-board.png)
+![example](./new-board.png)
 3. Follow the steps to creating a board, including selecting a template, adding a name, and more information like a description and members (these can also be added to your board later.) Click `Save` when you are done. 
 4. When your new board opens, `Board` `MindMap` and `Timeline` in the right hand menu will be greyed out with the words `Preview Available` under each. Select any of these and follow prompts to start your free trial. 
 
-![example](/assets/boards/huddo-boards-free-trial-activation-2.png)
+![example](./activation-2.png)

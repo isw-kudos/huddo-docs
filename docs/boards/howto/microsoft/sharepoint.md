@@ -6,7 +6,7 @@ Huddo Boards' integration with Microsoft Office 365 allows you to add Huddo Boar
 
 In the example below, we've created a site page called "Where to Eat in Melbourne" and added our Food Objectives 2019 board to it. When added, you and your colleagues can work directly from a site page on a board.
 
-![](/assets/boards/sharepoint1.PNG)
+![](/assets/boards/sharepoint1.png)
 
 
 Before proceeding, you will need a site admin to enable security settings as described [here](/boards/msgraph/sharepoint_admin/)

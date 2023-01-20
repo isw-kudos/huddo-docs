@@ -10,11 +10,11 @@ The Mind Map view can be set as the *Starting View* when you create a board or i
 
 In your board creation phase, select `Mind Map` from the `Starting View` drop down.
 
-![](/assets/boards/mindmapview1.png)
+![](./view1.png)
 
 If your board is already created in either the Timeline or Board view, it is simply a matter of selecting the `Mind Map` view from the right-hand side menu.
 
-![](/assets/boards/mindmapview2.png)
+![](./view2.png)
 
 ### Creating a New Mind Map
 
@@ -22,11 +22,11 @@ In this example, we’ll create a new mind map and select `Blank` as the templat
 
 When you create a new mind map, you’ll see the title of the board, sitting front and center on the page. You’ll notice that just above the boxed title, there are two icons. The icon on the left creates a new sub-card. Since we’ve just begun our board, this will first create lists.  
 
-![](/assets/boards/mindmapview3.png)
+![](./view3.png)
 
 You can add as many lists as you like and at any stage of your mind map. Then add cards to your list areas, as you would on the Kanban Board view. Use the `Add a Sub-Card` icon on your desired list to add cards.
 
-![](/assets/boards/mindmapview4.png)
+![](./view4.png)
 
 You can add as many cards to the blue list titles as you like. Using the `Add a Sub-Card` icon on a card, will create a sub-card.
 
@@ -38,25 +38,25 @@ On the right-hand side menu, you have tools that can change the layout of your M
 
 ***Re-Centre:*** If you’ve focused in one section of your mind map, clicking Re-Centre will bring you back to a big picture view of your map.
 
-![](/assets/boards/mindmapview6.png)
+![](./view6.png)
 
 ---
 
 ***Layout: Radial***
 
-![](/assets/boards/mindmapview7.png)
+![](./view7.png)
 
 ---
 
 ***Layout: Horizontal***
 
-![](/assets/boards/mindmapview8.png)
+![](./view8.png)
 
 ---
 
 ***Layout: Vertical***
 
-![](/assets/boards/mindmapview9.png)
+![](./view9.png)
 
 ---
 
@@ -68,24 +68,24 @@ On the right-hand side menu, you have tools that can change the layout of your M
 
 ***Type: Free***
 
-![](/assets/boards/mindmapview10.png)
+![](./view10.png)
 
 ---
 
 ***Type: Step***
 
-![](/assets/boards/mindmapview11.png)
+![](./view11.png)
 
 ---
 
 ***Curve***
 
-![](/assets/boards/mindmapview12.png)
+![](./view12.png)
 
 ---
 
 ***Type: Line***
 
-![](/assets/boards/mindmapview13.png)
+![](./view13.png)
 
 ---

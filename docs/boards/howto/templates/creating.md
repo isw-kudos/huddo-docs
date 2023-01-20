@@ -7,11 +7,11 @@ Made a fantastic board and want to keep a copy for future use? Save time and bra
 ### Create a Template From an Existing Board
 Within your board, click the title of your board to `Open Board Options.` Find this located between the Huddo Boards logo and the search bar. Next, click, `Create Template from Board.`
 
-![](/assets/boards/createtemplate1.png)
+![](./createtemplate1.png)
 
 In the next window, you can update the name, description, and choose to keep Board Members as is, remove or add Board Members. Click `Save.` The template will open in a new screen.
 
-![](/assets/boards/createtemplate2.png)
+![](./createtemplate2.png)
 
 You’ll be able to locate your template in your template library via the MyBoards Dashboard or when you create a new board and search the name.
 
@@ -22,7 +22,7 @@ You’ll be able to locate your template in your template library via the MyBoar
 From your main *MyBoards* dashboard, navigate to `Templates` via the left-hand side menu.
 You’ll land on the My Templates page and see templates you have created.
 
-![](/assets/boards/createtemplate3.png)
+![](./createtemplate3.png)
 
 Click the `+ New Template` button to start your creation. You have the option to select `Source Board / Template` in the creation process, meaning you can make a template from another template that already exists. Leave this blank if you prefer to build your template from scratch in the board. 
 
@@ -30,7 +30,7 @@ Click the `+ New Template` button to start your creation. You have the option to
 
 Complete the required information for your template, then click `Create`.  
 
-![](/assets/boards/createtemplate4.png)
+![](./createtemplate4.png)
 
 Your new template will open as a blank board template or with lists and cards if you selected from a Source Board/Template. From here, customise your template by editing or adding required lists, cards, colour labels, tags and more.
 

@@ -7,11 +7,11 @@ Configuration options are available at an organisation level for Huddo Boards. C
 To access these settings, sign in to Huddo Boards as an administrator of your organisation.
 Click your profile image and then `Admin Settings`:
 
-![](/assets/boards/config-manage_org_new.png)
+![](/assets/boards/admin/config-manage_org_new.png)
 
 The config for your org will be shown, hover on the info (i) icons for more information on each setting
 
-![](/assets/boards/org-config_new.png)
+![](/assets/boards/admin/org-config.png)
 
 Changing a setting will immediately save/update the Org Config for all users.
 

@@ -1,8 +1,8 @@
-#Myboards Dashboard - Home page
+#Myboards Dashboard - Homepage
 
-The picture below shows the Myboards Dashboar. This is your start / home page with colourful tiles. Each tile is one Board with a name, when it was last accessed, progress on tasks and more.
+The picture below shows the Myboards Dashboard. This is your start / home page with colourful tiles. Each tile is one Board with a name, when it was last accessed, progress on tasks and more.
 
-![Home Page](/assets/boards/home-page.png)
+![Home Page](./homepage.png)
 
 ##On this start page you can:
 

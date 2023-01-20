@@ -28,6 +28,8 @@ nav:
           - boards/cloud/index.md
           - Updates: boards/cloud/updates.md
           - Integrations:
+              - boards/integrations/index.md
+              - Auth0: boards/auth0/index.md
               - HCL Connections:
                   - Authentication: boards/connections/auth-hybrid.md
                   - Header: boards/connections/header-hybrid.md
@@ -45,7 +47,6 @@ nav:
                   - Teams Integration: boards/msgraph/teams.md
                   - Outlook Plugin: boards/msgraph/outlook.md
                   - Sharepoint Pages: boards/msgraph/sharepoint.md
-              - Auth0: boards/auth0/index.md
       - Boards Self-Hosted:
           - boards/kubernetes/index.md
           - a) For HCL Connections: boards/cp/index.md
@@ -80,24 +81,26 @@ nav:
           - Notifications: boards/faq/notifications.md
           - Roles: boards/cp/roles.md
       - User Guides:
+          - boards/howto/index.md
           - Knowledge Base & Support: boards/howto/knowledgebase.md
-          - Getting Started: boards/howto/getting-started.md
-          - Quick Tips: boards/howto/quick-tips.md
-          - Starting a trial: boards/howto/start-a-trial.md
+          - Getting Started: boards/howto/getting-started/index.md
+          - Quick Tips: boards/howto/quick-tips/index.md
+          - Starting a trial: boards/howto/start-a-trial/index.md
           - Mobile App: boards/howto/mobile-app.md
-          - Home Page: boards/howto/home-page.md
+          - Home Page: boards/howto/homepage/index.md
           - Creating Boards:
-              - Create a Template: boards/howto/creating-templates.md
-              - Use a Template: boards/howto/accessing-global-templates.md
-              - Hybrid - Import an Activity: boards/howto/import-activity.md
+              - Create a Template: boards/howto/templates/creating.md
+              - Use a Template: boards/howto/templates/global.md
+              - Hybrid - Import an Activity: boards/howto/import-activity/import.md
           - Working in a Board:
-              - Adding Members: boards/howto/adding-members-to-a-board.md
-              - Member Permissions: boards/howto/permissions.md
-              - Archiving and Restoring: boards/howto/archiving-and-restoring.md
-              - Attaching Files to Cards: boards/howto/attaching-files.md
-              - Mind Map: boards/howto/mind-map-view.md
-              - Timeline: boards/howto/timeline-view.md
-              - Task Dependencies: boards/howto/dependencies.md
+              - boards/howto/adding-members/index.md
+              - Adding Members: boards/howto/adding-members/index.md
+              - Member Permissions: boards/howto/permissions/index.md
+              - Archiving and Restoring: boards/howto/archiving-and-restoring/index.md
+              - Attaching Files to Cards: boards/howto/attaching-files/index.md
+              - Mind Map: boards/howto/mindmap/index.md
+              - Timeline: boards/howto/timeline/index.md
+              - Task Dependencies: boards/howto/dependencies/index.md
           - Boards in other Apps:
               - HCL Connections: boards/howto/connections/connections-ui.md
               - HCL Verse: boards/howto/use-verse.md
@@ -105,8 +108,8 @@ nav:
               - Microsoft OneDrive: boards/howto/microsoft/onedrive.md
               - Microsoft Outlook: boards/howto/microsoft/outlook.md
               - Microsoft SharePoint: boards/howto/microsoft/sharepoint.md
-              - Microsoft Teams: boards/howto/adding-boards-to-teams.md
-              - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
+              - Microsoft Teams: boards/howto/teams/adding-boards.md
+              - Teams - Disable Notifications: boards/howto/teams/disable-notifications.md
       - Administration:
           - Latest Release in CP: boards/cp/latest.md
           - Manage Config: boards/admin/org-config.md

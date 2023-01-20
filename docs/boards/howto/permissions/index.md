@@ -4,7 +4,7 @@
 
 When you invite colleagues, teams, or external parties to collaborate in your board, you can decide what level of permission to allocate to them. Below, permissions are listed from the lowest access to the highest.
 
-![](/assets/boards/permissions.PNG)
+![](/assets/boards/permissions.png)
 
 ### Reader
 A person allocated a Reader permission, has read-only access.
@@ -19,7 +19,7 @@ Editors can invite and manage other members with the roles Reader, Author and Ed
 ### Owner
 Owners have full rights to all properties on a board, they can add, edit and delete all other members, lists and cards in the board.
 
-[Find out more about how to add members to a board.](/boards/howto/adding-members-to-a-board)
+[Find out more about how to add members to a board.](/boards/howto/adding-members/)
 
 ### Making Your Board Public
 

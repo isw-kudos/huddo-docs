@@ -4,11 +4,11 @@ You can access a library of global templates already available from Huddo Boards
 
 When you start a New Board, click `Explore the Template Library`.
 
-![](/assets/boards/globaltemplates1.png)
+![](./globaltemplates1.png)
 
 This will open a new window with available templates.
 
-![](/assets/boards/globaltemplates2.png)
+![](./globaltemplates2.png)
 
 Feel free to click in to different templates to see what they contain. 
 
