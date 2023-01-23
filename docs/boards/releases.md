@@ -30,7 +30,7 @@ Please use the appropriate update command with the latest [helm chart](/boards/h
             chown 1000:1000 -R .
 
     ```
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections
+    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
     ```
 
 ---

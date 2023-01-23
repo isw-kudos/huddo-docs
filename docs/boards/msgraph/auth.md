@@ -194,7 +194,7 @@ At the end of this step you should have the following:
 
     [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
 
