@@ -43,6 +43,20 @@ Please use the appropriate update command with the latest [helm chart](/boards/h
 
 ### 2023
 
+#### 2023-01-24
+
+Improvements:
+
+- Handling of default profile images in Cnx8
+- Detect language from Connections dropdown
+
+Fixes:
+
+- Styling for HCL Connections 8 Important-to-Me sidebar
+- Handling of new licence with new organisation in store
+
+---
+
 #### 2023-01-17
 
 Improvements:
