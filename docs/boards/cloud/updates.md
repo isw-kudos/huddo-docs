@@ -2,7 +2,45 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+## 2023
+
+### January
+
+2023-01-24
+
+Improvements:
+
+- Styling for HCL Connections 8 new UI
+- Handling of default profile images in Connections
+- Detect language from Connections dropdown
+- Security updates (node 18)
+
 ## 2022
+
+### December
+
+2022-12-14
+
+Improvements:
+
+- synchronise dependencies in real time
+- faster creation of multi cards
+- presence of users open on card without board open
+- adding dependencies between private cards
+- handling of dependencies where not accessible
+- make associated comments public when card is made public
+- synchronise my private tasks between my windows
+
+Fixes:
+
+- issue opening board "Error: Minified React error #185"
+- issue where Community widget shows 'my' boards incorrectly
+- issue where someone online in board remained online if page reloaded
+- issue where lists hidden when previewing Kanban view while creating a Board
+- issue where page crashed on logout in Node view
+- issue where page crashed on logout in Timeline view
+- issue where files couldn't be downloaded
+- issue where page reloaded in admin view
 
 ### November
 

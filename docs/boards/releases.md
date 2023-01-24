@@ -47,7 +47,7 @@ Please use the appropriate update command with the latest [helm chart](/boards/h
 
 Improvements:
 
-- Handling of default profile images in Connections 8
+- Handling of default profile images in Connections
 - Detect language from Connections dropdown
 
 Fixes:
