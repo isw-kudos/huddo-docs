@@ -47,13 +47,13 @@ Please use the appropriate update command with the latest [helm chart](/boards/h
 
 Improvements:
 
-- Handling of default profile images in Cnx8
+- Handling of default profile images in Connections 8
 - Detect language from Connections dropdown
 
 Fixes:
 
-- Styling for HCL Connections 8 Important-to-Me sidebar
-- Handling of new licence with new organisation in store
+- Styling for HCL Connections 8 'Important-to-Me' sidebar
+- Handling of licence with new organisation in store
 
 ---
 
