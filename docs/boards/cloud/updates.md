@@ -8,6 +8,10 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 2023-01-31
 
+Features:
+
+- New Organisation summary view
+
 Improvements:
 
 - Outlook attachments using plugin
