@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#app-logo" class="md-skip">
+        <a href="#from-name" class="md-skip">
           Skip to content
         </a>
       
@@ -3407,6 +3407,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#from-name" class="md-nav__link">
+    From Name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-email" class="md-nav__link">
+    From Email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#app-logo" class="md-nav__link">
     App Logo
   </a>
@@ -3441,6 +3455,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#email-config-example-yaml" class="md-nav__link">
+    Email Config Example (YAML)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3462,7 +3483,12 @@
 <p>The notifications sent out from Huddo Boards can be customised to include company logos, links and support email addresses. 
 The custom values are set as ENV variables in the config file.</p>
 <p>The image below shows the items that can be customised within notifications:
-<img alt="Customisable values" src="/assets/boards/notification-config.png" /></p>
+<br/></p>
+<p><img alt="Customisable values" src="/assets/boards/notification-config.png" /></p>
+<h3 id="from-name">From Name<a class="headerlink" href="#from-name" title="Permanent link">&para;</a></h3>
+<p>Use <code>events.env.NOTIFIER_EMAIL_FROM_NAME</code> to set the from name for emails <br/>Default: <code>Huddo Boards</code></p>
+<h3 id="from-email">From Email<a class="headerlink" href="#from-email" title="Permanent link">&para;</a></h3>
+<p>Use <code>events.env.NOTIFIER_EMAIL_FROM_EMAIL</code> to set the sent from email address <br/>Default: <code>no-reply@huddo.com</code></p>
 <h3 id="app-logo">App Logo<a class="headerlink" href="#app-logo" title="Permanent link">&para;</a></h3>
 <p>Specify a URL to point to a hosted logo image by specifying <code>events.env.APP_LOGO_URL</code> in the config. 
 For example: <code>https://company.com/assets/logo.png</code></p>
@@ -3473,7 +3499,8 @@ For example: <code>https://company.com/assets/logo.png</code></p>
 <p>Note that an inline base64 encoded data URL can also be used for this variable.</p>
 <h3 id="social-links">Social Links<a class="headerlink" href="#social-links" title="Permanent link">&para;</a></h3>
 <p>The links below the brand logo can be customised. These do not necessarily need to be displayed as images/icons and can be text based links.</p>
-<p>Specify the social links using the <code>events.env.SOCIAL_LINKS</code> variable. The links are specified in an array of objects with the format:
+<p>The standard/default Huddo social links can be replaced by setting the <code>events.env.SOCIAL_LINKS</code> variable. 
+The links are specified in an array of objects with the format:
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Link Name/Text&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">  </span><span class="err">li</span><span class="kc">n</span><span class="err">k</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Link URL&quot;</span><span class="p">,</span><span class="w"> </span>
@@ -3486,16 +3513,28 @@ For example: <code>https://company.com/assets/logo.png</code></p>
 <span class="s2">    \&quot;icon\&quot;: \&quot;https://company.com/assets/support_icon.png\&quot;}]&quot;</span>
 </code></pre></div></p>
 <h3 id="app-name">App Name<a class="headerlink" href="#app-name" title="Permanent link">&para;</a></h3>
-<p>Use <code>events.env.APP_NAME</code> to specify the app name.</p>
+<p>Use <code>events.env.APP_NAME</code> to specify the app name.<br/>Default: <code>Huddo Boards</code></p>
 <h3 id="support-email">Support Email<a class="headerlink" href="#support-email" title="Permanent link">&para;</a></h3>
-<p>The support email address can be specified in <code>events.env.NOTIFIER_EMAIL_SUPPORT_EMAIL</code></p>
+<p>The support email address can be specified in <code>events.env.NOTIFIER_EMAIL_SUPPORT_EMAIL</code><br/>Default: <code>support@huddo.com</code></p>
+<h2 id="email-config-example-yaml">Email Config Example (YAML)<a class="headerlink" href="#email-config-example-yaml" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">events</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">NOTIFIER_EMAIL_FROM_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Company</span>
+<span class="w">    </span><span class="nt">NOTIFIER_EMAIL_FROM_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boards@company.com</span>
+<span class="w">    </span><span class="nt">APP_LOGO_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://company.com/assets/company_logo.png</span>
+<span class="w">    </span><span class="nt">BRAND_LOGO_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://company.com/assets/logo.png</span>
+<span class="w">    </span><span class="nt">SOCIAL_LINKS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[{\&quot;name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;Intranet\&quot;,\&quot;link\&quot;:\&quot;https://company.com/intranet/\&quot;},</span><span class="nv"> </span><span class="s">{</span><span class="nv"> </span><span class="s">\&quot;name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;Support\&quot;,</span><span class="nv"> </span><span class="s">\&quot;link\&quot;:</span><span class="nv"> </span><span class="s">\&quot;https://company.com/support\&quot;,</span><span class="w"> </span>
+<span class="w">    </span><span class="s">\&quot;icon\&quot;:</span><span class="nv"> </span><span class="s">\&quot;https://company.com/assets/support_icon.png\&quot;}]&quot;</span>
+<span class="w">    </span><span class="nt">APP_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Boards for My Company</span>
+<span class="w">    </span><span class="nt">NOTIFIER_EMAIL_SUPPORT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">support@company.com</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2023-02-01
+      2023-02-03
     
   </small>
 </div>
@@ -3590,7 +3629,7 @@ For example: <code>https://company.com/assets/logo.png</code></p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
