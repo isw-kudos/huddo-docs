@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### January
 
+2023-01-31
+
+Improvements:
+
+- Outlook attachments using plugin
+- Copy/Paste functionality
+
 2023-01-24
 
 Improvements:
