@@ -1,8 +1,14 @@
-# Migration of Activities to Huddo Boards
+# Migration of Activities to Huddo Boards (using standalone Mongo/Redis)
+
+!!! tip
+
+    If you are using Component Pack please follow [this guide](/boards/cp/migration)
 
 As part of the installation process for Huddo Boards you can run the migration service to move the existing Activities into Huddo Boards.
 
-> Note: please review the [Roles page](/boards/cp/roles/) for details on how Community Activity membership is interpreted & presented by Boards
+!!! info
+
+    Please review the [Roles page](/boards/cp/roles/) for details on how Community Activity membership is interpreted & presented by Boards
 
 ## Difference between the individual import
 
@@ -79,9 +85,9 @@ migration:
 
 ## Deploy Helm Chart
 
-Please deploy the following chart with the same configuration `boards.yaml` file used to deploy the kudos-boards chart
+Please deploy the following chart with the same configuration `boards.yaml` file used to deploy the huddo-boards chart
 
-    helm upgrade huddo-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-activity-migration-1.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade huddo-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 > **Note:** the new `sharedDrive` parameters described above. You may also need to delete the previously name chart
 
@@ -97,10 +103,10 @@ You can also set the `global.env.IMMEDIATELY_PROCESS_ALL` variable if you wish t
 
 ## Logs
 
-You can check the pod logs for the kudos-boards-activity-migration to see progress of the running migration:
+You can check the pod logs for the activity-migration to see progress of the running migration:
 
 ```bash
-kubectl logs -n boards -f $(kubectl get po -n boards | grep activity-migration | awk '{print $1}')
+kubectl logs -n boards -f $(kubectl get pod -n boards | grep activity-migration | awk '{print $1}')
 ```
 
 When the helm chart was installed in another namespace (`helm upgrade ... --namespace my-boards`), change `-n boards` to your modified namespace like `-n my-boards`. To stop following the logs, press `[Ctrl] + [C]`.
@@ -115,6 +121,6 @@ For example
 
 1.  The Migration service can be removed. Please use the following command
 
-        helm delete kudos-boards-activity-migration --purge
+        helm delete huddo-boards-activity-migration --purge
 
 1.  Turn off the Activities application in WebSphere ISC

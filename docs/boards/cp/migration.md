@@ -1,8 +1,14 @@
-# Migration of Activities to Huddo Boards
+# Migration of Activities to Huddo Boards (with Component Pack)
+
+!!! tip
+
+    If you are not using Component Pack please follow [this guide](/boards/connections/migration)
 
 As part of the installation process for Huddo Boards (Activities Plus) you must run the migration service to move the existing Activities into Huddo Boards.
 
-> Note: please review the [Roles page](/boards/cp/roles/) for details on how Community Activity membership is interpreted & presented by Boards
+!!! info
+
+    Please review the [Roles page](/boards/cp/roles/) for details on how Community Activity membership is interpreted & presented by Boards
 
 ## Process Overview
 
@@ -83,7 +89,7 @@ The default chart values use an NFS mount. Below are examples custom configurati
 
 ## Deploy Helm Chart
 
-Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the kudos-boards-cp chart
+Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the huddo-boards-cp chart
 
     helm upgrade huddo-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
@@ -101,7 +107,7 @@ You can also set the `env.IMMEDIATELY_PROCESS_ALL` if you wish to migrate every 
 
 ## Logs
 
-You can check the pod logs for the kudos-boards-cp-activity-migration to see progress of the running migration
+You can check the pod logs for the activity-migration to see progress of the running migration
 
 For example
 
@@ -113,6 +119,6 @@ For example
 
 1.  The Migration service can be removed. Please use the following command
 
-        helm delete kudos-boards-cp-activity-migration --purge
+        helm delete huddo-boards-cp-activity-migration --purge
 
 1.  Turn off the Activities application in WebSphere ISC

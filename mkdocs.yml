@@ -58,7 +58,8 @@ nav:
           - Helm Charts: boards/helm-charts.md
           - Integrations:
               - HCL Connections:
-                  - Activity Migration: boards/connections/migration.md
+                  - Activity Migration (Kube): boards/connections/migration.md
+                  - Activity Migration (CP): boards/cp/migration.md
                   - Authentication: boards/connections/auth-on-prem.md
                   - Keycloak Authentication: boards/connections/keycloak.md
                   - Header: boards/connections/header-on-prem.md
