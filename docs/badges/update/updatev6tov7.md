@@ -1,6 +1,10 @@
 The following steps provides an overview of the update process needed for the initial upgrade from v6.0.0 to 7.0.0. These steps should be done in addition to the usual update steps.
 For an experienced Connections administrator or IBM WebSphere Application Server administrator, we expect that this update process should take no longer than one hour.
 
+### Update Context Root
+
+
+
 ### Update Widgets
     
 #### Homepage

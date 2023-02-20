@@ -4,6 +4,15 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### February
+
+2023-02-20
+
+Fixes:
+
+- Attachments are moved in child nodes when the parent is moved
+- Updated attachments to correctly show when their parent had been moved
+
 ### January
 
 2023-01-31
