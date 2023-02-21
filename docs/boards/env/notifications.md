@@ -30,7 +30,7 @@ Note that an inline base64 encoded data URL can also be used for this variable.
 ### Social Links
 The links below the brand logo can be customised. These do not necessarily need to be displayed as images/icons and can be text based links.
 
-The standard/default Huddo social links can be replaced by setting the `events.env.SOCIAL_LINKS` variable. 
+The standard/default Huddo social links can be replaced by setting the `events.env.SOCIAL_LINKS` variable. Specifying an empty array will remove all social links.
 The links are specified in a JSON array of objects with the format:
 ```json
  {
