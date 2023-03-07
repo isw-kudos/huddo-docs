@@ -1,8 +1,9 @@
 ## Installation in Verse On Premise
 
-1. Download Huddo Boards [applications.json file](https://boards.huddo.com/widgets/verse/applications-onprem.json)
-2. HCL Connections Component Pack and other non-cloud deployments must have all instances of `https://boards.huddo.com` in the `applications.json` file replaced with your Boards URL.
-3. Use this file with the localFileProvider method described in the [HCL Verse Developers](https://doc.cwpcollaboration.com/verse-developer/docs/domino-server-deployment#when-to-use-the-built-in-endpoint) documentation.
+1. Download your custom Huddo Boards Extensions package from the [Huddo Store](https://store.huddo.com/boards-extensions/).
+2. Extract the package and find the `verse/application.json` file.
+3. View `verse/application.json` as plain text to confirm the "url" fields contain the URL for your Boards deployment.
+4. Use this file with the localFileProvider method described in the [HCL Verse Developers](https://doc.cwpcollaboration.com/verse-developer/docs/domino-server-deployment#when-to-use-the-built-in-endpoint) documentation.
 
 This documentation has been copied in below.
 

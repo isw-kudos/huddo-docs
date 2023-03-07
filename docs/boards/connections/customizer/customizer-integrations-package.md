@@ -18,16 +18,11 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
 
 ## Add Resources to `mw-proxy` Server
 1. Get a terminal session to your `mw-proxy` server. e.g. via `ssh`
-1. Download and extract [`boards-extensions.tgz`](boards-extensions.tgz) package to the `/pv-connections/customizations/boards-extensions` directory on your `mw-proxy` server.
-    ```bash
-    mkdir -p /pv-connections/customizations/boards-extensions
-    curl -s https://docs.huddo.com/boards/connections/customizer/boards-extensions.tgz | tar zxvf - -C /pv-connections/customizations/boards-extensions
-    ```
-
-2. <span id="boardsURLConfig">_If you have your own Boards deployment_</span>, replace `https://boards.huddo.com` with your Boards URL (e.g. `https://connections.example.com/boards`) in the settings file. 
-   ```bash
-   sed -i.original 's|https://boards.huddo.com|https://connections.example.com/boards|g' settings.js
-   ```
+2. `mkdir /pv-connections/customizations/boards-extensions` if it doesn't exist.
+3. `cd /pv-connections/customizations/boards-extensions`
+4. In a web browser, download your custom Boards Extensions package from [Huddo Store](https://boards.huddo.com/boards-extensions).
+5. Extract this package to `/pv-connections/customizations/boards-extensions`.
+6. `cat settings.js` and check that the "boardsURL" property has been set to the URL of your Boards deployment.
 
 ## <span id="appRegistry">Add the app to Connections App Registry</span>
 
