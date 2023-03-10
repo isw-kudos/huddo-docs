@@ -4,6 +4,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### March
+
+2023-03-10
+
+Features:
+
+- Template Rescheduling
+- Drag & Drop assignments from parent to sub-cards in modal
+
+Fixes:
+
+- Assign users to a named licence
+
 ### February
 
 2023-02-20
