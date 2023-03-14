@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2023-03-15
+
+Improvements:
+
+- UI for member adding on Mobile
+
+Fixes:
+
+- Kanban Printing
+- Timeline calendar shifting when opening a card
+
 2023-03-10
 
 Features:
