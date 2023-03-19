@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2023-03-17
+
+Improvements:
+
+- Timeline card title always visible
+
 2023-03-15
 
 Improvements:
@@ -21,7 +27,7 @@ Fixes:
 
 Features:
 
-- Template Rescheduling
+- [Template Rescheduling](/boards/howto/templates/global#template-scheduling)
 - Drag & Drop assignments from parent to sub-cards in modal
 
 Fixes:
