@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2023-03-20
+
+Fixes:
+
+- Group member changes not being picked up
+
 2023-03-17
 
 Improvements:
