@@ -4,6 +4,14 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### April
+
+2023-04-12
+
+Features:
+
+- Custom Colours. Colours and tags have been merged. You are now able to create as many colours as you like in a Board.
+
 ### March
 
 2023-03-20
