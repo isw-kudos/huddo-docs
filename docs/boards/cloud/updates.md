@@ -6,11 +6,21 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### April
 
+2023-04-21
+
+Features:
+
+- Button to assign all sub-tasks as dependencies of parent
+
+Fixes: 
+
+- Removed Connections community members not removed from Board membership
+
 2023-04-12
 
 Features:
 
-- Custom Colours. Colours and tags have been merged. You are now able to create as many colours as you like in a Board.
+- Custom Colours. Colours and tags have been merged. You are now able to create as many colours as you like in a Board
 
 ### March
 
