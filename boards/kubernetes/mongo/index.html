@@ -3455,23 +3455,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#optional" class="md-nav__link">
+    Optional
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#connect-to-mongo" class="md-nav__link">
     Connect to Mongo
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#access-boards-data" class="md-nav__link">
     Access Boards Data
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#replace-member-of-a-board" class="md-nav__link">
     Replace Member of a Board
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3494,12 +3507,12 @@
 <p>Huddo Boards requires a Mongo database. This documentation will deploy a MongoDB replicaSet into your Kubernetes setup.</p>
 <p>If you already have externally hosted Mongo database please skip to the <a href="/boards/kubernetes/mongo/#outcomes">Outcomes section</a> to determine your equivalent connection parameters.</p>
 <p>You can also email us for support at <a href="mailto:support@huddo.com">support@huddo.com</a></p>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="/assets/config/kubernetes/mongo.yaml">Config file</a> downloaded</li>
 </ol>
 <hr />
-<h3 id="update-config-file">Update config file<a class="headerlink" href="#update-config-file" title="Permanent link">&para;</a></h3>
+<h2 id="update-config-file">Update config file<a class="headerlink" href="#update-config-file" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3525,7 +3538,7 @@
 </tbody>
 </table>
 <hr />
-<h3 id="deploy-instructions">Deploy instructions<a class="headerlink" href="#deploy-instructions" title="Permanent link">&para;</a></h3>
+<h2 id="deploy-instructions">Deploy instructions<a class="headerlink" href="#deploy-instructions" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Create the folder at <code>nfs.path</code> location on the <code>nfs.server</code> with access <code>777</code></p>
@@ -3550,7 +3563,7 @@
 </li>
 </ol>
 <hr />
-<h3 id="outcomes">Outcomes<a class="headerlink" href="#outcomes" title="Permanent link">&para;</a></h3>
+<h2 id="outcomes">Outcomes<a class="headerlink" href="#outcomes" title="Permanent link">&para;</a></h2>
 <p>The following are the parameters required to connect to this database. You will need these later in the application setup. If you have your own MongoDB deployment, please substitute your values.</p>
 <table>
 <thead>
@@ -3598,24 +3611,21 @@ mongo://mongo-service:27017/database?replicaSet=replicaset
 
 mongo://user:passw0rd@mongo-service:27017/database?replicaSet=replicaset
 </code></pre></div>
+<h2 id="optional">Optional<a class="headerlink" href="#optional" title="Permanent link">&para;</a></h2>
 <h3 id="connect-to-mongo">Connect to Mongo<a class="headerlink" href="#connect-to-mongo" title="Permanent link">&para;</a></h3>
-<p>To connect to Kubernetes Mongo (without CP), simply</p>
+<p>You may need to connect to Mongo for validation or other changes. To connect to Kubernetes Mongo (without CP), simply:</p>
 <ol>
 <li>
 <p>get the name of the mongo pod</p>
-<div class="highlight"><pre><span></span><code>```
-kubectl get pods --all-namespaces
+<div class="highlight"><pre><span></span><code>kubectl get pods --all-namespaces
 
 NAMESPACE     NAME                                     READY   STATUS    RESTARTS   AGE
 boards        mongo-67696548c-xpdqh                    1/1     Running   0          35s
-```
 </code></pre></div>
 </li>
 <li>
 <p>exec into the pod using the mongosh (or mongo) command - replacing pod name and namespace</p>
-<div class="highlight"><pre><span></span><code>```
-kubectl exec -it mongo-67696548c-xpdqh -n boards -- mongosh --host mongo-service:27017
-```
+<div class="highlight"><pre><span></span><code>kubectl exec -it mongo-67696548c-xpdqh -n boards -- mongosh --host mongo-service:27017
 </code></pre></div>
 </li>
 </ol>
