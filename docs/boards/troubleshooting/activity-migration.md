@@ -104,26 +104,26 @@ When migrating very large activities sometimes you may encounter an OutOfMemory 
 
 In the migration YAML chart you can set following to reduce the amount of concurrent data accessed in memory:
 
-  migration.env.PROCESSING_PAGE_SIZE: 1
-  migration.env.FIELDS_PAGE_SIZE: 1
+    migration.env.PROCESSING_PAGE_SIZE: 1
+    migration.env.FIELDS_PAGE_SIZE: 1
 
 Once these values are set you need to deploy the chart again to make them take effect.
 
 You will also need to increase the amount of memory available to NodeJS by adding the environment variables in the migration YAML:
     
-  resources.requests.memory: 2024
-  resources.limits.memory: 8192
-  env.NODE_OPTIONS: "--max-old-space-size=8192"
+        resources.requests.memory: 2024
+        resources.limits.memory: 8192
+        env.NODE_OPTIONS: "--max-old-space-size=8192"
 
 ## Activity stuck in pending migration
 
 If the migration service crashes while migrating an activity some activiites can be in a 'stuck' state where they cannot be tasked to be migrated again. In the migration YAML chart you can set PURGE_INCOMPLETE to remove the flags.
 
-  migration.env.PURGE_INCOMPLETE: "true"
+        migration.env.PURGE_INCOMPLETE: "true"
 
 You are also able to delete already migrated activities by setting PURGE_MIGRATED_ACTIVITY_IDS so they can be migrated again.
 
-  migration.env.PURGE_MIGRATED_ACTIVITY_IDS: "acitivityId,activityId2,activityId3,...,activityIdN"
+        migration.env.PURGE_MIGRATED_ACTIVITY_IDS: "acitivityId,activityId2,activityId3,...,activityIdN"
 
 Once these values are set you need to deploy the chart again to make them take effect. Please be aware to remove the "PURGE_MIGRATED_ACTIVITY_IDS" after it is done or any subsequent deployments/restarts will delete them again!
 
