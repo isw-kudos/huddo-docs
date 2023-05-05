@@ -4,6 +4,25 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### May
+
+2023-05-05
+
+Features:
+
+- Drag card to archive
+
+Improvements:
+
+- Auto-move dependency parent
+- Expand all in activity view 
+- Hide edit options on archived card
+
+Fixes: 
+
+- Dragging card from assigned user created user image as card
+- Sending duplicate due date reminders
+
 ### April
 
 2023-04-21
@@ -15,6 +34,7 @@ Features:
 Fixes: 
 
 - Removed Connections community members not removed from Board membership
+- Deleting an assigned label
 
 2023-04-12
 
