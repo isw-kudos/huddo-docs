@@ -98,11 +98,11 @@ You may need to connect to Mongo for validation or other changes. To connect to 
 
 1. find all boards
         
-        db.nodes.find({ type: 'board' }})
+        db.nodes.find({ type: 'board' })
 
 1. find a board from a particular activitity
         
-        db.nodes.find({ providerID: 'activities-id-goes-here' }})
+        db.nodes.find({ providerID: 'activities-id-goes-here' })
         
 1. find the members for a particular board
 
@@ -130,4 +130,4 @@ You may need to connect to Mongo for validation or other changes. To connect to 
         
 1. replace user A with B, e.g. Andrew with Nicky
         
-        db.boardmembers.updateOne({ board: ObjectId("<BOARD_ID>"), 'entity.kind': 'User', 'entity.id': '617891eae72f26802c4bec5e'  }, { $set: { 'entity.id': '617891ed660876da990253b7' }})
+        db.boardmembers.updateOne({ board: ObjectId("<BOARD_ID>"), 'entity.kind': 'User', 'entity.id': '617891eae72f26802c4bec5e' }, { $set: { 'entity.id': '617891ed660876da990253b7' }})
