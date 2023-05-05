@@ -70,3 +70,66 @@ Or with optional credentials:
     [MONGO_PROTOCOL]://[MONGO_USER]:[MONGO_PASSWORD]@[MONGO_HOST]/[MONGO_DB]?[MONGO_PARAMS]
 
     mongo://user:passw0rd@mongo-service:27017/database?replicaSet=replicaset
+
+### Connect to Mongo
+
+To connect to Kubernetes Mongo (without CP), simply
+
+1. get the name of the mongo pod
+
+        ```
+        kubectl get pods --all-namespaces
+
+        NAMESPACE     NAME                                     READY   STATUS    RESTARTS   AGE
+        boards        mongo-67696548c-xpdqh                    1/1     Running   0          35s
+        ```
+
+1. exec into the pod using the mongosh (or mongo) command - replacing pod name and namespace
+
+        ```
+        kubectl exec -it mongo-67696548c-xpdqh -n boards -- mongosh --host mongo-service:27017
+        ```
+
+### Access Boards Data
+
+1. open the db containing board nodes
+
+        show dbs
+        use boards-app
+        
+
+1. find all boards
+        
+        db.nodes.find({ type: 'board' }})
+
+1. find a board from a particular activitity
+        
+        db.nodes.find({ providerID: 'activities-id-goes-here' }})
+        
+1. find the members for a particular board
+
+        db.boardmembers.find({ board: ObjectId("_id-of-board-found-above") })
+        
+### Replace Member of a Board
+
+1. find the users in question, e.g Andrew & Nicky
+
+        use boards-user
+        db.users.find({ name: "Andrew Welch" })
+        { "_id" : ObjectId("617891eae72f26802c4bec5e"), "email" : "awelch@isw.net.au", ....
+
+        db.users.find({ name: "Nicky Tope" })
+        { "_id" : ObjectId("617891ed660876da990253b7"), "email": "ntope@isw.net.au", .....
+        
+
+1. switch to the boards app
+        
+        use boards-app
+
+1. find the members for a particular board (substitute the ID)
+
+        db.boardmembers.find({ board: ObjectId("<BOARD_ID>") })
+        
+1. replace user A with B, e.g. Andrew with Nicky
+        
+        db.boardmembers.updateOne({ board: ObjectId("<BOARD_ID>"), 'entity.kind': 'User', 'entity.id': '617891eae72f26802c4bec5e'  }, { $set: { 'entity.id': '617891ed660876da990253b7' }})
