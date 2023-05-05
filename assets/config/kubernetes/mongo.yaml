@@ -58,7 +58,7 @@ spec:
       dnsPolicy: ClusterFirst
       containers:
         - name: mongo
-          image: bitnami/mongodb:4.4
+          image: bitnami/mongodb:5.0
           imagePullPolicy: Always
           resources:
             limits:
