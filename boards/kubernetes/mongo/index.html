@@ -3639,12 +3639,12 @@ use boards-app
 </li>
 <li>
 <p>find all boards</p>
-<div class="highlight"><pre><span></span><code>db.nodes.find({ type: &#39;board&#39; }})
+<div class="highlight"><pre><span></span><code>db.nodes.find({ type: &#39;board&#39; })
 </code></pre></div>
 </li>
 <li>
 <p>find a board from a particular activitity</p>
-<div class="highlight"><pre><span></span><code>db.nodes.find({ providerID: &#39;activities-id-goes-here&#39; }})
+<div class="highlight"><pre><span></span><code>db.nodes.find({ providerID: &#39;activities-id-goes-here&#39; })
 </code></pre></div>
 </li>
 <li>
@@ -3677,7 +3677,7 @@ db.users.find({ name: &quot;Nicky Tope&quot; })
 </li>
 <li>
 <p>replace user A with B, e.g. Andrew with Nicky</p>
-<div class="highlight"><pre><span></span><code>db.boardmembers.updateOne({ board: ObjectId(&quot;&lt;BOARD_ID&gt;&quot;), &#39;entity.kind&#39;: &#39;User&#39;, &#39;entity.id&#39;: &#39;617891eae72f26802c4bec5e&#39;  }, { $set: { &#39;entity.id&#39;: &#39;617891ed660876da990253b7&#39; }})
+<div class="highlight"><pre><span></span><code>db.boardmembers.updateOne({ board: ObjectId(&quot;&lt;BOARD_ID&gt;&quot;), &#39;entity.kind&#39;: &#39;User&#39;, &#39;entity.id&#39;: &#39;617891eae72f26802c4bec5e&#39; }, { $set: { &#39;entity.id&#39;: &#39;617891ed660876da990253b7&#39; }})
 </code></pre></div>
 </li>
 </ol>
