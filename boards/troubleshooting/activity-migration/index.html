@@ -3739,10 +3739,11 @@ migration.env.FIELDS_PAGE_SIZE: 1
 </code></pre></div>
 <p>Once these values are set you need to deploy the chart again to make them take effect.</p>
 <p>You will also need to increase the amount of memory available to NodeJS by adding the environment variables in the migration YAML:</p>
-<div class="highlight"><pre><span></span><code>resources.requests.memory: 2024
-resources.limits.memory: 8192
+<div class="highlight"><pre><span></span><code>resources.requests.memory: 2024M
+resources.limits.memory: 8192M
 env.NODE_OPTIONS: &quot;--max-old-space-size=8192&quot;
 </code></pre></div>
+<p><img alt="migration_memory" src="/assets/connections/migration_memory.png" /></p>
 <h2 id="activity-stuck-in-pending-migration">Activity stuck in pending migration<a class="headerlink" href="#activity-stuck-in-pending-migration" title="Permanent link">&para;</a></h2>
 <p>If the migration service crashes while migrating an activity some activiites can be in a 'stuck' state where they cannot be tasked to be migrated again. In the migration YAML chart you can set PURGE_INCOMPLETE to remove the flags.</p>
 <div class="highlight"><pre><span></span><code>migration.env.PURGE_INCOMPLETE: &quot;true&quot;
