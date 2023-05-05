@@ -111,9 +111,11 @@ Once these values are set you need to deploy the chart again to make them take e
 
 You will also need to increase the amount of memory available to NodeJS by adding the environment variables in the migration YAML:
     
-    resources.requests.memory: 2024
-    resources.limits.memory: 8192
+    resources.requests.memory: 2024M
+    resources.limits.memory: 8192M
     env.NODE_OPTIONS: "--max-old-space-size=8192"
+
+![migration_memory](/assets/connections/migration_memory.png)
 
 ## Activity stuck in pending migration
 
