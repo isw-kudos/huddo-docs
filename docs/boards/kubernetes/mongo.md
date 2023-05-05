@@ -6,13 +6,13 @@ If you already have externally hosted Mongo database please skip to the [Outcome
 
 You can also email us for support at [support@huddo.com](mailto:support@huddo.com)
 
-### Prerequisites
+## Prerequisites
 
 1. [Config file](/assets/config/kubernetes/mongo.yaml) downloaded
 
 ---
 
-### Update config file
+## Update config file
 
 | Line | Key          | Default Value         | Description                             |
 | ---- | ------------ | --------------------- | --------------------------------------- |
@@ -21,7 +21,7 @@ You can also email us for support at [support@huddo.com](mailto:support@huddo.co
 
 ---
 
-### Deploy instructions
+## Deploy instructions
 
 1.  Create the folder at `nfs.path` location on the `nfs.server` with access `777`
 
@@ -47,7 +47,7 @@ You can also email us for support at [support@huddo.com](mailto:support@huddo.co
 
 ---
 
-### Outcomes
+## Outcomes
 
 The following are the parameters required to connect to this database. You will need these later in the application setup. If you have your own MongoDB deployment, please substitute your values.
 
@@ -71,24 +71,22 @@ Or with optional credentials:
 
     mongo://user:passw0rd@mongo-service:27017/database?replicaSet=replicaset
 
+## Optional
+
 ### Connect to Mongo
 
-To connect to Kubernetes Mongo (without CP), simply
+You may need to connect to Mongo for validation or other changes. To connect to Kubernetes Mongo (without CP), simply:
 
 1. get the name of the mongo pod
 
-        ```
         kubectl get pods --all-namespaces
 
         NAMESPACE     NAME                                     READY   STATUS    RESTARTS   AGE
         boards        mongo-67696548c-xpdqh                    1/1     Running   0          35s
-        ```
 
 1. exec into the pod using the mongosh (or mongo) command - replacing pod name and namespace
 
-        ```
         kubectl exec -it mongo-67696548c-xpdqh -n boards -- mongosh --host mongo-service:27017
-        ```
 
 ### Access Boards Data
 
