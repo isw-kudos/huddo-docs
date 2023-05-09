@@ -39,7 +39,6 @@ spec:
 
 ---
 kind: Deployment
-# change this to "apiVersion: extensions/v1beta1" if running pre kube 1.16
 apiVersion: apps/v1
 metadata:
   name: mongo
@@ -61,8 +60,11 @@ spec:
           image: bitnami/mongodb:5.0
           imagePullPolicy: Always
           resources:
-            limits:
+            # set acording to your scaling requirements
+            requests:
               memory: 512M
+            limits:
+              memory: 2048M
           ports:
             - containerPort: 27017
           env:

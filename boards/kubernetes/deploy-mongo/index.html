@@ -12,20 +12,16 @@
         <meta name="author" content="Andrew Reynolds">
       
       
-        <link rel="canonical" href="https://docs.huddo.com/boards/troubleshooting/websphere/">
+        <link rel="canonical" href="https://docs.huddo.com/boards/kubernetes/deploy-mongo/">
       
       
-        <link rel="prev" href="../docker/">
-      
-      
-        <link rel="next" href="../office365/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Boards WebSphere - Huddo Docs</title>
+        <title>Deploy MongoDB (Small Scale) - Huddo Docs</title>
       
     
     
@@ -87,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#boards-for-hcl-connections-in-websphere-legacy" class="md-skip">
+        <a href="#deploy-mongodb-small-scale" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Boards WebSphere
+              Deploy MongoDB (Small Scale)
             
           </span>
         </div>
@@ -194,15 +190,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../" class="md-tabs__link">
         Boards
       </a>
     </li>
@@ -314,16 +308,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
         
@@ -356,7 +348,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Boards
@@ -859,7 +851,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../kubernetes/">Boards Self-Hosted</a>
+          <a href="../">Boards Self-Hosted</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -896,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         b) For Kubernetes
       </a>
     </li>
@@ -2045,16 +2037,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
       
       
         
@@ -2077,7 +2067,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7">
           <span class="md-nav__icon md-icon"></span>
           Administration
@@ -2276,16 +2266,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_6" >
       
       
         
@@ -2318,7 +2306,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_6">
           <span class="md-nav__icon md-icon"></span>
           Troubleshooting
@@ -2331,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activities-plus-install/" class="md-nav__link">
+      <a href="../../troubleshooting/activities-plus-install/" class="md-nav__link">
         Activities Plus
       </a>
     </li>
@@ -2345,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activity-migration/" class="md-nav__link">
+      <a href="../../troubleshooting/activity-migration/" class="md-nav__link">
         Activity Migration
       </a>
     </li>
@@ -2359,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conn-hybrid/" class="md-nav__link">
+      <a href="../../troubleshooting/conn-hybrid/" class="md-nav__link">
         Boards Hybrid
       </a>
     </li>
@@ -2373,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../troubleshooting/docker/" class="md-nav__link">
         Boards Docker
       </a>
     </li>
@@ -2385,21 +2373,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/websphere/" class="md-nav__link">
         Boards WebSphere
       </a>
-      
     </li>
   
 
@@ -2411,7 +2389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../office365/" class="md-nav__link">
+      <a href="../../troubleshooting/office365/" class="md-nav__link">
         Office 365
       </a>
     </li>
@@ -2425,7 +2403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oauth/" class="md-nav__link">
+      <a href="../../troubleshooting/oauth/" class="md-nav__link">
         OAuth
       </a>
     </li>
@@ -2439,7 +2417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mongo/" class="md-nav__link">
+      <a href="../../troubleshooting/mongo/" class="md-nav__link">
         Mongo
       </a>
     </li>
@@ -2453,7 +2431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nginx/" class="md-nav__link">
+      <a href="../../troubleshooting/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -2467,7 +2445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../notifications/" class="md-nav__link">
+      <a href="../../troubleshooting/notifications/" class="md-nav__link">
         Notifications
       </a>
     </li>
@@ -2512,7 +2490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../safari/" class="md-nav__link">
+      <a href="../../troubleshooting/safari/" class="md-nav__link">
         Safari
       </a>
     </li>
@@ -3458,6 +3436,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-config-file" class="md-nav__link">
+    Update config file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-instructions" class="md-nav__link">
+    Deploy instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outcomes" class="md-nav__link">
+    Outcomes
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3471,36 +3485,134 @@
                   
 
 
-<h1 id="boards-for-hcl-connections-in-websphere-legacy">Boards for HCL Connections in WebSphere (Legacy)<a class="headerlink" href="#boards-for-hcl-connections-in-websphere-legacy" title="Permanent link">&para;</a></h1>
+<h1 id="deploy-mongodb-small-scale">Deploy MongoDB (Small Scale)<a class="headerlink" href="#deploy-mongodb-small-scale" title="Permanent link">&para;</a></h1>
+<p>Huddo Boards requires a Mongo database.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The example below is suitable for a <strong>Small Scale Deployment</strong>, e.g. a proof of concept, staging deployment or even a production deployment for a limited number of users/data.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For <strong>Large Scale Deployments (HA)</strong> please use either MongoDB:</p>
+<ol>
+<li>hosted by a <a href="/boards/compatibility/">compatible</a> cloud provider (e.g. <a href="https://www.mongodb.com/atlas/database">Cloud Atlas</a>)</li>
+<li>self hosted in a ReplicaSet architecture. For example, <code>bitnami/mongodb</code> offer a decent wrapper to initialise a replicaset with their <a href="https://docs.bitnami.com/kubernetes/infrastructure/mongodb/get-started/install">Helm chart</a>.</li>
+</ol>
+</div>
+<p>This documentation will deploy a MongoDB replicaSet into your Kubernetes setup.</p>
+<p>If you already have externally hosted Mongo database please skip to the <a href="#outcomes">Outcomes section</a> to determine your equivalent connection parameters.</p>
+<p>You can also email us for support at <a href="mailto:support@huddo.com">support@huddo.com</a></p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="/assets/config/kubernetes/mongo-small-scale.yaml">Config file</a> downloaded</li>
+</ol>
+<hr />
+<h2 id="update-config-file">Update config file<a class="headerlink" href="#update-config-file" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Issue</th>
-<th>Resolution</th>
+<th>Line</th>
+<th>Key</th>
+<th>Default Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>JMS Topic not initialised</td>
-<td>Please check that the cluster Huddo Boards is installed on has the messaging bus/engine set.</td>
+<td>21</td>
+<td><code>nfs.path</code></td>
+<td><code>/pv-kudos/mongo</code></td>
+<td>Path to storage location</td>
 </tr>
 <tr>
-<td>Cannot enter Activity Stream Credentials</td>
-<td>Please ensure that the user that you are entering can log into Connections and view the homepage activity stream.</td>
-</tr>
-<tr>
-<td>Unable to Retrieve Members</td>
-<td>This error can appear if you are logged into more than one environment at the same time, such as a TEST and PROD server. Please open the environment that Huddo Boards is installed into in a clean browser without any existing cookies or sessions. This can be easily achieved by using incognito/private mode.</br></br>All membership functionality is provided by the IBM SBT so please ensure this is setup correctly, as well as making sure the Activities application is started.</td>
+<td>22</td>
+<td><code>nfs.server</code></td>
+<td><code>[STORAGE_SERVER_IP]</code></td>
+<td>IP of NFS server</br>ie <code>192.168.10.50</code></td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="deploy-instructions">Deploy instructions<a class="headerlink" href="#deploy-instructions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Create the folder at <code>nfs.path</code> location on the <code>nfs.server</code> with access <code>777</code></p>
+<p><strong>Note:</strong> please ensure sufficient storage is available (ie 100GB)</p>
+</li>
+<li>
+<p>Ensure each Node in your Kubernetes cluster can mount this location.</p>
+<p>Please modify the file <code>/etc/exports</code> on your NFS Server to include this line</p>
+<div class="highlight"><pre><span></span><code>&lt;NFS_PATH_FOR_MONGO&gt; &lt;IP_RANGE_OF_YOUR_SERVERS&gt;/&lt;SUBNET_MASK&gt;(rw,no_root_squash)
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>/pv-kudos/mongo 192.168.0.0/255.255.0.0(rw,no_root_squash)
+</code></pre></div>
+<p>Apply new NFS storage to exports</p>
+<div class="highlight"><pre><span></span><code>exportfs -ra
+</code></pre></div>
+</li>
+<li>
+<p>Install Mongo</p>
+<div class="highlight"><pre><span></span><code>kubectl apply -f ./mongo.yaml
+</code></pre></div>
+</li>
+</ol>
+<hr />
+<h2 id="outcomes">Outcomes<a class="headerlink" href="#outcomes" title="Permanent link">&para;</a></h2>
+<p>The following are the parameters required to connect to this database. You will need these later in the application setup. If you have your own MongoDB deployment, please substitute your values.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MONGO_PROTOCOL</code></td>
+<td><code>mongo</code></td>
+<td>Protocol used in your Connections String</td>
+</tr>
+<tr>
+<td><code>MONGO_HOST</code></td>
+<td><code>mongo-service:27017</code></td>
+<td>Hostname of your Mongo service</td>
+</tr>
+<tr>
+<td><code>MONGO_PARAMS</code></td>
+<td><code>replicaSet=replicaset</code></td>
+<td>Request parameters (ie ?)</td>
+</tr>
+<tr>
+<td><code>MONGO_USER</code></td>
+<td>None</td>
+<td>Username to connect.</br>Authentication is disabled in this private deployment</td>
+</tr>
+<tr>
+<td><code>MONGO_PASSWORD</code></td>
+<td>None</td>
+<td>Password to connect.</br>Authentication is disabled in this private deployment</td>
+</tr>
+</tbody>
+</table>
+<p>Alternatively, these parameters can be set with <code>MONGO_URI</code> which is built from:</p>
+<div class="highlight"><pre><span></span><code>[MONGO_PROTOCOL]://[MONGO_HOST]/[MONGO_DB]?[MONGO_PARAMS]
+
+mongo://mongo-service:27017/database?replicaSet=replicaset
+</code></pre></div>
+<p>Or with optional credentials:</p>
+<div class="highlight"><pre><span></span><code>[MONGO_PROTOCOL]://[MONGO_USER]:[MONGO_PASSWORD]@[MONGO_HOST]/[MONGO_DB]?[MONGO_PARAMS]
+
+mongo://user:passw0rd@mongo-service:27017/database?replicaSet=replicaset
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2020-12-17
+      2023-05-09
     
   </small>
 </div>
