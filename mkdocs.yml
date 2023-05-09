@@ -131,6 +131,7 @@ nav:
               - Boards WebSphere: boards/troubleshooting/websphere.md
               - Office 365: boards/troubleshooting/office365.md
               - OAuth: boards/troubleshooting/oauth.md
+              - Mongo: boards/troubleshooting/mongo.md
               - NGINX: boards/troubleshooting/nginx.md
               - Notifications: boards/troubleshooting/notifications.md
               - Browsers:

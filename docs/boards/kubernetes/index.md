@@ -4,7 +4,7 @@ Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 ---
 
-### Prerequisites
+## Prerequisites
 
 1. Kubernetes is installed and running
 1. WebSphere environment with Web Server (or another reverse proxy)
@@ -12,10 +12,16 @@ Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
 1. [Quay.io - Red Hat](https://quay.io) account setup with access to the [Huddo Boards repository](/boards/images/).  Please send your account details to [support@huddo.com](mailto:support@huddo.com) if you do not already have this.
+1. kubectl configured
+
+    |                       | Instructions                                                                                                                                                                                                 |
+    | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | **Kubernetes**        | copy `~/kube/.config` from the Kubernetes master server to the same location locally</br>(backup any existing local config)                                                                                  |
+    | **IBM Cloud Private** | - Open ICP Console</br>- Go to `Admin` (top right)</br>- Click `Config Client`</br>- Copy the contents shown</br>- Open your command line / terminal</br>- Paste the commands copied earlier and press enter |
 
 ---
 
-### SSL / Network setup
+## SSL / Network
 
 Kubernetes for on-premise environments requires a reverse proxy to route traffic. There are a number of different ways this reverse proxy can be configured and Huddo Boards aims to match whatever you already have in place. Some examples of network routing:
 
@@ -34,7 +40,7 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 ---
 
-### Setup OAuth
+## OAuth
 
 Huddo Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
@@ -50,33 +56,25 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 ---
 
-### Configure kubectl
 
-|                       | Instructions                                                                                                                                                                                                 |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Kubernetes**        | copy `~/kube/.config` from the Kubernetes master server to the same location locally</br>(backup any existing local config)                                                                                  |
-| **IBM Cloud Private** | - Open ICP Console</br>- Go to `Admin` (top right)</br>- Click `Config Client`</br>- Copy the contents shown</br>- Open your command line / terminal</br>- Paste the commands copied earlier and press enter |
-
----
-
-### Create Huddo Boards namespace
+## Huddo Boards namespace
 
     kubectl create namespace boards
 
 ---
 
-### Setup Storage
+## Database & Storage
 
 Huddo Boards requires a Mongo database and an S3 file storage. If you already have equivalent services already then you can use your existing details in the config below, otherwise you may follow our instructions to deploy one or both of these services as follows:
 
-1. [Mongo database](/boards/kubernetes/mongo)
+1. [Mongo database](/boards/kubernetes/deploy-mongo)
 1. [S3 storage](/boards/kubernetes/minio)
 
 **Note:** these tasks are very similar to each other and can be performed simultaneously
 
 ---
 
-### Setup secrets
+## Secrets
 
 1. [Follow this guide](/boards/images/) to get access to our images in Quay.io
 
@@ -88,7 +86,7 @@ Huddo Boards requires a Mongo database and an S3 file storage. If you already ha
 
 ---
 
-### Update Config file
+## Configuration
 
 Download our [config file](/assets/config/kubernetes/boards.yaml) and update all example values as required. Details as below.
 
@@ -113,7 +111,7 @@ Follow instructions on [this page](/boards/env/common/)
 
 ---
 
-### Deploy Boards Chart
+## Deploy Boards Chart
 
 Install the Boards services via our Helm chart
 
@@ -123,21 +121,21 @@ Install the Boards services via our Helm chart
 
 ---
 
-### Add Proxy Config
+## Proxy Config
 
-## Connections On Premise - update WAS config
+### Connections On Premise - update WAS config
 
 > in the linked document you should use the IP of your kubernetes manager and the http port for your ingress (32080 if you have component pack installed)
 
 Please follow [these instructions](/boards/connections/httpd/)
 
-## Connections Cloud or Microsoft Office 365
+### Connections Cloud or Microsoft Office 365
 
 Add a reverse proxy entry in your network that resolves your certificates and forwards your 2 domains to the IP of the kubernetes manager and the http port for your ingress. If any assistance is required
 
 ---
 
-### HCL Connections integrations
+## HCL Connections integrations
 
 - [Header](/boards/connections/header-on-prem/) (_Note: only required if Boards is hosted on a different domain to Connections_)
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
