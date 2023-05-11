@@ -10,3 +10,22 @@ Issue is with the timerManager in WAS. [Create a new one to resolve issue](https
 
 #### Performance tuning
 Review [this guide](/assets/analytics/Huddo%20Analytics%20Tuning.pdf) for changes that can be made.
+
+#### Connections 8 UI
+The new UI that comes with Connections 8 breaks some CSS of Analytics. Please use the below to fix it up, which can be applied as per the [HCL Docs](https://opensource.hcltechsw.com/connections-doc/v8-cr1/admin/customize/).t_admin_navbar_change_style.html)
+
+        .ConnectionsRankDropDown {
+            border: 1px solid !important;
+        }
+
+        .KudosAnalyticsOptionSelect {
+            border: 1px solid !important;
+        }
+
+        .AnalyticsCategoryList li div {
+            font-size: 10px !important;
+        }
+
+        .KudosAnalyticsField .dijitReset.dijitInputField.dijitArrowButtonInner {
+            width: 16px !important;
+        }
