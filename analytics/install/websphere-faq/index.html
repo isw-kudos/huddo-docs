@@ -2930,6 +2930,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#connections-8-ui" class="md-nav__link">
+    Connections 8 UI
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3549,6 +3556,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#connections-8-ui" class="md-nav__link">
+    Connections 8 UI
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3577,13 +3591,31 @@
 <p>Issue is with the timerManager in WAS. <a href="https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/asyncbns/tasks/tasb_timemanager.html">Create a new one to resolve issue</a>.</p>
 <h4 id="performance-tuning">Performance tuning<a class="headerlink" href="#performance-tuning" title="Permanent link">&para;</a></h4>
 <p>Review <a href="/assets/analytics/Huddo%20Analytics%20Tuning.pdf">this guide</a> for changes that can be made.</p>
+<h4 id="connections-8-ui">Connections 8 UI<a class="headerlink" href="#connections-8-ui" title="Permanent link">&para;</a></h4>
+<p>The new UI that comes with Connections 8 breaks some CSS of Analytics. Please use the below to fix it up, which can be applied as per the <a href="https://opensource.hcltechsw.com/connections-doc/v8-cr1/admin/customize/">HCL Docs</a>.t_admin_navbar_change_style.html)</p>
+<div class="highlight"><pre><span></span><code>    .ConnectionsRankDropDown {
+        border: 1px solid !important;
+    }
+
+    .KudosAnalyticsOptionSelect {
+        border: 1px solid !important;
+    }
+
+    .AnalyticsCategoryList li div {
+        font-size: 10px !important;
+    }
+
+    .KudosAnalyticsField .dijitReset.dijitInputField.dijitArrowButtonInner {
+        width: 16px !important;
+    }
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2021-05-31
+      2023-05-12
     
   </small>
 </div>
