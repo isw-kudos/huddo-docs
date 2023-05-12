@@ -43,6 +43,14 @@ Please use the appropriate update command with the latest [helm chart](/boards/h
 
 ### 2023
 
+#### 2023-05-12
+
+Fixes:
+
+- Security issue affecting external users and public communities
+
+---
+
 #### 2023-01-24
 
 Improvements:
