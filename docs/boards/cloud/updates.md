@@ -23,6 +23,10 @@ Fixes:
 - Issue with blank tile label
 - issue with empty Assign Roles in new Board wizard
 - Board Tiles sidebar shadow regression bug
+- Card drag and drop
+
+    - issue where a duplicate card appears when drag to end
+    - issue where card jumps to back to top when dragging a card in list to end of same list
 
 2023-05-16
 
