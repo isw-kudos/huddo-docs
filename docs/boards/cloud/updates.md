@@ -18,7 +18,6 @@ Improvements:
 
 - Cards can be Archived+Deleted from the card modal toolbar.
 - Enable "Assign to Roles" when creating a new Board via 'Create Template from Board' button.
-- When creating a new Board, edited name and description fields are not lost when changing the selected template.
 - More compact Board Members view on small (phone) screens.
 
 Fixes: 
@@ -30,10 +29,12 @@ Fixes:
 
     - issue where a duplicate card appears when drag to end
     - issue where card jumps back to top when dragging a card to end of same list
+
 - Button for copying a template says "Copy Template" instead of "Copy Board"
 - Fixed loading of template description in to board description field in the new board wizard.
 - Deleting an open template now redirects to template list instead of board list.
 - Fixed "Assign to Roles" screen appearing in Board wizard without any roles to assign members.
+- When creating a new Board, edited name and description fields are not lost when changing the selected template.
 
 2023-05-16
 
