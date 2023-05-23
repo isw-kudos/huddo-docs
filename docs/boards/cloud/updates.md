@@ -26,7 +26,7 @@ Fixes:
 - Card drag and drop
 
     - issue where a duplicate card appears when drag to end
-    - issue where card jumps to back to top when dragging a card in list to end of same list
+    - issue where card jumps back to top when dragging a card to end of same list
 
 2023-05-16
 
