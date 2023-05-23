@@ -6,6 +6,42 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2023-05-23
+
+Improvements:
+
+- Drag and drop of lists
+
+    - drag by header
+    - fix blank list when scrolled and dragged
+    - prevent scrolling of list in drag mode
+
+- Card/Board deletion improvements
+
+Fixes: 
+
+- Issue with blank tile label
+- issue with empty Assign Roles in new Board wizard
+- Board Tiles sidebar shadow regression bug
+
+2023-05-16
+
+Improvements:
+
+- Organisation view of members & groups
+
+    - loading feedback
+    - virtualised scroll for faster render
+    - show membership of linked aliases
+    - prevent duplicates of invites to org
+
+- localised format of dates in CSV export
+
+Fixes:
+
+- Security issue affecting external users and public communities (Connections)
+- issue where Organisation invites not visible if members with linked aliases
+
 2023-05-05
 
 Features:
@@ -22,6 +58,8 @@ Fixes:
 
 - Dragging card from assigned user created user image as card
 - Sending duplicate due date reminders
+
+---
 
 ### April
 
@@ -41,6 +79,8 @@ Fixes:
 Features:
 
 - Custom Colours. Colours and tags have been merged. You are now able to create as many colours as you like in a Board
+
+---
 
 ### March
 
@@ -78,6 +118,8 @@ Fixes:
 
 - Assign users to a named licence
 
+---
+
 ### February
 
 2023-02-20
@@ -86,6 +128,8 @@ Fixes:
 
 - Attachments are moved in child nodes when the parent is moved
 - Updated attachments to correctly show when their parent had been moved
+
+---
 
 ### January
 
@@ -108,6 +152,8 @@ Improvements:
 - Handling of default profile images in Connections
 - Detect language from Connections dropdown
 - Security updates (node 18)
+
+---
 
 ## 2022
 
