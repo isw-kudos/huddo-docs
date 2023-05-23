@@ -16,17 +16,24 @@ Improvements:
     - fix blank list when scrolled and dragged
     - prevent scrolling of list in drag mode
 
-- Card/Board deletion improvements
+- Cards can be Archived+Deleted from the card modal toolbar.
+- Enable "Assign to Roles" when creating a new Board via 'Create Template from Board' button.
+- When creating a new Board, edited name and description fields are not lost when changing the selected template.
+- More compact Board Members view on small (phone) screens.
 
 Fixes: 
 
 - Issue with blank tile label
-- issue with empty Assign Roles in new Board wizard
+- Issue with empty Assign Roles in new Board wizard
 - Board Tiles sidebar shadow regression bug
 - Card drag and drop
 
     - issue where a duplicate card appears when drag to end
     - issue where card jumps back to top when dragging a card to end of same list
+- Button for copying a template says "Copy Template" instead of "Copy Board"
+- Fixed loading of template description in to board description field in the new board wizard.
+- Deleting an open template now redirects to template list instead of board list.
+- Fixed "Assign to Roles" screen appearing in Board wizard without any roles to assign members.
 
 2023-05-16
 
@@ -57,6 +64,8 @@ Improvements:
 - Auto-move dependency parent
 - Expand all in activity view 
 - Hide edit options on archived card
+- Performance improvements related to icons used on Template Roles
+- Show count of tasks assigned to Role in Board Members view
 
 Fixes: 
 
@@ -72,6 +81,7 @@ Fixes:
 Features:
 
 - Button to assign all sub-tasks as dependencies of parent
+- Template Roles - base functionality
 
 Fixes: 
 
