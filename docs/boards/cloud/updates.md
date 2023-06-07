@@ -4,7 +4,37 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### June
+
+2023-06-06
+
+Improvements:
+
+- member promotion emails - add invite and membership details to give more context
+- new configuration option to enable/disable member promotion requests
+- do not clear edited name/description when changing templates
+- ability to create new organisation from guest is reader popup
+
+Fixes:
+
+- Issue with exporting Board as CSV with special characters (e.g. Umlaut)
+- Issue affecting Org config when user has multiple orgs
+- Color selection/editing on small screens (e.g. mobiles)
+- German translations with extra '}' character
+- Issues with Role Assignments (duplicates etc)
+- Collab - fix for offering user org trial
+- Issue in create first board tour
+
+---
+
 ### May
+
+2023-05-26
+
+Features:
+
+- Organisation Guests are now treated as Reader
+- Ability for guest to request a promotion to member, sent to admins via email & socket
 
 2023-05-23
 
