@@ -90,8 +90,9 @@ nav:
           - Mobile App: boards/howto/mobile-app.md
           - Home Page: boards/howto/homepage/index.md
           - Creating Boards:
-              - Create a Template: boards/howto/templates/creating.md
               - Use a Template: boards/howto/templates/global.md
+              - Create a Template: boards/howto/templates/creating.md
+              - Assignment Roles: boards/howto/assignment-roles/assignment-roles.md
               - Hybrid - Import an Activity: boards/howto/import-activity/import.md
           - Working in a Board:
               - boards/howto/adding-members/index.md
