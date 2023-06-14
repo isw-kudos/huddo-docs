@@ -73,7 +73,6 @@ migration:
   env:
     # the extension after /data can be found from the WebSphere ACTIVITIES_CONTENT_DIR variable
     FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
-    API_GATEWAY: https://connections.example.com/api-boards
 
     # Set the Timezone for this container, so dates are understood correctly
     # Please see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a full list of options
