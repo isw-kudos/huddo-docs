@@ -4,6 +4,8 @@ If you are following the HCL install documentation, these notes need to be appli
 
 There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hcl-connections-65-actity-plus-tips-setup.html) from one of our partners which is a great read.
 
+---
+
 ## Installing Activities Plus services
 
 <!-- - There is an [HCL Technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074334) (KB0074334) that needs to be followed -->
@@ -23,9 +25,13 @@ There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hc
 
 - If you have not specified earlier (such as during other component-pack app installs), please set `ProxyPreserveHost On` before the Huddo Boards section in the VirtualHost
 
+---
+
 ## Updating the Activities Plus configuration file
 
 - Please use this [boards-cp.yaml](/assets/boards/cp/boards-cp.yaml) NOT the one supplied with the component pack.
+
+---
 
 ## Migrating Activities data
 
@@ -36,3 +42,13 @@ There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hc
     e.g.
 
         helm upgrade kudos-boards-cp-activity-migration /root/microservices_connections/hybridcloud/helmbuilds/kudos-boards-cp-activity-migration-1.0.0-20191120-214007.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+
+---
+
+## Duplicate name MONGO_HOST
+
+When (re)deploying the Boards CP Chart you may see this warning:
+
+    W0612 09:17:16.153629   21276 warnings.go:70] spec.template.spec.containers[0].env[2].name: duplicate name "MONGO_HOST"
+
+This is an expected behaviour. Connections 8 added a new hostname for Mongo v5.  Our v1.1.0 helm chart uses this in addition to the old hostname to maintain backwards compatibility.  This warning can be safely ignored.
