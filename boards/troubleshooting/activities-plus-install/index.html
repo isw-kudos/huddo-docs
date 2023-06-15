@@ -2408,6 +2408,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#duplicate-name-mongo_host" class="md-nav__link">
+    Duplicate name MONGO_HOST
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3560,6 +3567,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#duplicate-name-mongo_host" class="md-nav__link">
+    Duplicate name MONGO_HOST
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3578,6 +3592,7 @@
 <h1 id="activities-plus-install-faq">Activities Plus Install FAQ<a class="headerlink" href="#activities-plus-install-faq" title="Permanent link">&para;</a></h1>
 <p>If you are following the HCL install documentation, these notes need to be applied during the relevant sections. We recommend using our <a href="https://docs.huddo.com/boards/cp/">install documentation</a> instead.</p>
 <p>There are also some more <a href="https://blog.msbiro.net/2020/02/hcl-connections-65-actity-plus-tips-setup.html">notes and insights</a> from one of our partners which is a great read.</p>
+<hr />
 <h2 id="installing-activities-plus-services">Installing Activities Plus services<a class="headerlink" href="#installing-activities-plus-services" title="Permanent link">&para;</a></h2>
 <!-- - There is an [HCL Technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074334) (KB0074334) that needs to be followed -->
 
@@ -3600,10 +3615,12 @@ LoadModule rewrite_module modules/mod_rewrite.so
 <p>If you have not specified earlier (such as during other component-pack app installs), please set <code>ProxyPreserveHost On</code> before the Huddo Boards section in the VirtualHost</p>
 </li>
 </ul>
+<hr />
 <h2 id="updating-the-activities-plus-configuration-file">Updating the Activities Plus configuration file<a class="headerlink" href="#updating-the-activities-plus-configuration-file" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Please use this <a href="/assets/boards/cp/boards-cp.yaml">boards-cp.yaml</a> NOT the one supplied with the component pack.</li>
 </ul>
+<hr />
 <h2 id="migrating-activities-data">Migrating Activities data<a class="headerlink" href="#migrating-activities-data" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -3615,13 +3632,19 @@ LoadModule rewrite_module modules/mod_rewrite.so
 </code></pre></div>
 </li>
 </ul>
+<hr />
+<h2 id="duplicate-name-mongo_host">Duplicate name MONGO_HOST<a class="headerlink" href="#duplicate-name-mongo_host" title="Permanent link">&para;</a></h2>
+<p>When (re)deploying the Boards CP Chart you may see this warning:</p>
+<div class="highlight"><pre><span></span><code>W0612 09:17:16.153629   21276 warnings.go:70] spec.template.spec.containers[0].env[2].name: duplicate name &quot;MONGO_HOST&quot;
+</code></pre></div>
+<p>This is an expected behaviour. Connections 8 added a new hostname for Mongo v5.  Our v1.1.0 helm chart uses this in addition to the old hostname to maintain backwards compatibility.  This warning can be safely ignored.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2021-03-29
+      2023-06-15
     
   </small>
 </div>
