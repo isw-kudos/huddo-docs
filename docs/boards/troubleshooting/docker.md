@@ -106,3 +106,19 @@ Please update to [kudos-boards-cp-3.1.4.tgz](/assets/config/kubernetes/kudos-boa
 ![ReactMinifiedError](/assets/boards/react-minified-issue.png)
 
 This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [this release](/boards/releases/#2022-12-15)
+
+## ITM Render Issue
+
+![ITMRenderIssue](/assets/boards/cp/ITM-Issue.jpeg)
+
+Connections 8 CR1/2 changes how the ITM bar is displayed. This causes an issue in Boards where is loads to the left and not the right.
+
+You can add this to your custom css in the header/customiser (which is then injected into Boards).
+
+    .gt-sm.cnx8-ui.itm-bar-open .itm-section {
+
+    position: absolute;
+
+    right: 0;
+
+    }
