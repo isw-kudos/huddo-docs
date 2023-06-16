@@ -116,9 +116,6 @@ Connections 8 CR1/2 changes how the ITM bar is displayed. This causes an issue i
 You can add this to your custom css in the header/customiser (which is then injected into Boards).
 
     .gt-sm.cnx8-ui.itm-bar-open .itm-section {
-
-    position: absolute;
-
-    right: 0;
-
+      position: absolute;
+      right: 0;
     }
