@@ -2490,6 +2490,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#itm-render-issue" class="md-nav__link">
+    ITM Render Issue
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3640,6 +3647,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#itm-render-issue" class="md-nav__link">
+    ITM Render Issue
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3733,13 +3747,25 @@ NGINX Ingress controller
 <h2 id="react-minified-issue">React Minified Issue<a class="headerlink" href="#react-minified-issue" title="Permanent link">&para;</a></h2>
 <p><img alt="ReactMinifiedError" src="/assets/boards/react-minified-issue.png" /></p>
 <p>This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in <a href="/boards/releases/#2022-12-15">this release</a></p>
+<h2 id="itm-render-issue">ITM Render Issue<a class="headerlink" href="#itm-render-issue" title="Permanent link">&para;</a></h2>
+<p><img alt="ITMRenderIssue" src="/assets/boards/cp/ITM-Issue.jpeg" /></p>
+<p>Connections 8 CR1/2 changes how the ITM bar is displayed. This causes an issue in Boards where is loads to the left and not the right.</p>
+<p>You can add this to your custom css in the header/customiser (which is then injected into Boards).</p>
+<div class="highlight"><pre><span></span><code>.gt-sm.cnx8-ui.itm-bar-open .itm-section {
+
+position: absolute;
+
+right: 0;
+
+}
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2023-01-23
+      2023-06-16
     
   </small>
 </div>
