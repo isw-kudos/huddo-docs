@@ -8,6 +8,10 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 2023-06-15
 
+Improvements:
+
+- Readers no longer see actions they cannot perform
+
 Fixes:
 
 - Getting members from private sub-channels
