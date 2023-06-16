@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2023-06-15
+
+Fixes:
+
+- Getting members from private sub-channels
+
 2023-06-06
 
 Improvements:
