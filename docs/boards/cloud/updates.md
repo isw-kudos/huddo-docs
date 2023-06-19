@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2023-06-19
+
+Fixes:
+
+- Timeline group-by colours
+
 2023-06-15
 
 Improvements:
@@ -20,10 +26,10 @@ Fixes:
 
 Improvements:
 
-- member promotion emails - add invite and membership details to give more context
-- new configuration option to enable/disable member promotion requests
-- do not clear edited name/description when changing templates
-- ability to create new organisation from guest is reader popup
+- Member promotion emails - add invite and membership details to give more context
+- New configuration option to enable/disable member promotion requests
+- Do not clear edited name/description when changing templates
+- Ability to create new organisation from guest is reader popup
 
 Fixes:
 
