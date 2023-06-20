@@ -6,7 +6,7 @@ The Badges Configurator Widget is the widget that allows users to perform admin-
 
 1. Login to Connections, navigate to Communities and click Create a Community
 
-    ![create community](/assets/badges/install/install-widgets/create-community.png)
+    ![create community](../../badges/install/install-widgets/create-community.png)
 
 1. Enter a name, such as Huddo Configurator
 
@@ -16,7 +16,7 @@ The Badges Configurator Widget is the widget that allows users to perform admin-
 
 1. Enter any tags, web address and description you wish then click Save.
 
-    ![community details](/assets/badges/install/install-widgets/community_details.png)
+    ![community details](../../badges/install/install-widgets/community_details.png)
 
 **Note:** Configurators requires a large column community layout to function properly. Either ‘3 Columns with side menu and banner’, ‘3 Columns with side menu’ or ‘2 Columns with side menu’.
 
@@ -30,7 +30,7 @@ The Huddo Analytics widget allows users to review Connections Usage data over sp
 
 1. Login to Connections, navigate to Communities and click Start a Community.
 
-    ![create community](/assets/badges/install/install-widgets/create-community.png)
+    ![create community](../../badges/install/install-widgets/create-community.png)
 
 1. Enter a name, such as Huddo Analytics.
 
@@ -40,7 +40,7 @@ The Huddo Analytics widget allows users to review Connections Usage data over sp
 
 1. Enter any tags, web address and description you wish and click Save.
 
-    ![analytics community details](/assets/badges/install/install-widgets/analytics_community_details.png)
+    ![analytics community details](../../badges/install/install-widgets/analytics_community_details.png)
 
 You have now created the Huddo Analytics Administrator Community.
 
@@ -119,7 +119,7 @@ Paste the copy into the common\nav\templates subdirectory in the customization d
 
 Edit the _header.jsp_ file in the customisations directory add the following lines **after the Moderation link and before the `</ul>`** HTML tag as shown:
 
-![header customisation](/assets/badges/install/install-widgets/header_customisation.png)
+![header customisation](../../badges/install/install-widgets/header_customisation.png)
 
 To add the Huddo Config JSP
 

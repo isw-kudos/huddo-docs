@@ -13,4 +13,4 @@ Click the Award Badges Now button.
 - _Enable Email Notifications for Badges/Awards_
 - _Enable Email Notifications for Thanks_
 
-![run engine](/assets/badges/install/engine/run_engine.png)
+![run engine](run_engine.png)

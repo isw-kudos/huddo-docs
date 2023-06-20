@@ -12,7 +12,7 @@ As such, the Configurators have been designed such that it is available to a spe
 
 1. Login to Connections, navigate to Communities and click Create a Community
 
-    ![create community](/assets/badges/install/install-widgets/create-community.png)
+    ![create community](create-community.png)
 
 1. Enter a name, such as Badges Configurator
 
@@ -22,7 +22,7 @@ As such, the Configurators have been designed such that it is available to a spe
 
 1. Enter any tags, web address and description you wish then click Save.
 
-    ![community details](/assets/badges/install/install-widgets/community_details.png)
+    ![community details](community_details.png)
 
 **Note:** Configurators requires a large column community layout to function properly. Either ‘3 Columns with side menu and banner’, ‘3 Columns with side menu’ or ‘2 Columns with side menu’.
 
@@ -30,7 +30,7 @@ You have now created the first Huddo Configurator Community.
 
 Take note of the CommunityUUID in the URL address, as we will need this later.
 
-Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Huddo Analytics Administrator Community](install-widgets.md#create-the-kudos-analytics-administrator-community)
+Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Huddo Analytics Administrator Community](#create-the-kudos-analytics-administrator-community)
 
 ### Create the Huddo Analytics Administrator Community
 
@@ -38,7 +38,7 @@ The Huddo Analytics widget allows users to review Connections Usage data over sp
 
 1. Login to Connections, navigate to Communities and click Start a Community.
 
-    ![create community](/assets/badges/install/install-widgets/create-community.png)
+    ![create community](create-community.png)
 
 1. Enter a name, such as Huddo Analytics.
 
@@ -48,7 +48,7 @@ The Huddo Analytics widget allows users to review Connections Usage data over sp
 
 1. Enter any tags, web address and description you wish and click Save.
 
-    ![analytics community details](/assets/badges/install/install-widgets/analytics_community_details.png)
+    ![analytics community details](analytics_community_details.png)
 
 You have now created the Huddo Analytics Administrator Community.
 
@@ -139,7 +139,7 @@ Edit the widgets-config.xml file. Find the resource element with the type of com
 
 The order in which you insert these two instance declarations is the order in which they show on the page. For example, you might wish to show the Summary Tab before the Links widget, and the Huddo Badges, Thanks & Awards Widgets as the last tabs, which would be configured as per the image below. Also make sure that the uiLocation’s match the other ids. If not, then modify to suit your environment.
 
-![profile widget def](/assets/badges/install/install-widgets/profile_widget_def.png)
+![profile widget def](profile_widget_def.png)
 
 ### Configure Configurators and Community Leaderboard Widgets
 
@@ -228,7 +228,7 @@ Paste the copy into the common\nav\templates subdirectory in the customization d
 
 Edit the _header.jsp_ file in the customisations directory add the following lines **after the Moderation link and before the `</ul>`** HTML tag as shown:
 
-![header customisation](/assets/badges/install/install-widgets/header_customisation.png)
+![header customisation](header_customisation.png)
 
 To add the Huddo Config JSP
 

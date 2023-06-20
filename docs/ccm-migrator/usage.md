@@ -33,7 +33,7 @@ and metadata exported. If migrating to the OS file system, all content and metad
 exported to this location. If migrating to Connections Files, metadata is exported to
 this location only if the migration setting to export metadata is enabled.
 
-![API Settings](/assets/ccm-migrator/api-settings01.png)
+![API Settings](img/api-settings01.png)
 
 Other API Settings are described below, but should never need to be changed for normal operation:
 

@@ -71,7 +71,7 @@ nav:
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino.md
               - Office 365:
-                  - Authentication: boards/msgraph/auth.md
+                  - Authentication: boards/msgraph/auth/index.md
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
                   - Teams App: boards/msgraph/teams-on-prem.md
               - Related Tasks: boards/integrations/developing/related-tasks.md
@@ -80,7 +80,7 @@ nav:
       - FAQ:
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
-          - Roles: boards/cp/roles.md
+          - Roles: boards/cp/roles/index.md
       - User Guides:
           - boards/howto/index.md
           - Knowledge Base & Support: boards/howto/knowledgebase.md
@@ -158,8 +158,8 @@ nav:
           - Customising: analytics/install/customising.md
           - FAQ: analytics/install/websphere-faq.md
       - User Guide:
-          - Introduction: analytics/user-guide/introduction.md
-          - Using Reports: analytics/user-guide/using-reports.md
+          - Introduction: analytics/user-guide/introduction/index.md
+          - Using Reports: analytics/user-guide/using-reports/index.md
           - Available Reports: analytics/user-guide/available-reports.md
           - How to Access Reports: analytics/user-guide/access-reports.md
           - Glossary of Terms: analytics/user-guide/terms.md
@@ -168,17 +168,17 @@ nav:
       - badges/index.md
       - Installation:
           - badges/install/index.md
-          - WebSphere Application: badges/install/app.md
-          - Widgets: badges/install/install-widgets.md
+          - WebSphere Application: badges/install/app/index.md
+          - Widgets: badges/install/install-widgets/index.md
           - Mobile: badges/install/mobile.md
-          - Apply Changes: badges/install/apply-changes.md
-          - Add Widgets: badges/install/add-widgets.md
-          - Community Properties: badges/install/comm-properties.md
-          - Licence: badges/install/licence.md
-          - Defaults: badges/install/load-defaults.md
-          - Leaderboard: badges/install/leaderboard.md
-          - Awards: badges/install/awards.md
-          - Engine: badges/install/engine.md
+          - Apply Changes: badges/install/apply-changes/index.md
+          - Add Widgets: badges/install/add-widgets/index.md
+          - Community Properties: badges/install/comm-properties/index.md
+          - Licence: badges/install/licence/index.md
+          - Defaults: badges/install/load-defaults/index.md
+          - Leaderboard: badges/install/leaderboard/index.md
+          - Awards: badges/install/awards/index.md
+          - Engine: badges/install/engine/index.md
           - Customising: badges/install/customising.md
           #- Embedded Experience: badges/install/embedded-exp.md
           - FAQ: badges/websphere-faq.md

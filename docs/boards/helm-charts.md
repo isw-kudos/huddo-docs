@@ -12,11 +12,11 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 
 ### huddo-boards
 
-- [1.0.0](/assets/config/kubernetes/huddo-boards-1.0.0.tgz)
+- [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)
 
 ### huddo-boards-activity-migration
 
-- [1.0.0](/assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)
+- [1.0.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)
 
 ---
 
@@ -32,13 +32,13 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
         cd /pv-connections/kudos-boards-minio/
         chown 1000:1000 -R .
 
-- [1.0.0](/assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)
-- [1.1.0](/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
+- [1.0.0](../assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)
+- [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
 
 ### huddo-boards-cp-activity-migration
 
-- [1.0.0](/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz)
-- [1.1.0](/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.1.0.tgz) - CNX 8 fix for Mongo 5
+- [1.0.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz)
+- [1.1.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.1.0.tgz) - CNX 8 fix for Mongo 5
 
 ---
 

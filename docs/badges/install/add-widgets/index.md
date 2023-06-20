@@ -6,11 +6,11 @@ Login to Connections and navigate to the previously created Badges Configurator 
 
 1. Click Community Actions then 'Add Apps' from the drop down menu
    
-    ![add apps](/assets/badges/install/add-widgets/community_add_apps.png)
+    ![add apps](community_add_apps.png)
 
 1. Select the Configurator(s) to add to the Community
 
-    ![add apps menu](/assets/badges/install/add-widgets/add_apps_menu.png)
+    ![add apps menu](add_apps_menu.png)
 
 1. Click X
 
@@ -24,10 +24,10 @@ making use of the Configurator widget easier. The default widgets may be removed
 ### Remove the Default Widgets (Optional)
 
 Click the Actions drop-down and select Delete
-    ![delete apps](/assets/badges/install/add-widgets/delete_widget.png)
+    ![delete apps](delete_widget.png)
 
 Fill in the required data then click Ok on the Delete prompt
-    ![delete apps prompt](/assets/badges/install/add-widgets/delete_widget_prompt.png)
+    ![delete apps prompt](delete_widget_prompt.png)
 
 ### Add the Huddo Analytics Widget to Communities
 
@@ -35,11 +35,11 @@ Login to Connections and navigate to the Huddo Analytics Community
 
 Click Community Actions then 'Add Apps' from the drop down menu
 
-![add apps](/assets/badges/install/add-widgets/community_add_apps.png)
+![add apps](community_add_apps.png)
 
 Select HuddoAnalytics
 
-![add apps menu](/assets/badges/install/add-widgets/add_apps_menu.png)
+![add apps menu](add_apps_menu.png)
 
 Click X
 
@@ -70,7 +70,7 @@ Login to Connections as a user assigned to the admin security role of the Homepa
 
 Click the 'Add another app' button and enter the following details. Once you have defined each widget, click Save and then click the 'Add another widget' button to add the next.
 
-![add apps menu](/assets/badges/install/add-widgets/add_another_app.png)
+![add apps menu](add_another_app.png)
 
 |                | Widget Type        | Widget Title         | URL Address                                                     | Use HCL Connections specific tags | Display on My Page | Display on Updates Pages | Opened by Default | Multiple apps | Prerequisites                                  |
 |----------------|--------------------|----------------------|-----------------------------------------------------------------|-----------------------------------|--------------------|--------------------------|-------------------|---------------|------------------------------------------------|
@@ -102,11 +102,11 @@ It will also show on the Updates and Widgets tabs, if these options were selecte
 
 Open My Page through the Sidebar link or Home button and select Customize
 
-![my page customise](/assets/badges/install/add-widgets/my_page_customise.png)
+![my page customise](my_page_customise.png)
 
 Select Huddo Awarder. If you cannot find it, look under the 'Other' category.
 
-![my page add apps](/assets/badges/install/add-widgets/my_page_add_apps.png)
+![my page add apps](my_page_add_apps.png)
 
 Click X
 
@@ -122,11 +122,11 @@ This step will ensure the User Analytics widget was defined successfully in the 
 
 Open My Page through the Sidebar link or Home button and select Customize
 
-![my page customise](/assets/badges/install/add-widgets/my_page_customise.png)
+![my page customise](my_page_customise.png)
 
 Select Huddo User Analytics. If you cannot find it, look under the 'Other' category.
 
-![my page add apps](/assets/badges/install/add-widgets/my_page_add_apps.png)
+![my page add apps](my_page_add_apps.png)
 
 Click X
 

@@ -4,7 +4,7 @@ To start using your Auth0 tenant in Huddo Boards, you need to make a few changes
 
 Login to [Auth0](https://auth0.com/) and go to the applications list
 
-![App selection](/assets/auth0/huddo-applications.png)
+![App selection](img/huddo-applications.png)
 
 Click your Kudos Boards application and change the following fields
 

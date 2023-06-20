@@ -2,7 +2,7 @@ There are two methods to perform this. Using wsadmin by following [the documenta
 
 Access the Homepage -> Administration setting. Click the ‘Refresh cache’ option. This may need to be done on each server running Huddo to ensure that each of the node’s caches are properly refreshed.
 
-![homepage refresh cache](/assets/badges/update/homepage_refresh_cache.png)
+![homepage refresh cache](homepage_refresh_cache.png)
 
 In order to access Administration section, please ensure the logged in user is in the Homepage ‘admin’ security role.
 

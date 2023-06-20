@@ -8,9 +8,9 @@ Select the Settings tab in the BadgesConfigurator widget. If there are no tabs, 
 
 Click the Update Licence button.
 
-![update licence](/assets/badges/install/licence/update_licence.png)
+![update licence](../../badges/install/licence/update_licence.png)
 
 Click Choose File and browse to your Huddo.licence file and click Upload.
 
-![update licence prompt](/assets/badges/install/licence/update_licence_prompt.png)
+![update licence prompt](../../badges/install/licence/update_licence_prompt.png)
 

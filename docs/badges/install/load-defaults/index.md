@@ -6,7 +6,7 @@ Login to Connections and navigate to the Badges Configurator Community
 
 Select the Settings tab in the BadgesConfigurator widget, scroll to the bottom and click the 'Load Defaults' button
 
-![load defaults prompts](/assets/badges/install/load-defaults/load_defaults.png)
+![load defaults prompts](load_defaults.png)
 
 Select:
 
@@ -25,7 +25,7 @@ Select:
 
 **Note:** You will need to have the corresponding Connections Applications installed. As well as have a Standard or Enterprise Licence for Huddo.
 
-![load defaults prompts](/assets/badges/install/load-defaults/load_defaults_prompts.png)
+![load defaults prompts](load_defaults_prompts.png)
 
 Click Save
 

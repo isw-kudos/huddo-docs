@@ -8,7 +8,7 @@ As part of the installation process for Huddo Boards you can run the migration s
 
 !!! info
 
-    Please review the [Roles page](../cp/roles.md) for details on how Community Activity membership is interpreted & presented by Boards
+    Please review the [Roles page](../cp/roles/index.md) for details on how Community Activity membership is interpreted & presented by Boards
 
 ## Difference between the individual import
 

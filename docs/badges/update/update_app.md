@@ -5,17 +5,17 @@ Console. The .war file contains all the new default data and all other applicati
 
 Login to the WebSphere Integrated Solution Console for your Connections environment via a web browser.
 
-![login](/assets/badges/update/WAS_Console_login.png)
+![login](WAS_Console_login.png)
 
 ### Replace the Huddo.war file
 
 Navigate to Applications -> Application Types -> WebSphere enterprise applications
 
-![was app](/assets/badges/update/was_app.png)
+![was app](was_app.png)
 
 Select the **Huddo** application and click **Update**.
 
-![huddo app list](/assets/badges/update/kudos_app_list.png)
+![huddo app list](kudos_app_list.png)
 
 Select **Replace or add a single module** option.
 
@@ -23,13 +23,13 @@ Type in **Huddo.war** in the text field. **Note: This is case-sensitive!**
 
 Click Browse, navigate to and select the new **Huddo.war** file.
 
-![select war](/assets/badges/update/select_war.png)
+![select war](select_war.png)
 
 Follow the prompts clicking **Next**.
 
 If prompted, click **Browse** and map the default resources as shown.
 
-![resource mapping](/assets/badges/update/resource_mapping.png)
+![resource mapping](resource_mapping.png)
 
 Follow the prompts clicking **Next**.
 
@@ -49,7 +49,7 @@ Select the node that Huddo is installed on. (If you are unsure you may select al
 
 Click on Full Resynchronize and wait for the completion message.
 
-![full resync](/assets/badges/update/full_resync.png)
+![full resync](full_resync.png)
 
 ### Restart the Huddo Application
 
@@ -63,4 +63,4 @@ Select the Huddo Application Checkbox.
 
 Click Start and wait for the Application Status column to display the Started icon.
 
-![stop start kudos](/assets/badges/update/stop_start_kudos.png)
+![stop start kudos](stop_start_kudos.png)

@@ -37,7 +37,7 @@ This bot will be used to post notification to Microsoft Teams triggered by actio
 
         > i.e. `https://connections.example.com/boards/webhook/teams` or `https://boards.company.example.com/webhook/teams`
 
-    - `[MSGRAPH_CLIENT_ID]` is the OAuth Client ID from [Auth setup](auth.md)
+    - `[MSGRAPH_CLIENT_ID]` is the OAuth Client ID from [Auth setup](auth/index.md)
 
     For example:
 

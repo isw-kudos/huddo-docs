@@ -4,7 +4,7 @@
 
     This step is optional
 
-![Outcome](/assets/connections/header.png)
+![Outcome](../../assets/connections/header.png)
 
 ---
 
@@ -20,11 +20,11 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Open the Boards admin page, select your `Organisation`, and then the `Connections` client
 
-    ![example](/assets/connections/admin-client.png)
+    ![example](../../assets/connections/admin-client.png)
 
     Tick the checkbox for `Load Connections Header via SSO` and click `Save`
 
-    ![example](/assets/connections/header-sso.png)
+    ![example](../../assets/connections/header-sso.png)
 
     Once you reload the page you should see the Connections header!
 
@@ -38,7 +38,7 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
 1. Download the Application
 
-    The latest .ear from [here](/assets/connections/kudos-boards-frame.ear)
+    The latest .ear from [here](../../assets/connections/kudos-boards-frame.ear)
 
 1. Login to WebSphere ISC
 
@@ -46,7 +46,7 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
         https://[DEPLOY_MANAGER_ALIAS]:9043/ibm/console/logon.jsp
 
-    ![example](/assets/connections/isc.png)
+    ![example](../../assets/connections/isc.png)
 
 1. Open `Environment` -> `WebSphere variables`
 
@@ -54,7 +54,7 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Click `New`
 
-    ![example](/assets/connections/iframe/env1.png)
+    ![example](../../assets/connections/iframe/env1.png)
 
 
 1. Set the following details and click `OK`
@@ -67,25 +67,25 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
     - your Connections hostname base64 encoded.  E.g.</br>
       `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
 
-    ![example](/assets/connections/iframe/env-hybrid.png)
+    ![example](../../assets/connections/iframe/env-hybrid.png)
 
 1. The config may require saving. Click `Save` if presented
 
-    ![example](/assets/connections/isc-sync.png)
+    ![example](../../assets/connections/isc-sync.png)
 
 1. Open `Applications` -> `Application Types` -> `WebSphere enterprise applications`
 
     Click `Install`
 
-    ![example](/assets/connections/iframe/app1.png)
+    ![example](../../assets/connections/iframe/app1.png)
 
 1. Select the file and click `Next`
 
-    ![example](/assets/connections/iframe/app2.png)
+    ![example](../../assets/connections/iframe/app2.png)
 
 1. You can rename the App if you wish, then click `Next`
 
-    ![example](/assets/connections/iframe/app4.png)
+    ![example](../../assets/connections/iframe/app4.png)
 
 1. Select the checkbox for the module
 
@@ -97,19 +97,19 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Click `Next`
 
-    ![example](/assets/connections/iframe/app5.png)
+    ![example](../../assets/connections/iframe/app5.png)
 
 1. Click `Next`
 
-    ![example](/assets/connections/iframe/app6.png)
+    ![example](../../assets/connections/iframe/app6.png)
 
 1. Click `Finish`
 
-    ![example](/assets/connections/iframe/app7.png)
+    ![example](../../assets/connections/iframe/app7.png)
 
 1. The config may prompt to save. Click `Save`
 
-    ![example](/assets/connections/iframe/app8.png)
+    ![example](../../assets/connections/iframe/app8.png)
 
     The application should now be installed
 
@@ -117,11 +117,11 @@ To integrate yours Connections Header into Huddo Boards Cloud please follow thes
 
     Tick the box next to the app name, and click `Start`
 
-    ![example](/assets/connections/iframe/app9.png)
+    ![example](../../assets/connections/iframe/app9.png)
 
     The app should now start. Congratulations, you have installed the app!
 
-    ![example](/assets/connections/iframe/app10.png)
+    ![example](../../assets/connections/iframe/app10.png)
 
     You should now be able to load  app can now be loaded at this path
 

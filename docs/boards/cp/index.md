@@ -38,7 +38,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 | Provider                        | Registration / Documentation                            | Callback URL                                                 |
 | ------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
 | HCL Connections<br>(on premise) | [Huddo instructions](../connections/auth-on-prem.md) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
-| Microsoft Office 365            | [Huddo instructions](../msgraph/auth.md)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
+| Microsoft Office 365            | [Huddo instructions](../msgraph/auth/index.md)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
 
 ---
 

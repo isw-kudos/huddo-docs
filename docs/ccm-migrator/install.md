@@ -15,7 +15,7 @@ Determine which data source relates to the Filenet Object Store database, and no
 JNDI name for that data source. The image below shows an example where the data source name
 and JNDI name are "FNOSDS", but it may be different in your environment.
 
-![Installation - JDBC data sources](/assets/ccm-migrator/jdbc-data-sources01.png)
+![Installation - JDBC data sources](img/jdbc-data-sources01.png)
 
 If you're not sure which is the correct data source, check the details of each data source
 as follows:
@@ -30,17 +30,17 @@ If you can't determine the correct JNDI name, the only impact is that CCM Migrat
 be unable to migrate file follows, but the installation process requires a JNDI name
 to be entered regardless.
 
-![Installation - JDBC data sources](/assets/ccm-migrator/jdbc-data-sources02.png)
+![Installation - JDBC data sources](img/jdbc-data-sources02.png)
 
 ## Installing the Application for the first time
 
 In the ISC, navigate to Applications \ Application Types \ WebSphere enterprise applications and click "Install".
 
-![Installation - step 1](/assets/ccm-migrator/install01.png)
+![Installation - step 1](img/install01.png)
 
 Locate the "isw-connections-ccm.ear" file on your local file system and click "Next".
 
-![Installation - step 2](/assets/ccm-migrator/install02.png)
+![Installation - step 2](img/install02.png)
 
 Select "Fast Path" and click "Next".
 
@@ -56,7 +56,7 @@ is mapped to a cluster, it's best if the cluster only has one server or the
 file-system location is synchronized between all servers in the cluster, to ensure
 that the log files are up to date regardless of which server the application runs on.
 
-![Installation - step 3](/assets/ccm-migrator/install03.png)
+![Installation - step 3](img/install03.png)
 
 Step 3: Enter the JNDI name for the Filenet Object Store database, which you should have
 obtained as described under [Gathering required information](#gathering-required-information).
@@ -73,15 +73,15 @@ _The procedure in this section may or may not be required depending on the confi
 
 In the ISC, navigate to Servers \ Server types \ Web servers.
 
-![Web Server plug-in - step 1](/assets/ccm-migrator/webserver-plugin01.png)
+![Web Server plug-in - step 1](img/webserver-plugin01.png)
 
 Select the web server, and click "Generate Plug-in". (If your environment has multiple web servers, you should be able to select them all for this step.)
 
-![Web Server plug-in - step 2](/assets/ccm-migrator/webserver-plugin02.png)
+![Web Server plug-in - step 2](img/webserver-plugin02.png)
 
 When the above step completes, select the web server again, and click "Propagate Plug-in". (If your environment has multiple web servers, you should be able to select them all for this step.)
 
-![Web Server plug-in - step 3](/assets/ccm-migrator/webserver-plugin03.png)
+![Web Server plug-in - step 3](img/webserver-plugin03.png)
 
 ## Configuring the Application
 
@@ -108,19 +108,19 @@ You may follow the steps below for how to create name space bindings.
 
 In the ISC, navigate to Environment \ Naming \ Name space bindings.
 
-![Name-space binding - step 1](/assets/ccm-migrator/namespace-binding01.png)
+![Name-space binding - step 1](img/namespace-binding01.png)
 
 Select the "Cell" scope, then click "New".
 
-![Name-space binding - step 2](/assets/ccm-migrator/namespace-binding02.png)
+![Name-space binding - step 2](img/namespace-binding02.png)
 
 Set the binding type to "String", then click "Next".
 
-![Name-space binding - step 3](/assets/ccm-migrator/namespace-binding03.png)
+![Name-space binding - step 3](img/namespace-binding03.png)
 
 Set both the "Binding identifier" and "Name in name space" fields to "iswCCMLicenceKey". Enter your licence key in the "String value" field.
 
-![Name-space binding - step 4](/assets/ccm-migrator/namespace-binding04.png)
+![Name-space binding - step 4](img/namespace-binding04.png)
 
 Click "Next", then click "Finish", then save the master configuration. Repeat these steps for `iswCCMLicenceCommunities`.
 

@@ -10,4 +10,4 @@ Select all of the Connections Clusters
 
 Click Ripplestart.
 
-![console](/assets/badges/install/apply-changes/console.png)
+![console](console.png)

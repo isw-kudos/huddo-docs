@@ -8,7 +8,7 @@ As part of the installation process for Huddo Boards (Activities Plus) you must 
 
 !!! info
 
-    Please review the [Roles page](roles.md) for details on how Community Activity membership is interpreted & presented by Boards
+    Please review the [Roles page](roles/index.md) for details on how Community Activity membership is interpreted & presented by Boards
 
 ## Process Overview
 

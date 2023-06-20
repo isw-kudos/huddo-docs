@@ -2,7 +2,7 @@
 
 At this stage, the Huddo Configuration Widgets show in the Communities Customization Palette for all Communities. This means they can be added to any community. However, they are restriced to function only in their respective Community created during this installation process. This message will be shown if theyare added to any other community.
 
-![Metrics Unauthorised](/assets/badges/install/comm-properties/configurator_unauthorised.png)
+![Metrics Unauthorised](configurator_unauthorised.png)
 
 It is possible to remove these Widgets from the Customizations Palette, so that users cannot see/add them to their Communties. This requires modifying the Configuration Widget definitions we created earlier in the widgets-config.xml file and restarting the clusters again.
 
@@ -54,4 +54,4 @@ Check in the Widgets-Config.xml File:
 
 [Connections 6.5](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_profiles_changing_admin.html)
 
-Then [Restart the clusters](apply-changes.md).
+Then [Restart the clusters](../apply-changes/index.md).

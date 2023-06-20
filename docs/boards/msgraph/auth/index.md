@@ -2,7 +2,7 @@
 
 This document details the process to enable login to your private instance of Huddo Boards with your private Office 365 tenant.
 
-![outcome of guide](/assets/msgraph/boards-login.png)
+![outcome of guide](boards-login.png)
 
 ---
 
@@ -15,13 +15,13 @@ You must configure an OAuth Application in your Office 365 Tenant in order to us
 
   Click `New Registration`
 
-  ![click new registration](/assets/msgraph/appreg.png)
+  ![click new registration](appreg.png)
 
 ### Configure Redirect
 
 Enter the values below and click `Register`
 
-![enter these values](/assets/msgraph/appreg2.png)
+![enter these values](appreg2.png)
 
     Huddo Boards
     https://[BOARDS_URL]/auth/msgraph/callback
@@ -40,7 +40,7 @@ Enter the values below and click `Register`
 
 1. Replace the `requiredResourceAccess` section as per below
 
-    ![scopes to add](/assets/msgraph/appreg-scopes.png)
+    ![scopes to add](appreg-scopes.png)
 
         "requiredResourceAccess": [
           {
@@ -103,11 +103,11 @@ Open the `API permissions` section. Notice that all the scopes are now pre-fille
 
 Click `Grant admin consent for kudosdev`
 
-![grant consent](/assets/msgraph/appreg-scopes2.png)
+![grant consent](appreg-scopes2.png)
 
 Click `Yes`
 
-![click yes](/assets/msgraph/appreg-consent.png)
+![click yes](appreg-consent.png)
 
 ### Configure SSO in Teams
 
@@ -117,7 +117,7 @@ Click `Yes`
 
 At the end of this step you should have the following:
 
-![expose-api](/assets/msgraph/expose-api.png)
+![expose-api](expose-api.png)
 
 
 1. Click `Expose an API`
@@ -141,7 +141,7 @@ At the end of this step you should have the following:
 
       Set the following values:
 
-      ![add scope](/assets/msgraph/expose-api-scope.png)
+      ![add scope](expose-api-scope.png)
 
       - Scope name: `access_as_user`
       - Who can consent: `Admins and users`
@@ -164,21 +164,21 @@ At the end of this step you should have the following:
 
       Copy `Application (client) ID` & `Directory (tenant) ID`
 
-      ![copy guids](/assets/msgraph/appreg-client-id.png)
+      ![copy guids](appreg-client-id.png)
 
 1. Open the `Certificates & secrets` section
 
     Click `New client secret`
 
-    ![create a secret](/assets/msgraph/appreg-client-secret.png)
+    ![create a secret](appreg-client-secret.png)
 
     Select `Never` expire and click `Add`
 
-    ![add the secret](/assets/msgraph/appreg-client-secret2.png)
+    ![add the secret](appreg-client-secret2.png)
 
     Copy the secret value shown
 
-    ![copy the secret](/assets/msgraph/appreg-client-secret3.png)
+    ![copy the secret](appreg-client-secret3.png)
 
 1. Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
 
@@ -192,11 +192,11 @@ At the end of this step you should have the following:
 
 1. Redeploy Boards Helm Chart as per command for Huddo Boards:
 
-    [HCL Component Pack](../cp/index.md#deploy-boards-helm-chart)
+    [HCL Component Pack](../../cp/index.md#deploy-boards-helm-chart)
 
         helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
-    [for Docker - Kubernetes](../kubernetes/index.md#deploy-boards-chart)
+    [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 
         helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
 
@@ -208,16 +208,16 @@ At the end of this step you should have the following:
 
     Click the `Office 365` option and login with a Tenant Administrator account
 
-    ![login with Office 365](/assets/msgraph/appreg-login.png)
+    ![login with Office 365](appreg-login.png)
 
 1. Once logged in, a prompt will appear in Huddo Boards. Click `Approve`
 
-    ![Admin Approval Toast](/assets/msgraph/administrator_approval_toast.png)
+    ![Admin Approval Toast](administrator_approval_toast.png)
 
 1. Click `Accept` on the following popup to grant the required permissions for Huddo Boards
 
-    ![permission popup](/assets/msgraph/administrator_approval_view.png)
+    ![permission popup](administrator_approval_view.png)
 
     Congratulations! All users in your tenant can now login to Huddo Boards via Office 365!
 
-    ![login options](/assets/msgraph/boards-login.png)
+    ![login options](boards-login.png)

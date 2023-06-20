@@ -11,7 +11,7 @@ For an experienced Connections administrator or IBM WebSphere Application Server
 
 Open the Administration tab (on the Homepage) and browse to the Enabled Widgets list. For each Kudos Widget listed, select it and edit.
 
-![add apps menu](/assets/badges/install/add-widgets/add_another_app.png)
+![add apps menu](../install/add-widgets/add_another_app.png)
 
 |                | OLD Widget Title     | OLD URL Address                                                 | NEW Widget Title     | NEW URL Address                                                 | 
 |----------------|----------------------|-----------------------------------------------------------------|----------------------|-----------------------------------------------------------------|

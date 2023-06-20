@@ -11,7 +11,7 @@ Examples:
 - Create a _Management_ Group to award the _Employee of the year Award_
 - A _Sales_ Group to add as the Awardees to the _Salesman of the Year_ Award; etc.
 
-![user groups](/assets/badges/install/awards/user_groups.png)
+![user groups](user_groups.png)
 
 ### Set the access groups for each of the Awards
 
@@ -28,4 +28,4 @@ Open the Awards Tab in the Badges Configurator widget and for each of the Award 
 
 4. Click **Save** to save your changes.
 
-![award config](/assets/badges/install/awards/award_config.png)
+![award config](award_config.png)

@@ -17,8 +17,8 @@ Boards has the following membership roles
 
 | Type        | Description                                                 | Applicable Role Options                                                             |     |
 | ----------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------- | --- |
-| Owned by    | Boards created from inside a Community                      | ![activity shared](/assets/connections/roles/board-roles-in-community.png)          |
-| Shared with | Boards created standalone, and then shared with a community | ![activity shared](/assets/connections/roles/board-roles-shared-with-community.png) |
+| Owned by    | Boards created from inside a Community                      | ![activity shared](board-roles-in-community.png)          |
+| Shared with | Boards created standalone, and then shared with a community | ![activity shared](board-roles-shared-with-community.png) |
 
 ## Migration Examples
 
@@ -28,14 +28,14 @@ When migrating from Activities, the permissions will be maintained. Below are so
 
 | Activities                                                                                         | Boards                                                                                                 |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Owners & Members assigned the Owner role ![acl](/assets/connections/roles/activity-all-owners.png) | Owner role is assigned to the entire community ![acl](/assets/connections/roles/board-all-owners.png)  |
-| Members are Authors ![acl](/assets/connections/roles/activity-owners-authors.png)                  | Role is `Owners & Authors` as per above ![acl](/assets/connections/roles/board-owners-authors.png)              |
-| Members are Readers ![acl](/assets/connections/roles/activity-owners-readers.png)                  | Role is `Owners & Readers` as per above ![acl](/assets/connections/roles/board-owners-readers.png)     |
-| As above, with users specified ![acl](/assets/connections/roles/activity-owners-readers-users.png) | Each user is migrated with their role ![acl](/assets/connections/roles/board-owners-readers-users.png) |
-| Members have NO access ![acl](/assets/connections/roles/activity-owners-users.png)                 | Role is `Community Owners Only` as per above ![acl](/assets/connections/roles/board-owners-users.png)  |
+| Owners & Members assigned the Owner role ![acl](activity-all-owners.png) | Owner role is assigned to the entire community ![acl](board-all-owners.png)  |
+| Members are Authors ![acl](activity-owners-authors.png)                  | Role is `Owners & Authors` as per above ![acl](board-owners-authors.png)              |
+| Members are Readers ![acl](activity-owners-readers.png)                  | Role is `Owners & Readers` as per above ![acl](board-owners-readers.png)     |
+| As above, with users specified ![acl](activity-owners-readers-users.png) | Each user is migrated with their role ![acl](board-owners-readers-users.png) |
+| Members have NO access ![acl](activity-owners-users.png)                 | Role is `Community Owners Only` as per above ![acl](board-owners-users.png)  |
 
 ### Standalone Activity
 
 | Activities                                                          | Boards                                                           |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| ![acl](/assets/connections/roles/activity-shared-with-as-owner.png) | ![acl](/assets/connections/roles/board-shared-with-as-owner.png) |
+| ![acl](activity-shared-with-as-owner.png) | ![acl](board-shared-with-as-owner.png) |
