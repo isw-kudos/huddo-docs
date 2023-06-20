@@ -7,7 +7,7 @@
 Please revoke your OAuth access to Huddo Boards Cloud within HCL Connections.
 Go to `https://<YOUR_CONNECTIONS_URL>/connections/oauth/apps` (replacing `<YOUR_CONNECTIONS_URL>`) and press 'Revoke'
 
-![Application Access](/assets/connections/application-access.png)
+![Application Access](application-access.png)
 
 ---
 
@@ -64,7 +64,7 @@ core:
 
 ## Customizing Boards Context Root
 
-If you wish to deploy boards at a path other than `/boards` & `/api-boards` please see [this example file](/assets/config/kubernetes/custom-context-root.yaml) of all the variables to merge into your YAML config file. 
+If you wish to deploy boards at a path other than `/boards` & `/api-boards` please see [this example file](../../assets/config/kubernetes/custom-context-root.yaml) of all the variables to merge into your YAML config file. 
 
 > Note: If you are using an older version of the Ingress controller (< 0.22) you will need to use example above
 
@@ -99,17 +99,17 @@ If the Minio service fails to start with the following error:
 
     ERROR Unable to initialize backend: found backend fs, expected xl
 
-Please update to [kudos-boards-cp-3.1.4.tgz](/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz) which includes a different image of Minio which supports your existing 'fs' file system.
+Please update to [kudos-boards-cp-3.1.4.tgz](../../assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz) which includes a different image of Minio which supports your existing 'fs' file system.
 
 ## React Minified Issue
 
-![ReactMinifiedError](/assets/boards/react-minified-issue.png)
+![ReactMinifiedError](react-minified-issue.png)
 
 This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [this release](../releases.md#2022-12-15)
 
 ## ITM Render Issue
 
-![ITMRenderIssue](/assets/boards/cp/ITM-Issue.jpeg)
+![ITMRenderIssue](ITM-Issue.jpeg)
 
 Connections 8 CR1/2 changes how the ITM bar is displayed. This causes an issue in Boards where is loads to the left and not the right.
 

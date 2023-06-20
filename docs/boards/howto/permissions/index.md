@@ -1,10 +1,10 @@
-<img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
+![Boards](../../../assets/images/boards-logo.jpg){ style="float: right" width=200 }
 
 # Permissions in Huddo Boards
 
 When you invite colleagues, teams, or external parties to collaborate in your board, you can decide what level of permission to allocate to them. Below, permissions are listed from the lowest access to the highest.
 
-![](/assets/boards/permissions.png)
+![](permissions.png)
 
 ### Reader
 A person allocated a Reader permission, has read-only access.

@@ -70,7 +70,7 @@ Huddo Boards / Activities Plus is a free entitlement however it requires a licen
 
 ### Update Config file
 
-Download our [config file](/assets/config/kubernetes/boards-cp.yaml) and update all the values inside. Descriptions as below.
+Download our [config file](../../assets/config/kubernetes/boards-cp.yaml) and update all the values inside. Descriptions as below.
 
 **Kubernetes variables**:
 
@@ -87,7 +87,7 @@ Are [detailed here](../env/common.md).
 
 **Activity migration variables**:
 
-The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](migration.md).
+The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](migration/index.md).
 
 ---
 
@@ -127,7 +127,7 @@ Please follow [these instructions](httpd.md)
 
 ## Migrate Activities data
 
-Please follow the [instructions here](migration.md)
+Please follow the [instructions here](migration/index.md)
 
 ---
 

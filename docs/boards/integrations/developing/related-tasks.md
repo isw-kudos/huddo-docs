@@ -1,6 +1,6 @@
 # Use Huddo Boards Related Task Microapp
 
-![Related Tasks](/assets/connections/related-tasks.png)
+![Related Tasks](../../../assets/connections/related-tasks.png)
 
 To display this use the following pattern to load and use the microapp
 

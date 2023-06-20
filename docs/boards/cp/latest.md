@@ -2,14 +2,14 @@
 
 1. [Follow this guide](../images.md) to configure your Kubernetes with access to our images hosted in Quay.io.
 
-1. Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](/assets/config/kubernetes/boards-cp.yaml).  At the top set
+1. Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](../../assets/config/kubernetes/boards-cp.yaml).  At the top set
 
     - `global.imageTag` as the date of our latest [release](../releases.md)
     - `global.imagePullSecret` to the name of the secret you created
     
         e.g. `<USERNAME>-pull-secret`
 
-        ![Example](/assets/quay/config-yaml.png)
+        ![Example](../../quay/config-yaml.png)
 
 1. Run the Helm upgrade command with our new Huddo chart to apply the changes.
 

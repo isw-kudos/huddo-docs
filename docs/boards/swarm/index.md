@@ -11,7 +11,7 @@ Basic instructions for deploying Huddo Boards into Docker Swarm for on-premise I
 1. Docker Swarm with Portainer installed. [Guide here](prerequisites.md)
 1. Storage - an accessible MongoDB and S3 object store.
 1. SMTP gateway setup for email notifications
-1. [Config File](/assets/config/swarm/boards.yml) downloaded
+1. Config File downloaded
 1. Dockerhub account with access to Huddo Boards repository.
 
    Send your account details to [support@huddo.com](mailto:support@huddo.com) if you don't already have this.

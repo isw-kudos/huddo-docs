@@ -1,4 +1,4 @@
-<img style="float: right" src="/assets/images/boards-logo.jpg" width="200" alt="My Boards" />
+![Boards](../../../assets/images/boards-logo.jpg){ style="float: right" width=200 }
 
 #Quick Tips for boards
 

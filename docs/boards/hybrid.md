@@ -1,6 +1,6 @@
 Hybrid = Cloud integrated with HCL Connections On-Premise
 
-![Outcome](/assets/connections/header.png)
+![Outcome](../assets/connections/header.png)
 
 This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Huddo Boards Cloud can integrate with your existing HCL Connections on-premise installation.
 

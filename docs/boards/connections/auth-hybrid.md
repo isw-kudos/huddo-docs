@@ -1,6 +1,6 @@
 # Authenticating Huddo Boards with HCL Connections
 
-![Outcome](/assets/connections/auth.png)
+![Outcome](../../assets/connections/auth.png)
 
 
 ## Register OAuth

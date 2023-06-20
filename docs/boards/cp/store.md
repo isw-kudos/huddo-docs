@@ -1,6 +1,6 @@
 # Huddo Apps Store
 
-![Create Organiation](/assets/boards/cp/store.png)
+![Create Organiation](store.png)
 
 ---
 
@@ -26,7 +26,7 @@ Obtaining your licence key:
 
 You will need to provide the following information to setup you Organisation in the store.
 
-![Create Organiation](/assets/boards/cp/store-create-org.png)
+![Create Organiation](store-create-org.png)
 
 When creating your Login client(s) refer to the table below for details:
 

@@ -59,7 +59,7 @@ nav:
           - Integrations:
               - HCL Connections:
                   - Activity Migration (Kube): boards/connections/migration.md
-                  - Activity Migration (CP): boards/cp/migration.md
+                  - Activity Migration (CP): boards/cp/migration/index.md
                   - Authentication: boards/connections/auth-on-prem.md
                   - Keycloak Authentication: boards/connections/keycloak.md
                   - Header: boards/connections/header-on-prem.md

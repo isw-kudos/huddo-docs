@@ -24,7 +24,7 @@
 
 1. Click the `Configuration` icon and then `Manage Org`
 
-   ![example](/assets/boards/admin.png)
+   ![example](../../admin.png)
 
 1. Click on your Organisation
 

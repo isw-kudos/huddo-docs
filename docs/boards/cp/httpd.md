@@ -10,17 +10,17 @@ It also includes a proxy rewrite rule, to serve the migrated Board when the lega
 
         https://[DEPLOY_MANAGER_ALIAS]:9043/ibm/console/logon.jsp
 
-    ![example](/assets/connections/isc.png)
+    ![example](../../assets/connections/isc.png)
 
 1. Open `Servers` -> `Server Types` => `Web servers`
 
     Click on the name of your web server
 
-    ![example](/assets/connections/httpd1.png)
+    ![example](../../assets/connections/httpd1.png)
 
 1. Click `Edit` on the `http.conf`
 
-    ![example](/assets/connections/httpd2.png)
+    ![example](../../assets/connections/httpd2.png)
 
 1. Define the Virtual Host Reverse Proxy
 

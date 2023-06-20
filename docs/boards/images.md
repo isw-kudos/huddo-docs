@@ -10,19 +10,19 @@ You can get the latest versions of Huddo Boards Docker by subscribing to our own
 
     1. Open [Quay.io](https://quay.io/), In the user menu, click on 'Account Settings'
 
-        ![User Menu](/assets/quay/user-menu.png)
+        ![User Menu](../quay/user-menu.png)
 
     1. Click `Generate Encrypted Password`
 
-        ![User Menu](/assets/quay/account-settings.png)
+        ![User Menu](../quay/account-settings.png)
 
     1. Enter your password and click `Verify`
 
-        ![User Menu](/assets/quay/verify-password.png)
+        ![User Menu](../quay/verify-password.png)
 
     1. Download the secret.yml file. Take note of the name of the secret for later use
 
-        ![User Menu](/assets/quay/kubernetes-secret.png)
+        ![User Menu](../quay/kubernetes-secret.png)
 
 1. Use the file downloaded to create the secret (in the required namespace). For example:
 

@@ -4,16 +4,16 @@ When a user leaves the organisation, you may want to deactivate their current lo
 
 1. Open `Admin Settings`, then your `Organisation`
 
-![Open Settings](/assets/boards/admin/settings.png)
+![Open Settings](img/settings.png)
 
 1. Under `User management` click `Revoke`
 
-![Click Revoke](/assets/boards/admin/user-management.png)
+![Click Revoke](img/user-management.png)
 
 1. Select whether to `Anonymise the user name, email and image`
 
-![Revoke dialog](/assets/boards/admin/revoke-user.png)
+![Revoke dialog](img/revoke-user.png)
 
 1. Search and select the user to revoke, click `Revoke`
 
-![Click Revoke](/assets/boards/admin/revoke-example.png)
+![Click Revoke](img/revoke-example.png)

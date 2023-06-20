@@ -35,6 +35,6 @@ In the user interface a user can unlink an account alias and transferring conten
 
     The logs should output information in this format. Note each transfer of content ownership `from` => `to` and the number of associated nodes/members/invites that were updated, before the alias is unlinked from the primary.
 
-    ![Transfer ownership unlink logs](/assets/boards/admin/transfer-ownership-unlink-logs.png)
+    ![Transfer ownership unlink logs](img/transfer-ownership-unlink-logs.png)
 
 1. Remove Environment variables above and redeploy the Helm chart

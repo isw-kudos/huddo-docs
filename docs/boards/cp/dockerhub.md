@@ -11,7 +11,7 @@ You can get the latest versions of Huddo Boards Docker by subscribing to our own
 
         kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=[user] --docker-password=[password] --docker-email=[email] --namespace=connections
 
-1.  Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
+1.  Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](../../assets/config/kubernetes/boards-cp-dockerhub.yaml).
 
     1. At the top set
 
@@ -19,12 +19,12 @@ You can get the latest versions of Huddo Boards Docker by subscribing to our own
         - remove your customised `global.repository`
         - `global.imageTagSuffix` as the date of our latest [release](../releases.md) and uncomment it
 
-    1. Add `image.name` (blank) and `image.tag` for each service as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
+    1. Add `image.name` (blank) and `image.tag` for each service as per [this example](../../assets/config/kubernetes/boards-cp-dockerhub.yaml).
     
         !!! tip 
             Some of the services (`app`, `provider`, `notification`) might not be in your `boards-cp.yaml` file, you must add them.
 
-        ![Example](/assets/boards/cp/image-config-dockerhub.png)
+        ![Example](image-config-dockerhub.png)
 
 1.  Run helm to apply the changes.
 

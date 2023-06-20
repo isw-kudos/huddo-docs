@@ -50,6 +50,6 @@
 
     The logs should output in this format. Note the users who have been `updated`/`ignored`. On subsequent runs the people in `updated` will appear in `noChange` instead.
 
-    ![Link Users logs](/assets/boards/admin/link-users-logs.png)
+    ![Link Users logs](img/link-users-logs.png)
 
 1. Remove Environment variables above and redeploy the Helm chart

@@ -6,7 +6,7 @@ The custom values are set as ENV variables in the config file.
 The image below shows the items that can be customised within notifications:
 <br/>
 
-![Customisable values](/assets/boards/notification-config.png)
+![Customisable values](notification-config.png)
 
 ### From Name
 Use `events.env.NOTIFIER_EMAIL_FROM_NAME` to set the from name for emails <br/>Default: `Huddo Boards`

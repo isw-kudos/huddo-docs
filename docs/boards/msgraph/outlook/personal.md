@@ -37,4 +37,4 @@
 
     Attach boards, lists and cards to an email.
 
-    <img src="attach.png" style="border: 1px solid #ccc;" />
+    ![Attach](attach.png){ style="border: 1px solid #ccc;" }

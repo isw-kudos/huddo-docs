@@ -29,7 +29,7 @@ There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hc
 
 ## Updating the Activities Plus configuration file
 
-- Please use this [boards-cp.yaml](/assets/boards/cp/boards-cp.yaml) NOT the one supplied with the component pack.
+- Please use this [boards-cp.yaml](../../assets/boards/cp/boards-cp.yaml) NOT the one supplied with the component pack.
 
 ---
 

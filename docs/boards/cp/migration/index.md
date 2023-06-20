@@ -2,13 +2,13 @@
 
 !!! tip
 
-    If you are not using Component Pack please follow [this guide](../connections/migration.md)
+    If you are not using Component Pack please follow [this guide](../../connections/migration.md)
 
 As part of the installation process for Huddo Boards (Activities Plus) you must run the migration service to move the existing Activities into Huddo Boards.
 
 !!! info
 
-    Please review the [Roles page](roles/index.md) for details on how Community Activity membership is interpreted & presented by Boards
+    Please review the [Roles page](../roles/index.md) for details on how Community Activity membership is interpreted & presented by Boards
 
 ## Process Overview
 
@@ -110,7 +110,7 @@ Please deploy the following chart with the same configuration `boards-cp.yaml` f
 
 ## Migrate Activities
 
-The migration interface is accessible at `https://[CONNECTIONS_URL]/boards/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explanation of the interface, see [Activity Migration User Interface](migration-interface.md).
+The migration interface is accessible at `https://[CONNECTIONS_URL]/boards/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explanation of the interface, see [Activity Migration User Interface](interface.md).
 
 You can also set the `env.IMMEDIATELY_PROCESS_ALL` if you wish to migrate every Activity without the UI.
 
@@ -122,7 +122,7 @@ You can check the pod logs for the activity-migration to see progress of the run
 
 For example
 
-![Example](/assets/boards/cp/migration-logs.png)
+![Example](logs.png)
 
 ---
 

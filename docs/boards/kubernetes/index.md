@@ -88,7 +88,7 @@ Huddo Boards requires a Mongo database and an S3 file storage. If you already ha
 
 ## Configuration
 
-Download our [config file](/assets/config/kubernetes/boards.yaml) and update all example values as required. Details as below.
+Download our [config file](../../assets/config/kubernetes/boards.yaml) and update all example values as required. Details as below.
 
 **Kubernetes Variables**:
 

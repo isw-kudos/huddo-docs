@@ -1,6 +1,6 @@
 # Activity Migration User Interface
 
-![example](/assets/boards/cp/migration-ui.png)
+![example](ui.png)
 
 ---
 

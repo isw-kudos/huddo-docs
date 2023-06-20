@@ -8,7 +8,7 @@ You can also email us for support at [support@huddo.com](mailto:support@huddo.co
 
 ### Prerequisites
 
-1. [Config file](/assets/config/kubernetes/minio.yaml) downloaded
+1. [Config file](../../assets/config/kubernetes/minio.yaml) downloaded
 
 ---
 

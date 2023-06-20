@@ -1,4 +1,4 @@
-![Outcome](/assets/connections/apps-menu.png)
+![Outcome](../../assets/connections/apps-menu.png)
 
 
 ### Add to Apps Menu
@@ -43,7 +43,7 @@
 - Save and close the file
 
 - Add the Huddo Boards Strings for the Apps Menu
-    - Download the [strings files](/assets/strings.zip) and extract the files to the Connections strings customisation directory:
+    - Download the [strings files](../../assets/strings.zip) and extract the files to the Connections strings customisation directory:
 
             <CONNECTIONS_CUSTOMIZATION_PATH>/strings
 
