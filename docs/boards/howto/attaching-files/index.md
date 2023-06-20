@@ -8,7 +8,7 @@ Anyone who has access to view the card will be able to view and download the att
 
 ### Office 365 (OneDrive) & HCL Connections (Files)
 
-If you use <a target="_blank" href="https://docs.huddo.com/boards/howto/microsoft/onedrive/">Office 365</a> or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
+If you use [Office 365](../microsoft/onedrive.md) or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
 
 ### Attaching a File to a Card
 
@@ -37,7 +37,7 @@ Anyone who can edit the card can also remove the attached files.
 
 ### Where are Files Stored?
 
-Files attached to cards in Huddo Boards Cloud with Auth0, Google, Facebook, LinkedIn authentication providers are stored in <a target="_blank" href="https://cloud.google.com/storage/">Google Cloud Storage</a>
+Files attached to cards in Huddo Boards Cloud with Auth0, Google, Facebook, LinkedIn authentication providers are stored in a [Google Cloud Storage](https://cloud.google.com/storage/){ target=_blank }.
 
 If you are hosting Huddo Boards yourself then files are stored in the default file storage as defined in your environment.
 
