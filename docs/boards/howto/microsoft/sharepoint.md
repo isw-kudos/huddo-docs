@@ -9,7 +9,7 @@ In the example below, we've created a site page called "Where to Eat in Melbourn
 ![](/assets/boards/sharepoint1.png)
 
 
-Before proceeding, you will need a site admin to enable security settings as described [here](../../msgraph/sharepoint_admin.md)
+Before proceeding, you will need a site admin to enable security settings as described [here](../../msgraph/sharepoint/admin.md)
 
 
 1. From Sharepoint main menu, go to `Pages` -> `New` -> `Site Page`

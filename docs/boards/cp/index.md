@@ -121,7 +121,7 @@ Please follow [these instructions](httpd.md)
 
 ### Microsoft Teams
 
-- [Install On-Premise App](../msgraph/teams-on-prem.md)
+- [Install On-Premise App](../msgraph/teams/on-prem.md)
 
 ---
 

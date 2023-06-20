@@ -1,6 +1,6 @@
 # Huddo Boards On-Premise in Microsoft Teams
 
-![example](/assets/msgraph/teams/personal.png)
+![example](personal.png)
 
 ---
 
@@ -8,7 +8,7 @@
 
 1. Office 365 Tenant admin account.
 
-1. Office 365 OAuth client. [See instructions](auth/index.md)
+1. Office 365 OAuth client. [See instructions](../auth/index.md)
 
 1. Notification bot (optional). [See instructions](notification-bot.md)
 
@@ -28,11 +28,11 @@
 
 1. Click on your Organisation
 
-   ![example](/assets/msgraph/teams/admin-orgs.png)
+   ![example](admin-orgs.png)
 
 1. Click on your Microsoft client
 
-   ![example](/assets/msgraph/teams/admin-org.png)
+   ![example](admin-org.png)
 
 1. Click the download button for your configuration
 
@@ -40,7 +40,7 @@
 
    - `App for Internal Boards Deployment` (if you do not want notifications)
 
-   ![example](/assets/msgraph/teams/app-download.png)
+   ![example](app-download.png)
 
 ### Install in Teams
 
@@ -50,15 +50,15 @@
 
    > where `[COMPANY_NAME]` is the name of your company
 
-   ![example](/assets/msgraph/teams/teams1.png)
+   ![example](teams1.png)
 
 1. Upload the Zip file you downloaded above
 
-   ![example](/assets/msgraph/teams/teams2.png)
+   ![example](teams2.png)
 
 1. The Huddo Boards app will now appear under the section `Built for [COMPANY_NAME]`
 
-   ![example](/assets/msgraph/teams/teams3.png)
+   ![example](teams3.png)
 
 ---
 
@@ -68,17 +68,17 @@
 
     Click on `Built for [COMPANY_NAME]` => `Huddo Boards`
 
-    ![example](/assets/msgraph/teams/tenant-apps.png)
+    ![example](tenant-apps.png)
 
 1.  Click `Add`
 
-    ![example](/assets/msgraph/teams/add-app.png)
+    ![example](add-app.png)
 
 1.  Huddo Boards personal will now open
 
     Copy the App ID from the URL. We will use this shortly.
 
-    ![example](/assets/msgraph/teams/appid.png)
+    ![example](appid.png)
 
 1.  Open the Boards Helm Chart config used for deployment
 
@@ -92,11 +92,11 @@
 
 1.  Redeploy Boards helm chart as per command for Huddo Boards:
 
-    [HCL Component Pack](../cp/index.md#deploy-boards-helm-chart)
+    [HCL Component Pack](../../cp/index.md#deploy-boards-helm-chart)
 
         helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
-    [for Docker - Kubernetes](../kubernetes/index.md#deploy-boards-chart)
+    [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 
         helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
 
@@ -106,4 +106,4 @@
 
 ## How To Use
 
-For a full guide on using Huddo Boards in Microsoft Teams, please see [our documentation](teams.md).
+For a full guide on using Huddo Boards in Microsoft Teams, please see [our documentation](index.md).

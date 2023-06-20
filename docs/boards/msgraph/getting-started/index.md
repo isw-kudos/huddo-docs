@@ -12,7 +12,7 @@ Huddo Boards uses OAuth for login and user access. This means your users can jus
 
 > If you would like to link to Huddo Boards from another site, you can use [https://boards.huddo.com/auth/msgraph ](https://boards.huddo.com/auth/msgraph) which will skip the list of login options.
 
-![Login Page](/assets/msgraph/sign_in.png)
+![Login Page](../sign_in.png)
 
 ---
 
@@ -20,13 +20,13 @@ Huddo Boards uses OAuth for login and user access. This means your users can jus
 
 Microsofts API requires that you grant admin access to Huddo Boards before your users are able to search for groups, to enable this log into [Huddo Boards](https://boards.huddo.com) and you should be prompted to grant admin approval.
 
-![Approval Toast](/assets/msgraph/approval.png)
+![Approval Toast](approval.png)
 
 After clicking Approve, you may be asked to login to Office 365 again, then you will be prompted to approve Huddo Boards access on behalf of your organisation.
 
 > Note: you can revoke this approval at any stage via the Office 365 admin app.
 
-![Approval Prompt](/assets/msgraph/approval2.png)
+![Approval Prompt](approval2.png)
 
 The requested permissions are:
 
@@ -43,7 +43,7 @@ The requested permissions are:
 
 > You can also go to [Your Admin Page](https://boards.huddo.com/admin/clients/manage) to approve the above.
 
-![Manage Client](/assets/msgraph/manage-org.png)
+![Manage Client](manage-org.png)
 
 ---
 
@@ -53,7 +53,7 @@ After logging in, you will also be prompted to start a free (30 day) trial. Enab
 
 > You may also go to [Your Admin Page](https://boards.huddo.com/admin/licences/manage) to Start Your free trial, get a Quote or Purchase licences online.
 
-![Manage Licences](/assets/msgraph/licences.png)
+![Manage Licences](licences.png)
 
 ---
 
@@ -63,7 +63,7 @@ These guides also require admin access and enable some advanced features of Hudd
 
 > These are also in the side menu of this page
 
-- [Office Menu App Tile](custom-tiles.md)
-- [Teams integration](teams.md)
-- [Outlook plugin](outlook.md)
-- [Sharepoint](sharepoint.md)
+- [Office Menu App Tile](../custom-tiles/index.md)
+- [Teams integration](../teams/index.md)
+- [Outlook plugin](../outlook/index.md)
+- [Sharepoint](../sharepoint/index.md)

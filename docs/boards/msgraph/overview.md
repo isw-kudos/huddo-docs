@@ -4,7 +4,7 @@ Huddo Boards is tailored for working with Office 365 in the following ways:
 
 Use your existing Microsoft credentials
 
-![Login Page](/assets/msgraph/sign_in.png)
+![Login Page](sign_in.png)
 
 ---
 
@@ -12,7 +12,7 @@ Use your existing Microsoft credentials
 
 Share and collaborate with individuals and groups in your office tenant
 
-![Share with Team](/assets/msgraph/team_search.png)
+![Share with Team](teams/search.png)
 
 ---
 
@@ -20,9 +20,9 @@ Share and collaborate with individuals and groups in your office tenant
 
 Access Boards from your Office menu, and access other Office apps from the menu in Boards
 
-[Admin setup guide](custom-tiles.md)
+[Admin setup guide](custom-tiles/index.md)
 
-![Office Menu](/assets/msgraph/custom-tiles.png)
+![Office Menu](custom-tiles/custom-tiles.png)
 
 ---
 
@@ -30,25 +30,25 @@ Access Boards from your Office menu, and access other Office apps from the menu 
 
 Share files and folders from Onedrive within the context of a Board
 
-![Share Onedrive file](/assets/msgraph/share_from_onedrive.png)
+![Share Onedrive file](share_from_onedrive.png)
 
 ---
 
 ### Teams
 
-[Teams integration admin guide](teams.md)
+[Teams integration admin guide](teams/index.md)
 
 Add boards tabs to Microsoft Teams
 
-![Teams Tabs](/assets/msgraph/teams_tabs.png)
+![Teams Tabs](teams/tabs.png)
 
 See all of the boards your team is working on.
 
-![Teams Board Tabs](/assets/msgraph/teams_tab-board.png)
+![Teams Board Tabs](teams/tab-board.png)
 
 Access Huddo Boards directly from Teams as a personal app
 
-![Teams Tabs](/assets/msgraph/teams_tabs_personal.png)
+![Teams Tabs](teams/tabs_personal.png)
 
 Receive notifications as the board updates
 
@@ -57,21 +57,21 @@ Receive notifications as the board updates
 
 ### Outlook
 
-> You can add the Outlook add-in just for yourself ([Outlook plugin user guide](outlook_personal.md))<br /> Or for your whole Microsoft 365 tenant ([Outlook plugin admin guide](outlook.md))
+> You can add the Outlook add-in just for yourself ([Outlook plugin user guide](outlook/personal.md))<br /> Or for your whole Microsoft 365 tenant ([Outlook plugin admin guide](outlook/index.md))
 
 Save emails from Outlook as a card in your board
 
-![Save email](/assets/msgraph/outlook_create.png)
+![Save email](outlook/create.png)
 
 Attach boards, lists and cards to an email.
 
-![Save email](/assets/msgraph/outlook_attach.png) 
+![Save email](outlook/attach.png) 
 ---
 
 ### Sharepoint
 
 Embed boards as pages in Sharepoint.
 
-[Sharepoint pages setup guide](sharepoint.md)
+[Sharepoint pages setup guide](sharepoint/index.md)
 
-![Sharepoint Page](/assets/msgraph/sharepoint10.png)
+![Sharepoint Page](../howto/microsoft/sharepoint10.png)

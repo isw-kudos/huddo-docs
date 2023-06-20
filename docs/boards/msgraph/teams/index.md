@@ -10,26 +10,26 @@ You can add Huddo Boards to MS Teams in two ways. Follow these steps to Huddo Bo
 
 1.  Click the `+` (add a tab) button
 
-    ![example](/assets/msgraph/teams_add-a-tab.png)
+    ![example](add-a-tab.png)
 
 1.  Search for `huddo` to find Huddo Boards
 
-    ![example](/assets/msgraph/teams_tab-search-apps.png)
+    ![example](tab-search-apps.png)
 
     Note that if Huddo Boards cannot be found, it has not yet been added before in your organisation and needs to be added by finding it within the Teams App Store.
     Click `More Apps` in this case:
 
-    ![example](/assets/msgraph/teams_add-tab-more.png)
+    ![example](add-tab-more.png)
 
     Again, search for `huddo` to find the Huddo Boards App in the entire store.
 
 1.  Once you have located and clicked on the Huddo Boards App, click the `Add` button to add it to the team:
 
-    ![example](/assets/msgraph/teams_add-personal-app.png)
+    ![example](add-personal-app.png)
 
 1.  The Huddo Boards app will now be added to the team, and you will be given the ability to add a new tab:
 
-    ![example](/assets/msgraph/teams_new-tab.png)
+    ![example](new-tab.png)
 
 ### Add as a personal app to the `more added apps` area.
 
@@ -37,8 +37,8 @@ To add Huddo Boards as a personal app follow these steps:
 
 1.  Open Teams and click the Apps button. Type `huddo` to find the Huddo Boards app:
 
-    ![example](/assets/msgraph/teams_find-app.png)
+    ![example](find-app.png)
 
 1.  Click `Huddo Boards` then click `Add` to add it as a personal app:
 
-    ![example](/assets/msgraph/teams_add-personal-app.png)
+    ![example](add-personal-app.png)

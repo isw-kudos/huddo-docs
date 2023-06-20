@@ -42,11 +42,11 @@ nav:
               - HCL Domino: boards/domino.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
-                  - Getting Started: boards/msgraph/getting-started.md
-                  - App Tile: boards/msgraph/custom-tiles.md
-                  - Teams Integration: boards/msgraph/teams.md
-                  - Outlook Plugin: boards/msgraph/outlook.md
-                  - Sharepoint Pages: boards/msgraph/sharepoint.md
+                  - Getting Started: boards/msgraph/getting-started/index.md
+                  - App Tile: boards/msgraph/custom-tiles/index.md
+                  - Teams Integration: boards/msgraph/teams/index.md
+                  - Outlook Plugin: boards/msgraph/outlook/index.md
+                  - Sharepoint Pages: boards/msgraph/sharepoint/index.md
       - Boards Self-Hosted:
           - boards/kubernetes/index.md
           - a) For HCL Connections: boards/cp/index.md
@@ -72,8 +72,8 @@ nav:
               - HCL Domino: boards/domino.md
               - Office 365:
                   - Authentication: boards/msgraph/auth/index.md
-                  - Teams Notification Bot: boards/msgraph/notification-bot.md
-                  - Teams App: boards/msgraph/teams-on-prem.md
+                  - Teams Notification Bot: boards/msgraph/teams/notification-bot.md
+                  - Teams App: boards/msgraph/teams/on-prem.md
               - Related Tasks: boards/integrations/developing/related-tasks.md
           - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md
@@ -130,7 +130,7 @@ nav:
               - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
               - Boards Docker: boards/troubleshooting/docker.md
               - Boards WebSphere: boards/troubleshooting/websphere.md
-              - Office 365: boards/troubleshooting/office365.md
+              - Office 365: boards/troubleshooting/office365/index.md
               - OAuth: boards/troubleshooting/oauth.md
               - Mongo: boards/troubleshooting/mongo.md
               - NGINX: boards/troubleshooting/nginx.md
