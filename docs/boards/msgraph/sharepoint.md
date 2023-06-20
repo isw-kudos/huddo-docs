@@ -1,6 +1,6 @@
 ## Embedding Huddo Boards pages in Sharepoint.
 
-Before proceeding, you will need a site admin to enable security settings as described [here](/boards/msgraph/sharepoint_admin/)
+Before proceeding, you will need a site admin to enable security settings as described [here](sharepoint_admin.md)
 
 ![example](/assets/msgraph/sharepoint10.png)
 

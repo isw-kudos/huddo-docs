@@ -16,7 +16,7 @@ RHEL (or Centos 7) server with:
 - 100gb data drive (will be shared for database and file store) <sup>*see Persistence Options below</sup>
 - docker and docker-compose
 
-Please [follow this guide](/boards/images/) to get access to our images in Quay.io so that we may give you access to our repositories and templates.
+Please [follow this guide](images.md) to get access to our images in Quay.io so that we may give you access to our repositories and templates.
 
 ## Options
 
@@ -36,5 +36,5 @@ If using the included services, you will need to map directories for mongo and s
 
 Most required variables are in the template, for more information see the Kubernetes docs 
 
- - [Global config](/boards/kubernetes/#update-config-file)
- - [Boards variables](/boards/env/common/)
+ - [Global config](kubernetes/index.md#update-config-file)
+ - [Boards variables](env/common.md)

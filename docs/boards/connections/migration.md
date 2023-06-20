@@ -2,13 +2,13 @@
 
 !!! tip
 
-    If you are using Component Pack please follow [this guide](/boards/cp/migration)
+    If you are using Component Pack please follow [this guide](../cp/migration.md)
 
 As part of the installation process for Huddo Boards you can run the migration service to move the existing Activities into Huddo Boards.
 
 !!! info
 
-    Please review the [Roles page](/boards/cp/roles/) for details on how Community Activity membership is interpreted & presented by Boards
+    Please review the [Roles page](../cp/roles.md) for details on how Community Activity membership is interpreted & presented by Boards
 
 ## Difference between the individual import
 
@@ -37,7 +37,7 @@ Ensure you have updated the following variables as applicable in the `global.env
 | `sharedDrive.volumeMode`                     | `Filesystem` (optional)                                  | The volumeMode of the PV and PVC                                                                                                                                                                                          |
 | `sharedDrive.persistentVolumeReclaimPolicy`  | `Retain` (optional)                                      | The persistentVolumeReclaimPolicy of the PV and PVC                                                                                                                                                                       |
 | `sharedDrive.storageClassName`               | `manual` (optional)                                      | The storageClassName of the PV and PVC - useful for custom spec (e.g. hostPath)                                                                                                                                           |
-| `sharedDrive.spec`                           | [Example](/boards/cp/migration#custom-persistent-volume) | Using a fully custom spec - e.g. FlexVolume or hostPath                                                                                                                                                                   |
+| `sharedDrive.spec`                           | [Example](../cp/migration.md#custom-persistent-volume) | Using a fully custom spec - e.g. FlexVolume or hostPath                                                                                                                                                                   |
 | `env.CONNECTIONS_URL`                        | `httsp://connections.example.com`                        | URL of your Connections environment                                                                                                                                                                                       |
 | `env.FILE_PATH_ACTIVITIES_CONTENT_STORE`     | `/data/activities/content`                               | Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</br>Ensure you set the IP and path for the NFS volume mount. |
 | `env.API_GATEWAY`                            | `https://[CONNECTIONS_URL]/api-boards`                   | URL of the Boards API.</br>Used by files attached to a board. URL.                                                                                                                                                        |
@@ -95,7 +95,7 @@ Please deploy the following chart with the same configuration `boards.yaml` file
 
 ## Migrate Activities
 
-The migration interface is accessible at `https://[BOARDS_URL]/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explanation of the interface, see [Activity Migration User Interface](/boards/cp/migration-interface).
+The migration interface is accessible at `https://[BOARDS_URL]/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explanation of the interface, see [Activity Migration User Interface](../cp/migration-interface.md).
 
 You can also set the `global.env.IMMEDIATELY_PROCESS_ALL` variable if you wish to migrate every Activity without the UI.
 

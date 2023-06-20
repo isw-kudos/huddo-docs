@@ -53,7 +53,7 @@ To perform the installation, you need to setup some config files on a local mach
 
 ## Authentication
 
-Huddo Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](/boards/swarm/#setup-oauth)):
+Huddo Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](index.md#oauth)):
 
 | Provider                     | Registration / Documentation                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -68,10 +68,10 @@ Huddo Boards is designed to be integrated into your current user management syst
 
 ## Access to Docker Images
 
-[Follow this guide](/boards/images/) to get access to our images
+[Follow this guide](../images.md) to get access to our images
 
 ---
 
 ## Ansible
 
-We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](/tools/ansible/) prior to the kubernetes / boards install
+We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](../../tools/ansible.md) prior to the kubernetes / boards install

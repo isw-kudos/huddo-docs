@@ -20,7 +20,7 @@ Share and collaborate with individuals and groups in your office tenant
 
 Access Boards from your Office menu, and access other Office apps from the menu in Boards
 
-[Admin setup guide](/boards/msgraph/custom-tiles/)
+[Admin setup guide](custom-tiles.md)
 
 ![Office Menu](/assets/msgraph/custom-tiles.png)
 
@@ -36,7 +36,7 @@ Share files and folders from Onedrive within the context of a Board
 
 ### Teams
 
-[Teams integration admin guide](/boards/msgraph/teams/)
+[Teams integration admin guide](teams.md)
 
 Add boards tabs to Microsoft Teams
 
@@ -57,7 +57,7 @@ Receive notifications as the board updates
 
 ### Outlook
 
-> You can add the Outlook add-in just for yourself ([Outlook plugin user guide](/boards/msgraph/outlook_personal/))<br /> Or for your whole Microsoft 365 tenant ([Outlook plugin admin guide](/boards/msgraph/outlook/))
+> You can add the Outlook add-in just for yourself ([Outlook plugin user guide](outlook_personal.md))<br /> Or for your whole Microsoft 365 tenant ([Outlook plugin admin guide](outlook.md))
 
 Save emails from Outlook as a card in your board
 
@@ -72,6 +72,6 @@ Attach boards, lists and cards to an email.
 
 Embed boards as pages in Sharepoint.
 
-[Sharepoint pages setup guide](/boards/msgraph/sharepoint/)
+[Sharepoint pages setup guide](sharepoint.md)
 
 ![Sharepoint Page](/assets/msgraph/sharepoint10.png)

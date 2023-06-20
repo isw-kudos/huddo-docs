@@ -4,7 +4,7 @@
 
 Huddo Boards is a intutive to learn and easy to master. It is a powerful addition to any business, whether you're looking to increase your personal productivity, super charge your teams', or collaborate with external parties. Learn quick tips and tricks from our help guides to get the most out of boards. Let's get started!
 
-If you have signed in to Huddo Boards for the very first time as an individual user without a licence, see [Starting a trial of Huddo Boards](/boards/howto/start-a-trial/)
+If you have signed in to Huddo Boards for the very first time as an individual user without a licence, see [Starting a trial of Huddo Boards](../start-a-trial/index.md)
 
 Here are some quick instructions to help you get started with Huddo Boards.
 

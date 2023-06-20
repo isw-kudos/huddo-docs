@@ -13,7 +13,7 @@ Here are some quick how to guides to help you get started with Huddo Boards. 
 
 ### Troubleshooting
 
-- [Boards in Microsoft Office 365](/boards/troubleshooting/office365/)
+- [Boards in Microsoft Office 365](../troubleshooting/office365.md)
 
 ### Contact
 If you require support using Huddo Boards, contact us at [support@huddo.com](mailto:support@huddo.com)

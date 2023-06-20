@@ -3,9 +3,9 @@
 ## How To Upgrade
 
 !!! warning "Important - new image hosting"
-    As of January 2023 we have moved our image hosting. Please [follow this guide](/boards/images/) to configure your Kubernetes with access to our images hosted in Quay.io. We have provided new [Huddo charts](/boards/helm-charts/) to utilise these images.
+    As of January 2023 we have moved our image hosting. Please [follow this guide](images.md) to configure your Kubernetes with access to our images hosted in Quay.io. We have provided new [Huddo charts](helm-charts.md) to utilise these images.
 
-Please use the appropriate update command with the latest [helm chart](/boards/helm-charts/).  For example:
+Please use the appropriate update command with the latest [helm chart](helm-charts.md).  For example:
 
 1. Huddo Boards in Kubernetes
 
@@ -17,7 +17,7 @@ Please use the appropriate update command with the latest [helm chart](/boards/h
 
     !!! tip
 
-        To upgrade from images in the Component Pack to images hosted by us please follow [this guide](/boards/cp/latest/).
+        To upgrade from images in the Component Pack to images hosted by us please follow [this guide](cp/latest.md).
 
     !!! danger
 
@@ -248,7 +248,7 @@ Features:
 
 Features:
 
-- Domino authentication [More info here](/boards/domino/)
+- Domino authentication [More info here](domino.md)
 
 Fixes:
 
@@ -276,7 +276,7 @@ Fixes:
 
 Features:
 
-- [Dependencies feature](/boards/howto/dependencies/)
+- [Dependencies feature](howto/dependencies/index.md)
 
 Improvements:
 
@@ -336,8 +336,8 @@ Features:
 
   > **Note**: you will need to:
   >
-  > 1. [Configure SSO in Teams](/boards/msgraph/auth/#configure-sso-in-teams) in your existing Azure OAuth application definition
-  > 2. [download the latest app definition from Boards admin section and update it in Teams](/boards/msgraph/teams-on-prem/#configure-application).
+  > 1. [Configure SSO in Teams](msgraph/auth.md#configure-sso-in-teams) in your existing Azure OAuth application definition
+  > 2. [download the latest app definition from Boards admin section and update it in Teams](msgraph/teams-on-prem.md#configure-application).
 
 Fixes:
 
@@ -608,7 +608,7 @@ Fixes:
 
 > **Note:** this update performs several schema changes on start-up as a once-off. Board content may be temporarily unavailable for a few minutes. Also be aware that downgrading to a previous release will cause access issues in Community boards with role 'inherit'. Please contact us if you have any issues at support@huddo.com
 
-> **Note:** if you encounter 400 bad requests when loading `/boards`, please see this [troubleshooting guide](/boards/troubleshooting/nginx/).
+> **Note:** if you encounter 400 bad requests when loading `/boards`, please see this [troubleshooting guide](troubleshooting/nginx.md).
 
 Features:
 
@@ -649,7 +649,7 @@ Fixes:
 
 **Breaking change:**
 
-> Emails are now sent by the `events` service. You must move the NOTIFIER\_\* environment variables from `core` to `events` as shown in [v3 of our chart](/boards/helm-charts/#kudos-boards-cp)
+> Emails are now sent by the `events` service. You must move the NOTIFIER\_\* environment variables from `core` to `events` as shown in [v3 of our chart](helm-charts.md#kudos-boards-cp)
 
 Images:
 
@@ -934,7 +934,7 @@ iswkudos/kudos-boards:activity-migration-2021-03-16
 Improvements:
 
 - Handle legacy Boards WebSphere URL redirect (hashes)
-- Ability to [transition between providers](/boards/howto/admin/transition-between-providers/)
+- Ability to [transition between providers](admin/transition-between-providers.md)
 
   - Link User accounts by full email address
   - Map Groups by CSV file
@@ -1509,7 +1509,7 @@ New Features:
 - Preview uploaded files (images, docx, pdf, html etc)
 - Todos Overview - [filtering to selected Boards](https://blog.huddo.com/part-3-weve-got-some-kudos-boards-changes-for-you)
 - Drag and drop Email into Cards (ie from HCL Notes)
-- Activity Stream Gadget for Boards - [config updates required](/boards/connections/widgets-on-prem/)
+- Activity Stream Gadget for Boards - [config updates required](connections/widgets-on-prem.md)
 - Multiple Assignment options for Cards
 
 Fixes:

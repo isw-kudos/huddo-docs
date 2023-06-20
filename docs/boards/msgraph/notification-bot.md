@@ -37,7 +37,7 @@ This bot will be used to post notification to Microsoft Teams triggered by actio
 
         > i.e. `https://connections.example.com/boards/webhook/teams` or `https://boards.company.example.com/webhook/teams`
 
-    - `[MSGRAPH_CLIENT_ID]` is the OAuth Client ID from [Auth setup](/boards/msgraph/auth/)
+    - `[MSGRAPH_CLIENT_ID]` is the OAuth Client ID from [Auth setup](auth.md)
 
     For example:
 
@@ -72,4 +72,4 @@ This bot will be used to post notification to Microsoft Teams triggered by actio
 
 ## Next Steps
 
-See [Installing the Huddo Boards Teams App](/boards/msgraph/teams-on-prem/)
+See [Installing the Huddo Boards Teams App](teams-on-prem.md)

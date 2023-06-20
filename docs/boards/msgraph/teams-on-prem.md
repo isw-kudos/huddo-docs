@@ -8,9 +8,9 @@
 
 1. Office 365 Tenant admin account.
 
-1. Office 365 OAuth client. [See instructions](/boards/msgraph/auth/)
+1. Office 365 OAuth client. [See instructions](auth.md)
 
-1. Notification bot (optional). [See instructions](/boards/msgraph/notification-bot/)
+1. Notification bot (optional). [See instructions](notification-bot.md)
 
    > **Note:** notifications are **optional** as the bot cannot be configured for internal Huddo Boards deployments
 
@@ -36,7 +36,7 @@
 
 1. Click the download button for your configuration
 
-   - `App with Notifications` (if you can and have enabled the [notification bot](/boards/msgraph/notification-bot/))
+   - `App with Notifications` (if you can and have enabled the [notification bot](notification-bot.md))
 
    - `App for Internal Boards Deployment` (if you do not want notifications)
 
@@ -92,11 +92,11 @@
 
 1.  Redeploy Boards helm chart as per command for Huddo Boards:
 
-    [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
+    [HCL Component Pack](../cp/index.md#deploy-boards-helm-chart)
 
         helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
-    [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
+    [for Docker - Kubernetes](../kubernetes/index.md#deploy-boards-chart)
 
         helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
 
@@ -106,4 +106,4 @@
 
 ## How To Use
 
-For a full guide on using Huddo Boards in Microsoft Teams, please see [our documentation](/boards/msgraph/teams/).
+For a full guide on using Huddo Boards in Microsoft Teams, please see [our documentation](teams.md).

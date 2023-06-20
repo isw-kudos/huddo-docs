@@ -30,7 +30,7 @@ You have now created the first Huddo Configurator Community.
 
 Take note of the CommunityUUID in the URL address, as we will need this later.
 
-Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Huddo Analytics Administrator Community](/badges/install/install-widgets/#create-the-kudos-analytics-administrator-community)
+Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Huddo Analytics Administrator Community](install-widgets.md#create-the-kudos-analytics-administrator-community)
 
 ### Create the Huddo Analytics Administrator Community
 

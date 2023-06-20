@@ -1,7 +1,7 @@
 # Latest Boards releases directly from Dockerhub
 
 !!! warning
-    These instructions are in the process of being deprecated. We are moving to hosting our images in Quay.io instead of Dockerhub. Please see [these instructions](/boards/cp/latest/).
+    These instructions are in the process of being deprecated. We are moving to hosting our images in Quay.io instead of Dockerhub. Please see [these instructions](latest.md).
 
 You can get the latest versions of Huddo Boards Docker by subscribing to our own repository in dockerhub as follows:
 
@@ -17,7 +17,7 @@ You can get the latest versions of Huddo Boards Docker by subscribing to our own
 
         - `global.imagePullSecret` to `dockerhub`
         - remove your customised `global.repository`
-        - `global.imageTagSuffix` as the date of our latest [release](/boards/releases/) and uncomment it
+        - `global.imageTagSuffix` as the date of our latest [release](../releases.md) and uncomment it
 
     1. Add `image.name` (blank) and `image.tag` for each service as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
     

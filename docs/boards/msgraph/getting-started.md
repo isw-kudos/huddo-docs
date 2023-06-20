@@ -63,7 +63,7 @@ These guides also require admin access and enable some advanced features of Hudd
 
 > These are also in the side menu of this page
 
-- [Office Menu App Tile](/boards/msgraph/custom-tiles/)
-- [Teams integration](/boards/msgraph/teams/)
-- [Outlook plugin](/boards/msgraph/outlook/)
-- [Sharepoint](/boards/msgraph/sharepoint/)
+- [Office Menu App Tile](custom-tiles.md)
+- [Teams integration](teams.md)
+- [Outlook plugin](outlook.md)
+- [Sharepoint](sharepoint.md)

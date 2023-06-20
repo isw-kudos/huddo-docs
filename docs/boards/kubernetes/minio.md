@@ -2,7 +2,7 @@
 
 Huddo Boards requires an S3 object store. This documentation will deploy a Minio S3 storage container into the Kubernetes setup.
 
-If you already have externally hosted S3 storage please skip to the [Outcomes section](/boards/kubernetes/minio/#outcomes) to determine your equivalent connection parameters.
+If you already have externally hosted S3 storage please skip to the [Outcomes section](minio.md#outcomes) to determine your equivalent connection parameters.
 
 You can also email us for support at [support@huddo.com](mailto:support@huddo.com)
 

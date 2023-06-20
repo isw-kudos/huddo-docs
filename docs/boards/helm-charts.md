@@ -4,7 +4,7 @@
 Release notes for each Helm chart utilised by Boards (for Component Pack vs standalone, and Activity Migration)
 
 !!! warning "Important"
-    As of January 2023 we have moved our image hosting. Please [follow this guide](/boards/images/) to configure your Kubernetes with access to our images hosted in Quay.io.
+    As of January 2023 we have moved our image hosting. Please [follow this guide](images.md) to configure your Kubernetes with access to our images hosted in Quay.io.
 
 ---
 
@@ -43,4 +43,4 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 ---
 
 !!! info
-    The previous chart information has [moved here](/boards/helm-charts-kudos/)
+    The previous chart information has [moved here](helm-charts-kudos.md)

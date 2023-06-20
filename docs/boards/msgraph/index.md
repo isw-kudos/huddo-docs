@@ -1,13 +1,13 @@
 Huddo Boards offers extensions for integrating with your Microsoft product
 
-## [Custom Tile](/boards/msgraph/custom-tiles/)
+## [Custom Tile](custom-tiles.md)
 
-[![Outcome](/assets/msgraph/custom-tiles.png)](/boards/msgraph/custom-tiles/)
+[![Outcome](/assets/msgraph/custom-tiles.png)](custom-tiles.md)
 
-## [Teams Integration](/boards/msgraph/teams/)
+## [Teams Integration](teams.md)
 
 <!-- ![Outcome](/assets/msgraph/teams.png) -->
 
-## [Outlook Plugin](/boards/msgraph/outlook/)
+## [Outlook Plugin](outlook.md)
 
-[![Outcome](/assets/msgraph/outlook7.png)](/boards/msgraph/outlook/)
+[![Outcome](/assets/msgraph/outlook7.png)](outlook.md)

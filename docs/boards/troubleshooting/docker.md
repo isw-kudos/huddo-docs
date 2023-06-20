@@ -76,7 +76,7 @@ If you wish to deploy boards at a path other than `/boards` & `/api-boards` plea
 
 ## No real time updates (eg Rich Text not editable)
 
-Some deployments may encounter an issue where you are unable to see any real time updates.  If this is the case, it is likely that the socket is unable to connect or authenticate. Please update to the [latest Boards helm chart](/boards/helm-charts/) which includes annotations for increased browser cookie security requirements.
+Some deployments may encounter an issue where you are unable to see any real time updates.  If this is the case, it is likely that the socket is unable to connect or authenticate. Please update to the [latest Boards helm chart](../helm-charts.md) which includes annotations for increased browser cookie security requirements.
 
 > Note: if you have a `core.annotations` section in your yaml configuration our updates will be overwritten. Custom annotations should only be required when customizing the context root as per above. Please remove the `annotations` section otherwise.
 
@@ -105,7 +105,7 @@ Please update to [kudos-boards-cp-3.1.4.tgz](/assets/config/kubernetes/kudos-boa
 
 ![ReactMinifiedError](/assets/boards/react-minified-issue.png)
 
-This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [this release](/boards/releases/#2022-12-15)
+This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [this release](../releases.md#2022-12-15)
 
 ## ITM Render Issue
 

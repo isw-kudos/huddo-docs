@@ -48,7 +48,7 @@ Click `Save`. Your new Board will be created.
 - If your tasks included Due dates, you can see these rescheduled items in the `Board -> Todos by Date` view.
 
 ### Assign to Roles
-Instead of people assigned to tasks, templates can have *roles* assigned to tasks. When creating a board from this template, you can assign the members of this new board to these roles and they will be responsible for completing the tasks the role had been assigned. For how to create templates like this, see [Create a Template with Assignment Roles](/boards/howto/assignment-roles/assignment-roles/#create-a-template-with-assignment-roles).
+Instead of people assigned to tasks, templates can have *roles* assigned to tasks. When creating a board from this template, you can assign the members of this new board to these roles and they will be responsible for completing the tasks the role had been assigned. For how to create templates like this, see [Create a Template with Assignment Roles](../assignment-roles/assignment-roles.md#create-a-template-with-assignment-roles).
 
 After you've selected a template and chosen some members to add to your board, you'll see the *Assign Roles* step if your template includes Assignment Roles assigned to tasks.
 
@@ -63,5 +63,5 @@ Drag and drop members on to the roles to assign them to the role. You can assign
 Once you've created the board, you will see members assigned to the tasks that had roles assigned.
 
 <center>
-!["Members assigned to tasks"](./lists-with-assignments.png){ style="border: 1px lightgrey solid;"}
+!["Members assigned to tasks"](lists-with-assignments.png){ style="border: 1px lightgrey solid;"}
 </center>

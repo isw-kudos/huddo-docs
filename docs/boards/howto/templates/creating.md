@@ -40,4 +40,4 @@ In future, when creating a new board, type in the template name in the `Search A
 
 *	Entering the template, clicking the pencil icon for `Open Board Options`, then selecting, `Create Board from Template`; or
 *	Creating a new board via your My Boards dashboard, and typing in the template name in the `Search All Templates` search bar.
-*	Find out more about [Accessing Global Templates](/boards/howto/accessing-global-templates)
+*	Find out more about [Accessing Global Templates](global.md)

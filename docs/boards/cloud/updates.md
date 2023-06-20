@@ -172,7 +172,7 @@ Fixes:
 
 Features:
 
-- [Template Rescheduling](/boards/howto/templates/global#template-scheduling)
+- [Template Rescheduling](../howto/templates/global.md#template-scheduling)
 - Drag & Drop assignments from parent to sub-cards in modal
 
 Fixes:
@@ -368,7 +368,7 @@ Fixes:
 
 2022-05-20
 
-- NEW [Dependencies feature](/boards/howto/dependencies/)
+- NEW [Dependencies feature](../howto/dependencies/index.md)
 
 2022-05-10
 

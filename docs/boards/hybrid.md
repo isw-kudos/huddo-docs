@@ -4,13 +4,13 @@ Hybrid = Cloud integrated with HCL Connections On-Premise
 
 This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Huddo Boards Cloud can integrate with your existing HCL Connections on-premise installation.
 
-For a comparison of Boards versions please [see here](/boards/versions/)
+For a comparison of Boards versions please [see here](index.md)
 
 Setting up the Hybrid Boards Cloud involves:
 
-1. [Configure Authentication](/boards/connections/auth-hybrid/)
+1. [Configure Authentication](connections/auth-hybrid.md)
 
-1. [Review Security](/boards/connections/security/)
+1. [Review Security](connections/security.md)
 
 1. [Contact the Huddo Team](mailto:support@huddo.com?subject=Boards%20Hybrid%20Setup) with these details
 
@@ -24,7 +24,7 @@ Setting up the Hybrid Boards Cloud involves:
 
 1. Configure HCL Connections extensions
 
-    - [Connections Header](/boards/connections/header-hybrid/)
-    - [Customise Apps menu](/boards/connections/apps-menu-hybrid/)
-    - [Customise Widgets](/boards/connections/widgets-hybrid/)
-    - [Add to Mobile App](/boards/connections/mobile-app-hybrid/)
+    - [Connections Header](connections/header-hybrid.md)
+    - [Customise Apps menu](connections/apps-menu-hybrid.md)
+    - [Customise Widgets](connections/widgets-hybrid.md)
+    - [Add to Mobile App](connections/mobile-app-hybrid.md)

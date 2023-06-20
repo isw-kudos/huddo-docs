@@ -19,7 +19,7 @@ Editors can invite and manage other members with the roles Reader, Author and Ed
 ### Owner
 Owners have full rights to all properties on a board, they can add, edit and delete all other members, lists and cards in the board.
 
-[Find out more about how to add members to a board.](/boards/howto/adding-members/)
+[Find out more about how to add members to a board.](../adding-members/index.md)
 
 ### Making Your Board Public
 

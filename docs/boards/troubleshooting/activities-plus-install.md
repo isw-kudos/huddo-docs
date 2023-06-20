@@ -10,7 +10,7 @@ There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hc
 
 <!-- - There is an [HCL Technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074334) (KB0074334) that needs to be followed -->
 
-- Please see our [documentation](/boards/cp/) and the latest chart
+- Please see our [documentation](../cp/index.md) and the latest chart
 
 ## Configuring IBM HTTP Server as reverse proxy
 

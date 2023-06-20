@@ -1,12 +1,12 @@
 # Huddo Boards Versions
 We are proud to say that Huddo Boards is able to run in many configurations to suit your individual requirements.
 
-1. [Boards Cloud](/boards/cloud/)
+1. [Boards Cloud](cloud/index.md)
 1. Boards Self-Hosted (On-Premise)
-    - [HCL Connections Component Pack](/boards/cp/)
-    - [Kubernetes](/boards/kubernetes/)
-    - [Standalone](/boards/standalone/)
-1. [Boards Hybrid](/boards/hybrid/) (Cloud integrated with HCL Connections On-Premise)
+    - [HCL Connections Component Pack](cp/index.md)
+    - [Kubernetes](kubernetes/index.md)
+    - [Standalone](standalone.md)
+1. [Boards Hybrid](hybrid.md) (Cloud integrated with HCL Connections On-Premise)
 
 ---
 
@@ -23,7 +23,7 @@ __Advantages__
 - Always up to date with the latest functionality
 - Backup strategies already in place
 
-See [here](/boards/cloud/) for more information.
+See [here](cloud/index.md) for more information.
 
 
 ---
@@ -38,7 +38,7 @@ __Advantages__
 - Control over your own data and backup strategies
 - Simple to update
 
-See install details for [Kubernetes](/boards/hybrid/) or [HCL Connections Component Pack](/boards/cp/).
+See install details for [Kubernetes](hybrid.md) or [HCL Connections Component Pack](cp/index.md).
 
 
 ---
@@ -75,7 +75,7 @@ __Requirements__
 
 - Your HCL Connections URL must be accessible from the web (no VPN)
 
-See [installation details](/boards/hybrid/) for more information.
+See [installation details](hybrid.md) for more information.
 
 
 ---

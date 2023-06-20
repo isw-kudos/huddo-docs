@@ -1,1 +1,1 @@
-This page has [moved here](/boards/releases/)
+This page has [moved here](../releases.md)

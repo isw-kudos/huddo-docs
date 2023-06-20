@@ -92,7 +92,7 @@ This service will:
     ```
 
 1. Replace the `sharedDrive.server` IP and the `sharedDrive.path` to the shared drive (e.g. `/nfs/data/shared` or `/opt/HCL/data/shared` etc)
-1. Deploy the Activity Migration chart applicable for your deployment ([CP v3](/boards/cp/migration/) or [standalone Kubernetes v5](/boards/connections/migration/))
+1. Deploy the Activity Migration chart applicable for your deployment ([CP v3](../cp/migration.md) or [standalone Kubernetes v5](../connections/migration.md))
 1. Review the pod logs for the status of how many long description were replaced
 
 

@@ -1,10 +1,10 @@
 # Requirements and considerations before installation of Docker Swarm and Huddo Boards (DEPRECATED)
 !!! warning
-    These instructions are deprecated. Please see [standalone guide](/boards/standalone/) if you do not have either Kubernetes or Component Pack
+    These instructions are deprecated. Please see [standalone guide](../standalone.md) if you do not have either Kubernetes or Component Pack
 
 ## Servers
 
-This solution is designed to be a lightweight, cloud-like setup running locally in your data centre. You should expect to configure a minimum of 4 very small servers, see [Swarm Installation](/swarm/#server-information) for a table showing the requirements.
+This solution is designed to be a lightweight, cloud-like setup running locally in your data centre. You should expect to configure a minimum of 4 very small servers, see [Swarm Installation](index.md#server-information) for a table showing the requirements.
 
 ---
 
@@ -49,7 +49,7 @@ To perform the installation, you need to setup some config files on a local mach
 
 ## Authentication
 
-Huddo Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](/boards/swarm/#setup-oauth)):
+Huddo Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](../kubernetes/index.md#oauth)):
 
 | Provider                     | Registration / Documentation                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,4 +70,4 @@ Access to the images for Boards is provided through [dockerhub](https://hub.dock
 
 ## Ansible
 
-We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](/tools/ansible/) prior to the swarm / boards install 
+We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](../../tools/ansible.md) prior to the swarm / boards install 

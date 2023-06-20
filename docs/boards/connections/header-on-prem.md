@@ -14,7 +14,7 @@ If you are running Boards on a standalone domain we recommend integrating with t
 
 1. Reverse Proxy Config
 
-    Please follow the instructions as part of the [HTTP Proxy config](/boards/connections/httpd/#connections-sso-header-config).
+    Please follow the instructions as part of the [HTTP Proxy config](httpd.md#connections-sso-header-config).
 
 1. Enable in Boards
 

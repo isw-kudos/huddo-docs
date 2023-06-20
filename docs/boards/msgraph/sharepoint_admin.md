@@ -25,4 +25,4 @@ Embedding Huddo Boards in sharepoint requires iframe permissions for users, it i
 
   ![example](/assets/msgraph/sharepointadmin4.png)
 
-1. To add Site Pages for sharing Huddo Boards, follow the instructions [here](/boards/msgraph/sharepoint/)
+1. To add Site Pages for sharing Huddo Boards, follow the instructions [here](sharepoint.md)

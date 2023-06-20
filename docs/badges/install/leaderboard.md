@@ -1,4 +1,4 @@
-In the [Install Widgets step](/badges/install/install-widgets) you made the Huddo Leaderboard widget available on the Home page for all users. This step meant that any new user would automatically see the Leaderboard widget, and any existing user would be able to add the widget by customizing the page. This step provides a button where you can publish the widget to the homepage of all existing users without them needing to manually add it themselves.
+In the [Install Widgets step](install-widgets.md) you made the Huddo Leaderboard widget available on the Home page for all users. This step meant that any new user would automatically see the Leaderboard widget, and any existing user would be able to add the widget by customizing the page. This step provides a button where you can publish the widget to the homepage of all existing users without them needing to manually add it themselves.
 
 ### Add Leaderboard to Homepage
 

@@ -98,7 +98,7 @@ Select **_Signer certificates_**
 
 You will now see a list of all trusted certificates.
 
-**If the URL of your Connections Environment is listed, skip to [Add Huddo Related Strings to Connections](/badges/install/app/app/#add-kudos-related-strings-to-connections)**
+**If the URL of your Connections Environment is listed, skip to [Add Huddo Related Strings to Connections](app.md#add-kudos-related-strings-to-connections)**
 
 We will now import the public certificate from the IBM HTTP Server to the default trust store in IBM WebSphere Application Server
 

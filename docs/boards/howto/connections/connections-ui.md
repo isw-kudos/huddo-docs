@@ -6,7 +6,7 @@ Huddo Boards can integrate features directly in to HCL Connections user interfac
   - share pages from HCL Connections to Huddo Boards
   - show Huddo Boards data in search results
 
-If you're an administrator looking for how to set this up, see the [install documentation here](/boards/connections/customizer/customizer-integrations-package/).
+If you're an administrator looking for how to set this up, see the [install documentation here](../../connections/customizer/customizer-integrations-package.md).
 
 ## Related Tasks
 You can create and view tasks related to the HCL Connections page you're currently viewing. Look for the Huddo Boards icon in the Connections header and file viewer.

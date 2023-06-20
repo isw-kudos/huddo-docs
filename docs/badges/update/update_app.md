@@ -37,7 +37,7 @@ Click **Finish**.
 
 Click **Save directly to master configuration**.
 
-If the Nodes have automatically synchronized and you see this screen - Click **OK** and move to [Restart the Huddo Application](/badges/update/update_app/#restart-the-kudos-application). Otherwise continue to [Synchronize the nodes](/badges/update/update_app/#synchronize-the-nodes).
+If the Nodes have automatically synchronized and you see this screen - Click **OK** and move to [Restart the Huddo Application](update_app.md#restart-the-kudos-application). Otherwise continue to [Synchronize the nodes](update_app.md#synchronize-the-nodes).
 
 ### Synchronize the nodes
 

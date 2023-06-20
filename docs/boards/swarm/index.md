@@ -1,6 +1,6 @@
 # Boards for Docker Swarm (DEPRECATED)
 !!! warning
-    These instructions are deprecated. Please see [standalone guide](/boards/standalone/) if you do not have either Kubernetes or Component Pack
+    These instructions are deprecated. Please see [standalone guide](../standalone.md) if you do not have either Kubernetes or Component Pack
 
 Basic instructions for deploying Huddo Boards into Docker Swarm for on-premise IBM Connections environments
 
@@ -8,8 +8,8 @@ Basic instructions for deploying Huddo Boards into Docker Swarm for on-premise I
 
 ### Prerequisites
 
-1. Docker Swarm with Portainer installed. [Guide here](/swarm/)
-1. Storage - an accessible MongoDB and S3 object store. [Guide here](/swarm/storage/)
+1. Docker Swarm with Portainer installed. [Guide here](prerequisites.md)
+1. Storage - an accessible MongoDB and S3 object store.
 1. SMTP gateway setup for email notifications
 1. [Config File](/assets/config/swarm/boards.yml) downloaded
 1. Dockerhub account with access to Huddo Boards repository.
@@ -28,7 +28,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 | Provider                     | Registration / Documentation                                                                                  | Callback URL                                     |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| IBM Connections (on premise) | [Huddo instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
+| IBM Connections (on premise) | [Huddo instructions](../connections/auth-on-prem.md)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
 | Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
 | Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
 | LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |
@@ -50,7 +50,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 **Boards Variables**:
 
-Follow instructions on [this page](/boards/env/common/)
+Follow instructions on [this page](../env/common.md)
 
 ---
 
@@ -81,9 +81,9 @@ For example:
 
 Please follow these instructions
 
-- [Header](/boards/connections/header-on-prem/)
-- [Apps Menu](/boards/connections/apps-menu-on-prem/)
-- [Widgets](/boards/connections/widgets-on-prem/)
+- [Header](../connections/header-on-prem.md)
+- [Apps Menu](../connections/apps-menu-on-prem.md)
+- [Widgets](../connections/widgets-on-prem.md)
 
 ---
 

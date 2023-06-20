@@ -4,7 +4,7 @@ Deploying Huddo Boards into HCL Connections Component Pack (Kubernetes)
 
 ---
 
-[Release Information](/boards/releases)
+[Release Information](../releases.md)
 
 ---
 
@@ -27,7 +27,7 @@ The UI and API each require a unique route:
 - UI for Boards: `[CONNECTIONS_URL]/boards`. We will refer to this as `BOARDS_URL`
 - API Gateway: `[CONNECTIONS_URL]/api-boards`. We will refer to this as `API_URL`
 
-For more details on configuring an IBM HTTP WebServer as reverse proxy, [please see here](/boards/cp/httpd/)
+For more details on configuring an IBM HTTP WebServer as reverse proxy, [please see here](httpd.md)
 
 ---
 
@@ -37,8 +37,8 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 | Provider                        | Registration / Documentation                            | Callback URL                                                 |
 | ------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
-| HCL Connections<br>(on premise) | [Huddo instructions](/boards/connections/auth-on-prem/) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
-| Microsoft Office 365            | [Huddo instructions](/boards/msgraph/auth/)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
+| HCL Connections<br>(on premise) | [Huddo instructions](../connections/auth-on-prem.md) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
+| Microsoft Office 365            | [Huddo instructions](../msgraph/auth.md)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
 
 ---
 
@@ -54,7 +54,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 #### S3
 
-Huddo Boards for Component Pack deploys a Minio service. Please follow [S3 storage details here](/boards/cp/minio) to configure the NFS mount.
+Huddo Boards for Component Pack deploys a Minio service. Please follow [S3 storage details here](minio.md) to configure the NFS mount.
 
 #### Mongo
 
@@ -64,7 +64,7 @@ Huddo Boards uses the Mongo database already deployed inside the Component Pack.
 
 ### Licence Key
 
-Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](/boards/cp/store/).
+Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](store.md).
 
 ---
 
@@ -83,11 +83,11 @@ Download our [config file](/assets/config/kubernetes/boards-cp.yaml) and update 
 
 **Boards variables**:
 
-Are [detailed here](/boards/env/common/).
+Are [detailed here](../env/common.md).
 
 **Activity migration variables**:
 
-The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](/boards/cp/migration).
+The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](migration.md).
 
 ---
 
@@ -107,7 +107,7 @@ Install the Boards services via our Helm chart
 
 > in the linked document you should use the IP of your kubernetes manager and the http port for your ingress (32080 for default component pack installs)
 
-Please follow [these instructions](/boards/cp/httpd/)
+Please follow [these instructions](httpd.md)
 
 ---
 
@@ -115,22 +115,22 @@ Please follow [these instructions](/boards/cp/httpd/)
 
 ### HCL Connections
 
-- [Apps Menu](/boards/connections/apps-menu-on-prem/)
-- [Widgets](/boards/connections/widgets-on-prem/)
-- [Boards Search](/boards/connections/customizer-search-app/)
+- [Apps Menu](../connections/apps-menu-on-prem.md)
+- [Widgets](../connections/widgets-on-prem.md)
+- [Customizer - Boards Search](../connections/customizer/customizer-integrations-package.md)
 
 ### Microsoft Teams
 
-- [Install On-Premise App](/boards/msgraph/teams-on-prem/)
+- [Install On-Premise App](../msgraph/teams-on-prem.md)
 
 ---
 
 ## Migrate Activities data
 
-Please follow the [instructions here](/boards/cp/migration)
+Please follow the [instructions here](migration.md)
 
 ---
 
 ## Subscribing to latest updates from Huddo Team
 
-[Guide here](/boards/cp/latest/)
+[Guide here](latest.md)

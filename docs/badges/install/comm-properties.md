@@ -54,4 +54,4 @@ Check in the Widgets-Config.xml File:
 
 [Connections 6.5](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_profiles_changing_admin.html)
 
-Then [Restart the clusters](/badges/install/apply-changes).
+Then [Restart the clusters](apply-changes.md).

@@ -1,6 +1,6 @@
 ## Huddo Boards and Auth0
 
-[Admin Guide](/boards/auth0/) to setting up Auth0 tenant.
+[Admin Guide](../auth0/index.md) to setting up Auth0 tenant.
 
 ### Sign in to Huddo Boards with your Auth0 Tenant
 

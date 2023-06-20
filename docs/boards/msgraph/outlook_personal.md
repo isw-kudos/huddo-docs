@@ -2,7 +2,7 @@
 
 > The instructions on this page use 'The new Outlook' however you can also add and use this plugin from 'classic Outlook' or Outlook desktop.
 
-> Microsoft 365 admins can add this for all users in their tenant, [instructions here](/boards/msgraph/outlook/)
+> Microsoft 365 admins can add this for all users in their tenant, [instructions here](outlook.md)
 
 1. Open Outlook and click `New Message`
 

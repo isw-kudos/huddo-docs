@@ -26,7 +26,7 @@ New members will be notified that they have been invited to your board.
 
 ### Managing Members in a Microsoft Team Channel and Board
 
-[A board can be added to a channel within Teams](/boards/howto/teams/adding-boards/) to help track progress on tasks and create a collaborative work environment.
+[A board can be added to a channel within Teams](../teams/adding-boards.md) to help track progress on tasks and create a collaborative work environment.
 
 Members of a Team or a Channel will be inherited automatically in to your Huddo Board. 
 

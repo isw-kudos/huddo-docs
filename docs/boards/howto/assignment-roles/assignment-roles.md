@@ -2,7 +2,7 @@
 Within a template, you can create Assignment Roles that can be assigned to tasks just like members. When creating a board from this template, you can assign the members of this new board to these roles and they will be responsible for completing the tasks the role had been assigned.
 
 ## Create a Template with Assignment Roles
-Start off by creating a template following the steps in the [Create a Template](/docs/boards/howto/templates/creating/#create-a-new-template-from-scratch) article. 
+Start off by creating a template following the steps in the [Create a Template](../templates/creating.md#create-a-new-template-from-scratch) article. 
 
 <!-- !!! Note
 
@@ -35,4 +35,4 @@ You can assign roles to tasks just as you would a board member.
 !["Drag and drop to assign"](./drag-and-drop.gif){ style="border: 1px lightgrey solid;"}
 </center>
 
-See the section on [using a template](/boards/howto/templates/global/#assign-to-roles) to see how Assignment Roles are used when creating a board from a template.
+See the section on [using a template](../templates/global.md#assign-to-roles) to see how Assignment Roles are used when creating a board from a template.
