@@ -1420,6 +1420,8 @@
       
         
           
+            
+          
         
           
         
@@ -1427,10 +1429,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_3_9_4" id="__nav_1_3_9_4_label" tabindex="0">
-          Office 365
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../msgraph/auth/">Office 365</a>
+          
+            <label for="__nav_1_3_9_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9_4">
@@ -1439,18 +1447,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../msgraph/auth/" class="md-nav__link">
-        Authentication
-      </a>
-    </li>
-  
-
             
           
             
@@ -1564,13 +1560,21 @@
           
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
-          FAQ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="roles/">FAQ</a>
+          
+            <label for="__nav_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_5">
@@ -1607,18 +1611,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="roles/" class="md-nav__link">
-        Roles
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -3080,7 +3072,11 @@
       
         
           
+            
+          
         
+          
+            
           
         
           
@@ -3093,10 +3089,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          User Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../analytics/user-guide/introduction/">User Guide</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
@@ -3105,18 +3107,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/user-guide/introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
             
           
             
@@ -3271,25 +3261,45 @@
           
         
           
+            
+          
         
+          
+            
           
         
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
+            
+          
         
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
           
         
           
@@ -3782,7 +3792,7 @@
 <h1 id="huddo-boards-for-hcl-connections-cp">Huddo Boards for HCL Connections CP<a class="headerlink" href="#huddo-boards-for-hcl-connections-cp" title="Permanent link">&para;</a></h1>
 <p>Deploying Huddo Boards into HCL Connections Component Pack (Kubernetes)</p>
 <hr />
-<p><a href="/boards/releases">Release Information</a></p>
+<p><a href="../releases/">Release Information</a></p>
 <hr />
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ol>
@@ -3800,7 +3810,7 @@
 <li>UI for Boards: <code>[CONNECTIONS_URL]/boards</code>. We will refer to this as <code>BOARDS_URL</code></li>
 <li>API Gateway: <code>[CONNECTIONS_URL]/api-boards</code>. We will refer to this as <code>API_URL</code></li>
 </ul>
-<p>For more details on configuring an IBM HTTP WebServer as reverse proxy, <a href="/boards/cp/httpd/">please see here</a></p>
+<p>For more details on configuring an IBM HTTP WebServer as reverse proxy, <a href="httpd/">please see here</a></p>
 <hr />
 <h3 id="setup-oauth">Setup OAuth<a class="headerlink" href="#setup-oauth" title="Permanent link">&para;</a></h3>
 <p>You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:</p>
@@ -3815,12 +3825,12 @@
 <tbody>
 <tr>
 <td>HCL Connections<br>(on premise)</td>
-<td><a href="/boards/connections/auth-on-prem/">Huddo instructions</a></td>
+<td><a href="../connections/auth-on-prem/">Huddo instructions</a></td>
 <td><code>https://[CONNECTIONS_URL]/boards/auth/connections/callback</code></td>
 </tr>
 <tr>
 <td>Microsoft Office 365</td>
-<td><a href="/boards/msgraph/auth/">Huddo instructions</a></td>
+<td><a href="../msgraph/auth/">Huddo instructions</a></td>
 <td><code>https://[CONNECTIONS_URL]/boards/auth/msgraph/callback</code></td>
 </tr>
 </tbody>
@@ -3844,12 +3854,12 @@
 <hr />
 <h3 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h3>
 <h4 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h4>
-<p>Huddo Boards for Component Pack deploys a Minio service. Please follow <a href="/boards/cp/minio">S3 storage details here</a> to configure the NFS mount.</p>
+<p>Huddo Boards for Component Pack deploys a Minio service. Please follow <a href="minio/">S3 storage details here</a> to configure the NFS mount.</p>
 <h4 id="mongo">Mongo<a class="headerlink" href="#mongo" title="Permanent link">&para;</a></h4>
 <p>Huddo Boards uses the Mongo database already deployed inside the Component Pack. There is no configuration required.</p>
 <hr />
 <h3 id="licence-key">Licence Key<a class="headerlink" href="#licence-key" title="Permanent link">&para;</a></h3>
-<p>Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from <a href="https://store.huddo.com">https://store.huddo.com</a>. For more details <a href="/boards/cp/store/">see here</a>.</p>
+<p>Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from <a href="https://store.huddo.com">https://store.huddo.com</a>. For more details <a href="store/">see here</a>.</p>
 <hr />
 <h3 id="update-config-file">Update Config file<a class="headerlink" href="#update-config-file" title="Permanent link">&para;</a></h3>
 <p>Download our <a href="/assets/config/kubernetes/boards-cp.yaml">config file</a> and update all the values inside. Descriptions as below.</p>
@@ -3881,9 +3891,9 @@
 </tbody>
 </table>
 <p><strong>Boards variables</strong>:</p>
-<p>Are <a href="/boards/env/common/">detailed here</a>.</p>
+<p>Are <a href="../env/common/">detailed here</a>.</p>
 <p><strong>Activity migration variables</strong>:</p>
-<p>The Activity migration chart will be deployed separately but use the same config file. The variables are <a href="/boards/cp/migration">described here</a>.</p>
+<p>The Activity migration chart will be deployed separately but use the same config file. The variables are <a href="migration/">described here</a>.</p>
 <hr />
 <h3 id="deploy-boards-helm-chart">Deploy Boards Helm Chart<a class="headerlink" href="#deploy-boards-helm-chart" title="Permanent link">&para;</a></h3>
 <p>Install the Boards services via our Helm chart</p>
@@ -3898,32 +3908,32 @@
 <blockquote>
 <p>in the linked document you should use the IP of your kubernetes manager and the http port for your ingress (32080 for default component pack installs)</p>
 </blockquote>
-<p>Please follow <a href="/boards/cp/httpd/">these instructions</a></p>
+<p>Please follow <a href="httpd/">these instructions</a></p>
 <hr />
 <h2 id="integrations">Integrations<a class="headerlink" href="#integrations" title="Permanent link">&para;</a></h2>
 <h3 id="hcl-connections">HCL Connections<a class="headerlink" href="#hcl-connections" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="/boards/connections/apps-menu-on-prem/">Apps Menu</a></li>
-<li><a href="/boards/connections/widgets-on-prem/">Widgets</a></li>
-<li><a href="/boards/connections/customizer-search-app/">Boards Search</a></li>
+<li><a href="../connections/apps-menu-on-prem/">Apps Menu</a></li>
+<li><a href="../connections/widgets-on-prem/">Widgets</a></li>
+<li><a href="../connections/customizer/customizer-integrations-package/">Customizer - Boards Search</a></li>
 </ul>
 <h3 id="microsoft-teams">Microsoft Teams<a class="headerlink" href="#microsoft-teams" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="/boards/msgraph/teams-on-prem/">Install On-Premise App</a></li>
+<li><a href="../msgraph/teams-on-prem/">Install On-Premise App</a></li>
 </ul>
 <hr />
 <h2 id="migrate-activities-data">Migrate Activities data<a class="headerlink" href="#migrate-activities-data" title="Permanent link">&para;</a></h2>
-<p>Please follow the <a href="/boards/cp/migration">instructions here</a></p>
+<p>Please follow the <a href="migration/">instructions here</a></p>
 <hr />
 <h2 id="subscribing-to-latest-updates-from-huddo-team">Subscribing to latest updates from Huddo Team<a class="headerlink" href="#subscribing-to-latest-updates-from-huddo-team" title="Permanent link">&para;</a></h2>
-<p><a href="/boards/cp/latest/">Guide here</a></p>
+<p><a href="latest/">Guide here</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2023-01-23
+      2023-06-20
     
   </small>
 </div>

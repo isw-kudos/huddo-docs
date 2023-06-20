@@ -1307,6 +1307,8 @@
       
         
           
+            
+          
         
           
         
@@ -1314,10 +1316,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_3_9_4" id="__nav_1_3_9_4_label" tabindex="0">
-          Office 365
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../msgraph/auth/">Office 365</a>
+          
+            <label for="__nav_1_3_9_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9_4">
@@ -1326,18 +1334,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../msgraph/auth/" class="md-nav__link">
-        Authentication
-      </a>
-    </li>
-  
-
             
           
             
@@ -1451,13 +1447,21 @@
           
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
-          FAQ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../cp/roles/">FAQ</a>
+          
+            <label for="__nav_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_5">
@@ -1494,18 +1498,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cp/roles/" class="md-nav__link">
-        Roles
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -2967,7 +2959,11 @@
       
         
           
+            
+          
         
+          
+            
           
         
           
@@ -2980,10 +2976,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          User Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../analytics/user-guide/introduction/">User Guide</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
@@ -2992,18 +2994,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
             
           
             
@@ -3158,25 +3148,45 @@
           
         
           
+            
+          
         
+          
+            
           
         
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
+            
+          
         
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
           
         
           
@@ -3554,21 +3564,21 @@
 <p class="admonition-title">Important</p>
 <p>This step is only required if you are hosting Huddo Boards on a different domain to HCL Connections.</p>
 </div>
-<p><img alt="Outcome" src="/assets/connections/header.png" /></p>
+<p><img alt="Outcome" src="../../../assets/connections/header.png" /></p>
 <hr />
 <h2 id="connections-header-via-sso">Connections Header via SSO<a class="headerlink" href="#connections-header-via-sso" title="Permanent link">&para;</a></h2>
 <p>If you are running Boards on a standalone domain we recommend integrating with the Connections Header using SSO. Please follow these steps:</p>
 <ol>
 <li>
 <p>Reverse Proxy Config</p>
-<p>Please follow the instructions as part of the <a href="/boards/connections/httpd/#connections-sso-header-config">HTTP Proxy config</a>.</p>
+<p>Please follow the instructions as part of the <a href="../httpd/#connections-sso-header-config">HTTP Proxy config</a>.</p>
 </li>
 <li>
 <p>Enable in Boards</p>
 <p>Open the Boards admin page, select your <code>Organisation</code>, and then the <code>Connections</code> client</p>
-<p><img alt="example" src="/assets/connections/admin-client.png" /></p>
+<p><img alt="example" src="../../../assets/connections/admin-client.png" /></p>
 <p>Tick the checkbox for <code>Load Connections Header via SSO</code> and click <code>Save</code></p>
-<p><img alt="example" src="/assets/connections/header-sso.png" /></p>
+<p><img alt="example" src="../../../assets/connections/header-sso.png" /></p>
 <p>Once you reload the page you should see the Connections header!</p>
 </li>
 </ol>
@@ -3581,20 +3591,20 @@
 <ol>
 <li>
 <p>Download the Application</p>
-<p>The latest .ear from <a href="/assets/connections/kudos-boards-frame.ear">here</a></p>
+<p>The latest .ear from <a href="../../../assets/connections/kudos-boards-frame.ear">here</a></p>
 </li>
 <li>
 <p>Login to WebSphere ISC</p>
 <p>This is usually accessible through a URL like:</p>
 <div class="highlight"><pre><span></span><code>https://[DEPLOY_MANAGER_ALIAS]:9043/ibm/console/logon.jsp
 </code></pre></div>
-<p><img alt="example" src="/assets/connections/isc.png" /></p>
+<p><img alt="example" src="../../../assets/connections/isc.png" /></p>
 </li>
 <li>
 <p>Open <code>Environment</code> -&gt; <code>WebSphere variables</code></p>
 <p>Ensure the scope is selected as the <code>Cell</code></p>
 <p>Click <code>New</code></p>
-<p><img alt="example" src="/assets/connections/iframe/env1.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/env1.png" /></p>
 </li>
 <li>
 <p>Set the following details and click <code>OK</code></p>
@@ -3602,24 +3612,24 @@
 {&quot;boards&quot;:&quot;https://[BOARDS_URL]/auth/connections&quot;}
 </code></pre></div>
 <p>Where <code>[BOARDS_URL]</code> is the URL of the Boards installation specified previously</p>
-<p><img alt="example" src="/assets/connections/iframe/env-on-prem.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/env-on-prem.png" /></p>
 </li>
 <li>
 <p>The config may require saving. Click <code>Save</code> if presented</p>
-<p><img alt="example" src="/assets/connections/isc-sync.png" /></p>
+<p><img alt="example" src="../../../assets/connections/isc-sync.png" /></p>
 </li>
 <li>
 <p>Open <code>Applications</code> -&gt; <code>Application Types</code> -&gt; <code>WebSphere enterprise applications</code></p>
 <p>Click <code>Install</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app1.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app1.png" /></p>
 </li>
 <li>
 <p>Select the file and click <code>Next</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app2.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app2.png" /></p>
 </li>
 <li>
 <p>You can rename the App if you wish, then click <code>Next</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app4.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app4.png" /></p>
 </li>
 <li>
 <p>Select the checkbox for the module</p>
@@ -3627,27 +3637,27 @@
 <p>Click Apply</p>
 <p>The Servers should update on the right hand side</p>
 <p>Click <code>Next</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app5.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app5.png" /></p>
 </li>
 <li>
 <p>Click <code>Next</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app6.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app6.png" /></p>
 </li>
 <li>
 <p>Click <code>Finish</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app7.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app7.png" /></p>
 </li>
 <li>
 <p>The config may prompt to save. Click <code>Save</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app8.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app8.png" /></p>
 <p>The application should now be installed</p>
 </li>
 <li>
 <p>Start the Header App</p>
 <p>Tick the box next to the app name, and click <code>Start</code></p>
-<p><img alt="example" src="/assets/connections/iframe/app9.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app9.png" /></p>
 <p>The app should now start. Congratulations, you have installed the app!</p>
-<p><img alt="example" src="/assets/connections/iframe/app10.png" /></p>
+<p><img alt="example" src="../../../assets/connections/iframe/app10.png" /></p>
 </li>
 <li>
 <p>Open Boards</p>
@@ -3665,7 +3675,7 @@
   <small>
     
       Last update:
-      2023-01-20
+      2023-06-20
     
   </small>
 </div>

@@ -1251,6 +1251,8 @@
       
         
           
+            
+          
         
           
         
@@ -1258,10 +1260,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_3_9_4" id="__nav_1_3_9_4_label" tabindex="0">
-          Office 365
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../boards/msgraph/auth/">Office 365</a>
+          
+            <label for="__nav_1_3_9_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9_4">
@@ -1270,18 +1278,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../boards/msgraph/auth/" class="md-nav__link">
-        Authentication
-      </a>
-    </li>
-  
-
             
           
             
@@ -1395,13 +1391,21 @@
           
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
-          FAQ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../boards/cp/roles/">FAQ</a>
+          
+            <label for="__nav_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_5">
@@ -1438,18 +1442,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../boards/cp/roles/" class="md-nav__link">
-        Roles
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -2995,7 +2987,11 @@
       
         
           
+            
+          
         
+          
+            
           
         
           
@@ -3008,10 +3004,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          User Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../analytics/user-guide/introduction/">User Guide</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
@@ -3020,18 +3022,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/user-guide/introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
             
           
             
@@ -3186,25 +3176,45 @@
           
         
           
+            
+          
         
+          
+            
           
         
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
+            
+          
         
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
           
         
           
@@ -3622,7 +3632,7 @@ otherwise review the following.</p>
 <p>Determine which data source relates to the Filenet Object Store database, and note the
 JNDI name for that data source. The image below shows an example where the data source name
 and JNDI name are "FNOSDS", but it may be different in your environment.</p>
-<p><img alt="Installation - JDBC data sources" src="/assets/ccm-migrator/jdbc-data-sources01.png" /></p>
+<p><img alt="Installation - JDBC data sources" src="../img/jdbc-data-sources01.png" /></p>
 <p>If you're not sure which is the correct data source, check the details of each data source
 as follows:</p>
 <ul>
@@ -3635,12 +3645,12 @@ and you can then proceed with installation.</li>
 <p>If you can't determine the correct JNDI name, the only impact is that CCM Migrator will
 be unable to migrate file follows, but the installation process requires a JNDI name
 to be entered regardless.</p>
-<p><img alt="Installation - JDBC data sources" src="/assets/ccm-migrator/jdbc-data-sources02.png" /></p>
+<p><img alt="Installation - JDBC data sources" src="../img/jdbc-data-sources02.png" /></p>
 <h2 id="installing-the-application-for-the-first-time">Installing the Application for the first time<a class="headerlink" href="#installing-the-application-for-the-first-time" title="Permanent link">&para;</a></h2>
 <p>In the ISC, navigate to Applications \ Application Types \ WebSphere enterprise applications and click "Install".</p>
-<p><img alt="Installation - step 1" src="/assets/ccm-migrator/install01.png" /></p>
+<p><img alt="Installation - step 1" src="../img/install01.png" /></p>
 <p>Locate the "isw-connections-ccm.ear" file on your local file system and click "Next".</p>
-<p><img alt="Installation - step 2" src="/assets/ccm-migrator/install02.png" /></p>
+<p><img alt="Installation - step 2" src="../img/install02.png" /></p>
 <p>Select "Fast Path" and click "Next".</p>
 <p>Step 1: Leave the default values, update the Application Name if required, and click "Next".</p>
 <p>Step 2: Map the module to a single application server or cluster, and at least
@@ -3651,7 +3661,7 @@ to specify a server file-system location for storing log files. If the applicati
 is mapped to a cluster, it's best if the cluster only has one server or the
 file-system location is synchronized between all servers in the cluster, to ensure
 that the log files are up to date regardless of which server the application runs on.</p>
-<p><img alt="Installation - step 3" src="/assets/ccm-migrator/install03.png" /></p>
+<p><img alt="Installation - step 3" src="../img/install03.png" /></p>
 <p>Step 3: Enter the JNDI name for the Filenet Object Store database, which you should have
 obtained as described under <a href="#gathering-required-information">Gathering required information</a>.</p>
 <p>Step 4: Leave the default values and click "Next".</p>
@@ -3660,11 +3670,11 @@ obtained as described under <a href="#gathering-required-information">Gathering 
 <h2 id="updating-the-web-server-plug-in">Updating the Web Server Plug-in<a class="headerlink" href="#updating-the-web-server-plug-in" title="Permanent link">&para;</a></h2>
 <p><em>The procedure in this section may or may not be required depending on the configuration of your Connections environment.</em></p>
 <p>In the ISC, navigate to Servers \ Server types \ Web servers.</p>
-<p><img alt="Web Server plug-in - step 1" src="/assets/ccm-migrator/webserver-plugin01.png" /></p>
+<p><img alt="Web Server plug-in - step 1" src="../img/webserver-plugin01.png" /></p>
 <p>Select the web server, and click "Generate Plug-in". (If your environment has multiple web servers, you should be able to select them all for this step.)</p>
-<p><img alt="Web Server plug-in - step 2" src="/assets/ccm-migrator/webserver-plugin02.png" /></p>
+<p><img alt="Web Server plug-in - step 2" src="../img/webserver-plugin02.png" /></p>
 <p>When the above step completes, select the web server again, and click "Propagate Plug-in". (If your environment has multiple web servers, you should be able to select them all for this step.)</p>
-<p><img alt="Web Server plug-in - step 3" src="/assets/ccm-migrator/webserver-plugin03.png" /></p>
+<p><img alt="Web Server plug-in - step 3" src="../img/webserver-plugin03.png" /></p>
 <h2 id="configuring-the-application">Configuring the Application<a class="headerlink" href="#configuring-the-application" title="Permanent link">&para;</a></h2>
 <h3 id="licence-key">Licence Key<a class="headerlink" href="#licence-key" title="Permanent link">&para;</a></h3>
 <p>Without a licence applied, the application can only be used in test mode, where files and folders are reported but not actually migrated.</p>
@@ -3698,13 +3708,13 @@ Limited licences also require <code>iswCCMLicenceCommunities</code>.</p>
 </table>
 <p>You may follow the steps below for how to create name space bindings.</p>
 <p>In the ISC, navigate to Environment \ Naming \ Name space bindings.</p>
-<p><img alt="Name-space binding - step 1" src="/assets/ccm-migrator/namespace-binding01.png" /></p>
+<p><img alt="Name-space binding - step 1" src="../img/namespace-binding01.png" /></p>
 <p>Select the "Cell" scope, then click "New".</p>
-<p><img alt="Name-space binding - step 2" src="/assets/ccm-migrator/namespace-binding02.png" /></p>
+<p><img alt="Name-space binding - step 2" src="../img/namespace-binding02.png" /></p>
 <p>Set the binding type to "String", then click "Next".</p>
-<p><img alt="Name-space binding - step 3" src="/assets/ccm-migrator/namespace-binding03.png" /></p>
+<p><img alt="Name-space binding - step 3" src="../img/namespace-binding03.png" /></p>
 <p>Set both the "Binding identifier" and "Name in name space" fields to "iswCCMLicenceKey". Enter your licence key in the "String value" field.</p>
-<p><img alt="Name-space binding - step 4" src="/assets/ccm-migrator/namespace-binding04.png" /></p>
+<p><img alt="Name-space binding - step 4" src="../img/namespace-binding04.png" /></p>
 <p>Click "Next", then click "Finish", then save the master configuration. Repeat these steps for <code>iswCCMLicenceCommunities</code>.</p>
 <h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
 <p>In the ISC, navigate to Applications \ Application Types \ WebSphere enterprise
@@ -3720,7 +3730,7 @@ suggested that only one or a small number of users are given access to this appl
   <small>
     
       Last update:
-      2022-08-03
+      2023-06-20
     
   </small>
 </div>

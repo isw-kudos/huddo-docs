@@ -71,17 +71,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/analytics/user-guide/introduction/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/analytics/user-guide/itemtype-map/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.huddo.com/analytics/user-guide/terms/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/analytics/user-guide/introduction/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -111,6 +111,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/badges/install/customising/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/badges/install/embedded-exp/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/badges/install/mobile/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/badges/install/add-widgets/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -136,16 +151,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/badges/install/customising/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/badges/install/embedded-exp/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/badges/install/engine/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -167,11 +172,6 @@
     </url>
     <url>
          <loc>https://docs.huddo.com/badges/install/load-defaults/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/badges/install/mobile/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -436,12 +436,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/cp/roles/</loc>
+         <loc>https://docs.huddo.com/boards/cp/store/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/cp/store/</loc>
+         <loc>https://docs.huddo.com/boards/cp/roles/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -631,11 +631,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/msgraph/auth/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/boards/msgraph/custom-tiles/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -682,6 +677,11 @@
     </url>
     <url>
          <loc>https://docs.huddo.com/boards/msgraph/teams/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/msgraph/auth/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

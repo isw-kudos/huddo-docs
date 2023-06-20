@@ -1379,6 +1379,8 @@
       
         
           
+            
+          
         
           
         
@@ -1386,10 +1388,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_3_9_4" id="__nav_1_3_9_4_label" tabindex="0">
-          Office 365
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../msgraph/auth/">Office 365</a>
+          
+            <label for="__nav_1_3_9_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9_4">
@@ -1398,18 +1406,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../msgraph/auth/" class="md-nav__link">
-        Authentication
-      </a>
-    </li>
-  
-
             
           
             
@@ -1523,13 +1519,21 @@
           
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
-          FAQ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../cp/roles/">FAQ</a>
+          
+            <label for="__nav_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_5">
@@ -1566,18 +1570,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cp/roles/" class="md-nav__link">
-        Roles
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -3039,7 +3031,11 @@
       
         
           
+            
+          
         
+          
+            
           
         
           
@@ -3052,10 +3048,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          User Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../analytics/user-guide/introduction/">User Guide</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
@@ -3064,18 +3066,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/user-guide/introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
             
           
             
@@ -3230,25 +3220,45 @@
           
         
           
+            
+          
         
+          
+            
           
         
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
+            
+          
         
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
           
         
           
@@ -3707,7 +3717,7 @@
 <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl</a> is installed</li>
 <li><a href="https://docs.helm.sh/using_helm/#installing-helm">helm</a> is installed</li>
 <li>SMTP gateway setup for email notifications if required</li>
-<li><a href="https://quay.io">Quay.io - Red Hat</a> account setup with access to the <a href="/boards/images/">Huddo Boards repository</a>.  Please send your account details to <a href="mailto:support@huddo.com">support@huddo.com</a> if you do not already have this.</li>
+<li><a href="https://quay.io">Quay.io - Red Hat</a> account setup with access to the <a href="../images/">Huddo Boards repository</a>.  Please send your account details to <a href="mailto:support@huddo.com">support@huddo.com</a> if you do not already have this.</li>
 <li>
 <p>kubectl configured</p>
 <table>
@@ -3769,13 +3779,13 @@
 </tr>
 <tr>
 <td>For Connections Header</td>
-<td>Additional <a href="/boards/connections/header-on-prem/">WebSphere application</a> must be installed</td>
+<td>Additional <a href="../connections/header-on-prem/">WebSphere application</a> must be installed</td>
 <td>-</td>
 </tr>
 </tbody>
 </table>
 <p>Please decide on which configuration will suit your environment best and the corresponding <code>BOARDS_URL</code> &amp; <code>API_URL</code>. These values will then be used in the following documentation.</p>
-<p>For more details on configuring an IBM HTTP WebServer as reverse proxy, <a href="/boards/connections/httpd/">please see here</a></p>
+<p>For more details on configuring an IBM HTTP WebServer as reverse proxy, <a href="../connections/httpd/">please see here</a></p>
 <hr />
 <h2 id="oauth">OAuth<a class="headerlink" href="#oauth" title="Permanent link">&para;</a></h2>
 <p>Huddo Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.</p>
@@ -3791,7 +3801,7 @@
 <tbody>
 <tr>
 <td>HCL Connections<br>(on premise)</td>
-<td><a href="/boards/connections/auth-on-prem/">Huddo instructions</a></td>
+<td><a href="../connections/auth-on-prem/">Huddo instructions</a></td>
 <td><code>https://[BOARDS_URL]/auth/connections/callback</code></td>
 </tr>
 <tr>
@@ -3824,15 +3834,15 @@
 <h2 id="database-storage">Database &amp; Storage<a class="headerlink" href="#database-storage" title="Permanent link">&para;</a></h2>
 <p>Huddo Boards requires a Mongo database and an S3 file storage. If you already have equivalent services already then you can use your existing details in the config below, otherwise you may follow our instructions to deploy one or both of these services as follows:</p>
 <ol>
-<li><a href="/boards/kubernetes/deploy-mongo">Mongo database</a></li>
-<li><a href="/boards/kubernetes/minio">S3 storage</a></li>
+<li><a href="deploy-mongo/">Mongo database</a></li>
+<li><a href="minio/">S3 storage</a></li>
 </ol>
 <p><strong>Note:</strong> these tasks are very similar to each other and can be performed simultaneously</p>
 <hr />
 <h2 id="secrets">Secrets<a class="headerlink" href="#secrets" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p><a href="/boards/images/">Follow this guide</a> to get access to our images in Quay.io</p>
+<p><a href="../images/">Follow this guide</a> to get access to our images in Quay.io</p>
 </li>
 <li>
 <p>SSL certificate details</p>
@@ -3898,7 +3908,7 @@
 </tbody>
 </table>
 <p><strong>Boards Variables</strong>:</p>
-<p>Follow instructions on <a href="/boards/env/common/">this page</a></p>
+<p>Follow instructions on <a href="../env/common/">this page</a></p>
 <hr />
 <h2 id="deploy-boards-chart">Deploy Boards Chart<a class="headerlink" href="#deploy-boards-chart" title="Permanent link">&para;</a></h2>
 <p>Install the Boards services via our Helm chart</p>
@@ -3913,16 +3923,16 @@
 <blockquote>
 <p>in the linked document you should use the IP of your kubernetes manager and the http port for your ingress (32080 if you have component pack installed)</p>
 </blockquote>
-<p>Please follow <a href="/boards/connections/httpd/">these instructions</a></p>
+<p>Please follow <a href="../connections/httpd/">these instructions</a></p>
 <h3 id="connections-cloud-or-microsoft-office-365">Connections Cloud or Microsoft Office 365<a class="headerlink" href="#connections-cloud-or-microsoft-office-365" title="Permanent link">&para;</a></h3>
 <p>Add a reverse proxy entry in your network that resolves your certificates and forwards your 2 domains to the IP of the kubernetes manager and the http port for your ingress. If any assistance is required</p>
 <hr />
 <h2 id="hcl-connections-integrations">HCL Connections integrations<a class="headerlink" href="#hcl-connections-integrations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="/boards/connections/header-on-prem/">Header</a> (<em>Note: only required if Boards is hosted on a different domain to Connections</em>)</li>
-<li><a href="/boards/connections/apps-menu-on-prem/">Apps Menu</a></li>
-<li><a href="/boards/connections/widgets-on-prem/">Widgets</a></li>
-<li><a href="/boards/connections/migration">Migrate your Activities to Boards</a></li>
+<li><a href="../connections/header-on-prem/">Header</a> (<em>Note: only required if Boards is hosted on a different domain to Connections</em>)</li>
+<li><a href="../connections/apps-menu-on-prem/">Apps Menu</a></li>
+<li><a href="../connections/widgets-on-prem/">Widgets</a></li>
+<li><a href="../connections/migration/">Migrate your Activities to Boards</a></li>
 </ul>
 
   <hr>
@@ -3930,7 +3940,7 @@
   <small>
     
       Last update:
-      2023-05-09
+      2023-06-20
     
   </small>
 </div>

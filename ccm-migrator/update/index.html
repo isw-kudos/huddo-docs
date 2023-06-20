@@ -1251,6 +1251,8 @@
       
         
           
+            
+          
         
           
         
@@ -1258,10 +1260,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_3_9_4" id="__nav_1_3_9_4_label" tabindex="0">
-          Office 365
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../boards/msgraph/auth/">Office 365</a>
+          
+            <label for="__nav_1_3_9_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9_4">
@@ -1270,18 +1278,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../boards/msgraph/auth/" class="md-nav__link">
-        Authentication
-      </a>
-    </li>
-  
-
             
           
             
@@ -1395,13 +1391,21 @@
           
         
           
+            
+          
         
       
       
-        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
-          FAQ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../boards/cp/roles/">FAQ</a>
+          
+            <label for="__nav_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_5">
@@ -1438,18 +1442,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../boards/cp/roles/" class="md-nav__link">
-        Roles
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -2961,7 +2953,11 @@
       
         
           
+            
+          
         
+          
+            
           
         
           
@@ -2974,10 +2970,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          User Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../analytics/user-guide/introduction/">User Guide</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
@@ -2986,18 +2988,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/user-guide/introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
             
           
             
@@ -3152,25 +3142,45 @@
           
         
           
+            
+          
         
+          
+            
           
         
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
-        
+            
           
         
           
+            
+          
         
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
           
         
           
@@ -3555,17 +3565,17 @@ requires some extra information. This is described under
 the installation document.</p>
 <p>Navigate to Applications \ Application Types \ WebSphere enterprise applications.</p>
 <p>Select the "isw-connections-ccm" application from the list, and click "Update".</p>
-<p><img alt="Updating - step 1" src="/assets/ccm-migrator/update01.png" /></p>
+<p><img alt="Updating - step 1" src="../img/update01.png" /></p>
 <p>Using the default option ("Replace the entire application"), select the new "isw-connections-ccm.ear" file, and click "Next".</p>
-<p><img alt="Updating - step 2" src="/assets/ccm-migrator/update02.png" /></p>
+<p><img alt="Updating - step 2" src="../img/update02.png" /></p>
 <p>Click "Next" at the bottom of most subsequent screens, leaving all options at the default,
 except that you may need to enter the JNDI name for the Filenet Object Store database at
 "Step 3: Map resource environment references to resources".</p>
 <p>Click "Finish" upon reaching the "Summary" stage. This may be labelled as "Step 3" or
 "Step 4" depending on whether you needed to enter a JNDI name as above.</p>
-<p><img alt="Updating - step 3" src="/assets/ccm-migrator/update03.png" /></p>
+<p><img alt="Updating - step 3" src="../img/update03.png" /></p>
 <p>After clicking "Finish", there will be some delay while the next screen fills in. Click the "Save" link when it appears.</p>
-<p><img alt="Updating - step 4" src="/assets/ccm-migrator/update04.png" /></p>
+<p><img alt="Updating - step 4" src="../img/update04.png" /></p>
 <p>Depending on your WebSphere configuration, the nodes may synchronize immediately or there may be some delay (typically up to 1 minute) while they synchronize in the background. Changes to the application only take effect after nodes have synchronized.</p>
 <p>After updating the application and synchronizing nodes, and before using the application again, any users of the application should clear their web browser cache to ensure that changes to client-side files take effect. It is only necessary to clear the cache or "temporary internet files". Clearing cookies or logins is unnecessary.</p>
 <h2 id="updating-the-licence">Updating the Licence<a class="headerlink" href="#updating-the-licence" title="Permanent link">&para;</a></h2>
@@ -3594,11 +3604,11 @@ Limited licences also require <code>iswCCMLicenceCommunities</code>.</p>
 </table>
 <p>You may follow the steps below for how to update name space bindings.</p>
 <p>In the ISC, navigate to Environment \ Naming \ Name space bindings.</p>
-<p><img alt="Name-space binding - step 1" src="/assets/ccm-migrator/namespace-binding01.png" /></p>
+<p><img alt="Name-space binding - step 1" src="../img/namespace-binding01.png" /></p>
 <p>Select the <code>iswCCMLicenceKey</code> binding.</p>
-<p><img alt="Name-space binding - step 2" src="/assets/ccm-migrator/namespace-binding05.png" /></p>
+<p><img alt="Name-space binding - step 2" src="../img/namespace-binding05.png" /></p>
 <p>Update the "String" with the new value, then click "OK".</p>
-<p><img alt="Name-space binding - step 3" src="/assets/ccm-migrator/namespace-binding06.png" /></p>
+<p><img alt="Name-space binding - step 3" src="../img/namespace-binding06.png" /></p>
 <p>Then save the master configuration. Repeat these steps for <code>iswCCMLicenceCommunities</code> if this also needs to be updated.</p>
 
   <hr>
@@ -3606,7 +3616,7 @@ Limited licences also require <code>iswCCMLicenceCommunities</code>.</p>
   <small>
     
       Last update:
-      2022-08-03
+      2023-06-20
     
   </small>
 </div>
