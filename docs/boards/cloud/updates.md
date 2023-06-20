@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2023-06-21
+
+Fixes:
+
+- Move button now appears again
+
 2023-06-19
 
 Fixes:
