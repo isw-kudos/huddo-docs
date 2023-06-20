@@ -416,16 +416,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/cp/migration-interface/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/boards/cp/migration/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/boards/cp/minio/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -437,6 +427,16 @@
     </url>
     <url>
          <loc>https://docs.huddo.com/boards/cp/store/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/cp/migration/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/cp/migration/interface/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -631,6 +631,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/boards/msgraph/overview/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/msgraph/auth/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/msgraph/custom-tiles/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -641,22 +651,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/msgraph/notification-bot/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/boards/msgraph/outlook/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/msgraph/outlook_personal/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/boards/msgraph/overview/</loc>
+         <loc>https://docs.huddo.com/boards/msgraph/outlook/personal/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -666,12 +666,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/msgraph/sharepoint_admin/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/boards/msgraph/teams-on-prem/</loc>
+         <loc>https://docs.huddo.com/boards/msgraph/sharepoint/admin/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -681,7 +676,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/msgraph/auth/</loc>
+         <loc>https://docs.huddo.com/boards/msgraph/teams/notification-bot/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/msgraph/teams/on-prem/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -741,17 +741,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/troubleshooting/office365/</loc>
-         <lastmod>2023-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/boards/troubleshooting/safari/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.huddo.com/boards/troubleshooting/websphere/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/troubleshooting/office365/</loc>
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

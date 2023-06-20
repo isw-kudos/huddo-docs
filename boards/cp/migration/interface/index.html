@@ -12,27 +12,23 @@
         <meta name="author" content="Andrew Reynolds">
       
       
-        <link rel="canonical" href="https://docs.huddo.com/boards/msgraph/teams-on-prem/">
+        <link rel="canonical" href="https://docs.huddo.com/boards/cp/migration/interface/">
       
       
-        <link rel="prev" href="../notification-bot/">
       
-      
-        <link rel="next" href="../../integrations/developing/related-tasks/">
-      
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="../../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
     
     
       
-        <title>Teams App - Huddo Docs</title>
+        <title>Activity Migration User Interface - Huddo Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -50,7 +46,7 @@
     
       <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -87,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#huddo-boards-on-premise-in-microsoft-teams" class="md-skip">
+        <a href="#activity-migration-user-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +97,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Huddo Docs" class="md-header__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+    <a href="../../../.." title="Huddo Docs" class="md-header__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -120,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Teams App
+              Activity Migration User Interface
             
           </span>
         </div>
@@ -194,15 +190,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../" class="md-tabs__link">
         Boards
       </a>
     </li>
@@ -218,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../ccm-migrator/features/" class="md-tabs__link">
+      <a href="../../../../ccm-migrator/features/" class="md-tabs__link">
         CCM Migrator
       </a>
     </li>
@@ -239,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../analytics/install/overview/" class="md-tabs__link">
+      <a href="../../../../analytics/install/overview/" class="md-tabs__link">
         Analytics
       </a>
     </li>
@@ -257,7 +251,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../badges/" class="md-tabs__link">
+      <a href="../../../../badges/" class="md-tabs__link">
         Badges
       </a>
     </li>
@@ -285,7 +279,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Huddo Docs" class="md-nav__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+    <a href="../../../.." title="Huddo Docs" class="md-nav__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -314,16 +308,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
         
@@ -348,7 +340,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Boards</a>
+          <a href="../../../">Boards</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -356,7 +348,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Boards
@@ -393,7 +385,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cloud/">Boards Cloud</a>
+          <a href="../../../cloud/">Boards Cloud</a>
           
             <label for="__nav_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -416,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud/updates/" class="md-nav__link">
+      <a href="../../../cloud/updates/" class="md-nav__link">
         Updates
       </a>
     </li>
@@ -460,7 +452,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../integrations/">Integrations</a>
+          <a href="../../../integrations/">Integrations</a>
           
             <label for="__nav_1_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -483,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auth0/" class="md-nav__link">
+      <a href="../../../auth0/" class="md-nav__link">
         Auth0
       </a>
     </li>
@@ -540,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/auth-hybrid/" class="md-nav__link">
+      <a href="../../../connections/auth-hybrid/" class="md-nav__link">
         Authentication
       </a>
     </li>
@@ -554,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/header-hybrid/" class="md-nav__link">
+      <a href="../../../connections/header-hybrid/" class="md-nav__link">
         Header
       </a>
     </li>
@@ -568,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/apps-menu-hybrid/" class="md-nav__link">
+      <a href="../../../connections/apps-menu-hybrid/" class="md-nav__link">
         Apps Menu
       </a>
     </li>
@@ -582,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/widgets-hybrid/" class="md-nav__link">
+      <a href="../../../connections/widgets-hybrid/" class="md-nav__link">
         Widgets
       </a>
     </li>
@@ -596,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/customizer/customizer-integrations-package/" class="md-nav__link">
+      <a href="../../../connections/customizer/customizer-integrations-package/" class="md-nav__link">
         Customizer Extensions
       </a>
     </li>
@@ -610,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/mobile-app-hybrid/" class="md-nav__link">
+      <a href="../../../connections/mobile-app-hybrid/" class="md-nav__link">
         Mobile App
       </a>
     </li>
@@ -624,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/security/" class="md-nav__link">
+      <a href="../../../connections/security/" class="md-nav__link">
         Security
       </a>
     </li>
@@ -645,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../verse/verse-extension/" class="md-nav__link">
+      <a href="../../../verse/verse-extension/" class="md-nav__link">
         HCL Verse
       </a>
     </li>
@@ -659,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/" class="md-nav__link">
+      <a href="../../../domino/" class="md-nav__link">
         HCL Domino
       </a>
     </li>
@@ -685,21 +677,37 @@
           
         
           
-        
+            
           
         
           
-        
+            
           
         
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
           
         
       
       
-        <label class="md-nav__link" for="__nav_1_2_3_6" id="__nav_1_2_3_6_label" tabindex="0">
-          Office 365 for Business
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../msgraph/getting-started/">Office 365 for Business</a>
+          
+            <label for="__nav_1_2_3_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_2_3_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_2_3_6">
@@ -714,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../../msgraph/overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -723,18 +731,6 @@
             
           
             
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
-        Getting Started
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -742,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom-tiles/" class="md-nav__link">
+      <a href="../../../msgraph/custom-tiles/" class="md-nav__link">
         App Tile
       </a>
     </li>
@@ -756,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../teams/" class="md-nav__link">
+      <a href="../../../msgraph/teams/" class="md-nav__link">
         Teams Integration
       </a>
     </li>
@@ -770,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../outlook/" class="md-nav__link">
+      <a href="../../../msgraph/outlook/" class="md-nav__link">
         Outlook Plugin
       </a>
     </li>
@@ -784,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sharepoint/" class="md-nav__link">
+      <a href="../../../msgraph/sharepoint/" class="md-nav__link">
         Sharepoint Pages
       </a>
     </li>
@@ -817,16 +813,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
       
       
         
@@ -861,7 +855,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../kubernetes/">Boards Self-Hosted</a>
+          <a href="../../../kubernetes/">Boards Self-Hosted</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -869,7 +863,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           Boards Self-Hosted
@@ -884,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cp/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         a) For HCL Connections
       </a>
     </li>
@@ -898,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/" class="md-nav__link">
+      <a href="../../../kubernetes/" class="md-nav__link">
         b) For Kubernetes
       </a>
     </li>
@@ -912,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standalone/" class="md-nav__link">
+      <a href="../../../standalone/" class="md-nav__link">
         c) Standalone
       </a>
     </li>
@@ -926,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../images/" class="md-nav__link">
+      <a href="../../../images/" class="md-nav__link">
         Access to Images
       </a>
     </li>
@@ -940,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../env/common/" class="md-nav__link">
+      <a href="../../../env/common/" class="md-nav__link">
         Common Config
       </a>
     </li>
@@ -954,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compatibility/" class="md-nav__link">
+      <a href="../../../compatibility/" class="md-nav__link">
         Compatibility
       </a>
     </li>
@@ -968,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../helm-charts/" class="md-nav__link">
+      <a href="../../../helm-charts/" class="md-nav__link">
         Helm Charts
       </a>
     </li>
@@ -980,16 +974,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_9" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_9" >
       
       
         
@@ -1010,7 +1002,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_9_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9">
           <span class="md-nav__icon md-icon"></span>
           Integrations
@@ -1035,6 +1027,8 @@
           
         
           
+            
+          
         
           
         
@@ -1054,10 +1048,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_3_9_1" id="__nav_1_3_9_1_label" tabindex="0">
-          HCL Connections
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">HCL Connections</a>
+          
+            <label for="__nav_1_3_9_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9_1">
@@ -1072,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/migration/" class="md-nav__link">
+      <a href="../../../connections/migration/" class="md-nav__link">
         Activity Migration (Kube)
       </a>
     </li>
@@ -1081,18 +1081,6 @@
             
           
             
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cp/migration/" class="md-nav__link">
-        Activity Migration (CP)
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -1100,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/auth-on-prem/" class="md-nav__link">
+      <a href="../../../connections/auth-on-prem/" class="md-nav__link">
         Authentication
       </a>
     </li>
@@ -1114,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/keycloak/" class="md-nav__link">
+      <a href="../../../connections/keycloak/" class="md-nav__link">
         Keycloak Authentication
       </a>
     </li>
@@ -1128,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/header-on-prem/" class="md-nav__link">
+      <a href="../../../connections/header-on-prem/" class="md-nav__link">
         Header
       </a>
     </li>
@@ -1142,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/apps-menu-on-prem/" class="md-nav__link">
+      <a href="../../../connections/apps-menu-on-prem/" class="md-nav__link">
         Apps Menu
       </a>
     </li>
@@ -1156,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/widgets-on-prem/" class="md-nav__link">
+      <a href="../../../connections/widgets-on-prem/" class="md-nav__link">
         Widgets
       </a>
     </li>
@@ -1170,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/mobile-app-on-prem/" class="md-nav__link">
+      <a href="../../../connections/mobile-app-on-prem/" class="md-nav__link">
         Mobile App
       </a>
     </li>
@@ -1184,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/customizer/customizer-integrations-package/" class="md-nav__link">
+      <a href="../../../connections/customizer/customizer-integrations-package/" class="md-nav__link">
         Customizer Integrations
       </a>
     </li>
@@ -1198,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/httpd/" class="md-nav__link">
+      <a href="../../../connections/httpd/" class="md-nav__link">
         Web Server Config
       </a>
     </li>
@@ -1219,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../verse/verse-extension/" class="md-nav__link">
+      <a href="../../../verse/verse-extension/" class="md-nav__link">
         HCL Verse
       </a>
     </li>
@@ -1233,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/" class="md-nav__link">
+      <a href="../../../domino/" class="md-nav__link">
         HCL Domino
       </a>
     </li>
@@ -1245,16 +1233,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_9_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_9_4" >
       
       
         
@@ -1271,7 +1257,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../auth/">Office 365</a>
+          <a href="../../../msgraph/auth/">Office 365</a>
           
             <label for="__nav_1_3_9_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1279,7 +1265,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_9_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_3_9_4">
           <span class="md-nav__icon md-icon"></span>
           Office 365
@@ -1294,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../notification-bot/" class="md-nav__link">
+      <a href="../../../msgraph/teams/notification-bot/" class="md-nav__link">
         Teams Notification Bot
       </a>
     </li>
@@ -1306,93 +1292,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Teams App
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../msgraph/teams/on-prem/" class="md-nav__link">
         Teams App
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-application" class="md-nav__link">
-    Configure Application
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#download-from-boards" class="md-nav__link">
-    Download from Boards
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-in-teams" class="md-nav__link">
-    Install in Teams
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-app-id" class="md-nav__link">
-    Configure App ID
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
-    How To Use
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1411,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/developing/related-tasks/" class="md-nav__link">
+      <a href="../../../integrations/developing/related-tasks/" class="md-nav__link">
         Related Tasks
       </a>
     </li>
@@ -1432,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/" class="md-nav__link">
+      <a href="../../../releases/" class="md-nav__link">
         Releases
       </a>
     </li>
@@ -1453,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hybrid/" class="md-nav__link">
+      <a href="../../../hybrid/" class="md-nav__link">
         Boards Hybrid
       </a>
     </li>
@@ -1489,7 +1393,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cp/roles/">FAQ</a>
+          <a href="../../roles/">FAQ</a>
           
             <label for="__nav_1_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1510,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/languages/" class="md-nav__link">
+      <a href="../../../faq/languages/" class="md-nav__link">
         Languages
       </a>
     </li>
@@ -1524,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/notifications/" class="md-nav__link">
+      <a href="../../../faq/notifications/" class="md-nav__link">
         Notifications
       </a>
     </li>
@@ -1591,7 +1495,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../howto/">User Guides</a>
+          <a href="../../../howto/">User Guides</a>
           
             <label for="__nav_1_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1614,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/knowledgebase/" class="md-nav__link">
+      <a href="../../../howto/knowledgebase/" class="md-nav__link">
         Knowledge Base & Support
       </a>
     </li>
@@ -1628,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/getting-started/" class="md-nav__link">
+      <a href="../../../howto/getting-started/" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -1642,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/quick-tips/" class="md-nav__link">
+      <a href="../../../howto/quick-tips/" class="md-nav__link">
         Quick Tips
       </a>
     </li>
@@ -1656,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/start-a-trial/" class="md-nav__link">
+      <a href="../../../howto/start-a-trial/" class="md-nav__link">
         Starting a trial
       </a>
     </li>
@@ -1670,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/mobile-app/" class="md-nav__link">
+      <a href="../../../howto/mobile-app/" class="md-nav__link">
         Mobile App
       </a>
     </li>
@@ -1684,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/homepage/" class="md-nav__link">
+      <a href="../../../howto/homepage/" class="md-nav__link">
         Home Page
       </a>
     </li>
@@ -1735,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/templates/global/" class="md-nav__link">
+      <a href="../../../howto/templates/global/" class="md-nav__link">
         Use a Template
       </a>
     </li>
@@ -1749,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/templates/creating/" class="md-nav__link">
+      <a href="../../../howto/templates/creating/" class="md-nav__link">
         Create a Template
       </a>
     </li>
@@ -1763,7 +1667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/assignment-roles/assignment-roles/" class="md-nav__link">
+      <a href="../../../howto/assignment-roles/assignment-roles/" class="md-nav__link">
         Assignment Roles
       </a>
     </li>
@@ -1777,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/import-activity/import/" class="md-nav__link">
+      <a href="../../../howto/import-activity/import/" class="md-nav__link">
         Hybrid - Import an Activity
       </a>
     </li>
@@ -1844,7 +1748,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../howto/adding-members/">Working in a Board</a>
+          <a href="../../../howto/adding-members/">Working in a Board</a>
           
             <label for="__nav_1_6_9">
               <span class="md-nav__icon md-icon"></span>
@@ -1867,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/adding-members/" class="md-nav__link">
+      <a href="../../../howto/adding-members/" class="md-nav__link">
         Adding Members
       </a>
     </li>
@@ -1881,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/permissions/" class="md-nav__link">
+      <a href="../../../howto/permissions/" class="md-nav__link">
         Member Permissions
       </a>
     </li>
@@ -1895,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/archiving-and-restoring/" class="md-nav__link">
+      <a href="../../../howto/archiving-and-restoring/" class="md-nav__link">
         Archiving and Restoring
       </a>
     </li>
@@ -1909,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/attaching-files/" class="md-nav__link">
+      <a href="../../../howto/attaching-files/" class="md-nav__link">
         Attaching Files to Cards
       </a>
     </li>
@@ -1923,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/mindmap/" class="md-nav__link">
+      <a href="../../../howto/mindmap/" class="md-nav__link">
         Mind Map
       </a>
     </li>
@@ -1937,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/timeline/" class="md-nav__link">
+      <a href="../../../howto/timeline/" class="md-nav__link">
         Timeline
       </a>
     </li>
@@ -1951,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/dependencies/" class="md-nav__link">
+      <a href="../../../howto/dependencies/" class="md-nav__link">
         Task Dependencies
       </a>
     </li>
@@ -2017,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/connections/connections-ui/" class="md-nav__link">
+      <a href="../../../howto/connections/connections-ui/" class="md-nav__link">
         HCL Connections
       </a>
     </li>
@@ -2031,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/use-verse/" class="md-nav__link">
+      <a href="../../../howto/use-verse/" class="md-nav__link">
         HCL Verse
       </a>
     </li>
@@ -2045,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/use-auth0/" class="md-nav__link">
+      <a href="../../../howto/use-auth0/" class="md-nav__link">
         Login with Auth0
       </a>
     </li>
@@ -2059,7 +1963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/onedrive/" class="md-nav__link">
+      <a href="../../../howto/microsoft/onedrive/" class="md-nav__link">
         Microsoft OneDrive
       </a>
     </li>
@@ -2073,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/outlook/" class="md-nav__link">
+      <a href="../../../howto/microsoft/outlook/" class="md-nav__link">
         Microsoft Outlook
       </a>
     </li>
@@ -2087,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/sharepoint/" class="md-nav__link">
+      <a href="../../../howto/microsoft/sharepoint/" class="md-nav__link">
         Microsoft SharePoint
       </a>
     </li>
@@ -2101,7 +2005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/teams/adding-boards/" class="md-nav__link">
+      <a href="../../../howto/teams/adding-boards/" class="md-nav__link">
         Microsoft Teams
       </a>
     </li>
@@ -2115,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/teams/disable-notifications/" class="md-nav__link">
+      <a href="../../../howto/teams/disable-notifications/" class="md-nav__link">
         Teams - Disable Notifications
       </a>
     </li>
@@ -2184,7 +2088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cp/latest/" class="md-nav__link">
+      <a href="../../latest/" class="md-nav__link">
         Latest Release in CP
       </a>
     </li>
@@ -2198,7 +2102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/org-config/" class="md-nav__link">
+      <a href="../../../admin/org-config/" class="md-nav__link">
         Manage Config
       </a>
     </li>
@@ -2212,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/manage-licences/" class="md-nav__link">
+      <a href="../../../admin/manage-licences/" class="md-nav__link">
         Manage Licences
       </a>
     </li>
@@ -2226,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/revoke-users/" class="md-nav__link">
+      <a href="../../../admin/revoke-users/" class="md-nav__link">
         Revoke Users
       </a>
     </li>
@@ -2281,7 +2185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/transition-between-providers/" class="md-nav__link">
+      <a href="../../../admin/transition-between-providers/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -2295,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/sync-profiles/" class="md-nav__link">
+      <a href="../../../admin/sync-profiles/" class="md-nav__link">
         Synchronise Profiles
       </a>
     </li>
@@ -2309,7 +2213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/link-users/" class="md-nav__link">
+      <a href="../../../admin/link-users/" class="md-nav__link">
         Link User Accounts
       </a>
     </li>
@@ -2323,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/replace-group-membership/" class="md-nav__link">
+      <a href="../../../admin/replace-group-membership/" class="md-nav__link">
         Replace Group Membership
       </a>
     </li>
@@ -2337,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/transfer-ownership-unlink/" class="md-nav__link">
+      <a href="../../../admin/transfer-ownership-unlink/" class="md-nav__link">
         Transfer Ownership & Unlink
       </a>
     </li>
@@ -2351,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/deactivate-login/" class="md-nav__link">
+      <a href="../../../admin/deactivate-login/" class="md-nav__link">
         Deactivate Login
       </a>
     </li>
@@ -2392,6 +2296,8 @@
           
         
           
+            
+          
         
           
         
@@ -2405,10 +2311,16 @@
         
       
       
-        <label class="md-nav__link" for="__nav_1_7_6" id="__nav_1_7_6_label" tabindex="0">
-          Troubleshooting
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../troubleshooting/office365/">Troubleshooting</a>
+          
+            <label for="__nav_1_7_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_6">
@@ -2423,7 +2335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/activities-plus-install/" class="md-nav__link">
+      <a href="../../../troubleshooting/activities-plus-install/" class="md-nav__link">
         Activities Plus
       </a>
     </li>
@@ -2437,7 +2349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/activity-migration/" class="md-nav__link">
+      <a href="../../../troubleshooting/activity-migration/" class="md-nav__link">
         Activity Migration
       </a>
     </li>
@@ -2451,7 +2363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/conn-hybrid/" class="md-nav__link">
+      <a href="../../../troubleshooting/conn-hybrid/" class="md-nav__link">
         Boards Hybrid
       </a>
     </li>
@@ -2465,7 +2377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/docker/" class="md-nav__link">
+      <a href="../../../troubleshooting/docker/" class="md-nav__link">
         Boards Docker
       </a>
     </li>
@@ -2479,7 +2391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/websphere/" class="md-nav__link">
+      <a href="../../../troubleshooting/websphere/" class="md-nav__link">
         Boards WebSphere
       </a>
     </li>
@@ -2488,18 +2400,6 @@
             
           
             
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshooting/office365/" class="md-nav__link">
-        Office 365
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -2507,7 +2407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/oauth/" class="md-nav__link">
+      <a href="../../../troubleshooting/oauth/" class="md-nav__link">
         OAuth
       </a>
     </li>
@@ -2521,7 +2421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/mongo/" class="md-nav__link">
+      <a href="../../../troubleshooting/mongo/" class="md-nav__link">
         Mongo
       </a>
     </li>
@@ -2535,7 +2435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/nginx/" class="md-nav__link">
+      <a href="../../../troubleshooting/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -2549,7 +2449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/notifications/" class="md-nav__link">
+      <a href="../../../troubleshooting/notifications/" class="md-nav__link">
         Notifications
       </a>
     </li>
@@ -2594,7 +2494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/safari/" class="md-nav__link">
+      <a href="../../../troubleshooting/safari/" class="md-nav__link">
         Safari
       </a>
     </li>
@@ -2678,7 +2578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/features/" class="md-nav__link">
+      <a href="../../../../ccm-migrator/features/" class="md-nav__link">
         Features
       </a>
     </li>
@@ -2692,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/install/" class="md-nav__link">
+      <a href="../../../../ccm-migrator/install/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -2706,7 +2606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/update/" class="md-nav__link">
+      <a href="../../../../ccm-migrator/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -2720,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/usage/" class="md-nav__link">
+      <a href="../../../../ccm-migrator/usage/" class="md-nav__link">
         Usage
       </a>
     </li>
@@ -2734,7 +2634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/supported-data/" class="md-nav__link">
+      <a href="../../../../ccm-migrator/supported-data/" class="md-nav__link">
         Supported Data
       </a>
     </li>
@@ -2748,7 +2648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/export-fs/" class="md-nav__link">
+      <a href="../../../../ccm-migrator/export-fs/" class="md-nav__link">
         File-system Export
       </a>
     </li>
@@ -2850,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/overview/" class="md-nav__link">
+      <a href="../../../../analytics/install/overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -2864,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/app/" class="md-nav__link">
+      <a href="../../../../analytics/install/app/" class="md-nav__link">
         Install Application
       </a>
     </li>
@@ -2878,7 +2778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/install-widgets/" class="md-nav__link">
+      <a href="../../../../analytics/install/install-widgets/" class="md-nav__link">
         Widgets
       </a>
     </li>
@@ -2892,7 +2792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/apply-changes/" class="md-nav__link">
+      <a href="../../../../analytics/install/apply-changes/" class="md-nav__link">
         Apply Changes
       </a>
     </li>
@@ -2906,7 +2806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/add-widgets/" class="md-nav__link">
+      <a href="../../../../analytics/install/add-widgets/" class="md-nav__link">
         Add Widgets
       </a>
     </li>
@@ -2920,7 +2820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/comm-properties/" class="md-nav__link">
+      <a href="../../../../analytics/install/comm-properties/" class="md-nav__link">
         Community Properties
       </a>
     </li>
@@ -2934,7 +2834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/licence/" class="md-nav__link">
+      <a href="../../../../analytics/install/licence/" class="md-nav__link">
         Licence
       </a>
     </li>
@@ -2948,7 +2848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/customising/" class="md-nav__link">
+      <a href="../../../../analytics/install/customising/" class="md-nav__link">
         Customising
       </a>
     </li>
@@ -2962,7 +2862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/websphere-faq/" class="md-nav__link">
+      <a href="../../../../analytics/install/websphere-faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -3013,7 +2913,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../analytics/user-guide/introduction/">User Guide</a>
+          <a href="../../../../analytics/user-guide/introduction/">User Guide</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -3036,7 +2936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/using-reports/" class="md-nav__link">
+      <a href="../../../../analytics/user-guide/using-reports/" class="md-nav__link">
         Using Reports
       </a>
     </li>
@@ -3050,7 +2950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/available-reports/" class="md-nav__link">
+      <a href="../../../../analytics/user-guide/available-reports/" class="md-nav__link">
         Available Reports
       </a>
     </li>
@@ -3064,7 +2964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/access-reports/" class="md-nav__link">
+      <a href="../../../../analytics/user-guide/access-reports/" class="md-nav__link">
         How to Access Reports
       </a>
     </li>
@@ -3078,7 +2978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/terms/" class="md-nav__link">
+      <a href="../../../../analytics/user-guide/terms/" class="md-nav__link">
         Glossary of Terms
       </a>
     </li>
@@ -3092,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/itemtype-map/" class="md-nav__link">
+      <a href="../../../../analytics/user-guide/itemtype-map/" class="md-nav__link">
         Event Map
       </a>
     </li>
@@ -3145,7 +3045,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../badges/">Badges</a>
+          <a href="../../../../badges/">Badges</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -3232,7 +3132,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../badges/install/">Installation</a>
+          <a href="../../../../badges/install/">Installation</a>
           
             <label for="__nav_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -3255,7 +3155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/app/" class="md-nav__link">
+      <a href="../../../../badges/install/app/" class="md-nav__link">
         WebSphere Application
       </a>
     </li>
@@ -3269,7 +3169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/install-widgets/" class="md-nav__link">
+      <a href="../../../../badges/install/install-widgets/" class="md-nav__link">
         Widgets
       </a>
     </li>
@@ -3283,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/mobile/" class="md-nav__link">
+      <a href="../../../../badges/install/mobile/" class="md-nav__link">
         Mobile
       </a>
     </li>
@@ -3297,7 +3197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/apply-changes/" class="md-nav__link">
+      <a href="../../../../badges/install/apply-changes/" class="md-nav__link">
         Apply Changes
       </a>
     </li>
@@ -3311,7 +3211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/add-widgets/" class="md-nav__link">
+      <a href="../../../../badges/install/add-widgets/" class="md-nav__link">
         Add Widgets
       </a>
     </li>
@@ -3325,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/comm-properties/" class="md-nav__link">
+      <a href="../../../../badges/install/comm-properties/" class="md-nav__link">
         Community Properties
       </a>
     </li>
@@ -3339,7 +3239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/licence/" class="md-nav__link">
+      <a href="../../../../badges/install/licence/" class="md-nav__link">
         Licence
       </a>
     </li>
@@ -3353,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/load-defaults/" class="md-nav__link">
+      <a href="../../../../badges/install/load-defaults/" class="md-nav__link">
         Defaults
       </a>
     </li>
@@ -3367,7 +3267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/leaderboard/" class="md-nav__link">
+      <a href="../../../../badges/install/leaderboard/" class="md-nav__link">
         Leaderboard
       </a>
     </li>
@@ -3381,7 +3281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/awards/" class="md-nav__link">
+      <a href="../../../../badges/install/awards/" class="md-nav__link">
         Awards
       </a>
     </li>
@@ -3395,7 +3295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/engine/" class="md-nav__link">
+      <a href="../../../../badges/install/engine/" class="md-nav__link">
         Engine
       </a>
     </li>
@@ -3409,7 +3309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/customising/" class="md-nav__link">
+      <a href="../../../../badges/install/customising/" class="md-nav__link">
         Customising
       </a>
     </li>
@@ -3423,7 +3323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/websphere-faq/" class="md-nav__link">
+      <a href="../../../../badges/websphere-faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -3466,7 +3366,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../badges/update/">Update</a>
+          <a href="../../../../badges/update/">Update</a>
           
             <label for="__nav_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -3489,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update/update_app/" class="md-nav__link">
+      <a href="../../../../badges/update/update_app/" class="md-nav__link">
         Update the Application
       </a>
     </li>
@@ -3503,7 +3403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update/refresh_cache/" class="md-nav__link">
+      <a href="../../../../badges/update/refresh_cache/" class="md-nav__link">
         Refresh Widget Cache
       </a>
     </li>
@@ -3524,7 +3424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update-images/" class="md-nav__link">
+      <a href="../../../../badges/update-images/" class="md-nav__link">
         Huddo Images
       </a>
     </li>
@@ -3565,37 +3465,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#remaining-tab" class="md-nav__link">
+    Remaining Tab
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-application" class="md-nav__link">
-    Configure Application
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Application">
+    <nav class="md-nav" aria-label="Remaining Tab">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#download-from-boards" class="md-nav__link">
-    Download from Boards
+  <a href="#activities-table" class="md-nav__link">
+    Activities Table
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-in-teams" class="md-nav__link">
-    Install in Teams
+  <a href="#filters" class="md-nav__link">
+    Filters
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-app-id" class="md-nav__link">
-    Configure App ID
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-buttons" class="md-nav__link">
+    Control Buttons
   </a>
   
 </li>
@@ -3606,8 +3506,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
-    How To Use
+  <a href="#done-tab" class="md-nav__link">
+    Done Tab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boards-user-data-tab" class="md-nav__link">
+    Boards User Data Tab
   </a>
   
 </li>
@@ -3627,114 +3534,78 @@
                   
 
 
-<h1 id="huddo-boards-on-premise-in-microsoft-teams">Huddo Boards On-Premise in Microsoft Teams<a class="headerlink" href="#huddo-boards-on-premise-in-microsoft-teams" title="Permanent link">&para;</a></h1>
-<p><img alt="example" src="/assets/msgraph/teams/personal.png" /></p>
+<h1 id="activity-migration-user-interface">Activity Migration User Interface<a class="headerlink" href="#activity-migration-user-interface" title="Permanent link">&para;</a></h1>
+<p><img alt="example" src="../ui.png" /></p>
 <hr />
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Office 365 Tenant admin account.</p>
-</li>
-<li>
-<p>Office 365 OAuth client. <a href="../auth/">See instructions</a></p>
-</li>
-<li>
-<p>Notification bot (optional). <a href="../notification-bot/">See instructions</a></p>
-</li>
-</ol>
+<h2 id="remaining-tab">Remaining Tab<a class="headerlink" href="#remaining-tab" title="Permanent link">&para;</a></h2>
+<p>The REMAINING tab is where you can select from Activities that have not been migrated and initiate the process for migrating them into Huddo Boards.</p>
+<h3 id="activities-table">Activities Table<a class="headerlink" href="#activities-table" title="Permanent link">&para;</a></h3>
+<p>Select Activities to migrate by clicking the checkboxs next to each activity.</p>
+<p>The table can be sorted by clicking the headers for each column.</p>
+<p>The number of rows per page can be increased using the <code>Rows</code> dropdown.</p>
+<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
+<p>There are multiple filters that can be applied that will remove activities from the table <strong>and the activities included when choosing MIGRATE ALL</strong>.</p>
+<p>Notice that when filters are applied, the total number in the table and MIGRATE ALL button changes.</p>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<p>Near the MIGRATE buttons, there is an Options panel to for enabling features that will affect this migration.</p>
 <blockquote>
-<p><strong>Note:</strong> notifications are <strong>optional</strong> as the bot cannot be configured for internal Huddo Boards deployments</p>
+<p><strong>WARNING:</strong> These options will irreversibly modify your Activities.</span></p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Link to Activity</td>
+<td>This will create an entry in each activity that provides a link to the new Huddo Board. This corresponds to the <code>CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED</code> environment variable when running a headless migration.</td>
+</tr>
+<tr>
+<td>Mark Activity Complete</td>
+<td>This will mark the Activity as complete after migrating it to Huddo Boards. This corresponds to the <code>COMPLETE_ACTIVITY_AFTER_MIGRATED</code> environment variable when running a headless migration.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-buttons">Control Buttons<a class="headerlink" href="#control-buttons" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Migrate Selected</td>
+<td>This will process all Activities which are checked in the view</td>
+</tr>
+<tr>
+<td>Migrate ALL</td>
+<td>All currently visible Activities (on all pages) will be migrated. <strong>Note:</strong> filters affect how many are visible. For example, completed/deleted can be ignored.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="configure-application">Configure Application<a class="headerlink" href="#configure-application" title="Permanent link">&para;</a></h2>
-<h3 id="download-from-boards">Download from Boards<a class="headerlink" href="#download-from-boards" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Login to Huddo Boards with your Microsoft Tenant Admin account</p>
-</li>
-<li>
-<p>Click the <code>Configuration</code> icon and then <code>Manage Org</code></p>
-</li>
-</ol>
-<p><img alt="example" src="/assets/boards/admin.png" /></p>
-<ol>
-<li>Click on your Organisation</li>
-</ol>
-<p><img alt="example" src="/assets/msgraph/teams/admin-orgs.png" /></p>
-<ol>
-<li>Click on your Microsoft client</li>
-</ol>
-<p><img alt="example" src="/assets/msgraph/teams/admin-org.png" /></p>
-<ol>
-<li>
-<p>Click the download button for your configuration</p>
-</li>
-<li>
-<p><code>App with Notifications</code> (if you can and have enabled the <a href="../notification-bot/">notification bot</a>)</p>
-</li>
-<li>
-<p><code>App for Internal Boards Deployment</code> (if you do not want notifications)</p>
-</li>
-</ol>
-<p><img alt="example" src="/assets/msgraph/teams/app-download.png" /></p>
-<h3 id="install-in-teams">Install in Teams<a class="headerlink" href="#install-in-teams" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open the <a href="https://teams.microsoft.com">Teams App</a></li>
-</ol>
-<p>Click <code>Apps</code> -&gt; <code>Upload a custom app</code> -&gt; <code>Upload for [COMPANY_NAME]</code></p>
-<blockquote>
-<p>where <code>[COMPANY_NAME]</code> is the name of your company</p>
-</blockquote>
-<p><img alt="example" src="/assets/msgraph/teams/teams1.png" /></p>
-<ol>
-<li>Upload the Zip file you downloaded above</li>
-</ol>
-<p><img alt="example" src="/assets/msgraph/teams/teams2.png" /></p>
-<ol>
-<li>The Huddo Boards app will now appear under the section <code>Built for [COMPANY_NAME]</code></li>
-</ol>
-<p><img alt="example" src="/assets/msgraph/teams/teams3.png" /></p>
+<h2 id="done-tab">Done Tab<a class="headerlink" href="#done-tab" title="Permanent link">&para;</a></h2>
+<p>This tab shows all of the activities that have been migrated into Huddo Boards.
+The <code>Activity Name</code> is a link to the Activity. The <code>Board</code> column has links to each Board in Huddo Boards.</p>
 <hr />
-<h3 id="configure-app-id">Configure App ID<a class="headerlink" href="#configure-app-id" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Open <a href="https://teams.microsoft.com/_#/apps?intent=0&amp;category=16&amp;autoNavigationOnDone=true&amp;filterByPersonal=false&amp;storeLaunchFromChat=false&amp;addAppDialogEntryPoint=7">Team Apps</a> in your web browser</p>
-<p>Click on <code>Built for [COMPANY_NAME]</code> =&gt; <code>Huddo Boards</code></p>
-<p><img alt="example" src="/assets/msgraph/teams/tenant-apps.png" /></p>
-</li>
-<li>
-<p>Click <code>Add</code></p>
-<p><img alt="example" src="/assets/msgraph/teams/add-app.png" /></p>
-</li>
-<li>
-<p>Huddo Boards personal will now open</p>
-<p>Copy the App ID from the URL. We will use this shortly.</p>
-<p><img alt="example" src="/assets/msgraph/teams/appid.png" /></p>
-</li>
-<li>
-<p>Open the Boards Helm Chart config used for deployment</p>
-<p>Add the following environment variable to <code>provider</code> (uncomment or add the section as required):</p>
-<div class="highlight"><pre><span></span><code><span class="nt">provider</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">MSGRAPH_TEAMS_APP_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;your_app_id&gt;&quot;</span>
-</code></pre></div>
-</li>
-<li>
-<p>Redeploy Boards helm chart as per command for Huddo Boards:</p>
-<p><a href="../../cp/#deploy-boards-helm-chart">HCL Component Pack</a></p>
-<div class="highlight"><pre><span></span><code>helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections
-</code></pre></div>
-<p><a href="../../kubernetes/#deploy-boards-chart">for Docker - Kubernetes</a></p>
-<div class="highlight"><pre><span></span><code>helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
-</code></pre></div>
-<blockquote>
-<p><strong>Note:</strong> <code>--recreate-pods</code> is not required this time as this is only an env variable change</p>
-</blockquote>
-</li>
-</ol>
-<hr />
-<h2 id="how-to-use">How To Use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
-<p>For a full guide on using Huddo Boards in Microsoft Teams, please see <a href="../teams/">our documentation</a>.</p>
+<h2 id="boards-user-data-tab">Boards User Data Tab<a class="headerlink" href="#boards-user-data-tab" title="Permanent link">&para;</a></h2>
+<p>If you're migrating from an environment that has previously been using Huddo Boards WebSphere, you can use this tab to start the process of migrating Boards User Data into Huddo Boards Docker.</p>
+<p>Each user who has used Huddo Boards WebSphere is likely to have created some of this data. It includes:</p>
+<ul>
+<li>The labels a user has assigned to colors which they apply to Board Tiles.</li>
+<li>The Categories a user has created which they apply to Board Tiles.</li>
+</ul>
+<p>If the user already exists in Huddo Boards Docker:</p>
+<ul>
+<li>Their color labels will be deleted and replaced with the labels from Boards WebSphere.</li>
+<li>Imported Categories will be added to their existing list of categories.</li>
+</ul>
+<p>This process only needs to be run once. Subsequent runs will import any data for new Boards WebSphere users and overwrite the previously imported data from the last run.</p>
 
   <hr>
 <div class="md-source-file">
@@ -3843,10 +3714,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a51614de.min.js"></script>
       
         
           <script src="//js.hs-scripts.com/6268180.js"></script>
