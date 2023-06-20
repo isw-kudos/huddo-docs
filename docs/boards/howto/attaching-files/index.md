@@ -1,10 +1,11 @@
 ![Boards](../../../assets/images/boards-logo.jpg){ style="float: right" width=200 }
 
-Huddo Boards allows files under `20mb` to be attached to cards directly.
+Huddo Boards allows files under `50MB` to be attached to cards directly.
 
 Anyone who has access to view the card will be able to view and download the attachment.
 
-> This feature can be disabled organisation wide by an administrator if desired.
+!!! tip
+    This feature can be disabled organisation wide by an administrator if desired.
 
 ### Office 365 (OneDrive) & HCL Connections (Files)
 
