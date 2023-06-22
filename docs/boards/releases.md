@@ -43,6 +43,63 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+#### 2023-06-22
+
+##### Mongo schema migrations
+
+!!! danger
+
+    When deployed, this release (and all subsequent) will perform major once-off schema migrations for Boards data in the Mongo database. We recommend performing a back-up of the database before you update versions.
+
+Features:
+
+- [Template Rescheduling](howto/templates/global.md#template-scheduling)
+- [Template Roles](howto/assignment-roles/assignment-roles.md)
+- Custom Colours - colours and tags have been merged. You are now able to create as many colours as you like in a Board.
+- Button to assign all sub-tasks as dependencies of parent
+- Drag & Drop assignments from parent to sub-cards in modal
+- Drag card to archive
+
+Improvements:
+
+- Readers no longer see actions they cannot perform
+- Outlook attachments using plugin
+- Copy/Paste functionality (buttons & menu items)
+- UI for member adding on Mobile
+- Timeline card title always visible
+- Auto-move dependency parent
+- Expand all in activity view
+- Hide edit options on archived card
+- Localised format of dates in CSV export
+- Cards can be Archived+Deleted from the card modal toolbar.
+- Drag and drop of lists
+
+    - drag by header
+    - fix blank list when scrolled and dragged
+    - prevent scrolling of list in drag mode
+
+Fixes:
+
+- Styling of ITM sidebar in Connections 8 CR1/CR2
+- Connections 8 integrations when Boards on different domain
+- Getting members from private sub-channels (teams)
+- Attachments are moved in child nodes when the parent is moved
+- Updated attachments to correctly show when their parent had been moved
+- Kanban Printing
+- Timeline calendar shifting when opening a card
+- Removed Connections community members not removed from Board membership
+- Dragging card from assigned user created user image as card
+- Sending duplicate due date reminders
+- Card drag and drop
+
+    - issue where a duplicate card appears when drag to end
+    - issue where card jumps back to top when dragging a card to end of same list
+
+- Issue with exporting Board as CSV with special characters (e.g. Umlaut)
+- German translations with extra '}' character
+
+---
+
 #### 2023-05-12
 
 Fixes:
