@@ -1403,6 +1403,26 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2023-06-22" class="md-nav__link">
+    2023-06-22
+  </a>
+  
+    <nav class="md-nav" aria-label="2023-06-22">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongo-schema-migrations" class="md-nav__link">
+    Mongo schema migrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2023-05-12" class="md-nav__link">
     2023-05-12
   </a>
@@ -3766,6 +3786,26 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2023-06-22" class="md-nav__link">
+    2023-06-22
+  </a>
+  
+    <nav class="md-nav" aria-label="2023-06-22">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongo-schema-migrations" class="md-nav__link">
+    Mongo schema migrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2023-05-12" class="md-nav__link">
     2023-05-12
   </a>
@@ -4030,6 +4070,67 @@ chown 1000:1000 -R .
 <p>Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.</p>
 </div>
 <h3 id="2023">2023<a class="headerlink" href="#2023" title="Permanent link">&para;</a></h3>
+<h4 id="2023-06-22">2023-06-22<a class="headerlink" href="#2023-06-22" title="Permanent link">&para;</a></h4>
+<h5 id="mongo-schema-migrations">Mongo schema migrations<a class="headerlink" href="#mongo-schema-migrations" title="Permanent link">&para;</a></h5>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>When deployed, this release (and all subsequent) will perform major once-off schema migrations for Boards data in the Mongo database. We recommend performing a back-up of the database before you update versions.</p>
+</div>
+<p>Features:</p>
+<ul>
+<li><a href="../howto/templates/global/#template-scheduling">Template Rescheduling</a></li>
+<li><a href="../howto/assignment-roles/assignment-roles/">Template Roles</a></li>
+<li>Custom Colours - colours and tags have been merged. You are now able to create as many colours as you like in a Board.</li>
+<li>Button to assign all sub-tasks as dependencies of parent</li>
+<li>Drag &amp; Drop assignments from parent to sub-cards in modal</li>
+<li>Drag card to archive</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Readers no longer see actions they cannot perform</li>
+<li>Outlook attachments using plugin</li>
+<li>Copy/Paste functionality (buttons &amp; menu items)</li>
+<li>UI for member adding on Mobile</li>
+<li>Timeline card title always visible</li>
+<li>Auto-move dependency parent</li>
+<li>Expand all in activity view</li>
+<li>Hide edit options on archived card</li>
+<li>Localised format of dates in CSV export</li>
+<li>Cards can be Archived+Deleted from the card modal toolbar.</li>
+<li>
+<p>Drag and drop of lists</p>
+<ul>
+<li>drag by header</li>
+<li>fix blank list when scrolled and dragged</li>
+<li>prevent scrolling of list in drag mode</li>
+</ul>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Styling of ITM sidebar in Connections 8 CR1/CR2</li>
+<li>Connections 8 integrations when Boards on different domain</li>
+<li>Getting members from private sub-channels (teams)</li>
+<li>Attachments are moved in child nodes when the parent is moved</li>
+<li>Updated attachments to correctly show when their parent had been moved</li>
+<li>Kanban Printing</li>
+<li>Timeline calendar shifting when opening a card</li>
+<li>Removed Connections community members not removed from Board membership</li>
+<li>Dragging card from assigned user created user image as card</li>
+<li>Sending duplicate due date reminders</li>
+<li>
+<p>Card drag and drop</p>
+<ul>
+<li>issue where a duplicate card appears when drag to end</li>
+<li>issue where card jumps back to top when dragging a card to end of same list</li>
+</ul>
+</li>
+<li>
+<p>Issue with exporting Board as CSV with special characters (e.g. Umlaut)</p>
+</li>
+<li>German translations with extra '}' character</li>
+</ul>
+<hr />
 <h4 id="2023-05-12">2023-05-12<a class="headerlink" href="#2023-05-12" title="Permanent link">&para;</a></h4>
 <p>Fixes:</p>
 <ul>
@@ -5375,7 +5476,7 @@ iswkudos/kudos-boards:boards-2020-03-06
   <small>
     
       Last update:
-      2023-06-20
+      2023-06-22
     
   </small>
 </div>
