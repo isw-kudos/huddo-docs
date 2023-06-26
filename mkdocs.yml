@@ -54,6 +54,7 @@ nav:
           - c) Standalone: boards/standalone.md
           - Access to Images: boards/images.md
           - Common Config: boards/env/common.md
+          - Notifications Config: boards/env/notifications.md
           - Compatibility: boards/compatibility.md
           - Helm Charts: boards/helm-charts.md
           - Integrations:

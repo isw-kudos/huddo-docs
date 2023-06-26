@@ -85,6 +85,10 @@ Download our [config file](../../assets/config/kubernetes/boards-cp.yaml) and up
 
 Are [detailed here](../env/common.md).
 
+**Customising Boards notifications**:
+
+ Some elements of the Boards notifications that are sent out [can be customised](/boards/env/notifications).
+
 **Activity migration variables**:
 
 The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](migration/index.md).
