@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2023-06-26
+
+Improvements:
+
+- Readers can now select text in
+
+Fixes:
+
+- Tours appearing incorrectly
+- Template role assignment on touch devices
+
 2023-06-21
 
 Fixes:
