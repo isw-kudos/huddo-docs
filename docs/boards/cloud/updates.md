@@ -11,6 +11,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 Improvements:
 
 - Readers can now select text in descriptions
+- General reader experience
 
 Fixes:
 
