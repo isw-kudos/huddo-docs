@@ -89,6 +89,14 @@ Enter the values below and click `Register`
               {
                 "id": "b340eb25-3456-403f-be2f-af7a0d370277",
                 "type": "Scope"
+              },
+              {
+                "id": "59a6b24b-4225-4393-8165-ebaec5f55d7a",
+                "type": "Role"
+              },
+              {
+                "id": "3b55498e-47ec-484f-8136-9013221c06a9",
+                "type": "Role"
               }
             ]
           }
