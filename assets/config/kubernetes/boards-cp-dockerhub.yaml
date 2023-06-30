@@ -69,7 +69,7 @@ licence:
     # Register your Organisation and download your Free 'Activities Plus' licence key from store.huddo.com
     LICENCE: secret-string-you-download
 
-# https://docs.huddo.com/boards/msgraph/teams-on-prem/
+# https://docs.huddo.com/boards/msgraph/teams/on-prem/
 # Uncomment/configure the following 3 lines if you are using this Huddo Boards deployment from Microsoft Teams
 # provider:
 #   env:

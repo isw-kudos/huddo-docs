@@ -63,7 +63,7 @@ provider:
   env:
     # NODE_TLS_REJECT_UNAUTHORIZED: "0"
     WIDGET_ID: Huddo Community Boards
-    # https://docs.huddo.com/boards/msgraph/teams-on-prem/
+    # https://docs.huddo.com/boards/msgraph/teams/on-prem/
     # Uncomment/configure the following line if you are using this Huddo Boards deployment from Microsoft Teams
     # MSGRAPH_TEAMS_APP_ID: app-id-shown-in-teams-url
 
