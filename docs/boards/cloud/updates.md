@@ -13,7 +13,8 @@ Improvements:
 - Improved author experience - restrict to allowed actions
 - Board title/board options button - styling and usability improvements
 - Current member role now highlighted in members dialog and links added to member permissions documentation
-- Better role colour generation when assigning member roles
+- Improved randomisation and readability of Assignment Role colours
+- Added tooltips to Assignment Role avatars
 - Microsoft Teams
 
     - detect members in private sub channels (OAuth Admin consent must be certified again)
@@ -25,8 +26,9 @@ Fixes:
 - Connections 8 styling fixes
 - Fixed coloured role borders when assigning member roles
 - Fix URLs pointing to old docs pages
-- issue detecting highest licence when multiple
-
+- Issue detecting highest licence when multiple
+- Minor fixes to Welcome and Plan Selection dialogs
+  
 ---
 
 ### June
