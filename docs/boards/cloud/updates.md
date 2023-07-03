@@ -4,6 +4,23 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### July
+
+2023-07-03
+
+Improvements:
+
+- Improved author experience - restrict to allowed actions
+- Board title/board options button - styling and usability improvements
+- Current member role now highlighted in members dialog and links added to member permissions documentation
+- Better role colour generation when assigning member roles
+
+Fixes:
+
+- Connections 8 styling fixes
+- Fixed coloured role borders when assigning member roles
+- Fix URLs pointing to old docs pages
+
 ### June
 
 2023-06-26
@@ -76,23 +93,23 @@ Improvements:
 
 - Drag and drop of lists
 
-    - drag by header
-    - fix blank list when scrolled and dragged
-    - prevent scrolling of list in drag mode
+  - drag by header
+  - fix blank list when scrolled and dragged
+  - prevent scrolling of list in drag mode
 
 - Cards can be Archived+Deleted from the card modal toolbar.
 - Enable "Assign to Roles" when creating a new Board via 'Create Template from Board' button.
 - More compact Board Members view on small (phone) screens.
 
-Fixes: 
+Fixes:
 
 - Issue with blank tile label
 - Issue with empty Assign Roles in new Board wizard
 - Board Tiles sidebar shadow regression bug
 - Card drag and drop
 
-    - issue where a duplicate card appears when drag to end
-    - issue where card jumps back to top when dragging a card to end of same list
+  - issue where a duplicate card appears when drag to end
+  - issue where card jumps back to top when dragging a card to end of same list
 
 - Button for copying a template says "Copy Template" instead of "Copy Board"
 - Fixed loading of template description in to board description field in the new board wizard.
@@ -106,10 +123,10 @@ Improvements:
 
 - Organisation view of members & groups
 
-    - loading feedback
-    - virtualised scroll for faster render
-    - show membership of linked aliases
-    - prevent duplicates of invites to org
+  - loading feedback
+  - virtualised scroll for faster render
+  - show membership of linked aliases
+  - prevent duplicates of invites to org
 
 - localised format of dates in CSV export
 
@@ -127,12 +144,12 @@ Features:
 Improvements:
 
 - Auto-move dependency parent
-- Expand all in activity view 
+- Expand all in activity view
 - Hide edit options on archived card
 - Performance improvements related to icons used on Template Roles
 - Show count of tasks assigned to Role in Board Members view
 
-Fixes: 
+Fixes:
 
 - Dragging card from assigned user created user image as card
 - Sending duplicate due date reminders
@@ -148,7 +165,7 @@ Features:
 - Button to assign all sub-tasks as dependencies of parent
 - Template Roles - base functionality
 
-Fixes: 
+Fixes:
 
 - Removed Connections community members not removed from Board membership
 - Deleting an assigned label
@@ -267,64 +284,65 @@ Fixes:
 
 - Improvements
 
-    - synchronise dependencies in real time
-    - faster creation of multi cards
-    - presence of users open on card without board open
-    - link to API documentation
-    - adding dependencies between private cards
-    - handling of dependencies where not accessible
-    - make associated comments public when card is made public
-    - synchronise my private tasks between my windows
+  - synchronise dependencies in real time
+  - faster creation of multi cards
+  - presence of users open on card without board open
+  - link to API documentation
+  - adding dependencies between private cards
+  - handling of dependencies where not accessible
+  - make associated comments public when card is made public
+  - synchronise my private tasks between my windows
 
 - Fixes
 
-    - issue where someone online in board remained online if page reloaded
-    - issue where lists hidden when previewing Kanban view while creating a Board
-    - issue where page crashed on logout in Node view
-    - issue where page crashed on logout in Timeline view
-    - issue where files couldn't be downloaded
-    - issue where page reloaded in admin view
+  - issue where someone online in board remained online if page reloaded
+  - issue where lists hidden when previewing Kanban view while creating a Board
+  - issue where page crashed on logout in Node view
+  - issue where page crashed on logout in Timeline view
+  - issue where files couldn't be downloaded
+  - issue where page reloaded in admin view
 
 2022-11-08
 
 - Features
 
-    - installable web app
+  - installable web app
 
 - Performance
 
-    - faster load
-    - added virtual scroll for Kanban
-    - smoother drag and drop
-    - faster filtering/searching inside a Board
+  - faster load
+  - added virtual scroll for Kanban
+  - smoother drag and drop
+  - faster filtering/searching inside a Board
 
 - Improvements
 
-    - improved new user experience in integrations
-    - hide dependency lines while dragging & resizing
-    - usability of tile color label edit/selection
-    - stop auto redirecting expired account
+  - improved new user experience in integrations
+  - hide dependency lines while dragging & resizing
+  - usability of tile color label edit/selection
+  - stop auto redirecting expired account
 
 - Fixes
 
-    - fix for drag scrolling lists on mobile
-    - fix editing link titles
-    - fix positioning of timeline arrows caused by swimlane animations
-    - fix double click to add list
+  - fix for drag scrolling lists on mobile
+  - fix editing link titles
+  - fix positioning of timeline arrows caused by swimlane animations
+  - fix double click to add list
 
 ---
+
 ### October
 
 2022-10-17
 
 - Updates for Timeline
 
-    - animate expand/collapse of scheduled lanes
-    - fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)
-    - highlight multiple instances of same card on hover
-    - remember last view (list/color/members)
-    - live updates of list names, color labels and members
-    - show color labels
+  - animate expand/collapse of scheduled lanes
+  - fix for hidden cards on timeline when duplicated (eg multiple colors/assignments)
+  - highlight multiple instances of same card on hover
+  - remember last view (list/color/members)
+  - live updates of list names, color labels and members
+  - show color labels
 
 2022-10-05
 
