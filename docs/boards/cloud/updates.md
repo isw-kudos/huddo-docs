@@ -14,12 +14,20 @@ Improvements:
 - Board title/board options button - styling and usability improvements
 - Current member role now highlighted in members dialog and links added to member permissions documentation
 - Better role colour generation when assigning member roles
+- Microsoft Teams
+
+    - detect members in private sub channels (OAuth Admin consent must be certified again)
+    - fix for creating Board in private sub channels
+    - loading spinner positioning
 
 Fixes:
 
 - Connections 8 styling fixes
 - Fixed coloured role borders when assigning member roles
 - Fix URLs pointing to old docs pages
+- issue detecting highest licence when multiple
+
+---
 
 ### June
 
