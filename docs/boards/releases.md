@@ -43,6 +43,34 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+
+#### 2023-07-04
+
+Improvements:
+
+- Readers can now select text in descriptions
+- General reader experience
+- Improved author experience - restrict to allowed actions
+- Board title/board options button - styling and usability improvements
+- Current member role now highlighted in members dialog and links added to member permissions documentation
+- Improved randomisation and readability of Assignment Role colours
+- Added tooltips to Assignment Role avatars
+- Microsoft Teams
+
+    - detect members in private sub channels (OAuth Admin consent must be certified again)
+    - fix for creating Board in private sub channels
+    - loading spinner positioning
+
+Fixes:
+
+- Connections 8 styling fixes (support banner and nav customisations)
+- Fixed coloured role borders when assigning member roles
+- Fix URLs pointing to old docs pages
+- Issue detecting highest licence when multiple
+- Minor fixes to Welcome and Plan Selection dialogs
+- Template role assignment on touch devices
+- Assignments to non-primary aliases
+
 #### 2023-06-22
 
 ##### Mongo schema migrations
