@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2023-07-04
+
+Fixes:
+
+- Assignments to non-primary aliases
+
 2023-07-03
 
 Improvements:
