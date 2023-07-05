@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2023-07-05
+
+Fixes:
+
+- Ability to edit nodes when opened directly
+
 2023-07-04
 
 Fixes:
