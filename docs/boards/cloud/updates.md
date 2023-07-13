@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2023-07-12
+
+Fixes:
+
+- Activity list missing action menu
+
 2023-07-05
 
 Fixes:
