@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2023-07-13
+
+Fixes:
+
+- Drag & Drop from rich email clients onto a list
+
 2023-07-12
 
 Fixes:
