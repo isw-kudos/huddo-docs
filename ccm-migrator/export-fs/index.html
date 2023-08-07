@@ -21,7 +21,7 @@
         <link rel="next" href="../../analytics/install/overview/">
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3655,28 +3655,28 @@ the directory name should minimise the chance of a directory-name conflict.</p>
 <h2 id="directory-structure">Directory structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h2>
 <p>When migrating to the file system, all folders in a library and the current version of
 all files are placed in a directory structure like the following:<br>
-<strong>&lt;Community Name>/files/&lt;Library Name>/&lt;Folder>/&lt;Subfolder></strong></p>
+<strong>&lt;Community Name&gt;/files/&lt;Library Name&gt;/&lt;Folder&gt;/&lt;Subfolder&gt;</strong></p>
 <p>When either migrating to the file system, or exporting metadata during a migration to
 Connections Files, metadata files and folders will be placed in a directory structure like
 the following:<br>
-<strong>&lt;Community Name>/metadata/&lt;Library Name>/&lt;Folder>/&lt;Subfolder></strong></p>
+<strong>&lt;Community Name&gt;/metadata/&lt;Library Name&gt;/&lt;Folder&gt;/&lt;Subfolder&gt;</strong></p>
 <p>The metadata location is also used to export most file versions excluding the current
 version, when migrating to the file system.</p>
-<p>In both cases above, <strong>&lt;Subfolder></strong> may be repeated for as many subfolder levels as
+<p>In both cases above, <strong>&lt;Subfolder&gt;</strong> may be repeated for as many subfolder levels as
 were present in CCM.</p>
 <p>Within the metadata structure, there will be:</p>
 <ul>
 <li>A <strong>members.csv</strong> file in each library directory, listing the library members;</li>
 <li><strong>members.csv</strong> and <strong>meta.csv</strong> files for each folder, listing the folder members and
 metadata; and</li>
-<li>Directories named like <strong>&lt;Filename>&lt;extension>.meta</strong> corresponding with each CCM
+<li>Directories named like <strong>&lt;Filename&gt;&lt;extension&gt;.meta</strong> corresponding with each CCM
 file. This directory will contain versions of the CCM file, along with <strong>comments.csv</strong>,
 <strong>members.csv</strong>, and <strong>meta.csv</strong> files listing comments, members, and metadata for that file.</li>
 </ul>
 <p>Versions of a CCM file have version numbers in their filename. Version numbers will be
 exactly as reported by CCM, which typically uses a major/minor decimal format like "<strong>1.0</strong>".</p>
 <p>The filename format for versions will be:<br>
-<strong>&lt;Original filename>_v&lt;version number>&lt;extension></strong></p>
+<strong>&lt;Original filename&gt;_v&lt;version number&gt;&lt;extension&gt;</strong></p>
 <h3 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>If the current version is <strong>Proposal.docx</strong>, then version 1 (superseded) will be
 <strong>Proposal_v1.0.docx</strong> in the <strong>Proposal.docx.meta</strong> subdirectory.</p>
