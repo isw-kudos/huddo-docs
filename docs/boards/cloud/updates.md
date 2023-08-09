@@ -6,16 +6,22 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2023-08-09
+
+Fixes:
+
+- Ensure assignments are duplicated when copying and pasting tasks
+
 2023-08-07
 
 Improvements:
 
-- Users with the author role now have full edit access on cards that are assigned to them (rather than complete and comment access only).
+- Users with the author role now have full edit access on cards that are assigned to them (rather than complete and comment access only)
 
 Fixes:
 
-- Prevent cards from being moved to another list at the same time they are archived by dragging to the archive button.
-- Ensure the current user has the correct actions available according to their board role when opening cards from the My Todos view.
+- Prevent cards from being moved to another list at the same time they are archived by dragging to the archive button
+- Ensure the current user has the correct actions available according to their board role when opening cards from the My Todos view
 
 
 ### July
