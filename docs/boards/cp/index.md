@@ -35,10 +35,10 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
 
-| Provider                        | Registration / Documentation                            | Callback URL                                                 |
-| ------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+| Provider                        | Registration / Documentation                         | Callback URL                                                 |
+| ------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
 | HCL Connections<br>(on premise) | [Huddo instructions](../connections/auth-on-prem.md) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
-| Microsoft Office 365            | [Huddo instructions](../msgraph/auth/index.md)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
+| Microsoft Office 365            | [Huddo instructions](../msgraph/auth/index.md)       | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
 
 ---
 
@@ -80,6 +80,7 @@ Download our [config file](../../assets/config/kubernetes/boards-cp.yaml) and up
 | `webfront.ingress.hosts` | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)      |
 | `core.ingress.hosts`     | `[API_URL]` (no protocol, e.g. `connections.example.com/api-boards`)   |
 | `minio.nfs.server`       | IP address of the NFS Server file mount (e.g. `192.168.10.20`)         |
+| `minio.storageClassName` | (Optional) name of the storage class when using dynamic provisioning   |
 
 **Boards variables**:
 
@@ -87,7 +88,7 @@ Are [detailed here](../env/common.md).
 
 **Customising Boards notifications**:
 
- Some elements of the Boards notifications that are sent out [can be customised](/boards/env/notifications).
+Some elements of the Boards notifications that are sent out [can be customised](/boards/env/notifications).
 
 **Activity migration variables**:
 
@@ -99,7 +100,7 @@ The Activity migration chart will be deployed separately but use the same config
 
 Install the Boards services via our Helm chart
 
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 

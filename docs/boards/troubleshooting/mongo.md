@@ -8,6 +8,10 @@ You may need to connect to Mongo for validation or other changes. To connect to 
 
         kubectl exec -it mongo-0 -c mongo -n connections -- mongo --ssl --sslPEMKeyFile /etc/mongodb/x509/user_admin.pem --sslCAFile /etc/mongodb/x509/mongo-CA-cert.crt --host mongo-0.mongo.connections.svc.cluster.local --authenticationMechanism=MONGODB-X509 --authenticationDatabase '$external' -u C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=admin,emailAddress=admin@mongodb
 
+
+        # CP Mongo5
+        kubectl exec -it mongo5-0 -c mongo5 -n connections -- mongosh --tls --tlsCertificateKeyFile /etc/ca/user_admin.pem --tlsCAFile /etc/ca/internal-ca-chain.cert.pem --host mongo5-0.mongo5.connections.svc.cluster.local --authenticationMechanism=MONGODB-X509 --authenticationDatabase '$external' -u C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=admin,emailAddress=admin@mongodb
+
 - Standalone deployment
 
     1.  get the name of the mongo pod
