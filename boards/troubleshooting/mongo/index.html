@@ -3590,6 +3590,9 @@
 <li>
 <p>In Component Pack</p>
 <div class="highlight"><pre><span></span><code>kubectl exec -it mongo-0 -c mongo -n connections -- mongo --ssl --sslPEMKeyFile /etc/mongodb/x509/user_admin.pem --sslCAFile /etc/mongodb/x509/mongo-CA-cert.crt --host mongo-0.mongo.connections.svc.cluster.local --authenticationMechanism=MONGODB-X509 --authenticationDatabase &#39;$external&#39; -u C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=admin,emailAddress=admin@mongodb
+
+# CP Mongo5
+kubectl exec -it mongo5-0 -c mongo5 -n connections -- mongosh --tls --tlsCertificateKeyFile /etc/ca/user_admin.pem --tlsCAFile /etc/ca/internal-ca-chain.cert.pem --host mongo5-0.mongo5.connections.svc.cluster.local --authenticationMechanism=MONGODB-X509 --authenticationDatabase &#39;$external&#39; -u C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=admin,emailAddress=admin@mongodb
 </code></pre></div>
 </li>
 <li>
@@ -3683,7 +3686,7 @@ db.users.find({ name: &quot;Nicky Tope&quot; })
   <small>
     
       Last update:
-      2023-05-09
+      2023-08-15
     
   </small>
 </div>

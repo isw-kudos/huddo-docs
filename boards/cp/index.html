@@ -3900,6 +3900,10 @@
 <td><code>minio.nfs.server</code></td>
 <td>IP address of the NFS Server file mount (e.g. <code>192.168.10.20</code>)</td>
 </tr>
+<tr>
+<td><code>minio.storageClassName</code></td>
+<td>(Optional) name of the storage class when using dynamic provisioning</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Boards variables</strong>:</p>
@@ -3911,7 +3915,7 @@
 <hr />
 <h3 id="deploy-boards-helm-chart">Deploy Boards Helm Chart<a class="headerlink" href="#deploy-boards-helm-chart" title="Permanent link">&para;</a></h3>
 <p>Install the Boards services via our Helm chart</p>
-<div class="highlight"><pre><span></span><code>helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+<div class="highlight"><pre><span></span><code>helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 </code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> <code>--recreate-pods</code> ensures all images are up to date. This will cause downtime.</p>
@@ -3947,7 +3951,7 @@
   <small>
     
       Last update:
-      2023-06-26
+      2023-08-15
     
   </small>
 </div>
