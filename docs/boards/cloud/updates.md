@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2023-08-15
+
+Fixes:
+
+- Reload loop during login with Firefox
+
 2023-08-09
 
 Fixes:
