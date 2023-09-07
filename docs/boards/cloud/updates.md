@@ -4,6 +4,25 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### September
+
+2023-09-07
+
+Features:
+
+- Organisation content administration & membership management
+
+Improvements:
+
+- Pasting URLs into description and comments automatically converted to clickable link
+
+Fixes:
+
+- issues in dependency arrow positioning
+- auto reschedule dependencies when dates change
+- selecting the same file to upload after cancelling
+- expand/collapse lists when pivoted by dates/assignment
+
 ### August
 
 2023-08-15
