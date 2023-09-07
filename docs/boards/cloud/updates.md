@@ -11,6 +11,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 Features:
 
 - Organisation content administration & membership management
+- Labels pivot view for Board and Activity views
 
 Improvements:
 
