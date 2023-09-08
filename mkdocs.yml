@@ -116,6 +116,7 @@ nav:
       - Administration:
           - Latest Release in CP: boards/cp/latest.md
           - Manage Config: boards/admin/org-config.md
+          - Boards Content and Member Management: boards/admin/content-member-management.md
           - Manage Licences: boards/admin/manage-licences.md
           - Revoke Users: boards/admin/revoke-users.md
           - Transition Providers:
