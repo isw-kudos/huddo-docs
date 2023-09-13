@@ -43,8 +43,45 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+#### 2023-09-14
+
+!!! danger
+
+    When deployed, this release (and all subsequent) will perform major once-off schema migrations for Boards data in the Mongo database. We recommend performing a back-up of the database before you update versions.
+
+Features:
+
+- Organisation content administration & membership management
+- Labels pivot view for Board and Activity views
+- Pasting URLs into description and comments automatically converted to clickable link
+
+Improvements:
+
+- support HCL Connections 8 CR3 style changes
+- API performance (faster response, less data) of the
+
+  - 'My/Public Boards' data
+  - cards in a Board
+
+- Users with the author role now have full edit access on cards that are assigned to them (rather than complete and comment access only)
+- consistency of sidebar icon positioning when collapsed/expanded
+
+Fixes:
+
+- public member creation when creating Board
+- issues in dependency arrow positioning
+- auto reschedule dependencies when dates change
+- selecting the same file to upload after cancelling
+- expand/collapse lists when pivoted by dates/assignment
+- Ensure assignments are duplicated when copying and pasting tasks
+- Prevent cards from being moved to another list at the same time they are archived by dragging to the archive button
+- Ensure the current user has the correct actions available according to their board role when opening cards from the My Todos view
+- Drag & Drop from rich email clients onto a list
+- Activity list missing action menu
 
 #### 2023-07-04
+
+##### Mongo schema migrations
 
 Improvements:
 
