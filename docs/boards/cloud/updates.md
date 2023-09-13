@@ -18,6 +18,12 @@ Fixes:
 - whitespace of cards in Activity list
 - HCL Connections 8 CR3 whitespace
 
+2023-09-12
+
+Improvments:
+
+- loading speed of the 'My Boards' data
+
 2023-09-08
 
 Fixes:
