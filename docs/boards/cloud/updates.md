@@ -6,6 +6,24 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### September
 
+2023-09-14
+
+Improvements:
+
+- consistency of sidebar icon positioning when collapsed/expanded
+
+Fixes:
+
+- public member creation when creating Board
+- whitespace of cards in Activity list
+- HCL Connections 8 CR3 whitespace
+
+2023-09-08
+
+Fixes:
+
+- membership role options when created inside a Team/Community
+
 2023-09-07
 
 Features:
