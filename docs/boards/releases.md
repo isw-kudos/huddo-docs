@@ -45,6 +45,8 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 #### 2023-09-14
 
+##### Mongo schema migrations
+
 !!! danger
 
     When deployed, this release (and all subsequent) will perform major once-off schema migrations for Boards data in the Mongo database. We recommend performing a back-up of the database before you update versions.
@@ -80,8 +82,6 @@ Fixes:
 - Activity list missing action menu
 
 #### 2023-07-04
-
-##### Mongo schema migrations
 
 Improvements:
 
