@@ -62,8 +62,8 @@ Improvements:
 - support HCL Connections 8 CR3 style changes
 - API performance (faster response, less data) of the
 
-  - 'My/Public Boards' data
-  - cards in a Board
+    - 'My/Public Boards' data
+    - cards in a Board
 
 - Users with the author role now have full edit access on cards that are assigned to them (rather than complete and comment access only)
 - consistency of sidebar icon positioning when collapsed/expanded
