@@ -11,6 +11,9 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 Improvements:
 
 - consistency of sidebar icon positioning when collapsed/expanded
+- allow case insensitive Collab login
+- update to teams-js v2
+- open filesin Teams in-place (deep links)
 
 Fixes:
 
