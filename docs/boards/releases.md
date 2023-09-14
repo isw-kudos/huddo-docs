@@ -53,7 +53,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 Features:
 
-- Organisation content administration & membership management
+- [Organisation content administration & membership management](./admin/content-member-management.md)
 - Labels pivot view for Board and Activity views
 - Pasting URLs into description and comments automatically converted to clickable link
 

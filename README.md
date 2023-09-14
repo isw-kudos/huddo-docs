@@ -10,6 +10,20 @@ A Jenkins hook automatically builds and deploys this repository on any push to t
 
 Directly commit any changes to the master branch to publish a new version of the website. This includes editing md files or config (in `mkdocs.yml`) and adding new pages and assets.
 
+## Admonitions
+
+We use [a plugin](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#type:question) to show nice Warning/Danger/Info/Note etc
+
+To style your comment use the following syntax
+
+```
+!!! info
+
+    This is an information admonition
+```
+
+For more styles and examples please see [the documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#type:question).
+
 ## Setting Up Local Dev For Previews
 
 1. Run in Docker

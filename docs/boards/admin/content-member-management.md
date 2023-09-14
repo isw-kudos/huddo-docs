@@ -1,10 +1,22 @@
 # Boards Content and Member Management
 
-Organisation administrators can view a list of all boards in their organisation, with actions available to manage these boards and their members.
+Organisation administrators can view a list of all boards in their organisation, with actions available to manage these boards and their members.  To access the new view in
 
-On the Huddo Boards homepage / My boards page, click your organisation on the left sidebar, then click the `Boards` tab to view the list of boards:
+- a) Boards Cloud
 
-![](img/manage-boards1.png)
+    On the Huddo Boards homepage / My Boards page, click your organisation on the left sidebar, then click the `Boards` tab to view the list of boards:
+
+    ![](img/manage-boards-cloud.png)
+
+- b) Boards On-Premise
+
+    Open `Admin Settings`, then your organisation
+
+    ![Open Settings](img/settings.png)
+
+    Under `Content management` click `Boards`
+
+    ![Content management - Boards](img/manage-boards-on-prem.png)
 
 ## Sorting
 The boards data can be sorted by clicking on the column headers:
@@ -59,23 +71,30 @@ This action will show a dialog allowing new owners to be added and/or existing o
 ![](img/manage-boards-manage-ownership.png)
 
 ### Delete
-Delete the selected boards and all their data permanently. 
-> **WARNING**  
-> Use this action cautiously and at your own risk.
+
+!!! danger
+
+    Use this action cautiously and at your own risk.
+
+Delete the selected boards and all their data permanently.
+
+![Delete](img/manage-boards-delete.png)
 
 ## Find and replace owner on all boards
-It may be necessary to replace a board owner with someone else across all boards in the organisation, for example if an employee has left the company and the boards data needs to be accessed by their replacement.
+It may be necessary to replace a board owner with someone else across all boards in the organisation, for example if an employee has left the company and the boards data needs to be accessed by their replacement. To do this:
 
-To do this click the `Find and replace owner on all boards` button to bring up a dialog:
+1. Click the `Find and replace owner on all boards` button to bring up a dialog:
 
-![](img/manage-boards-replace-owner-btn.png)
+    ![](img/manage-boards-replace-owner-btn.png)
 
-Next, search for and select the current owner to replace and the new/replacement owner. Groups can be selected:
+1. Search for and select the current owner to replace and the new/replacement owner. Groups can be selected:
 
-![](img/manage-boards-replace-owner.png)
+    ![](img/manage-boards-replace-owner.png)
 
-Click the `Replace Owner` button to confirm the owner replacement:
+1. Click the `Replace Owner` button to confirm the owner replacement:
 
-![](img/manage-boards-replace-owner-confirm.png)
+    ![](img/manage-boards-replace-owner-confirm.png)
 
-Note that a toast will temporarily appear at the bottom left of screen which will allow you to undo this action.
+    !!! note
+
+        an undo action will temporarily appear at the bottom left of screen if you wish to cancel this action
