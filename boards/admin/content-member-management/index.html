@@ -4746,9 +4746,21 @@
 
 
 <h1 id="boards-content-and-member-management">Boards Content and Member Management<a class="headerlink" href="#boards-content-and-member-management" title="Permanent link">&para;</a></h1>
-<p>Organisation administrators can view a list of all boards in their organisation, with actions available to manage these boards and their members.</p>
-<p>On the Huddo Boards homepage / My boards page, click your organisation on the left sidebar, then click the <code>Boards</code> tab to view the list of boards:</p>
-<p><img alt="" src="../img/manage-boards1.png" /></p>
+<p>Organisation administrators can view a list of all boards in their organisation, with actions available to manage these boards and their members.  To access the new view in</p>
+<ul>
+<li>
+<p>a) Boards Cloud</p>
+<p>On the Huddo Boards homepage / My Boards page, click your organisation on the left sidebar, then click the <code>Boards</code> tab to view the list of boards:</p>
+<p><img alt="" src="../img/manage-boards-cloud.png" /></p>
+</li>
+<li>
+<p>b) Boards On-Premise</p>
+<p>Open <code>Admin Settings</code>, then your organisation</p>
+<p><img alt="Open Settings" src="../img/settings.png" /></p>
+<p>Under <code>Content management</code> click <code>Boards</code></p>
+<p><img alt="Content management - Boards" src="../img/manage-boards-on-prem.png" /></p>
+</li>
+</ul>
 <h2 id="sorting">Sorting<a class="headerlink" href="#sorting" title="Permanent link">&para;</a></h2>
 <p>The boards data can be sorted by clicking on the column headers:</p>
 <p><img alt="" src="../img/manage-boards-sorting.png" /></p>
@@ -4781,27 +4793,39 @@ Once boards are selected, options become available to action on those boards:</p
 <p>This action will show a dialog allowing new owners to be added and/or existing owners removed from the boards that are selected:</p>
 <p><img alt="" src="../img/manage-boards-manage-ownership.png" /></p>
 <h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
-<p>Delete the selected boards and all their data permanently. </p>
-<blockquote>
-<p><strong>WARNING</strong><br />
-Use this action cautiously and at your own risk.</p>
-</blockquote>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Use this action cautiously and at your own risk.</p>
+</div>
+<p>Delete the selected boards and all their data permanently.</p>
+<p><img alt="Delete" src="../img/manage-boards-delete.png" /></p>
 <h2 id="find-and-replace-owner-on-all-boards">Find and replace owner on all boards<a class="headerlink" href="#find-and-replace-owner-on-all-boards" title="Permanent link">&para;</a></h2>
-<p>It may be necessary to replace a board owner with someone else across all boards in the organisation, for example if an employee has left the company and the boards data needs to be accessed by their replacement.</p>
-<p>To do this click the <code>Find and replace owner on all boards</code> button to bring up a dialog:</p>
+<p>It may be necessary to replace a board owner with someone else across all boards in the organisation, for example if an employee has left the company and the boards data needs to be accessed by their replacement. To do this:</p>
+<ol>
+<li>
+<p>Click the <code>Find and replace owner on all boards</code> button to bring up a dialog:</p>
 <p><img alt="" src="../img/manage-boards-replace-owner-btn.png" /></p>
-<p>Next, search for and select the current owner to replace and the new/replacement owner. Groups can be selected:</p>
+</li>
+<li>
+<p>Search for and select the current owner to replace and the new/replacement owner. Groups can be selected:</p>
 <p><img alt="" src="../img/manage-boards-replace-owner.png" /></p>
+</li>
+<li>
 <p>Click the <code>Replace Owner</code> button to confirm the owner replacement:</p>
 <p><img alt="" src="../img/manage-boards-replace-owner-confirm.png" /></p>
-<p>Note that a toast will temporarily appear at the bottom left of screen which will allow you to undo this action.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>an undo action will temporarily appear at the bottom left of screen if you wish to cancel this action</p>
+</div>
+</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2023-09-08
+      2023-09-14
     
   </small>
 </div>
