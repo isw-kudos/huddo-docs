@@ -37,7 +37,7 @@ Fixes:
 
 Features:
 
-- Organisation content administration & membership management
+- [Organisation content administration & membership management](../admin/content-member-management.md)
 - Labels pivot view for Board and Activity views
 
 Improvements:
