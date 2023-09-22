@@ -6,6 +6,21 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### September
 
+2023-09-22
+
+Improvements
+
+- API security, added 'Strict-Transport-Security' & 'X-Content-Type-Options'
+
+Fixes:
+
+- (regression) encoding of file names when uploading special charactors (e.g. Japanese)
+- issue where deleting a dependency changes the current view
+
+2023-09-19
+
+- update of `busboy` dependency used for file upload (includes security patches, node support etc)
+
 2023-09-14
 
 Improvements:
