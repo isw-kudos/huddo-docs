@@ -8,13 +8,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 2023-09-29
 
+Improvements:
+
+- More German language translations
+
 Fixes:
 
 - Ability to paste images into descriptions
 
 2023-09-22
 
-Improvements
+Improvements:
 
 - API security, added 'Strict-Transport-Security' & 'X-Content-Type-Options'
 
