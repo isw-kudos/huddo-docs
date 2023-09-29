@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### September
 
+2023-09-29
+
+Fixes:
+
+- Ability to paste images into descriptions
+
 2023-09-22
 
 Improvements
