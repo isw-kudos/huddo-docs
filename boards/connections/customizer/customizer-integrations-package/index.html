@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d451bc0e.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.79e020e9.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a5377069.min.css">
@@ -4596,7 +4596,7 @@
 <li>Get a terminal session to your <code>mw-proxy</code> server. e.g. via <code>ssh</code></li>
 <li><code>mkdir /pv-connections/customizations/boards-extensions</code> if it doesn't exist.</li>
 <li><code>cd /pv-connections/customizations/boards-extensions</code></li>
-<li>In a web browser, download your custom Boards Extensions package from <a href="https://boards.huddo.com/boards-extensions">Huddo Store</a>.</li>
+<li>In a web browser, download your custom Boards Extensions package from <a href="https://store.huddo.com/boards-extensions">Huddo Store</a>.</li>
 <li>Extract this package to <code>/pv-connections/customizations/boards-extensions</code>.</li>
 <li><code>cat settings.js</code> and check that the "boardsURL" property has been set to the URL of your Boards deployment.</li>
 </ol>
@@ -4610,27 +4610,14 @@
 <li>Click <em>Save Changes</em></li>
 <li>Your screen should look something like this:
   <img alt="Appreg Code Editor" src="../code-editor.png" /></li>
+<li><strong>Important</strong>: Connections customizer only supports one extension that customizes the Connections Navigation (<code>"type": "com.hcl.connections.nav"</code>). If you already have nav customizations, you must remove the "Tasks Nav Button" extension from <code>manifest.json</code> and merge it in to your existing nav customization. Otherwise only one of your nav customisations will take affect.</li>
 </ol>
 <h3 id="disabling-extensions">Disabling Extensions<a class="headerlink" href="#disabling-extensions" title="Permanent link">&para;</a></h3>
 <p>Individual extensions within this package can be disabled using the <em>Extensions</em> screen or by editing the JSON in the <em>Code Editor</em>. For example, if you're not using Connections 8, you may want to disable the extensions for Connections 8. There is no major issue in keeping these enabled. However, disabling extensions that are not compatible or needed will stop unnecessarily loading that extension's code.</p>
 <p>Keep in mind that any changes made will be discarded when following the <em>Updating</em> steps below.
 <img alt="Appreg Extensions Screen" src="../appreg-extensions.png" /></p>
 <h1 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h1>
-<p>You can see when this package was last updated <a href="https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz">here</a>. Open <a href="https://connections.example.com/files/customizer/boards-extensions/VERSION">https://connections.example.com/files/customizer/boards-extensions/VERSION</a> to see your version.</p>
-<ol>
-<li>
-<p>To update, run 
-    <div class="highlight"><pre><span></span><code>/pv-connections/customizations/boards-extensions/update.sh
-</code></pre></div>
-    on your <code>mw-proxy</code> server. </p>
-</li>
-<li>
-<p>Repeat the <a href="#boardsURLConfig">Boards URL configuration</a> if necessary. </p>
-</li>
-<li>
-<p>Copy the updated <a href="https://connections.example.com/files/customizer/boards-extensions/manifest.json">https://connections.example.com/files/customizer/boards-extensions/manifest.json</a> and overwrite the existing code in the Connections Customizer App Registry.</p>
-</li>
-</ol>
+<p>Repeat the above steps, overwriting the existing files and manifest in appreg.</p>
 <p><img alt="App Editor" src="../code-editor.png" /></p>
 <!-- ## Testing
 
@@ -4652,7 +4639,7 @@ TODO: Write user documentation for each of the integrations and refer to them fo
   <small>
     
       Last update:
-      2023-06-20
+      2023-10-04
     
   </small>
 </div>
@@ -4754,10 +4741,11 @@ TODO: Write user documentation for each of the integrations and refer to them fo
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+    
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
