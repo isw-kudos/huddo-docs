@@ -31,10 +31,10 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
 1. Click !["New App" button](./appreg-newapp.png)
 1. Open _Code Editor_
 1. Paste the JSON from the clipboard, in to the editor
-1. Click _Save Changes_
-1. Your screen should look something like this:
-  ![Appreg Code Editor](./code-editor.png)
-1. **Important**: Connections customizer only supports one extension that customizes the Connections Navigation (`"type": "com.hcl.connections.nav"`). If you already have nav customizations, you must remove the "Tasks Nav Button" extension from `manifest.json` and merge it in to your existing nav customization. Otherwise only one of your nav customisations will take affect.
+   - Your screen should look something like this:
+     ![Appreg Code Editor](./code-editor.png)
+2. Click _Save Changes_. You should see a notice about your changes being saved.
+3. **Important**: Connections customizer only supports one extension that customizes the Connections Navigation (`"type": "com.hcl.connections.nav"`). If you already have nav customizations, you must remove the "Tasks Nav Button" extension from `manifest.json` and merge it in to your existing nav customization. Otherwise only one of your nav customisations will take effect.
 
 ### Disabling Extensions
 Individual extensions within this package can be disabled using the _Extensions_ screen or by editing the JSON in the _Code Editor_. For example, if you're not using Connections 8, you may want to disable the extensions for Connections 8. There is no major issue in keeping these enabled. However, disabling extensions that are not compatible or needed will stop unnecessarily loading that extension's code.
@@ -43,9 +43,7 @@ Keep in mind that any changes made will be discarded when following the _Updatin
 ![Appreg Extensions Screen](./appreg-extensions.png)
 
 # Updating
-Repeat the above steps, overwriting the existing files and manifest in appreg.
-
-![App Editor](./code-editor.png)
+Remove all files in `/pv-connections/customizations/boards-extensions`. Repeat the above steps, overwriting the manifest in appreg.
 
 <!-- ## Testing
 
