@@ -20,7 +20,7 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
 1. Get a terminal session to your `mw-proxy` server. e.g. via `ssh`
 2. `mkdir /pv-connections/customizations/boards-extensions` if it doesn't exist.
 3. `cd /pv-connections/customizations/boards-extensions`
-4. In a web browser, download your custom Boards Extensions package from [Huddo Store](https://boards.huddo.com/boards-extensions).
+4. In a web browser, download your custom Boards Extensions package from [Huddo Store](https://store.huddo.com/boards-extensions).
 5. Extract this package to `/pv-connections/customizations/boards-extensions`.
 6. `cat settings.js` and check that the "boardsURL" property has been set to the URL of your Boards deployment.
 
@@ -34,6 +34,7 @@ Check the rules in your HTTP proxy that direct traffic to `mw-proxy` (customizer
 1. Click _Save Changes_
 1. Your screen should look something like this:
   ![Appreg Code Editor](./code-editor.png)
+1. **Important**: Connections customizer only supports one extension that customizes the Connections Navigation (`"type": "com.hcl.connections.nav"`). If you already have nav customizations, you must remove the "Tasks Nav Button" extension from `manifest.json` and merge it in to your existing nav customization. Otherwise only one of your nav customisations will take affect.
 
 ### Disabling Extensions
 Individual extensions within this package can be disabled using the _Extensions_ screen or by editing the JSON in the _Code Editor_. For example, if you're not using Connections 8, you may want to disable the extensions for Connections 8. There is no major issue in keeping these enabled. However, disabling extensions that are not compatible or needed will stop unnecessarily loading that extension's code.
@@ -42,17 +43,7 @@ Keep in mind that any changes made will be discarded when following the _Updatin
 ![Appreg Extensions Screen](./appreg-extensions.png)
 
 # Updating
-You can see when this package was last updated [here](https://github.com/isw-kudos/huddo-docs/commits/main/docs/boards/connections/boards-extensions.tgz). Open [https://connections.example.com/files/customizer/boards-extensions/VERSION](https://connections.example.com/files/customizer/boards-extensions/VERSION) to see your version.
-
-1. To update, run 
-    ```bash
-    /pv-connections/customizations/boards-extensions/update.sh
-    ``` 
-    on your `mw-proxy` server. 
-
-1. Repeat the [Boards URL configuration](#boardsURLConfig) if necessary. 
-
-1. Copy the updated [https://connections.example.com/files/customizer/boards-extensions/manifest.json](https://connections.example.com/files/customizer/boards-extensions/manifest.json) and overwrite the existing code in the Connections Customizer App Registry.
+Repeat the above steps, overwriting the existing files and manifest in appreg.
 
 ![App Editor](./code-editor.png)
 
