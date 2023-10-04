@@ -4607,18 +4607,17 @@
 <li>Click <img alt="&quot;New App&quot; button" src="../appreg-newapp.png" /></li>
 <li>Open <em>Code Editor</em></li>
 <li>Paste the JSON from the clipboard, in to the editor</li>
-<li>Click <em>Save Changes</em></li>
 <li>Your screen should look something like this:
-  <img alt="Appreg Code Editor" src="../code-editor.png" /></li>
-<li><strong>Important</strong>: Connections customizer only supports one extension that customizes the Connections Navigation (<code>"type": "com.hcl.connections.nav"</code>). If you already have nav customizations, you must remove the "Tasks Nav Button" extension from <code>manifest.json</code> and merge it in to your existing nav customization. Otherwise only one of your nav customisations will take affect.</li>
+     <img alt="Appreg Code Editor" src="../code-editor.png" /></li>
+<li>Click <em>Save Changes</em>. You should see a notice about your changes being saved.</li>
+<li><strong>Important</strong>: Connections customizer only supports one extension that customizes the Connections Navigation (<code>"type": "com.hcl.connections.nav"</code>). If you already have nav customizations, you must remove the "Tasks Nav Button" extension from <code>manifest.json</code> and merge it in to your existing nav customization. Otherwise only one of your nav customisations will take effect.</li>
 </ol>
 <h3 id="disabling-extensions">Disabling Extensions<a class="headerlink" href="#disabling-extensions" title="Permanent link">&para;</a></h3>
 <p>Individual extensions within this package can be disabled using the <em>Extensions</em> screen or by editing the JSON in the <em>Code Editor</em>. For example, if you're not using Connections 8, you may want to disable the extensions for Connections 8. There is no major issue in keeping these enabled. However, disabling extensions that are not compatible or needed will stop unnecessarily loading that extension's code.</p>
 <p>Keep in mind that any changes made will be discarded when following the <em>Updating</em> steps below.
 <img alt="Appreg Extensions Screen" src="../appreg-extensions.png" /></p>
 <h1 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h1>
-<p>Repeat the above steps, overwriting the existing files and manifest in appreg.</p>
-<p><img alt="App Editor" src="../code-editor.png" /></p>
+<p>Remove all files in <code>/pv-connections/customizations/boards-extensions</code>. Repeat the above steps, overwriting the manifest in appreg.</p>
 <!-- ## Testing
 
 TODO: Write user documentation for each of the integrations and refer to them for testing.
@@ -4639,7 +4638,7 @@ TODO: Write user documentation for each of the integrations and refer to them fo
   <small>
     
       Last update:
-      2023-10-04
+      2023-10-05
     
   </small>
 </div>
