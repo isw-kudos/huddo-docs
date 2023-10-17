@@ -43,6 +43,23 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+#### 2023-10-17
+
+Improvements:
+
+- updated German translations (UI and emails)
+- expired session handling when using SSO
+
+Fixes:
+
+- showing CNX8 notification action center in sidebar
+- pasting image in rich text field (desciption and comments)
+- support SafeLinx cookie auth on manifest.json
+- issue where dependencies change view after deletion
+- allow assigned author to assign/unassign
+
+---
+
 #### 2023-09-14
 
 ##### Mongo schema migrations
