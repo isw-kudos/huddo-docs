@@ -220,7 +220,28 @@ extra_javascript:
   - "//js.hs-scripts.com/6268180.js"
   # - "assets/scripts/banner.js"
 
+extra:
+  alternate:
+      # Original Language
+    - name: English
+      lang: 'en'
+      link: '%GT_RELATIVE_URL%'  # For relative urls back to original language
+      # Extra languages
+      # _x_tr_sl = source language
+      # _x_tr_tl = translation language
+    - name: 日本語
+      lang: 'ja'
+      link: 'https://translate.goog/?_x_tr_sl=en&_x_tr_tl=ja'
+    - name: Deutsch
+      lang: 'de'
+      link: 'https://translate.goog/?_x_tr_sl=en&_x_tr_tl=de'
+    - name: Nederlands
+      lang: 'nl'
+      link: 'https://translate.goog/?_x_tr_sl=en&_x_tr_tl=nl'
+
 plugins:
   - search
   - git-revision-date:
       enabled_if_env: CI
+  - google-translate:
+      url: docs.huddo.com  # optional (required for local testing)
