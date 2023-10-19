@@ -40,7 +40,7 @@ Only use the Delete option if you don't need to access the card or list ever aga
 
 Open the board you intend to archive. Navigate to `Open Board Options` found in the title of your board, to the left of the search bar.
 
-![](./open-board-options.png)
+![](../open-board-options.png)
 
 In the board options you’ll see the `Archive` button in the actions shown at the top. Click this button to archive the board.
 
