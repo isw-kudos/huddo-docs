@@ -4,6 +4,16 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### October
+
+2023-10-19
+
+Improvements
+
+- loading of Board task stats on tiles as required
+- performance of loading My Boards
+- redirect in place for expired session of Collab/Connections with SSO header
+
 ### September
 
 2023-09-29
