@@ -21,4 +21,13 @@ Calendar applications such as Microsoft Outlook will perform regular synchronisa
 
     !!! note
 
-        If you are experiencing problems subscribing to the feed in a calendar app, try changing the `webcals` part of the copied URL to `https`.
+        If you are experiencing problems subscribing to the feed from within in a calendar app, try changing the `webcals` part of the copied URL to `https`.
+
+    !!! note
+
+        You may experience an error similar to the following when attempting to subscribe to a calendar feed within Microsoft Outlook for Windows.
+
+        ![](./outlook-error.png)
+
+        In this case, follow [the steps shown here](https://www.uwec.edu/kb/article/email-disable-shared-calendar-improvements-in-outlook/) to disable shared calendar improvements.
+        After restarting Outlook, the calendar subscription should now work.
