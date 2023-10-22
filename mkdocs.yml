@@ -104,6 +104,9 @@ nav:
               - Mind Map: boards/howto/mindmap/index.md
               - Timeline: boards/howto/timeline/index.md
               - Task Dependencies: boards/howto/dependencies/index.md
+          - iCalendar Feed:
+              - Personal: boards/howto/ical/personal.md
+              - Board: boards/howto/ical/board.md
           - Boards in other Apps:
               - HCL Connections: boards/howto/connections/connections-ui.md
               - HCL Verse: boards/howto/use-verse.md
