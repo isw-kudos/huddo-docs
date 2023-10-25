@@ -43,6 +43,30 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+#### 2023-10-25
+
+!!! danger
+
+    When deployed, this release (and all subsequent) will perform a once-off schema migration for Boards notification/event data in the Mongo database. We recommend performing a back-up of the database before you update versions
+
+Features
+
+- [Board iCalendar feed](./howto/ical/board.md)
+- [Personal iCalendar feed](./howto/ical/personal.md)
+
+Improvements:
+
+- Show Member/Labels buttons in collapsed sidebar
+- Added translations to missing access role fields
+- loading of Board task stats on tiles as required
+- performance of loading My Boards
+- redirect in place for expired session of Collab/Connections with SSO header
+
+Fixes:
+
+- Connections Header about.jsp issue for older environments (regression in 2023-10-17)
+- Issue where page crashed when reloaded page with Card open, then opening member dialog
+
 #### 2023-10-17
 
 Improvements:
@@ -57,6 +81,10 @@ Fixes:
 - support SafeLinx cookie auth on manifest.json
 - issue where dependencies change view after deletion
 - allow assigned author to assign/unassign
+
+KNOWN ISSUE
+
+- Connections Header loading via SSO loading in older environments (eg CNX7)
 
 ---
 
