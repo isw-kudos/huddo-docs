@@ -6,6 +6,30 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### October
 
+2023-10-25
+
+Improvements:
+
+- Show Member/Labels buttons in collapsed sidebar
+- added translations to missing fields
+
+Fixes:
+
+- Issue where page crashed when reloaded page with Card open, then opening member dialog
+
+2023-10-23
+
+Features
+
+- [Board iCalendar feed](../howto/ical/board.md)
+- [Personal iCalendar feed](../howto/ical/personal.md)
+
+2023-10-20
+
+Fixes
+
+- Collab header regression
+
 2023-10-19
 
 Improvements
