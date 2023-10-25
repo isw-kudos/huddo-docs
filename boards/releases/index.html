@@ -1816,6 +1816,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2023-10-25" class="md-nav__link">
+    2023-10-25
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2023-10-17" class="md-nav__link">
     2023-10-17
   </a>
@@ -5032,6 +5039,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2023-10-25" class="md-nav__link">
+    2023-10-25
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2023-10-17" class="md-nav__link">
     2023-10-17
   </a>
@@ -5350,6 +5364,29 @@ chown 1000:1000 -R .
 <p>Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.</p>
 </div>
 <h3 id="2023">2023<a class="headerlink" href="#2023" title="Permanent link">&para;</a></h3>
+<h4 id="2023-10-25">2023-10-25<a class="headerlink" href="#2023-10-25" title="Permanent link">&para;</a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>When deployed, this release (and all subsequent) will perform a once-off schema migration for Boards notification/event data in the Mongo database. We recommend performing a back-up of the database before you update versions</p>
+</div>
+<p>Features</p>
+<ul>
+<li><a href="../howto/ical/board/">Board iCalendar feed</a></li>
+<li><a href="../howto/ical/personal/">Personal iCalendar feed</a></li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Show Member/Labels buttons in collapsed sidebar</li>
+<li>Added translations to missing access role fields</li>
+<li>loading of Board task stats on tiles as required</li>
+<li>performance of loading My Boards</li>
+<li>redirect in place for expired session of Collab/Connections with SSO header</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Connections Header about.jsp issue for older environments (regression in 2023-10-17)</li>
+<li>Issue where page crashed when reloaded page with Card open, then opening member dialog</li>
+</ul>
 <h4 id="2023-10-17">2023-10-17<a class="headerlink" href="#2023-10-17" title="Permanent link">&para;</a></h4>
 <p>Improvements:</p>
 <ul>
@@ -5363,6 +5400,10 @@ chown 1000:1000 -R .
 <li>support SafeLinx cookie auth on manifest.json</li>
 <li>issue where dependencies change view after deletion</li>
 <li>allow assigned author to assign/unassign</li>
+</ul>
+<p>KNOWN ISSUE</p>
+<ul>
+<li>Connections Header loading via SSO loading in older environments (eg CNX7)</li>
 </ul>
 <hr />
 <h4 id="2023-09-14">2023-09-14<a class="headerlink" href="#2023-09-14" title="Permanent link">&para;</a></h4>
@@ -6840,7 +6881,7 @@ iswkudos/kudos-boards:boards-2020-03-06
   <small>
     
       Last update:
-      2023-10-17
+      2023-10-25
     
   </small>
 </div>
