@@ -19,11 +19,7 @@ Calendar applications such as Microsoft Outlook will perform regular synchronisa
     1.  Click `Subscribe` to open your chosen calendar app for your operating system and subscribe to the feed.
     1.  Click `Copy feed link` to copy the link to the feed to your clipboard. This may be useful for pasting into a calendar application.
 
-    !!! note
-
-        If you are experiencing problems subscribing to the feed from within in a calendar app, try changing the `webcals` part of the copied URL to `https`.
-
-    !!! note
+    !!! info
 
         You may experience an error similar to the following when attempting to subscribe to a calendar feed within Microsoft Outlook for Windows.
 
