@@ -11,7 +11,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 Improvements:
 
 - Translations (German and English US)
-- Use https protocol for Webcal Feed instead of webcals
+- Use https protocol for iCal feed instead of webcals
 - Hide unusable Colors button when read-only access when sidebar collapsed
 - Consistency of Board colour feature naming
 
