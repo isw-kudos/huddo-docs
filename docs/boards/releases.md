@@ -43,6 +43,22 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+#### 2023-10-31
+
+Improvements:
+
+- Translations (German and English US)
+- Use https protocol for Webcal Feed instead of webcals
+- Hide unusable Colors button when read-only access when sidebar collapsed
+- Consistency of Board colour feature naming
+
+Fixes:
+
+- Issue where iCal feed dates off by 1 due to timezone differences
+- Issue where page blank in Firefox when loading with Connections 7 header via SSO
+
+---
+
 #### 2023-10-25
 
 !!! danger
@@ -66,6 +82,8 @@ Fixes:
 
 - Connections Header about.jsp issue for older environments (regression in 2023-10-17)
 - Issue where page crashed when reloaded page with Card open, then opening member dialog
+
+---
 
 #### 2023-10-17
 
@@ -126,6 +144,8 @@ Fixes:
 - Drag & Drop from rich email clients onto a list
 - Activity list missing action menu
 
+---
+
 #### 2023-07-04
 
 Improvements:
@@ -152,6 +172,8 @@ Fixes:
 - Minor fixes to Welcome and Plan Selection dialogs
 - Template role assignment on touch devices
 - Assignments to non-primary aliases
+
+---
 
 #### 2023-06-22
 

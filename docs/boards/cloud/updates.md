@@ -6,6 +6,20 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### October
 
+2023-10-31
+
+Improvements:
+
+- Translations (German and English US)
+- Use https protocol for Webcal Feed instead of webcals
+- Hide unusable Colors button when read-only access when sidebar collapsed
+- Consistency of Board colour feature naming
+
+Fixes:
+
+- Issue where iCal feed dates off by 1 due to timezone differences
+- Issue where page blank in Firefox when loading with Connections 7 header via SSO
+
 2023-10-25
 
 Improvements:
