@@ -4,6 +4,24 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### November
+
+2023-11-13
+
+Improvements
+
+- Accessibility (Tooltips, Keyboard navigation, Screen Reader information, Colour Contrast)
+
+2023-11-09
+
+Improvements:
+
+- API for Member deletion
+
+Fixes:
+
+- Email for mentions missing fields
+
 ### October
 
 2023-10-31
