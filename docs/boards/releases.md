@@ -43,6 +43,19 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+
+#### 2023-11-13
+
+Improvements
+
+- Accessibility (Tooltips, Keyboard navigation, Screen Reader information, Colour Contrast)
+- API for Member deletion
+- Support Keycloak v22 custom path (user.env.CONNECTIONS_KEYCLOAK_PATH)
+
+Fixes:
+
+- Email for mentions missing fields
+
 #### 2023-10-31
 
 Improvements:

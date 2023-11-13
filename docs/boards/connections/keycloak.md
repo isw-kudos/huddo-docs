@@ -4,10 +4,11 @@ For an on-premise (component pack) installation of Huddo Boards, you may use an 
 
 The following ENV variables should be set to achieve this:
 
-| Key                                   | Description                                                 |
-| ------------------------------------- | ----------------------------------------------------------- |
-| `user.env.CONNECTIONS_CLIENT_ID`      | Your Keycloak application client-id                         |
-| `user.env.CONNECTIONS_CLIENT_SECRET`  | Your Keycloak application client-secret                     |
-| `user.env.CONNECTIONS_URL`            | HCL Connections URL, e.g. `https://connections.example.com` |
-| `user.env.CONNECTIONS_KEYCLOAK_URL`   | Your Keycloak URL e.g. `https://login.example.com`          |
-| `user.env.CONNECTIONS_KEYCLOAK_REALM` | Your Keycloak realm                                         |
+| Key                                   | Description                                                                                                     |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `user.env.CONNECTIONS_CLIENT_ID`      | Your Keycloak application client-id                                                                             |
+| `user.env.CONNECTIONS_CLIENT_SECRET`  | Your Keycloak application client-secret                                                                         |
+| `user.env.CONNECTIONS_URL`            | HCL Connections URL, e.g. `https://connections.example.com`                                                     |
+| `user.env.CONNECTIONS_KEYCLOAK_URL`   | Your Keycloak URL e.g. `https://login.example.com`                                                              |
+| `user.env.CONNECTIONS_KEYCLOAK_REALM` | Your Keycloak realm                                                                                             |
+| `user.env.CONNECTIONS_KEYCLOAK_PATH`  | **Optional:** Keycloak path</br>Default: `/auth/realms`</br>Customise this to `/realms` as of Keycloak v22 |
