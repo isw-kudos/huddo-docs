@@ -44,7 +44,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 ### 2023
 
 
-#### 2023-11-13
+#### 2023-11-14
 
 Improvements
 
