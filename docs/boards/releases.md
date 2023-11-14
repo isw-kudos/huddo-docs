@@ -46,9 +46,15 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 #### 2023-11-14
 
-Improvements
+Improvements:
 
-- Accessibility (Tooltips, Keyboard navigation, Screen Reader information, Colour Contrast)
+- Accessibility
+
+    - more consistent tooltips (for screen readers and better explanation of functionality)
+    - Keyboard navigation (particularly in the Board Tiles, Kanban view, Card dialog) - (vision & motor impaired)
+    - better screen reader information (vision impaired)
+    - improved colour contrast (low vision users)
+
 - API for Member deletion
 - Support [Keycloak v22 custom path](./connections/keycloak.md)
 
