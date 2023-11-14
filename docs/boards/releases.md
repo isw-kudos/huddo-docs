@@ -50,7 +50,7 @@ Improvements
 
 - Accessibility (Tooltips, Keyboard navigation, Screen Reader information, Colour Contrast)
 - API for Member deletion
-- Support Keycloak v22 custom path (user.env.CONNECTIONS_KEYCLOAK_PATH)
+- Support [Keycloak v22 custom path](./connections/keycloak.md)
 
 Fixes:
 
