@@ -456,7 +456,7 @@ Features:
 
 Features:
 
-- Domino authentication [More info here](domino.md)
+- Domino authentication [More info here](./domino/proton.md)
 
 Fixes:
 

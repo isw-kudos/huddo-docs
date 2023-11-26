@@ -1,0 +1,395 @@
+{
+    "nsfPath": "names.nsf",
+    "iconName": "factory",
+    "icon": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDggNDgiPgogICAgPHBhdGggZmlsbD0iI0JGMzYwQyIgZD0iTTQxLjIsNWgtNy4zTDMyLDQzaDExTDQxLjIsNXoiLz4KICAgIDxwYXRoIGZpbGw9IiNFNjRBMTkiIGQ9Ik0zMywyM2gtNHYtNmwtMTIsNnYtNkw1LDIzdjIwaDI4VjIzeiIvPgogICAgPHJlY3QgeD0iOSIgeT0iMjciIGZpbGw9IiNGRkMxMDciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiLz4KICAgIDxyZWN0IHg9IjE3IiB5PSIyNyIgZmlsbD0iI0ZGQzEwNyIgd2lkdGg9IjQiIGhlaWdodD0iNCIvPgogICAgPHJlY3QgeD0iMjUiIHk9IjI3IiBmaWxsPSIjRkZDMTA3IiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ii8+CiAgICA8cmVjdCB4PSI5IiB5PSIzNSIgZmlsbD0iI0ZGQzEwNyIgd2lkdGg9IjQiIGhlaWdodD0iNCIvPgogICAgPHJlY3QgeD0iMTciIHk9IjM1IiBmaWxsPSIjRkZDMTA3IiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ii8+CiAgICA8cmVjdCB4PSIyNSIgeT0iMzUiIGZpbGw9IiNGRkMxMDciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiLz4KPC9zdmc+Cg==",
+    "description": "domino directory",
+    "formulaEngine": "domino",
+    "schemaName": "directory",
+    "requireRevisionToUpdate": false,
+    "allowDecryption": true,
+    "dqlAccess": true,
+    "dqlFormula": {
+        "formulaType": "domino",
+        "formula": "@True"
+    },
+    "allowCode": true,
+    "openAccess": true,
+    "maximumAccessLevel": "Editor",
+    "forms": [
+        {
+            "formName": "Group",
+            "alias": [
+                "Distribution List",
+                "Access Group",
+                "Access List",
+                "Group"
+            ],
+            "formModes": [
+                {
+                    "modeName": "default",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "ListName",
+                            "externalName": "ListName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Members",
+                            "externalName": "Members",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "string",
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "ListName",
+                            "externalName": "ListName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Members",
+                            "externalName": "Members",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "string",
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "ListName",
+                            "externalName": "ListName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Members",
+                            "externalName": "Members",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "string",
+                                "type": "string"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "formValue": "Group"
+        },
+        {
+            "formName": "Person",
+            "alias": [
+                "Person"
+            ],
+            "formModes": [
+                {
+                    "modeName": "default",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "$FILES",
+                            "externalName": "$FILES",
+                            "fieldAccess": "RO",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "string",
+                                "type": "string"
+                            },
+                            "readOnly": true
+                        },
+                        {
+                            "name": "FirstName",
+                            "externalName": "FirstName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "FullName",
+                            "externalName": "FullName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY",
+                                "NAMES"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "names",
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "InternetAddress",
+                            "externalName": "InternetAddress",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "LastName",
+                            "externalName": "LastName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Type",
+                            "externalName": "Type",
+                            "fieldAccess": "RO",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string",
+                            "readOnly": true
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "$FILES",
+                            "externalName": "$FILES",
+                            "fieldAccess": "RO",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "string",
+                                "type": "string"
+                            },
+                            "readOnly": true
+                        },
+                        {
+                            "name": "FirstName",
+                            "externalName": "FirstName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "FullName",
+                            "externalName": "FullName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY",
+                                "NAMES"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "names",
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "InternetAddress",
+                            "externalName": "InternetAddress",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "LastName",
+                            "externalName": "LastName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Type",
+                            "externalName": "Type",
+                            "fieldAccess": "RO",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string",
+                            "readOnly": true
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "FirstName",
+                            "externalName": "FirstName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "FullName",
+                            "externalName": "FullName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY",
+                                "NAMES"
+                            ],
+                            "summaryField": true,
+                            "type": "array",
+                            "items": {
+                                "format": "names",
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "InternetAddress",
+                            "externalName": "InternetAddress",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        },
+                        {
+                            "name": "LastName",
+                            "externalName": "LastName",
+                            "fieldAccess": "RW",
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true,
+                            "format": "string",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ],
+            "formValue": "Person"
+        }
+    ],
+    "views": [
+        {
+            "name": "($Groups)",
+            "alias": [],
+            "unid": "85255E01001356A885255AFB006EA91A"
+        },
+        {
+            "name": "($Users)",
+            "alias": [],
+            "unid": "912366901F00A457852561C20069B844"
+        }
+    ],
+    "agents": [],
+    "available": true,
+    "isActive": true,
+    "prohibitRefresh": true,
+    "@unid": "F87BA52E5F61CDF3CA258A67001C5942"
+}

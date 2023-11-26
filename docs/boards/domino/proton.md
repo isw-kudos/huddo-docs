@@ -1,4 +1,6 @@
-# Huddo Boards for HCL Domino
+# Huddo Boards for HCL Domino Proton (DEPRECATED)
+!!! warning
+    These instructions are deprecated. Please see the new [Domino REST API](./on-prem.md) for new installations.
 
 Huddo Boards supports authentication, user and group lookup with HCL Domino.
 
@@ -10,7 +12,7 @@ Huddo Boards supports authentication, user and group lookup with HCL Domino.
 - Domino IAM service (AppDev Pack >= 1.0.12) [Overview](https://doc.cwpcollaboration.com/appdevpack/docs/en/iam_landing_page.html)
 - User credentials (PEM certificate and Key) for an application user that Boards will use to read a names.nsf database via the Proton Service.
 
-### setup
+### Setup
 
 We will require 2 domains from you
 

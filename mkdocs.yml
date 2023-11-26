@@ -39,7 +39,7 @@ nav:
                   - Mobile App: boards/connections/mobile-app-hybrid.md
                   - Security: boards/connections/security.md
               - HCL Verse: boards/verse/verse-extension.md
-              - HCL Domino: boards/domino.md
+              - HCL Domino: boards/domino/cloud.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
                   - Getting Started: boards/msgraph/getting-started/index.md
@@ -70,7 +70,7 @@ nav:
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Web Server Config: boards/connections/httpd.md
               - HCL Verse: boards/verse/verse-extension.md
-              - HCL Domino: boards/domino.md
+              - HCL Domino: boards/domino/on-prem.md
               - Office 365:
                   - Authentication: boards/msgraph/auth/index.md
                   - Teams Notification Bot: boards/msgraph/teams/notification-bot.md
