@@ -6,16 +6,34 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### November
 
+2023-11-28
+
+Fixes:
+
+- Issue where menu buttons in the open card view were not overflowing to the 'more' menu correctly and causing a flickering effect
+- Issue where lists in board view could not easily be dragged to re-order
+- Issue with board title button long text overflowing
+
+Improvements:
+
+- Minor accessibility improvement - add aria-labels
+
+2023-11-23
+
+Fixes:
+
+- Fix template description not showing in new board wizard
+
 2023-11-13
 
-Improvements
+Improvements:
 
 - Accessibility
 
-    - more consistent tooltips (for screen readers and better explanation of functionality)
-    - Keyboard navigation (particularly in the Board Tiles, Kanban view, Card dialog) - (vision & motor impaired)
-    - better screen reader information (vision impaired)
-    - improved colour contrast (low vision users)
+  - more consistent tooltips (for screen readers and better explanation of functionality)
+  - Keyboard navigation (particularly in the Board Tiles, Kanban view, Card dialog) - (vision & motor impaired)
+  - better screen reader information (vision impaired)
+  - improved colour contrast (low vision users)
 
 2023-11-09
 
@@ -172,7 +190,6 @@ Fixes:
 - Prevent cards from being moved to another list at the same time they are archived by dragging to the archive button
 - Ensure the current user has the correct actions available according to their board role when opening cards from the My Todos view
 
-
 ### July
 
 2023-07-14
@@ -210,9 +227,9 @@ Improvements:
 - Added tooltips to Assignment Role avatars
 - Microsoft Teams
 
-    - detect members in private sub channels (OAuth Admin consent must be certified again)
-    - fix for creating Board in private sub channels
-    - loading spinner positioning
+  - detect members in private sub channels (OAuth Admin consent must be certified again)
+  - fix for creating Board in private sub channels
+  - loading spinner positioning
 
 Fixes:
 
@@ -221,7 +238,7 @@ Fixes:
 - Fix URLs pointing to old docs pages
 - Issue detecting highest licence when multiple
 - Minor fixes to Welcome and Plan Selection dialogs
-  
+
 ---
 
 ### June
