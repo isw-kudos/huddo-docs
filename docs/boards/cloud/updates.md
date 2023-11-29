@@ -6,6 +6,16 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### November
 
+2023-11-29
+
+Feature:
+
+-   Support for Domino by [REST API](./../domino/cloud.md)
+
+Fixes:
+
+-   Debounce User/Group searching
+
 2023-11-28
 
 Fixes:
@@ -13,6 +23,7 @@ Fixes:
 -   Issue where menu buttons in the open card view were not overflowing to the 'more' menu correctly and causing a flickering effect
 -   Issue where lists in board view could not easily be dragged to re-order
 -   Issue with board title button long text overflowing
+-   Issue with card background images
 
 Improvements:
 
@@ -74,20 +85,20 @@ Fixes:
 
 2023-10-23
 
-Features
+Features:
 
 -   [Board iCalendar feed](../howto/ical/board.md)
 -   [Personal iCalendar feed](../howto/ical/personal.md)
 
 2023-10-20
 
-Fixes
+Fixes:
 
 -   Collab header regression
 
 2023-10-19
 
-Improvements
+Improvements:
 
 -   loading of Board task stats on tiles as required
 -   performance of loading My Boards
@@ -502,52 +513,52 @@ Fixes:
 
 2022-11-29
 
--   Improvements
+Improvements:
 
-    -   synchronise dependencies in real time
-    -   faster creation of multi cards
-    -   presence of users open on card without board open
-    -   link to API documentation
-    -   adding dependencies between private cards
-    -   handling of dependencies where not accessible
-    -   make associated comments public when card is made public
-    -   synchronise my private tasks between my windows
+-   synchronise dependencies in real time
+-   faster creation of multi cards
+-   presence of users open on card without board open
+-   link to API documentation
+-   adding dependencies between private cards
+-   handling of dependencies where not accessible
+-   make associated comments public when card is made public
+-   synchronise my private tasks between my windows
 
--   Fixes
+Fixes:
 
-    -   issue where someone online in board remained online if page reloaded
-    -   issue where lists hidden when previewing Kanban view while creating a Board
-    -   issue where page crashed on logout in Node view
-    -   issue where page crashed on logout in Timeline view
-    -   issue where files couldn't be downloaded
-    -   issue where page reloaded in admin view
+-   issue where someone online in board remained online if page reloaded
+-   issue where lists hidden when previewing Kanban view while creating a Board
+-   issue where page crashed on logout in Node view
+-   issue where page crashed on logout in Timeline view
+-   issue where files couldn't be downloaded
+-   issue where page reloaded in admin view
 
 2022-11-08
 
--   Features
+Features:
 
-    -   installable web app
+-   installable web app
 
--   Performance
+Performance:
 
-    -   faster load
-    -   added virtual scroll for Kanban
-    -   smoother drag and drop
-    -   faster filtering/searching inside a Board
+-   faster load
+-   added virtual scroll for Kanban
+-   smoother drag and drop
+-   faster filtering/searching inside a Board
 
--   Improvements
+Improvements:
 
-    -   improved new user experience in integrations
-    -   hide dependency lines while dragging & resizing
-    -   usability of tile color label edit/selection
-    -   stop auto redirecting expired account
+-   improved new user experience in integrations
+-   hide dependency lines while dragging & resizing
+-   usability of tile color label edit/selection
+-   stop auto redirecting expired account
 
--   Fixes
+Fixes:
 
-    -   fix for drag scrolling lists on mobile
-    -   fix editing link titles
-    -   fix positioning of timeline arrows caused by swimlane animations
-    -   fix double click to add list
+-   fix for drag scrolling lists on mobile
+-   fix editing link titles
+-   fix positioning of timeline arrows caused by swimlane animations
+-   fix double click to add list
 
 ---
 
