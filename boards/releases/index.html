@@ -5667,7 +5667,7 @@
 <p class="admonition-title">Important - new image hosting</p>
 <p>As of January 2023 we have moved our image hosting. Please <a href="../images/">follow this guide</a> to configure your Kubernetes with access to our images hosted in Quay.io. We have provided new <a href="../helm-charts/">Huddo charts</a> to utilise these images.</p>
 </div>
-<p>Please use the appropriate update command with the latest <a href="../helm-charts/">helm chart</a>.  For example:</p>
+<p>Please use the appropriate update command with the latest <a href="../helm-charts/">helm chart</a>. For example:</p>
 <ol>
 <li>
 <p>Huddo Boards in Kubernetes</p>
@@ -5998,13 +5998,10 @@ chown 1000:1000 -R .
 <li>hide dependency lines while dragging &amp; resizing</li>
 <li>usability of tile color label edit/selection</li>
 <li>stop auto redirecting expired account</li>
-<li>
-<p>debugging added for socket connections and description locking</p>
-<blockquote>
-<p>In browser console, you can enter <code>boards.setDebug(true)</code> and press Enter to enable this, then reload the page.
-You will then get debug logs in the console for all websocket and description lock events.
-Use <code>boards.setDebug(false)</code> to turn this off when done.</p>
-</blockquote>
+<li>debugging added for socket connections and description locking<div class="highlight"><pre><span></span><code>&gt; In browser console, you can enter `boards.setDebug(true)` and press Enter to enable this, then reload the page.
+&gt; You will then get debug logs in the console for all websocket and description lock events.
+&gt; Use `boards.setDebug(false)` to turn this off when done.
+</code></pre></div>
 </li>
 </ul>
 <p>Fixes:</p>
@@ -6155,8 +6152,8 @@ Use <code>boards.setDebug(false)</code> to turn this off when done.</p>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2022-04-20">Dockerhub</a></p>
 <p>Features:</p>
 <ul>
-<li>Login to Boards using Single Sign On (SSO) in Microsoft Teams</li>
-</ul>
+<li>
+<p>Login to Boards using Single Sign On (SSO) in Microsoft Teams</p>
 <blockquote>
 <p><strong>Note</strong>: you will need to:</p>
 <ol>
@@ -6164,6 +6161,8 @@ Use <code>boards.setDebug(false)</code> to turn this off when done.</p>
 <li><a href="../msgraph/teams/on-prem/#configure-application">download the latest app definition from Boards admin section and update it in Teams</a>.</li>
 </ol>
 </blockquote>
+</li>
+</ul>
 <p>Fixes:</p>
 <ul>
 <li>Issue loading Activity Stream gadget</li>
@@ -6370,14 +6369,12 @@ Use <code>boards.setDebug(false)</code> to turn this off when done.</p>
 <ul>
 <li>
 <p>Reduce reliance on Communities application</p>
-</li>
-<li>
-<p>Reduce member lookups</p>
-</li>
+<ul>
+<li>Reduce member lookups</li>
 <li>Increase page size of Communities requests</li>
 <li>Throttles simultaneous requests to Communities</li>
-<li>
-<p>Increase caching of responses</p>
+<li>Increase caching of responses</li>
+</ul>
 </li>
 <li>
 <p>Undo / Redo option in Rich Text editor</p>
@@ -6543,20 +6540,18 @@ iswkudos/kudos-boards:boards-event-2021-05-13
 <ul>
 <li>
 <p>Link to Files / Upload to Files</p>
-</li>
-<li>
-<p>Show options for all member Groups (Communities)</p>
-</li>
+<ul>
+<li>Show options for all member Groups (Communities)</li>
 <li>Updated defaults for private Boards</li>
 <li>Alphabetic ordering of Connections files</li>
-<li>
-<p>Type to filter</p>
+<li>Type to filter</li>
+</ul>
 </li>
 <li>
 <p>Allow custom NodeMailer email options (insecure tls etc)</p>
+<p><code>core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"</code></p>
 </li>
 </ul>
-<p><code>core.env.NOTIFIER_EMAIL_OPTIONS: "{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"</code></p>
 <p>Fixes:</p>
 <ul>
 <li>Color tag menu positioning on small screen</li>
@@ -6689,12 +6684,12 @@ iswkudos/kudos-boards:activity-migration-2021-03-16
 <li>Handle legacy Boards WebSphere URL redirect (hashes)</li>
 <li>
 <p>Ability to <a href="../admin/transition-between-providers/">transition between providers</a></p>
-</li>
-<li>
-<p>Link User accounts by full email address</p>
-</li>
+<ul>
+<li>Link User accounts by full email address</li>
 <li>Map Groups by CSV file</li>
 <li>Transfer Ownership &amp; Unlink accounts</li>
+</ul>
+</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -6742,12 +6737,10 @@ iswkudos/kudos-boards:activity-migration-2021-03-05
 <li><a href="https://boards.api.huddo.com">New API with docs!</a></li>
 <li>
 <p>API integrations with</p>
-</li>
-<li>
-<p>Zapier</p>
-</li>
-<li>
-<p>Power Automate</p>
+<ul>
+<li>Zapier</li>
+<li>Power Automate</li>
+</ul>
 </li>
 <li>
 <p>Leave a Board</p>
@@ -6816,9 +6809,11 @@ iswkudos/kudos-boards:activity-migration-2021-02-19
 </code></pre></div>
 <p>Improvements:</p>
 <ul>
-<li>Todos view</li>
+<li>Todos view<ul>
 <li>hide sub-cards which are not applicable</li>
 <li>hide multi-assigned tasks I have completed (assigned view)</li>
+</ul>
+</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -6872,15 +6867,17 @@ iswkudos/kudos-boards:activity-migration-2020-12-14
 <p>Features:</p>
 <ul>
 <li>Updated migration service to support the new "Community Owners only" option</li>
-<li>Added fix for Activities that had already been imported and used the equivalent permission set in Activities</li>
-</ul>
+<li>
+<p>Added fix for Activities that had already been imported and used the equivalent permission set in Activities</p>
 <p><code>boards.yaml</code></p>
 <div class="highlight"><pre><span></span><code><span class="nt">migration</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># test = report activities and board membership that can be updated</span>
-<span class="w">    </span><span class="c1"># true = run the fix and report results</span>
-<span class="w">    </span><span class="nt">FIX_COMMUNITY_OWNERS_ONLY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test|true</span>
+<span class="w">    </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># test = report activities and board membership that can be updated</span>
+<span class="w">        </span><span class="c1"># true = run the fix and report results</span>
+<span class="w">        </span><span class="nt">FIX_COMMUNITY_OWNERS_ONLY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test|true</span>
 </code></pre></div>
+</li>
+</ul>
 <hr />
 <p>2020-12-12</p>
 <p><a href="https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&amp;name=2020-12-12">Dockerhub</a></p>
@@ -6977,14 +6974,18 @@ iswkudos/kudos-boards:activity-migration-2020-10-05
 </code></pre></div>
 <p>Features:</p>
 <ul>
-<li>Board Search</li>
+<li>Board Search<ul>
 <li>Increase visibility of filters</li>
 <li>Maintain filters after page reload</li>
 <li>Hide Completed Todos</li>
 <li>Hide Empty Lists</li>
-<li>Preview Files, support for</li>
+</ul>
+</li>
+<li>Preview Files, support for<ul>
 <li>Excel (xlsx, xls)</li>
 <li>PDF</li>
+</ul>
+</li>
 </ul>
 <p>Improvements:</p>
 <ul>
@@ -7013,12 +7014,14 @@ iswkudos/kudos-boards:activity-migration-2020-09-18
 </code></pre></div>
 <p>Features:</p>
 <ul>
-<li>New rich text editor with improved handling for</li>
+<li>New rich text editor with improved handling for<ul>
 <li>tables</li>
 <li>whitepace</li>
 <li>paste from office</li>
 <li>font, font size, font color</li>
 <li>file upload feedback</li>
+</ul>
+</li>
 <li>Search Board by Custom Fields (Text &amp; People)</li>
 <li>Search improvements - show sub-tasks when parent match filter</li>
 </ul>
@@ -7255,7 +7258,7 @@ iswkudos/kudos-boards:boards-2020-03-06
   <small>
     
       Last update:
-      2023-11-27
+      2023-11-29
     
   </small>
 </div>

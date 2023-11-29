@@ -4951,16 +4951,16 @@ OAuthApplicationRegistrationService.addApplication(&#39;huddoboards&#39;, &#39;H
 </code></pre></div>
 <p>Where <code>[CONNECTIONS_HOSTNAME_BASE64]</code>is</p>
 <ul>
-<li>your Connections hostname base64 encoded.  E.g.</br>
-    <code>connections.example.com</code> =&gt; <code>Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=</code></br>
-    There are many free online services to do this, ie <a href="https://www.base64encode.net/">here</a></br></br></li>
+<li>your Connections hostname base64 encoded. E.g.</br>
+  <code>connections.example.com</code> =&gt; <code>Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=</code></br>
+  There are many free online services to do this, ie <a href="https://www.base64encode.net/">here</a></br></br></li>
 </ul>
 </li>
 <li>
 <p>To view the uniquely created client clientSecret</p>
 <div class="highlight"><pre><span></span><code>OAuthApplicationRegistrationService.getApplicationById(&#39;huddoboards&#39;)
 </code></pre></div>
-<p>These commands will print the definition. Please take note of the <code>clientSecret</code>.  We will use this later on as</p>
+<p>These commands will print the definition. Please take note of the <code>clientSecret</code>. We will use this later on as</p>
 <div class="highlight"><pre><span></span><code>CONNECTIONS_URL=https://connections.example.com
 CONNECTIONS_CLIENT_ID=huddoboards
 CONNECTIONS_CLIENT_SECRET=[VALUE_PRINTED]
@@ -5002,7 +5002,7 @@ CONNECTIONS_CLIENT_SECRET=[VALUE_PRINTED]
   <small>
     
       Last update:
-      2023-06-20
+      2023-11-29
     
   </small>
 </div>
