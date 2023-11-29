@@ -1,4 +1,3 @@
-
 # Configure Domino Schema
 
 This guide will describe how to add a new Schema called `directory` to access the `names.nsf` database. Boards uses the `$Users` & `$Groups` views of this database. This section will configure the database forms.
@@ -22,12 +21,13 @@ This guide will describe how to add a new Schema called `directory` to access th
 1.  Enter the following details and click `ADD`
 
     !!! tip
+
         If you cannot see `names.nsf` in the list, please see the [HCL documentation](https://opensource.hcltechsw.com/Domino-rest-api/howto/database/excludeddb.html?h=names.#procedure)
 
-    - Search Databases for `names.nsf` and click it
-    - Schema Name: `directory`
-    - Description: `domino directory`
-    - Formula Engine: `names.nsf`
+    -   Search Databases for `names.nsf` and click it
+    -   Schema Name: `directory`
+    -   Description: `domino directory`
+    -   Formula Engine: `names.nsf`
 
     ![add schema](./add.png)
 
@@ -36,5 +36,3 @@ This guide will describe how to add a new Schema called `directory` to access th
     ![add schema](./schema.png)
 
 1.  Download [this file](./schema.json) and paste the contents into the editor
-
-    

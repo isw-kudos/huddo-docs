@@ -51,7 +51,8 @@ The board will change appearance to indicate it has been archived.
 ### How do I permanently delete a board?
 
 !!! warning
-You can’t restore or retrieve the board or any of the cards in it, if you delete permanently
+
+    You can’t restore or retrieve the board or any of the cards in it, if you delete permanently
 
 **Option 1:** If you’re still within the screen above, you can use the `Delete` button to delete the board. If you’ve navigated out of that screen but remain in the board, click the board title to `Open Board Options` and use the `Delete` button.
 

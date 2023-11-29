@@ -5,6 +5,7 @@ Huddo Boards allows files under `50MB` to be attached to cards directly.
 Anyone who has access to view the card will be able to view and download the attachment.
 
 !!! tip
+
     This feature can be disabled organisation wide by an administrator if desired.
 
 ### Office 365 (OneDrive) & HCL Connections (Files)
@@ -22,7 +23,7 @@ In the menu that appears, choose `Upload to this board.`
 
 ![](./attaching3.png)
 
-Locate the file(s) you wish to attach and click open. 
+Locate the file(s) you wish to attach and click open.
 
 Your file will now appear in the Links and Attachments list.
 
@@ -38,7 +39,7 @@ Anyone who can edit the card can also remove the attached files.
 
 ### Where are Files Stored?
 
-Files attached to cards in Huddo Boards Cloud with Auth0, Google, Facebook, LinkedIn authentication providers are stored in a [Google Cloud Storage](https://cloud.google.com/storage/){ target=_blank }.
+Files attached to cards in Huddo Boards Cloud with Auth0, Google, Facebook, LinkedIn authentication providers are stored in a [Google Cloud Storage](https://cloud.google.com/storage/){ target=\_blank }.
 
 If you are hosting Huddo Boards yourself then files are stored in the default file storage as defined in your environment.
 

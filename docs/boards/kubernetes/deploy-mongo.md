@@ -3,11 +3,13 @@
 Huddo Boards requires a Mongo database.
 
 !!! warning
+
     The example below is suitable for a **Small Scale Deployment**, e.g. a proof of concept, staging deployment or even a production deployment for a limited number of users/data.
 
 !!! tip
+
     For **Large Scale Deployments (HA)** please use either MongoDB:
-    
+
     1. hosted by a [compatible](../compatibility.md) cloud provider (e.g. [Cloud Atlas](https://www.mongodb.com/atlas/database))
     1. self hosted in a ReplicaSet architecture. For example, `bitnami/mongodb` offer a decent wrapper to initialise a replicaset with their [Helm chart](https://docs.bitnami.com/kubernetes/infrastructure/mongodb/get-started/install).
 

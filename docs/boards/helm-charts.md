@@ -1,9 +1,9 @@
-
 # Helm Chart History
 
 Release notes for each Helm chart utilised by Boards (for Component Pack vs standalone, and Activity Migration)
 
 !!! warning "Important"
+
     As of January 2023 we have moved our image hosting. Please [follow this guide](images.md) to configure your Kubernetes with access to our images hosted in Quay.io.
 
 ---
@@ -12,11 +12,11 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 
 ### huddo-boards
 
-- [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)
+-   [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)
 
 ### huddo-boards-activity-migration
 
-- [1.0.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)
+-   [1.0.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)
 
 ---
 
@@ -32,16 +32,17 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
         cd /pv-connections/kudos-boards-minio/
         chown 1000:1000 -R .
 
-- [1.0.0](../assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)
-- [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
-- [1.1.1](../assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz) - Support custom storageClassName instead of PV
+-   [1.0.0](../assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)
+-   [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
+-   [1.1.1](../assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz) - Support custom storageClassName instead of PV
 
 ### huddo-boards-cp-activity-migration
 
-- [1.0.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz)
-- [1.1.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.1.0.tgz) - CNX 8 fix for Mongo 5
+-   [1.0.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz)
+-   [1.1.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.1.0.tgz) - CNX 8 fix for Mongo 5
 
 ---
 
 !!! info
+
     The previous chart information has [moved here](helm-charts-kudos.md)

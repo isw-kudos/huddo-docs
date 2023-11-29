@@ -1,5 +1,7 @@
 # Requirements and considerations before installation of Docker Swarm and Huddo Boards (DEPRECATED)
+
 !!! warning
+
     These instructions are deprecated. Please see [standalone guide](../standalone.md) if you do not have either Kubernetes or Component Pack
 
 ## Servers
@@ -70,4 +72,4 @@ Access to the images for Boards is provided through [dockerhub](https://hub.dock
 
 ## Ansible
 
-We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](../../tools/ansible.md) prior to the swarm / boards install 
+We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](../../tools/ansible.md) prior to the swarm / boards install

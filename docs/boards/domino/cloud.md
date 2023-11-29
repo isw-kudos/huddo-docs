@@ -3,6 +3,7 @@
 Huddo Boards Cloud supports authentication, user and group lookup with HCL Domino.
 
 !!! tip
+
     See [Domino REST API for Boards On-Premise](./on-prem.md) for Boards On Premise installations.
 
 ---
@@ -38,8 +39,8 @@ Huddo Boards Cloud supports authentication, user and group lookup with HCL Domin
 
 Please email [support@huddo.com](mailto://support@huddo.com) with the following details
 
-| Item                 | Detail / example                                                     |
-| -------------------- | -------------------------------------------------------------------- |
-| DOMINO_AUTH_URL      | HCL Domino REST API URL. E.g. *https://domino.example.com:8080*      |
-| DOMINO_CLIENT_ID     | The IAM Application client id                                        |
-| DOMINO_CLIENT_SECRET | The IAM Application client secret                                    |
+| Item                 | Detail / example                                                |
+| -------------------- | --------------------------------------------------------------- |
+| DOMINO_AUTH_URL      | HCL Domino REST API URL. E.g. *https://domino.example.com:8080* |
+| DOMINO_CLIENT_ID     | The IAM Application client id                                   |
+| DOMINO_CLIENT_SECRET | The IAM Application client secret                               |

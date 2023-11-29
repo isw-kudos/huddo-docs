@@ -1,5 +1,7 @@
 # Huddo Boards for HCL Domino Proton (DEPRECATED)
+
 !!! warning
+
     These instructions are deprecated. Please see the new [Domino REST API](./on-prem.md) for new installations.
 
 Huddo Boards supports authentication, user and group lookup with HCL Domino.
@@ -8,16 +10,16 @@ Huddo Boards supports authentication, user and group lookup with HCL Domino.
 
 ### Prerequisites
 
-- Domino Proton (AppDev Pack >= 1.0.12) [Documentation](https://doc.cwpcollaboration.com/appdevpack/docs/en/admin_landing_page.html)
-- Domino IAM service (AppDev Pack >= 1.0.12) [Overview](https://doc.cwpcollaboration.com/appdevpack/docs/en/iam_landing_page.html)
-- User credentials (PEM certificate and Key) for an application user that Boards will use to read a names.nsf database via the Proton Service.
+-   Domino Proton (AppDev Pack >= 1.0.12) [Documentation](https://doc.cwpcollaboration.com/appdevpack/docs/en/admin_landing_page.html)
+-   Domino IAM service (AppDev Pack >= 1.0.12) [Overview](https://doc.cwpcollaboration.com/appdevpack/docs/en/iam_landing_page.html)
+-   User credentials (PEM certificate and Key) for an application user that Boards will use to read a names.nsf database via the Proton Service.
 
 ### Setup
 
 We will require 2 domains from you
 
-- Domino Server domain (that has Proton listening)
-- IAM Server domain
+-   Domino Server domain (that has Proton listening)
+-   IAM Server domain
 
 ### IAM Setup
 
@@ -29,8 +31,8 @@ We will require 2 domains from you
 
 **Huddo Boards On Prem**: For an on premise installation we use a global authentication setup so the callback url does not need an id. depending on your deployment it could look like one of the following:
 
-- `https://boards.your.domain.com/auth/domino/callback`
-- `https://your.domain.com/boards/auth/domino/callback` if you have a context root (i.e. you would access boards application at /boards).
+-   `https://boards.your.domain.com/auth/domino/callback`
+-   `https://your.domain.com/boards/auth/domino/callback` if you have a context root (i.e. you would access boards application at /boards).
 
 You will need to setup an Application in the IAM Service with the following details
 

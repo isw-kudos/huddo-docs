@@ -3,6 +3,7 @@
 Huddo Boards supports authentication, user and group lookup with HCL Domino.
 
 !!! tip
+
     See [Domino REST API for Boards Cloud](./cloud.md) for integration with Boards Cloud (hybrid installations).
 
 ---

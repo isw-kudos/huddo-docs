@@ -6,19 +6,19 @@ Add Huddo Boards Docker widgets into HCL Connections on-premise environments
 
 ### Community Widget
 
-1. SSH to the WAS Deployment Manager
+1.  SSH to the WAS Deployment Manager
 
-1. Start `wsadmin`
+1.  Start `wsadmin`
 
         cd /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin
         ./wsadmin.sh -lang jython -user wasadmin -password <password-here>
 
-1. Check out the `widgets-config.xml` file.
+1.  Check out the `widgets-config.xml` file.
 
         execfile("profilesAdmin.py")
         ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
 
-1. Edit the `widgets-config.xml` file.
+1.  Edit the `widgets-config.xml` file.
 
     Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following, replacing `[BOARDS_URL]` with your URL:
 
@@ -33,9 +33,10 @@ Add Huddo Boards Docker widgets into HCL Connections on-premise environments
         </widgetDef>
         <!-- END Huddo Boards -->
 
-1. Disable Community Activity widget
+1.  Disable Community Activity widget
 
     !!! tip
+
         this is optional but highly recommended for CP installations of Activities Plus
 
         Once Activities are migrated into Boards, it is recommended that the Community Activity widget is disabled to prevent confusion around the old data.
@@ -47,7 +48,6 @@ Add Huddo Boards Docker widgets into HCL Connections on-premise environments
       End of Deprecated Activities widget -->
 
     ![Disabled Activity Widget in widgets-config.xml](../../assets/connections/widget-disable-activities.png)
-     
 
 1.  Check in the widgets-config.xml file.
 
@@ -64,7 +64,7 @@ Add Huddo Boards Docker widgets into HCL Connections on-premise environments
 
         then please ensure the Connections domain root certificate is trusted in the WebSphere ISC. This can be added using `Retrieve from port` under `SSL certificate and key management` > `Key stores and certificates` > `CellDefaultTrustStore` > `Signer certificates`
 
-1. *Optional*. [Install the extensions for Connections Customizer](./customizer/customizer-integrations-package.md). This includes a fix for the Community Widget that enables attachments to be downloaded as well as multiple new integrations for Connections.
+1.  _Optional_. [Install the extensions for Connections Customizer](./customizer/customizer-integrations-package.md). This includes a fix for the Community Widget that enables attachments to be downloaded as well as multiple new integrations for Connections.
 
 ---
 
@@ -72,38 +72,38 @@ Add Huddo Boards Docker widgets into HCL Connections on-premise environments
 
 1. Open `Homepage` => `Administration`
 
-      Click `Add another app`
+    Click `Add another app`
 
-      ![Example](../../assets/connections/homepage/admin.png)
+    ![Example](../../assets/connections/homepage/admin.png)
 
 1. Select the following:
 
-      - `OpenSocial Gadget`
-      - `Trusted` and `Use SSO`
-      - `Show for Activity Stream events`
-      - `All servers`
+    - `OpenSocial Gadget`
+    - `Trusted` and `Use SSO`
+    - `Show for Activity Stream events`
+    - `All servers`
 
-      Click the `Add Mapping` button.
+    Click the `Add Mapping` button.
 
-      ![Example](../../assets/connections/homepage/admin2.png)
+    ![Example](../../assets/connections/homepage/admin2.png)
 
 1. Enter values:
 
-      - OAuth Client: `conn-ee`
-      - Service name: `connections_service`
+    - OAuth Client: `conn-ee`
+    - Service name: `connections_service`
 
-      Click `Ok`
+    Click `Ok`
 
 1. Enter the following, replacing `[BOARDS_URL]` with your URL:
 
-      | Field           | Value                                                     |
-      | --------------- | --------------------------------------------------------- |
-      | App Title       | Huddo Boards Stream                                       |
-      | URL Address     | `https://[BOARDS_URL]/widgets/connections/url-gadget.xml` |
-      | Icon URL        | `https://[BOARDS_URL]/favicon.ico`                        |
-      | Icon Secure URL | `https://[BOARDS_URL]/favicon.ico`                        |
+    | Field           | Value                                                     |
+    | --------------- | --------------------------------------------------------- |
+    | App Title       | Huddo Boards Stream                                       |
+    | URL Address     | `https://[BOARDS_URL]/widgets/connections/url-gadget.xml` |
+    | Icon URL        | `https://[BOARDS_URL]/favicon.ico`                        |
+    | Icon Secure URL | `https://[BOARDS_URL]/favicon.ico`                        |
 
-      Scroll down and click `Save`
+    Scroll down and click `Save`
 
 1. Select the newly defined app and click `Enable`
 
@@ -121,25 +121,25 @@ Huddo Boards integrates with Connections Engagement Center
 
 1. Open the CEC (XCC) main admin page
 
-      i.e. `https://connections.company.com/xcc/main`
+    i.e. `https://connections.company.com/xcc/main`
 
 1. Click `Customize`, `Engagement Center Settings`, expand `Customization Files` & click `Upload File`
 
-     ![Example](../../assets/connections/highlights/fileupload.png)
+    ![Example](../../assets/connections/highlights/fileupload.png)
 
-     > Note: you must have the admin role for the `Customize` button to appear
+    > Note: you must have the admin role for the `Customize` button to appear
 
 1. Select the `custom.js` downloaded previously
 
-     > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents. Copy the `HuddoBoards()` function and make sure to call it in `init()`
+    > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents. Copy the `HuddoBoards()` function and make sure to call it in `init()`
 
 1. To validate:
 
-      1. Open the `Highlights` application in a Community
-      1. Click `Customize`, `Widgets` and `Huddo Boards`
+    1. Open the `Highlights` application in a Community
+    1. Click `Customize`, `Widgets` and `Huddo Boards`
 
-         ![Example](../../assets/connections/highlights/add-boards.png)
-      
-      1. The Boards Highlights widget should now appear at the end of the page
+        ![Example](../../assets/connections/highlights/add-boards.png)
 
-         ![Example](../../assets/connections/highlights/boards.png)
+    1. The Boards Highlights widget should now appear at the end of the page
+
+        ![Example](../../assets/connections/highlights/boards.png)

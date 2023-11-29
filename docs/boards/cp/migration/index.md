@@ -57,11 +57,13 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 The default chart values use an NFS mount. Below are examples custom configuration of the persisent volume definition for access to the Shared Drive using other methods.
 
 !!! note
+
     We recommend running the helm chart with `--dry-run --debug` to confirm the yaml output
 
-1. Host path
+1.  Host path
 
     !!! tip
+
         This can be used in conjunction with existing linux methods (e.g. `cifs-utils`, `smbclient` etc) to mount a Windows Samba share directly onto the Kubernetes Node(s).
 
     Please read the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume).
@@ -73,7 +75,7 @@ The default chart values use an NFS mount. Below are examples custom configurati
               hostPath:
                 path: /data/shared
 
-2. Kubernetes CIFS Volume Driver (for Samba shares).
+2.  Kubernetes CIFS Volume Driver (for Samba shares).
 
     Please read the [CIFS documentation](https://k8scifsvol.morimoto.net.br/)
 
@@ -90,8 +92,9 @@ The default chart values use an NFS mount. Below are examples custom configurati
                   name: my-secret
 
 !!! question "Additional for Windows"
+
     This migration is designed to be a once-off operation. If you are using Windows SMB shares and neither option above is appropriate for your environment, we would recommend:
-    
+
     1. Temporarily copy the Activity Store content directory at `<SHARED_DRIVE>/activities/content` (e.g. `/opt/HCL/connections/data/shared/activities/content`) to an existing Linux accessible drive (e.g. `/pv-connections/activitystore`).
     1. Set the standard `sharedDrive.server` & `sharedDrive.path` to mount this path at `/data` in the containers
     1. Set `migration.env.FILE_PATH_ACTIVITIES_CONTENT_STORE: "/data"`
