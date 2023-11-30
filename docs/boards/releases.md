@@ -44,6 +44,29 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+#### 2023-11-30
+
+Features:
+
+-   Support for Domino by [REST API](./domino/on-prem.md)
+
+    !!! tip
+
+        Please [follow this guide](./domino/migration/index.md) to migrate from your existing Proton based Domino authentication
+
+Improvements:
+
+-   Minor accessibility improvement - add aria-labels
+
+Fixes:
+
+-   Fix template description not showing in new board wizard
+-   Debounce User/Group searching
+-   Issue where menu buttons in the open card view were not overflowing to the 'more' menu correctly and causing a flickering effect
+-   Issue where lists in board view could not easily be dragged to re-order
+-   Issue with board title button long text overflowing
+-   Issue with card background images
+
 #### 2023-11-14
 
 Improvements:

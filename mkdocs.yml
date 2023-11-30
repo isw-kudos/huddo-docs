@@ -53,9 +53,9 @@ nav:
           - b) For Kubernetes: boards/kubernetes/index.md
           - c) Standalone: boards/standalone.md
           - Access to Images: boards/images.md
-          - Common Config: boards/env/common.md
-          - Notifications Config: boards/env/notifications.md
+          - Configuration: boards/env/common.md
           - Compatibility: boards/compatibility.md
+          - Customise Emails: boards/env/notifications.md
           - Helm Charts: boards/helm-charts.md
           - Integrations:
               - HCL Connections:
