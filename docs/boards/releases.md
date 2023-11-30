@@ -57,6 +57,8 @@ Features:
 Improvements:
 
 -   Minor accessibility improvement - add aria-labels
+-   Security updates (Node v20)
+-   allow running webfront pods as random user id
 
 Fixes:
 
