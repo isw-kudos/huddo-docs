@@ -31,6 +31,10 @@
 
 1.  Edit Domino client
 
+    !!! tip
+
+        Save a copy of the old values in case you need to reverse the changes.
+
     Change the old Proton values to new Domino REST API values [as configured](../oauth/index.md)
 
     |                                            | Comment                                                                                                           |
@@ -62,18 +66,22 @@
 
 ### Validation
 
-1. Logout of Boards
+!!! warning
 
-    ![logout](./logout.png)
+    We recommend you perform the validation steps below in a new Incognito window (or different browser) to test without logging out of your existing session. This way you can reverse the client changes in your existing session if required.
 
-1. Login to Domino
+1.  Open a new Boards session
+
+    Click `Domino`
 
     ![signin](./signin.png)
 
-    You should be prompted with the new REST API
+1.  Enter your credentials for the new REST API
 
     ![login](./login.png)
 
-    Once Authenticated, you should see the approval request. Click `Allow`
+1.  Once Authenticated, you should see the approval request
+
+    Click `Allow`
 
     ![allow](./allow.png)
