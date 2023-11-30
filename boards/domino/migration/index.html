@@ -4918,6 +4918,10 @@
 </li>
 <li>
 <p>Edit Domino client</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Save a copy of the old values in case you need to reverse the changes.</p>
+</div>
 <p>Change the old Proton values to new Domino REST API values <a href="../oauth/">as configured</a></p>
 <table>
 <thead>
@@ -4968,17 +4972,23 @@
 </li>
 </ol>
 <h3 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We recommend you perform the validation steps below in a new Incognito window (or different browser) to test without logging out of your existing session. This way you can reverse the client changes in your existing session if required.</p>
+</div>
 <ol>
 <li>
-<p>Logout of Boards</p>
-<p><img alt="logout" src="logout.png" /></p>
+<p>Open a new Boards session</p>
+<p>Click <code>Domino</code></p>
+<p><img alt="signin" src="signin.png" /></p>
 </li>
 <li>
-<p>Login to Domino</p>
-<p><img alt="signin" src="signin.png" /></p>
-<p>You should be prompted with the new REST API</p>
+<p>Enter your credentials for the new REST API</p>
 <p><img alt="login" src="login.png" /></p>
-<p>Once Authenticated, you should see the approval request. Click <code>Allow</code></p>
+</li>
+<li>
+<p>Once Authenticated, you should see the approval request</p>
+<p>Click <code>Allow</code></p>
 <p><img alt="allow" src="allow.png" /></p>
 </li>
 </ol>
@@ -4988,7 +4998,7 @@
   <small>
     
       Last update:
-      2023-11-30
+      2023-12-01
     
   </small>
 </div>
