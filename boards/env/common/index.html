@@ -18,7 +18,7 @@
         <link rel="prev" href="../../images/">
       
       
-        <link rel="next" href="../notifications/">
+        <link rel="next" href="../../compatibility/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Common Config - Huddo Docs</title>
+        <title>Configuration - Huddo Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#update-config-file" class="md-skip">
+        <a href="#configuration-options" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Common Config
+              Configuration
             
           </span>
         </div>
@@ -1222,12 +1222,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Common Config
+    Configuration
   </span>
   
 
@@ -1238,7 +1240,7 @@
         
   
   <span class="md-ellipsis">
-    Common Config
+    Configuration
   </span>
   
 
@@ -1250,6 +1252,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1258,9 +1262,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#update-config-file" class="md-nav__link">
+  <a href="#shared-options" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Config file
+      Shared Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-domino" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Domino
     </span>
   </a>
   
@@ -1282,11 +1304,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../notifications/" class="md-nav__link">
+      <a href="../../compatibility/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Notifications Config
+    Compatibility
   </span>
   
 
@@ -1303,11 +1325,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compatibility/" class="md-nav__link">
+      <a href="../notifications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Compatibility
+    Customise Emails
   </span>
   
 
@@ -4868,6 +4890,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4876,9 +4900,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#update-config-file" class="md-nav__link">
+  <a href="#shared-options" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Config file
+      Shared Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-domino" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Domino
     </span>
   </a>
   
@@ -4899,10 +4941,9 @@
                   
 
 
-  <h1>Common Config</h1>
-
-<h3 id="update-config-file">Update Config file<a class="headerlink" href="#update-config-file" title="Permanent link">&para;</a></h3>
-<p>Please set the following ENV variables in your config file</p>
+<h1 id="configuration-options">Configuration Options<a class="headerlink" href="#configuration-options" title="Permanent link">&para;</a></h1>
+<h2 id="shared-options">Shared Options<a class="headerlink" href="#shared-options" title="Permanent link">&para;</a></h2>
+<p>Please set the following environment variables in your config file as required</p>
 <table>
 <thead>
 <tr>
@@ -4956,6 +4997,21 @@
 <td><strong>Optional</strong>: Custom NodeMailer email options (insecure tls etc).<br/>For example: <code>"{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"</code></td>
 </tr>
 <tr>
+<td><code>user.env.DISABLE_WELCOME_EMAIL</code></td>
+<td><strong>Optional</strong>: Set to disable welcome emails for users</td>
+</tr>
+</tbody>
+</table>
+<h2 id="for-connections">For Connections<a class="headerlink" href="#for-connections" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td><code>provider.env.WIDGET_ID</code></td>
 <td><strong>Optional</strong>: ID of the Community widget configured in <a href="../../connections/widgets-on-prem/#community-widget">this step</a></td>
 </tr>
@@ -4987,10 +5043,17 @@
 <td><code>user.env.CONNECTIONS_KEYCLOAK_REALM</code></td>
 <td><strong>Optional</strong>: See <a href="../../connections/keycloak/">keycloak authentication</a> for more information</td>
 </tr>
+</tbody>
+</table>
+<h2 id="for-domino">For Domino<a class="headerlink" href="#for-domino" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
 <tr>
-<td><code>user.env.DISABLE_WELCOME_EMAIL</code></td>
-<td><strong>Optional</strong>: Set to disable welcome emails for users</td>
+<th>Key</th>
+<th>Description</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td><code>user.env.DOMINO_AUTH_URL</code></td>
 <td><strong>Optional</strong>: HCL Domino REST API URL. See <a href="../../domino/on-prem/">domino authentication</a> for more information</td>
@@ -5031,7 +5094,7 @@
   <small>
     
       Last update:
-      2023-11-27
+      2023-11-30
     
   </small>
 </div>
