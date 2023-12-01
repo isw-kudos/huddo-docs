@@ -6,7 +6,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
-2023-12-1
+2023-12-01
 
 Fixes:
 
