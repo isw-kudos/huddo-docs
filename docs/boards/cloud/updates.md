@@ -4,6 +4,14 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2023
 
+### December
+
+2023-12-1
+
+Fixes:
+
+-   Issue when focusing on boards search input
+
 ### November
 
 2023-11-29
