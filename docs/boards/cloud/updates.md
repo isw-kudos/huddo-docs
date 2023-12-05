@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2023-12-04
+
+Feature:
+
+-   Drag emails from Outlook to create as card
+
 2023-12-01
 
 Fixes:
