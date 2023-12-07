@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2023-12-07
+
+Fixes:
+
+-   Issue saving card name when editing it directly on the card
+
 2023-12-04
 
 Feature:
