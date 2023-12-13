@@ -6,6 +6,21 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2023-12-13
+
+Improvements
+
+-   API documentation for /user/{userId}, /user/group/{groupId} etc
+-   Support for latest MongoDB
+
+2023-12-12
+
+Fixes:
+
+-   Link to File dialog options
+
+Fixes:
+
 2023-12-07
 
 Fixes:
