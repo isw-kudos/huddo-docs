@@ -6,7 +6,7 @@ Huddo Boards Docker has been tested and confirmed working with the following ver
 
 |            | Minimum | Maximum   |
 | ---------- | ------- | --------- |
-| Kubernetes | `v1.16` | `v1.26.3` |
+| Kubernetes | `v1.16` | `v1.27.7` |
 | MongoDB    | `v4.0`  | `v6.0.3`  |
 | Redis      | `v4.0`  | `v6.x`    |
 
