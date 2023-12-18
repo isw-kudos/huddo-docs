@@ -6,12 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
-2023-12-13
+2023-12-18
 
 Improvements:
 
 -   Accessibility (keyboard navigation - colors/members dialog, aria-labels, popover, html.lang attribute, improved roles, aria-selected, aria-expanded, hover/focus on cards)
--   drag email to card - attach .eml and .msg file
+-   Drag email to card - attach .eml and .msg file
 -   Positioning of unscheduled cards in Timeline
 -   Improved document titles based on context
 -   Smoother drag scroll on Kanban
@@ -23,7 +23,7 @@ Improvements:
 Fixes:
 
 -   Card label overflow issue when 5 lines
--   issue where comment events sent to mentioned users
+-   Issue where comment events sent to mentioned users
 
 2023-12-13
 
