@@ -1,3 +1,11 @@
+.md-header {
+  background: rgb(4, 80, 29);
+}
+
+.md-tabs {
+  background: #a62019;
+}
+
 .md-footer-copyright
 /* .md-footer-nav { */ {
   display: none;
