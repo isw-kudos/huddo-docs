@@ -44,6 +44,36 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2023
 
+#### 2023-12-18
+
+Feature:
+
+-   Drag emails from Outlook to create as card
+-   Support for latest MongoDB (v7)
+-   API documentation for /user/{userId}, /user/group/{groupId} etc
+
+Improvements:
+
+-   Accessibility (keyboard navigation - colors/members dialog, aria-labels, popover, html.lang attribute, improved roles, aria-selected, aria-expanded, hover/focus on cards)
+-   Drag email to card - attach .eml and .msg file
+-   Positioning of unscheduled cards in Timeline
+-   Improved document titles based on context
+-   Smoother drag scroll on Kanban
+-   Ensure grab cursor for Kanban drag scroll
+-   Update childcounts in activity lists when filtering
+-   Visibility of selected board filters
+-   Searching for a board includes the description
+
+Fixes:
+
+-   Card label overflow issue when 5 lines
+-   Issue where comment events sent to mentioned users
+-   Link to File dialog options
+-   Issue saving card name when editing it directly on the card
+-   Issue when focusing on boards search input
+
+---
+
 #### 2023-11-30
 
 Features:
@@ -69,6 +99,8 @@ Fixes:
 -   Issue with board title button long text overflowing
 -   Issue with card background images
 
+---
+
 #### 2023-11-14
 
 Improvements:
@@ -86,6 +118,8 @@ Improvements:
 Fixes:
 
 -   Email for mentions missing fields
+
+--
 
 #### 2023-10-31
 
