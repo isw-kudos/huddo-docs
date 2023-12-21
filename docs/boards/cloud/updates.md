@@ -6,6 +6,16 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2023-12-22
+
+Fixes:
+
+-   issue where mentions popup partially hidden at top
+-   issue where could not mention users when opening a card directly by link
+-   hide private cards when viewing board by assignments
+-   create card from Outlook/Verse - fix toggle of attach body, ordering of recent boards
+-   drag dependency links in Firefox
+
 2023-12-18
 
 Improvements:
