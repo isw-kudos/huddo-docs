@@ -221,7 +221,7 @@ extra_css:
 
 extra_javascript:
   - "//js.hs-scripts.com/6268180.js"
-  # - "assets/scripts/banner.js"
+  - "assets/scripts/custom.js"
 
 extra:
   alternate:
