@@ -2,6 +2,18 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+## 2024
+
+### January
+
+2024-01-04
+
+Fixes:
+
+-   RichText saving when used @symbol (but not an @mention)
+-   @mentions keyboard navigation improvements (home/end, up to bottom, down back to top), escape without closing modal
+-   @mentions only considered new on first save
+
 ## 2023
 
 ### December
