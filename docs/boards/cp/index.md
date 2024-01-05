@@ -24,8 +24,8 @@ Huddo Boards in Connections Component Pack (CP) uses the existing CP infrastruct
 
 The UI and API each require a unique route:
 
-- UI for Boards: `[CONNECTIONS_URL]/boards`. We will refer to this as `BOARDS_URL`
-- API Gateway: `[CONNECTIONS_URL]/api-boards`. We will refer to this as `API_URL`
+-   UI for Boards: `[CONNECTIONS_URL]/boards`. We will refer to this as `BOARDS_URL`
+-   API Gateway: `[CONNECTIONS_URL]/api-boards`. We will refer to this as `API_URL`
 
 For more details on configuring an IBM HTTP WebServer as reverse proxy, [please see here](httpd.md)
 
@@ -100,7 +100,7 @@ The Activity migration chart will be deployed separately but use the same config
 
 Install the Boards services via our Helm chart
 
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 
@@ -120,13 +120,13 @@ Please follow [these instructions](httpd.md)
 
 ### HCL Connections
 
-- [Apps Menu](../connections/apps-menu-on-prem.md)
-- [Widgets](../connections/widgets-on-prem.md)
-- [Customizer - Boards Search](../connections/customizer/customizer-integrations-package.md)
+-   [Apps Menu](../connections/apps-menu-on-prem.md)
+-   [Widgets](../connections/widgets-on-prem.md)
+-   [Customizer - Boards Search](../connections/customizer/customizer-integrations-package.md)
 
 ### Microsoft Teams
 
-- [Install On-Premise App](../msgraph/teams/on-prem.md)
+-   [Install On-Premise App](../msgraph/teams/on-prem.md)
 
 ---
 

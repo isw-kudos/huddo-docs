@@ -4,8 +4,8 @@
 
 1.  Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](../../assets/config/kubernetes/boards-cp.yaml). At the top set
 
-    - `global.imageTag` as the date of our latest [release](../releases.md)
-    - `global.imagePullSecret` to the name of the secret you created
+    -   `global.imageTag` as the date of our latest [release](../releases.md)
+    -   `global.imagePullSecret` to the name of the secret you created
 
         e.g. `<USERNAME>-pull-secret`
 
@@ -13,7 +13,7 @@
 
 1.  Run the Helm upgrade command with our new Huddo chart to apply the changes.
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
     !!! note
 

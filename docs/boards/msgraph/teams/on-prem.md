@@ -12,7 +12,7 @@
 
 1. Notification bot (optional). [See instructions](notification-bot.md)
 
-   > **Note:** notifications are **optional** as the bot cannot be configured for internal Huddo Boards deployments
+    > **Note:** notifications are **optional** as the bot cannot be configured for internal Huddo Boards deployments
 
 ---
 
@@ -24,41 +24,41 @@
 
 1. Click the `Configuration` icon and then `Manage Org`
 
-   ![example](../../admin.png)
+    ![example](../../admin.png)
 
 1. Click on your Organisation
 
-   ![example](admin-orgs.png)
+    ![example](admin-orgs.png)
 
 1. Click on your Microsoft client
 
-   ![example](admin-org.png)
+    ![example](admin-org.png)
 
 1. Click the download button for your configuration
 
-   - `App with Notifications` (if you can and have enabled the [notification bot](notification-bot.md))
+    - `App with Notifications` (if you can and have enabled the [notification bot](notification-bot.md))
 
-   - `App for Internal Boards Deployment` (if you do not want notifications)
+    - `App for Internal Boards Deployment` (if you do not want notifications)
 
-   ![example](app-download.png)
+    ![example](app-download.png)
 
 ### Install in Teams
 
 1. Open the [Teams App](https://teams.microsoft.com)
 
-   Click `Apps` -> `Upload a custom app` -> `Upload for [COMPANY_NAME]`
+    Click `Apps` -> `Upload a custom app` -> `Upload for [COMPANY_NAME]`
 
-   > where `[COMPANY_NAME]` is the name of your company
+    > where `[COMPANY_NAME]` is the name of your company
 
-   ![example](teams1.png)
+    ![example](teams1.png)
 
 1. Upload the Zip file you downloaded above
 
-   ![example](teams2.png)
+    ![example](teams2.png)
 
 1. The Huddo Boards app will now appear under the section `Built for [COMPANY_NAME]`
 
-   ![example](teams3.png)
+    ![example](teams3.png)
 
 ---
 
@@ -86,15 +86,15 @@
 
     ```yaml
     provider:
-      env:
-        MSGRAPH_TEAMS_APP_ID: "<your_app_id>"
+        env:
+            MSGRAPH_TEAMS_APP_ID: "<your_app_id>"
     ```
 
 1.  Redeploy Boards helm chart as per command for Huddo Boards:
 
     [HCL Component Pack](../../cp/index.md#deploy-boards-helm-chart)
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 

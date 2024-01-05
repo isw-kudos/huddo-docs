@@ -10,12 +10,11 @@ This document details the process to enable login to your private instance of Hu
 
 You must configure an OAuth Application in your Office 365 Tenant in order to use Huddo Boards with O365. To access this configuration you must be logged in as a Microsoft tenant admin
 
-
 ### Open the [Azure App Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
-  Click `New Registration`
+Click `New Registration`
 
-  ![click new registration](appreg.png)
+![click new registration](appreg.png)
 
 ### Configure Redirect
 
@@ -26,19 +25,18 @@ Enter the values below and click `Register`
     Huddo Boards
     https://[BOARDS_URL]/auth/msgraph/callback
 
-  Where BOARDS_URL is the URL to access your main Huddo Boards page. For example:
+Where BOARDS_URL is the URL to access your main Huddo Boards page. For example:
 
-  - `https://connections.example.com/boards/auth/msgraph/callback` OR
-  - `https://boards.example.com/auth/msgraph/callback`
+-   `https://connections.example.com/boards/auth/msgraph/callback` OR
+-   `https://boards.example.com/auth/msgraph/callback`
 
-  Click `Register`
-
+Click `Register`
 
 ### Configure Required Scopes
 
-1. Open the `Manifest` section
+1.  Open the `Manifest` section
 
-1. Replace the `requiredResourceAccess` section as per below
+1.  Replace the `requiredResourceAccess` section as per below
 
     ![scopes to add](appreg-scopes.png)
 
@@ -104,7 +102,6 @@ Enter the values below and click `Register`
 
     Click `Save`
 
-
 ### Check Permissions
 
 Open the `API permissions` section. Notice that all the scopes are now pre-filled.
@@ -127,7 +124,6 @@ At the end of this step you should have the following:
 
 ![expose-api](expose-api.png)
 
-
 1. Click `Expose an API`
 
 1. Set the Application ID URI as per:
@@ -147,17 +143,17 @@ At the end of this step you should have the following:
 
 1. Click `Add a scope`
 
-      Set the following values:
+    Set the following values:
 
-      ![add scope](expose-api-scope.png)
+    ![add scope](expose-api-scope.png)
 
-      - Scope name: `access_as_user`
-      - Who can consent: `Admins and users`
-      - Admin consent display name: `Teams can access the user’s profile.`
-      - Admin consent description: `Teams can call the app’s web APIs as the current user.`
-      - User consent display name: `Teams can access your profile and make requests on your behalf.`
-      - User consent description: `Teams can call this app’s APIs with the same rights as you have.`
-      - State: `Enabled`
+    - Scope name: `access_as_user`
+    - Who can consent: `Admins and users`
+    - Admin consent display name: `Teams can access the user’s profile.`
+    - Admin consent description: `Teams can call the app’s web APIs as the current user.`
+    - User consent display name: `Teams can access your profile and make requests on your behalf.`
+    - User consent description: `Teams can call this app’s APIs with the same rights as you have.`
+    - State: `Enabled`
 
     Click `Save`
 
@@ -168,13 +164,13 @@ At the end of this step you should have the following:
 
 ## Configure OAuth in Boards
 
-1. Open the `Overview` section
+1.  Open the `Overview` section
 
-      Copy `Application (client) ID` & `Directory (tenant) ID`
+    Copy `Application (client) ID` & `Directory (tenant) ID`
 
-      ![copy guids](appreg-client-id.png)
+    ![copy guids](appreg-client-id.png)
 
-1. Open the `Certificates & secrets` section
+1.  Open the `Certificates & secrets` section
 
     Click `New client secret`
 
@@ -188,21 +184,21 @@ At the end of this step you should have the following:
 
     ![copy the secret](appreg-client-secret3.png)
 
-1. Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
+1.  Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
 
     ```yaml
     global:
-      env:
-        MSGRAPH_CLIENT_ID: "<your-application-id>"
-        MSGRAPH_CLIENT_SECRET: "<your-application-secret>"
-        MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
+        env:
+            MSGRAPH_CLIENT_ID: "<your-application-id>"
+            MSGRAPH_CLIENT_SECRET: "<your-application-secret>"
+            MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
     ```
 
-1. Redeploy Boards Helm Chart as per command for Huddo Boards:
+1.  Redeploy Boards Helm Chart as per command for Huddo Boards:
 
     [HCL Component Pack](../../cp/index.md#deploy-boards-helm-chart)
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 

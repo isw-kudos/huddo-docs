@@ -35,6 +35,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 -   [1.0.0](../assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)
 -   [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
 -   [1.1.1](../assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz) - Support custom storageClassName instead of PV
+-   [1.2.0](../assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz) - Added readiness probes on each service
 
 ### huddo-boards-cp-activity-migration
 
