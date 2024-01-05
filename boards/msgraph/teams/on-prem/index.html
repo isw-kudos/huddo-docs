@@ -5024,11 +5024,11 @@
 </li>
 <li>
 <p>Notification bot (optional). <a href="../notification-bot/">See instructions</a></p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Note:</strong> notifications are <strong>optional</strong> as the bot cannot be configured for internal Huddo Boards deployments</p>
 </blockquote>
+</li>
+</ol>
 <hr />
 <h2 id="configure-application">Configure Application<a class="headerlink" href="#configure-application" title="Permanent link">&para;</a></h2>
 <h3 id="download-from-boards">Download from Boards<a class="headerlink" href="#download-from-boards" title="Permanent link">&para;</a></h3>
@@ -5038,46 +5038,48 @@
 </li>
 <li>
 <p>Click the <code>Configuration</code> icon and then <code>Manage Org</code></p>
-</li>
-</ol>
 <p><img alt="example" src="../../../admin.png" /></p>
-<ol>
-<li>Click on your Organisation</li>
-</ol>
+</li>
+<li>
+<p>Click on your Organisation</p>
 <p><img alt="example" src="../admin-orgs.png" /></p>
-<ol>
-<li>Click on your Microsoft client</li>
-</ol>
+</li>
+<li>
+<p>Click on your Microsoft client</p>
 <p><img alt="example" src="../admin-org.png" /></p>
-<ol>
+</li>
 <li>
 <p>Click the download button for your configuration</p>
-</li>
+<ul>
 <li>
 <p><code>App with Notifications</code> (if you can and have enabled the <a href="../notification-bot/">notification bot</a>)</p>
 </li>
 <li>
 <p><code>App for Internal Boards Deployment</code> (if you do not want notifications)</p>
 </li>
-</ol>
+</ul>
 <p><img alt="example" src="../app-download.png" /></p>
+</li>
+</ol>
 <h3 id="install-in-teams">Install in Teams<a class="headerlink" href="#install-in-teams" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Open the <a href="https://teams.microsoft.com">Teams App</a></li>
-</ol>
+<li>
+<p>Open the <a href="https://teams.microsoft.com">Teams App</a></p>
 <p>Click <code>Apps</code> -&gt; <code>Upload a custom app</code> -&gt; <code>Upload for [COMPANY_NAME]</code></p>
 <blockquote>
 <p>where <code>[COMPANY_NAME]</code> is the name of your company</p>
 </blockquote>
 <p><img alt="example" src="../teams1.png" /></p>
-<ol>
-<li>Upload the Zip file you downloaded above</li>
-</ol>
+</li>
+<li>
+<p>Upload the Zip file you downloaded above</p>
 <p><img alt="example" src="../teams2.png" /></p>
-<ol>
-<li>The Huddo Boards app will now appear under the section <code>Built for [COMPANY_NAME]</code></li>
-</ol>
+</li>
+<li>
+<p>The Huddo Boards app will now appear under the section <code>Built for [COMPANY_NAME]</code></p>
 <p><img alt="example" src="../teams3.png" /></p>
+</li>
+</ol>
 <hr />
 <h3 id="configure-app-id">Configure App ID<a class="headerlink" href="#configure-app-id" title="Permanent link">&para;</a></h3>
 <ol>
@@ -5099,14 +5101,14 @@
 <p>Open the Boards Helm Chart config used for deployment</p>
 <p>Add the following environment variable to <code>provider</code> (uncomment or add the section as required):</p>
 <div class="highlight"><pre><span></span><code><span class="nt">provider</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">MSGRAPH_TEAMS_APP_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;your_app_id&gt;&quot;</span>
+<span class="w">    </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">MSGRAPH_TEAMS_APP_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;your_app_id&gt;&quot;</span>
 </code></pre></div>
 </li>
 <li>
 <p>Redeploy Boards helm chart as per command for Huddo Boards:</p>
 <p><a href="../../../cp/#deploy-boards-helm-chart">HCL Component Pack</a></p>
-<div class="highlight"><pre><span></span><code>helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections
+<div class="highlight"><pre><span></span><code>helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
 </code></pre></div>
 <p><a href="../../../kubernetes/#deploy-boards-chart">for Docker - Kubernetes</a></p>
 <div class="highlight"><pre><span></span><code>helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
@@ -5139,7 +5141,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2023-08-15
+    2024-01-05
   </span>
 
     
