@@ -6,6 +6,29 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### January
 
+2024-01-09
+
+Improvements:
+
+-   Microsoft Teams integrations
+
+    -   UI redesign when adding new Boards tab
+    -   Onboarding Tours
+
+-   faster opening of cards
+-   allow clicking links in description when content locked for editing
+-   allow reordering private cards
+-   US English updates
+-   organisation plan loading feedback
+
+Fixes:
+
+-   issue where completing a new task showed incorrect icon
+-   issue where Board content deleted when hovered and press Ctrl+Alt+Delete
+-   issue when opening a card by link, then a subcard within that card
+-   issue when reordering cards with filtered (hidden) content
+-   visibility of card title in header breadcrumb (Component Pack)
+
 2024-01-04
 
 Fixes:
