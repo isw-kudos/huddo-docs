@@ -1256,10 +1256,43 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Variables
+      Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-to-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access to Images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start
     </span>
   </a>
   
@@ -1267,6 +1300,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
   
 </li>
       
@@ -4960,10 +5002,43 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Variables
+      Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-to-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access to Images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start
     </span>
   </a>
   
@@ -4971,6 +5046,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
   
 </li>
       
@@ -4990,9 +5074,12 @@
 
 
 <h1 id="boards-standalone-deployment">Boards Standalone Deployment<a class="headerlink" href="#boards-standalone-deployment" title="Permanent link">&para;</a></h1>
-<p>This document outlines a standalone (all in one) deployment of Huddo Boards. This can be used as a proof of concept, staging deployment or even a production deployment for a limited number of users (e.g. &lt; 500).</p>
-<p>You may run all services including database and file storage on one server, or you can use an external mongo database or s3 file store.</p>
-<p>Like all other deployments of Huddo Boards, this requires configuration of 2 domains: Application and API. e.g. boards.huddo.com and boards.api.huddo.com</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This document outlines a standalone (all in one) deployment of Huddo Boards using <code>docker-compose</code>. This can be used as a proof of concept, staging deployment or even a production deployment for a limited number of users (e.g. &lt; 500).</p>
+</div>
+<p>You may run all services including database and file storage on one server, or you can use an external Mongo database or S3 file store.</p>
+<p>Like all other deployments of Huddo Boards, this requires configuration of 2 domains: Application and API. e.g. <code>boards.huddo.com</code> and <code>boards.api.huddo.com</code></p>
 <h2 id="server-requirements">Server requirements<a class="headerlink" href="#server-requirements" title="Permanent link">&para;</a></h2>
 <p>RHEL (or Centos 7) server with:</p>
 <ul>
@@ -5002,20 +5089,77 @@
 <li>100gb data drive (will be shared for database and file store) <sup>*see Persistence Options below</sup></li>
 <li>docker and docker-compose</li>
 </ul>
-<p>Please <a href="../images/">follow this guide</a> to get access to our images in Quay.io so that we may give you access to our repositories and templates.</p>
+<hr />
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
 <h3 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h3>
 <p>You may use an external proxy or send traffic directly to the server. If you are sending traffic directly to the server, you will need pem encoded certificate (with full chain) and key.</p>
+<p>The implementation of this will require 2 domains in your environment (typically "boards." and "boards-api." subdomains), one for the web app and one for the API.</p>
 <h3 id="persistence">Persistence<a class="headerlink" href="#persistence" title="Permanent link">&para;</a></h3>
-<p>Boards uses 3 types of persistent data: mongodb, s3 file store and redis cache.</p>
-<p>Each of these may use external services or the included services in the template (this hugely changes the server demand).</p>
-<p>If using the included services, you will need to map directories for mongo and s3 containers to the data drive above, this data drive should be backed up however you currently backup data</p>
-<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
-<p>Most required variables are in the template, for more information see the Kubernetes docs </p>
+<p>Boards uses 3 types of persistent data:</p>
+<ol>
+<li>Mongodb</li>
+<li>S3 file store</li>
+<li>Redis cache.</li>
+</ol>
+<p>Each of these may use external services (e.g. Mongo Atlas) or the included services in the template (this hugely changes the server demand).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If using the included services, you must have a separate mount point on your server for persistent data with a directory each for mongo and s3(minio) storage. You will need to map directories for mongo and s3 containers to this data drive. This data drive should be backed up however you currently backup data.</p>
+</div>
+<hr />
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<h3 id="access-to-images">Access to Images<a class="headerlink" href="#access-to-images" title="Permanent link">&para;</a></h3>
+<p>Please <a href="../images/">follow this guide</a> to get access to our images in Quay.io so that we may give you access to our repositories and templates. Once you have access please run the <code>docker login</code> command available from the Quay.io interface, for example:</p>
+<div class="highlight"><pre><span></span><code>docker login -u=&quot;&lt;username&gt;&quot; -p=&quot;&lt;encrypted-password&gt;&quot; quay.io
+</code></pre></div>
+<hr />
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>download the configuration files:</p>
+<ul>
+<li><a href="../../assets/boards/aio/boards.yml">docker-compose yaml</a></li>
+<li><a href="../../assets/boards/aio/nginx.conf">nginx proxy conf</a></li>
+</ul>
+</li>
+<li>
+<p>update all example values in both files as required. Most required variables are in the template, for more information see the Kubernetes docs</p>
 <ul>
 <li><a href="../kubernetes/#update-config-file">Global config</a></li>
 <li><a href="../env/common/">Boards variables</a></li>
 </ul>
+<p>The minio credentials are are used to both set in the minio service and access it from other services, the x-minio-access field is used as the username in minio and the x-minio-secret is used as the password you can view minios documentation on these fields here: https://docs.min.io/minio/baremetal/reference/minio-server/minio-server.html#root-credentials and an example of the values used here: https://docs.min.io/docs/minio-docker-quickstart-guide.html the standard seems to be around 20 characters all caps/numbers for the username and around 40 characters any case / number for the password.</p>
+<p>The nginx proxy setup assumes that you will have 2 subdomains as stated above with a shared (wildcard) ssl certificate, both the certificate and key file for these domains need to be accessible to the server and the path filled in under the proxy section. you may use separate certificates if needed by mounting them both in the proxy service with appropriate naming and using the new mounted files in the <code>nginx.conf</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Authentication</strong>: the user environment variables in the compose file assume you are installing this in a Connections environment, these can be removed or replaced with a Microsoft 365 tenant info as <a href="https://docs.huddo.com/boards/msgraph/auth/#configure-oauth-in-boards">shown here</a>. For more info on other authentication methods contact the <a href="mailto:support@huddo.com">huddo team</a>. The default variables for Domino are also included and can be uncommented as required.</p>
+</div>
+</li>
+</ol>
+<h3 id="start">Start<a class="headerlink" href="#start" title="Permanent link">&para;</a></h3>
+<p>Start the deployment using the following command</p>
+<div class="highlight"><pre><span></span><code>docker-compose -f ./boards.yml up -d
+</code></pre></div>
+<hr />
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h2>
+<p>The mount point on your system for the mongo data needs to include user 1001 with read/write access, see <a href="https://github.com/bitnami/bitnami-docker-mongodb">bitnami/mongodb</a> for more info and full documentation.</p>
+<p>if your setup is not running, first check the db logs and make sure it is not complaining about permissions to write the files it needs
+<code>docker-compose logs mongo</code></p>
+<p>To remove any other network configuration/hops on the docker server you should be able to:
+<code>curl -H "Host: your.web.url" --insecure https://localhost</code>
+This should return the html from webfront
+<code>curl -H "Host: your.api.url" --insecure https://localhost</code>
+This should return the html for the swagger api documentation
+<code>curl -H "Host: your.api.url" --insecure https://localhost/health</code>
+This should return "{listening: 3001}"</p>
+<p>If the above works then you may have configuration issues with a proxy / dns not pointing traffic to the docker server properly
+If it does not work then the local nginx proxy is probably not working, check <code>docker-compose logs nginx</code> to see if it points out any misconfiguration</p>
+<p>The core image has ping enabled and has access to all others so you can use it to test connectivity</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>core<span class="w"> </span>sh
+ping<span class="w"> </span>user
+ping<span class="w"> </span>mongo
+...<span class="w"> </span>etc
+</code></pre></div>
 
 
 
@@ -5036,7 +5180,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2023-06-20
+    2024-01-12
   </span>
 
     

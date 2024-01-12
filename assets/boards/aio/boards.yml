@@ -1,0 +1,154 @@
+version: "3.4"
+
+x-minio-access: &minio-access --replace-me--
+x-minio-secret: &minio-secret --replace-me--
+x-mongo-password: &mongo-password --replace-me--
+
+x-app-env: &app-env
+  APP_URI: https://--replace-me--
+  API_GATEWAY: https://--replace-me--
+  REDIS_CACHE_HOST: redis
+  USER_HOST: http://user
+  LICENCE_HOST: http://licence
+  NOTIFICATION_HOST: http://notification
+  PROVIDER_HOST: http://provider
+  APP_HOST: http://app
+  BOARDS_EVENT_HOST: http://boards-event
+
+x-s3-env: &s3-env
+  S3_ENDPOINT: minio
+  S3_ACCESS_KEY: *minio-access
+  S3_SECRET_KEY: *minio-secret
+  S3_BUCKET: kudosboards
+
+x-db-env: &db-env
+  MONGO_HOST: mongo
+  MONGO_USER: root
+  MONGO_PASSWORD: *mongo-password
+  MONGO_PARAMS: authSource=admin
+
+services:
+  # Proxy
+  nginx:
+    image: nginx:1.25.3
+    restart: always
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/proxy.conf
+      - /path/to/certificate.pem.crt:/etc/nginx/ssl.crt # --replace-me--
+      - /path/to/key.pem.key:/etc/nginx/ssl.key # --replace-me--
+
+  # UI
+  webfront:
+    image: quay.io/huddo/boards-webfront:2023-12-18
+    restart: always
+    environment:
+      <<: [*app-env]
+
+  # Core App routing logic
+  core:
+    image: quay.io/huddo/boards-core:2023-12-18
+    restart: always
+    depends_on:
+      - redis
+      - minio
+      - licence
+      - notification
+    environment:
+      <<: [*app-env, *s3-env]
+
+  # Boards business logic
+  app:
+    image: quay.io/huddo/boards:2023-12-18
+    restart: always
+    environment:
+      <<: [*app-env, *db-env, *s3-env]
+
+  user:
+    image: quay.io/huddo/user:2023-12-18
+    restart: always
+    environment:
+      <<: [*app-env, *db-env, *s3-env]
+      CONNECTIONS_NAME: --replace-me--
+      CONNECTIONS_CLIENT_ID: --replace-me--
+      CONNECTIONS_CLIENT_SECRET: --replace-me--
+      CONNECTIONS_URL: --replace-me--
+      CONNECTIONS_ADMINS: '["admin1@company.com", "admin2@company.com"]' # --replace-me--
+      # DOMINO_AUTH_URL: https://domino.rest.api.company.com # --replace-me--
+      # DOMINO_CLIENT_ID:  # --replace-me--
+      # DOMINO_CLIENT_SECRET:  # --replace-me--
+      # DOMINO_ADMINS: '["admin1@company.example.com"]' # --replace-me--
+      # DOMINO_USE_PROFILE_IMAGE_ATTACHMENTS: 'true'
+      # DOMINO_PROFILE_IMAGE_NAME: profile.png
+      # Default values below that can be customised
+      # DOMINO_AUTH_SCOPE: $DATA
+      # DOMINO_REST_SCOPE: directorylookup
+
+  provider:
+    image: quay.io/huddo/provider:2023-12-18
+    restart: always
+    depends_on:
+      - redis
+      - minio
+    environment:
+      <<: [*app-env, *s3-env]
+
+  notification:
+    image: quay.io/huddo/notification:2023-12-18
+    restart: always
+    depends_on:
+      - redis
+    environment:
+      <<: [*app-env, *db-env]
+
+  #Events Service
+  boards-event:
+    image: quay.io/huddo/boards-event:2023-12-18
+    restart: always
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      <<: [*app-env, *db-env]
+      NOTIFIER_EMAIL_HOST: localhost
+      NOTIFIER_EMAIL_USERNAME: --replace-me
+      NOTIFIER_EMAIL_PASSWORD: --replace-me
+
+  licence:
+    image: quay.io/huddo/licence:2023-12-18
+    restart: always
+    depends_on:
+      - user
+      - redis
+      - mongo
+    environment:
+      <<: [*db-env, *app-env]
+      LICENCE: --replace-with-licence-from-store--
+
+  mongo:
+    image: bitnami/mongodb:7.0
+    restart: always
+    environment:
+      MONGODB_ADVERTISED_HOSTNAME: mongo
+      MONGODB_ROOT_PASSWORD: *mongo-password
+    volumes:
+      - /path/to/db:/bitnami/mongodb # --replace-me--
+
+  minio:
+    image: minio/minio
+    restart: always
+    environment:
+      MINIO_ROOT_USER: *minio-access
+      MINIO_ROOT_PASSWORD: *minio-secret
+    volumes:
+      - /path/to/s3:/data # --replace-me--
+    command: server /data
+
+  # Shared DB for internal caching, communication etc
+  redis:
+    image: redis
+    restart: always
+    environment:
+      MASTER: "true"
