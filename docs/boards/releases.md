@@ -42,6 +42,42 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
     Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.
 
+### 2024
+
+#### 2024-01-16
+
+Improvements:
+
+-   Microsoft Teams integrations
+
+    -   UI redesign when adding new Boards tab
+    -   Onboarding Tours
+
+-   faster opening of cards
+-   allow clicking links in description when content locked for editing
+-   allow reordering private cards
+-   US English updates
+-   organisation plan loading feedback
+
+Fixes:
+
+-   issue loading licence caused by race condition in Licence service startup
+-   issue where completing a new task showed incorrect icon
+-   issue where Board content deleted when hovered and press Ctrl+Alt+Delete
+-   issue when opening a card by link, then a subcard within that card
+-   issue when reordering cards with filtered (hidden) content
+-   visibility of card title in header breadcrumb (Component Pack)
+-   RichText saving when used @symbol (but not an @mention)
+-   @mentions keyboard navigation improvements (home/end, up to bottom, down back to top), escape without closing modal
+-   @mentions only considered new on first save
+-   issue where mentions popup partially hidden at top
+-   issue where could not mention users when opening a card directly by link
+-   hide private cards when viewing board by assignments
+-   create card from Outlook/Verse - fix toggle of attach body, ordering of recent boards
+-   drag dependency links in Firefox
+
+---
+
 ### 2023
 
 #### 2023-12-18
