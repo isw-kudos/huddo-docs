@@ -82,6 +82,7 @@ nav:
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
           - Roles: boards/cp/roles/index.md
+          - Open Source Licences: boards/faq/open-source-licneces.md
       - User Guides:
           - boards/howto/index.md
           - Knowledge Base & Support: boards/howto/knowledgebase.md
