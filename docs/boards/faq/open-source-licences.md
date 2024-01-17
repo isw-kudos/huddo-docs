@@ -1,0 +1,1 @@
+Huddo Boards builds on many open source frameworks and libraries. These have various licences enabling us to use and distribute the code. We have collected these into an easy file for you to view all of the [Open Source Licences](../../assets/boards/huddo_os_licences.csv).

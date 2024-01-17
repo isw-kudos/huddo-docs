@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### January
 
+2024-01-17
+
+Fixes:
+
+-   Activity view scrolling issue
+
 2024-01-09
 
 Improvements:
