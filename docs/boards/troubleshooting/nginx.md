@@ -2,7 +2,7 @@
 
 ## 400 Bad Request
 
-Nginx has strict rules around the headers allowed on requests.  If you encounter a `400 Bad Request` response in your environment when accessing `/boards` it is likely caused by incorrect headers set in the upsteam proxy(s) before Boards.
+Nginx has strict rules around the headers allowed on requests. If you encounter a `400 Bad Request` response in your environment when accessing `/boards` it is likely caused by incorrect headers set in the upsteam proxy(s) before Boards.
 
 To debug the cause, please views the logs for the webfront pods (as of build 20210924). You will see logs like:
 
@@ -27,3 +27,30 @@ To debug the cause, please views the logs for the webfront pods (as of build 202
 In this example, the `client sent invalid host header while reading client request headers`. You can see the host is included twice. This can occur if the host is set twice, or in some instances when the `X-Forwarded-Host` is also set.
 
 Please read this error carefully and make sure your environment complies with the latest [NGINX specification](https://docs.nginx.com/nginx/).
+
+---
+
+## Ingress & Proxy
+
+To confirm if the problem is with the nginx layer above boards you can bypass it and directly test the Kubernetes ingress controller and deployment:
+
+```sh
+curl -H "Host: [CONNECTIONS_URL]" http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/boards
+curl -H "Host: [CONNECTIONS_URL]" http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/api-boards
+```
+
+OR
+
+```sh
+ssh root@[KUBERNETES_MASTER]
+curl -H "Host: [CONNECTIONS_URL]" http://localhost:32080/boards
+curl -H "Host: [CONNECTIONS_URL]" http://localhost:32080/api-boards
+
+```
+
+For example:
+
+```sh
+curl -H "Host: connections.company.com" http://master.kube.company.com:32080/boards
+curl -H "Host: connections.company.com" http://master.kube.company.com:32080/api-boards
+```

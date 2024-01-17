@@ -57,6 +57,7 @@ nav:
           - Compatibility: boards/compatibility.md
           - Customise Emails: boards/env/notifications.md
           - Helm Charts: boards/helm-charts.md
+          - Proxy (nginx): boards/proxy/nginx.md
           - Integrations:
               - HCL Connections:
                   - Activity Migration (Kube): boards/connections/migration.md
@@ -68,7 +69,7 @@ nav:
                   - Widgets: boards/connections/widgets-on-prem.md
                   - Mobile App: boards/connections/mobile-app-on-prem.md
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
-                  - Web Server Config: boards/connections/httpd.md
+                  - Proxy (httpd): boards/connections/httpd/index.md
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/on-prem.md
               - Office 365:
@@ -129,19 +130,18 @@ nav:
               - Replace Group Membership: boards/admin/replace-group-membership.md
               - Transfer Ownership & Unlink: boards/admin/transfer-ownership-unlink.md
               - Deactivate Login: boards/admin/deactivate-login.md
-          - Troubleshooting:
-              - Activities Plus: boards/troubleshooting/activities-plus-install.md
-              - Activity Migration: boards/troubleshooting/activity-migration.md
-              - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
-              - Boards Docker: boards/troubleshooting/docker.md
-              - Boards WebSphere: boards/troubleshooting/websphere.md
-              - Office 365: boards/troubleshooting/office365/index.md
-              - OAuth: boards/troubleshooting/oauth.md
-              - Mongo: boards/troubleshooting/mongo.md
-              - NGINX: boards/troubleshooting/nginx.md
-              - Notifications: boards/troubleshooting/notifications.md
-              - Browsers:
-                  - Safari: boards/troubleshooting/safari.md
+      - Troubleshooting:
+          - Activities Plus: boards/troubleshooting/activities-plus-install.md
+          - Activity Migration: boards/troubleshooting/activity-migration.md
+          - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
+          - Boards Docker: boards/troubleshooting/docker.md
+          - Boards WebSphere: boards/troubleshooting/websphere.md
+          - Office 365: boards/troubleshooting/office365/index.md
+          - OAuth: boards/troubleshooting/oauth.md
+          - Mongo: boards/troubleshooting/mongo.md
+          - NGINX: boards/troubleshooting/nginx.md
+          - Notifications: boards/troubleshooting/notifications.md
+          - Safari: boards/troubleshooting/safari.md
 
   - CCM Migrator:
       - Features: ccm-migrator/features.md

@@ -27,7 +27,7 @@ The UI and API each require a unique route:
 -   UI for Boards: `[CONNECTIONS_URL]/boards`. We will refer to this as `BOARDS_URL`
 -   API Gateway: `[CONNECTIONS_URL]/api-boards`. We will refer to this as `API_URL`
 
-For more details on configuring an IBM HTTP WebServer as reverse proxy, [please see here](httpd.md)
+For more details on configuring a reverse proxy, please [see below](#proxy-config).
 
 ---
 
@@ -106,13 +106,15 @@ Install the Boards services via our Helm chart
 
 ---
 
-### Add Proxy Config
+### Proxy Config
 
-## Connections On Premise - update WAS config
+### Connections On Premise
 
-> in the linked document you should use the IP of your kubernetes manager and the http port for your ingress (32080 for default component pack installs)
+For Connections on-premise you have two options:
 
-Please follow [these instructions](httpd.md)
+1. `nginx` - if you have an NGINX (e.g. customizer) in front of IHS use that instead to support websockets and use one less proxy. Follow [these instructions](../proxy/nginx.md).
+
+1. `httpd` - please follow [these instructions](../connections/httpd/index.md).
 
 ---
 
