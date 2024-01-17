@@ -356,11 +356,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/connections/httpd/</loc>
-         <lastmod>2024-01-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.huddo.com/boards/connections/keycloak/</loc>
          <lastmod>2024-01-17</lastmod>
          <changefreq>daily</changefreq>
@@ -401,17 +396,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/boards/connections/httpd/</loc>
+         <lastmod>2024-01-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/connections/httpd/edit/</loc>
+         <lastmod>2024-01-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/connections/httpd/sso-header/</loc>
+         <lastmod>2024-01-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/cp/</loc>
          <lastmod>2024-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.huddo.com/boards/cp/dockerhub/</loc>
-         <lastmod>2024-01-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/boards/cp/httpd/</loc>
          <lastmod>2024-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -742,6 +747,11 @@
     </url>
     <url>
          <loc>https://docs.huddo.com/boards/msgraph/teams/on-prem/</loc>
+         <lastmod>2024-01-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/proxy/nginx/</loc>
          <lastmod>2024-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
