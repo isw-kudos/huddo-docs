@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### January
 
+2024-01-25
+
+Fixes:
+
+-   Use SMTP email address before using Exchange address when parsing email attachments
+-   Don't show organisation admin links from Boards sidebar menu in Teams on a mobile device
+
 2024-01-17
 
 Fixes:
