@@ -4,6 +4,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### February
+
+Fixes: 
+
+- Microsoft Teams private channels
+  - Link to File will now show the private channel's files.
+  - Owner/Author access level was setting all members to Author.
+- Microsoft Teams Mobile: Removed licence related cards in org admin view.
+- Microsoft Teams: Removed obsolete "Disable Notifications" button.
+- Rich text editor dialog - allow scroll on overflow
+
 ### January
 
 2024-01-25
