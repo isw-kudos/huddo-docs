@@ -44,6 +44,21 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-02-07
+
+Fixes:
+
+-   Issue with Board Content Admin on Mongo v3
+-   Microsoft Teams private channels
+    -   Link to File will now show the private channel's files.
+    -   Owner/Author access level was setting all members to Author.
+-   Microsoft Teams Mobile: Removed licence related cards in org admin view.
+-   Microsoft Teams: Removed obsolete "Disable Notifications" button.
+-   Rich text editor dialog - allow scroll on overflow
+-   Use SMTP email address before using Exchange address when parsing email attachments
+-   Don't show organisation admin links from Boards sidebar menu in Teams on a mobile device
+-   Activity view scrolling issue
+
 #### 2024-01-16
 
 Improvements:
