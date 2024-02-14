@@ -44,6 +44,14 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-02-14
+
+Fixes:
+
+-   Connections SSO header scripts - Notifications panel
+-   Missing translations caused by load race condition
+-   Translation of timeline months headers
+
 #### 2024-02-07
 
 Fixes:
