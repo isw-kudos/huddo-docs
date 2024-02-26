@@ -12,7 +12,7 @@ Please follow the instructions in [WebSphere OAuth Config](./websphere-oauth.md)
 
 ## Install Boards portlet
 
-See the [Boards Portlet repository](https://github.com/isw-kudos/boards-portlets/)
+Coming soon
 
 ### Allow SSO inside Boards frame
 
