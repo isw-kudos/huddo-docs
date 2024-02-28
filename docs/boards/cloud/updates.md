@@ -6,14 +6,58 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### February
 
-Fixes: 
+2024-02-28
 
-- Microsoft Teams private channels
-  - Link to File will now show the private channel's files.
-  - Owner/Author access level was setting all members to Author.
-- Microsoft Teams Mobile: Removed licence related cards in org admin view.
-- Microsoft Teams: Removed obsolete "Disable Notifications" button.
-- Rich text editor dialog - allow scroll on overflow
+Improvements:
+
+-   Add copy/paste list option in list menu
+-   Add duplication list option in list menu
+-   More comprehensive history feed details for moving or reordering cards
+
+Fixes:
+
+-   Scroll to bottom of a list when creating a new card
+-   Delete action in card dialog / in archive view
+-   Add card section in a list delays retract/height change to prevent card drag issues
+-   Dragging empty colour labels in Firefox
+-   Filter/search by list name
+
+2024-02-22
+
+Fixes:
+
+-   Unauthorised error when adding existing board as Teams tab
+-   Fix potential onEnter errors in rich text editor
+-   Prevent overflow on file preview
+-   Load board members on fullscreen list view (for @mentions)
+
+2024-02-16
+
+Fixes:
+
+-   Fix potential onBlur errors in rich text editor
+-   Don't show iCalendar feed options in Teams
+
+2024-02-14
+
+Fixes:
+
+-   Translation fixes
+    -   Move translations inside functions to help prevent premature translate calls
+    -   Use date-fns locales to show months in user's language
+    -   German translation amendments
+    -   Other translation fixes and improvements
+
+2024-02-08
+
+Fixes:
+
+-   Microsoft Teams private channels
+    -   Link to File will now show the private channel's files.
+    -   Owner/Author access level was setting all members to Author.
+-   Microsoft Teams Mobile: Removed licence related cards in org admin view.
+-   Microsoft Teams: Removed obsolete "Disable Notifications" button.
+-   Rich text editor dialog - allow scroll on overflow
 
 ### January
 
