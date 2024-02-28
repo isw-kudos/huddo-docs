@@ -10,8 +10,8 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 Improvements:
 
--   Add copy/paste list option in kanban list menu
--   Add duplication list option in kanban list menu
+-   Add copy/paste list option in list menu
+-   Add duplication list option in list menu
 -   More comprehensive history feed details for moving or reordering cards
 
 Fixes:
