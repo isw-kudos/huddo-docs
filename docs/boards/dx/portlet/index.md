@@ -36,7 +36,7 @@ To install the Huddo Boards portlet, follow these steps:
 
     ![edit base url](./configure.png)
 
-    Click OK
+    Click `OK`
 
 1. The `Huddo Boards` Portlet should now be accessible at
 

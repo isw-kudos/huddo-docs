@@ -12,4 +12,4 @@
 
 1. Configure [SSO for Boards](./auth/sso.md)
 
-1. Install the Boards portlet as [described here](./portlet/index.md)
+1. Install & configure the [Boards portlet](./portlet/index.md)

@@ -1,4 +1,4 @@
-### Allow SSO for Boards
+# Allow SSO for Boards
 
 !!! tip
 
@@ -6,26 +6,28 @@
 
 ## Steps
 
-Edit the config to include the following,
+Complete the following steps for your applicable Proxy Server
 
-1.  haproxy.cfg
+### haproxy
 
-    Edit the config using the following command
+Edit the `haproxy.cfg` configuration using the following command
 
-    `kubectl edit configmap <DX_DEPLOYMENT>-haproxy -n <DX_NAMESPACE> -o yaml`
+    kubectl edit configmap <DX_DEPLOYMENT>-haproxy -n <DX_NAMESPACE> -o yaml
 
-    For example:
+For example:
 
-    `kubectl edit configmap hcl-dx-dev1-haproxy -n hcl-dx-dev1 -o yaml`
+    kubectl edit configmap hcl-dx-dev1-haproxy -n hcl-dx-dev1 -o yaml
 
-    Add the following line
+Add the following line
 
-        http-response replace-header Set-Cookie ^(.*) \1;\ SameSite=None;\ Secure
+    http-response replace-header Set-Cookie ^(.*) \1;\ SameSite=None;\ Secure
 
-    For example:
+For example:
 
-    ![outcome](./haproxy.png)
+![outcome](./haproxy.png)
 
-1.  httpd.conf
+### httpd
 
-        Header edit Set-Cookie ^(.*)$ "$1; Secure; SameSite=None"
+Edit the `httpd.conf` configuration file to include the following:
+
+    Header edit Set-Cookie ^(.*)$ "$1; Secure; SameSite=None"
