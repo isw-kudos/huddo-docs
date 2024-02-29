@@ -4,15 +4,15 @@
 
 1.  HCL DX environment
 1.  Kubernetes environment
-1.  kubectl installed & authenticated
+1.  `kubectl` installed & authenticated
 
 ## WebSphere OAuth Config
 
-Please follow the instructions in [WebSphere OAuth Config](./websphere-oauth.md)
+Please follow the instructions in [WebSphere OAuth Config](./oauth/websphere.md)
 
 ## Install Boards portlet
 
-Coming soon
+Please follow the instructions in [Install Boards portlet](./portlet/index.md)
 
 ### Allow SSO inside Boards frame
 
