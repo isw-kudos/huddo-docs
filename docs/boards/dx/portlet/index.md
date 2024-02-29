@@ -24,17 +24,23 @@ To install the Huddo Boards portlet, follow these steps:
 
 1. Open the `Portlets` page, find Huddo Boards, click `Configure Portlet`
 
-    ![configure portlet](./manage-portlet.png)
+    ![configure portlet](./manage.png)
 
-1. Edit the cfg.BaseURL to `https://<BOARDS_URL`.
+1. Edit the cfg.BaseURL to `https://<BOARDS_URL>`.
 
-    For example `https://boards.company.com` or `https://company.example.com/Boards`
+    For example:
+
+    - `https://boards.company.com` or
+    - `https://company.example.com/boards`
+    - `https://boards.huddo.com` (hybrid customers)
 
     ![edit base url](./configure.png)
 
     Click OK
 
-1. The `Huddo Boards` Portlet should now be accessible under `Edit mode` => `Add` => `Applications`
+1. The `Huddo Boards` Portlet should now be accessible at
+
+    `Edit mode` => `Add` => `Applications`
 
     ![applications](./applications.png)
 

@@ -6,36 +6,10 @@
 1.  Kubernetes environment
 1.  `kubectl` installed & authenticated
 
-## WebSphere OAuth Config
+## Steps
 
-Please follow the instructions in [WebSphere OAuth Config](./oauth/websphere.md)
+1. Setup [WebSphere OAuth Config](./auth/websphere.md)
 
-## Install Boards portlet
+1. Configure [SSO for Boards](./auth/sso.md)
 
-Please follow the instructions in [Install Boards portlet](./portlet/index.md)
-
-### Allow SSO inside Boards frame
-
-Edit the config to include the following,
-
-1.  haproxy.cfg
-
-    Edit the config using the following command
-
-    `kubectl edit configmap <DX_DEPLOYMENT>-haproxy -n <DX_NAMESPACE> -o yaml`
-
-    For example:
-
-    `kubectl edit configmap hcl-dx-dev1-haproxy -n hcl-dx-dev1 -o yaml`
-
-    Add the following line
-
-        http-response replace-header Set-Cookie ^(.*) \1;\ SameSite=None;\ Secure
-
-    For example:
-
-    ![outcome](./haproxy.png)
-
-1.  httpd.conf
-
-        Header edit Set-Cookie ^(.*)$ "$1; Secure; SameSite=None"
+1. Install the Boards portlet as [described here](./portlet/index.md)
