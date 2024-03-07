@@ -4,6 +4,29 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### March
+
+2024-03-06
+
+Fixes:
+
+-   Issue with communication between Boards and Collab Cloud
+
+2024-03-05
+
+Fixes:
+
+-   Upload files to Teams private channel OneDrive
+
+2024-03-04
+
+Improvements:
+
+-   Loading feedback of recent boards sidebar
+-   Card link opening behavious (links to other boards open in same tab)
+-   Teams board links open tabs
+-   Show loading spinner while waiting on clicked link to open in a teams tab
+
 ### February
 
 2024-02-28
