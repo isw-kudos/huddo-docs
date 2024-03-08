@@ -143,6 +143,7 @@ nav:
           - NGINX: boards/troubleshooting/nginx.md
           - Notifications: boards/troubleshooting/notifications.md
           - Safari: boards/troubleshooting/safari.md
+          - SSL: boards/troubleshooting/ssl.md
 
   - CCM Migrator:
       - Features: ccm-migrator/features.md
