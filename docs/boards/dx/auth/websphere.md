@@ -20,15 +20,33 @@ Connect to the core server, e.g on Kubernetes:
 
         cd /opt/HCL/AppServer/bin
         ./wsadmin.sh -lang jython -username <username> -password <password>
+
+        AdminTask.createOAuthProvider('[-providerName <OAuthProviderName> -fileName <ProviderConfigFile>]')
+
+    Where:
+
+    -   <OAuthProviderName> is the OAuth provider name (typically `OAuthConfig`)
+    -   <ProviderConfigFile> is the full path name of the OAuth provider configuration file. There should be a default file called `OAuthConfigSample.xml` in the `<app_server_root>/properties` directory. Please confirm the location of this file on your system.
+
+    For example:
+
         AdminTask.createOAuthProvider('[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/OAuthConfigSample.xml]')
         AdminConfig.save()
         quit
 
+    This should copy the configuration file to `<was_profile_root>/config/cells/<cell_name>/oauth20`
+
 1.  Enable Auto Authorize
 
-    Edit the OAuthConfig.xml file which was just created. For a full list of supported options see the [IBM documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider).
+    Edit the `OAuthConfig.xml` file which was just created. For a full list of supported options see the [IBM documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider).
+
+    `vi <was_profile_root>/config/cells/<cell_name>/oauth20`
+
+    For example:
 
     `vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`
+
+    Add/update the following parameters:
 
         <parameter name="oauth20.autoauthorize.param" type="ws" customizable="false">
             <value>autoauthz</value>
@@ -40,10 +58,10 @@ Connect to the core server, e.g on Kubernetes:
 1.  Restart the WebSphere Application Server
 
         cd /opt/HCL/AppServer/bin
-        ./stopServer.sh WebSphere_Portal -profileName wp_profile -username wpsadmin -password wpsadmin
+        ./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
         ./startServer.sh WebSphere_Portal -profileName wp_profile
 
-1.  Check TAI Interceptor properties are set, if not please update as per below:
+1.  Update the TAI Interceptor properties as per below:
 
     `Global security` > `Trust association` > `Interceptors` > `com.ibm.ws.security.oauth20.tai.OAuthTAI`
 
