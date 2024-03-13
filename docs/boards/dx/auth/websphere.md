@@ -10,7 +10,11 @@ Connect to the core server, e.g on Kubernetes:
 
     kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
 
-## Setup Provider
+## Create Service Provider
+
+!!! note
+
+    These instructions are based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider)
 
 1.  Create the OAuth provider by using the wsadmin utility
 
@@ -22,7 +26,7 @@ Connect to the core server, e.g on Kubernetes:
 
 1.  Enable Auto Authorize
 
-    Edit the OAuthConfig.xml file which was just created
+    Edit the OAuthConfig.xml file which was just created. For a full list of supported options see the [IBM documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider).
 
     `vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`
 
@@ -39,14 +43,22 @@ Connect to the core server, e.g on Kubernetes:
         ./stopServer.sh WebSphere_Portal -profileName wp_profile -username wpsadmin -password wpsadmin
         ./startServer.sh WebSphere_Portal -profileName wp_profile
 
-1.  Check TAI Interceptor properties set
+1.  Check TAI Interceptor properties are set, if not please update as per below:
 
-    Global security > Trust association > Interceptors > com.ibm.ws.security.oauth20.tai.OAuthTAI
+    `Global security` > `Trust association` > `Interceptors` > `com.ibm.ws.security.oauth20.tai.OAuthTAI`
 
         provider_1.name=OAuthConfig
         provider_1.filter=Authorization%=Bearer
 
-## Register OAuth Clients
+    For example:
+
+    ![OAuth TAI Config](oauth-tai.png)
+
+## Register OAuth Client
+
+!!! note
+
+    These instructions are based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider).
 
 1.  copy default client definitions
 
@@ -71,12 +83,16 @@ Connect to the core server, e.g on Kubernetes:
         <client id="huddoboards" component="OAuthConfig" secret="a2e3d8c3-7875-4512-a0da-8b5fd61f2245" displayname="Huddo Boards" redirect="https://boards.huddo.com/auth/dx/ZHhkZXYxLmlzd2xhYi5uZXQ=/callback" enabled="true">
         </client>
 
-## Install the OAuth 2.0 service provider application
+## Install OAuth Application
 
-    cd /opt/HCL/AppServer/bin
-    ./wsadmin.sh -f ./installOAuth2Service.py install dockerNode WebSphere_Portal -profileName wp_profile -username <username> -password <password>
+!!! note
 
-## Enable TAI
+    These instructions are based on the [IBM documentation - Enabling your system to use the OAuth 2.0 feature](https://www.ibm.com/docs/en/was/9.0.5?topic=services-enabling-your-system-use-oauth-20-feature).
+
+1.  Install the OAuth 2.0 service provider application
+
+        cd /opt/HCL/AppServer/bin
+        ./wsadmin.sh -f ./installOAuth2Service.py install dockerNode WebSphere_Portal -profileName wp_profile -username <username> -password <password>
 
 1.  Enable OAuth 2.0 TAI
 
@@ -91,6 +107,8 @@ Connect to the core server, e.g on Kubernetes:
         cd /opt/HCL/AppServer/bin
         ./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
         ./startServer.sh WebSphere_Portal -profileName wp_profile
+
+---
 
 ## Troubleshooting
 
