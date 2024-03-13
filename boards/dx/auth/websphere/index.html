@@ -4927,15 +4927,28 @@
 <p>Create the OAuth provider by using the wsadmin utility</p>
 <div class="highlight"><pre><span></span><code>cd /opt/HCL/AppServer/bin
 ./wsadmin.sh -lang jython -username &lt;username&gt; -password &lt;password&gt;
-AdminTask.createOAuthProvider(&#39;[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/OAuthConfigSample.xml]&#39;)
+
+AdminTask.createOAuthProvider(&#39;[-providerName &lt;OAuthProviderName&gt; -fileName &lt;ProviderConfigFile&gt;]&#39;)
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li><OAuthProviderName> is the OAuth provider name (typically <code>OAuthConfig</code>)</li>
+<li><ProviderConfigFile> is the full path name of the OAuth provider configuration file. There should be a default file called <code>OAuthConfigSample.xml</code> in the <code>&lt;app_server_root&gt;/properties</code> directory. Please confirm the location of this file on your system.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>AdminTask.createOAuthProvider(&#39;[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/OAuthConfigSample.xml]&#39;)
 AdminConfig.save()
 quit
 </code></pre></div>
+<p>This should copy the configuration file to <code>&lt;was_profile_root&gt;/config/cells/&lt;cell_name&gt;/oauth20</code></p>
 </li>
 <li>
 <p>Enable Auto Authorize</p>
-<p>Edit the OAuthConfig.xml file which was just created. For a full list of supported options see the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider">IBM documentation</a>.</p>
+<p>Edit the <code>OAuthConfig.xml</code> file which was just created. For a full list of supported options see the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider">IBM documentation</a>.</p>
+<p><code>vi &lt;was_profile_root&gt;/config/cells/&lt;cell_name&gt;/oauth20</code></p>
+<p>For example:</p>
 <p><code>vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml</code></p>
+<p>Add/update the following parameters:</p>
 <div class="highlight"><pre><span></span><code>&lt;parameter name=&quot;oauth20.autoauthorize.param&quot; type=&quot;ws&quot; customizable=&quot;false&quot;&gt;
     &lt;value&gt;autoauthz&lt;/value&gt;
 &lt;/parameter&gt;
@@ -4947,12 +4960,12 @@ quit
 <li>
 <p>Restart the WebSphere Application Server</p>
 <div class="highlight"><pre><span></span><code>cd /opt/HCL/AppServer/bin
-./stopServer.sh WebSphere_Portal -profileName wp_profile -username wpsadmin -password wpsadmin
+./stopServer.sh WebSphere_Portal -profileName wp_profile -username &lt;username&gt; -password &lt;password&gt;
 ./startServer.sh WebSphere_Portal -profileName wp_profile
 </code></pre></div>
 </li>
 <li>
-<p>Check TAI Interceptor properties are set, if not please update as per below:</p>
+<p>Update the TAI Interceptor properties as per below:</p>
 <p><code>Global security</code> &gt; <code>Trust association</code> &gt; <code>Interceptors</code> &gt; <code>com.ibm.ws.security.oauth20.tai.OAuthTAI</code></p>
 <div class="highlight"><pre><span></span><code>provider_1.name=OAuthConfig
 provider_1.filter=Authorization%=Bearer
