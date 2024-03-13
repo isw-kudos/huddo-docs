@@ -4858,36 +4858,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup-provider" class="md-nav__link">
+  <a href="#create-service-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Provider
+      Create Service Provider
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#register-oauth-clients" class="md-nav__link">
+  <a href="#register-oauth-client" class="md-nav__link">
     <span class="md-ellipsis">
-      Register OAuth Clients
+      Register OAuth Client
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-the-oauth-20-service-provider-application" class="md-nav__link">
+  <a href="#install-oauth-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Install the OAuth 2.0 service provider application
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enable-tai" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable TAI
+      Install OAuth Application
     </span>
   </a>
   
@@ -4926,7 +4917,11 @@
 <p>Connect to the core server, e.g on Kubernetes:</p>
 <div class="highlight"><pre><span></span><code>kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
 </code></pre></div>
-<h2 id="setup-provider">Setup Provider<a class="headerlink" href="#setup-provider" title="Permanent link">&para;</a></h2>
+<h2 id="create-service-provider">Create Service Provider<a class="headerlink" href="#create-service-provider" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions are based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a></p>
+</div>
 <ol>
 <li>
 <p>Create the OAuth provider by using the wsadmin utility</p>
@@ -4939,7 +4934,7 @@ quit
 </li>
 <li>
 <p>Enable Auto Authorize</p>
-<p>Edit the OAuthConfig.xml file which was just created</p>
+<p>Edit the OAuthConfig.xml file which was just created. For a full list of supported options see the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider">IBM documentation</a>.</p>
 <p><code>vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml</code></p>
 <div class="highlight"><pre><span></span><code>&lt;parameter name=&quot;oauth20.autoauthorize.param&quot; type=&quot;ws&quot; customizable=&quot;false&quot;&gt;
     &lt;value&gt;autoauthz&lt;/value&gt;
@@ -4957,14 +4952,20 @@ quit
 </code></pre></div>
 </li>
 <li>
-<p>Check TAI Interceptor properties set</p>
-<p>Global security &gt; Trust association &gt; Interceptors &gt; com.ibm.ws.security.oauth20.tai.OAuthTAI</p>
+<p>Check TAI Interceptor properties are set, if not please update as per below:</p>
+<p><code>Global security</code> &gt; <code>Trust association</code> &gt; <code>Interceptors</code> &gt; <code>com.ibm.ws.security.oauth20.tai.OAuthTAI</code></p>
 <div class="highlight"><pre><span></span><code>provider_1.name=OAuthConfig
 provider_1.filter=Authorization%=Bearer
 </code></pre></div>
+<p>For example:</p>
+<p><img alt="OAuth TAI Config" src="../oauth-tai.png" /></p>
 </li>
 </ol>
-<h2 id="register-oauth-clients">Register OAuth Clients<a class="headerlink" href="#register-oauth-clients" title="Permanent link">&para;</a></h2>
+<h2 id="register-oauth-client">Register OAuth Client<a class="headerlink" href="#register-oauth-client" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions are based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a>.</p>
+</div>
 <ol>
 <li>
 <p>copy default client definitions</p>
@@ -4990,12 +4991,18 @@ provider_1.filter=Authorization%=Bearer
 </code></pre></div>
 </li>
 </ol>
-<h2 id="install-the-oauth-20-service-provider-application">Install the OAuth 2.0 service provider application<a class="headerlink" href="#install-the-oauth-20-service-provider-application" title="Permanent link">&para;</a></h2>
+<h2 id="install-oauth-application">Install OAuth Application<a class="headerlink" href="#install-oauth-application" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions are based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-enabling-your-system-use-oauth-20-feature">IBM documentation - Enabling your system to use the OAuth 2.0 feature</a>.</p>
+</div>
+<ol>
+<li>
+<p>Install the OAuth 2.0 service provider application</p>
 <div class="highlight"><pre><span></span><code>cd /opt/HCL/AppServer/bin
 ./wsadmin.sh -f ./installOAuth2Service.py install dockerNode WebSphere_Portal -profileName wp_profile -username &lt;username&gt; -password &lt;password&gt;
 </code></pre></div>
-<h2 id="enable-tai">Enable TAI<a class="headerlink" href="#enable-tai" title="Permanent link">&para;</a></h2>
-<ol>
+</li>
 <li>
 <p>Enable OAuth 2.0 TAI</p>
 <div class="highlight"><pre><span></span><code>cd /opt/HCL/AppServer/bin
@@ -5013,6 +5020,7 @@ quit
 </code></pre></div>
 </li>
 </ol>
+<hr />
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p><strong>Issue</strong>: SSL Error</p>
 <div class="highlight"><pre><span></span><code>ServletWrapper service CWSRV0014E: Uncaught service() exception root cause OAuth20EndpointServlet: javax.net.ssl.SSLHandshakeException: com.ibm.jsse2.util.j: PKIX path building failed: com.ibm.security.cert.IBMCertPathBuilderException: unable to find valid certification path to requested target
@@ -5038,7 +5046,7 @@ quit
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-02-29
+    2024-03-14
   </span>
 
     
