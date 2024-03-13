@@ -14,7 +14,7 @@ Connect to the core server, e.g on Kubernetes:
 
 !!! note
 
-    These instructions are based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider)
+    This step is based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider)
 
 1.  Create the OAuth provider by using the wsadmin utility
 
@@ -25,8 +25,8 @@ Connect to the core server, e.g on Kubernetes:
 
     Where:
 
-    -   <OAuthProviderName> is the OAuth provider name (typically `OAuthConfig`)
-    -   <ProviderConfigFile> is the full path name of the OAuth provider configuration file. There should be a default file called `OAuthConfigSample.xml` in the `<app_server_root>/properties` directory. Please confirm the location of this file on your system.
+    -   `<OAuthProviderName>` is the OAuth provider name (typically `OAuthConfig`)
+    -   `<ProviderConfigFile>` is the full path to the OAuth provider configuration file. There should be a default file called `OAuthConfigSample.xml` in the `<app_server_root>/properties` directory. Please confirm the location of this file on your system.
 
     For example:
 
@@ -61,9 +61,25 @@ Connect to the core server, e.g on Kubernetes:
         ./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
         ./startServer.sh WebSphere_Portal -profileName wp_profile
 
-1.  Update the TAI Interceptor properties as per below:
+### Configure TAI properties
 
-    `Global security` > `Trust association` > `Interceptors` > `com.ibm.ws.security.oauth20.tai.OAuthTAI`
+1.  Open the ISC
+
+    Click `Global security`, expand `Web and SIP security`, click `Trust association`
+
+    ![Global security](global-security.png)
+
+1.  Click `Interceptors`
+
+    ![trust-association](trust-association.png)
+
+1.  Ensure that `com.ibm.ws.security.oauth20.tai.OAuthTAI` exists
+
+    ![interceptors](interceptors.png)
+
+    If not, click `New` enter the Interceptor class name `com.ibm.ws.security.oauth20.tai.OAuthTAI`, and click `OK`
+
+1.  Update the custom properties to match:
 
         provider_1.name=OAuthConfig
         provider_1.filter=Authorization%=Bearer
@@ -76,13 +92,17 @@ Connect to the core server, e.g on Kubernetes:
 
 !!! note
 
-    These instructions are based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider).
+    This step is based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider).
 
-1.  copy default client definitions
+1.  Copy default client definitions
+
+        cp <app_server_root>/properties/base.clients.xml <was_profile_root>/config/cells/<cell_name>/oauth20oauth20/
+
+    For example:
 
         cp /opt/HCL/AppServer/properties/base.clients.xml /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/
 
-2.  edit file to include Huddo Boards client
+1.  Edit file to include Huddo Boards client
 
     `vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/base.clients.xml`
 
@@ -105,7 +125,7 @@ Connect to the core server, e.g on Kubernetes:
 
 !!! note
 
-    These instructions are based on the [IBM documentation - Enabling your system to use the OAuth 2.0 feature](https://www.ibm.com/docs/en/was/9.0.5?topic=services-enabling-your-system-use-oauth-20-feature).
+    This step is based on the [IBM documentation - Enabling your system to use the OAuth 2.0 feature](https://www.ibm.com/docs/en/was/9.0.5?topic=services-enabling-your-system-use-oauth-20-feature).
 
 1.  Install the OAuth 2.0 service provider application
 
