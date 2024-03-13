@@ -4864,6 +4864,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Create Service Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-tai-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure TAI properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4920,7 +4935,7 @@
 <h2 id="create-service-provider">Create Service Provider<a class="headerlink" href="#create-service-provider" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These instructions are based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a></p>
+<p>This step is based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a></p>
 </div>
 <ol>
 <li>
@@ -4932,8 +4947,8 @@ AdminTask.createOAuthProvider(&#39;[-providerName &lt;OAuthProviderName&gt; -fil
 </code></pre></div>
 <p>Where:</p>
 <ul>
-<li><OAuthProviderName> is the OAuth provider name (typically <code>OAuthConfig</code>)</li>
-<li><ProviderConfigFile> is the full path name of the OAuth provider configuration file. There should be a default file called <code>OAuthConfigSample.xml</code> in the <code>&lt;app_server_root&gt;/properties</code> directory. Please confirm the location of this file on your system.</li>
+<li><code>&lt;OAuthProviderName&gt;</code> is the OAuth provider name (typically <code>OAuthConfig</code>)</li>
+<li><code>&lt;ProviderConfigFile&gt;</code> is the full path to the OAuth provider configuration file. There should be a default file called <code>OAuthConfigSample.xml</code> in the <code>&lt;app_server_root&gt;/properties</code> directory. Please confirm the location of this file on your system.</li>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>AdminTask.createOAuthProvider(&#39;[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/OAuthConfigSample.xml]&#39;)
@@ -4964,9 +4979,25 @@ quit
 ./startServer.sh WebSphere_Portal -profileName wp_profile
 </code></pre></div>
 </li>
+</ol>
+<h3 id="configure-tai-properties">Configure TAI properties<a class="headerlink" href="#configure-tai-properties" title="Permanent link">&para;</a></h3>
+<ol>
 <li>
-<p>Update the TAI Interceptor properties as per below:</p>
-<p><code>Global security</code> &gt; <code>Trust association</code> &gt; <code>Interceptors</code> &gt; <code>com.ibm.ws.security.oauth20.tai.OAuthTAI</code></p>
+<p>Open the ISC</p>
+<p>Click <code>Global security</code>, expand <code>Web and SIP security</code>, click <code>Trust association</code></p>
+<p><img alt="Global security" src="../global-security.png" /></p>
+</li>
+<li>
+<p>Click <code>Interceptors</code></p>
+<p><img alt="trust-association" src="../trust-association.png" /></p>
+</li>
+<li>
+<p>Ensure that <code>com.ibm.ws.security.oauth20.tai.OAuthTAI</code> exists</p>
+<p><img alt="interceptors" src="../interceptors.png" /></p>
+<p>If not, click <code>New</code> enter the Interceptor class name <code>com.ibm.ws.security.oauth20.tai.OAuthTAI</code>, and click <code>OK</code></p>
+</li>
+<li>
+<p>Update the custom properties to match:</p>
 <div class="highlight"><pre><span></span><code>provider_1.name=OAuthConfig
 provider_1.filter=Authorization%=Bearer
 </code></pre></div>
@@ -4977,16 +5008,19 @@ provider_1.filter=Authorization%=Bearer
 <h2 id="register-oauth-client">Register OAuth Client<a class="headerlink" href="#register-oauth-client" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These instructions are based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a>.</p>
+<p>This step is based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a>.</p>
 </div>
 <ol>
 <li>
-<p>copy default client definitions</p>
+<p>Copy default client definitions</p>
+<div class="highlight"><pre><span></span><code>cp &lt;app_server_root&gt;/properties/base.clients.xml &lt;was_profile_root&gt;/config/cells/&lt;cell_name&gt;/oauth20oauth20/
+</code></pre></div>
+<p>For example:</p>
 <div class="highlight"><pre><span></span><code>cp /opt/HCL/AppServer/properties/base.clients.xml /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/
 </code></pre></div>
 </li>
 <li>
-<p>edit file to include Huddo Boards client</p>
+<p>Edit file to include Huddo Boards client</p>
 <p><code>vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/base.clients.xml</code></p>
 <div class="highlight"><pre><span></span><code>&lt;client id=&quot;huddoboards&quot; component=&quot;&lt;OAUTH_PROVIDER_NAME&gt;&quot; secret=&quot;&lt;OAUTH_SECRET&gt;&quot; displayname=&quot;Huddo Boards&quot; redirect=&quot;https://&lt;BOARDS_URL&gt;/auth/dx/&lt;BASE_64_ENCODED_DX_HOSTNAME&gt;/callback&quot; enabled=&quot;true&quot;&gt;
 &lt;/client&gt;
@@ -5007,7 +5041,7 @@ provider_1.filter=Authorization%=Bearer
 <h2 id="install-oauth-application">Install OAuth Application<a class="headerlink" href="#install-oauth-application" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These instructions are based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-enabling-your-system-use-oauth-20-feature">IBM documentation - Enabling your system to use the OAuth 2.0 feature</a>.</p>
+<p>This step is based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-enabling-your-system-use-oauth-20-feature">IBM documentation - Enabling your system to use the OAuth 2.0 feature</a>.</p>
 </div>
 <ol>
 <li>
