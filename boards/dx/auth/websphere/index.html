@@ -4935,7 +4935,7 @@
 <h2 id="create-service-provider">Create Service Provider<a class="headerlink" href="#create-service-provider" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This step is based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a></p>
+<p>This step is based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM WebSphere documentation - Creating an OAuth service provider</a>.</p>
 </div>
 <ol>
 <li>
@@ -4956,10 +4956,11 @@ AdminConfig.save()
 quit
 </code></pre></div>
 <p>This should copy the configuration file to <code>&lt;was_profile_root&gt;/config/cells/&lt;cell_name&gt;/oauth20</code></p>
+<p>Please confirm this file exists, e.g. <code>/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml</code></p>
 </li>
 <li>
 <p>Enable Auto Authorize</p>
-<p>Edit the <code>OAuthConfig.xml</code> file which was just created. For a full list of supported options see the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider">IBM documentation</a>.</p>
+<p>Edit the <code>OAuthConfig.xml</code> file which was just created. For a full list of supported options see the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider">IBM WebSphere documentation</a>.</p>
 <p><code>vi &lt;was_profile_root&gt;/config/cells/&lt;cell_name&gt;/oauth20</code></p>
 <p>For example:</p>
 <p><code>vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml</code></p>
@@ -5008,7 +5009,7 @@ provider_1.filter=Authorization%=Bearer
 <h2 id="register-oauth-client">Register OAuth Client<a class="headerlink" href="#register-oauth-client" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This step is based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM documentation - Creating an OAuth service provider</a>.</p>
+<p>This step is based on the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider">IBM WebSphere documentation - Creating an OAuth service provider</a>.</p>
 </div>
 <ol>
 <li>
