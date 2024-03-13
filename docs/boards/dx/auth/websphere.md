@@ -14,7 +14,7 @@ Connect to the core server, e.g on Kubernetes:
 
 !!! note
 
-    This step is based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider)
+    This step is based on the [IBM WebSphere documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider).
 
 1.  Create the OAuth provider by using the wsadmin utility
 
@@ -36,9 +36,11 @@ Connect to the core server, e.g on Kubernetes:
 
     This should copy the configuration file to `<was_profile_root>/config/cells/<cell_name>/oauth20`
 
+    Please confirm this file exists, e.g. `/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`
+
 1.  Enable Auto Authorize
 
-    Edit the `OAuthConfig.xml` file which was just created. For a full list of supported options see the [IBM documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider).
+    Edit the `OAuthConfig.xml` file which was just created. For a full list of supported options see the [IBM WebSphere documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider).
 
     `vi <was_profile_root>/config/cells/<cell_name>/oauth20`
 
@@ -92,7 +94,7 @@ Connect to the core server, e.g on Kubernetes:
 
 !!! note
 
-    This step is based on the [IBM documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider).
+    This step is based on the [IBM WebSphere documentation - Creating an OAuth service provider](https://www.ibm.com/docs/en/was/9.0.5?topic=services-creating-oauth-service-provider).
 
 1.  Copy default client definitions
 
