@@ -6,6 +6,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2024-03-15
+
+Features:
+
+-   My Tasks Summary micro app
+-   My Next Tasks micro app
+
+Fixes:
+
+-   Issue when deleting all Boards tile colors
+-   Links to card ancestors (Todo view)
+-   Prevent date selection incorrectly showing today when no date set
+
 2024-03-06
 
 Fixes:
