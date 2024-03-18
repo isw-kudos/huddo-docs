@@ -18,29 +18,49 @@ To install the Huddo Boards portlet, follow these steps:
 
 1. Open the DX `Administration` => `Web Modules`. Select the war file and click `Next`
 
-    ![select war](./web-modules-browse.png)
+    ![select war](./webmodules/browse.png)
 
 1. Click `Finish` to complete the installation
 
-    ![click finish](./web-modules-finish.png)
+    ![click finish](./webmodules/finish.png)
 
 ### ACL
 
+#### Web Module
+
 1. Find the newly installed `Boards` portlet, click `Assign access to Web module`
 
-    ![assign access](./assign-access.png)
+    ![assign access](./webmodules/assign-access.png)
 
 1. Click `User` => `Edit Role`
 
-    ![edit role](./edit-role.png)
+    ![edit role](./webmodules/edit-role.png)
 
 1. Click `Add`
 
-    ![add role](./add-role.png)
+    ![add role](./webmodules/add-role.png)
 
 1. Check `All Authenticated Portal Users` and click `OK`
 
-    ![all authenticated users](./all-authenticated-users.png)
+    ![all authenticated users](./webmodules/all-authenticated-users.png)
+
+#### Application
+
+1. Open `Applications`, search by title for `boards`, click `Assign access to Web module`
+
+    ![assign access](./applications/assign-access.png)
+
+1. Click `User` => `Edit Role`
+
+    ![edit role](./applications/edit-role.png)
+
+1. Click `Add`
+
+    ![add role](./applications/add-role.png)
+
+1. Check `All Authenticated Portal Users` and click `OK`
+
+    ![all authenticated users](./applications/all-authenticated-users.png)
 
 ### Configure
 
