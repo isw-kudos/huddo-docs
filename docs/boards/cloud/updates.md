@@ -6,6 +6,22 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2024-03-21
+
+[API Documentation](https://boards.api.huddo.com):
+
+-   /todos/next
+-   /todos/summary
+-   /board/{boardId}/labels
+-   /board/labels
+-   /user/auth/{provider}/{externalId}/apitoken
+
+2024-03-20
+
+Fixes:
+
+-   View cards in fullscreen on small screens
+
 2024-03-15
 
 Features:
