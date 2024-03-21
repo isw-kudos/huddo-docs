@@ -87,7 +87,7 @@
     ```yaml
     provider:
         env:
-            MSGRAPH_TEAMS_APP_ID: "<your_app_id>"
+            MSGRAPH_TEAMS_MANIFEST_ID: "<your_app_id>"
     ```
 
 1.  Redeploy Boards helm chart as per command for Huddo Boards:

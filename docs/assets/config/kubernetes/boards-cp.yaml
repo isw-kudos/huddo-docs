@@ -53,7 +53,7 @@ licence:
 # Uncomment/configure the following 3 lines if you are using this Huddo Boards deployment from Microsoft Teams
 # provider:
 #   env:
-#     MSGRAPH_TEAMS_APP_ID: app-id-shown-in-teams-url
+#     MSGRAPH_TEAMS_MANIFEST_ID: app-id-shown-in-teams-url
 
 user:
   env:
@@ -61,7 +61,7 @@ user:
     # CONNECTIONS_NAME: HCL Connections
     # CONNECTIONS_CLIENT_ID: huddoboards
     CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
-    CONNECTIONS_ADMINS: "[\"admin1@company.example.com\", \"boss2@company.example.com\", \"PROF_GUID_3\"]"
+    CONNECTIONS_ADMINS: '["admin1@company.example.com", "boss2@company.example.com", "PROF_GUID_3"]'
 
 migration:
   # configure access to the Connections Shared mount
