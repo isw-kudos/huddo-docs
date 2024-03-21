@@ -53,7 +53,7 @@ licence:
 # Uncomment/configure the following 3 lines if you are using this Huddo Boards deployment from Microsoft Teams
 # provider:
 #   env:
-#     MSGRAPH_TEAMS_MANIFEST_ID: app-id-shown-in-teams-url
+#     MSGRAPH_TEAMS_MANIFEST_ID: "<id attribute from your teams app manifest.json>"
 
 user:
   env:
