@@ -1,14 +1,14 @@
-### Getting Started with Huddo Boards for Office 365
+### Getting Started with Huddo Boards for Microsoft 365
 
-To get the most out of Huddo Boards in your Office 365 tenant, there are a few steps to take to make the experience seamless for your users.
+To get the most out of Huddo Boards in your Microsoft 365 tenant, there are a few steps to take to make the experience seamless for your users.
 
-> The Steps on this page (other than just logging in) require that you are an admin in your Office 365 tenant. If you are not an admin, please refer this page to your Administrator, Manager or IT department.
+> The Steps on this page (other than just logging in) require that you are an admin in your Microsoft 365 tenant. If you are not an admin, please refer this page to your Administrator, Manager or IT department.
 
 ---
 
 ### Login
 
-Huddo Boards uses OAuth for login and user access. This means your users can just click the Office 365 logo at [boards.huddo.com](https://boards.huddo.com) and use their existing Microsoft credentials.
+Huddo Boards uses OAuth for login and user access. This means your users can just click the Microsoft 365 logo at [boards.huddo.com](https://boards.huddo.com) and use their existing Microsoft credentials.
 
 > If you would like to link to Huddo Boards from another site, you can use [https://boards.huddo.com/auth/msgraph ](https://boards.huddo.com/auth/msgraph) which will skip the list of login options.
 
@@ -22,9 +22,9 @@ Microsofts API requires that you grant admin access to Huddo Boards before your 
 
 ![Approval Toast](approval.png)
 
-After clicking Approve, you may be asked to login to Office 365 again, then you will be prompted to approve Huddo Boards access on behalf of your organisation.
+After clicking Approve, you may be asked to login to Microsoft 365 again, then you will be prompted to approve Huddo Boards access on behalf of your organisation.
 
-> Note: you can revoke this approval at any stage via the Office 365 admin app.
+> Note: you can revoke this approval at any stage via the Microsoft 365 admin app.
 
 ![Approval Prompt](approval2.png)
 
@@ -49,7 +49,7 @@ The requested permissions are:
 
 ### Start a free trial
 
-After logging in, you will also be prompted to start a free (30 day) trial. Enabling this will allow other users in your Office 365 tenant to login and use Huddo Boards.
+After logging in, you will also be prompted to start a free (30 day) trial. Enabling this will allow other users in your Microsoft 365 tenant to login and use Huddo Boards.
 
 > You may also go to [Your Admin Page](https://boards.huddo.com/admin/licences/manage) to Start Your free trial, get a Quote or Purchase licences online.
 
@@ -57,9 +57,9 @@ After logging in, you will also be prompted to start a free (30 day) trial. Enab
 
 ---
 
-### Enable Integrations between Huddo Boards and Office 365
+### Enable Integrations between Huddo Boards and Microsoft 365
 
-These guides also require admin access and enable some advanced features of Huddo Boards in your Office 365 environment.
+These guides also require admin access and enable some advanced features of Huddo Boards in your Microsoft 365 environment.
 
 > These are also in the side menu of this page
 

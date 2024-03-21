@@ -6,9 +6,9 @@
 
 ## Prerequisites
 
-1. Office 365 Tenant admin account.
+1. Microsoft 365 Tenant admin account.
 
-1. Office 365 OAuth client. [See instructions](../auth/index.md)
+1. Microsoft 365 OAuth client. [See instructions](../auth/index.md)
 
 1. Notification bot (optional). [See instructions](notification-bot.md)
 

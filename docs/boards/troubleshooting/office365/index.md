@@ -1,10 +1,10 @@
-# Boards in Microsoft Office 365 for Business
+# Boards in Microsoft 365 for Business
 
 ## Microsoft Teams
 
 ### Administrator approval required to add Huddo Boards as a Teams Tab
 
-You may find that as a non-administrator Office 365 user, you cannot add Huddo Boards as a Teams Tab. In this case, after signing in to Huddo Boards in the tab configuration dialog view, the view will look like the screenshot below and all actions will be disabled.
+You may find that as a non-administrator Microsoft 365 user, you cannot add Huddo Boards as a Teams Tab. In this case, after signing in to Huddo Boards in the tab configuration dialog view, the view will look like the screenshot below and all actions will be disabled.
 
 ![Admin Approval Required](../../msgraph/teams/admin_approval_required.png)
 
@@ -12,7 +12,7 @@ Note that Huddo Boards can still be used as a Microsoft Teams personal app whils
 
 #### Resolution
 
-A user that has administrative capabilities within your Microsoft Office 365 organisation will need to sign in to Huddo Boards (either inside the Microsoft Teams configuration view or by going directly to [boards.huddo.com](https://boards.huddo.com)). They will then be presented with the following prompt:
+A user that has administrative capabilities within your Microsoft 365 organisation will need to sign in to Huddo Boards (either inside the Microsoft Teams configuration view or by going directly to [boards.huddo.com](https://boards.huddo.com)). They will then be presented with the following prompt:
 
 ![Admin Approval Toast](../../msgraph/auth/administrator_approval_toast.png)
 
@@ -24,15 +24,15 @@ Once these permissions have been accepted on behalf of the organisation, all use
 
 ##### Force Administrative Approval for Organisation
 
-Administrative users for your Office 365 organisation can also force an approval of all permissions for the organisation from within the Org Administration screen by following these steps:
+Administrative users for your Microsoft 365 organisation can also force an approval of all permissions for the organisation from within the Org Administration screen by following these steps:
 
-Access the [Configuration Page](../../admin/org-config.md) and click through your Office 365 client under 'Authentication Clients'.
+Access the [Configuration Page](../../admin/org-config.md) and click through your Microsoft 365 client under 'Authentication Clients'.
 
 Click the `Approve Advanced Features` button:
 
 ![](../../admin/img/org-approve-advanced.png)
 
-This will direct you to the Microsoft Office 365 **Permissions requested - Accept for your organisation** page, allowing you to force the consent of all permissions that Huddo Boards needs for your organisation:
+This will direct you to the Microsoft 365 **Permissions requested - Accept for your organisation** page, allowing you to force the consent of all permissions that Huddo Boards needs for your organisation:
 
 ![Admin Approval View](../../msgraph/auth/administrator_approval_view.png)
 

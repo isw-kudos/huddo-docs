@@ -1,6 +1,6 @@
-# Authenticating Huddo Boards with Office 365
+# Authenticating Huddo Boards with Microsoft 365
 
-This document details the process to enable login to your private instance of Huddo Boards with your private Office 365 tenant.
+This document details the process to enable login to your private instance of Huddo Boards with your private Microsoft 365 tenant.
 
 ![outcome of guide](boards-login.png)
 
@@ -8,7 +8,7 @@ This document details the process to enable login to your private instance of Hu
 
 ## Register OAuth Application
 
-You must configure an OAuth Application in your Office 365 Tenant in order to use Huddo Boards with O365. To access this configuration you must be logged in as a Microsoft tenant admin
+You must configure an OAuth Application in your Microsoft 365 Tenant in order to use Huddo Boards with O365. To access this configuration you must be logged in as a Microsoft tenant admin
 
 ### Open the [Azure App Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
@@ -210,9 +210,9 @@ At the end of this step you should have the following:
 
 1. Open your Huddo Boards environment.
 
-    Click the `Office 365` option and login with a Tenant Administrator account
+    Click the `Microsoft 365` option and login with a Tenant Administrator account
 
-    ![login with Office 365](appreg-login.png)
+    ![login with Microsoft 365](appreg-login.png)
 
 1. Once logged in, a prompt will appear in Huddo Boards. Click `Approve`
 
@@ -222,6 +222,6 @@ At the end of this step you should have the following:
 
     ![permission popup](administrator_approval_view.png)
 
-    Congratulations! All users in your tenant can now login to Huddo Boards via Office 365!
+    Congratulations! All users in your tenant can now login to Huddo Boards via Microsoft 365!
 
     ![login options](boards-login.png)

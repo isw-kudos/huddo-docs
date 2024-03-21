@@ -24,14 +24,14 @@ Basic instructions for deploying Huddo Boards into Docker Swarm for on-premise I
 
 ### Setup OAuth
 
-Huddo Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
+Huddo Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft 365.
 
 You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
 
 | Provider                     | Registration / Documentation                                                                                  | Callback URL                                     |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | IBM Connections (on premise) | [Huddo instructions](../connections/auth-on-prem.md)                                                          | `https://[BOARDS_URL]/auth/connections/callback` |
-| Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
+| Microsoft 365                | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
 | Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
 | LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |
 | Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | `https://[BOARDS_URL]/auth/facebook/callback`    |

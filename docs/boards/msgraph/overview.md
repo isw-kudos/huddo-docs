@@ -1,4 +1,4 @@
-Huddo Boards is tailored for working with Office 365 in the following ways:
+Huddo Boards is tailored for working with Microsoft 365 in the following ways:
 
 ### Login
 

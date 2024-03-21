@@ -40,7 +40,7 @@ nav:
                   - Security: boards/connections/security.md
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/cloud.md
-              - Office 365 for Business:
+              - Microsoft 365:
                   - Overview: boards/msgraph/overview.md
                   - Getting Started: boards/msgraph/getting-started/index.md
                   - App Tile: boards/msgraph/custom-tiles/index.md
@@ -72,7 +72,7 @@ nav:
                   - Proxy (httpd): boards/connections/httpd/index.md
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/on-prem.md
-              - Office 365:
+              - Microsoft 365:
                   - Authentication: boards/msgraph/auth/index.md
                   - Teams Notification Bot: boards/msgraph/teams/notification-bot.md
                   - Teams App: boards/msgraph/teams/on-prem.md
@@ -137,7 +137,7 @@ nav:
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
           - Boards Docker: boards/troubleshooting/docker.md
           - Boards WebSphere: boards/troubleshooting/websphere.md
-          - Office 365: boards/troubleshooting/office365/index.md
+          - Microsoft 365: boards/troubleshooting/office365/index.md
           - OAuth: boards/troubleshooting/oauth.md
           - Mongo: boards/troubleshooting/mongo.md
           - NGINX: boards/troubleshooting/nginx.md

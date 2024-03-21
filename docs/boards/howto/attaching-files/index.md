@@ -8,9 +8,9 @@ Anyone who has access to view the card will be able to view and download the att
 
     This feature can be disabled organisation wide by an administrator if desired.
 
-### Office 365 (OneDrive) & HCL Connections (Files)
+### Microsoft 365 (OneDrive) & HCL Connections (Files)
 
-If you use [Office 365](../microsoft/onedrive.md) or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
+If you use [Microsoft 365](../microsoft/onedrive.md) or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
 
 ### Attaching a File to a Card
 
@@ -43,7 +43,7 @@ Files attached to cards in Huddo Boards Cloud with Auth0, Google, Facebook, Link
 
 If you are hosting Huddo Boards yourself then files are stored in the default file storage as defined in your environment.
 
-If you are using Office 365 or HCL Connections, your files are stored within these environments.
+If you are using Microsoft 365 or HCL Connections, your files are stored within these environments.
 
 ### Deleting a Card that has Attachments
 

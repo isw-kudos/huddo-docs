@@ -2,7 +2,7 @@
 
 # Huddo Boards in Microsoft Outlook
 
-Huddo Boards' integration with Microsoft Office 365 allows you to create cards on a board directly from an email in your inbox, and share cards, lists, or an entire board, within an email.
+Huddo Boards' integration with Microsoft 365 allows you to create cards on a board directly from an email in your inbox, and share cards, lists, or an entire board, within an email.
 
 ## Create a Card From an Email
 

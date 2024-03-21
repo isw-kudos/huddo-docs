@@ -2,7 +2,7 @@
 
 ## Embedding Huddo Boards in a SharePoint Site Page
 
-Huddo Boards' integration with Microsoft Office 365 allows you to add Huddo Boards to a SharePoint site page and work directly on the board from the page.
+Huddo Boards' integration with Microsoft 365 allows you to add Huddo Boards to a SharePoint site page and work directly on the board from the page.
 
 In the example below, we've created a site page called "Where to Eat in Melbourne" and added our Food Objectives 2019 board to it. When added, you and your colleagues can work directly from a site page on a board.
 

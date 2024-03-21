@@ -2,7 +2,7 @@
 
 # Adding Boards to Microsoft Teams
 
-Boards has integrated seamlessly with Microsoft Office 365 Teams so you can supercharge your existing collaboration environments.
+Boards has integrated seamlessly with Microsoft 365 Teams so you can supercharge your existing collaboration environments.
 
  [Add boards to Microsoft Teams as an administrator.](../../msgraph/teams/index.md)
 

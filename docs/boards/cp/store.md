@@ -30,7 +30,7 @@ You will need to provide the following information to setup you Organisation in 
 
 When creating your Login client(s) refer to the table below for details:
 
-| Provider        | Text Field                |
-| --------------- | ------------------------- |
-| HCL Connections | Your Connections URL      |
-| Microsoft 365   | Your Office 365 tenant ID |
+| Provider        | Text Field                   |
+| --------------- | ---------------------------- |
+| HCL Connections | Your Connections URL         |
+| Microsoft 365   | Your Microsoft 365 tenant ID |
