@@ -1,84 +1,30 @@
 # Huddo Boards On-Premise in Microsoft Teams
 
-![example](personal.png)
+<div style="text-align: center;">
+  <a href="./store-slides/1%20EN%20UK.png" target="_blank"><img src="./store-slides/1%20EN%20UK.png" alt="Your tasks, your team, your way" style="width:30%"></a>
+  <a href="./store-slides/2%20EN%20UK.png" target="_blank"><img src="./store-slides/2%20EN%20UK.png" alt="Intuitive task management" style="width:30%;"></a>
+  <a href="./store-slides/3%20EN%20UK.png" target="_blank"><img src="./store-slides/3%20EN%20UK.png" alt="Go into detail" style="width:30%;"></a>
+  <a href="./store-slides/4%20EN%20UK.png" target="_blank"><img src="./store-slides/4%20EN%20UK.png" alt="Huddo Boards where you work" style="width:30%;"></a>
+  <a href="./store-slides/5%20EN%20UK.png" target="_blank"><img src="./store-slides/5%20EN%20UK.png" alt="Teams activity feed" style="width:30%;"></a>
+</div>
 
+## Contact Us
+Send an email to [support@huddo.com](mailto:support@huddo.com) with the following details:
+
+
+> Hi! I'd like to set up the Huddo Boards teams app for my company, [COMPANY NAME]. Here are the details:
+>
+> - *(optional)* Attach the `.zip` or `manifest.json` file of any previous Huddo Boards teams app you have used or been provided before. 
+> - [  ] The Application ID of the Huddo Boards application you have registered in Microsoft Entra
+> - [  ] `APP_URI` value from your helm chart values.
+> - [  ] `API_GATEWAY` value from your helm chart values.
+
+We will generate your customized Huddo Boards Teams app and provide you up-to-date guidance on how to deploy it in your environment.
+
+Note that updates to the Huddo Boards Teams app may need to be re-deployed via another customised Teams app package. Providing you with Teams app updates is currently a manual process. 
+ 
 ---
-
-## Prerequisites
-
-1. Microsoft 365 Tenant admin account.
-
-1. Microsoft 365 OAuth client. [See instructions](../auth/index.md)
-
-1. Notification bot (optional). [See instructions](notification-bot.md)
-
-    > **Note:** notifications are **optional** as the bot cannot be configured for internal Huddo Boards deployments
-
----
-
-## Configure Application
-
-### Download from Boards
-
-1. Login to Huddo Boards with your Microsoft Tenant Admin account
-
-1. Click the `Configuration` icon and then `Manage Org`
-
-    ![example](../../admin.png)
-
-1. Click on your Organisation
-
-    ![example](admin-orgs.png)
-
-1. Click on your Microsoft client
-
-    ![example](admin-org.png)
-
-1. Click the download button for your configuration
-
-    - `App with Notifications` (if you can and have enabled the [notification bot](notification-bot.md))
-
-    - `App for Internal Boards Deployment` (if you do not want notifications)
-
-    ![example](app-download.png)
-
-### Install in Teams
-
-1. Open the [Teams App](https://teams.microsoft.com)
-
-    Click `Apps` -> `Upload a custom app` -> `Upload for [COMPANY_NAME]`
-
-    > where `[COMPANY_NAME]` is the name of your company
-
-    ![example](teams1.png)
-
-1. Upload the Zip file you downloaded above
-
-    ![example](teams2.png)
-
-1. The Huddo Boards app will now appear under the section `Built for [COMPANY_NAME]`
-
-    ![example](teams3.png)
-
----
-
-### Configure App ID
-
-1.  Open [Team Apps](https://teams.microsoft.com/_#/apps?intent=0&category=16&autoNavigationOnDone=true&filterByPersonal=false&storeLaunchFromChat=false&addAppDialogEntryPoint=7) in your web browser
-
-    Click on `Built for [COMPANY_NAME]` => `Huddo Boards`
-
-    ![example](tenant-apps.png)
-
-1.  Click `Add`
-
-    ![example](add-app.png)
-
-1.  Huddo Boards personal will now open
-
-    Copy the App ID from the URL. We will use this shortly.
-
-    ![example](appid.png)
+Once you have your customised Teams app and advice from the Huddo team:
 
 1.  Open the Boards Helm Chart config used for deployment
 
@@ -87,10 +33,10 @@
     ```yaml
     provider:
         env:
-            MSGRAPH_TEAMS_MANIFEST_ID: "<your_app_id>"
+            MSGRAPH_TEAMS_MANIFEST_ID: "<id attribute from your teams app manifest.json>"
     ```
 
-1.  Redeploy Boards helm chart as per command for Huddo Boards:
+2.  Redeploy Boards helm chart as per command for Huddo Boards:
 
     [HCL Component Pack](../../cp/index.md#deploy-boards-helm-chart)
 
