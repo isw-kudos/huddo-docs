@@ -44,7 +44,7 @@
 
 1.  Apply the policy usng the following command:
 
-        /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=/opt/HCL/wp_profile/tmp/huddo-com-policy.xml -DPortalAdminId=YOUR_DX_ADMIN_ID -DPortalAdminPwd=YOUR_DX_ADMIN_PASSWORD -DWasUserId=YOUR_WAS_ADMIN_ID -DWasPassword=YOUR_WAS_ADMIN_PASSWORD
+        /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=/opt/HCL/wp_profile/temp/huddo-com-policy.xml -DPortalAdminId=YOUR_DX_ADMIN_ID -DPortalAdminPwd=YOUR_DX_ADMIN_PASSWORD -DWasUserId=YOUR_WAS_ADMIN_ID -DWasPassword=YOUR_WAS_ADMIN_PASSWORD
 
 1.  Import the SSL Certificate so DX can connect
 
