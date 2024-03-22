@@ -28,7 +28,7 @@ For more styles and examples please see [the documentation](https://squidfunk.gi
 
 1. Run in Docker
 
-       docker-compose up
+       docker compose up
 
        # Previously this was command, but addition of plugins breaks
        # docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material

@@ -204,6 +204,7 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.inlinehilite
+  - md_in_html
 
 theme:
   name: material

@@ -1,11 +1,13 @@
 # Huddo Boards On-Premise in Microsoft Teams
 
-<div style="text-align: center;">
-  <a href="./store-slides/1%20EN%20UK.png" target="_blank"><img src="./store-slides/1%20EN%20UK.png" alt="Your tasks, your team, your way" style="width:30%"></a>
-  <a href="./store-slides/2%20EN%20UK.png" target="_blank"><img src="./store-slides/2%20EN%20UK.png" alt="Intuitive task management" style="width:30%;"></a>
-  <a href="./store-slides/3%20EN%20UK.png" target="_blank"><img src="./store-slides/3%20EN%20UK.png" alt="Go into detail" style="width:30%;"></a>
-  <a href="./store-slides/4%20EN%20UK.png" target="_blank"><img src="./store-slides/4%20EN%20UK.png" alt="Huddo Boards where you work" style="width:30%;"></a>
-  <a href="./store-slides/5%20EN%20UK.png" target="_blank"><img src="./store-slides/5%20EN%20UK.png" alt="Teams activity feed" style="width:30%;"></a>
+<div style="text-align:center" markdown>
+
+  [![Your tasks, your team, your way](./store-slides/1%20EN%20UK.png){ style="width:30%" }](./store-slides/1%20EN%20UK.png)
+  [![Intuitive task management](./store-slides/2%20EN%20UK.png){ style="width:30%" }](./store-slides/2%20EN%20UK.png)
+  [![Go into detail](./store-slides/3%20EN%20UK.png){ style="width:30%" }](./store-slides/3%20EN%20UK.png)
+  [![Huddo Boards where you work](./store-slides/4%20EN%20UK.png){ style="width:30%" }](./store-slides/4%20EN%20UK.png)
+  [![Teams activity feed](./store-slides/5%20EN%20UK.png){ style="width:30%" }](./store-slides/5%20EN%20UK.png)
+
 </div>
 
 ## Contact Us
