@@ -6,6 +6,31 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2024-03-25
+
+Features:
+
+-   Emoji reactions on comments
+
+    -   Quick selection
+
+        ![emoji quick](../howto/reactions/quick.png)
+
+    -   Picker
+
+        ![emoji picker](../howto/reactions/picker.png)
+
+Improvements:
+
+-   Editing of comments on mobile (focus at end of text, save/cancel buttons)
+
+Fixes:
+
+-   Creating Board in group restricts to the group's Organisation
+-   Better handling of authentication when provider session changes user account
+-   Visibility of 'Embed Link' when viewing Boards by Group
+-   Creation of Board in Group when using /group/{groupId} route (embedded)
+
 2024-03-21
 
 [API Documentation](https://boards.api.huddo.com):
