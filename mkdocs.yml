@@ -24,6 +24,10 @@ extra:
 nav:
   - Boards:
       - boards/index.md
+      - API: 
+          - boards/api/index.md
+          - Power Automate: boards/api/powerautomate.md
+          - Zapier: boards/api/zapier.md
       - Boards Cloud:
           - boards/cloud/index.md
           - Updates: boards/cloud/updates.md
