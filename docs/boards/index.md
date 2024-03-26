@@ -6,7 +6,7 @@ We are proud to say that Huddo Boards is able to run in many configurations to s
 1. Boards Self-Hosted (On-Premise)
     - [HCL Connections Component Pack](cp/index.md)
     - [Kubernetes](kubernetes/index.md)
-    - [AIO](./aio/index.md)
+    - [Docker - All In One](./aio/index.md)
 1. [Boards Hybrid](hybrid.md) (Cloud integrated with HCL Connections On-Premise)
 
 ---
