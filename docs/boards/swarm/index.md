@@ -2,7 +2,7 @@
 
 !!! warning
 
-    These instructions are deprecated. Please see [standalone guide](../standalone.md) if you do not have either Kubernetes or Component Pack
+    These instructions are deprecated. Please see [AIO guide](../aio/index.md) if you do not have either Kubernetes or Component Pack
 
 Basic instructions for deploying Huddo Boards into Docker Swarm for on-premise IBM Connections environments
 

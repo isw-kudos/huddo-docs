@@ -51,7 +51,7 @@ nav:
           - boards/kubernetes/index.md
           - a) For HCL Connections: boards/cp/index.md
           - b) For Kubernetes: boards/kubernetes/index.md
-          - c) Standalone: boards/standalone.md
+          - c) All-In-One: boards/aio/index.md
           - Access to Images: boards/images.md
           - Configuration: boards/env/common.md
           - Compatibility: boards/compatibility.md

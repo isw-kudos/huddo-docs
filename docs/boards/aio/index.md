@@ -1,12 +1,10 @@
-# Boards Standalone Deployment
+# Huddo Boards All-in-One (AIO) Docker setup
 
 !!! tip
 
     This document outlines a standalone (all in one) deployment of Huddo Boards using `docker-compose`. This can be used as a proof of concept, staging deployment or even a production deployment for a limited number of users (e.g. &lt; 500).
 
 You may run all services including database and file storage on one server, or you can use an external Mongo database or S3 file store.
-
-Like all other deployments of Huddo Boards, this requires configuration of 2 domains: Application and API. e.g. `boards.huddo.com` and `boards.api.huddo.com`
 
 ## Server requirements
 
@@ -18,15 +16,16 @@ RHEL (or Centos 7) server with:
 -   100gb data drive (will be shared for database and file store) <sup>\*see Persistence Options below</sup>
 -   docker and docker-compose
 
----
-
 ## Options
 
 ### Network
 
-You may use an external proxy or send traffic directly to the server. If you are sending traffic directly to the server, you will need pem encoded certificate (with full chain) and key.
+The implementation of this can be either:
 
-The implementation of this will require 2 domains in your environment (typically "boards." and "boards-api." subdomains), one for the web app and one for the API.
+| Deployment Type                   | Example URLs                                            | Comments                                                                                                |
+| --------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [Paths](./paths/index.md)         | `yourdomain.com/boards.com` `yourdomain.com/api-boards` | use your existing domain, no additional certificates, easier SSO integration of HCL Connections header. |
+| [Subdomain](./subdomain/index.md) | `boards.yourdomain.com`</br>`boards-api.yourdomain.com` | requires 2 domains (and therefore certificates) in your environment.                                    |
 
 ### Persistence
 
@@ -38,6 +37,8 @@ Boards uses 3 types of persistent data:
 
 Each of these may use external services (e.g. Mongo Atlas) or the included services in the template (this hugely changes the server demand).
 
+#### Backups
+
 !!! warning
 
     If using the included services, you must have a separate mount point on your server for persistent data with a directory each for mongo and s3(minio) storage. You will need to map directories for mongo and s3 containers to this data drive. This data drive should be backed up however you currently backup data.
@@ -48,7 +49,7 @@ Each of these may use external services (e.g. Mongo Atlas) or the included servi
 
 ### Access to Images
 
-Please [follow this guide](images.md) to get access to our images in Quay.io so that we may give you access to our repositories and templates. Once you have access please run the `docker login` command available from the Quay.io interface, for example:
+Please [follow this guide](../images.md) to get access to our images in Quay.io so that we may give you access to our repositories and templates. Once you have access please run the `docker login` command available from the Quay.io interface, for example:
 
     docker login -u="<username>" -p="<encrypted-password>" quay.io
 
@@ -56,29 +57,47 @@ Please [follow this guide](images.md) to get access to our images in Quay.io so 
 
 ### Configuration
 
-1.  download the configuration files:
+Download the appropriate configuration files for your deployment type:
 
-    -   [docker-compose yaml](../assets/boards/aio/boards.yml)
-    -   [nginx proxy conf](../assets/boards/aio/nginx.conf)
+| Deployment Type | URL                                                      | Files                                                                                               |
+| --------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Paths           | `/boards`, `/api-boards`                                 | [docker-compose.yml](./paths/docker-compose.yml)</br>[nginx proxy conf](./paths/nginx.conf)         |
+| Subdomain       | `boards.yourdomain.com`,</br>`boards-api.yourdomain.com` | [docker-compose.yml](./subdomain/docker-compose.yml)</br>[nginx proxy conf](./subdomain/nginx.conf) |
 
-1.  update all example values in both files as required. Most required variables are in the template, for more information see the Kubernetes docs
+Update all example values in **both files** as required. Most required variables are in the template, for more information see the Kubernetes docs
 
-    -   [Global config](kubernetes/index.md#update-config-file)
-    -   [Boards variables](env/common.md)
+-   [Global config](../kubernetes/index.md#update-config-file)
+-   [Boards variables](../env/common.md)
 
-    The minio credentials are are used to both set in the minio service and access it from other services, the x-minio-access field is used as the username in minio and the x-minio-secret is used as the password you can view minios documentation on these fields here: https://docs.min.io/minio/baremetal/reference/minio-server/minio-server.html#root-credentials and an example of the values used here: https://docs.min.io/docs/minio-docker-quickstart-guide.html the standard seems to be around 20 characters all caps/numbers for the username and around 40 characters any case / number for the password.
+#### S3 Storage
 
-    The nginx proxy setup assumes that you will have 2 subdomains as stated above with a shared (wildcard) ssl certificate, both the certificate and key file for these domains need to be accessible to the server and the path filled in under the proxy section. you may use separate certificates if needed by mounting them both in the proxy service with appropriate naming and using the new mounted files in the `nginx.conf`.
+The minio credentials are are used to both set in the minio service and access it from other services;
 
-    !!! tip
+-   `x-minio-access` is used as the username in minio
+-   `x-minio-secret` is used as the password.
 
-          **Authentication**: the user environment variables in the compose file assume you are installing this in a Connections environment, these can be removed or replaced with a Microsoft 365 tenant info as [shown here](https://docs.huddo.com/boards/msgraph/auth/#configure-oauth-in-boards). For more info on other authentication methods contact the [huddo team](mailto:support@huddo.com). The default variables for Domino are also included and can be uncommented as required.
+See the [minios documentation](https://docs.min.io/minio/baremetal/reference/minio-server/minio-server.html#root-credentials) on these fields, and an example of the values [used here](https://docs.min.io/docs/minio-docker-quickstart-guide.html). The standard seems to be around 20 characters all caps/numbers for the username and around 40 characters any case / number for the password.
 
-### Start
+#### Authentication
 
-Start the deployment using the following command
+The `user` env variables in the compose file assume you are installing this in an HCL Connections environment. These can be removed or replaced with Microsoft 365 tenant info as [shown here](https://docs.huddo.com/boards/msgraph/auth/#configure-oauth-in-boards). For more info on other authentication methods contact the [huddo team](mailto:support@huddo.com). The default variables for Domino are also included and can be uncommented as required.
 
-    docker-compose -f ./boards.yml up -d
+### DNS / Proxy
+
+Please follow the instructions for your chosen deployment type:
+
+-   [Paths](./paths/index.md)
+-   [Subdomain](./subdomain/index.md)
+
+---
+
+## Start
+
+Once you have updated the appropriate `docker-compose.yml` and `nginx.conf` with your environment details, you can start the services with:
+
+```shell
+docker-compose up -d
+```
 
 ---
 

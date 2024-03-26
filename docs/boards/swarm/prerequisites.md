@@ -2,7 +2,7 @@
 
 !!! warning
 
-    These instructions are deprecated. Please see [standalone guide](../standalone.md) if you do not have either Kubernetes or Component Pack
+    These instructions are deprecated. Please see [AIO guide](../aio/index.md) if you do not have either Kubernetes or Component Pack
 
 ## Servers
 
