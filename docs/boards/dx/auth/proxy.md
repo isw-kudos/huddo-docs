@@ -8,7 +8,7 @@
 
 ## Steps
 
-1.  Create a proxy
+1.  Create a proxy policy for the domain hosting the Boards API (e.g. `*.huddo.com`)
 
     `vi /opt/HCL/wp_profile/temp/huddo-com-policy.xml`
 

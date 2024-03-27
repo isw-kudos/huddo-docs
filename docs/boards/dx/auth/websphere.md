@@ -120,7 +120,7 @@ Connect to the core server, e.g on Kubernetes:
 
     For example:
 
-        <client id="huddoboards" component="OAuthConfig" secret="a2e3d8c3-7875-4512-a0da-8b5fd61f2245" displayname="Huddo Boards" redirect="https://boards.huddo.com/auth/dx/ZHhkZXYxLmlzd2xhYi5uZXQ=/callback" enabled="true">
+        <client id="huddoboards" component="OAuthConfig" secret="a2e3d8c3-7875-4512-a0da-8b5fd61f2245" displayname="Huddo Boards" redirect="https://boards.huddo.com/auth/dx/ZHguY29tcGFueS5jb20=callback" enabled="true">
         </client>
 
 ## Install OAuth Application
