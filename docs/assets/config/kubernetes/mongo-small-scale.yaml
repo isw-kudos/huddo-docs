@@ -57,7 +57,7 @@ spec:
       dnsPolicy: ClusterFirst
       containers:
         - name: mongo
-          image: bitnami/mongodb:5.0
+          image: bitnami/mongodb:7.0
           imagePullPolicy: Always
           resources:
             # set acording to your scaling requirements
@@ -68,11 +68,13 @@ spec:
           ports:
             - containerPort: 27017
           env:
-          - name: MONGODB_ADVERTISED_HOSTNAME
-            value: mongo-service
+            - name: MONGODB_ADVERTISED_HOSTNAME
+              value: mongo-service
+            - name: ALLOW_EMPTY_PASSWORD
+              value: yes
           volumeMounts:
-          - mountPath: /bitnami
-            name: mongo-vol
+            - mountPath: /bitnami
+              name: mongo-vol
       volumes:
         - name: mongo-vol
           persistentVolumeClaim:
