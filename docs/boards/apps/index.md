@@ -52,6 +52,10 @@ Card:
 
 This app displays a list of cards which have links (bookmarks) of the URL specified in the query parameter.
 
-APP_URL: `/app/linkedcards?url=<URL>`
+APP_URL: `/app/linkedcards?url=<ENCODED_URL>`
+
+Where `<ENCODED_URL>` is the `encodeURIComponent(url)` of the URL to search for,
+
+e.g. `/app/linkedcards?url=https%3A%2F%2Fgoogle.com`
 
 ![Linked Cards](./linked-cards.png)
