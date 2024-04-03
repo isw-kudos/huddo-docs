@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2016,6 +2016,15 @@
   
     <nav class="md-nav" aria-label="2024">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2024-04-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      2024-04-03
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#2024-02-14" class="md-nav__link">
@@ -5289,6 +5298,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2024-04-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      2024-04-03
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2024-02-14" class="md-nav__link">
     <span class="md-ellipsis">
       2024-02-14
@@ -5550,6 +5568,90 @@ chown 1000:1000 -R .
 <p>Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.</p>
 </div>
 <h3 id="2024">2024<a class="headerlink" href="#2024" title="Permanent link">&para;</a></h3>
+<h4 id="2024-04-03">2024-04-03<a class="headerlink" href="#2024-04-03" title="Permanent link">&para;</a></h4>
+<p>Features:</p>
+<ul>
+<li>
+<p>Emoji reactions on comments</p>
+<ul>
+<li>
+<p>Quick selection</p>
+<p><img alt="emoji quick" src="../howto/reactions/quick.png" /></p>
+</li>
+<li>
+<p>Picker</p>
+<p><img alt="emoji picker" src="../howto/reactions/picker.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>My Tasks Summary micro app</p>
+</li>
+<li>My Next Tasks micro app</li>
+</ul>
+<p><a href="https://boards.api.huddo.com">API Documentation</a>:</p>
+<ul>
+<li><code>/todos/next</code></li>
+<li><code>/todos/summary</code></li>
+<li><code>/board/{boardId}/labels</code></li>
+<li><code>/board/labels</code></li>
+<li><code>/user/auth/{provider}/{externalId}/apitoken</code></li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>Streamlined <code>/todos/assigned</code> &amp; <code>/todos/created</code> API, separating out the Board labels to <code>/board/labels</code> &amp; <code>/board/{boardId}/labels</code> endpoints</li>
+<li>Loading feedback when creating a board</li>
+<li>Editing of comments on mobile (focus at end of text, save/cancel buttons)</li>
+<li>Loading feedback of recent boards sidebar</li>
+<li>Card link opening behavious (links to other boards open in same tab)</li>
+<li>Teams board links open tabs</li>
+<li>Show loading spinner while waiting on clicked link to open in a teams tab</li>
+<li>Add copy/paste list option in list menu</li>
+<li>Add duplication list option in list menu</li>
+<li>More comprehensive history feed details for moving or reordering cards</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Create board from template when opened and only a reader</li>
+<li>Creating Board in group restricts to the group's Organisation</li>
+<li>Better handling of authentication when provider session changes user account</li>
+<li>Visibility of 'Embed Link' when viewing Boards by Group</li>
+<li>Creation of Board in Group when using /group/{groupId} route (embedded)</li>
+<li>View cards in fullscreen on small screens</li>
+<li>Issue when deleting all Boards tile colors</li>
+<li>Links to card ancestors (Todo view)</li>
+<li>Prevent date selection incorrectly showing today when no date set</li>
+<li>Upload files to Teams private channel OneDrive</li>
+<li>Scroll to bottom of a list when creating a new card</li>
+<li>Delete action in card dialog / in archive view</li>
+<li>Add card section in a list delays retract/height change to prevent card drag issues</li>
+<li>Dragging empty colour labels in Firefox</li>
+<li>Filter/search by list name</li>
+<li>Unauthorised error when adding existing board as Teams tab</li>
+<li>Fix potential onEnter errors in rich text editor</li>
+<li>Prevent overflow on file preview</li>
+<li>Load board members on fullscreen list view (for @mentions)</li>
+<li>Fix potential onBlur errors in rich text editor</li>
+<li>Don't show iCalendar feed options in Teams</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>Security updates</li>
+<li>
+<p>Oracle DB</p>
+<ul>
+<li>Update to use new v6 thin client</li>
+<li>allow different credentials for <a href="../cp/migration/#peopledb-acl">PEOPLEDB</a></li>
+</ul>
+</li>
+<li>
+<p>MSSQL</p>
+<ul>
+<li>Update to v10</li>
+<li>allow self-signed certificates with <a href="../cp/migration/#mssql">CONNECTIONS_DB_OPTIONS</a> variable</li>
+</ul>
+</li>
+</ul>
 <h4 id="2024-02-14">2024-02-14<a class="headerlink" href="#2024-02-14" title="Permanent link">&para;</a></h4>
 <p>Fixes:</p>
 <ul>
@@ -5932,7 +6034,7 @@ chown 1000:1000 -R .
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-02-14
+    2024-04-03
   </span>
 
     
@@ -5982,7 +6084,7 @@ chown 1000:1000 -R .
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
