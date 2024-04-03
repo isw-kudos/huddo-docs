@@ -331,6 +331,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/boards/apps/</loc>
+         <lastmod>2024-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/auth0/</loc>
          <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
