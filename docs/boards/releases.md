@@ -58,8 +58,10 @@ Features:
 
         ![emoji picker](./howto/reactions/picker.png)
 
--   My Tasks Summary micro app
--   My Next Tasks micro app
+-   [Micro Apps](./apps/index.md)
+
+    -   [My Next Tasks Summary](./apps/index.md#my-next-tasks-summary)
+    -   [My Next Tasks](./apps/index.md#my-next-tasks)
 
 [API Documentation](https://boards.api.huddo.com):
 
