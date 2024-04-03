@@ -22,7 +22,7 @@ This service will:
 
 Ensure you have updated the following variables as applicable in your `boards-cp.yaml` file downloaded previously
 
-|                                              | Example                                                  | Description                                                                                                                                                                                                               |
+| Variable                                     | Example                                                  | Description                                                                                                                                                                                                               |
 | -------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sharedDrive.server`                         | `192.168.10.1` or `websphereNode1`                       | IP or Hostname of the server with the Connections shared drive mount                                                                                                                                                      |
 | `sharedDrive.path`                           | `/opt/HCL/Connections/data/shared` or `/nfs/data/shared` | Path on the mount to the Connections shared drive                                                                                                                                                                         |
@@ -39,10 +39,10 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | `env.CONNECTIONS_ACTIVITIES_ADMIN_USERNAME`  | `connectionsadmin`                                       | Credentials for user with `admin` role </br>on the Activities application.</br>See `ISC` => `Applications` => </br>`Activities` => </br>`Security role to user mapping`                                                   |
 | `env.CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD`  | `adminpassword`                                          | Password for the Activities administrator                                                                                                                                                                                 |
 | `env.CONNECTIONS_DB_TYPE`                    | `db2` or `mssql` or `oracle`                             | SQL database type hosting Activities.                                                                                                                                                                                     |
-| `env.CONNECTIONS_DB_HOST`                    | `dbserver.company.com`                                   | SQL Server hostname                                                                                                                                                                                                       |
+| `env.CONNECTIONS_DB_HOST`                    | `dbserver.company.com`                                   | SQL Server hostname hostname                                                                                                                                                                                              |
 | `env.CONNECTIONS_DB_PORT`                    | `50000` or `1433` or `1531`                              | SQL Server connection port                                                                                                                                                                                                |
 | `env.CONNECTIONS_DB_USER`                    | `dbuser`                                                 | SQL Server user name                                                                                                                                                                                                      |
-| `env.CONNECTIONS_DB_PASSWORD`                | `dbpassword`                                             | SQL Server user password                                                                                                                                                                                                  |
+| `env.CONNECTIONS_DB_PASSWORD`                | `dbpassword`                                             | SQL Server password password                                                                                                                                                                                              |
 | `env.CONNECTIONS_DB_SID`                     | `DATABASE`                                               | SQL Server SID</br>**Note: applicable to Oracle**                                                                                                                                                                         |
 | `env.CONNECTIONS_DB_DOMAIN`                  | `domain`                                                 | SQL Server connection string</br>**Note: applicable to Microsoft SQL**                                                                                                                                                    |
 | `env.CONNECTIONS_DB_CONNECT_STRING`          | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>`  | SQL Server connection string</br>**Note: Optional</br>Default is built from other values.</br>Only applicable to DB2 and Oracle**                                                                                         |
@@ -51,6 +51,24 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | `env.IMMEDIATELY_PROCESS_ALL`                | `false` (default)                                        | Process ALL Activities on service startup.                                                                                                                                                                                |
 | `env.COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                  | Mark the old Activity data as complete                                                                                                                                                                                    |
 | `env.CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                  | Create link to new Board in old Activity                                                                                                                                                                                  |
+
+### PeopleDB ACL
+
+Additional Properties for access to `PEOPLEDB` if separate host or authentication **(e.g. Oracle or DB2)**.
+
+| Variable                                  | Default                          | Example                                                 | Description                  |
+| ----------------------------------------- | -------------------------------- | ------------------------------------------------------- | ---------------------------- |
+| `env.CONNECTIONS_PEOPLEDB_HOST`           | `env.CONNECTIONS_HOST`           | `dbserver.company.com`                                  | SQL Server hostname          |
+| `env.CONNECTIONS_PEOPLEDB_PORT`           | `env.CONNECTIONS_PORT`           | `50000` or `1433` or `1531`                             | SQL Server connection port   |
+| `env.CONNECTIONS_PEOPLEDB_USER`           | `env.CONNECTIONS_USER`           | `dbuser`                                                | SQL Server user name         |
+| `env.CONNECTIONS_PEOPLEDB_PASSWORD`       | `env.CONNECTIONS_PASSWORD`       | `dbpassword`                                            | SQL Server user password     |
+| `env.CONNECTIONS_PEOPLEDB_CONNECT_STRING` | `env.CONNECTIONS_CONNECT_STRING` | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>` | SQL Server connection string |
+
+### MSSQL
+
+| Variable                     | Default   | Example                          | Description                                                   |
+| ---------------------------- | --------- | -------------------------------- | ------------------------------------------------------------- |
+| `env.CONNECTIONS_DB_OPTIONS` | undefined | {"trustServerCertificate": true} | JSON encoded options for the MS SQL Server connection string. |
 
 ### Custom Persistent Volume
 

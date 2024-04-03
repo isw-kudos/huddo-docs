@@ -6,6 +6,18 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2024-04-02
+
+Improvements:
+
+-   Streamlined `/todos/assigned` & `/todos/created` API, separating out the Board labels to `/board/labels` & `/board/{boardId}/labels` endpoints
+-   Loading feedback when creating a board
+
+Fixes:
+
+-   Issue with board label history
+-   create board from template when opened and only a reader
+
 2024-03-25
 
 Features:

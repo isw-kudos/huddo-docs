@@ -23,7 +23,7 @@
 
 ## Integration options
 
-The [Boards API](./api/index.md) is the simplest way of extending Boards into your HCL DX environment.
+The [Boards API](../api/index.md) is the simplest way of extending Boards into your HCL DX environment.
 
 To authenticate, you will need to use the user's API Token. This can be obtained on behalf of the user via SSO. Simply request the `/user/auth/dx/<BASE64_HOSTNAME>/apitoken` endpoint from the [Boards API](https://boards.api.huddo.com/#/default/GetAPITokenBySSO) from the client-side (browser) and include the DX session cookies. Based on your deployment architecture this can be achieved in two ways;
 

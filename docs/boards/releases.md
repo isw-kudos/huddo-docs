@@ -44,6 +44,81 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-04-03
+
+Features:
+
+-   Emoji reactions on comments
+
+    -   Quick selection
+
+        ![emoji quick](./howto/reactions/quick.png)
+
+    -   Picker
+
+        ![emoji picker](./howto/reactions/picker.png)
+
+-   My Tasks Summary micro app
+-   My Next Tasks micro app
+
+[API Documentation](https://boards.api.huddo.com):
+
+-   `/todos/next`
+-   `/todos/summary`
+-   `/board/{boardId}/labels`
+-   `/board/labels`
+-   `/user/auth/{provider}/{externalId}/apitoken`
+
+Improvements:
+
+-   Streamlined `/todos/assigned` & `/todos/created` API, separating out the Board labels to `/board/labels` & `/board/{boardId}/labels` endpoints
+-   Loading feedback when creating a board
+-   Editing of comments on mobile (focus at end of text, save/cancel buttons)
+-   Loading feedback of recent boards sidebar
+-   Card link opening behavious (links to other boards open in same tab)
+-   Teams board links open tabs
+-   Show loading spinner while waiting on clicked link to open in a teams tab
+-   Add copy/paste list option in list menu
+-   Add duplication list option in list menu
+-   More comprehensive history feed details for moving or reordering cards
+
+Fixes:
+
+-   Create board from template when opened and only a reader
+-   Creating Board in group restricts to the group's Organisation
+-   Better handling of authentication when provider session changes user account
+-   Visibility of 'Embed Link' when viewing Boards by Group
+-   Creation of Board in Group when using /group/{groupId} route (embedded)
+-   View cards in fullscreen on small screens
+-   Issue when deleting all Boards tile colors
+-   Links to card ancestors (Todo view)
+-   Prevent date selection incorrectly showing today when no date set
+-   Upload files to Teams private channel OneDrive
+-   Scroll to bottom of a list when creating a new card
+-   Delete action in card dialog / in archive view
+-   Add card section in a list delays retract/height change to prevent card drag issues
+-   Dragging empty colour labels in Firefox
+-   Filter/search by list name
+-   Unauthorised error when adding existing board as Teams tab
+-   Fix potential onEnter errors in rich text editor
+-   Prevent overflow on file preview
+-   Load board members on fullscreen list view (for @mentions)
+-   Fix potential onBlur errors in rich text editor
+-   Don't show iCalendar feed options in Teams
+
+Activity Migration:
+
+-   Security updates
+-   Oracle DB
+
+    -   Update to use new v6 thin client
+    -   allow different credentials for [PEOPLEDB](./cp/migration/index.md#peopledb-acl)
+
+-   MSSQL
+
+    -   Update to v10
+    -   allow self-signed certificates with [CONNECTIONS_DB_OPTIONS](./cp/migration/index.md#mssql) variable
+
 #### 2024-02-14
 
 Fixes:
