@@ -24,10 +24,6 @@ extra:
 nav:
   - Boards:
       - boards/index.md
-      - API: 
-          - boards/api/index.md
-          - Power Automate: boards/api/powerautomate.md
-          - Zapier: boards/api/zapier.md
       - Boards Cloud:
           - boards/cloud/index.md
           - Updates: boards/cloud/updates.md
@@ -83,12 +79,17 @@ nav:
               - Related Tasks: boards/integrations/developing/related-tasks.md
           - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md
+      - Extending Boards:
+          - boards/api/index.md
+          - API: boards/api/index.md
+          - Micro Apps: boards/apps/index.md
+          - Power Automate: boards/api/powerautomate.md
+          - Zapier: boards/api/zapier.md
       - FAQ:
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
           - Roles: boards/cp/roles/index.md
           - Open Source Licences: boards/faq/open-source-licences.md
-      - Micro Apps: boards/apps/index.md
       - User Guides:
           - boards/howto/index.md
           - Knowledge Base & Support: boards/howto/knowledgebase.md
