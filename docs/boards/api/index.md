@@ -4,7 +4,8 @@ Boards has a REST API that allows you to access and manage your boards data. The
 
 The API is documented using OpenAPI (Swagger) and can be explored using the Swagger UI.
 
-[![example](./example.png)](https://boards.api.huddo.com)
+<!-- [![example](./example.png)](https://boards.api.huddo.com) -->
+<iframe src="https://boards.api.huddo.com" width="100%" height="800px" ></iframe>
 
 ## Determine your API URL
 
