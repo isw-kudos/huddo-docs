@@ -5225,7 +5225,9 @@
 <p><img alt="Attach Card" src="attach-card.png" /></p>
 <h3 id="linked-cards">Linked Cards<a class="headerlink" href="#linked-cards" title="Permanent link">&para;</a></h3>
 <p>This app displays a list of cards which have links (bookmarks) of the URL specified in the query parameter.</p>
-<p>APP_URL: <code>/app/linkedcards?url=&lt;URL&gt;</code></p>
+<p>APP_URL: <code>/app/linkedcards?url=&lt;ENCODED_URL&gt;</code></p>
+<p>Where <code>&lt;ENCODED_URL&gt;</code> is the <code>encodeURIComponent(url)</code> of the URL to search for,</p>
+<p>e.g. <code>/app/linkedcards?url=https%3A%2F%2Fgoogle.com</code></p>
 <p><img alt="Linked Cards" src="linked-cards.png" /></p>
 
 
