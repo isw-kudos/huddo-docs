@@ -14,16 +14,16 @@
 Send an email to [support@huddo.com](mailto:support@huddo.com) with the following details:
 
 
-> Hi! I'd like to set up the Huddo Boards teams app for my company, [COMPANY NAME]. Here are the details:
+> Hi! I'd like to set up the Huddo Boards Microsoft Teams app for my company, [COMPANY NAME]. Here are the details:
 >
 > - *(optional)* Attach the `.zip` or `manifest.json` file of any previous Huddo Boards teams app you have used or been provided before. 
-> - [  ] The Application ID of the Huddo Boards application you have registered in Microsoft Entra
+> - [  ] The Application ID of the Huddo Boards application you have already registered in Microsoft Entra. <sup>See [Authenticating Huddo Boards with Microsoft 365](/boards/msgraph/auth/)</sup>
 > - [  ] `APP_URI` value from your helm chart values.
 > - [  ] `API_GATEWAY` value from your helm chart values.
 
 We will generate your customized Huddo Boards Teams app and provide you up-to-date guidance on how to deploy it in your environment.
-
-Note that updates to the Huddo Boards Teams app may need to be re-deployed via another customised Teams app package. Providing you with Teams app updates is currently a manual process. 
+  
+Updates to the Huddo Boards Teams app may need to be re-deployed via another customised Teams app package. We have automation in place for generating updates for your Teams app, however a manual step will be required by you to deploy the update. 
  
 ---
 Once you have your customised Teams app and advice from the Huddo team:
