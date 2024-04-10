@@ -4,7 +4,7 @@ Huddo Boards is available freely in the Microsoft Teams App Store to add as eith
 
 ### Add to a Team
 
-You can add Huddo Boards to MS Teams in two ways. Follow these steps to Huddo Boards as a tab in a Team Channel. 
+You can add Huddo Boards to Microsoft Teams in two ways. Follow these steps to Huddo Boards as a tab in a Team Channel. 
 
 1.  Open the [Teams App](https://teams.microsoft.com) and go to the team you wish to add Huddo Boards to.
 

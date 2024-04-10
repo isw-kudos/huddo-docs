@@ -983,7 +983,7 @@ Fixes:
 
 2022-01-31
 
--   Fix for welcome message in MS Teams Bot
+-   Fix for welcome message in Microsoft Teams Bot
 -   Fix for lost descriptions on first edit when pasting an image
 -   Improved file upload feedback
 -   Fix where you could not upload the full 50MB for a file
@@ -1030,7 +1030,7 @@ Fixes:
 2021-10
 
 -   Updated German translations
--   MS Teams login fix
+-   Microsoft Teams login fix
 -   Fix for issue where link is inserted at start of description
 -   Fix for issue when changing user account tries to loads the previous open Board
 -   Fix for issue when adding group as board member

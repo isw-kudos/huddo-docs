@@ -37,11 +37,11 @@ Navigate to `Admin Settings` and then select to 'Buy Online'.
 
 Your subscription will be updated automatically.
 
-## Buy Huddo Boards via MS teams
+## Buy Huddo Boards via Microsoft Teams
 
-As an O365 administrator, you can buy Huddo Boards for your organisation via MS Teams.
+As an O365 administrator, you can buy Huddo Boards for your organisation via Microsoft Teams.
 
-Navigate to Huddo Boards MyBoards Dashboard via More Added Apps in MS Teams and under your profile image locate `Admin Settings.`
+Navigate to Huddo Boards MyBoards Dashboard via More Added Apps in Microsoft Teams and under your profile image locate `Admin Settings.`
 
 ![](img/buy-kudosboards-msteams1.png)
 
@@ -65,7 +65,7 @@ Under 'Licences' select to 'Buy Online.'
 
 On-premise Huddo Boards installs can contact us for quote requests and licence activation keys at `hello@huddo.com`
 
-Huddo Boards cloud users can request a quote via Huddo Boards Admin Settings in web or MS Teams, or via email at `hello@huddo.com`. Please do not hesitate to ask questions or request a call to discuss your subscription requirements further.
+Huddo Boards cloud users can request a quote via Huddo Boards Admin Settings in web or Microsoft Teams, or via email at `hello@huddo.com`. Please do not hesitate to ask questions or request a call to discuss your subscription requirements further.
 
 In addition to online check out, we can receive purchase orders and provide invoices for payment.
 
