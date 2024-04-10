@@ -73,8 +73,8 @@ nav:
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/on-prem.md
               - Microsoft 365:
-                  - Authentication: boards/msgraph/auth/index.md
-                  - Teams Notification Bot: boards/msgraph/teams/notification-bot.md
+                  - Authentication: boards/msgraph/auth/auth.md
+                  # NOT IN USE - Teams Notification Bot: boards/msgraph/teams/notification-bot.md
                   - Teams App: boards/msgraph/teams/on-prem.md
               - Related Tasks: boards/integrations/developing/related-tasks.md
           - Releases: boards/releases.md
@@ -123,7 +123,6 @@ nav:
               - Microsoft Outlook: boards/howto/microsoft/outlook.md
               - Microsoft SharePoint: boards/howto/microsoft/sharepoint.md
               - Microsoft Teams: boards/howto/teams/adding-boards.md
-              - Teams - Disable Notifications: boards/howto/teams/disable-notifications.md
       - Administration:
           - Latest Release in CP: boards/cp/latest.md
           - Manage Config: boards/admin/org-config.md

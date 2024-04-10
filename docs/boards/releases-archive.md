@@ -228,7 +228,7 @@ Features:
 
     > **Note**: you will need to:
     >
-    > 1. [Configure SSO in Teams](msgraph/auth/index.md#configure-sso-in-teams) in your existing Azure OAuth application definition
+    > 1. [Configure SSO in Teams](msgraph/auth/auth.md#configure-sso-in-teams) in your existing Azure OAuth application definition
     > 2. [download the latest app definition from Boards admin section and update it in Teams](msgraph/teams/on-prem.md#configure-application).
 
 Fixes:
