@@ -5485,28 +5485,8 @@
 <p>For more details on configuring a reverse proxy, please <a href="#proxy-config">see below</a>.</p>
 <hr />
 <h2 id="setup-oauth">Setup OAuth<a class="headerlink" href="#setup-oauth" title="Permanent link">&para;</a></h2>
-<p>You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:</p>
-<table>
-<thead>
-<tr>
-<th>Provider</th>
-<th>Registration / Documentation</th>
-<th>Callback URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HCL Connections<br>(on premise)</td>
-<td><a href="../connections/auth-on-prem/">Huddo instructions</a></td>
-<td><code>https://[CONNECTIONS_URL]/boards/auth/connections/callback</code></td>
-</tr>
-<tr>
-<td>Microsoft 365</td>
-<td><a href="../msgraph/auth/auth.md">Huddo instructions</a></td>
-<td><code>https://[CONNECTIONS_URL]/boards/auth/msgraph/callback</code></td>
-</tr>
-</tbody>
-</table>
+<p>Please follow <a href="../connections/auth-on-prem/">our instructions</a> to setup HCL Connections OAuth for Huddo Boards.</p>
+<p>The OAuth Callback URL for this configuration is <code>https://[BOARDS_URL]/auth/connections/callback</code></p>
 <hr />
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
 <h3 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h3>
