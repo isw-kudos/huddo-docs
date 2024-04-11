@@ -44,6 +44,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 | --------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | HCL Connections | [instructions](../connections/auth-on-prem.md)                                                                | `https://[BOARDS_URL]/auth/connections/callback` |
 | HCL Domino      | [instructions](../domino/oauth/index.md)                                                                      | `https://[BOARDS_URL]/auth/domino/callback`      |
+| HCL DX          | [instructions](../dx/auth/websphere.md)                                                                       | `https://[BOARDS_URL]/auth/dx/callback`          |
 | Microsoft 365   | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
 | Google          | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
 | LinkedIn        | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |

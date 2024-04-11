@@ -54,3 +54,17 @@ Please set the following environment variables in your config file as required
 | `user.env.DOMINO_PROFILE_IMAGE_NAME`            | **Optional**: file name of profile images. Uses first image attached if not set<br>See [domino authentication](../domino/on-prem.md) for more information |
 | `user.env.DOMINO_AUTH_SCOPE`                    | **Optional**: defaults to `$DATA`<br>See [domino authentication](../domino/on-prem.md) for more information                                               |
 | `user.env.DOMINO_REST_SCOPE`                    | **Optional**: defaults to `directorylookup`<br>See [domino authentication](../domino/on-prem.md) for more information                                     |
+
+### HCL Digital Experience (DX)
+
+!!! tip
+
+    **Optional**: These settings are only required if you are using HCL DX as your authentication provider.
+
+| Key                              | Description                                                                                            |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `user.env.DX_URL`                | HCL DX URL, e.g. `https://dx.company.com`                                                              |
+| `user.env.DX_CLIENT_ID`          | oAuth client-id, see [dx authentication](../dx/auth/websphere.md) for more information                 |
+| `user.env.DX_CLIENT_SECRET`      | oAuth client-secret, see [dx authentication](../dx/auth/websphere.md) for more information             |
+| `user.env.DX_ADMINS`             | **Optional**: Emails or GUIDs of users to grant admin permissions.                                     |
+| `user.env.DX_AUTH_PROVIDER_NAME` | **Optional**: name of the [OAuth Service Provider](../dx/auth/websphere.md). Defaults to `OAuthConfig` |

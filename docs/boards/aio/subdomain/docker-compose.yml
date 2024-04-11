@@ -85,6 +85,13 @@ services:
       # Default values below that can be customised
       # DOMINO_AUTH_SCOPE: $DATA
       # DOMINO_REST_SCOPE: directorylookup
+      # HCL Digital Experience (DX) integration values
+      # DX_NAME: --replace-me--
+      # DX_URL: https://DX.rest.api.company.com # --replace-me--
+      # DX_CLIENT_ID:  huddoboards
+      # DX_CLIENT_SECRET:  # --replace-me--
+      # DX_AUTH_PROVIDER_NAME: OAuthConfig
+      # DX_ADMINS: '["admin1@company.example.com"]' # --replace-me--
 
   provider:
     image: quay.io/huddo/provider:2023-12-18

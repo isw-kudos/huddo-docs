@@ -72,6 +72,11 @@ nav:
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Proxy (httpd): boards/connections/httpd/index.md
               - HCL Domino: boards/domino/on-prem.md
+              - HCL DX:
+                  - boards/dx/index.md
+                  - Authentication: boards/dx/auth/websphere.md
+                  - Portlet: boards/dx/portlet/index.md
+                  - Proxy: boards/dx/auth/proxy.md
               - HCL Verse: boards/verse/verse-extension.md
               - Microsoft 365:
                   - boards/msgraph/auth/index.md
