@@ -43,7 +43,7 @@ nav:
               - Microsoft 365:
                   - boards/msgraph/index.md
                   - Overview: boards/msgraph/index.md
-                  - Getting Started: boards/msgraph/getting-started/getting-started.md
+                  - Getting Started: boards/msgraph/getting-started/index.md
                   - App Tile: boards/msgraph/custom-tiles/index.md
                   - Teams: boards/msgraph/teams/index.md
                   - Outlook: boards/msgraph/outlook/index.md
