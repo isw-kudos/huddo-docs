@@ -751,22 +751,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.huddo.com/boards/msgraph/overview/</loc>
-         <lastmod>2024-04-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/boards/msgraph/auth/auth/</loc>
+         <loc>https://docs.huddo.com/boards/msgraph/auth/</loc>
          <lastmod>2024-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.huddo.com/boards/msgraph/custom-tiles/</loc>
-         <lastmod>2024-04-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.huddo.com/boards/msgraph/getting-started/</loc>
          <lastmod>2024-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
