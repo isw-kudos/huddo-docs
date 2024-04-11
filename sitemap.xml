@@ -561,6 +561,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/boards/faq/kubectl/</loc>
+         <lastmod>2024-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/faq/languages/</loc>
          <lastmod>2024-04-11</lastmod>
          <changefreq>daily</changefreq>

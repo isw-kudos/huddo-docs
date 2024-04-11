@@ -1837,11 +1837,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../verse/verse-extension/" class="md-nav__link">
+      <a href="../domino/on-prem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    HCL Verse
+    HCL Domino
   </span>
   
 
@@ -1858,11 +1858,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../domino/on-prem/" class="md-nav__link">
+      <a href="../verse/verse-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    HCL Domino
+    HCL Verse
   </span>
   
 
@@ -2233,6 +2233,8 @@
         
       
         
+      
+        
           
         
       
@@ -2276,6 +2278,27 @@
             FAQ
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/kubectl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubectl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -5328,31 +5351,10 @@
 <ol>
 <li>Kubernetes is installed and running</li>
 <li>WebSphere environment with Web Server (or another reverse proxy)</li>
-<li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl</a> is installed</li>
+<li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl</a> is installed and <a href="../faq/kubectl/">configured</a></li>
 <li><a href="https://docs.helm.sh/using_helm/#installing-helm">helm</a> is installed</li>
 <li>SMTP gateway setup for email notifications if required</li>
 <li><a href="https://quay.io">Quay.io - Red Hat</a> account setup with access to the <a href="../images/">Huddo Boards repository</a>. Please send your account details to <a href="mailto:support@huddo.com">support@huddo.com</a> if you do not already have this.</li>
-<li>
-<p>kubectl configured</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Instructions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Kubernetes</strong></td>
-<td>copy <code>~/kube/.config</code> from the Kubernetes master server to the same location locally</br>(backup any existing local config)</td>
-</tr>
-<tr>
-<td><strong>IBM Cloud Private</strong></td>
-<td>- Open ICP Console</br>- Go to <code>Admin</code> (top right)</br>- Click <code>Config Client</code></br>- Copy the contents shown</br>- Open your command line / terminal</br>- Paste the commands copied earlier and press enter</td>
-</tr>
-</tbody>
-</table>
-</li>
 </ol>
 <hr />
 <h2 id="ssl-network">SSL / Network<a class="headerlink" href="#ssl-network" title="Permanent link">&para;</a></h2>
@@ -5367,12 +5369,12 @@
 </thead>
 <tbody>
 <tr>
-<td>Example of <code>BOARDS_URL</code></td>
+<td><code>BOARDS_URL</code></td>
 <td><code>boards.example.com</code></td>
 <td><code>example.com/boards</code></td>
 </tr>
 <tr>
-<td>Example of <code>API_URL</code></td>
+<td><code>API_URL</code></td>
 <td><code>api.example.com</code></td>
 <td><code>example.com/api-boards</code></td>
 </tr>
@@ -5417,6 +5419,11 @@
 <td>HCL Connections<br>(on premise)</td>
 <td><a href="../connections/auth-on-prem/">Huddo instructions</a></td>
 <td><code>https://[BOARDS_URL]/auth/connections/callback</code></td>
+</tr>
+<tr>
+<td>HCL Domino<br>(on premise)</td>
+<td><a href="../domino/oauth/">instructions</a></td>
+<td><code>https://[BOARDS_URL]/auth/dx/callback</code></td>
 </tr>
 <tr>
 <td>Microsoft 365</td>
@@ -5573,7 +5580,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-03-21
+    2024-04-11
   </span>
 
     
