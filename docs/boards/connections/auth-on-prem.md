@@ -1,3 +1,5 @@
+# HCL Connections OAuth
+
 ![Outcome](../../assets/connections/auth.png)
 
 ## Register OAuth

@@ -1,4 +1,4 @@
-# Authenticating Huddo Boards with HCL Connections
+# Authenticating Huddo Boards Cloud with HCL Connections
 
 ![Outcome](../../assets/connections/auth.png)
 
@@ -24,9 +24,9 @@ In order for Huddo Boards to authenticate with your Connections environment, you
 
     Where `[CONNECTIONS_HOSTNAME_BASE64]`is
 
-    - your Connections hostname base64 encoded. E.g.</br>
-      `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
-      There are many free online services to do this, ie [here](https://www.base64encode.net/)</br></br>
+    -   your Connections hostname base64 encoded. E.g.</br>
+        `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
+        There are many free online services to do this, ie [here](https://www.base64encode.net/)</br></br>
 
 1.  To view the uniquely created client clientSecret
 
