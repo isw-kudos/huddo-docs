@@ -1,18 +1,26 @@
-## Add Huddo Boards App
+<!-- ## Grant Permissions to Huddo Boards -->
 
-Huddo Boards is available freely in the Microsoft Teams App Store to add as either a personal app or to a team.
+## Add Boards to Microsoft Teams
 
-### Add to a Team
+Huddo Boards is available in the Microsoft Teams App Store. 
+[Click here to open in Teams.](https://teams.microsoft.com/l/app/1c69a9da-d385-43e3-93c8-297f88c4a5a9?source=app-details-dialog){ target="_blank" }
 
-You can add Huddo Boards to Microsoft Teams in two ways. Follow these steps to Huddo Boards as a tab in a Team Channel. 
+  - Select **Add** to add Huddo Boards as a personal app.
+  - Select **Add to a team** to add a Huddo Boards tab to a team channel.
+<a href="https://teams.microsoft.com/l/app/1c69a9da-d385-43e3-93c8-297f88c4a5a9?source=app-details-dialog" target="_blank">![Install Huddo Boards](teams-store-add.png)</a>
+
+## Within the Teams Client
+You can also find add Huddo Boards app for Teams within the Teams client by following the walkthroughs below. 
+
+### Add Huddo Boards to a Team
 
 1.  Open the [Teams App](https://teams.microsoft.com) and go to the team you wish to add Huddo Boards to.
 
-1.  Click the `+` (add a tab) button
+2.  Click the `+` (add a tab) button
 
     ![example](add-a-tab.png)
 
-1.  Search for `huddo` to find Huddo Boards
+3.  Search for `huddo` to find Huddo Boards
 
     ![example](tab-search-apps.png)
 
@@ -23,22 +31,20 @@ You can add Huddo Boards to Microsoft Teams in two ways. Follow these steps to H
 
     Again, search for `huddo` to find the Huddo Boards App in the entire store.
 
-1.  Once you have located and clicked on the Huddo Boards App, click the `Add` button to add it to the team:
+4.  Once you have located and clicked on the Huddo Boards App, click the `Add` button to add it to the team:
 
     ![example](add-personal-app.png)
 
-1.  The Huddo Boards app will now be added to the team, and you will be given the ability to add a new tab:
+5.  The Huddo Boards app will now be added to the team, and you will be given the ability to add a new tab:
 
     ![example](new-tab.png)
 
-### Add as a personal app to the `more added apps` area.
-
-To add Huddo Boards as a personal app follow these steps:
+### Add the Huddo Boards personal app
 
 1.  Open Teams and click the Apps button. Type `huddo` to find the Huddo Boards app:
 
     ![example](find-app.png)
 
-1.  Click `Huddo Boards` then click `Add` to add it as a personal app:
+2.  Click `Huddo Boards` then click `Add` to add it as a personal app:
 
     ![example](add-personal-app.png)

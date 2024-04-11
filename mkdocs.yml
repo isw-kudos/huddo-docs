@@ -41,12 +41,13 @@ nav:
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/cloud.md
               - Microsoft 365:
-                  - Overview: boards/msgraph/overview.md
-                  - Getting Started: boards/msgraph/getting-started/index.md
+                  - boards/msgraph/index.md
+                  - Overview: boards/msgraph/index.md
+                  - Getting Started: boards/msgraph/getting-started/getting-started.md
                   - App Tile: boards/msgraph/custom-tiles/index.md
-                  - Teams Integration: boards/msgraph/teams/index.md
-                  - Outlook Plugin: boards/msgraph/outlook/index.md
-                  - Sharepoint Pages: boards/msgraph/sharepoint/index.md
+                  - Teams: boards/msgraph/teams/index.md
+                  - Outlook: boards/msgraph/outlook/index.md
+                  - Sharepoint: boards/msgraph/sharepoint/index.md
       - Boards Self-Hosted:
           - boards/kubernetes/index.md
           - a) For HCL Connections: boards/cp/index.md
@@ -73,9 +74,10 @@ nav:
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/on-prem.md
               - Microsoft 365:
-                  - Authentication: boards/msgraph/auth/auth.md
+                  - boards/msgraph/auth/index.md
+                  - Authentication: boards/msgraph/auth/index.md
                   # NOT IN USE - Teams Notification Bot: boards/msgraph/teams/notification-bot.md
-                  - Teams App: boards/msgraph/teams/on-prem.md
+                  - Teams: boards/msgraph/teams/on-prem.md
               - Related Tasks: boards/integrations/developing/related-tasks.md
           - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md
