@@ -19,7 +19,13 @@ Please set the following environment variables in your config file as required
 | `events.env.NOTIFIER_EMAIL_OPTIONS`       | **Optional**: Custom NodeMailer email options (insecure tls etc).<br/>For example: `"{\"ignoreTLS\": true,\"tls\":{\"rejectUnauthorized\":false}}"`                       |
 | `user.env.DISABLE_WELCOME_EMAIL`          | **Optional**: Set to disable welcome emails for users                                                                                                                     |
 
-## For Connections
+## Provider Specific Options
+
+### HCL Connections
+
+!!! tip
+
+    **Optional**: These settings are only required if you are using HCL Connections as your authentication provider.
 
 | Key                                   | Description                                                                                                            |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -32,13 +38,17 @@ Please set the following environment variables in your config file as required
 | `user.env.CONNECTIONS_KEYCLOAK_URL`   | **Optional**: See [keycloak authentication](../connections/keycloak.md) for more information                           |
 | `user.env.CONNECTIONS_KEYCLOAK_REALM` | **Optional**: See [keycloak authentication](../connections/keycloak.md) for more information                           |
 
-## For Domino
+### HCL Domino
+
+!!! tip
+
+    **Optional**: These settings are only required if you are using HCL Domino as your authentication provider.
 
 | Key                                             | Description                                                                                                                                               |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `user.env.DOMINO_AUTH_URL`                      | **Optional**: HCL Domino REST API URL. See [domino authentication](../domino/on-prem.md) for more information                                             |
-| `user.env.DOMINO_CLIENT_ID`                     | **Optional**: oAuth client-id, see [domino authentication](../domino/on-prem.md) for more information                                                     |
-| `user.env.DOMINO_CLIENT_SECRET`                 | **Optional**: oAuth client-secret, see [domino authentication](../domino/on-prem.md) for more information                                                 |
+| `user.env.DOMINO_AUTH_URL`                      | HCL Domino REST API URL. See [domino authentication](../domino/on-prem.md) for more information                                                           |
+| `user.env.DOMINO_CLIENT_ID`                     | oAuth client-id, see [domino authentication](../domino/on-prem.md) for more information                                                                   |
+| `user.env.DOMINO_CLIENT_SECRET`                 | oAuth client-secret, see [domino authentication](../domino/on-prem.md) for more information                                                               |
 | `user.env.DOMINO_ADMINS`                        | **Optional**: Emails or GUIDs of users to grant admin permissions.<br/>See [domino authentication](../domino/on-prem.md) for more information             |
 | `user.env.DOMINO_USE_PROFILE_IMAGE_ATTACHMENTS` | **Optional**: set `true` to enable using profile images<br>See [domino authentication](../domino/on-prem.md) for more information                         |
 | `user.env.DOMINO_PROFILE_IMAGE_NAME`            | **Optional**: file name of profile images. Uses first image attached if not set<br>See [domino authentication](../domino/on-prem.md) for more information |

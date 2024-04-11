@@ -8,16 +8,10 @@ Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 1. Kubernetes is installed and running
 1. WebSphere environment with Web Server (or another reverse proxy)
-1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
+1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed and [configured](../faq/kubectl.md)
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
 1. [Quay.io - Red Hat](https://quay.io) account setup with access to the [Huddo Boards repository](../images.md). Please send your account details to [support@huddo.com](mailto:support@huddo.com) if you do not already have this.
-1. kubectl configured
-
-    |                       | Instructions                                                                                                                                                                                                 |
-    | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | **Kubernetes**        | copy `~/kube/.config` from the Kubernetes master server to the same location locally</br>(backup any existing local config)                                                                                  |
-    | **IBM Cloud Private** | - Open ICP Console</br>- Go to `Admin` (top right)</br>- Click `Config Client`</br>- Copy the contents shown</br>- Open your command line / terminal</br>- Paste the commands copied earlier and press enter |
 
 ---
 
@@ -25,14 +19,14 @@ Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 Kubernetes for on-premise environments requires a reverse proxy to route traffic. There are a number of different ways this reverse proxy can be configured and Huddo Boards aims to match whatever you already have in place. Some examples of network routing:
 
-|                         | New domain                                                                                                                                                                                                   | Path on existing domain                                                             |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
-| Example of `BOARDS_URL` | `boards.example.com`                                                                                                                                                                                         | `example.com/boards`                                                                |
-| Example of `API_URL`    | `api.example.com`                                                                                                                                                                                            | `example.com/api-boards`                                                            |
-| Requirement             | 1. Reverse proxy able to match any current domains as well as the new one for Huddo Boards (either by using SNI or a compatible certificate for all domains).</br>2. Certificate coverage for the 2 domains. | Ability to proxy the 2 paths                                                        |
-| Certificate Resolution  | a) in your proxy and forward the unencrypted traffic to kubernetes</br>**-OR-**</br>b) forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).       | All certificate resolution on the proxy server                                      |
-| Notes                   | IBM HTTP WebServer supports only one certificate. You must have a Wildcard certificate to cover all of your domains including the new Boards domains (ie \*.example.com).                                    | Additional config required to make Boards webfront handle redirects, details below. |
-| For Connections Header  | Additional [WebSphere application](../connections/header-on-prem.md) must be installed                                                                                                                       | -                                                                                   |
+|                        | New domain                                                                                                                                                                                                   | Path on existing domain                                                             |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| `BOARDS_URL`           | `boards.example.com`                                                                                                                                                                                         | `example.com/boards`                                                                |
+| `API_URL`              | `api.example.com`                                                                                                                                                                                            | `example.com/api-boards`                                                            |
+| Requirement            | 1. Reverse proxy able to match any current domains as well as the new one for Huddo Boards (either by using SNI or a compatible certificate for all domains).</br>2. Certificate coverage for the 2 domains. | Ability to proxy the 2 paths                                                        |
+| Certificate Resolution | a) in your proxy and forward the unencrypted traffic to kubernetes</br>**-OR-**</br>b) forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).       | All certificate resolution on the proxy server                                      |
+| Notes                  | IBM HTTP WebServer supports only one certificate. You must have a Wildcard certificate to cover all of your domains including the new Boards domains (ie \*.example.com).                                    | Additional config required to make Boards webfront handle redirects, details below. |
+| For Connections Header | Additional [WebSphere application](../connections/header-on-prem.md) must be installed                                                                                                                       | -                                                                                   |
 
 Please decide on which configuration will suit your environment best and the corresponding `BOARDS_URL` & `API_URL`. These values will then be used in the following documentation.
 
@@ -49,6 +43,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 | Provider                        | Registration / Documentation                                                                                  | Callback URL                                     |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | HCL Connections<br>(on premise) | [Huddo instructions](../connections/auth-on-prem.md)                                                          | `https://[BOARDS_URL]/auth/connections/callback` |
+| HCL Domino<br>(on premise)      | [instructions](../domino/oauth/index.md)                                                                      | `https://[BOARDS_URL]/auth/dx/callback`          |
 | Microsoft 365                   | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
 | Google                          | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
 | LinkedIn                        | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |

@@ -71,8 +71,8 @@ nav:
                   - Mobile App: boards/connections/mobile-app-on-prem.md
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Proxy (httpd): boards/connections/httpd/index.md
-              - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/on-prem.md
+              - HCL Verse: boards/verse/verse-extension.md
               - Microsoft 365:
                   - boards/msgraph/auth/index.md
                   - Authentication: boards/msgraph/auth/index.md
@@ -88,6 +88,7 @@ nav:
           - Power Automate: boards/api/powerautomate.md
           - Zapier: boards/api/zapier.md
       - FAQ:
+          - kubectl: boards/faq/kubectl.md
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
           - Roles: boards/cp/roles/index.md

@@ -1,4 +1,4 @@
-# Boards for HCL DX
+# Boards for HCL Digital Experience (DX)
 
 ## Prerequisites
 
@@ -7,6 +7,14 @@
 
     -   Kubernetes cluster with `kubectl` installed & authenticated, or
     -   Docker
+
+---
+
+## Licence Key
+
+Huddo Boards / Activities Plus is a free entitlement for HCL DX Customers, however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](store.md).
+
+---
 
 ## Steps
 
@@ -20,6 +28,8 @@
 1. Configure [SSO for Boards](./auth/sso.md)
 
 1. Install & configure the [Boards portlet](./portlet/index.md)
+
+---
 
 ## Integration options
 

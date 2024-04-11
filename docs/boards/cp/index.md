@@ -1,26 +1,28 @@
 # Huddo Boards for HCL Connections CP
 
-Deploying Huddo Boards into HCL Connections Component Pack (Kubernetes)
+!!! info
+
+    The HCL Connections Component Pack (CP) provides a **MongoDB** database and **Redis** cache. Huddo Boards for CP utilises these existing services.  This guide will walk you through the setup to deploy a Minio S3 service for storage, and the Huddo Boards services into your existing CP environment.
+
+## Releases
+
+See the latest changes in our [On-Premise Release notes](../releases.md).
 
 ---
 
-[Release Information](../releases.md)
-
----
-
-### Prerequisites
+## Prerequisites
 
 1. HCL Component Pack is installed and running
 1. WebSphere environment with Web Server (or another reverse proxy)
-1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
+1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed and [configured](../faq/kubectl.md)
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
 
 ---
 
-### SSL / Network setup
+## SSL / Network setup
 
-Huddo Boards in Connections Component Pack (CP) uses the existing CP infrastructure.
+Huddo Boards uses the existing CP infrastructure.
 
 The UI and API each require a unique route:
 
@@ -31,7 +33,7 @@ For more details on configuring a reverse proxy, please [see below](#proxy-confi
 
 ---
 
-### Setup OAuth
+## Setup OAuth
 
 You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
 
@@ -42,31 +44,25 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 ---
 
-### Configure kubectl
+## Storage
 
-|                | Instructions                                                                                                                |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Kubernetes** | copy `~/kube/.config` from the Kubernetes master server to the same location locally</br>(backup any existing local config) |
-
----
-
-### Storage
-
-#### S3
+### S3
 
 Huddo Boards for Component Pack deploys a Minio service. Please follow [S3 storage details here](minio.md) to configure the NFS mount.
 
-#### Mongo
+### Mongo
 
 Huddo Boards uses the Mongo database already deployed inside the Component Pack. There is no configuration required.
 
 ---
 
-### Licence Key
+## Licence Key
 
 Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](store.md).
 
 ---
+
+## Deployment
 
 ### Update Config file
 
@@ -96,7 +92,7 @@ The Activity migration chart will be deployed separately but use the same config
 
 ---
 
-### Deploy Boards Helm Chart
+### Install Boards Helm Chart
 
 Install the Boards services via our Helm chart
 
@@ -106,9 +102,7 @@ Install the Boards services via our Helm chart
 
 ---
 
-### Proxy Config
-
-### Connections On Premise
+## Proxy Config
 
 For Connections on-premise you have two options:
 
