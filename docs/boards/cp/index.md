@@ -35,12 +35,9 @@ For more details on configuring a reverse proxy, please [see below](#proxy-confi
 
 ## Setup OAuth
 
-You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
+Please follow [our instructions](../connections/auth-on-prem.md) to setup HCL Connections OAuth for Huddo Boards.
 
-| Provider                        | Registration / Documentation                         | Callback URL                                                 |
-| ------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
-| HCL Connections<br>(on premise) | [Huddo instructions](../connections/auth-on-prem.md) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
-| Microsoft 365                   | [Huddo instructions](../msgraph/auth/auth.md)        | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
+The OAuth Callback URL for this configuration is `https://[BOARDS_URL]/auth/connections/callback`
 
 ---
 
