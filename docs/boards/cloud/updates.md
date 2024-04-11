@@ -6,6 +6,32 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2024-04-11
+
+Improvements
+
+-   tooltips on date picker
+-   add invalid date error message
+-   primary session expired message - show as info alert
+-   tab color and style improvements
+-   more consistent use of primary/secondary action colours on buttons
+-   no collapse for empty lists activity todo pivot views
+-   auto collapse empty lists initially and after a card is dragged out of them
+-   New Board Wizard - more specific label for board name and template name
+-   Activity view improvements
+
+    -   styling (shadows, spacing, border edges when expanded/collapsed)
+    -   drop cards on list header (highlight like shadow)
+    -   add card at top hides the bottom add card
+
+Fixes:
+
+-   issue with format of dates in date picker
+-   issues in list header title - not full width, no-wrap ellipsis, use correct cursors
+-   don't show grab cursor on lists in todos / pivoted views
+-   issue saving tags when creating new template
+-   ensure tags are copied from template/source
+
 2024-04-02
 
 Improvements:
