@@ -1,4 +1,6 @@
-# Huddo Boards Versions
+# Huddo Boards
+
+## Versions
 
 We are proud to say that Huddo Boards is able to run in many configurations to suit your individual requirements.
 
@@ -7,7 +9,18 @@ We are proud to say that Huddo Boards is able to run in many configurations to s
     - [HCL Connections Component Pack](cp/index.md)
     - [Kubernetes](kubernetes/index.md)
     - [Docker - All In One](./aio/index.md)
-1. [Boards Hybrid](hybrid.md) (Cloud integrated with HCL Connections On-Premise)
+1. [Boards Hybrid](hybrid.md) (Boards Cloud integrated with On-Premise)
+
+---
+
+## Quick Links
+
+1. Boards Cloud - [Recent Updates](cloud/updates.md)
+1. On-Premise - [Latest Releases](./releases.md)
+1. Huddo Boards (Activities Plus) for
+
+    - [HCL Connections](./cp/index.md)
+    - [HCL Domino](./domino/index.md)
 
 ---
 

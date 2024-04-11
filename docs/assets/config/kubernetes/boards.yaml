@@ -76,6 +76,15 @@ user:
     CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
     CONNECTIONS_ADMINS: '["admin1@company.example.com", "boss2@company.example.com", "PROF_GUID_3"]'
     CONNECTIONS_URL: https://connections.example.com
+    # DOMINO_AUTH_URL: https://domino.rest.api.company.com # --replace-me--
+    # DOMINO_CLIENT_ID:  # --replace-me--
+    # DOMINO_CLIENT_SECRET:  # --replace-me--
+    # DOMINO_ADMINS: '["admin1@company.example.com"]' # --replace-me--
+    # DOMINO_USE_PROFILE_IMAGE_ATTACHMENTS: 'true'
+    # DOMINO_PROFILE_IMAGE_NAME: profile.png
+    # Default values below that can be customised
+    # DOMINO_AUTH_SCOPE: $DATA
+    # DOMINO_REST_SCOPE: directorylookup
 
 # This section is for deploying the optional Activity Migration chart
 # Please see doc at https://docs.huddo.com/boards/connections/migration/
