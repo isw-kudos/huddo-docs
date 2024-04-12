@@ -12,7 +12,7 @@
 
 ## Licence Key
 
-Huddo Boards / Activities Plus is a free entitlement for HCL DX Customers, however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](store.md).
+Huddo Boards / Activities Plus is a free entitlement for HCL DX Customers, however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](../store/index.md).
 
 ---
 

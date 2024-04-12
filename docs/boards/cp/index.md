@@ -55,7 +55,7 @@ Huddo Boards uses the Mongo database already deployed inside the Component Pack.
 
 ## Licence Key
 
-Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](store.md).
+Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](../store/index.md).
 
 ---
 

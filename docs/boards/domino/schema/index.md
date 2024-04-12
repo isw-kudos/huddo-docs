@@ -1,4 +1,4 @@
-# Configure Domino Schema
+# Configure Domino Schema (REST API)
 
 This guide will describe how to add a new Schema called `directory` to access the `names.nsf` database. Boards uses the `$Users` & `$Groups` views of this database. This section will configure the database forms.
 

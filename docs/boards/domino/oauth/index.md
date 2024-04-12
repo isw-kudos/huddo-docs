@@ -1,5 +1,4 @@
-
-# Configure Domino OAuth
+# Configure Domino OAuth (REST API)
 
 This guide will describe how to add a new OAuth application for Boards users to login via Domino.
 
@@ -27,19 +26,19 @@ This guide will describe how to add a new OAuth application for Boards users to 
 
     Determine the appropriate URL for your environment as per [our guide](../callback.md).
 
-    - Application Name: `Huddo Boards`
-    - Callback URL, e.g.
+    -   Application Name: `Huddo Boards`
+    -   Callback URL, e.g.
 
-            https://<ON_PREM_BOARDS_URL>/auth/domino/callback
-            https://boards.huddo.com/auth/domino/[encoded domain]/callback
+              https://<ON_PREM_BOARDS_URL>/auth/domino/callback
+              https://boards.huddo.com/auth/domino/[encoded domain]/callback
 
-    - Startup Page, e.g.
+    -   Startup Page, e.g.
 
-            https://<ON_PREM_BOARDS_URL>/auth/domino
-            https://boards.huddo.com/auth/domino/[encoded domain]
+              https://<ON_PREM_BOARDS_URL>/auth/domino
+              https://boards.huddo.com/auth/domino/[encoded domain]
 
-    - Scope: `$DATA` (click `+` icon)
-    - Contacts: `<YOUR_EMAIL>`
+    -   Scope: `$DATA` (click `+` icon)
+    -   Contacts: `<YOUR_EMAIL>`
 
     ![newapp](./add.png)
 

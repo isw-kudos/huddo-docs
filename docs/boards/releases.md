@@ -214,7 +214,7 @@ Fixes:
 
 Features:
 
--   Support for Domino by [REST API](./domino/on-prem.md)
+-   Support for Domino by [REST API](./domino/index.md)
 
     !!! tip
 

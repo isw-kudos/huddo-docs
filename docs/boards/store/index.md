@@ -1,4 +1,4 @@
-# Huddo Apps Store
+# Huddo Store
 
 ![Create Organiation](store.png)
 
@@ -6,7 +6,7 @@
 
 To obtain licences for Huddo Boards, you need to register your organisation at [https://store.huddo.com](https://store.huddo.com).
 
-All customers are eligible for a free licence to use our Activity view.
+All HCL Connections customers are eligible for a free licence to use our Activity view.
 
 Obtaining your licence key:
 
@@ -33,4 +33,5 @@ When creating your Login client(s) refer to the table below for details:
 | Provider        | Text Field                   |
 | --------------- | ---------------------------- |
 | HCL Connections | Your Connections URL         |
+| HCL Domino      | Your Domino server URL       |
 | Microsoft 365   | Your Microsoft 365 tenant ID |
