@@ -12,24 +12,28 @@
         <meta name="author" content="Andrew Reynolds">
       
       
-        <link rel="canonical" href="https://docs.huddo.com/boards/cp/store/">
+        <link rel="canonical" href="https://docs.huddo.com/boards/domino/">
       
       
+        <link rel="prev" href="../connections/httpd/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+        <link rel="next" href="oauth/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>Huddo Apps Store - Huddo Docs</title>
+        <title>Boards for HCL Domino (REST API) - Huddo Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +54,7 @@
     
       <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#huddo-apps-store" class="md-skip">
+        <a href="#boards-for-hcl-domino-rest-api" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Huddo Docs" class="md-header__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+    <a href="../.." title="Huddo Docs" class="md-header__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Huddo Apps Store
+              Boards for HCL Domino (REST API)
             
           </span>
         </div>
@@ -129,25 +133,25 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../boards/cp/store/" hreflang="en" class="md-select__link">
+            <a href="../../boards/domino/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="https://docs-huddo-com.translate.goog/boards/cp/store/?_x_tr_sl=en&_x_tr_tl=ja" hreflang="ja" class="md-select__link">
+            <a href="https://docs-huddo-com.translate.goog/boards/domino/?_x_tr_sl=en&_x_tr_tl=ja" hreflang="ja" class="md-select__link">
               日本語
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="https://docs-huddo-com.translate.goog/boards/cp/store/?_x_tr_sl=en&_x_tr_tl=de" hreflang="de" class="md-select__link">
+            <a href="https://docs-huddo-com.translate.goog/boards/domino/?_x_tr_sl=en&_x_tr_tl=de" hreflang="de" class="md-select__link">
               Deutsch
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="https://docs-huddo-com.translate.goog/boards/cp/store/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="nl" class="md-select__link">
+            <a href="https://docs-huddo-com.translate.goog/boards/domino/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="nl" class="md-select__link">
               Nederlands
             </a>
           </li>
@@ -225,11 +229,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -249,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ccm-migrator/features/" class="md-tabs__link">
+        <a href="../../ccm-migrator/features/" class="md-tabs__link">
           
   
     
@@ -275,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../analytics/install/overview/" class="md-tabs__link">
+        <a href="../../analytics/install/overview/" class="md-tabs__link">
           
   
     
@@ -298,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../badges/" class="md-tabs__link">
+        <a href="../../badges/" class="md-tabs__link">
           
   
     
@@ -333,7 +339,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Huddo Docs" class="md-nav__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+    <a href="../.." title="Huddo Docs" class="md-nav__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -360,6 +366,8 @@
       
   
   
+    
+  
   
   
     
@@ -380,6 +388,10 @@
         
       
         
+          
+        
+      
+        
       
         
       
@@ -388,19 +400,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -411,13 +426,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Boards
@@ -458,7 +473,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cloud/" class="md-nav__link ">
+            <a href="../cloud/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -491,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud/updates/" class="md-nav__link">
+      <a href="../cloud/updates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +560,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../integrations/" class="md-nav__link ">
+            <a href="../integrations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -578,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auth0/" class="md-nav__link">
+      <a href="../auth0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/auth-hybrid/" class="md-nav__link">
+      <a href="../connections/auth-hybrid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/header-hybrid/" class="md-nav__link">
+      <a href="../connections/header-hybrid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/apps-menu-hybrid/" class="md-nav__link">
+      <a href="../connections/apps-menu-hybrid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/widgets-hybrid/" class="md-nav__link">
+      <a href="../connections/widgets-hybrid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/customizer/customizer-integrations-package/" class="md-nav__link">
+      <a href="../connections/customizer/customizer-integrations-package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/mobile-app-hybrid/" class="md-nav__link">
+      <a href="../connections/mobile-app-hybrid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -779,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/security/" class="md-nav__link">
+      <a href="../connections/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -808,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../verse/verse-extension/" class="md-nav__link">
+      <a href="../verse/verse-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/cloud/" class="md-nav__link">
+      <a href="cloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +910,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../msgraph/" class="md-nav__link ">
+            <a href="../msgraph/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -928,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/" class="md-nav__link">
+      <a href="../msgraph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -949,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/getting-started/" class="md-nav__link">
+      <a href="../msgraph/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/custom-tiles/" class="md-nav__link">
+      <a href="../msgraph/custom-tiles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/teams/" class="md-nav__link">
+      <a href="../msgraph/teams/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/outlook/" class="md-nav__link">
+      <a href="../msgraph/outlook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/sharepoint/" class="md-nav__link">
+      <a href="../msgraph/sharepoint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,8 +1090,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1118,16 +1135,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../kubernetes/" class="md-nav__link ">
+            <a href="../kubernetes/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1144,7 +1161,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Boards Self-Hosted
@@ -1160,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../cp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aio/" class="md-nav__link">
+      <a href="../aio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../images/" class="md-nav__link">
+      <a href="../images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../env/common/" class="md-nav__link">
+      <a href="../env/common/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compatibility/" class="md-nav__link">
+      <a href="../compatibility/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../env/notifications/" class="md-nav__link">
+      <a href="../env/notifications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../helm-charts/" class="md-nav__link">
+      <a href="../helm-charts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../proxy/nginx/" class="md-nav__link">
+      <a href="../proxy/nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,8 +1363,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1367,11 +1386,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11" checked>
         
           
           <label class="md-nav__link" for="__nav_1_3_11" id="__nav_1_3_11_label" tabindex="0">
@@ -1385,7 +1404,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3_11">
             <span class="md-nav__icon md-icon"></span>
             Integrations
@@ -1440,7 +1459,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../migration/" class="md-nav__link ">
+            <a href="../cp/migration/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1471,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/migration/" class="md-nav__link">
+      <a href="../connections/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1494,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/auth-on-prem/" class="md-nav__link">
+      <a href="../connections/auth-on-prem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1515,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/keycloak/" class="md-nav__link">
+      <a href="../connections/keycloak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1536,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/header-on-prem/" class="md-nav__link">
+      <a href="../connections/header-on-prem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/apps-menu-on-prem/" class="md-nav__link">
+      <a href="../connections/apps-menu-on-prem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1578,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/widgets-on-prem/" class="md-nav__link">
+      <a href="../connections/widgets-on-prem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1599,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/mobile-app-on-prem/" class="md-nav__link">
+      <a href="../connections/mobile-app-on-prem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1620,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/customizer/customizer-integrations-package/" class="md-nav__link">
+      <a href="../connections/customizer/customizer-integrations-package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/httpd/" class="md-nav__link">
+      <a href="../connections/httpd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,14 +1686,86 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../domino/on-prem/" class="md-nav__link">
+  
+    
+    
+      
         
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
   <span class="md-ellipsis">
     HCL Domino
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_1_3_11_2" id="__nav_1_3_11_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_11_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            HCL Domino
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="oauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth
   </span>
   
 
@@ -1691,7 +1782,78 @@
   
   
     <li class="md-nav__item">
-      <a href="../../verse/verse-extension/" class="md-nav__link">
+      <a href="schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proton ➡️ REST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verse/verse-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1739,7 +1901,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../msgraph/auth/" class="md-nav__link ">
+            <a href="../msgraph/auth/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1772,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/auth/" class="md-nav__link">
+      <a href="../msgraph/auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1793,7 +1955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/teams/on-prem/" class="md-nav__link">
+      <a href="../msgraph/teams/on-prem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1822,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/developing/related-tasks/" class="md-nav__link">
+      <a href="../integrations/developing/related-tasks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/" class="md-nav__link">
+      <a href="../releases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1880,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hybrid/" class="md-nav__link">
+      <a href="../hybrid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1934,7 +2096,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../api/" class="md-nav__link ">
+            <a href="../api/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1967,7 +2129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1988,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apps/" class="md-nav__link">
+      <a href="../apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2009,7 +2171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/powerautomate/" class="md-nav__link">
+      <a href="../api/powerautomate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2030,7 +2192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/zapier/" class="md-nav__link">
+      <a href="../api/zapier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2088,7 +2250,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../roles/" class="md-nav__link ">
+            <a href="../cp/roles/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2119,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/kubectl/" class="md-nav__link">
+      <a href="../faq/kubectl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2140,7 +2302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/languages/" class="md-nav__link">
+      <a href="../faq/languages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2161,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/notifications/" class="md-nav__link">
+      <a href="../faq/notifications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2184,7 +2346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/open-source-licences/" class="md-nav__link">
+      <a href="../faq/open-source-licences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2201,6 +2363,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Huddo Store
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2257,12 +2440,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/" class="md-nav__link ">
+            <a href="../howto/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2273,14 +2456,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
             <span class="md-nav__icon md-icon"></span>
             User Guides
           </label>
@@ -2295,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/knowledgebase/" class="md-nav__link">
+      <a href="../howto/knowledgebase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2316,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/getting-started/" class="md-nav__link">
+      <a href="../howto/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2337,7 +2520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/quick-tips/" class="md-nav__link">
+      <a href="../howto/quick-tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2358,7 +2541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/start-a-trial/" class="md-nav__link">
+      <a href="../howto/start-a-trial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2379,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/mobile-app/" class="md-nav__link">
+      <a href="../howto/mobile-app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2400,7 +2583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/homepage/" class="md-nav__link">
+      <a href="../howto/homepage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2441,10 +2624,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_8" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_8" id="__nav_1_7_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_8_8" id="__nav_1_8_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2455,8 +2638,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8_8">
             <span class="md-nav__icon md-icon"></span>
             Creating Boards
           </label>
@@ -2469,7 +2652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/templates/global/" class="md-nav__link">
+      <a href="../howto/templates/global/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2490,7 +2673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/templates/creating/" class="md-nav__link">
+      <a href="../howto/templates/creating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2511,7 +2694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/assignment-roles/assignment-roles/" class="md-nav__link">
+      <a href="../howto/assignment-roles/assignment-roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2532,7 +2715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/import-activity/import/" class="md-nav__link">
+      <a href="../howto/import-activity/import/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2605,12 +2788,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_9" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/adding-members/" class="md-nav__link ">
+            <a href="../howto/adding-members/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2621,14 +2804,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_7_9" id="__nav_1_7_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_8_9" id="__nav_1_8_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_9">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8_9">
             <span class="md-nav__icon md-icon"></span>
             Working in a Board
           </label>
@@ -2643,7 +2826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/adding-members/" class="md-nav__link">
+      <a href="../howto/adding-members/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2664,7 +2847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/permissions/" class="md-nav__link">
+      <a href="../howto/permissions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2685,7 +2868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/archiving-and-restoring/" class="md-nav__link">
+      <a href="../howto/archiving-and-restoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2706,7 +2889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/attaching-files/" class="md-nav__link">
+      <a href="../howto/attaching-files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/mindmap/" class="md-nav__link">
+      <a href="../howto/mindmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2748,7 +2931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/timeline/" class="md-nav__link">
+      <a href="../howto/timeline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2769,7 +2952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/dependencies/" class="md-nav__link">
+      <a href="../howto/dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2814,10 +2997,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_10" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_10" id="__nav_1_7_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_8_10" id="__nav_1_8_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2828,8 +3011,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_10">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8_10">
             <span class="md-nav__icon md-icon"></span>
             iCalendar Feed
           </label>
@@ -2842,7 +3025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/ical/personal/" class="md-nav__link">
+      <a href="../howto/ical/personal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2863,7 +3046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/ical/board/" class="md-nav__link">
+      <a href="../howto/ical/board/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2918,10 +3101,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_11" >
         
           
-          <label class="md-nav__link" for="__nav_1_7_11" id="__nav_1_7_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_8_11" id="__nav_1_8_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2932,8 +3115,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_7_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8_11">
             <span class="md-nav__icon md-icon"></span>
             Boards in other Apps
           </label>
@@ -2946,7 +3129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/connections/connections-ui/" class="md-nav__link">
+      <a href="../howto/connections/connections-ui/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2967,7 +3150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/use-verse/" class="md-nav__link">
+      <a href="../howto/use-verse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2988,7 +3171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/use-auth0/" class="md-nav__link">
+      <a href="../howto/use-auth0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3009,7 +3192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/onedrive/" class="md-nav__link">
+      <a href="../howto/microsoft/onedrive/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3030,7 +3213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/outlook/" class="md-nav__link">
+      <a href="../howto/microsoft/outlook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3051,7 +3234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/sharepoint/" class="md-nav__link">
+      <a href="../howto/microsoft/sharepoint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3072,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/teams/adding-boards/" class="md-nav__link">
+      <a href="../howto/teams/adding-boards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3133,10 +3316,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3147,8 +3330,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
             <span class="md-nav__icon md-icon"></span>
             Administration
           </label>
@@ -3161,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../latest/" class="md-nav__link">
+      <a href="../cp/latest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3182,7 +3365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/org-config/" class="md-nav__link">
+      <a href="../admin/org-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3203,7 +3386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/content-member-management/" class="md-nav__link">
+      <a href="../admin/content-member-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3224,7 +3407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/manage-licences/" class="md-nav__link">
+      <a href="../admin/manage-licences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3245,7 +3428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/revoke-users/" class="md-nav__link">
+      <a href="../admin/revoke-users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3290,10 +3473,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9_6" >
         
           
-          <label class="md-nav__link" for="__nav_1_8_6" id="__nav_1_8_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_9_6" id="__nav_1_9_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3304,8 +3487,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_8_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9_6">
             <span class="md-nav__icon md-icon"></span>
             Transition Providers
           </label>
@@ -3318,7 +3501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/transition-between-providers/" class="md-nav__link">
+      <a href="../admin/transition-between-providers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3339,7 +3522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/sync-profiles/" class="md-nav__link">
+      <a href="../admin/sync-profiles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3360,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/link-users/" class="md-nav__link">
+      <a href="../admin/link-users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3381,7 +3564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/replace-group-membership/" class="md-nav__link">
+      <a href="../admin/replace-group-membership/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3402,7 +3585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/transfer-ownership-unlink/" class="md-nav__link">
+      <a href="../admin/transfer-ownership-unlink/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3423,7 +3606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/deactivate-login/" class="md-nav__link">
+      <a href="../admin/deactivate-login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3498,12 +3681,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../troubleshooting/office365/" class="md-nav__link ">
+            <a href="../troubleshooting/office365/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3514,14 +3697,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
             <span class="md-nav__icon md-icon"></span>
             Troubleshooting
           </label>
@@ -3534,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/activities-plus-install/" class="md-nav__link">
+      <a href="../troubleshooting/activities-plus-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3555,7 +3738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/activity-migration/" class="md-nav__link">
+      <a href="../troubleshooting/activity-migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3576,7 +3759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/conn-hybrid/" class="md-nav__link">
+      <a href="../troubleshooting/conn-hybrid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3597,7 +3780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/docker/" class="md-nav__link">
+      <a href="../troubleshooting/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3618,7 +3801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/websphere/" class="md-nav__link">
+      <a href="../troubleshooting/websphere/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3641,7 +3824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/oauth/" class="md-nav__link">
+      <a href="../troubleshooting/oauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3662,7 +3845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/mongo/" class="md-nav__link">
+      <a href="../troubleshooting/mongo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3683,7 +3866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/nginx/" class="md-nav__link">
+      <a href="../troubleshooting/nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3704,7 +3887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/notifications/" class="md-nav__link">
+      <a href="../troubleshooting/notifications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3725,7 +3908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/safari/" class="md-nav__link">
+      <a href="../troubleshooting/safari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3746,7 +3929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/ssl/" class="md-nav__link">
+      <a href="../troubleshooting/ssl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3834,7 +4017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/features/" class="md-nav__link">
+      <a href="../../ccm-migrator/features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3855,7 +4038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/install/" class="md-nav__link">
+      <a href="../../ccm-migrator/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3876,7 +4059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/update/" class="md-nav__link">
+      <a href="../../ccm-migrator/update/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3897,7 +4080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/usage/" class="md-nav__link">
+      <a href="../../ccm-migrator/usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3918,7 +4101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/supported-data/" class="md-nav__link">
+      <a href="../../ccm-migrator/supported-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3939,7 +4122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/export-fs/" class="md-nav__link">
+      <a href="../../ccm-migrator/export-fs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4069,7 +4252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/overview/" class="md-nav__link">
+      <a href="../../analytics/install/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4090,7 +4273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/app/" class="md-nav__link">
+      <a href="../../analytics/install/app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4111,7 +4294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/install-widgets/" class="md-nav__link">
+      <a href="../../analytics/install/install-widgets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4132,7 +4315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/apply-changes/" class="md-nav__link">
+      <a href="../../analytics/install/apply-changes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4153,7 +4336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/add-widgets/" class="md-nav__link">
+      <a href="../../analytics/install/add-widgets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4174,7 +4357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/comm-properties/" class="md-nav__link">
+      <a href="../../analytics/install/comm-properties/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4195,7 +4378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/licence/" class="md-nav__link">
+      <a href="../../analytics/install/licence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4216,7 +4399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/customising/" class="md-nav__link">
+      <a href="../../analytics/install/customising/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4237,7 +4420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/websphere-faq/" class="md-nav__link">
+      <a href="../../analytics/install/websphere-faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4299,7 +4482,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../analytics/user-guide/introduction/" class="md-nav__link ">
+            <a href="../../analytics/user-guide/introduction/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4332,7 +4515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/using-reports/" class="md-nav__link">
+      <a href="../../analytics/user-guide/using-reports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4353,7 +4536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/available-reports/" class="md-nav__link">
+      <a href="../../analytics/user-guide/available-reports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4374,7 +4557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/access-reports/" class="md-nav__link">
+      <a href="../../analytics/user-guide/access-reports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4395,7 +4578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/terms/" class="md-nav__link">
+      <a href="../../analytics/user-guide/terms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4416,7 +4599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/itemtype-map/" class="md-nav__link">
+      <a href="../../analytics/user-guide/itemtype-map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4479,7 +4662,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../badges/" class="md-nav__link ">
+            <a href="../../badges/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4579,7 +4762,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../badges/install/" class="md-nav__link ">
+            <a href="../../badges/install/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4612,7 +4795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/app/" class="md-nav__link">
+      <a href="../../badges/install/app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4633,7 +4816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/install-widgets/" class="md-nav__link">
+      <a href="../../badges/install/install-widgets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4654,7 +4837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/mobile/" class="md-nav__link">
+      <a href="../../badges/install/mobile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4675,7 +4858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/apply-changes/" class="md-nav__link">
+      <a href="../../badges/install/apply-changes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4696,7 +4879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/add-widgets/" class="md-nav__link">
+      <a href="../../badges/install/add-widgets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4717,7 +4900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/comm-properties/" class="md-nav__link">
+      <a href="../../badges/install/comm-properties/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4738,7 +4921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/licence/" class="md-nav__link">
+      <a href="../../badges/install/licence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4759,7 +4942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/load-defaults/" class="md-nav__link">
+      <a href="../../badges/install/load-defaults/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4780,7 +4963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/leaderboard/" class="md-nav__link">
+      <a href="../../badges/install/leaderboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4801,7 +4984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/awards/" class="md-nav__link">
+      <a href="../../badges/install/awards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4822,7 +5005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/engine/" class="md-nav__link">
+      <a href="../../badges/install/engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4843,7 +5026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/customising/" class="md-nav__link">
+      <a href="../../badges/install/customising/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4864,7 +5047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/websphere-faq/" class="md-nav__link">
+      <a href="../../badges/websphere-faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4918,7 +5101,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../badges/update/" class="md-nav__link ">
+            <a href="../../badges/update/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4951,7 +5134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update/update_app/" class="md-nav__link">
+      <a href="../../badges/update/update_app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4972,7 +5155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update/refresh_cache/" class="md-nav__link">
+      <a href="../../badges/update/refresh_cache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5001,7 +5184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update-images/" class="md-nav__link">
+      <a href="../../badges/update-images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5049,9 +5232,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#organisation-details" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Organisation Details
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
     </span>
   </a>
   
@@ -5072,52 +5282,69 @@
                   
 
 
-<h1 id="huddo-apps-store">Huddo Apps Store<a class="headerlink" href="#huddo-apps-store" title="Permanent link">&para;</a></h1>
-<p><img alt="Create Organiation" src="../store.png" /></p>
+<h1 id="boards-for-hcl-domino-rest-api">Boards for HCL Domino (REST API)<a class="headerlink" href="#boards-for-hcl-domino-rest-api" title="Permanent link">&para;</a></h1>
+<p>Huddo Boards supports authentication, user and group lookup with HCL Domino.</p>
+<p><img alt="Outcome" src="outcome.png" /></p>
 <hr />
-<p>To obtain licences for Huddo Boards, you need to register your organisation at <a href="https://store.huddo.com">https://store.huddo.com</a>.</p>
-<p>All customers are eligible for a free licence to use our Activity view.</p>
-<p>Obtaining your licence key:</p>
+<div class="admonition question">
+<p class="admonition-title">Using the old Proton configuration?</p>
+<p>See our <a href="migration/">migration guide</a>.</p>
+</div>
+<hr />
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/index.html">Domino REST API</a> installed and configured. Ensure you <a href="https://opensource.hcltechsw.com/Domino-rest-api/howto/VoltMX/configuring-keep-idplite-with-identity-service.html?h=oauth.json#set-up-domino-rest-api">setup the oauth.json</a> file.</li>
+<li>Enabled access to <a href="https://opensource.hcltechsw.com/Domino-rest-api/howto/database/excludeddb.html?h=names.#procedure">names.nsf</a></li>
+</ol>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Register for our store with your Name and email address.</p>
+<p>Configure OAuth</p>
+<p><strong>URLs</strong></p>
+<p>For an on premise installation the callback url &amp; startup page is simple:</p>
+<div class="highlight"><pre><span></span><code>https://&lt;BOARDS_URL&gt;/auth/domino/callback
+https://&lt;BOARDS_URL&gt;/auth/domino
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>https://boards.your.domain.com/auth/domino/callback
+https://boards.your.domain.com/auth/domino
+
+// if you have a context root (i.e. you would access boards application at /boards)
+https://your.domain.com/boards/auth/domino/callback
+https://your.domain.com/boards/auth/domino
+</code></pre></div>
+<p>Please determine the URL for your environment and then <a href="oauth/">follow this guide</a>.</p>
 </li>
 <li>
-<p>Click the link in the email we sent to verify your account.</p>
+<p><a href="schema/">Configure Schema</a></p>
 </li>
 <li>
-<p>Create Your Organisation and Login client, details below.</p>
-</li>
-<li>
-<p>Click <code>Create Activities+ Licence</code></p>
-</li>
-<li>
-<p>Click <code>Download Licences</code></p>
+<p><a href="scope/">Configure Scope</a></p>
 </li>
 </ol>
-<hr />
-<h3 id="organisation-details">Organisation Details<a class="headerlink" href="#organisation-details" title="Permanent link">&para;</a></h3>
-<p>You will need to provide the following information to setup you Organisation in the store.</p>
-<p><img alt="Create Organiation" src="../store-create-org.png" /></p>
-<p>When creating your Login client(s) refer to the table below for details:</p>
-<table>
-<thead>
-<tr>
-<th>Provider</th>
-<th>Text Field</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HCL Connections</td>
-<td>Your Connections URL</td>
-</tr>
-<tr>
-<td>Microsoft 365</td>
-<td>Your Microsoft 365 tenant ID</td>
-</tr>
-</tbody>
-</table>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Huddo Boards requires a licence key from the <a href="https://store.huddo.com">Huddo Store</a>. For more details <a href="../store/">see here</a>.</p>
+<ol>
+<li>Register your account</li>
+<li>Create your Organisation</li>
+<li>
+<p>Add client details for your Domino server</p>
+<p><img alt="Domino Client" src="store.png" /></p>
+</li>
+<li>
+<p>Download licence key - this will be used in the environment variable <code>licence.env.LICENCE</code></p>
+</li>
+</ol>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Deploy Boards using the <a href="../env/common/#hcl-domino">Domino values</a> in either:</p>
+<ul>
+<li><a href="../kubernetes/">Kubernetes</a> or</li>
+<li><a href="../aio/">Docker</a></li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -5138,7 +5365,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-03-21
+    2024-04-12
   </span>
 
     
@@ -5185,14 +5412,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
-        <script src="../../../assets/scripts/custom.js"></script>
+        <script src="../../assets/scripts/custom.js"></script>
       
     
   </body>
