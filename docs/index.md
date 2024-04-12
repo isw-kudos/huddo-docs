@@ -17,7 +17,7 @@ This site contains technical and user documentation for Huddo Apps. For purchase
 
     - [Latest Releases](./boards/releases.md)
 
-1. Huddo Boards (Activities Plus) for
+1. Huddo Boards for
 
     - [HCL Connections](./boards/cp/index.md)
     - [HCL Domino](./boards/domino/index.md)
