@@ -801,6 +801,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/boards/msgraph/teams/install/</loc>
+         <lastmod>2024-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/proxy/nginx/</loc>
          <lastmod>2024-04-12</lastmod>
          <changefreq>daily</changefreq>
