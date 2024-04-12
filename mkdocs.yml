@@ -5,22 +5,6 @@ site_url: https://docs.huddo.com/
 repo_url: https://www.huddo.com
 repo_name: huddo.com
 
-extra:
-  analytics:
-    provider: google
-    property: UA-1747668-5
-  social:
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/HuddoApps
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/huddoapps
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/huddoapps
-    - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/channel/UCiDj7UkYGqm41VUssa1FUrw
-    - icon: fontawesome/brands/github
-      link: https://github.com/isw-kudos
-
 nav:
   - Boards:
       - boards/index.md
@@ -71,7 +55,7 @@ nav:
                   - Mobile App: boards/connections/mobile-app-on-prem.md
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Proxy (httpd): boards/connections/httpd/index.md
-              - HCL Domino: 
+              - HCL Domino:
                   - boards/domino/index.md
                   - OAuth: boards/domino/oauth/index.md
                   - Schema: boards/domino/schema/index.md
@@ -241,26 +225,40 @@ extra_javascript:
 
 extra:
   alternate:
-      # Original Language
+    # Original Language
     - name: English
-      lang: 'en'
-      link: '%GT_RELATIVE_URL%'  # For relative urls back to original language
+      lang: "en"
+      link: "%GT_RELATIVE_URL%" # For relative urls back to original language
       # Extra languages
       # _x_tr_sl = source language
       # _x_tr_tl = translation language
     - name: 日本語
-      lang: 'ja'
-      link: 'https://translate.goog/?_x_tr_sl=en&_x_tr_tl=ja'
+      lang: "ja"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=ja"
     - name: Deutsch
-      lang: 'de'
-      link: 'https://translate.goog/?_x_tr_sl=en&_x_tr_tl=de'
+      lang: "de"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=de"
     - name: Nederlands
-      lang: 'nl'
-      link: 'https://translate.goog/?_x_tr_sl=en&_x_tr_tl=nl'
+      lang: "nl"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=nl"
+  analytics:
+    provider: google
+    property: UA-1747668-5
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/HuddoApps
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/huddoapps
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/huddoapps
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCiDj7UkYGqm41VUssa1FUrw
+    - icon: fontawesome/brands/github
+      link: https://github.com/isw-kudos
 
 plugins:
   - search
   - git-revision-date:
       enabled_if_env: CI
   - google-translate:
-      url: docs.huddo.com  # optional (required for local testing)
+      url: docs.huddo.com # optional (required for local testing)
