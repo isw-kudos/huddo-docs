@@ -21,3 +21,4 @@ This site contains technical and user documentation for Huddo Apps. For purchase
 
     - [HCL Connections](./boards/cp/index.md)
     - [HCL Domino](./boards/domino/index.md)
+    - [HCL Digital Experience (DX)](./boards/dx/index.md)
