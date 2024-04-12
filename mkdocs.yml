@@ -71,12 +71,16 @@ nav:
                   - Mobile App: boards/connections/mobile-app-on-prem.md
                   - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
                   - Proxy (httpd): boards/connections/httpd/index.md
-              - HCL Domino: boards/domino/on-prem.md
+              - HCL Domino: 
+                  - boards/domino/index.md
+                  - OAuth: boards/domino/oauth/index.md
+                  - Schema: boards/domino/schema/index.md
+                  - Scope: boards/domino/scope/index.md
+                  - Proton ➡️ REST API: boards/domino/migration/index.md
               - HCL Verse: boards/verse/verse-extension.md
               - Microsoft 365:
                   - boards/msgraph/auth/index.md
                   - Authentication: boards/msgraph/auth/index.md
-                  # NOT IN USE - Teams Notification Bot: boards/msgraph/teams/notification-bot.md
                   - Teams: boards/msgraph/teams/on-prem.md
               - Related Tasks: boards/integrations/developing/related-tasks.md
           - Releases: boards/releases.md
@@ -93,6 +97,7 @@ nav:
           - Notifications: boards/faq/notifications.md
           - Roles: boards/cp/roles/index.md
           - Open Source Licences: boards/faq/open-source-licences.md
+      - Huddo Store: boards/store/index.md
       - User Guides:
           - boards/howto/index.md
           - Knowledge Base & Support: boards/howto/knowledgebase.md

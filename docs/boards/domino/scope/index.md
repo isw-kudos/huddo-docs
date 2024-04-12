@@ -1,5 +1,4 @@
-
-# Configure Domino Scope
+# Configure Domino Scope (REST API)
 
 This guide will describe how to add a new Scope called `directorylookup` to allow reader access to the `names.nsf` database. Boards uses the `$Users` & `$Groups` views of this database.
 
@@ -21,9 +20,9 @@ This guide will describe how to add a new Scope called `directorylookup` to allo
 
 1.  Enter the following details and click `ADD`
 
-    - Expand the Schemas => `names.nsf`. Click `directory`
-    - Scope Name: `directorylookup`
-    - Description: `Directory Lookup`
-    - Maximum Access Level: `Reader`
+    -   Expand the Schemas => `names.nsf`. Click `directory`
+    -   Scope Name: `directorylookup`
+    -   Description: `Directory Lookup`
+    -   Maximum Access Level: `Reader`
 
     ![add scope](./add.png)

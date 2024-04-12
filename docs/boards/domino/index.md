@@ -1,10 +1,10 @@
-# HCL Domino REST API for Boards On-Premise
+# Boards for HCL Domino (REST API)
 
 Huddo Boards supports authentication, user and group lookup with HCL Domino.
 
-!!! tip
+![Outcome](./outcome.png)
 
-    See [Domino REST API for Boards Cloud](./cloud.md) for integration with Boards Cloud (hybrid installations).
+---
 
 !!! question "Using the old Proton configuration?"
 
@@ -43,13 +43,21 @@ Huddo Boards supports authentication, user and group lookup with HCL Domino.
 
 1.  [Configure Scope](./scope/index.md)
 
-## Application Process
+## Licence
 
-Please email [support@huddo.com](mailto://support@huddo.com) with the following details
+Huddo Boards requires a licence key from the [Huddo Store](https://store.huddo.com). For more details [see here](../store/index.md).
 
-| Item                 | Detail / example                                                |
-| -------------------- | --------------------------------------------------------------- |
-| Boards URL           | Your licence will be tied to this url                           |
-| DOMINO_AUTH_URL      | HCL Domino REST API URL. e.g. *https://domino.example.com:8080* |
-| DOMINO_CLIENT_ID     | The Domino Auth client id                                       |
-| DOMINO_CLIENT_SECRET | The Domino Auth client secret                                   |
+1.  Register your account
+1.  Create your Organisation
+1.  Add client details for your Domino server
+
+    ![Domino Client](./store.png)
+
+1.  Download licence key - this will be used in the environment variable `licence.env.LICENCE`
+
+## Deployment
+
+1. Deploy Boards using the [Domino values](../env/common.md#hcl-domino) in either:
+
+    - [Kubernetes](../kubernetes/index.md) or
+    - [Docker](../aio/index.md)

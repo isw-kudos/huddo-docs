@@ -1,10 +1,14 @@
 # Migration from Domino Proton to REST API
 
+!!! question "Using the old Proton configuration?"
+
+        If you are using the [old Proton configuration](../proton.md), you will need to migrate to the new Domino REST API configuration. This guide will help you through the process.
+
 ## Prerequisites
 
 1. [Domino REST API](https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/index.html) installed and configured. Ensure you [setup the oauth.json](https://opensource.hcltechsw.com/Domino-rest-api/howto/VoltMX/configuring-keep-idplite-with-identity-service.html?h=oauth.json#set-up-domino-rest-api) file.
 1. Enabled access to [names.nsf](https://opensource.hcltechsw.com/Domino-rest-api/howto/database/excludeddb.html?h=names.#procedure)
-1. Configured [Boards OAuth client](../on-prem.md)
+1. Configured [Boards OAuth client](../index.md)
 1. Check Release date
 
     Ensure you are running images after 30 November 2023

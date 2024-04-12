@@ -2,7 +2,7 @@
 
 !!! warning
 
-    These instructions are deprecated. Please see the new [Domino REST API](./on-prem.md) for new installations. For existing installations we recommend following our [migration guide](./migration/index.md).
+    These instructions are deprecated. Please see the new [Domino REST API](./index.md) for new installations. For existing installations we recommend following our [migration guide](./migration/index.md).
 
 Huddo Boards supports authentication, user and group lookup with HCL Domino.
 

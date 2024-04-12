@@ -4,7 +4,7 @@ Huddo Boards Cloud supports authentication, user and group lookup with HCL Domin
 
 !!! tip
 
-    See [Domino REST API for Boards On-Premise](./on-prem.md) for Boards On Premise installations.
+    See [Domino REST API for Boards On-Premise](./index.md) for Boards On Premise installations.
 
 ---
 

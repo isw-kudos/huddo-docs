@@ -8,6 +8,7 @@ Please set the following environment variables in your config file as required
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `global.env.API_GATEWAY`                  | Fully qualified URL of the API in the format `https://[API_URL]`                                                                                                          |
 | `webfront.env.DEFAULT_TEAM`               | Name of the team users will primarily login with.</br>This will be shown on the login page.</br>**Optional**: Only set if you are authenticating with multiple providers. |
+| `licence.env.LICENCE`                     | Licence key obtained from the [Huddo Store](https://store.huddo.com)                                                                                                      |
 | `events.env.NOTIFIER_EMAIL_HOST`          | SMTP gateway hostname, e.g. `smtp.ethereal.com`                                                                                                                           |
 | `events.env.NOTIFIER_EMAIL_USERNAME`      | **Optional**: SMTP gateway authentication.<br/>Setting a value will enable auth and use the default port of `587`                                                         |
 | `events.env.NOTIFIER_EMAIL_PASSWORD`      | **Optional**: SMTP gateway authentication password                                                                                                                        |
@@ -44,13 +45,13 @@ Please set the following environment variables in your config file as required
 
     **Optional**: These settings are only required if you are using HCL Domino as your authentication provider.
 
-| Key                                             | Description                                                                                                                                               |
-| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `user.env.DOMINO_AUTH_URL`                      | HCL Domino REST API URL. See [domino authentication](../domino/on-prem.md) for more information                                                           |
-| `user.env.DOMINO_CLIENT_ID`                     | oAuth client-id, see [domino authentication](../domino/on-prem.md) for more information                                                                   |
-| `user.env.DOMINO_CLIENT_SECRET`                 | oAuth client-secret, see [domino authentication](../domino/on-prem.md) for more information                                                               |
-| `user.env.DOMINO_ADMINS`                        | **Optional**: Emails or GUIDs of users to grant admin permissions.<br/>See [domino authentication](../domino/on-prem.md) for more information             |
-| `user.env.DOMINO_USE_PROFILE_IMAGE_ATTACHMENTS` | **Optional**: set `true` to enable using profile images<br>See [domino authentication](../domino/on-prem.md) for more information                         |
-| `user.env.DOMINO_PROFILE_IMAGE_NAME`            | **Optional**: file name of profile images. Uses first image attached if not set<br>See [domino authentication](../domino/on-prem.md) for more information |
-| `user.env.DOMINO_AUTH_SCOPE`                    | **Optional**: defaults to `$DATA`<br>See [domino authentication](../domino/on-prem.md) for more information                                               |
-| `user.env.DOMINO_REST_SCOPE`                    | **Optional**: defaults to `directorylookup`<br>See [domino authentication](../domino/on-prem.md) for more information                                     |
+| Key                                             | Description                                                                                                                                             |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `user.env.DOMINO_AUTH_URL`                      | HCL Domino REST API URL. See [domino authentication](../domino/index.md) for more information                                                           |
+| `user.env.DOMINO_CLIENT_ID`                     | oAuth client-id, see [domino authentication](../domino/index.md) for more information                                                                   |
+| `user.env.DOMINO_CLIENT_SECRET`                 | oAuth client-secret, see [domino authentication](../domino/index.md) for more information                                                               |
+| `user.env.DOMINO_ADMINS`                        | **Optional**: Emails or GUIDs of users to grant admin permissions.<br/>See [domino authentication](../domino/index.md) for more information             |
+| `user.env.DOMINO_USE_PROFILE_IMAGE_ATTACHMENTS` | **Optional**: set `true` to enable using profile images<br>See [domino authentication](../domino/index.md) for more information                         |
+| `user.env.DOMINO_PROFILE_IMAGE_NAME`            | **Optional**: file name of profile images. Uses first image attached if not set<br>See [domino authentication](../domino/index.md) for more information |
+| `user.env.DOMINO_AUTH_SCOPE`                    | **Optional**: defaults to `$DATA`<br>See [domino authentication](../domino/index.md) for more information                                               |
+| `user.env.DOMINO_REST_SCOPE`                    | **Optional**: defaults to `directorylookup`<br>See [domino authentication](../domino/index.md) for more information                                     |
