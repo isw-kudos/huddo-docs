@@ -45,7 +45,7 @@ nav:
                   - Overview: boards/msgraph/index.md
                   - Getting Started: boards/msgraph/getting-started/index.md
                   - App Tile: boards/msgraph/custom-tiles/index.md
-                  - Teams: boards/msgraph/teams/index.md
+                  - Teams: boards/msgraph/teams/install/index.md
                   - Outlook: boards/msgraph/outlook/index.md
                   - Sharepoint: boards/msgraph/sharepoint/index.md
       - Boards Self-Hosted:

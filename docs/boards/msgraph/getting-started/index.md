@@ -1,37 +1,38 @@
 # Getting Started with Huddo Boards for Microsoft 365
 
-To get the most out of Huddo Boards in your Microsoft 365 tenant, there are a few steps to take to make the experience seamless for your users.
+!!! note
+    If you're not a Microsoft 365 administrator, refer this document to your IT team or Microsoft 365 administrator and **skip to [Add Huddo Boards to Microsoft Teams](../teams/install/index.md)**.
 
-> The Steps on this page (other than just logging in) require that you are an admin in your Microsoft 365 tenant. If you are not an admin, please refer this page to your Administrator, Manager or IT department.
+## Login
 
----
+### Microsoft Teams
+Huddo Boards is deeply integrated in to Microsoft Teams. See [Add Huddo Boards to Microsoft Teams](../teams/install/index.md).
 
-# Login
+### Web Application
+You can also access Huddo Boards via [https://boards.huddo.com/](https://boards.huddo.com/). Use the dedicated Microsoft login URL ([https://boards.huddo.com/auth/msgraph](https://boards.huddo.com/auth/msgraph)) to skip selecting Microsoft as the login method. 
 
-Huddo Boards uses OAuth for login and user access. This means your users can just click the Microsoft 365 logo at [boards.huddo.com](https://boards.huddo.com) and use their existing Microsoft credentials.
-
-> If you would like to link to Huddo Boards from another site, you can use [https://boards.huddo.com/auth/msgraph ](https://boards.huddo.com/auth/msgraph) which will skip the list of login options.
-
-![Login Page](../sign_in.png){ style="height: 300px" }
-
----
-
-# Microsoft Graph API Permissions
+## Microsoft Graph API Permissions
 Huddo Boards requires permissions to be granted to access your Microsoft 365 data. 
 
-- Some of these permission can normally be granted by a user, enabling most functionality of Huddo Boards.
-- Some permission always require administrator consent, which may make some functionality unavailable until an administrator grants consent.
-- Microsoft tenants may also be configured to require administrator consent for all permissions. 
+!!! note Strict Security
+    Microsoft Tenants configured with strict security policies **may** require admin consent to enable **any** functionality.
+
+| Permission types  |                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------- |
+| Basic Permissions | Most functionality is enabled with permissions that any Microsoft user can normally grant.         |
+| Admin Permissions | Some functionality requires an admin to grant permissions that give Boards broader access to data. |
+
+
 
 <!-- THIS IS LINKED EXTERNALLY. Changing file name or header will break link -->
-## Admin Approval
+### Admin Approval
 
 Providing administrator consent gives Huddo Boards the Microsoft Graph permissions required to enable all functionality and allows users to skip a consent prompt when logging in.
 
-### Via Microsoft Entra
+#### Via Microsoft Entra
 You can view the your currently granted permissions, grant admin consent and manage/revoke permissions on your [Microsoft Entra | Huddo Boards | Permissions](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/ManagedAppMenuBlade/~/Permissions/objectId/a35c4802-1c55-49a8-87ce-90aa6641484b/appId/5554fe8f-34b6-4694-a09d-6349e6ab6ec9/) page. 
 
-### Via Huddo Boards
+#### Via Huddo Boards
 *If admin consent has not been provided*, you will be prompted within the Huddo Boards app:
 ![Approval Toast](approval.png) 
 
@@ -40,7 +41,7 @@ After clicking Approve, you may be asked to login to Microsoft 365 again, then y
 
 You can revoke this approval at any stage via your [Microsoft Entra | Huddo Boards | Permissions](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/ManagedAppMenuBlade/~/Permissions/objectId/a35c4802-1c55-49a8-87ce-90aa6641484b/appId/5554fe8f-34b6-4694-a09d-6349e6ab6ec9/) page. 
 
-## Permissions Used by Huddo Boards
+### Permissions Used by Huddo Boards
 
 These are the permissions what Huddo Boards uses. These will change as we implement new features and optimise the permissions we use. When permission requirements change, permissions must be granted by users/admins again. 
 
@@ -64,27 +65,14 @@ These are the permissions what Huddo Boards uses. These will change as we implem
 | Group.Read.All         | delegated       | Read all groups                                     | true                   | Allows Huddo Boards to search the groups you have access to, read group details (image, description, installed apps,  etc)                                                                                |
 | Group.ReadWrite.All    | delegated       | Read and write all groups                           | true                   | DEPRECATED: To be removed. Allows Huddo Boards to add  new team channel tabs without interaction with the Teams client.                                                                                   |
 
-![Manage Client](manage-org.png)
-
 ---
 
-# Start a free trial
-<!-- TODO FIX LINKS -->
-After logging in, you will also be prompted to start a free (30 day) trial. Enabling this will allow other users in your Microsoft 365 tenant to login and use Huddo Boards.
+## Set up Integrations
 
-> You may also go to [Your Admin Page](https://boards.huddo.com/admin/licences/manage) to Start Your free trial, get a Quote or Purchase licences online.
+These guides also require admin access and enable some advanced features of Huddo Boards in your Microsoft 365 environment. These are also in the side menu of this page.
 
-![Manage Licences](licences.png)
 
----
-
-# Enable Integrations between Huddo Boards and Microsoft 365
-
-These guides also require admin access and enable some advanced features of Huddo Boards in your Microsoft 365 environment.
-
-> These are also in the side menu of this page
-
-- [Office Menu App Tile](../custom-tiles/index.md)
-- [Teams integration](../teams/index.md)
-- [Outlook plugin](../outlook/index.md)
-- [Sharepoint](../sharepoint/index.md)
+[Office Menu App Tile](../custom-tiles/index.md)</br>
+[Teams](../teams/install/index.md)</br>
+[Outlook](../outlook/index.md)</br>
+[Sharepoint](../sharepoint/index.md)</br>
