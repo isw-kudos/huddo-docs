@@ -4,7 +4,7 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
-### March
+### April
 
 2024-04-11
 
@@ -43,6 +43,8 @@ Fixes:
 
 -   Issue with board label history
 -   create board from template when opened and only a reader
+
+### March
 
 2024-03-25
 
