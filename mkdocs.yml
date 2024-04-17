@@ -61,6 +61,11 @@ nav:
                   - Schema: boards/domino/schema/index.md
                   - Scope: boards/domino/scope/index.md
                   - Proton ➡️ REST API: boards/domino/migration/index.md
+              - HCL DX:
+                  - boards/dx/index.md
+                  - Authentication: boards/dx/auth/websphere.md
+                  - Portlet: boards/dx/portlet/index.md
+                  - Proxy: boards/dx/auth/proxy.md
               - HCL Verse: boards/verse/verse-extension.md
               - Microsoft 365:
                   - boards/msgraph/auth/index.md

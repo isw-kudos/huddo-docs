@@ -85,6 +85,13 @@ user:
     # Default values below that can be customised
     # DOMINO_AUTH_SCOPE: $DATA
     # DOMINO_REST_SCOPE: directorylookup
+    # HCL Digital Experience (DX) integration values
+    # DX_NAME: DX
+    # DX_URL: https://dx.company.com # --replace-me--
+    # DX_CLIENT_ID:  huddoboards
+    # DX_CLIENT_SECRET:  # --replace-me--
+    # DX_AUTH_PROVIDER_NAME: OAuthConfig
+    # DX_ADMINS: '["admin1@company.example.com"]' # --replace-me--
 
 # This section is for deploying the optional Activity Migration chart
 # Please see doc at https://docs.huddo.com/boards/connections/migration/

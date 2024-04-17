@@ -21,6 +21,7 @@ We are proud to say that Huddo Boards is able to run in many configurations to s
 
     - [HCL Connections](./cp/index.md)
     - [HCL Domino](./domino/index.md)
+    - [HCL Digital Experience (DX)](./dx/index.md)
 
 ---
 
