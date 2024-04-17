@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### April
 
+2024-04-17
+
+Fixes:
+
+-   issue with exporting a board in Teams client
+-   date picker error on mobile/touch devices
+
 2024-04-11
 
 Improvements
