@@ -10,7 +10,7 @@ The install process for Huddo Analytics involves the following steps:
 -   [Add Widgets to Connections Interface](add-widgets.md)
 -   [Community Widget Properties](comm-properties.md)
 -   [Upload your Licence file](licence.md)
--   [Customising](../../badges/install/customising)
+-   [Customising](../../badges/install/customising.md)
 -   [FAQ](websphere-faq.md)
 
 **Please Note:** These steps are only applicable to a new install of Huddo Analytics. For information about upgrading, please see the Huddo Analytics Update Guide.

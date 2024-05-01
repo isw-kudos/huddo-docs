@@ -66,7 +66,7 @@ Download the appropriate configuration files for your deployment type:
 
 Update all example values in **both files** as required. Most required variables are in the template, for more information see the Kubernetes docs
 
--   [Global config](../kubernetes/index.md#update-config-file)
+-   [Global config](../kubernetes/index.md#configuration)
 -   [Boards variables](../env/common.md)
 
 #### S3 Storage

@@ -196,7 +196,7 @@ At the end of this step you should have the following:
 
 1.  Redeploy Boards Helm Chart as per command for Huddo Boards:
 
-    [HCL Component Pack](../../cp/index.md#deploy-boards-helm-chart)
+    [HCL Component Pack](../../cp/index.md#install-boards-helm-chart)
 
         helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
 

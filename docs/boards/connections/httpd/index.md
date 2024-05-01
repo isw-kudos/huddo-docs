@@ -4,7 +4,7 @@
 
     To edit the `httpd.conf`, please follow [this guide](./edit.md).
 
-Boards can be configured either as a standalone domain, or on the same domain as HCL Connections. For details on these config options [please see here](../../kubernetes/index.md#ssl-network-setup). Please follow the appropriate instructions below:
+Boards can be configured either as a standalone domain, or on the same domain as HCL Connections. For details on these config options [please see here](../../kubernetes/index.md#ssl-network). Please follow the appropriate instructions below:
 
 ## a) New Domain
 

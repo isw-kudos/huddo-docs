@@ -2,7 +2,7 @@ The Huddo Widgets provide the interface for user interaction within Connections.
 
 ### Create the Configurator Communities
 
-The Huddo Badges Configurator Widget is the widget that allows users to define and configure what badges are available for award, and how they are awarded. 
+The Huddo Badges Configurator Widget is the widget that allows users to define and configure what badges are available for award, and how they are awarded.
 
 The Huddo Metrics Configurator widget allows users to define and configure Huddo Metrics. These metrics monitor Connections usage (as well as external systems) and determine how Huddo are awarded. This involves the use of technical concepts such as JDBC connections and SQL queries.
 
@@ -30,7 +30,7 @@ You have now created the first Huddo Configurator Community.
 
 Take note of the CommunityUUID in the URL address, as we will need this later.
 
-Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Huddo Analytics Administrator Community](#create-the-kudos-analytics-administrator-community)
+Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Huddo Analytics Administrator Community](#create-the-huddo-analytics-administrator-community)
 
 ### Create the Huddo Analytics Administrator Community
 
@@ -147,7 +147,7 @@ By updating the widgets-config.xml with the code supplied below, the Badges Conf
 Community Analytics and Huddo Community Leaderboard widgets will be made available. This will allow them to be placed into Connections
 Communities, as shown in the following image.
 
-You must define the Widgets and where to find their associated .xml files. You will need the CommunityUuids you took note of earlier. 
+You must define the Widgets and where to find their associated .xml files. You will need the CommunityUuids you took note of earlier.
 
 Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
 

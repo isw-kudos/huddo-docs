@@ -6,7 +6,7 @@
 
 ## Servers
 
-This solution is designed to be a lightweight, cloud-like setup running locally in your data centre. You should expect to configure a minimum of 4 very small servers, see [Swarm Installation](index.md#server-information) for a table showing the requirements.
+This solution is designed to be a lightweight, cloud-like setup running locally in your data centre. You should expect to configure a minimum of 4 small servers.
 
 ---
 

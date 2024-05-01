@@ -104,7 +104,7 @@ Please update to [kudos-boards-cp-3.1.4.tgz](../../assets/config/kubernetes/kudo
 
 ![ReactMinifiedError](react-minified-issue.png)
 
-This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [this release](../releases.md#2022-12-15)
+This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [the 2022-12-15 release](../releases-archive.md#2022-12-15)
 
 ## ITM Render Issue
 

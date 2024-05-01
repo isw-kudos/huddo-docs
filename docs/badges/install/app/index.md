@@ -39,7 +39,9 @@ Highlight the Nodes for the Application, including the IHS Node. Select the Badg
 ![server mapping](server_mapping.png)
 
 Click on Browse and map the default resources as shown. Click Next.
+
 <!--- //cluster??? -->
+
 ![resource mapping](resource_mapping.png)
 
 Enter Huddo as the Context Root, then click Next.
@@ -59,7 +61,6 @@ Review the Installation Results. Click Save.
 Review the Synchronisation Summary. Click OK.
 
 You have now successfully installed Huddo as a WebSphere Enterprise Application. Next, you will need to edit the security settings.
-
 
 ### Modify the Huddo Application Security Role assignments
 
@@ -98,7 +99,7 @@ Select **_Signer certificates_**
 
 You will now see a list of all trusted certificates.
 
-**If the URL of your Connections Environment is listed, skip to [Add Huddo Related Strings to Connections](#add-kudos-related-strings-to-connections)**
+**If the URL of your Connections Environment is listed, skip to [Add Huddo Related Strings to Connections](#add-huddo-related-strings-to-connections)**
 
 We will now import the public certificate from the IBM HTTP Server to the default trust store in IBM WebSphere Application Server
 
@@ -108,12 +109,11 @@ Click Retrieve from port
 
 Enter the following details of the web server, then click Retrieve Signer Information:
 
-- **Host** (e.g. connections.company.com)
-- **SSL Port** (443)
-- **Alias**
+-   **Host** (e.g. connections.company.com)
+-   **SSL Port** (443)
+-   **Alias**
 
 ![port details](port_details.png)
-
 
 The certificate will now be retrieved. Please confirm the details of the certificate, Click **OK**.
 The root certificate is then added to the list of signer certificates.

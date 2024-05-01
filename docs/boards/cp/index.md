@@ -81,7 +81,7 @@ Are [detailed here](../env/common.md).
 
 **Customising Boards notifications**:
 
-Some elements of the Boards notifications that are sent out [can be customised](/boards/env/notifications).
+Some elements of the Boards notifications that are sent out [can be customised](../env/notifications.md).
 
 **Activity migration variables**:
 
