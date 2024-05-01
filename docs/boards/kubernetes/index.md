@@ -1,6 +1,6 @@
-# Huddo Boards for Kubernetes and IBM Cloud Private
+# Huddo Boards for Kubernetes
 
-Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise environments
+Deploying Huddo Boards into Kubernetes for on-premise environments
 
 ---
 

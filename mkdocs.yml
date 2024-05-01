@@ -25,7 +25,6 @@ nav:
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/cloud.md
               - Microsoft 365:
-                  - boards/msgraph/index.md
                   - Overview: boards/msgraph/index.md
                   - Getting Started: boards/msgraph/getting-started/index.md
                   - App Tile: boards/msgraph/custom-tiles/index.md
@@ -45,6 +44,7 @@ nav:
           - Proxy (nginx): boards/proxy/nginx.md
           - Integrations:
               - HCL Connections:
+                  - boards/connections/index.md
                   - Activity Migration (Kube): boards/connections/migration.md
                   - Activity Migration (CP): boards/cp/migration/index.md
                   - Authentication: boards/connections/auth-on-prem.md
@@ -75,16 +75,18 @@ nav:
           - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md
       - Extending Boards:
-          - boards/api/index.md
-          - API: boards/api/index.md
-          - Micro Apps: boards/apps/index.md
+          - API:
+              - boards/api/index.md
+          - Micro Apps:
+              - boards/apps/index.md
           - Power Automate: boards/api/powerautomate.md
           - Zapier: boards/api/zapier.md
       - FAQ:
           - kubectl: boards/faq/kubectl.md
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
-          - Roles: boards/cp/roles/index.md
+          - Roles:
+              - boards/cp/roles/index.md
           - Open Source Licences: boards/faq/open-source-licences.md
       - Huddo Store: boards/store/index.md
       - User Guides:
@@ -101,14 +103,20 @@ nav:
               - Assignment Roles: boards/howto/assignment-roles/assignment-roles.md
               - Hybrid - Import an Activity: boards/howto/import-activity/import.md
           - Working in a Board:
-              - boards/howto/adding-members/index.md
-              - Adding Members: boards/howto/adding-members/index.md
-              - Member Permissions: boards/howto/permissions/index.md
-              - Archiving and Restoring: boards/howto/archiving-and-restoring/index.md
-              - Attaching Files to Cards: boards/howto/attaching-files/index.md
-              - Mind Map: boards/howto/mindmap/index.md
-              - Timeline: boards/howto/timeline/index.md
-              - Task Dependencies: boards/howto/dependencies/index.md
+              - Adding Members:
+                  - boards/howto/adding-members/index.md
+              - Member Permissions:
+                  - boards/howto/permissions/index.md
+              - Archiving and Restoring:
+                  - boards/howto/archiving-and-restoring/index.md
+              - Attaching Files to Cards:
+                  - boards/howto/attaching-files/index.md
+              - Mind Map:
+                  - boards/howto/mindmap/index.md
+              - Timeline:
+                  - boards/howto/timeline/index.md
+              - Task Dependencies:
+                  - boards/howto/dependencies/index.md
           - iCalendar Feed:
               - Personal: boards/howto/ical/personal.md
               - Board: boards/howto/ical/board.md
@@ -139,7 +147,8 @@ nav:
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
           - Boards Docker: boards/troubleshooting/docker.md
           - Boards WebSphere: boards/troubleshooting/websphere.md
-          - Microsoft 365: boards/troubleshooting/office365/index.md
+          - Microsoft 365:
+              - boards/troubleshooting/office365/index.md
           - OAuth: boards/troubleshooting/oauth.md
           - Mongo: boards/troubleshooting/mongo.md
           - NGINX: boards/troubleshooting/nginx.md
@@ -157,7 +166,7 @@ nav:
 
   - Analytics:
       - Installation:
-          - Overview: analytics/install/overview.md
+          - Overview: analytics/install/index.md
           - Install Application: analytics/install/app.md
           - Widgets: analytics/install/install-widgets.md
           - Apply Changes: analytics/install/apply-changes.md
