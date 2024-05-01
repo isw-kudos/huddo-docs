@@ -52,6 +52,15 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | `env.COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                  | Mark the old Activity data as complete                                                                                                                                                                                    |
 | `env.CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                  | Create link to new Board in old Activity                                                                                                                                                                                  |
 
+### Custom DB Names
+
+If you have a custom database names for either the Activities or Profiles database, you can override the defaults using the following variables:
+
+| Variable                            | Default    | Description         |
+| ----------------------------------- | ---------- | ------------------- |
+| `env.CONNECTIONS_DB_ACTIVITIES`     | `OPNACT`   | Activities database |
+| `env.CONNECTIONS_PEOPLEDB_DATABASE` | `PEOPLEDB` | Profiles database   |
+
 ### PeopleDB ACL
 
 Additional Properties for access to `PEOPLEDB` if separate host or authentication **(e.g. Oracle or DB2)**.
