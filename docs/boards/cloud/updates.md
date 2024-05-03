@@ -4,6 +4,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### May
+
+2024-05-03
+
+Features
+
+-   Card and Board recent updates feed - filter to show all or comments/updates only
+
+Improvements
+
+-   add a permanent but closable info level toast when board is read-only
+-   update rich text editor to latest version
+
 ### April
 
 2024-04-29
