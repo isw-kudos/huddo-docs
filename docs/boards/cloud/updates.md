@@ -6,6 +6,27 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### April
 
+2024-04-29
+
+Fixes:
+
+-   update material-ui libraries to fix date picker display issues on small screens
+-   ensure card header theme displays correctly when card is opened via direct link
+
+2024-04-24
+
+Improvements:
+
+-   card details view improvements
+    -   show card fields/data in defined sections in a grid formation with headings and add buttons
+    -   change "add a comment" action to start as a button
+
+Fixes:
+
+-   minor styling fix for dependencies section on a node
+-   board/activity lists - more precise and consistent footer spacing/padding
+-   create card and add comment actions - ensure entered text persists on unfocus + other focus related fixes
+
 2024-04-17
 
 Fixes:
