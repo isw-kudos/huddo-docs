@@ -6,6 +6,38 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2024-05-07
+
+Improvements:
+
+-   Collab Cloud header integration for Cnx8
+
+2024-05-06
+
+Usability improvments:
+
+-   Timeline: add zoom -+ controls that increment zoom levels
+-   Mindmap accessibility
+
+    -   1st tab selects board node, allow arrow key nav, and tab to access actions from there
+    -   sidebar controls - use mui checkboxes + ensure hover effects on buttons
+    -   clear node selection on escape keypress
+    -   fix text cutoff/ensure ellipsis on longer node titles
+    -   add help link to sidebar
+    -   allow keyboard pan and zoom using shift+arrow and +- keys
+
+-   add contact support button to error catch page
+-   add severity levels when showing toasts, fade transition
+-   change add a card textfield to start as a button with add icon + different styles
+-   ensure board creator is displayed as a non-editable owner on board/template creation
+-   ensure board tile labels are sorted in selection menu
+-   make 'Recent' heading in sidebar look less like other actionable items
+-   use delete icon (bin) for remove actions for member tiles, dates, tags, and board tile labels
+
+Fixes:
+
+-   Board tile label delete - ensure tile label is deleted from the label object in store
+
 2024-05-03
 
 Features
