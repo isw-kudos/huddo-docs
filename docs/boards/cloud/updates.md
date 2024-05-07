@@ -14,7 +14,7 @@ Improvements:
 
 2024-05-06
 
-Usability improvments:
+Usability improvements:
 
 -   Timeline: add zoom -+ controls that increment zoom levels
 -   Mindmap accessibility
@@ -28,7 +28,6 @@ Usability improvments:
 
 -   add contact support button to error catch page
 -   add severity levels when showing toasts, fade transition
--   change add a card textfield to start as a button with add icon + different styles
 -   ensure board creator is displayed as a non-editable owner on board/template creation
 -   ensure board tile labels are sorted in selection menu
 -   make 'Recent' heading in sidebar look less like other actionable items
