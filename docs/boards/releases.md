@@ -48,6 +48,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 Features:
 
+-   Integration with HCL Digital Experience (DX) as [announced at Engage 2024](https://www.huddo.com/blog/huddo-engage-2024). [Learn more](./dx/index.md)
 -   Card and Board recent updates feed - filter to show all or comments/updates only
 
 Improvements:
