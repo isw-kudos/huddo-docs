@@ -6,6 +6,20 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2024-05-17
+
+Accessibility fixes:
+
+-   Focus highlighting overrides
+-   use focus outline rather than background colour
+-   Fix for keyboard access to CreateCard app clear buttons to choose board/list
+-   MenuHelper.jsx - pass the disabled prop to the button
+-   position of assign members menu
+-   better focus styling for add board tile button
+-   better contrast when focusing on boards logo
+-   board tiles sort dropdowns - use defined focus bg and colours
+-   minor fixes for focused input controls
+
 2024-05-07
 
 Improvements:
