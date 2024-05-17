@@ -44,6 +44,83 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-05-17
+
+Features:
+
+-   Card and Board recent updates feed - filter to show all or comments/updates only
+
+Improvements:
+
+-   add a permanent but closable info level toast when board is read-only
+-   update rich text editor to latest version
+-   card details view improvements
+    -   show card fields/data in defined sections in a grid formation with headings and add buttons
+    -   change "add a comment" action to start as a button
+-   tooltips on date picker
+-   add invalid date error message
+-   primary session expired message - show as info alert
+-   tab color and style improvements
+-   more consistent use of primary/secondary action colours on buttons
+-   no collapse for empty lists activity todo pivot views
+-   auto collapse empty lists initially and after a card is dragged out of them
+-   New Board Wizard - more specific label for board name and template name
+-   Activity view improvements
+
+    -   styling (shadows, spacing, border edges when expanded/collapsed)
+    -   drop cards on list header (highlight like shadow)
+    -   add card at top hides the bottom add card
+
+-   Usability:
+
+    -   Timeline: add zoom -+ controls that increment zoom levels
+    -   Mindmap accessibility
+
+        -   1st tab selects board node, allow arrow key nav, and tab to access actions from there
+        -   sidebar controls - use mui checkboxes + ensure hover effects on buttons
+        -   clear node selection on escape keypress
+        -   fix text cutoff/ensure ellipsis on longer node titles
+        -   add help link to sidebar
+        -   allow keyboard pan and zoom using shift+arrow and +- keys
+
+    -   add contact support button to error catch page
+    -   add severity levels when showing toasts, fade transition
+    -   ensure board creator is displayed as a non-editable owner on board/template creation
+    -   ensure board tile labels are sorted in selection menu
+    -   make 'Recent' heading in sidebar look less like other actionable items
+    -   use delete icon (bin) for remove actions for member tiles, dates, tags, and board tile labels
+
+Fixes:
+
+-   Board tile label delete - ensure tile label is deleted from the label object in store
+-   update material-ui libraries to fix date picker display issues on small screens
+-   ensure card header theme displays correctly when card is opened via direct link
+-   minor styling fix for dependencies section on a node
+-   board/activity lists - more precise and consistent footer spacing/padding
+-   create card and add comment actions - ensure entered text persists on unfocus + other focus related fixes
+-   issue with exporting a board in Teams client
+-   date picker error on mobile/touch devices
+-   issue with format of dates in date picker
+-   issues in list header title - not full width, no-wrap ellipsis, use correct cursors
+-   don't show grab cursor on lists in todos / pivoted views
+-   issue saving tags when creating new template
+-   ensure tags are copied from template/source
+-   Accessibility fixes:
+
+    -   Focus highlighting overrides
+    -   use focus outline rather than background colour
+    -   Fix for keyboard access to CreateCard app clear buttons to choose board/list
+    -   MenuHelper.jsx - pass the disabled prop to the button
+    -   position of assign members menu
+    -   better focus styling for add board tile button
+    -   better contrast when focusing on boards logo
+    -   board tiles sort dropdowns - use defined focus bg and colours
+    -   minor fixes for focused input controls
+
+Activity Migration:
+
+-   Support custom DB names in MSSQL
+
 #### 2024-04-03
 
 Features:
