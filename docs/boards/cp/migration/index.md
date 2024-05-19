@@ -65,13 +65,14 @@ If you have a custom database names for either the Activities or Profiles databa
 
 Additional Properties for access to `PEOPLEDB` if separate host or authentication **(e.g. Oracle or DB2)**.
 
-| Variable                                  | Default                          | Example                                                 | Description                  |
-| ----------------------------------------- | -------------------------------- | ------------------------------------------------------- | ---------------------------- |
-| `env.CONNECTIONS_PEOPLEDB_HOST`           | `env.CONNECTIONS_HOST`           | `dbserver.company.com`                                  | SQL Server hostname          |
-| `env.CONNECTIONS_PEOPLEDB_PORT`           | `env.CONNECTIONS_PORT`           | `50000` or `1433` or `1531`                             | SQL Server connection port   |
-| `env.CONNECTIONS_PEOPLEDB_USER`           | `env.CONNECTIONS_USER`           | `dbuser`                                                | SQL Server user name         |
-| `env.CONNECTIONS_PEOPLEDB_PASSWORD`       | `env.CONNECTIONS_PASSWORD`       | `dbpassword`                                            | SQL Server user password     |
-| `env.CONNECTIONS_PEOPLEDB_CONNECT_STRING` | `env.CONNECTIONS_CONNECT_STRING` | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>` | SQL Server connection string |
+| Variable                                  | Default                             | Example                                                 | Description                  |
+| ----------------------------------------- | ----------------------------------- | ------------------------------------------------------- | ---------------------------- |
+| `env.CONNECTIONS_PEOPLEDB_HOST`           | `env.CONNECTIONS_DB_HOST`           | `dbserver.company.com`                                  | SQL Server hostname          |
+| `env.CONNECTIONS_PEOPLEDB_PORT`           | `env.CONNECTIONS_DB_PORT`           | `50000` or `1433` or `1531`                             | SQL Server connection port   |
+| `env.CONNECTIONS_PEOPLEDB_SID`            | `env.CONNECTIONS_DB_SID`            | `DATABASE`                                              | SQL Server SID (for Oracle)  |
+| `env.CONNECTIONS_PEOPLEDB_USER`           | `env.CONNECTIONS_DB_USER`           | `dbuser`                                                | SQL Server user name         |
+| `env.CONNECTIONS_PEOPLEDB_PASSWORD`       | `env.CONNECTIONS_DB_PASSWORD`       | `dbpassword`                                            | SQL Server user password     |
+| `env.CONNECTIONS_PEOPLEDB_CONNECT_STRING` | `env.CONNECTIONS_DB_CONNECT_STRING` | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>` | SQL Server connection string |
 
 ### MSSQL
 
