@@ -63,7 +63,7 @@ If you have a custom database names for either the Activities or Profiles databa
 
 ### PeopleDB ACL
 
-Additional Properties for access to `PEOPLEDB` if separate host or authentication **(e.g. Oracle or DB2)**.
+Additional Properties for access to `PEOPLEDB` if separate host or authentication **(Oracle or DB2)**.
 
 | Variable                                  | Default                             | Example                                                 | Description                  |
 | ----------------------------------------- | ----------------------------------- | ------------------------------------------------------- | ---------------------------- |
