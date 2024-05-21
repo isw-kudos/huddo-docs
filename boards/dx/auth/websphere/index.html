@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -5879,30 +5879,19 @@ AdminTask.createOAuthProvider(&#39;[-providerName &lt;OAuthProviderName&gt; -fil
 <p>Where:</p>
 <ul>
 <li><code>&lt;OAuthProviderName&gt;</code> is the OAuth provider name (typically <code>OAuthConfig</code>)</li>
-<li><code>&lt;ProviderConfigFile&gt;</code> is the full path to the OAuth provider configuration file. There should be a default file called <code>OAuthConfigSample.xml</code> in the <code>&lt;app_server_root&gt;/properties</code> directory. Please confirm the location of this file on your system.</li>
+<li><code>&lt;ProviderConfigFile&gt;</code> is the full path to the OAuth provider configuration file. Please download and use this <a href="../DXProvider.xml">DXProvider.xml</a> configuration file which includes Auto Authorize setup for the <code>huddoboards</code> client.</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The supplied <a href="../DXProvider.xml">DXProvider.xml</a> file uses an in-memory store for token storage. You may choose to enable a JDBC database store instead.</p>
+</div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>AdminTask.createOAuthProvider(&#39;[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/OAuthConfigSample.xml]&#39;)
+<div class="highlight"><pre><span></span><code>AdminTask.createOAuthProvider(&#39;[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/DXProvider.xml]&#39;)
 AdminConfig.save()
 quit
 </code></pre></div>
 <p>This should copy the configuration file to <code>&lt;was_profile_root&gt;/config/cells/&lt;cell_name&gt;/oauth20</code></p>
 <p>Please confirm this file exists, e.g. <code>/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml</code></p>
-</li>
-<li>
-<p>Enable Auto Authorize</p>
-<p>Edit the <code>OAuthConfig.xml</code> file which was just created. For a full list of supported options see the <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider">IBM WebSphere documentation</a>.</p>
-<p><code>vi &lt;was_profile_root&gt;/config/cells/&lt;cell_name&gt;/oauth20</code></p>
-<p>For example:</p>
-<p><code>vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml</code></p>
-<p>Add/update the following parameters:</p>
-<div class="highlight"><pre><span></span><code>&lt;parameter name=&quot;oauth20.autoauthorize.param&quot; type=&quot;ws&quot; customizable=&quot;false&quot;&gt;
-    &lt;value&gt;autoauthz&lt;/value&gt;
-&lt;/parameter&gt;
-&lt;parameter name=&quot;oauth20.autoauthorize.clients&quot; type=&quot;ws&quot; customizable=&quot;true&quot;&gt;
-    &lt;value&gt;huddoboards&lt;/value&gt;
-&lt;/parameter&gt;
-</code></pre></div>
 </li>
 <li>
 <p>Restart the WebSphere Application Server</p>
@@ -6025,7 +6014,7 @@ quit
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-05-15
+    2024-05-21
   </span>
 
     
@@ -6136,7 +6125,7 @@ quit
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
