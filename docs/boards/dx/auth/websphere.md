@@ -26,36 +26,21 @@ Connect to the core server, e.g on Kubernetes:
     Where:
 
     -   `<OAuthProviderName>` is the OAuth provider name (typically `OAuthConfig`)
-    -   `<ProviderConfigFile>` is the full path to the OAuth provider configuration file. There should be a default file called `OAuthConfigSample.xml` in the `<app_server_root>/properties` directory. Please confirm the location of this file on your system.
+    -   `<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Please download and use this [DXProvider.xml](./DXProvider.xml) configuration file which includes Auto Authorize setup for the `huddoboards` client.
+
+    !!! tip
+
+        The supplied [DXProvider.xml](./DXProvider.xml) file uses an in-memory store for token storage. You may choose to enable a JDBC database store instead.
 
     For example:
 
-        AdminTask.createOAuthProvider('[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/OAuthConfigSample.xml]')
+        AdminTask.createOAuthProvider('[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/DXProvider.xml]')
         AdminConfig.save()
         quit
 
     This should copy the configuration file to `<was_profile_root>/config/cells/<cell_name>/oauth20`
 
     Please confirm this file exists, e.g. `/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`
-
-1.  Enable Auto Authorize
-
-    Edit the `OAuthConfig.xml` file which was just created. For a full list of supported options see the [IBM WebSphere documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=services-defining-oauth-service-provider).
-
-    `vi <was_profile_root>/config/cells/<cell_name>/oauth20`
-
-    For example:
-
-    `vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`
-
-    Add/update the following parameters:
-
-        <parameter name="oauth20.autoauthorize.param" type="ws" customizable="false">
-            <value>autoauthz</value>
-        </parameter>
-        <parameter name="oauth20.autoauthorize.clients" type="ws" customizable="true">
-            <value>huddoboards</value>
-        </parameter>
 
 1.  Restart the WebSphere Application Server
 
