@@ -24,6 +24,24 @@ To install the Huddo Boards portlet, follow these steps:
 
     ![click finish](./webmodules/finish.png)
 
+#### Unique ID
+
+!!! note
+
+    This step is suggested for best practice.
+
+1. Go to `Settings` => `Custom Unique Names` and click `Portlets`
+
+    ![custom unique names](./uniquenames/types.png)
+
+1. Search for Title starts with `huddo` and click `Edit`
+
+    ![edit unique name](./uniquenames/byname.png)
+
+1. Set the `Unique .ame` to `huddo.boards` and click `OK`
+
+    ![set unique name](./uniquenames/huddoboards.png)
+
 ### ACL
 
 #### Web Module
