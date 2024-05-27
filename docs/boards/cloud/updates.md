@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2024-05-27
+
+Features:
+
+-   Drag and drop of cards between browser tabs/windows
+-   Drag and drop bookmarks into Board lists/cards
+
 2024-05-17
 
 Accessibility fixes:
