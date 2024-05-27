@@ -44,6 +44,17 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-05-27
+
+Features:
+
+-   Drag and drop of cards between browser tabs/windows
+-   Drag and drop bookmarks into Board lists/cards
+
+Activity Migration:
+
+-   MSSQL: Support for authentication per database
+
 #### 2024-05-17
 
 ##### HCL DX
