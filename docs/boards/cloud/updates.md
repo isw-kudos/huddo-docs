@@ -6,6 +6,22 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2024-05-31
+
+Improvements:
+
+-   only allow link on card to bookmark (not uploaded files)
+-   performance of data selection from redux
+-   mobile: always show rich text editor toolbar in comments (to access @mentions)
+
+Fixes:
+
+-   issue where dual tooltips in collapsed Board sidebar
+-   Assign Member list overflowing on phone
+-   issue with text overflow in card links
+-   issue with center alignment of login page on small extra screen devices
+-   issue with toolbar position for comments (balloon) under header when adding new comment in sidebar
+
 2024-05-27
 
 Features:
