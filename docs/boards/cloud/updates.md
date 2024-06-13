@@ -4,6 +4,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### June
+
+2024-06-13
+
+Improvements:
+
+-   Mobile: save/cancel buttons when creating comments
+-   Mobile (Android): fix for keyboard covering input fields
+
+Fixes:
+
+-   loading wrong page/route when logging in with multiple windows (e.g. Community widget & Related Tasks)
+
 ### May
 
 2024-05-31
