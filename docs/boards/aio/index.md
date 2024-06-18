@@ -13,7 +13,7 @@ RHEL (or Centos 7) server with:
 -   8gb ram minimum
 -   4 vCPUs
 -   40gb system drive
--   100gb data drive (will be shared for database and file store) <sup>\*see Persistence Options below</sup>
+-   100gb data drive (will be shared for database and file store) <sup>\*see Data/Services below</sup>
 -   docker and docker-compose
 
 ## Options
@@ -27,12 +27,12 @@ The implementation of this can be either:
 | [Paths](./paths/index.md)         | `yourdomain.com/boards.com` `yourdomain.com/api-boards` | use your existing domain, no additional certificates, easier SSO integration of HCL Connections header. |
 | [Subdomain](./subdomain/index.md) | `boards.yourdomain.com`</br>`boards-api.yourdomain.com` | requires 2 domains (and therefore certificates) in your environment.                                    |
 
-### Persistence
+### Data/Services
 
-Boards uses 3 types of persistent data:
+Boards utilises 3 types of data services:
 
-1. Mongodb
-1. S3 file store
+1. Mongodb (persistent data)
+1. S3 file store (persistent data)
 1. Redis cache.
 
 Each of these may use external services (e.g. Mongo Atlas) or the included services in the template (this hugely changes the server demand).
