@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2024-06-19
+
+Fixes:
+
+-   Parse email to card when dragging from HCL Notes
+
 2024-06-13
 
 Improvements:
