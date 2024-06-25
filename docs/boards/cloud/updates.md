@@ -6,6 +6,33 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2024-06-25
+
+Features:
+
+-   Click on images in comments to preview
+
+Improvements:
+
+-   caching of API requests (features & login methods)
+
+Fixes:
+
+-   auto authenticate regression in Collab Cloud
+
+2024-06-24
+
+Improvements:
+
+-   responsive design of cards in Activity view and modal (small screen)
+-   card display - cursor & border updates
+-   create card - don't hide input/buttons on blur if text has been entered
+
+Fixes:
+
+-   card link in node view on small screen
+-   fix rich text fullscreen issue
+
 2024-06-19
 
 Fixes:
