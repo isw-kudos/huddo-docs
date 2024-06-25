@@ -44,6 +44,36 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-06-25
+
+Features:
+
+-   Click on images in comments to preview
+
+Improvements:
+
+-   caching of API requests (features & login methods)
+-   responsive design of cards in Activity view and modal (small screen)
+-   card display - cursor & border updates
+-   create card - don't hide input/buttons on blur if text has been entered
+-   Mobile: save/cancel buttons when creating comments
+-   Mobile (Android): fix for keyboard covering input fields
+-   only allow link on card to bookmark (not uploaded files)
+-   performance of data selection from redux
+-   mobile: always show rich text editor toolbar in comments (to access @mentions)
+
+Fixes:
+
+-   card link in node view on small screen
+-   fix rich text fullscreen issue
+-   Parse email to card when dragging from HCL Notes
+-   loading wrong page/route when logging in with multiple windows (e.g. Community widget & Related Tasks)
+-   issue where dual tooltips in collapsed Board sidebar
+-   Assign Member list overflowing on phone
+-   issue with text overflow in card links
+-   issue with center alignment of login page on small extra screen devices
+-   issue with toolbar position for comments (balloon) under header when adding new comment in sidebar
+
 #### 2024-05-27
 
 Features:
