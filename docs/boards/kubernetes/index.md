@@ -135,6 +135,6 @@ Add a reverse proxy entry in your network that resolves your certificates and fo
 ## HCL Connections integrations
 
 -   [Header](../connections/header-on-prem.md) (_Note: only required if Boards is hosted on a different domain to Connections_)
--   [Apps Menu](../connections/apps-menu-on-prem.md)
+-   [Apps Menu](../connections/apps-menu/on-prem.md)
 -   [Widgets](../connections/widgets-on-prem.md)
 -   [Migrate your Activities to Boards](../connections/migration.md)

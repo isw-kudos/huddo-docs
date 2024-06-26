@@ -64,7 +64,7 @@ Add Huddo Boards Docker widgets into HCL Connections on-premise environments
 
         then please ensure the Connections domain root certificate is trusted in the WebSphere ISC. This can be added using `Retrieve from port` under `SSL certificate and key management` > `Key stores and certificates` > `CellDefaultTrustStore` > `Signer certificates`
 
-1.  _Optional_. [Install the extensions for Connections Customizer](./customizer/customizer-integrations-package.md). This includes a fix for the Community Widget that enables attachments to be downloaded as well as multiple new integrations for Connections.
+1.  _Optional_. [Install the extensions for Connections Customizer](./customizer/integrations.md). This includes a fix for the Community Widget that enables attachments to be downloaded as well as multiple new integrations for Connections.
 
 ---
 

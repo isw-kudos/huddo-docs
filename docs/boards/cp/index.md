@@ -113,9 +113,9 @@ For Connections on-premise you have two options:
 
 ### HCL Connections
 
--   [Apps Menu](../connections/apps-menu-on-prem.md)
+-   [Apps Menu](../connections/apps-menu/on-prem.md)
 -   [Widgets](../connections/widgets-on-prem.md)
--   [Customizer - Boards Search](../connections/customizer/customizer-integrations-package.md)
+-   [Customizer - Boards Search](../connections/customizer/integrations.md)
 
 ### Microsoft Teams
 

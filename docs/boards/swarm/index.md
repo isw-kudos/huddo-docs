@@ -84,7 +84,7 @@ For example:
 Please follow these instructions
 
 -   [Header](../connections/header-on-prem.md)
--   [Apps Menu](../connections/apps-menu-on-prem.md)
+-   [Apps Menu](../connections/apps-menu/on-prem.md)
 -   [Widgets](../connections/widgets-on-prem.md)
 
 ---

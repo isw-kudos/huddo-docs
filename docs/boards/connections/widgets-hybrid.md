@@ -6,9 +6,9 @@ Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
 ### Community Widget
 
-1. SSH to the WAS Deployment Manager
+1.  SSH to the WAS Deployment Manager
 
-1. Start `wsadmin`
+1.  Start `wsadmin`
 
         cd /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin
         ./wsadmin.sh -lang jython -user wasadmin -password <password-here>
@@ -39,7 +39,7 @@ Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
 1.  Restart the `Communities` application via the ISC
 
-1. *Optional*. [Install the extensions for Connections Customizer](./customizer/customizer-integrations-package.md). This includes a fix for the Community Widget that enables attachments to be downloaded as well as multiple new integrations for Connections.
+1.  _Optional_. [Install the extensions for Connections Customizer](./customizer/integrations.md). This includes a fix for the Community Widget that enables attachments to be downloaded as well as multiple new integrations for Connections.
 
 ---
 
@@ -71,9 +71,9 @@ Add Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
 1. Enter the following:
 
-    | Field       | Value                                                        |
-    | ----------- | ------------------------------------------------------------ |
-    | App Title   | Huddo Boards Stream                                          |
+    | Field       | Value                                                         |
+    | ----------- | ------------------------------------------------------------- |
+    | App Title   | Huddo Boards Stream                                           |
     | URL Address | `https://boards.huddo.com/widgets/connections/url-gadget.xml` |
     | Icon URL    | `https://boards.huddo.com/favicon.ico`                        |
 
@@ -106,25 +106,25 @@ Huddo Boards integrates with Connections Engagement Center
 
 1. Open the CEC (XCC) main admin page
 
-      i.e. `https://connections.company.com/xcc/main`
+    i.e. `https://connections.company.com/xcc/main`
 
 1. Click `Customize`, `Engagement Center Settings`, expand `Customization Files` & click `Upload File`
 
-     ![Example](../../assets/connections/highlights/fileupload.png)
+    ![Example](../../assets/connections/highlights/fileupload.png)
 
-     > Note: you must have the admin role for the `Customize` button to appear
+    > Note: you must have the admin role for the `Customize` button to appear
 
 1. Select the `custom.js` downloaded previously
 
-     > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents. Copy the `HuddoBoards()` function and make sure to call it in `init()`
+    > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents. Copy the `HuddoBoards()` function and make sure to call it in `init()`
 
 1. To validate:
 
-      1. Open the `Highlights` application in a Community
-      1. Click `Customize`, `Widgets` and `Huddo Boards`
+    1. Open the `Highlights` application in a Community
+    1. Click `Customize`, `Widgets` and `Huddo Boards`
 
-         ![Example](../../assets/connections/highlights/add-boards.png)
-      
-      1. The Boards Highlights widget should now appear at the end of the page
+        ![Example](../../assets/connections/highlights/add-boards.png)
 
-         ![Example](../../assets/connections/highlights/boards.png)
+    1. The Boards Highlights widget should now appear at the end of the page
+
+        ![Example](../../assets/connections/highlights/boards.png)

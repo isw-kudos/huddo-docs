@@ -17,9 +17,9 @@ nav:
               - HCL Connections:
                   - Authentication: boards/connections/auth-hybrid.md
                   - Header: boards/connections/header-hybrid.md
-                  - Apps Menu: boards/connections/apps-menu-hybrid.md
+                  - Apps Menu: boards/connections/apps-menu/hybrid.md
                   - Widgets: boards/connections/widgets-hybrid.md
-                  - Customizer Extensions: boards/connections/customizer/customizer-integrations-package.md
+                  - Customizer Extensions: boards/connections/customizer/integrations.md
                   - Mobile App: boards/connections/mobile-app-hybrid.md
                   - Security: boards/connections/security.md
               - HCL Verse: boards/verse/verse-extension.md
@@ -50,10 +50,10 @@ nav:
                   - Authentication: boards/connections/auth-on-prem.md
                   - Keycloak Authentication: boards/connections/keycloak.md
                   - Header: boards/connections/header-on-prem.md
-                  - Apps Menu: boards/connections/apps-menu-on-prem.md
+                  - Apps Menu: boards/connections/apps-menu/on-prem.md
                   - Widgets: boards/connections/widgets-on-prem.md
                   - Mobile App: boards/connections/mobile-app-on-prem.md
-                  - Customizer Integrations: boards/connections/customizer/customizer-integrations-package.md
+                  - Customizer Integrations: boards/connections/customizer/integrations.md
                   - Proxy (httpd): boards/connections/httpd/index.md
               - HCL Domino:
                   - boards/domino/index.md
