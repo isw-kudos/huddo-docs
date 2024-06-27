@@ -5698,18 +5698,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reader" class="md-nav__link">
+  <a href="#owner" class="md-nav__link">
     <span class="md-ellipsis">
-      Reader
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author" class="md-nav__link">
-    <span class="md-ellipsis">
-      Author
+      Owner
     </span>
   </a>
   
@@ -5725,9 +5716,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#owner" class="md-nav__link">
+  <a href="#author" class="md-nav__link">
     <span class="md-ellipsis">
-      Owner
+      Author
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reader
     </span>
   </a>
   
@@ -5737,6 +5737,15 @@
   <a href="#making-your-board-public" class="md-nav__link">
     <span class="md-ellipsis">
       Making Your Board Public
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-access-permissions-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      User access permissions table
     </span>
   </a>
   
@@ -5759,21 +5768,355 @@
 
 <p><img alt="Boards" src="../../../assets/images/boards-logo.jpg" style="float: right" width="200" /></p>
 <h1 id="permissions-in-huddo-boards">Permissions in Huddo Boards<a class="headerlink" href="#permissions-in-huddo-boards" title="Permanent link">&para;</a></h1>
-<p>When you invite colleagues, teams, or external parties to collaborate in your board, you can decide what level of permission to allocate to them. Below, permissions are listed from the lowest access to the highest.</p>
+<p>When you invite colleagues, teams, or external parties to collaborate in your board, you can decide what level of permission to allocate to them. Below, permissions are listed from the highest access to the lowest.</p>
+<p>See the <a href="./#user-access-permissions-table">user access permissions table</a> at the bottom of the page for details on the functions each role has.</p>
 <p><img alt="" src="permissions.png" /></p>
-<h3 id="reader">Reader<a class="headerlink" href="#reader" title="Permanent link">&para;</a></h3>
-<p>A person allocated a Reader permission, has read-only access.</p>
-<h3 id="author">Author<a class="headerlink" href="#author" title="Permanent link">&para;</a></h3>
-<p>A member with Author permissions, has the ability to create new cards, edit their cards, and any cards assigned to them. They cannot edit existing cards.</p>
-<h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
-<p>An Editor has the ability to edit existing content, and create new content.
-Editors can invite and manage other members with the roles Reader, Author and Editor (they cannot change Owners)</p>
 <h3 id="owner">Owner<a class="headerlink" href="#owner" title="Permanent link">&para;</a></h3>
-<p>Owners have full rights to all properties on a board, they can add, edit and delete all other members, lists and cards in the board.</p>
+<p>Owners have full rights to all properties and functions on a board, they can add, edit and delete all other members, lists and cards in the board. They can edit all board options, archive and delete the board.</p>
+<h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
+<p>An editor has the ability to create or edit lists and cards within a board. Editors cannot modify board properties or archive/delete a board. They can however add or change the board colour labels.
+Editors can invite and manage other members with the roles <em>reader</em>, <em>author</em> and <em>editor</em> (they cannot modify <em>owner</em>s).</p>
+<h3 id="author">Author<a class="headerlink" href="#author" title="Permanent link">&para;</a></h3>
+<p>A member with author permissions has the ability to create new lists and cards. They can edit the lists and cards they created, and can edit and complete any cards assigned to them. Authors can comment on any card.</p>
+<h3 id="reader">Reader<a class="headerlink" href="#reader" title="Permanent link">&para;</a></h3>
+<p>A person allocated reader permission will have read-only access to a board. Readers will not be able to create or edit board content, with the exception of being able to comment on, and complete a task that has been assigned to them.</p>
 <p><a href="../adding-members/">Find out more about how to add members to a board.</a></p>
 <h3 id="making-your-board-public">Making Your Board Public<a class="headerlink" href="#making-your-board-public" title="Permanent link">&para;</a></h3>
 <p>When you activate <code>Public Access,</code> your board will be discoverable by anyone in your organisation. You'll be asked to select Reader, Author, or Editor to decide what level of access your organisation can have to the board. Additionally, updates that you make on your board may be included in linked activity streams such as HCL Connections, or Microsoft Teams.</p>
-<p>To give your board public access, navigate to your desired board. Select <code>Members</code> and then select <code>Public Access.</code> Decide what level of access, Reader, Author or Editor, your organisation will have.  </p>
+<p>To give your board public access, navigate to your desired board. Select <code>Members</code> and then select <code>Public Access.</code> Decide what level of access, Reader, Author or Editor, your organisation will have.</p>
+<h2 id="user-access-permissions-table">User access permissions table<a class="headerlink" href="#user-access-permissions-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Legend</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />*</td>
+<td>Only applicable if user authored the item</td>
+</tr>
+<tr>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />**</td>
+<td>Only applicable if user is assigned to the card</td>
+</tr>
+<tr>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />***</td>
+<td>Add and edit members at editor level or below</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Functions</th>
+<th>Boards user</th>
+<th>Owner</th>
+<th>Editor</th>
+<th>Author</th>
+<th>Reader</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a board</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Create a template</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Open and view all board content</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td>Edit board settings</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Edit board members</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />***</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Edit board colour categories</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Copy link</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td>Export</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td>Copy board</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td><strong>List functions</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Add list</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Rename list</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />*</td>
+<td></td>
+</tr>
+<tr>
+<td>Move list</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Copy list</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Archive list</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />*</td>
+<td></td>
+</tr>
+<tr>
+<td>Restore archived list</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />*</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Card functions</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Create a card</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Create a private card</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Edit card you authored</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Edit card you are assigned to</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Drag/drop own card between lists</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Complete card you are assigned to</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td>Complete card you authored</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Archive card you authored</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment on a card</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" />**</td>
+</tr>
+<tr>
+<td>Copy link</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td>Export</td>
+<td></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td><strong>Admin functions</strong></td>
+<td><strong>Organisation Admin</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Manage ownership of all boards in an organisation</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>View membership of all boards in an organisation</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Archive boards</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>See basic statistics for all boards (create date, last updated, card count etc.)</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Manage org wide settings (allow invite by email, enable file uploads etc.)</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Assign, revoke and manage licences</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Create and manage groups for the organisation</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Manage members of the organisation</td>
+<td><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2705.png" title=":white_check_mark:" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -5794,7 +6137,7 @@ Editors can invite and manage other members with the roles Reader, Author and Ed
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2023-06-20
+    2024-06-27
   </span>
 
     
