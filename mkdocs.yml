@@ -215,6 +215,7 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.inlinehilite
+  - pymdownx.emoji
   - md_in_html
 
 theme:
