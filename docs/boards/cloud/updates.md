@@ -6,6 +6,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2024-06-27 (1053)
+
+Improvements:
+
+-   list menu - show for authors/readers (hide menu options per access)
+-   restrict the selectable roles available in the dropdown when creating new/editing existing members
+
+Fixes:
+
+-   Regression bug causing @mentions to not send in comments
+-   bug where possible to reduce role of other member with higher privelleges than current member
+-   fix wrap/styling issues for board calendar feed section
+
 2024-06-25
 
 Features:

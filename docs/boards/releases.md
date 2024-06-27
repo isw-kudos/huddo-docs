@@ -44,7 +44,24 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-06-27
+
+Build #1053
+
+Improvements:
+
+-   list menu - show for authors/readers (hide menu options per access)
+-   restrict the selectable roles available in the dropdown when creating new/editing existing members
+
+Fixes:
+
+-   Regression bug causing @mentions to not send in comments
+-   bug where possible to reduce role of other member with higher privelleges than current member
+-   fix wrap/styling issues for board calendar feed section
+
 #### 2024-06-25
+
+Build #1049
 
 Features:
 
@@ -76,6 +93,8 @@ Fixes:
 
 #### 2024-05-27
 
+Build #1028
+
 Features:
 
 -   Drag and drop of cards between browser tabs/windows
@@ -86,6 +105,8 @@ Activity Migration:
 -   MSSQL: Support for authentication per database
 
 #### 2024-05-17
+
+Build #1027
 
 ##### HCL DX
 
@@ -168,6 +189,8 @@ Activity Migration:
 
 #### 2024-04-03
 
+Build #1003
+
 Features:
 
 -   Emoji reactions on comments
@@ -245,6 +268,8 @@ Activity Migration:
 
 #### 2024-02-14
 
+Build #960
+
 Fixes:
 
 -   Connections SSO header scripts - Notifications panel
@@ -252,6 +277,8 @@ Fixes:
 -   Translation of timeline months headers
 
 #### 2024-02-07
+
+Build #956
 
 Fixes:
 
