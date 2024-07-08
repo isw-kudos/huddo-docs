@@ -6,7 +6,18 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
-2024-06-27 (1053)
+2024-07-08
+
+Improvements:
+
+-   Board autocomplete - search boards immediately, show in drop down, dont filter by current selection
+
+Fixes:
+
+-   support Drag-N-Drop transitions from touch to mouse devices and back again
+-   show number of comments on private cards
+
+2024-06-27
 
 Improvements:
 
