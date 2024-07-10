@@ -4,9 +4,9 @@
 
 When you invite colleagues, teams, or external parties to collaborate in your board, you can decide what level of permission to allocate to them. Below, permissions are listed from the highest access to the lowest.
 
-See the [user access permissions table](./#user-access-permissions-table) at the bottom of the page for details on the functions each role has.
+See the [user access permissions table](#user-access-permissions-table) at the bottom of the page for details on the functions each role has.
 
-![](permissions.png)
+![members popup example](permissions.png)
 
 ### Owner
 
