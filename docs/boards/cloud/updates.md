@@ -6,6 +6,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2024-07-10
+
+Improvements:
+
+-   Card details refresh (new styling)
+-   Ability to add/remove board members/colours from card details action bar
+-   Card theme
+
+    -   theme colours are extended throughout the modal, with the image showing in the title section
+    -   use an image as theme - select between muted (default) or vibrant colors extracted from the image
+
+---
+
 2024-07-08
 
 Improvements:

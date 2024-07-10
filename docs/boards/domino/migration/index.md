@@ -2,7 +2,7 @@
 
 !!! question "Using the old Proton configuration?"
 
-        If you are using the [old Proton configuration](../proton.md), you will need to migrate to the new Domino REST API configuration. This guide will help you through the process.
+    If you are using the [old Proton configuration](../proton.md), you will need to migrate to the new Domino REST API configuration. This guide will help you through the process.
 
 ## Prerequisites
 
