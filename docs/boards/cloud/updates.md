@@ -6,26 +6,6 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
-2024-07-10
-
-Features:
-
--   Ability to add/remove board members/colours from card details action bar
-
-Improvements:
-
--   Card details refresh (new styling & theme updates)
-
-    ![card details](../howto/card-details.png)
-
--   Todos filtering by Board - move under filter options
-
-    ![todos board filters](../howto/todos-board-filters.png)
-
-Fixes:
-
--   Issue when filtering todos by selected Boards, showing cards outside of the selected Boards if also filtering by text/color with "Match All Filters" disabled
-
 2024-07-08
 
 Improvements:
