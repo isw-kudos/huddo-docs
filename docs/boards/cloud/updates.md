@@ -6,6 +6,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2024-07-17
+
+Improvements:
+
+-   reduce themed card title image height on extra small and small height screen sizes
+-   use card theme colours for multi-assignments section
+-   minor changes to icons and tooltips when selecting colours on a card
+-   always show remove buttons on fields and dependencies when using a touch screen
+
+Fixes:
+
+-   due date translation for NL
+
 2024-07-10
 
 Features:
