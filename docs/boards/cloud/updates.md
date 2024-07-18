@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2024-07-18
+
+Improvements:
+
+-   remove margins on images in comments so they make better use of available space
+
+Fixes:
+
+-   en-AU locale using incorrect date format
+-   bug when pasting an image in a new comment
+
 2024-07-17
 
 Improvements:
