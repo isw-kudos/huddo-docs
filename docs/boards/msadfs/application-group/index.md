@@ -111,8 +111,11 @@ To use Microsoft AD FS as an authentication provider for Huddo Boards, you will 
 
     Map the LDAP attributes to outgoing claim types (type these in manually)
 
-    -   `Display-Name` to `displayName`
-    -   `E-Mail-Addresses` to `email`
+    | LDAP Attribute     | Outgoing Claim Type |
+    | ------------------ | ------------------- |
+    | `Display-Name`     | `displayName`       |
+    | `E-Mail-Addresses` | `email`             |
+    | `objectGUID`       | `objectGUID`        |
 
     !!! warning
 
