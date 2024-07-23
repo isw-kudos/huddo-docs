@@ -22,15 +22,26 @@ Once configured, users will be able to login to Boards using their Microsoft AD 
 
 ## Configuration
 
-The steps above will provide you with the following information that you will need to configure Boards:
+The steps above will provide you with the following information that you will need to configure the **user service** in Boards:
 
-| Environment Variable      | Description                         | Example / Default                                 |
-| ------------------------- | ----------------------------------- | ------------------------------------------------- |
-| `MSAD_NAME`               | Name on the login button            | `Microsoft AD`                                    |
-| `MSAD_FS_URL`             | URL of ADFS server                  | `https://adfs.example.com`                        |
-| `MSAD_FS_CLIENT_ID`       | Client Identifier from Step 3 above |                                                   |
-| `MSAD_FS_CLIENT_SECRET`   | Client Secret from Step 3 above     |                                                   |
-| `MSAD_LDAP_URL`           | URL of LDAP server                  | `ldap://ad.example.com`                           |
-| `MSAD_LDAP_BASE_DN`       | Base DN for LDAP search             | `DC=example,DC=com`                               |
-| `MSAD_LDAP_BIND_USER`     | Bind DN for LDAP search             | `CN=Boards,OU=Service Accounts,DC=example,DC=com` |
-| `MSAD_LDAP_BIND_PASSWORD` | Bind password for LDAP search       |                                                   |
+| Environment Variable | Description                         | Example / Default          |
+| -------------------- | ----------------------------------- | -------------------------- |
+| `MSAD_NAME`          | Name on the login button            | `Microsoft AD`             |
+| `MSAD_FS_URL`        | URL of ADFS server                  | `https://adfs.example.com` |
+| `MSAD_CLIENT_ID`     | Client Identifier from Step 2 above |                            |
+| `MSAD_CLIENT_SECRET` | Client Secret from Step 2 above     |                            |
+
+#### LDAP
+
+To enable Boards to lookup user & group details from AD via LDAP, please provide the following environment variables:
+
+| Environment Variable      | Description                   | Example / Default                                 |
+| ------------------------- | ----------------------------- | ------------------------------------------------- |
+| `MSAD_LDAP_URL`           | URL of LDAP server            | `ldap://ad.example.com`                           |
+| `MSAD_LDAP_BASE_DN`       | Base DN for LDAP search       | `DC=example,DC=com`                               |
+| `MSAD_LDAP_BIND_DN`       | Bind DN for LDAP search       | `CN=Boards,OU=Service Accounts,DC=example,DC=com` |
+| `MSAD_LDAP_BIND_PASSWORD` | Bind password for LDAP search |                                                   |
+
+Example configuration:
+
+![example](./config.png)
