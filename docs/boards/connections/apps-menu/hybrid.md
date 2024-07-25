@@ -38,7 +38,7 @@ The side navigation is customisable as per the [official documentation](https://
       "id": "boards",
       "name": "Boards",
       "link": "https://boards.huddo.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]",
-      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTQuNSAzaDcuM3Y0LjZINC41em03LjkgMGg3LjN2NC42aC03LjN6bS0uNiAxMS40SDQuNFY4LjloNy40djUuNXpNNC45IDE0aDYuNVY5LjNINC45VjE0em0xNC44LjRoLTcuMlY4LjloNy4ydjUuNXptLTYuOC0uNGg2LjNWOS4zaC02LjNWMTR6bTYuOCA3LjFoLTcuMnYtNS41aDcuMnY1LjV6bS02LjgtLjRoNi4zdi00LjZoLTYuM3Y0LjZ6IiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+",
+      "link": "https://boards.huddo.com/img/logo-white.svg",
       "order": 2500,
       "submenu": []
     },
