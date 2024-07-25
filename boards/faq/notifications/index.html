@@ -2516,60 +2516,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      New User
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-invite" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Invite
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#added-to-board" class="md-nav__link">
-    <span class="md-ellipsis">
-      Added to Board
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assigned-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assigned Task
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commented" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commented
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mentioned" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mentioned
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#group-notifications" class="md-nav__link">
     <span class="md-ellipsis">
       Group Notifications
@@ -5806,60 +5752,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      New User
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-invite" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Invite
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#added-to-board" class="md-nav__link">
-    <span class="md-ellipsis">
-      Added to Board
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assigned-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assigned Task
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commented" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commented
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mentioned" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mentioned
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#group-notifications" class="md-nav__link">
     <span class="md-ellipsis">
       Group Notifications
@@ -5894,38 +5786,66 @@
 
 <h1 id="huddo-boards-notifications">Huddo Boards Notifications<a class="headerlink" href="#huddo-boards-notifications" title="Permanent link">&para;</a></h1>
 <p>Below are the notifications that Huddo Boards sends it's users to keep them up to date with their content, we try not to send too many of these and keep them short and relevant.</p>
-<h3 id="new-user">New User<a class="headerlink" href="#new-user" title="Permanent link">&para;</a></h3>
-<p><strong>Trigger</strong> First Sign in<br>
-<strong>Recipients</strong> User<br>
-<strong>Methods</strong> Email<br></p>
-<h3 id="user-invite">User Invite<a class="headerlink" href="#user-invite" title="Permanent link">&para;</a></h3>
-<p><strong>Trigger</strong> Inviting a user to a board by their email address<br>
-<strong>Recipients</strong> Invitee<br>
-<strong>Methods</strong> Email<br></p>
-<h3 id="added-to-board">Added to Board<a class="headerlink" href="#added-to-board" title="Permanent link">&para;</a></h3>
-<p><strong>Trigger</strong> Adding user/group to a board<br>
-<strong>Recipients</strong> Invitee<br>
-<strong>Methods</strong> Email, Teams bot, Community stream<br></p>
-<h3 id="assigned-task">Assigned Task<a class="headerlink" href="#assigned-task" title="Permanent link">&para;</a></h3>
-<p><strong>Trigger</strong> Assigning a user to a card<br></p>
-<p><strong>Recipients</strong> Assignee<br>
-<strong>Methods</strong> Email<br></p>
-<p><strong>Recipients</strong> Groups that are members<br>
-<strong>Methods</strong> Teams bot, Community stream<br></p>
-<h3 id="commented">Commented<a class="headerlink" href="#commented" title="Permanent link">&para;</a></h3>
-<p><strong>Trigger</strong> Adding a comment<br>
-<strong>Recipients</strong> Commenter (if another user replies), Anyone assigned, The card creator, Anyone @Mentioned, Groups that are members<br>
-<strong>Methods</strong> Email, Teams bot, Community stream<br></p>
-<h3 id="mentioned">Mentioned<a class="headerlink" href="#mentioned" title="Permanent link">&para;</a></h3>
-<p><strong>Trigger</strong> @Mentioning another member in a board description<br>
-<strong>Recipients</strong> Anyone @Mentioned, Groups that are members<br>
-<strong>Methods</strong> Email, Teams bot, Community stream<br></p>
-<h3 id="group-notifications">Group Notifications<a class="headerlink" href="#group-notifications" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Notification</th>
+<th>Trigger</th>
+<th>Recipients</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New User</td>
+<td>First Sign in</td>
+<td>User</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>User Invite</td>
+<td>Inviting a user to a board by their email address</td>
+<td>Invitee</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>Added to Board</td>
+<td>Adding user/group to a board</td>
+<td>Invitee</td>
+<td>Email, Teams bot, Community stream</td>
+</tr>
+<tr>
+<td>Assigned Task</td>
+<td>Assigning a user to a card</td>
+<td>Assignee</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>Assigned Task</td>
+<td>Assigning a user to a card</td>
+<td>Groups that are members</td>
+<td>Teams bot, Community stream</td>
+</tr>
+<tr>
+<td>Commented</td>
+<td>Adding a comment</td>
+<td>Commenter (if another user replies), Anyone assigned, The card creator, Anyone @Mentioned, Groups that are members</td>
+<td>Email, Teams bot, Community stream</td>
+</tr>
+<tr>
+<td>Mentioned</td>
+<td>Mentioning another member in a board description</td>
+<td>Anyone @Mentioned, Groups that are members</td>
+<td>Email, Teams bot, Community stream</td>
+</tr>
+</tbody>
+</table>
+<h2 id="group-notifications">Group Notifications<a class="headerlink" href="#group-notifications" title="Permanent link">&para;</a></h2>
 <p>For boards that have groups as members, these notifications are sent to each group.</p>
 <p><strong>Trigger</strong> Creating a new card, Changing properties of a board/card, Completing a board/card<br>
 <strong>Recipients</strong> Group<br>
 <strong>Methods</strong> Teams bot, Community stream<br></p>
-<h3 id="licence-notifications">Licence Notifications<a class="headerlink" href="#licence-notifications" title="Permanent link">&para;</a></h3>
+<h2 id="licence-notifications">Licence Notifications<a class="headerlink" href="#licence-notifications" title="Permanent link">&para;</a></h2>
 <p><strong>Trigger</strong> Quote Request, Payment Success/Failure, Licence created/updated<br>
 <strong>Recipients</strong> Organisation Admins<br>
 <strong>Methods</strong> Email<br></p>
@@ -5949,7 +5869,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2021-03-05
+    2024-07-25
   </span>
 
     
