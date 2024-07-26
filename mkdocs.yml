@@ -82,6 +82,7 @@ nav:
           - Power Automate: boards/api/powerautomate.md
           - Zapier: boards/api/zapier.md
       - FAQ:
+          - Domains: boards/faq/domains/index.md
           - kubectl: boards/faq/kubectl.md
           - Languages: boards/faq/languages.md
           - Notifications: boards/faq/notifications.md
