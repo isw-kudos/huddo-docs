@@ -1318,6 +1318,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#microsoft-active-directory-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Active Directory (AD)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1424,6 +1433,8 @@
   
     
     
+      
+        
       
         
       
@@ -2154,6 +2165,118 @@
   
   <span class="md-ellipsis">
     Teams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_11_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../msad/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Microsoft AD
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1_3_11_6" id="__nav_1_3_11_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_11_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_11_6">
+            <span class="md-nav__icon md-icon"></span>
+            Microsoft AD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../msad/relying-party-trust/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relying Party Trust
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../msad/application-group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application Group
   </span>
   
 
@@ -5850,6 +5973,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#microsoft-active-directory-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Active Directory (AD)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5983,6 +6115,7 @@
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="hcl-domino">HCL Domino<a class="headerlink" href="#hcl-domino" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -6030,6 +6163,7 @@
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="hcl-digital-experience-dx">HCL Digital Experience (DX)<a class="headerlink" href="#hcl-digital-experience-dx" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -6065,6 +6199,64 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h3 id="microsoft-active-directory-ad">Microsoft Active Directory (AD)<a class="headerlink" href="#microsoft-active-directory-ad" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Optional</strong>: These settings are only required if you are using Microsoft Active Directory (AD) as your authentication provider.</p>
+</div>
+<p>Please follow the steps in the <a href="../../msad/">Microsoft Active Directory Federation Service</a> guide to configure your AD FS server, and the Huddo Boards application group.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Example / Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user.env.MSAD_NAME</code></td>
+<td>Name on the login button</td>
+<td><code>Microsoft AD</code></td>
+</tr>
+<tr>
+<td><code>user.env.MSAD_FS_URL</code></td>
+<td>AD FS server URL</td>
+<td><code>https://adfs.example.com</code></td>
+</tr>
+<tr>
+<td><code>user.env.MSAD_CLIENT_ID</code></td>
+<td>AD FS client id</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user.env.MSAD_CLIENT_SECRET</code></td>
+<td>AD FS client secret</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user.env.MSAD_LDAP_URL</code></td>
+<td>URL of LDAP server</td>
+<td><code>ldap://ad.example.com</code></td>
+</tr>
+<tr>
+<td><code>user.env.MSAD_LDAP_BASE_DN</code></td>
+<td>Base DN for LDAP search</td>
+<td><code>DC=example,DC=com</code></td>
+</tr>
+<tr>
+<td><code>user.env.MSAD_LDAP_BIND_DN</code></td>
+<td>Bind DN for LDAP search</td>
+<td><code>CN=Boards,OU=Service Accounts,DC=example,DC=com</code></td>
+</tr>
+<tr>
+<td><code>user.env.MSAD_LDAP_BIND_PASSWORD</code></td>
+<td>Bind password for LDAP search</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -6085,7 +6277,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-04-12
+    2024-07-29
   </span>
 
     

@@ -761,6 +761,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.huddo.com/boards/msad/</loc>
+         <lastmod>2024-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/msad/application-group/</loc>
+         <lastmod>2024-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.huddo.com/boards/msad/relying-party-trust/</loc>
+         <lastmod>2024-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.huddo.com/boards/msgraph/</loc>
          <lastmod>2024-07-28</lastmod>
          <changefreq>daily</changefreq>
