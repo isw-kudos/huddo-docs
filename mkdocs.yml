@@ -71,6 +71,10 @@ nav:
                   - boards/msgraph/auth/index.md
                   - Authentication: boards/msgraph/auth/index.md
                   - Teams: boards/msgraph/teams/on-prem.md
+              - Microsoft AD:
+                  - boards/msad/index.md
+                  - Relying Party Trust: boards/msad/relying-party-trust/index.md
+                  - Application Group: boards/msad/application-group/index.md
               - Related Tasks: boards/integrations/developing/related-tasks.md
           - Releases: boards/releases.md
       - Boards Hybrid: boards/hybrid.md

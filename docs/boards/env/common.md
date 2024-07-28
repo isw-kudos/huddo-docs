@@ -39,6 +39,8 @@ Please set the following environment variables in your config file as required
 | `user.env.CONNECTIONS_KEYCLOAK_URL`   | **Optional**: See [keycloak authentication](../connections/keycloak.md) for more information                           |
 | `user.env.CONNECTIONS_KEYCLOAK_REALM` | **Optional**: See [keycloak authentication](../connections/keycloak.md) for more information                           |
 
+---
+
 ### HCL Domino
 
 !!! tip
@@ -56,6 +58,8 @@ Please set the following environment variables in your config file as required
 | `user.env.DOMINO_AUTH_SCOPE`                    | **Optional**: defaults to `$DATA`<br>See [domino authentication](../domino/index.md) for more information                                               |
 | `user.env.DOMINO_REST_SCOPE`                    | **Optional**: defaults to `directorylookup`<br>See [domino authentication](../domino/index.md) for more information                                     |
 
+---
+
 ### HCL Digital Experience (DX)
 
 !!! tip
@@ -69,3 +73,24 @@ Please set the following environment variables in your config file as required
 | `user.env.DX_CLIENT_SECRET`      | oAuth client-secret, see [dx authentication](../dx/auth/websphere.md) for more information             |
 | `user.env.DX_ADMINS`             | **Optional**: Emails or GUIDs of users to grant admin permissions.                                     |
 | `user.env.DX_AUTH_PROVIDER_NAME` | **Optional**: name of the [OAuth Service Provider](../dx/auth/websphere.md). Defaults to `OAuthConfig` |
+
+---
+
+### Microsoft Active Directory (AD)
+
+!!! tip
+
+    **Optional**: These settings are only required if you are using Microsoft Active Directory (AD) as your authentication provider.
+
+Please follow the steps in the [Microsoft Active Directory Federation Service](../msad/index.md) guide to configure your AD FS server, and the Huddo Boards application group.
+
+| Key                                | Description                   | Example / Default                                 |
+| ---------------------------------- | ----------------------------- | ------------------------------------------------- |
+| `user.env.MSAD_NAME`               | Name on the login button      | `Microsoft AD`                                    |
+| `user.env.MSAD_FS_URL`             | AD FS server URL              | `https://adfs.example.com`                        |
+| `user.env.MSAD_CLIENT_ID`          | AD FS client id               |                                                   |
+| `user.env.MSAD_CLIENT_SECRET`      | AD FS client secret           |                                                   |
+| `user.env.MSAD_LDAP_URL`           | URL of LDAP server            | `ldap://ad.example.com`                           |
+| `user.env.MSAD_LDAP_BASE_DN`       | Base DN for LDAP search       | `DC=example,DC=com`                               |
+| `user.env.MSAD_LDAP_BIND_DN`       | Bind DN for LDAP search       | `CN=Boards,OU=Service Accounts,DC=example,DC=com` |
+| `user.env.MSAD_LDAP_BIND_PASSWORD` | Bind password for LDAP search |                                                   |
