@@ -6,6 +6,18 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2024-07-29
+
+Improvements:
+
+-   use bolder Roboto fonts to emphasise headings and actions
+-   use more contrasting (darker) colours for card title and icons
+
+Fixes:
+
+-   fix a bug where the card updates sidebar will incorrectly initiate as closed
+-   reinstate create template from board action
+
 2024-07-18
 
 Improvements:
