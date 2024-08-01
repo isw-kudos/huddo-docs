@@ -26,9 +26,10 @@ To use Microsoft AD FS as an authentication provider for Huddo Boards, you will 
 
         This will be used as the `MSAD_CLIENT_ID` in the Boards configuration and the `Identifier` set in the Web API configuration later
 
-    Set the redirect URI to `https://<BOARDS_URL>/auth/msad/callback`
+    Set the redirect URI to `https://<BOARDS_URL>/auth/msad/callback` and click `Add`. For example:
 
-    For example, if your Boards URL is `https://boards.example.com`, the redirect URI would be `https://boards.example.com/auth/msad/callback`
+    -   `https://boards.example.com/auth/msad/callback` or
+    -   `https://connections.example.com/boards/auth/msad/callback`
 
     ![server](./server.png)
 
