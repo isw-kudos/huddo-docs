@@ -20,7 +20,7 @@ If your board is already created in either the Timeline or Board view, it is sim
 
 In this example, we’ll create a new mind map and select `Blank` as the template, so we can populate it entirely ourselves. Alternatively, you can select one of the preloaded templates like _Classic, Weekdays, Departments, or Meetings._
 
-When you create a new mind map, you’ll see the title of the board, sitting front and center on the page. You’ll notice that just above the boxed title, there are two icons. The icon on the left creates a new sub-card. Since we’ve just begun our board, this will first create lists.
+When you create a new mind map, you will see the title of the board, sitting front and center on the page. You will notice that just above the boxed title, there are two icons. The icon on the left creates a new sub-card. Since we’ve just begun our board, this will first create lists.
 
 ![](./view3.png)
 

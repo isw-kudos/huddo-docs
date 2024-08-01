@@ -42,7 +42,7 @@ Open the board you intend to archive. Navigate to `Open Board Options` found in 
 
 ![](../open-board-options.png)
 
-In the board options you’ll see the `Archive` button in the actions shown at the top. Click this button to archive the board.
+In the board options you will see the `Archive` button in the actions shown at the top. Click this button to archive the board.
 
 ![](./archiving5.png)
 
