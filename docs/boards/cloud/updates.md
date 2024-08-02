@@ -4,6 +4,39 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### August
+
+2024-08-02
+
+Improvements:
+
+-   Cache theme colour palettes for faster rendering
+-   Added missing translations for the following languages:
+
+    -   Bulgarian (bg)
+    -   Catalan (ca)
+    -   Chinese (Simplified) (zh)
+    -   Chinese (Traditional) (zh-TW)
+    -   Czech (cs)
+    -   Danish (da)
+    -   Dutch (nl)
+    -   French (fr)
+    -   Italian (it)
+    -   Japanese (ja)
+    -   Polish (pl)
+    -   Portuguese (pt)
+    -   Romanian (ro)
+    -   Russian (ru)
+    -   Slovak (sk)
+    -   Slovenian (sl)
+    -   Spanish (es)
+
+Fixes:
+
+-   Issue when selecting an uploaded image as theme from new dialog removing other non-image bookmarks
+-   Text overflow issue in Activity view 'add a card' at top button
+-   Issue with incorrect number of Microsoft users in organisation admin view
+
 ### July
 
 2024-07-29
