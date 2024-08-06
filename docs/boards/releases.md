@@ -44,6 +44,57 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-07-08
+
+Build #1092
+
+Features:
+
+-   Support for [Microsoft AD](./msad/index.md)
+
+Improvements:
+
+-   Card details refresh (new styling & theme updates)
+
+    ![card details](./howto/card-details.png)
+
+-   Todos filtering by Board - move under filter options
+
+    ![todos board filters](./howto/todos-board-filters.png)
+
+-   use bolder Roboto fonts to emphasise headings and actions
+-   Board autocomplete - search boards immediately, show in drop down, dont filter by current selection
+
+Language Translations:
+
+-   Added missing translations for the following languages:
+
+    -   Bulgarian (bg)
+    -   Catalan (ca)
+    -   Chinese (Simplified) (zh)
+    -   Chinese (Traditional) (zh-TW)
+    -   Czech (cs)
+    -   Danish (da)
+    -   Dutch (nl)
+    -   French (fr)
+    -   Italian (it)
+    -   Japanese (ja)
+    -   Polish (pl)
+    -   Portuguese (pt)
+    -   Romanian (ro)
+    -   Russian (ru)
+    -   Slovak (sk)
+    -   Slovenian (sl)
+    -   Spanish (es)
+
+Fixes:
+
+-   Text overflow issue in Activity view 'add a card' at top button
+-   Issue with incorrect number of Microsoft users in organisation admin view
+-   Issue when filtering todos by selected Boards, showing cards outside of the selected Boards if also filtering by text/color with "Match All Filters" disabled
+-   support Drag-N-Drop transitions from touch to mouse devices and back again
+-   show number of comments on private cards
+
 #### 2024-06-27
 
 Build #1053
