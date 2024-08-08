@@ -44,7 +44,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
-#### 2024-07-08
+#### 2024-08-07
 
 Build #1092
 
