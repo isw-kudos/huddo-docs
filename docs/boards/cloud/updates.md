@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2024-08-15
+
+Improvements:
+
+-   Board tile grid auto-sizing
+
+Fixes:
+
+-   Content Admin - scrolling issues (wobbling and while filtered)
+-   MindMap - dont show edit option on hover while creating new card
+
 2024-08-02
 
 Improvements:
