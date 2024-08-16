@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2024-08-16
+
+Fixes:
+
+-   Issue with webhooks
+
 2024-08-15
 
 Improvements:
