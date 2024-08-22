@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2024-08-22
+
+Improvements:
+
+-   Organisation content administration.
+
+    -   Delete functionality for Boards which user is not an owner of
+    -   Search by board name - case insensitive
+    -   Sort by Archive column
+    -   Select all only selects visible
+
 2024-08-16
 
 Fixes:
