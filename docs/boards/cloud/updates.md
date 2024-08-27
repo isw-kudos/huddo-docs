@@ -6,6 +6,18 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2024-08-26
+
+Improvements:
+
+-   Onboarding for Microsoft Teams customers - allow selecting simple plan (free or enterprise)
+-   Onboarding for users starting in micro apps (e.g. Verse, Outlook)
+-   Create a Card button spans full width of list
+
+Fixes:
+
+-   Issue with reloading data in Teams tab settings if no personal or team boards
+
 2024-08-22
 
 Improvements:
