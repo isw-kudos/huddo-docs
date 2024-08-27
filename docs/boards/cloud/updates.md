@@ -6,6 +6,36 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2024-08-27
+
+Features:
+
+-   Dark mode!
+-   Welcome Tours in
+
+    -   Bulgarian (bg)
+    -   Catalan (ca)
+    -   Chinese (Simplified) (zh)
+    -   Chinese (Traditional) (zh-TW)
+    -   Czech (cs)
+    -   Danish (da)
+    -   Dutch (nl)
+    -   French (fr)
+    -   German (de)
+    -   Italian (it)
+    -   Japanese (ja)
+    -   Polish (pl)
+    -   Portuguese (pt)
+    -   Romanian (ro)
+    -   Russian (ru)
+    -   Slovak (sk)
+    -   Slovenian (sl)
+    -   Spanish (es)
+
+Fixes:
+
+-   Issue with Board tile height in Connections since grid size change (18 Aug)
+
 2024-08-26
 
 Improvements:
