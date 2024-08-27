@@ -35,6 +35,7 @@ Features:
 Fixes:
 
 -   Issue with Board tile height in Connections since grid size change (18 Aug)
+-   Issue moving cards by DnD in Kanban in Firefox with Linux OS
 
 2024-08-26
 
