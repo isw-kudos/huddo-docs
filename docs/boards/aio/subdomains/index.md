@@ -49,20 +49,20 @@ chown -R 1001 ./db ./files
 
 Update the following variables in the `.env` file:
 
-| Variable            | Example                  | Description                                                    |
-| ------------------- | ------------------------ | -------------------------------------------------------------- |
-| `imageTag`          | `2024-08-07`             | [Date of our latest release](../../releases.md)                |
-| `appURI`            | `boards.company.com`     | URL of Boards UI                                               |
-| `apiGateway`        | `boards-api.company.com` | URL of Boards API                                              |
-| `smtpHost`          | `smtp.example.com`       | Email server                                                   |
-| `smtpUsername`      | `user123`                | Email server username                                          |
-| `smtpPassword`      | `passw0rd`               | Email server password                                          |
-| `licence`           |                          | Licence key downloaded from Huddo Store                        |
-| `databathPath`      | `./db`                   | Path for storage (e.g. fast, backed up etc)                    |
-| `databasePassword`  | `dbpassword`             | MongoDB password - it will create the root user on first start |
-| `fileStorePath`     | `./files`                | Path for storage (e.g. large, backed up etc)                   |
-| `fileStoreUsername` | `iou1username`           | File Store username - it will be created on first start        |
-| `fileStorePassword` | `iou1password`           | File Store password - it will be created on first start        |
+| Variable            | Example                  | Description                                                     |
+| ------------------- | ------------------------ | --------------------------------------------------------------- |
+| `imageTag`          | `2024-08-07`             | [Date of our latest release](../../releases.md)                 |
+| `appURI`            | `boards.company.com`     | URL of Boards UI                                                |
+| `apiGateway`        | `boards-api.company.com` | URL of Boards API                                               |
+| `smtpHost`          | `smtp.example.com`       | Email server                                                    |
+| `smtpUsername`      | `user123`                | Email server username                                           |
+| `smtpPassword`      | `passw0rd`               | Email server password                                           |
+| `licence`           |                          | Licence key downloaded from [Huddo Store](../../store/index.md) |
+| `databathPath`      | `./db`                   | Path for storage (e.g. fast, backed up etc)                     |
+| `databasePassword`  | `dbpassword`             | MongoDB password - it will create the root user on first start  |
+| `fileStorePath`     | `./files`                | Path for storage (e.g. large, backed up etc)                    |
+| `fileStoreUsername` | `iou1username`           | File Store username - it will be created on first start         |
+| `fileStorePassword` | `iou1password`           | File Store password - it will be created on first start         |
 
 #### user.env
 
