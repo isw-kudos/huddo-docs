@@ -32,10 +32,13 @@ nav:
                   - Outlook: boards/msgraph/outlook/index.md
                   - Sharepoint: boards/msgraph/sharepoint/index.md
       - Boards Self-Hosted:
-          - boards/kubernetes/index.md
+          - boards/index.md
           - a) For HCL Connections: boards/cp/index.md
           - b) For Kubernetes: boards/kubernetes/index.md
-          - c) Docker (All-In-One): boards/aio/index.md
+          - c) Docker (All-In-One):
+              - boards/aio/index.md
+              - Existing domain: boards/aio/existing-domain/index.md
+              - Subdomains: boards/aio/subdomains/index.md
           - Access to Images: boards/images.md
           - Configuration: boards/env/common.md
           - Compatibility: boards/compatibility.md
