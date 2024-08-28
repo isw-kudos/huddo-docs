@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2024-08-28
+
+Improvements:
+
+-   Organisation logo - show white background in dark mode for images with transparency
+
 2024-08-27
 
 Features:
