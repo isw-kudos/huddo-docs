@@ -15,6 +15,7 @@ Follow the steps in the [Proxy Configuration](./proxy.md) to configure your NGIN
 Create a directory for the database and file store
 
 ```bash
+cd /data # or wherever you want to store the data
 mkdir huddoboards
 cd huddoboards
 mkdir ./db ./files
