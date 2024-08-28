@@ -38,6 +38,7 @@ Please set the following environment variables in your config file as required
 | `user.env.CONNECTIONS_ADMINS`         | Emails or GUIDs of users to grant admin permissions.<br/>e.g. `"[\"admin1@company.example.com\", \"PROF_GUID_2\"]`"    |
 | `user.env.CONNECTIONS_KEYCLOAK_URL`   | **Optional**: See [keycloak authentication](../connections/keycloak.md) for more information                           |
 | `user.env.CONNECTIONS_KEYCLOAK_REALM` | **Optional**: See [keycloak authentication](../connections/keycloak.md) for more information                           |
+| `user.env.CONNECTIONS_KEYCLOAK_PATH`  | **Optional:** Keycloak path</br>Default: `/auth/realms`</br>Customise this to `/realms` as of Keycloak v22             |
 
 ---
 
