@@ -44,6 +44,34 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-08-29
+
+Build #1112
+
+Features:
+
+-   Dark mode!
+
+    ![dark mode](./howto/dark-mode.png)
+
+Improvements:
+
+-   Board tile grid auto-sizing
+-   Create a Card button spans full width of list
+-   Organisation content administration.
+
+    -   Delete functionality for Boards which user is not an owner of
+    -   Search by board name - case insensitive
+    -   Sort by Archive column
+    -   Select all only selects visible
+
+Fixes:
+
+-   Issue with webhooks
+-   Issue moving cards by DnD in Kanban in Firefox with Linux OS
+-   Content Admin - scrolling issues (wobbling and while filtered)
+-   MindMap - dont show edit option on hover while creating new card
+
 #### 2024-08-07
 
 Build #1092

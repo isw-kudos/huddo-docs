@@ -17,6 +17,9 @@ Improvements:
 Features:
 
 -   Dark mode!
+
+    ![dark mode](../howto/dark-mode.png)
+
 -   Welcome Tours in
 
     -   Bulgarian (bg)
