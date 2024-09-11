@@ -2,7 +2,7 @@ The Huddo Widgets provide the interface for user interaction within Connections.
 
 ### Create the Configurator Communities
 
-IN this step you will create communities for the configurators and/or for administration level analytics. The Configurators can be in one community, a community for each or a mix. We recommend a single community for smaller environments and individual communities for larger ones.
+In this step you will create communities for the configurators and/or for administration level analytics. The Configurators can be in one community, a community for each or a mix. We recommend a single community for smaller environments and individual communities for larger ones.
 
 The Huddo Badges Configurator Widget is the widget that allows users to define and configure what badges are available for award, and how they are awarded.
 
