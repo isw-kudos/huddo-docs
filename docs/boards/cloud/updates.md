@@ -4,6 +4,28 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### September
+
+2024-09-11
+
+Features:
+
+-   PDF zoom/paging controls
+
+Improvements:
+
+-   Simplification of task/entry. Add icons to their create buttons to clearly differentiate. Allow setting dates and dependencies on entry, auto converts to task
+-   Simplification of dates. 'End Date' has been merged into 'Due Date'
+-   Styling of recent updates loading progress bar
+-   better grid spacing for board members and colours
+
+Fixes:
+
+-   Positioning of rich text toolbar when card title long
+-   Export Board with creator/updater null (data imported from Activities)
+-   Protection against assignments to user null (data imported from Activities)
+-   Dark mode styling of transfer ownership dialog
+
 ### August
 
 2024-08-28
