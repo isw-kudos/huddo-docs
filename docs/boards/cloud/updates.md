@@ -19,6 +19,8 @@ Improvements:
 -   Simplification of dates. 'End Date' has been merged into 'Due Date'
 -   Styling of recent updates loading progress bar
 -   better grid spacing for board members and colours
+-   Rename entry to note for clarity
+-   Performance improvements for kanban list scrolling
 
 Fixes:
 
