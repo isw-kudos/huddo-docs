@@ -2,6 +2,8 @@ The Huddo Widgets provide the interface for user interaction within Connections.
 
 ### Create the Configurator Communities
 
+IN this step you will create communities for the configurators and/or for administration level analytics. The Configurators can be in one community, a community for each or a mix. We recommend a single community for smaller environments and individual communities for larger ones.
+
 The Huddo Badges Configurator Widget is the widget that allows users to define and configure what badges are available for award, and how they are awarded.
 
 The Huddo Metrics Configurator widget allows users to define and configure Huddo Metrics. These metrics monitor Connections usage (as well as external systems) and determine how Huddo are awarded. This involves the use of technical concepts such as JDBC connections and SQL queries.
@@ -76,7 +78,7 @@ By updating the widgets-config.xml with the code supplied below, the Huddo Badge
 Summary, Huddo Thanks and Thanks Summary widgets will be made available to the end users. The following diagram shows where the widgets
 will be placed.
 
-Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="profiles" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
+Edit the widgets-config.xml file. Find the resource element with the type of profiles, e.g. `<resource ... type="profiles" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
 
 **IMPORTANT**: Don’t forget to substitute the following placeholders with the corresponding values! CONNECTIONS_SERVER_NAME
 

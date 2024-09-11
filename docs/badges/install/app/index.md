@@ -122,7 +122,7 @@ The root certificate is then added to the list of signer certificates.
 
 This change will not be picked up by Connections until the servers are restarted. This will be performed at the end of the configuration.
 
-Copy the .properties files from the folder Huddo.ear/Huddo.war/installFiles to the Connections strings customisation directory:
+Copy the .properties files from the folder Huddo.ear/Kudos.war/installFiles to the Connections strings customisation directory:
 <CONNECTIONS_CUSTOMIZATION_PATH>/strings
 Where **CONNECTIONS_CUSTOMIZATION_PATH** is defined by the WebSphere variable.
 e.g. /opt/Connections/data/shared/customization/strings
