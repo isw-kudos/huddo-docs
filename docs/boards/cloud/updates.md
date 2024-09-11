@@ -14,6 +14,7 @@ Features:
 
 Improvements:
 
+-   Allow caching of uploaded files based on unique etag
 -   Simplification of task/entry. Add icons to their create buttons to clearly differentiate. Allow setting dates and dependencies on entry, auto converts to task
 -   Simplification of dates. 'End Date' has been merged into 'Due Date'
 -   Styling of recent updates loading progress bar
