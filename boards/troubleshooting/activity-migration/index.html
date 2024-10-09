@@ -6270,6 +6270,9 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 <h2 id="jvm-heap-size-oom">JVM Heap Size OoM<a class="headerlink" href="#jvm-heap-size-oom" title="Permanent link">&para;</a></h2>
 <p>When migrating very large activities sometimes you may encounter an OutOfMemory error.</p>
 <h3 id="resolution_1">Resolution<a class="headerlink" href="#resolution_1" title="Permanent link">&para;</a></h3>
+<p>Ensure you are on <code>v1.2.0</code>+ of the Migration chart, e.g.</p>
+<div class="highlight"><pre><span></span><code>helm upgrade huddo-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+</code></pre></div>
 <p>In the migration YAML chart you can set following to increase the amount of memory available to NodeJS by adding the environment variables in the migration YAML:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">migration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
