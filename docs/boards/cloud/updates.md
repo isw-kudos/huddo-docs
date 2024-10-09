@@ -6,6 +6,18 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### September
 
+2024-09-30
+
+Improvements:
+
+-   Members and colours can be assigned to a card by dragging from the sidebar within the card options dialog view
+-   Tasks with a due date only (no start date) will now appear in the timeline view
+-   Minor style, position calculation and other improvements to the timeline view
+
+Fixes:
+
+-   Themed card title appearing in the background in card details dialog
+
 2024-09-11
 
 Features:
