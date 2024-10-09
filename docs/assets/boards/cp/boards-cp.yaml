@@ -74,6 +74,7 @@ migration:
     # NODE_OPTIONS: '--max-old-space-size=6144'
     # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
     TZ: Europe/London
+
     # this can be found in the WebSphere ACTIVITIES_CONTENT_DIR variable
     FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
 
