@@ -102,9 +102,19 @@ migration:
     server: 192.168.10.1
     # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
     path: /nfs/data/shared
+  # resources:
+  #   requests:
+  #     memory: 2048M
+  #   limits:
+  #     memory: 8192M
   env:
+    # NODE_OPTIONS: '--max-old-space-size=6144'
+    # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    TZ: Europe/London
+
     # the extension after /data can be found from the WebSphere ACTIVITIES_CONTENT_DIR variable
     FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
+
     CONNECTIONS_URL: httsp://connections.example.com
     CONNECTIONS_ACTIVITIES_ADMIN_USERNAME: connectionsadmin
     CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD: adminpassword
@@ -140,6 +150,10 @@ migration:
     # -------- Other options -------------
     # PROCESSING_PAGE_SIZE: 10
     # PROCESSING_LOG_EVERY: 50
-    # IMMEDIATELY_PROCESS_ALL: false
-    # COMPLETE_ACTIVITY_AFTER_MIGRATED: false
-    # CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED: false
+    # FIELDS_PAGE_SIZE: 3
+    # FIELDS_LOG_EVERY: 50
+    # IMMEDIATELY_PROCESS_ALL: "false"
+    # COMPLETE_ACTIVITY_AFTER_MIGRATED: "false"
+    # CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED: "false"
+    # PURGE_INCOMPLETE: "true"
+    # PURGE_MIGRATED_ACTIVITY_IDS: "acitivityId,activityId2,activityId3,...,activityIdN"

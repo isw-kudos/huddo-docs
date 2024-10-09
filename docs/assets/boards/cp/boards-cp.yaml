@@ -56,8 +56,27 @@ user:
     CONNECTIONS_CLIENT_SECRET: [CLIENT_SECRET]
     CONNECTIONS_ADMINS: '["<ADMIN_EMAIL>"]'
 
+# This section is for deploying the optional Activity Migration chart
+# Please see doc at https://docs.huddo.com/boards/cp/migration/
 migration:
+  # configure access to the Connections Shared mount
+  sharedDrive:
+    # Replace with IP address for the NFS server
+    server: 192.168.10.1
+    # for example "/opt/HCL/Connections/data/shared" or "/nfs/data/shared"
+    path: /nfs/data/shared
+  # resources:
+  #   requests:
+  #     memory: 2048M
+  #   limits:
+  #     memory: 8192M
   env:
+    # NODE_OPTIONS: '--max-old-space-size=6144'
+    # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    TZ: Europe/London
+    # this can be found in the WebSphere ACTIVITIES_CONTENT_DIR variable
+    FILE_PATH_ACTIVITIES_CONTENT_STORE: /data/activities/content
+
     CONNECTIONS_ACTIVITIES_ADMIN_USERNAME: [ADMIN_USER]
     CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD: [ADMIN_PASSWORD]
     CONNECTIONS_DB_HOST: [DB_SERVER]
@@ -85,6 +104,10 @@ migration:
     # -------- Other options -------------
     # PROCESSING_PAGE_SIZE: 10
     # PROCESSING_LOG_EVERY: 50
-    # IMMEDIATELY_PROCESS_ALL: false
-    # COMPLETE_ACTIVITY_AFTER_MIGRATED: false
-    # CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED: false
+    # FIELDS_PAGE_SIZE: 3
+    # FIELDS_LOG_EVERY: 50
+    # IMMEDIATELY_PROCESS_ALL: "false"
+    # COMPLETE_ACTIVITY_AFTER_MIGRATED: "false"
+    # CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED: "false"
+    # PURGE_INCOMPLETE: "true"
+    # PURGE_MIGRATED_ACTIVITY_IDS: "acitivityId,activityId2,activityId3,...,activityIdN"
