@@ -13,10 +13,12 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 ### huddo-boards
 
 -   [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)
+-   [1.1.0](../assets/config/kubernetes/huddo-boards-1.1.0.tgz) - allow additionalPaths on huddo-app ingress
 
 ### huddo-boards-activity-migration
 
 -   [1.0.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)
+-   [1.2.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.2.0.tgz) - Fix resource limits
 
 ---
 
@@ -41,6 +43,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 
 -   [1.0.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz)
 -   [1.1.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.1.0.tgz) - CNX 8 fix for Mongo 5
+-   [1.2.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.2.0.tgz) - Fix resource limits
 
 ---
 

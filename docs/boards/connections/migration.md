@@ -87,7 +87,7 @@ migration:
 
 Please deploy the following chart with the same configuration `boards.yaml` file used to deploy the huddo-boards chart
 
-    helm upgrade huddo-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade huddo-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-activity-migration-1.2.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 > **Note:** the new `sharedDrive` parameters described above. You may also need to delete the previously name chart
 

@@ -41,23 +41,27 @@ This is because the port is already in use. We must change the default port whic
 
 1. Set the new port as per below (merging into existing)
 
-        global:
-          env:
-            ACTIVITY_MIGRATION_PORT: '2651'
+    ```yaml
+    global:
+      env:
+        ACTIVITY_MIGRATION_PORT: '2651'
 
-        migration:
-          balancer:
-            port: 2651
-            targetPort: 2651
+    migration:
+      balancer:
+        port: 2651
+        targetPort: 2651
+    ```
 
 1. Redeploy both the Boards helm chart and the Activity Migration charts with the updated yaml
 
 1. Confirm the pod start successfully or change to another random higher port if conflicts still occur.
 
+---
 
 ## Missing Long Descriptions
 
 This process will find and fix cards with long descriptions which were not imported correctly due to an incorrect HTTP 404 response from the HCL Connections API
+
 > Note: this requires Boards images with date tags on or after 2021-03-22
 
 ### Process Overview
@@ -95,6 +99,7 @@ This service will:
 1. Deploy the Activity Migration chart applicable for your deployment ([CP v3](../cp/migration/index.md) or [standalone Kubernetes v5](../connections/migration.md))
 1. Review the pod logs for the status of how many long description were replaced
 
+---
 
 ## JVM Heap Size OoM
 
@@ -102,20 +107,37 @@ When migrating very large activities sometimes you may encounter an OutOfMemory 
 
 ### Resolution
 
-In the migration YAML chart you can set following to reduce the amount of concurrent data accessed in memory:
+In the migration YAML chart you can set following to increase the amount of memory available to NodeJS by adding the environment variables in the migration YAML:
 
-    migration.env.PROCESSING_PAGE_SIZE: 1
-    migration.env.FIELDS_PAGE_SIZE: 1
+```yaml
+migration:
+  resources:
+    requests:
+      memory: 2048M
+    limits:
+      memory: 8192M
+  env:
+    NODE_OPTIONS: '--max-old-space-size=6144'
+```
+
+For example:
+
+![migration_memory](./migration_memory.png)
 
 Once these values are set you need to deploy the chart again to make them take effect.
 
-You will also need to increase the amount of memory available to NodeJS by adding the environment variables in the migration YAML:
-    
-    resources.requests.memory: 2024M
-    resources.limits.memory: 8192M
-    env.NODE_OPTIONS: "--max-old-space-size=8192"
+If the Memory issues persist, you can also reduce the amount of concurrent data accessed in memory by setting the following environment variables:
 
-![migration_memory](../../assets/connections/migration_memory.png)
+```yaml
+migration:
+  env:
+    PROCESSING_PAGE_SIZE: 1
+    FIELDS_PAGE_SIZE: 1
+```
+
+Once these values are set you need to deploy the chart again to make them take effect.
+
+---
 
 ## Activity stuck in pending migration
 
@@ -129,3 +151,7 @@ You are also able to delete already migrated activities by setting PURGE_MIGRATE
 
 Once these values are set you need to deploy the chart again to make them take effect. Please be aware to remove the "PURGE_MIGRATED_ACTIVITY_IDS" after it is done or any subsequent deployments/restarts will delete them again!
 
+If you want to purge all activities from the database, you can get the list of all activity ids from the [database](./mongo.md#connect-to-mongo) and set the PURGE_MIGRATED_ACTIVITY_IDS from this data.
+
+    use boards-app
+    db.nodes.distinct('providerID', { type: 'board' }).toString()
