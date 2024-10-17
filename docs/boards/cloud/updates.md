@@ -4,6 +4,29 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### October
+
+2024-10-17
+
+Improvements:
+
+-   add a card from the top of a list in board view
+-   create board from template - make this action more prominent, highlight and add as a floating action when viewing a template
+
+Fixes:
+
+-   close nav drawer when todos is clicked
+-   card details title textarea - make auto width with no resize to avoid overflow or small width issues
+-   assignment roles
+    -   role icon search issue
+    -   colours used based on colour scheme
+-   drag and drop
+    -   touch drag and view/list scroll issues
+    -   prevent dragging anchor and images when read only
+    -   prevent touch drag opening context menu
+    -   timeline - orange border for drag preview
+-   dependency arrow calculation fix for bordering cards
+
 ### September
 
 2024-09-30
