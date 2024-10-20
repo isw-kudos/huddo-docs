@@ -161,3 +161,18 @@ If you want to purge all activities from the database, you can get the list of a
 
     use boards-app
     db.nodes.distinct('providerID', { type: 'board' }).toString()
+
+## Oracle broken connection
+
+When migrating from Oracle to MongoDB, you may encounter the following error:
+
+```
+Error: NJS-500: connection to the Oracle Database was broken
+NJS-521: connection to host *************** port **** received end-of-file on communication channel
+```
+
+### Resolution
+
+As of `2024-02-14` we have moved to the `node-oracledb` in `thin client` mode which does not support Native Network Encryption (NNE). Please temporarily disable NNE in the Oracle server configuration to run the migration service.
+
+For more information, please see the [node-oracledb documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#native-network-encryption) and [this issue](https://github.com/oracle/node-oracledb/issues/1567).

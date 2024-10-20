@@ -80,6 +80,19 @@ Additional Properties for access to `PEOPLEDB` if separate host or authenticatio
 | ---------------------------- | --------- | -------------------------------- | ------------------------------------------------------------- |
 | `env.CONNECTIONS_DB_OPTIONS` | undefined | {"trustServerCertificate": true} | JSON encoded options for the MS SQL Server connection string. |
 
+### Oracle
+
+As of `2024-02-14` we have moved to the `node-oracledb` in `thin client` mode which does not support Native Network Encryption (NNE). Please temporarily disable NNE in the Oracle server configuration to run the migration service.
+
+If you have this enabled, it will cause the following error:
+
+````
+Error: NJS-500: connection to the Oracle Database was broken
+NJS-521: connection to host *************** port **** received end-of-file on communication channel```
+````
+
+For more information, please see the [node-oracledb documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#native-network-encryption) and [this issue](https://github.com/oracle/node-oracledb/issues/1567).
+
 ### Custom Persistent Volume
 
 The default chart values use an NFS mount. Below are examples custom configuration of the persisent volume definition for access to the Shared Drive using other methods.
