@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -1674,6 +1674,15 @@
   <a href="#mssql" class="md-nav__link">
     <span class="md-ellipsis">
       MSSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oracle
     </span>
   </a>
   
@@ -6104,6 +6113,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#oracle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oracle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#custom-persistent-volume" class="md-nav__link">
     <span class="md-ellipsis">
       Custom Persistent Volume
@@ -6426,6 +6444,13 @@
 </tr>
 </tbody>
 </table>
+<h3 id="oracle">Oracle<a class="headerlink" href="#oracle" title="Permanent link">&para;</a></h3>
+<p>As of <code>2024-02-14</code> we have moved to the <code>node-oracledb</code> in <code>thin client</code> mode which does not support Native Network Encryption (NNE). Please temporarily disable NNE in the Oracle server configuration to run the migration service.</p>
+<p>If you have this enabled, it will cause the following error:</p>
+<div class="highlight"><pre><span></span><code>Error: NJS-500: connection to the Oracle Database was broken
+NJS-521: connection to host *************** port **** received end-of-file on communication channel```
+</code></pre></div>
+<p>For more information, please see the <a href="https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#native-network-encryption">node-oracledb documentation</a> and <a href="https://github.com/oracle/node-oracledb/issues/1567">this issue</a>.</p>
 <h3 id="custom-persistent-volume">Custom Persistent Volume<a class="headerlink" href="#custom-persistent-volume" title="Permanent link">&para;</a></h3>
 <p>The default chart values use an NFS mount. Below are examples custom configuration of the persisent volume definition for access to the Shared Drive using other methods.</p>
 <div class="admonition note">
@@ -6523,7 +6548,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2024-10-09
+    2024-10-21
   </span>
 
     
