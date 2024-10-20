@@ -6337,8 +6337,12 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 <p>If the Memory issues persist, you can also reduce the amount of concurrent data accessed in memory by setting the following environment variables:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">migration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># number of activities to process simultaneously (keep low)</span>
 <span class="w">    </span><span class="nt">PROCESSING_PAGE_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="c1"># number of fields in an activity to process (file attachments, etc)</span>
 <span class="w">    </span><span class="nt">FIELDS_PAGE_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="c1"># number of items (tasks/entries/comments)  in each activity to process simultaneously</span>
+<span class="w">    </span><span class="nt">NODES_PAGE_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
 </code></pre></div>
 <p>Once these values are set you need to deploy the chart again to make them take effect.</p>
 <hr />
