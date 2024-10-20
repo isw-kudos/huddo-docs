@@ -137,8 +137,12 @@ If the Memory issues persist, you can also reduce the amount of concurrent data 
 ```yaml
 migration:
   env:
+    # number of activities to process simultaneously (keep low)
     PROCESSING_PAGE_SIZE: 1
+    # number of fields in an activity to process (file attachments, etc)
     FIELDS_PAGE_SIZE: 1
+    # number of items (tasks/entries/comments)  in each activity to process simultaneously
+    NODES_PAGE_SIZE: 50
 ```
 
 Once these values are set you need to deploy the chart again to make them take effect.
