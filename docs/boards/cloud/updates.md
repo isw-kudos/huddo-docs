@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### October
 
+2024-10-21
+
+Improvements:
+
+-   update to the latest version (v6.xx) of Material-UI
+-   improved flex layout of card icons and assignments + enable assigment avatar stacking
+
+Fixes:
+
+-   minor UI fixes in board and card detail views
+
 2024-10-17
 
 Improvements:
