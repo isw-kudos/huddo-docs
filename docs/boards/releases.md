@@ -44,6 +44,60 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-10-29
+
+Build #1155
+
+Features:
+
+-   PDF zoom/paging controls
+
+Improvements:
+
+-   update to the latest version (v6.xx) of Material-UI
+-   improved flex layout of card icons and assignments + enable assigment avatar stacking
+-   add a card from the top of a list in board view
+-   create board from template - make this action more prominent, highlight and add as a floating action when viewing a template
+-   Members and colours can be assigned to a card by dragging from the sidebar within the card options dialog view
+-   Tasks with a due date only (no start date) will now appear in the timeline view
+-   Minor style, position calculation and other improvements to the timeline view
+-   Allow caching of uploaded files based on unique etag
+-   Simplification of task/entry. Add icons to their create buttons to clearly differentiate. Allow setting dates and dependencies on entry, auto converts to task
+-   Simplification of dates. 'End Date' has been merged into 'Due Date'
+-   Styling of recent updates loading progress bar
+-   better grid spacing for board members and colours
+-   Rename entry to note for clarity
+
+Fixes:
+
+-   minor UI fixes in board and card detail views
+-   close nav drawer when todos is clicked
+-   card details title textarea - make auto width with no resize to avoid overflow or small width issues
+-   assignment roles
+    -   role icon search issue
+    -   colours used based on colour scheme
+-   drag and drop
+    -   prevent dragging anchor and images when read only
+    -   prevent touch drag opening context menu
+    -   timeline - orange border for drag preview
+-   dependency arrow calculation fix for bordering cards
+-   Themed card title appearing in the background in card details dialog
+-   Positioning of rich text toolbar when card title long
+-   Export Board with creator/updater null (data imported from Activities)
+-   Protection against assignments to user null (data imported from Activities)
+-   Dark mode styling of transfer ownership dialog
+-   issue with customisation of events (APP_LOGO_URL, BRAND_LOGO_URL, SOCIAL_LINKS)
+
+Activity Migration:
+
+-   performance - keep userId map in memory to avoid redis JSON.stringify/parse expense
+-   memory utilisation
+
+    -   stream files from disk to S3 in smaller/customisable chunks
+    -   release processed nodes from memory faster
+
+-   additional debug logging
+
 #### 2024-08-29
 
 Build #1112
