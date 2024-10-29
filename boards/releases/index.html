@@ -2413,6 +2413,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2024-10-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      2024-10-29
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2024-08-29" class="md-nav__link">
     <span class="md-ellipsis">
       2024-08-29
@@ -6320,6 +6329,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2024-10-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      2024-10-29
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2024-08-29" class="md-nav__link">
     <span class="md-ellipsis">
       2024-08-29
@@ -6659,6 +6677,66 @@ chown 1000:1000 -R .
 <p>Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.</p>
 </div>
 <h3 id="2024">2024<a class="headerlink" href="#2024" title="Permanent link">&para;</a></h3>
+<h4 id="2024-10-29">2024-10-29<a class="headerlink" href="#2024-10-29" title="Permanent link">&para;</a></h4>
+<p>Build #1155</p>
+<p>Features:</p>
+<ul>
+<li>PDF zoom/paging controls</li>
+</ul>
+<p>Improvements:</p>
+<ul>
+<li>update to the latest version (v6.xx) of Material-UI</li>
+<li>improved flex layout of card icons and assignments + enable assigment avatar stacking</li>
+<li>add a card from the top of a list in board view</li>
+<li>create board from template - make this action more prominent, highlight and add as a floating action when viewing a template</li>
+<li>Members and colours can be assigned to a card by dragging from the sidebar within the card options dialog view</li>
+<li>Tasks with a due date only (no start date) will now appear in the timeline view</li>
+<li>Minor style, position calculation and other improvements to the timeline view</li>
+<li>Allow caching of uploaded files based on unique etag</li>
+<li>Simplification of task/entry. Add icons to their create buttons to clearly differentiate. Allow setting dates and dependencies on entry, auto converts to task</li>
+<li>Simplification of dates. 'End Date' has been merged into 'Due Date'</li>
+<li>Styling of recent updates loading progress bar</li>
+<li>better grid spacing for board members and colours</li>
+<li>Rename entry to note for clarity</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>minor UI fixes in board and card detail views</li>
+<li>close nav drawer when todos is clicked</li>
+<li>card details title textarea - make auto width with no resize to avoid overflow or small width issues</li>
+<li>assignment roles<ul>
+<li>role icon search issue</li>
+<li>colours used based on colour scheme</li>
+</ul>
+</li>
+<li>drag and drop<ul>
+<li>prevent dragging anchor and images when read only</li>
+<li>prevent touch drag opening context menu</li>
+<li>timeline - orange border for drag preview</li>
+</ul>
+</li>
+<li>dependency arrow calculation fix for bordering cards</li>
+<li>Themed card title appearing in the background in card details dialog</li>
+<li>Positioning of rich text toolbar when card title long</li>
+<li>Export Board with creator/updater null (data imported from Activities)</li>
+<li>Protection against assignments to user null (data imported from Activities)</li>
+<li>Dark mode styling of transfer ownership dialog</li>
+<li>issue with customisation of events (APP_LOGO_URL, BRAND_LOGO_URL, SOCIAL_LINKS)</li>
+</ul>
+<p>Activity Migration:</p>
+<ul>
+<li>performance - keep userId map in memory to avoid redis JSON.stringify/parse expense</li>
+<li>
+<p>memory utilisation</p>
+<ul>
+<li>stream files from disk to S3 in smaller/customisable chunks</li>
+<li>release processed nodes from memory faster</li>
+</ul>
+</li>
+<li>
+<p>additional debug logging</p>
+</li>
+</ul>
 <h4 id="2024-08-29">2024-08-29<a class="headerlink" href="#2024-08-29" title="Permanent link">&para;</a></h4>
 <p>Build #1112</p>
 <p>Features:</p>
@@ -7362,7 +7440,7 @@ chown 1000:1000 -R .
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2024-08-29
+    2024-10-29
   </span>
 
     
