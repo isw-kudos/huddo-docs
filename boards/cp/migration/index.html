@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -1649,7 +1649,35 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Process Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Drive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-and-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database and Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database and Processing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1688,10 +1716,24 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#custom-persistent-volume" class="md-nav__link">
+  <a href="#performance-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom Persistent Volume
+      Performance Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purge
     </span>
   </a>
   
@@ -1699,6 +1741,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-persistent-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Persistent Volume
+    </span>
+  </a>
   
 </li>
       
@@ -6082,7 +6133,35 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Process Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Drive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-and-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database and Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database and Processing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6121,10 +6200,24 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#custom-persistent-volume" class="md-nav__link">
+  <a href="#performance-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom Persistent Volume
+      Performance Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purge
     </span>
   </a>
   
@@ -6132,6 +6225,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-persistent-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Persistent Volume
+    </span>
+  </a>
   
 </li>
       
@@ -6205,7 +6307,9 @@
 <li>write Boards data into the Component Pack mongo database</li>
 <li>write file attachments into S3 storage</li>
 </ol>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
 <p>Ensure you have updated the following variables as applicable in your <code>boards-cp.yaml</code> file downloaded previously</p>
+<h3 id="shared-drive">Shared Drive<a class="headerlink" href="#shared-drive" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -6260,99 +6364,106 @@
 <td>See <a href="#custom-persistent-volume">below</a></td>
 <td>Using a fully custom spec - e.g. FlexVolume or hostPath</td>
 </tr>
+</tbody>
+</table>
+<h3 id="database-and-processing">Database and Processing<a class="headerlink" href="#database-and-processing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
 <tr>
-<td><code>env.FILE_PATH_ACTIVITIES_CONTENT_STORE</code></td>
+<th>Name</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FILE_PATH_ACTIVITIES_CONTENT_STORE</code></td>
 <td><code>/data/activities/content</code></td>
-<td>Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</br>Ensure you set the IP and path for the NFS volume mount.</td>
+<td>Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data</td>
 </tr>
 <tr>
-<td><code>env.API_GATEWAY</code></td>
+<td><code>API_GATEWAY</code></td>
 <td><code>https://[CONNECTIONS_URL]/api-boards</code></td>
 <td>URL of the Boards API.</br>Used by files attached to a board. URL.</td>
 </tr>
 <tr>
-<td><code>env.TZ</code></td>
+<td><code>TZ</code></td>
 <td><code>Europe/London</code> or <code>Australia/Hobart</code> etc</td>
 <td>'Local' Timezone</br>Used for date interpretation. See full <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">list of supported timezones</a></td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_ACTIVITIES_ADMIN_USERNAME</code></td>
+<td><code>CONNECTIONS_ACTIVITIES_ADMIN_USERNAME</code></td>
 <td><code>connectionsadmin</code></td>
 <td>Credentials for user with <code>admin</code> role </br>on the Activities application.</br>See <code>ISC</code> =&gt; <code>Applications</code> =&gt; </br><code>Activities</code> =&gt; </br><code>Security role to user mapping</code></td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD</code></td>
+<td><code>CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD</code></td>
 <td><code>adminpassword</code></td>
 <td>Password for the Activities administrator</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_TYPE</code></td>
+<td><code>CONNECTIONS_DB_TYPE</code></td>
 <td><code>db2</code> or <code>mssql</code> or <code>oracle</code></td>
 <td>SQL database type hosting Activities.</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_HOST</code></td>
+<td><code>CONNECTIONS_DB_HOST</code></td>
 <td><code>dbserver.company.com</code></td>
 <td>SQL Server hostname hostname</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_PORT</code></td>
+<td><code>CONNECTIONS_DB_PORT</code></td>
 <td><code>50000</code> or <code>1433</code> or <code>1531</code></td>
 <td>SQL Server connection port</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_USER</code></td>
+<td><code>CONNECTIONS_DB_USER</code></td>
 <td><code>dbuser</code></td>
 <td>SQL Server user name</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_PASSWORD</code></td>
+<td><code>CONNECTIONS_DB_PASSWORD</code></td>
 <td><code>dbpassword</code></td>
 <td>SQL Server password password</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_SID</code></td>
+<td><code>CONNECTIONS_DB_SID</code></td>
 <td><code>DATABASE</code></td>
 <td>SQL Server SID</br><strong>Note: applicable to Oracle</strong></td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_DOMAIN</code></td>
+<td><code>CONNECTIONS_DB_DOMAIN</code></td>
 <td><code>domain</code></td>
 <td>SQL Server connection string</br><strong>Note: applicable to Microsoft SQL</strong></td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_DB_CONNECT_STRING</code></td>
+<td><code>CONNECTIONS_DB_CONNECT_STRING</code></td>
 <td><code>HOSTNAME=&lt;host&gt;;PROTOCOL=...</code> or <code>&lt;host&gt;:&lt;port&gt;/&lt;sid&gt;</code></td>
 <td>SQL Server connection string</br><strong>Note: Optional</br>Default is built from other values.</br>Only applicable to DB2 and Oracle</strong></td>
 </tr>
 <tr>
-<td><code>env.PROCESSING_PAGE_SIZE</code></td>
-<td><code>10</code> (default)</td>
-<td>Number of Activities to process </br>simultaneously. Value must not exceed </br>the connection pool size supported </br>by the SQL database</td>
-</tr>
-<tr>
-<td><code>env.PROCESSING_LOG_EVERY</code></td>
-<td><code>50</code> (default)</td>
-<td>The migration process logs every 50 Activities completed</td>
-</tr>
-<tr>
-<td><code>env.IMMEDIATELY_PROCESS_ALL</code></td>
+<td><code>IMMEDIATELY_PROCESS_ALL</code></td>
 <td><code>false</code> (default)</td>
 <td>Process ALL Activities on service startup.</td>
 </tr>
 <tr>
-<td><code>env.COMPLETE_ACTIVITY_AFTER_MIGRATED</code></td>
+<td><code>IMMEDIATELY_PROCESS_ACTIVITY_IDS</code></td>
+<td><code>e11dc638-2146-49e3-9d0e-dacd7e3150f0,e11dc638-2146-49e3-9d0e-dacd7e3150f1</code></td>
+<td>Comma separated list of Activity IDs to process immediately. Useful if you want to run in bulk but not ALL Activities.</td>
+</tr>
+<tr>
+<td><code>COMPLETE_ACTIVITY_AFTER_MIGRATED</code></td>
 <td><code>false</code></td>
 <td>Mark the old Activity data as complete</td>
 </tr>
 <tr>
-<td><code>env.CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED</code></td>
+<td><code>CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED</code></td>
 <td><code>false</code></td>
 <td>Create link to new Board in old Activity</td>
 </tr>
 </tbody>
 </table>
-<h3 id="custom-db-names">Custom DB Names<a class="headerlink" href="#custom-db-names" title="Permanent link">&para;</a></h3>
+<h4 id="custom-db-names">Custom DB Names<a class="headerlink" href="#custom-db-names" title="Permanent link">&para;</a></h4>
 <p>If you have a custom database names for either the Activities or Profiles database, you can override the defaults using the following variables:</p>
 <table>
 <thead>
@@ -6364,18 +6475,18 @@
 </thead>
 <tbody>
 <tr>
-<td><code>env.CONNECTIONS_DB_ACTIVITIES</code></td>
+<td><code>CONNECTIONS_DB_ACTIVITIES</code></td>
 <td><code>OPNACT</code></td>
 <td>Activities database</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_PEOPLEDB_DATABASE</code></td>
+<td><code>CONNECTIONS_PEOPLEDB_DATABASE</code></td>
 <td><code>PEOPLEDB</code></td>
 <td>Profiles database</td>
 </tr>
 </tbody>
 </table>
-<h3 id="peopledb-acl">PeopleDB ACL<a class="headerlink" href="#peopledb-acl" title="Permanent link">&para;</a></h3>
+<h4 id="peopledb-acl">PeopleDB ACL<a class="headerlink" href="#peopledb-acl" title="Permanent link">&para;</a></h4>
 <p>Additional Properties for access to <code>PEOPLEDB</code> if separate host or authentication.</p>
 <table>
 <thead>
@@ -6388,70 +6499,139 @@
 </thead>
 <tbody>
 <tr>
-<td><code>env.CONNECTIONS_PEOPLEDB_HOST</code></td>
-<td><code>env.CONNECTIONS_DB_HOST</code></td>
+<td><code>CONNECTIONS_PEOPLEDB_HOST</code></td>
+<td><code>CONNECTIONS_DB_HOST</code></td>
 <td><code>dbserver.company.com</code></td>
 <td>SQL Server hostname</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_PEOPLEDB_PORT</code></td>
-<td><code>env.CONNECTIONS_DB_PORT</code></td>
+<td><code>CONNECTIONS_PEOPLEDB_PORT</code></td>
+<td><code>CONNECTIONS_DB_PORT</code></td>
 <td><code>50000</code> or <code>1433</code> or <code>1531</code></td>
 <td>SQL Server connection port</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_PEOPLEDB_SID</code></td>
-<td><code>env.CONNECTIONS_DB_SID</code></td>
+<td><code>CONNECTIONS_PEOPLEDB_SID</code></td>
+<td><code>CONNECTIONS_DB_SID</code></td>
 <td><code>DATABASE</code></td>
 <td>SQL Server SID (for Oracle)</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_PEOPLEDB_USER</code></td>
-<td><code>env.CONNECTIONS_DB_USER</code></td>
+<td><code>CONNECTIONS_PEOPLEDB_USER</code></td>
+<td><code>CONNECTIONS_DB_USER</code></td>
 <td><code>dbuser</code></td>
 <td>SQL Server user name</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_PEOPLEDB_PASSWORD</code></td>
-<td><code>env.CONNECTIONS_DB_PASSWORD</code></td>
+<td><code>CONNECTIONS_PEOPLEDB_PASSWORD</code></td>
+<td><code>CONNECTIONS_DB_PASSWORD</code></td>
 <td><code>dbpassword</code></td>
 <td>SQL Server user password</td>
 </tr>
 <tr>
-<td><code>env.CONNECTIONS_PEOPLEDB_CONNECT_STRING</code></td>
-<td><code>env.CONNECTIONS_DB_CONNECT_STRING</code></td>
+<td><code>CONNECTIONS_PEOPLEDB_CONNECT_STRING</code></td>
+<td><code>CONNECTIONS_DB_CONNECT_STRING</code></td>
 <td><code>HOSTNAME=&lt;host&gt;;PROTOCOL=...</code> or <code>&lt;host&gt;:&lt;port&gt;/&lt;sid&gt;</code></td>
 <td>SQL Server connection string</td>
 </tr>
 </tbody>
 </table>
-<h3 id="mssql">MSSQL<a class="headerlink" href="#mssql" title="Permanent link">&para;</a></h3>
+<h4 id="mssql">MSSQL<a class="headerlink" href="#mssql" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
 <th>Variable</th>
-<th>Default</th>
 <th>Example</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>env.CONNECTIONS_DB_OPTIONS</code></td>
-<td>undefined</td>
+<td><code>CONNECTIONS_DB_OPTIONS</code></td>
 <td>{"trustServerCertificate": true}</td>
 <td>JSON encoded options for the MS SQL Server connection string.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="oracle">Oracle<a class="headerlink" href="#oracle" title="Permanent link">&para;</a></h3>
+<h4 id="oracle">Oracle<a class="headerlink" href="#oracle" title="Permanent link">&para;</a></h4>
 <p>As of <code>2024-02-14</code> we have moved to the <code>node-oracledb</code> in <code>thin client</code> mode which does not support Native Network Encryption (NNE). Please temporarily disable NNE in the Oracle server configuration to run the migration service.</p>
 <p>If you have this enabled, it will cause the following error:</p>
 <div class="highlight"><pre><span></span><code>Error: NJS-500: connection to the Oracle Database was broken
 NJS-521: connection to host *************** port **** received end-of-file on communication channel```
 </code></pre></div>
 <p>For more information, please see the <a href="https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#native-network-encryption">node-oracledb documentation</a> and <a href="https://github.com/oracle/node-oracledb/issues/1567">this issue</a>.</p>
-<h3 id="custom-persistent-volume">Custom Persistent Volume<a class="headerlink" href="#custom-persistent-volume" title="Permanent link">&para;</a></h3>
+<h3 id="performance-tuning">Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permanent link">&para;</a></h3>
+<p>Below are supported performance tuning options.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PROCESSING_PAGE_SIZE</code></td>
+<td><code>5</code></td>
+<td>Number of Activities to process simultaneously.</td>
+</tr>
+<tr>
+<td><code>PROCESSING_LOG_EVERY</code></td>
+<td><code>50</code></td>
+<td>The migration process logs every 50 Activities completed</td>
+</tr>
+<tr>
+<td><code>FIELDS_PAGE_SIZE</code></td>
+<td><code>10</code></td>
+<td>Number of fields in an Activity to process simultaneously.</br>Dates, File attachments, etc.</td>
+</tr>
+<tr>
+<td><code>FIELDS_LOG_EVERY</code></td>
+<td><code>50</code></td>
+<td>The migration process logs every 50 fields completed</td>
+</tr>
+<tr>
+<td><code>NODES_PAGE_SIZE</code></td>
+<td><code>50</code></td>
+<td>Number of nodes in an Activity to process simultaneously.</td>
+</tr>
+<tr>
+<td><code>FILE_READ_STREAM_MB</code></td>
+<td><code>5</code></td>
+<td>The migration process reads files from the DB.</br>This is the value it is allowed to get ahead of the write in MB.</td>
+</tr>
+<tr>
+<td><code>FILE_WRITE_CHUNK_MB</code></td>
+<td><code>5</code></td>
+<td>The migration process writes to S3.</br>It batches the data in chunks in Memory. Minimum of 5MB.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="purge">Purge<a class="headerlink" href="#purge" title="Permanent link">&para;</a></h3>
+<p>If you encounter issues with certain Activities, you can purge them from the database re-run the migration process.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PURGE_MIGRATED_ACTIVITY_IDS</code></td>
+<td><code>e11dc638-2146-49e3-9d0e-dacd7e3150f0,e11dc638-2146-49e3-9d0e-dacd7e3150f1</code></td>
+<td>Comma separated list of Activity IDs to purge from the database. This is useful if you want to remove previously migrated Activities to re-run the migration process.</td>
+</tr>
+<tr>
+<td><code>PURGE_INCOMPLETE</code></td>
+<td><code>false</code> or <code>true</code></td>
+<td>Purge any Activities that are marked have been marked as started but are incomplete.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-persistent-volume">Custom Persistent Volume<a class="headerlink" href="#custom-persistent-volume" title="Permanent link">&para;</a></h2>
 <p>The default chart values use an NFS mount. Below are examples custom configuration of the persisent volume definition for access to the Shared Drive using other methods.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6548,7 +6728,7 @@ NJS-521: connection to host *************** port **** received end-of-file on co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2024-10-21
+    2024-11-01
   </span>
 
     
