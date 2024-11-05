@@ -44,7 +44,7 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | ---------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `FILE_PATH_ACTIVITIES_CONTENT_STORE`     | `/data/activities/content`                                                  | Path of the Activities content store relative to the Connections shared drive.</br>Must start with /data as the Connections shared drive is mounted at /data            |
 | `API_GATEWAY`                            | `https://[CONNECTIONS_URL]/api-boards`                                      | URL of the Boards API.</br>Used by files attached to a board. URL.                                                                                                      |
-| `TZ`                                     | `Europe/London` or `Australia/Hobart` etc                                   | 'Local' Timezone</br>Used for date interpretation. See full [list of supported timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)                 |
+| `TZ`                                     | `Europe/London` or</br>`Australia/Hobart` etc                               | 'Local' Timezone</br>Used for date interpretation. See full [list of supported timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)                 |
 | `CONNECTIONS_ACTIVITIES_ADMIN_USERNAME`  | `connectionsadmin`                                                          | Credentials for user with `admin` role </br>on the Activities application.</br>See `ISC` => `Applications` => </br>`Activities` => </br>`Security role to user mapping` |
 | `CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD`  | `adminpassword`                                                             | Password for the Activities administrator                                                                                                                               |
 | `CONNECTIONS_DB_TYPE`                    | `db2` or `mssql` or `oracle`                                                | SQL database type hosting Activities.                                                                                                                                   |
@@ -54,7 +54,7 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 | `CONNECTIONS_DB_PASSWORD`                | `dbpassword`                                                                | SQL Server password password                                                                                                                                            |
 | `CONNECTIONS_DB_SID`                     | `DATABASE`                                                                  | SQL Server SID</br>**Note: applicable to Oracle**                                                                                                                       |
 | `CONNECTIONS_DB_DOMAIN`                  | `domain`                                                                    | SQL Server connection string</br>**Note: applicable to Microsoft SQL**                                                                                                  |
-| `CONNECTIONS_DB_CONNECT_STRING`          | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>`                     | SQL Server connection string</br>**Note: Optional</br>Default is built from other values.</br>Only applicable to DB2 and Oracle**                                       |
+| `CONNECTIONS_DB_CONNECT_STRING`          | `HOSTNAME=<host>;PROTOCOL=...`</br>or `<host>:<port>/<sid>`                 | SQL Server connection string</br>**Note: Optional</br>Default is built from other values.</br>Only applicable to DB2 and Oracle**                                       |
 | `IMMEDIATELY_PROCESS_ALL`                | `false` (default)                                                           | Process ALL Activities on service startup.                                                                                                                              |
 | `IMMEDIATELY_PROCESS_ACTIVITY_IDS`       | `e11dc638-2146-49e3-9d0e-dacd7e3150f0,e11dc638-2146-49e3-9d0e-dacd7e3150f1` | Comma separated list of Activity IDs to process immediately. Useful if you want to run in bulk but not ALL Activities.                                                  |
 | `COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                                     | Mark the old Activity data as complete                                                                                                                                  |
@@ -73,14 +73,14 @@ If you have a custom database names for either the Activities or Profiles databa
 
 Additional Properties for access to `PEOPLEDB` if separate host or authentication.
 
-| Variable                              | Default                         | Example                                                 | Description                  |
-| ------------------------------------- | ------------------------------- | ------------------------------------------------------- | ---------------------------- |
-| `CONNECTIONS_PEOPLEDB_HOST`           | `CONNECTIONS_DB_HOST`           | `dbserver.company.com`                                  | SQL Server hostname          |
-| `CONNECTIONS_PEOPLEDB_PORT`           | `CONNECTIONS_DB_PORT`           | `50000` or `1433` or `1531`                             | SQL Server connection port   |
-| `CONNECTIONS_PEOPLEDB_SID`            | `CONNECTIONS_DB_SID`            | `DATABASE`                                              | SQL Server SID (for Oracle)  |
-| `CONNECTIONS_PEOPLEDB_USER`           | `CONNECTIONS_DB_USER`           | `dbuser`                                                | SQL Server user name         |
-| `CONNECTIONS_PEOPLEDB_PASSWORD`       | `CONNECTIONS_DB_PASSWORD`       | `dbpassword`                                            | SQL Server user password     |
-| `CONNECTIONS_PEOPLEDB_CONNECT_STRING` | `CONNECTIONS_DB_CONNECT_STRING` | `HOSTNAME=<host>;PROTOCOL=...` or `<host>:<port>/<sid>` | SQL Server connection string |
+| Variable                              | Default                         | Example                                                     | Description                  |
+| ------------------------------------- | ------------------------------- | ----------------------------------------------------------- | ---------------------------- |
+| `CONNECTIONS_PEOPLEDB_HOST`           | `CONNECTIONS_DB_HOST`           | `dbserver.company.com`                                      | SQL Server hostname          |
+| `CONNECTIONS_PEOPLEDB_PORT`           | `CONNECTIONS_DB_PORT`           | `50000` or `1433` or `1531`                                 | SQL Server connection port   |
+| `CONNECTIONS_PEOPLEDB_SID`            | `CONNECTIONS_DB_SID`            | `DATABASE`                                                  | SQL Server SID (for Oracle)  |
+| `CONNECTIONS_PEOPLEDB_USER`           | `CONNECTIONS_DB_USER`           | `dbuser`                                                    | SQL Server user name         |
+| `CONNECTIONS_PEOPLEDB_PASSWORD`       | `CONNECTIONS_DB_PASSWORD`       | `dbpassword`                                                | SQL Server user password     |
+| `CONNECTIONS_PEOPLEDB_CONNECT_STRING` | `CONNECTIONS_DB_CONNECT_STRING` | `HOSTNAME=<host>;PROTOCOL=...`</br>or `<host>:<port>/<sid>` | SQL Server connection string |
 
 #### MSSQL
 

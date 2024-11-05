@@ -17,6 +17,12 @@ nav.md-tabs {
   overflow: hidden;
 }
 
+@media screen and (min-width: 1220px) {
+  .md-grid {
+    max-width: 70rem;
+  }
+}
+
 /* .md-header, nav.md-tabs {
   background-color: var(--md-primary-fg-color--dark);
   color: white;
