@@ -44,6 +44,23 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-11-05
+
+Build #1160
+
+Improvements:
+
+-   Upgrade socket.io to latest, change to default polling then upgrade to websockets, add more backend error logging, allow custom headers
+-   Better style support when using extensions injecting dom elements (eg. grammerly)
+-   Accessibility: use mui button groups for mindmap layout controls (hover/focus styles), add outline on focus to colour labels and member icons, fix padding and add focus outline to complete button
+-   Kanban lists - move padding down a level so scrollbar is right aligned
+
+Migration:
+
+-   UI - Stop migration pollingh on tab blur, restart on focus
+-   Improved detection speed of already processed Activities (DB query selection, new index, hashset comparison)
+-   Environment variable to migrate Activities by ID (`IMMEDIATELY_PROCESS_ACTIVITY_IDS`)
+
 #### 2024-10-29
 
 Build #1155

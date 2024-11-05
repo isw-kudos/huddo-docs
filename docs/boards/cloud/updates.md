@@ -6,6 +6,15 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### October
 
+2024-11-05
+
+Improvements:
+
+-   Upgrade socket.io to latest, change to default polling then upgrade to websockets, add more backend error logging, allow custom headers
+-   Better style support when using extensions injecting dom elements (eg. grammerly)
+-   Accessibility: use mui button groups for mindmap layout controls (hover/focus styles), add outline on focus to colour labels and member icons, fix padding and add focus outline to complete button
+-   Kanban lists - move padding down a level so scrollbar is right aligned
+
 2024-10-21
 
 Improvements:
