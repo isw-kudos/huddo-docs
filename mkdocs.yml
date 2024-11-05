@@ -43,6 +43,7 @@ nav:
           - Configuration: boards/env/common.md
           - Compatibility: boards/compatibility.md
           - Customise Emails: boards/env/notifications.md
+          - Customise Help Links: boards/env/help-links.md
           - Helm Charts: boards/helm-charts.md
           - Proxy (nginx): boards/proxy/nginx.md
           - Integrations:

@@ -79,6 +79,10 @@ Download our [config file](../../assets/config/kubernetes/boards-cp.yaml) and up
 
 Are [detailed here](../env/common.md).
 
+**Customising Help menu links**:
+
+The help menu links can be [customised](../env/help-links.md).
+
 **Customising Boards notifications**:
 
 Some elements of the Boards notifications that are sent out [can be customised](../env/notifications.md).

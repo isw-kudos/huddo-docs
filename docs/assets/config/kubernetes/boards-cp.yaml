@@ -25,6 +25,10 @@ webfront:
     hosts:
       - "connections.example.com"
       # - "*.example.com"
+  env:
+    # DOCUMENTATION_URL: https://docs.huddo.com/boards/howto/knowledgebase/
+    # PRODUCT_INFO_URL: https://huddo.com/boards
+    # SUPPORT_EMAIL: support@example.com
 
 events:
   env:
