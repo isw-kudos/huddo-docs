@@ -6700,13 +6700,13 @@ chown 1000:1000 -R .
 <p>Improvements:</p>
 <ul>
 <li>Upgrade socket.io to latest, change to default polling then upgrade to websockets, add more backend error logging, allow custom headers</li>
-<li>Better style support when using extensions injecting dom elements (eg. grammerly)</li>
+<li>Better style support when using extensions injecting dom elements (eg. grammarly)</li>
 <li>Accessibility: use mui button groups for mindmap layout controls (hover/focus styles), add outline on focus to colour labels and member icons, fix padding and add focus outline to complete button</li>
 <li>Kanban lists - move padding down a level so scrollbar is right aligned</li>
 </ul>
 <p>Migration:</p>
 <ul>
-<li>UI - Stop migration pollingh on tab blur, restart on focus</li>
+<li>UI - Stop migration polling on tab blur, restart on focus</li>
 <li>Improved detection speed of already processed Activities (DB query selection, new index, hashset comparison)</li>
 <li>Environment variable to migrate Activities by ID (<code>IMMEDIATELY_PROCESS_ACTIVITY_IDS</code>)</li>
 </ul>
