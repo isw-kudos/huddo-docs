@@ -55,7 +55,7 @@ Features:
 Improvements:
 
 -   New 'Completed' Boards tab, split from the archive
--   Limit Completed/Archived to last modified 100 Boards)
+-   Loading speed of Completed/Archived - recently modified
 
 Fixes:
 
