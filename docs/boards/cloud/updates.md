@@ -4,7 +4,24 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
-### October
+### November
+
+2024-11-14
+
+Features:
+
+-   My Todos Timeline - show your tasks for each of your Boards in one central, visual place
+
+Improvements:
+
+-   New 'Completed' Boards tab, split from the archive
+-   Limit Completed/Archived to last modified 100 Boards)
+
+Fixes:
+
+-   Issue where creating Board tile labels overwrites the last label
+-   CNX8 header integration: notification popover issue
+-   CNX8 header integration: positioning of create board floating button overlapping right menu
 
 2024-11-05
 
@@ -14,6 +31,8 @@ Improvements:
 -   Better style support when using extensions injecting dom elements (eg. grammerly)
 -   Accessibility: use mui button groups for mindmap layout controls (hover/focus styles), add outline on focus to colour labels and member icons, fix padding and add focus outline to complete button
 -   Kanban lists - move padding down a level so scrollbar is right aligned
+
+### October
 
 2024-10-21
 
