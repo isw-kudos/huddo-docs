@@ -44,6 +44,30 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-11-14
+
+Build #1165
+
+Features:
+
+-   My Todos Timeline - show your tasks for each of your Boards in one central, visual place
+
+Improvements:
+
+-   New 'Completed' Boards tab, split from the archive
+-   Limit Completed/Archived to last modified 100 Boards)
+
+Fixes:
+
+-   Issue where creating Board tile labels overwrites the last label
+-   CNX8 header integration: notification popover issue
+-   CNX8 header integration: positioning of create board floating button overlapping right menu
+-   Allow upgrading external users to full membership
+
+Activity Migration:
+
+-   Prevent duplicate key exception encountered with very old data for two public members in same Activity
+
 #### 2024-11-05
 
 Build #1160
