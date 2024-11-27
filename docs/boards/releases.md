@@ -44,6 +44,15 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-11-28
+
+Build #1171
+
+Fixes:
+
+-   Regression bug: direct links to cards (e.g. in emails) renders blank screen
+-   Upload to MSGraph 'My' files
+
 #### 2024-11-14
 
 Build #1165

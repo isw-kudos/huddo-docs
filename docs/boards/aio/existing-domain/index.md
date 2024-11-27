@@ -44,7 +44,7 @@ Update the following variables in the `.env` file:
 
 | Variable            | Example               | Description                                                     |
 | ------------------- | --------------------- | --------------------------------------------------------------- |
-| `imageTag`          | `2024-08-29`          | [Date of our latest release](../../releases.md)                 |
+| `imageTag`          | `2024-11-28`          | [Date of our latest release](../../releases.md)                 |
 | `domain`            | `company.example.com` | URL of your environment                                         |
 | `smtpHost`          | `smtp.example.com`    | Email server                                                    |
 | `smtpUsername`      | `user123`             | Email server username                                           |

@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### November
 
+2024-11-20
+
+Fixes:
+
+-   Regression bug: direct links to cards (e.g. in emails) renders blank screen
+-   Upload to MSGraph 'My' files
+
 2024-11-14
 
 Features:
