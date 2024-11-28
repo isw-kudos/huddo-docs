@@ -52,6 +52,7 @@ Fixes:
 
 -   Regression bug: direct links to cards (e.g. in emails) renders blank screen
 -   Upload to MSGraph 'My' files
+-   Issue with text color in rich text editor
 
 #### 2024-11-14
 
