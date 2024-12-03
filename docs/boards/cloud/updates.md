@@ -4,7 +4,22 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2024
 
+### December
+
+2024-12-03
+
+Fixes:
+
+-   Issue where card history and comments were not updating when switching between cards/sub cards
+
 ### November
+
+2024-11-29
+
+Improvements:
+
+-   Add locale support/text translations for date pickers
+-   Minor DE translation improvements
 
 2024-11-20
 
