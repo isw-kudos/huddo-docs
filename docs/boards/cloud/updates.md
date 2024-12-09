@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2024-12-09
+
+Fixes:
+
+-   Personal iCal feed, include cards with only due date (no start date)
+
 2024-12-03
 
 Fixes:
