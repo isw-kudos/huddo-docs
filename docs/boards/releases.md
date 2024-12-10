@@ -46,6 +46,8 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 #### 2024-12-10
 
+Build #1177
+
 Improvements:
 
 -   Add locale support/text translations for date pickers
