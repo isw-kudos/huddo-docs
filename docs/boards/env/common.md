@@ -85,13 +85,14 @@ Please set the following environment variables in your config file as required
 
 Please follow the steps in the [Microsoft Active Directory Federation Service](../msad/index.md) guide to configure your AD FS server, and the Huddo Boards application group.
 
-| Key                                | Description                   | Example / Default                                 |
-| ---------------------------------- | ----------------------------- | ------------------------------------------------- |
-| `user.env.MSAD_NAME`               | Name on the login button      | `Microsoft AD`                                    |
-| `user.env.MSAD_FS_URL`             | AD FS server URL              | `https://adfs.example.com`                        |
-| `user.env.MSAD_CLIENT_ID`          | AD FS client id               |                                                   |
-| `user.env.MSAD_CLIENT_SECRET`      | AD FS client secret           |                                                   |
-| `user.env.MSAD_LDAP_URL`           | URL of LDAP server            | `ldap://ad.example.com`                           |
-| `user.env.MSAD_LDAP_BASE_DN`       | Base DN for LDAP search       | `DC=example,DC=com`                               |
-| `user.env.MSAD_LDAP_BIND_DN`       | Bind DN for LDAP search       | `CN=Boards,OU=Service Accounts,DC=example,DC=com` |
-| `user.env.MSAD_LDAP_BIND_PASSWORD` | Bind password for LDAP search |                                                   |
+| Key                                | Description                             | Example / Default                                 |
+| ---------------------------------- | --------------------------------------- | ------------------------------------------------- |
+| `user.env.MSAD_NAME`               | Name on the login button                | `Microsoft AD`                                    |
+| `user.env.MSAD_ADMINS`             | Email/ID of users to grant admin access | `["admin@example.com", "admin2@example.com"]`     |
+| `user.env.MSAD_FS_URL`             | AD FS server URL                        | `https://adfs.example.com`                        |
+| `user.env.MSAD_CLIENT_ID`          | AD FS client id                         |                                                   |
+| `user.env.MSAD_CLIENT_SECRET`      | AD FS client secret                     |                                                   |
+| `user.env.MSAD_LDAP_URL`           | URL of LDAP server                      | `ldap://ad.example.com`                           |
+| `user.env.MSAD_LDAP_BASE_DN`       | Base DN for LDAP search                 | `DC=example,DC=com`                               |
+| `user.env.MSAD_LDAP_BIND_DN`       | Bind DN for LDAP search                 | `CN=Boards,OU=Service Accounts,DC=example,DC=com` |
+| `user.env.MSAD_LDAP_BIND_PASSWORD` | Bind password for LDAP search           |                                                   |

@@ -44,6 +44,22 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-12-10
+
+Improvements:
+
+-   Add locale support/text translations for date pickers
+-   Minor DE translation improvements
+-   Support [disabling of the Resource links](./env/notifications.md#resource-links) in the email footer
+-   Support [admin configuration for MSAD](./env/common.md#microsoft-active-directory-ad)
+
+Fixes:
+
+-   Personal iCal feed, include cards with only due date (no start date)
+-   Issue where card history and comments were not updating when switching between cards/sub cards
+-   Fix performance issue where Community Members were expanded too frequently
+-   Authentication issue in micro apps
+
 #### 2024-11-28
 
 Build #1171

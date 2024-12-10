@@ -24,12 +24,13 @@ Once configured, users will be able to login to Boards using their Microsoft AD 
 
 The steps above will provide you with the following information that you will need to configure the **user service** in Boards:
 
-| Environment Variable | Description                     | Example / Default          |
-| -------------------- | ------------------------------- | -------------------------- |
-| `MSAD_NAME`          | Name on the login button        | `Microsoft AD`             |
-| `MSAD_FS_URL`        | URL of ADFS server              | `https://adfs.example.com` |
-| `MSAD_CLIENT_ID`     | Client id from Step 2 above     |                            |
-| `MSAD_CLIENT_SECRET` | Client secret from Step 2 above |                            |
+| Environment Variable | Description                             | Example / Default                             |
+| -------------------- | --------------------------------------- | --------------------------------------------- |
+| `MSAD_NAME`          | Name on the login button                | `Microsoft AD`                                |
+| `MSAD_ADMINS`        | Email/ID of users to grant admin access | `["admin@example.com", "admin2@example.com"]` |
+| `MSAD_FS_URL`        | URL of ADFS server                      | `https://adfs.example.com`                    |
+| `MSAD_CLIENT_ID`     | Client id from Step 2 above             |                                               |
+| `MSAD_CLIENT_SECRET` | Client secret from Step 2 above         |                                               |
 
 #### LDAP
 
