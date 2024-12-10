@@ -1439,6 +1439,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#resource-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#app-logo" class="md-nav__link">
     <span class="md-ellipsis">
       App Logo
@@ -6083,6 +6092,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#resource-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#app-logo" class="md-nav__link">
     <span class="md-ellipsis">
       App Logo
@@ -6153,7 +6171,7 @@
 
   <h1>Customise Emails</h1>
 
-<p>The notifications sent out from Huddo Boards can be customised to include company logos, links and support email addresses. 
+<p>The notifications sent out from Huddo Boards can be customised to include company logos, links and support email addresses.
 The custom values are set as ENV variables in the config file.</p>
 <p>The image below shows the items that can be customised within notifications:
 <br/></p>
@@ -6162,29 +6180,31 @@ The custom values are set as ENV variables in the config file.</p>
 <p>Use <code>events.env.NOTIFIER_EMAIL_FROM_NAME</code> to set the from name for emails <br/>Default: <code>Huddo Boards</code></p>
 <h3 id="from-email">From Email<a class="headerlink" href="#from-email" title="Permanent link">&para;</a></h3>
 <p>Use <code>events.env.NOTIFIER_EMAIL_FROM_EMAIL</code> to set the sent from email address <br/>Default: <code>no-reply@huddo.com</code></p>
+<h3 id="resource-links">Resource Links<a class="headerlink" href="#resource-links" title="Permanent link">&para;</a></h3>
+<p>Use <code>events.env.SHOW_RESOURCE_LINKS: 'false'</code> to hide the resource links (Resources, Full Feature List, Pricing) from the email footer.</p>
 <h3 id="app-logo">App Logo<a class="headerlink" href="#app-logo" title="Permanent link">&para;</a></h3>
-<p>Specify a URL to point to a hosted logo image by specifying <code>events.env.APP_LOGO_URL</code> in the config. 
+<p>Specify a URL to point to a hosted logo image by specifying <code>events.env.APP_LOGO_URL</code> in the config.
 For example: <code>https://company.com/assets/logo.png</code></p>
 <p>Note that an inline base64 encoded data URL can also be used for this variable.</p>
 <h3 id="brand-logo">Brand Logo<a class="headerlink" href="#brand-logo" title="Permanent link">&para;</a></h3>
-<p>Specify a URL to point to a hosted logo image by specifying <code>events.env.BRAND_LOGO_URL</code> in the config. 
+<p>Specify a URL to point to a hosted logo image by specifying <code>events.env.BRAND_LOGO_URL</code> in the config.
 For example: <code>https://company.com/assets/logo.png</code></p>
 <p>Note that an inline base64 encoded data URL can also be used for this variable.</p>
 <h3 id="social-links">Social Links<a class="headerlink" href="#social-links" title="Permanent link">&para;</a></h3>
 <p>The links below the brand logo can be customised. These do not necessarily need to be displayed as images/icons and can be text based links.</p>
 <p>The standard/default Huddo social links can be replaced by setting the <code>events.env.SOCIAL_LINKS</code> variable. Specifying an empty array will remove all social links.</p>
-<p>The links are specified in a JSON array of objects with the format:
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Link Name/Text&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">  </span><span class="err">li</span><span class="kc">n</span><span class="err">k</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Link URL&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">  </span><span class="err">ico</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(Optional) Hosted Icon URL or data URL&quot;</span>
+<p>The links are specified in a JSON array of objects with the format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Link Name/Text&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Link URL&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(Optional) Hosted Icon URL or data URL&quot;</span>
 <span class="p">}</span>
-</code></pre></div></p>
-<p>e.g.:
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;[{\&quot;name\&quot;: \&quot;Intranet\&quot;,\&quot;link\&quot;:\&quot;https://company.com/intranet/\&quot;}, </span>
-<span class="s2">  { \&quot;name\&quot;: \&quot;Support\&quot;, \&quot;link\&quot;: \&quot;https://company.com/support\&quot;, </span>
+</code></pre></div>
+<p>e.g.:</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;[{\&quot;name\&quot;: \&quot;Intranet\&quot;,\&quot;link\&quot;:\&quot;https://company.com/intranet/\&quot;},</span>
+<span class="s2">  { \&quot;name\&quot;: \&quot;Support\&quot;, \&quot;link\&quot;: \&quot;https://company.com/support\&quot;,</span>
 <span class="s2">    \&quot;icon\&quot;: \&quot;https://company.com/assets/support_icon.png\&quot;}]&quot;</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="app-name">App Name<a class="headerlink" href="#app-name" title="Permanent link">&para;</a></h3>
 <p>Use <code>events.env.APP_NAME</code> to specify the app name.<br/>Default: <code>Huddo Boards</code></p>
 <h3 id="support-email">Support Email<a class="headerlink" href="#support-email" title="Permanent link">&para;</a></h3>
@@ -6195,8 +6215,9 @@ For example: <code>https://company.com/assets/logo.png</code></p>
 <span class="w">    </span><span class="nt">NOTIFIER_EMAIL_FROM_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Company</span>
 <span class="w">    </span><span class="nt">NOTIFIER_EMAIL_FROM_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boards@company.com</span>
 <span class="w">    </span><span class="nt">APP_LOGO_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://company.com/assets/company_logo.png</span>
+<span class="w">    </span><span class="nt">SHOW_RESOURCE_LINKS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
 <span class="w">    </span><span class="nt">BRAND_LOGO_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://company.com/assets/logo.png</span>
-<span class="w">    </span><span class="nt">SOCIAL_LINKS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[{\&quot;name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;Intranet\&quot;,\&quot;link\&quot;:\&quot;https://company.com/intranet/\&quot;},</span><span class="nv"> </span><span class="s">{</span><span class="nv"> </span><span class="s">\&quot;name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;Support\&quot;,</span><span class="nv"> </span><span class="s">\&quot;link\&quot;:</span><span class="nv"> </span><span class="s">\&quot;https://company.com/support\&quot;,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">SOCIAL_LINKS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[{\&quot;name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;Intranet\&quot;,\&quot;link\&quot;:\&quot;https://company.com/intranet/\&quot;},</span><span class="nv"> </span><span class="s">{</span><span class="nv"> </span><span class="s">\&quot;name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;Support\&quot;,</span><span class="nv"> </span><span class="s">\&quot;link\&quot;:</span><span class="nv"> </span><span class="s">\&quot;https://company.com/support\&quot;,</span>
 <span class="w">    </span><span class="s">\&quot;icon\&quot;:</span><span class="nv"> </span><span class="s">\&quot;https://company.com/assets/support_icon.png\&quot;}]&quot;</span>
 <span class="w">    </span><span class="nt">APP_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Boards for My Company</span>
 <span class="w">    </span><span class="nt">NOTIFIER_EMAIL_SUPPORT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">support@company.com</span>
@@ -6221,7 +6242,7 @@ For example: <code>https://company.com/assets/logo.png</code></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2023-06-20
+    2024-12-10
   </span>
 
     
