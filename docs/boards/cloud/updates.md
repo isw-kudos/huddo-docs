@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2024-12-11
+
+Improvements:
+
+-   lookup performance of groups (e.g. Communities, Teams, etc)
+
 2024-12-09
 
 Fixes:

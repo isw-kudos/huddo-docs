@@ -44,6 +44,14 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-12-11
+
+Build #1177
+
+Improvements:
+
+-   lookup performance of groups (e.g. Communities, Teams, etc)
+
 #### 2024-12-10
 
 Build #1177
