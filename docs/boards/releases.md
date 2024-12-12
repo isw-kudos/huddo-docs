@@ -44,6 +44,18 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-12-12
+
+Build #1177
+
+Improvements:
+
+-   Support retrieval of auth token by SSO in Connections. Fix issue with duplicate LtpaToken and remove requirement for the client.externalId
+
+Activity Migration:
+
+-   Process to detect files with missing CCREFUUID in the SQL DB and remigrate into S3 and update Node file link
+
 #### 2024-12-11
 
 Build #1177
