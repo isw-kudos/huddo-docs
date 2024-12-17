@@ -44,6 +44,20 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-12-17
+
+Build #1180
+
+Improvements:
+
+-   Additional debug logs (`LOGGER-LEVEL=debug` & `LOG_NETWORK=true`)
+
+Fixes:
+
+-   Deep linking to Board/Card in a Community
+-   Issue in Attach Card micro app when selecting a Board.
+-   Issue with Connections notification flyout blocking UI in Firefox
+
 #### 2024-12-12
 
 Build #1177

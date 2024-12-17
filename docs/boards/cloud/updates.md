@@ -6,6 +6,14 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2024-12-17
+
+Fixes:
+
+-   Deep linking to Board/Card in a Community
+-   Issue in Attach Card micro app when selecting a Board.
+-   Issue with Connections notification flyout blocking UI in Firefox
+
 2024-12-11
 
 Improvements:
