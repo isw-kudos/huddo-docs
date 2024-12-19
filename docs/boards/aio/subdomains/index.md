@@ -52,7 +52,7 @@ Update the following variables in the `.env` file:
 
 | Variable            | Example                  | Description                                                     |
 | ------------------- | ------------------------ | --------------------------------------------------------------- |
-| `imageTag`          | `2024-12-10`             | [Date of our latest release](../../releases.md)                 |
+| `imageTag`          | `2024-12-19`             | [Date of our latest release](../../releases.md)                 |
 | `appURI`            | `boards.company.com`     | URL of Boards UI                                                |
 | `apiGateway`        | `boards-api.company.com` | URL of Boards API                                               |
 | `smtpHost`          | `smtp.example.com`       | Email server                                                    |

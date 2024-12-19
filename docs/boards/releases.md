@@ -44,6 +44,15 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2024
 
+#### 2024-12-19
+
+Improvements:
+
+-   Performance improvements (ACL, caching, reduced database queries)
+-   Prevent main thread blocking causing readiness probe failure
+-   Improved handling of large data sets
+-   Date chip (start/end date)
+
 #### 2024-12-17
 
 Build #1180

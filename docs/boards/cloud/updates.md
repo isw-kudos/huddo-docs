@@ -6,6 +6,15 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### December
 
+2024-12-19
+
+Improvements:
+
+-   Performance improvements (ACL, caching, reduced database queries)
+-   Prevent main thread blocking causing readiness probe failure
+-   Improved handling of large data sets
+-   Date chip (start/end date)
+
 2024-12-17
 
 Fixes:
