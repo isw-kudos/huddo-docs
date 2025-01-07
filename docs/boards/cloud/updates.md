@@ -2,6 +2,20 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+## 2025
+
+### January
+
+2025-01-07
+
+Fixes:
+
+-   Issue with live events inside framed CORs page (e.g. Microsoft Teams)
+-   Fix positioning of node modal assign user alert when drag and drop assignment
+-   Styling of scrollbar in card modal
+-   Card modal date section heading and action alignment
+-   Issue where Collab clients with invalid cnxfronturl overwrites Client.providerURL
+
 ## 2024
 
 ### December
