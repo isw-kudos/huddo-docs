@@ -111,7 +111,7 @@ Follow instructions on [this page](../env/common.md)
 
 Install the Boards services via our Helm chart
 
-    helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.1.1.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 

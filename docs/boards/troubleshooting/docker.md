@@ -37,7 +37,7 @@ Example
       Repository: https://github.com/kubernetes/ingress-nginx
     -------------------------------------------------------------------------------
 
-As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include a regular expression which is now set as the default as of the helm chart v2.0.1. We recommend using the latest `huddo-boards-cp-1.2.0.tgz` which includes all required annotations (including socket.io cookie fix).
+As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include a regular expression which is now set as the default as of the helm chart v2.0.1. We recommend using the latest `huddo-boards-cp-1.2.1.tgz` which includes all required annotations (including socket.io cookie fix).
 
 If you have an older Ingress controller version (i.e. 0.20) you will need to apply the following customisations to fix the ingress with charts as of v2.0.1
 
@@ -53,8 +53,9 @@ core:
         path: /api-boards
         annotations:
             nginx.ingress.kubernetes.io/rewrite-target: /
-            nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
             nginx.ingress.kubernetes.io/affinity: cookie
+            nginx.ingress.kubernetes.io/session-cookie-path: /api-boards; Secure
+            nginx.ingress.kubernetes.io/session-cookie-samesite: None
             nginx.ingress.kubernetes.io/proxy-body-size: 50m
             nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
             nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"

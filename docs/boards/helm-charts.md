@@ -14,6 +14,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 
 -   [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)
 -   [1.1.0](../assets/config/kubernetes/huddo-boards-1.1.0.tgz) - allow additionalPaths on huddo-app ingress
+-   [1.1.1](../assets/config/kubernetes/huddo-boards-1.1.1.tgz) - fix for ingress session cookie samesite (polling in a CORs frame, e.g. Teams)
 
 ### huddo-boards-activity-migration
 
@@ -38,6 +39,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 -   [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
 -   [1.1.1](../assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz) - Support custom storageClassName instead of PV
 -   [1.2.0](../assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz) - Added readiness probes on each service
+-   [1.2.1](../assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz) - Fix ingress session cookie samesite (polling in a CORs frame, e.g. Teams)
 
 ### huddo-boards-cp-activity-migration
 

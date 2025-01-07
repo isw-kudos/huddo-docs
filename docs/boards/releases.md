@@ -11,7 +11,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 1.  Huddo Boards in Kubernetes
 
     ```
-    helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
+    helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.1.1.tgz -i -f ./boards.yaml --namespace boards
     ```
 
 1.  Component Pack (Activities Plus)
@@ -31,7 +31,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
             chown 1000:1000 -R .
 
     ```
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
+    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz -i -f ./boards-cp.yaml --namespace connections
     ```
 
 ---

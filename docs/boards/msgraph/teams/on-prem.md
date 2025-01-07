@@ -43,11 +43,11 @@ Once you have your customised Teams app and advice from the Huddo team:
 
     [HCL Component Pack](../../cp/index.md#install-boards-helm-chart)
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 
-        helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
+        helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.1.1.tgz -i -f ./boards.yaml --namespace boards
 
     > **Note:** `--recreate-pods` is not required this time as this is only an env variable change
 
