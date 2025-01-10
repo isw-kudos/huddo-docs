@@ -8,6 +8,19 @@ Huddo Boards can integrate features directly in to HCL Connections user interfac
 
 If you're an administrator looking for how to set this up, see the [install documentation here](../../connections/customizer/integrations.md).
 
+## Huddo Boards Settings
+
+!!! warning "Important - this is a necessary extension"
+
+Common settings, such a URL, which is required for all other extensions to work.
+
+## Community Widget Download Fix
+
+!!! warning "Important - this is a necessary extension"
+
+Due to a limitation with the standard HCL Connections URL widget that Huddo Board uses. 
+Specifically it adds the 'allow-downloads' to the sandbox attribute of the iframe.
+
 ## Related Tasks
 
 You can create and view tasks related to the HCL Connections page you're currently viewing. Look for the Huddo Boards icon in the Connections header and file viewer.
@@ -31,3 +44,15 @@ Search results from Huddo Boards can be included in HCL Connections search resul
 |        ![Search Sidebar](./search-sidebar.png)         |
 | :----------------------------------------------------: |
 | _Huddo Boards results when searching from the sidebar_ |
+
+## Share to Boards
+
+Used to share the current page with a Huddo Board.
+
+|  ![Connections Header Share Button](./connections_header_share.png)   |
+| :-----------------------------------------------: |
+| _Connections 8 Header Share Location_ |
+
+|        ![Share Popup](./connections_share.png)         |
+| :----------------------------------------------------: |
+| _Huddo Boards share popup_ |
