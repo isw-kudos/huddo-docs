@@ -42,6 +42,23 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
     Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.
 
+### 2025
+
+#### 2025-01-14
+
+Improvements:
+
+-   Licence encryption - use `crypto.createCipheriv` for enhanced security and to replace the deprecated `createCipher` function
+
+2025-01-07
+
+Fixes:
+
+-   Issue with live events inside framed CORs page (e.g. Microsoft Teams)
+-   Fix positioning of node modal assign user alert when drag and drop assignment
+-   Styling of scrollbar in card modal
+-   Card modal date section heading and action alignment
+
 ### 2024
 
 #### 2024-12-19
@@ -51,7 +68,7 @@ Improvements:
 -   Performance improvements (ACL, caching, reduced database queries)
 -   Prevent main thread blocking causing readiness probe failure
 -   Improved handling of large data sets
--   Date chip (start/end date)
+-   Date chip (start/end date) - fix minor date selection issue, more descriptive tooltip labels
 
 #### 2024-12-17
 
