@@ -46,11 +46,13 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 #### 2025-01-14
 
+Build #1189
+
 Improvements:
 
 -   Licence encryption - use `crypto.createCipheriv` for enhanced security and to replace the deprecated `createCipher` function
 
-2025-01-07
+#### 2025-01-07
 
 Fixes:
 
