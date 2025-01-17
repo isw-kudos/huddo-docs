@@ -48,6 +48,11 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 Build #1189
 
+!!! note
+
+    This update includes minor schema migrations. Please take a Mongo database back-up before performing this update.
+
+
 Improvements:
 
 -   Licence encryption - use `crypto.createCipheriv` for enhanced security and to replace the deprecated `createCipher` function
