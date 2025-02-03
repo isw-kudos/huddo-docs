@@ -10,7 +10,7 @@ location ~ ^/activities/service/html/(.*)$ {
   rewrite ^/activities/service/html/(.*)$ /boards/activities/service/html/$1 redirect;
 }
 
-# Optional if you have a legacy Kudos Boards Websphere URLs
+# Optional if you have legacy Kudos Boards Websphere URLs
 location ~ ^/kudosboards/(.*)$ {
   rewrite ^/kudosboards/(.*)$ /boards/legacy/$1 redirect;
 }
