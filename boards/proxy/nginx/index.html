@@ -6159,7 +6159,7 @@
 <span class="w">  </span><span class="kn">rewrite</span><span class="w"> </span><span class="s">^/activities/service/html/(.*)</span>$<span class="w"> </span><span class="s">/boards/activities/service/html/</span><span class="nv">$1</span><span class="w"> </span><span class="s">redirect</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1"># Optional if you have a legacy Kudos Boards Websphere URLs</span>
+<span class="c1"># Optional if you have legacy Kudos Boards Websphere URLs</span>
 <span class="k">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">^/kudosboards/(.*)$</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kn">rewrite</span><span class="w"> </span><span class="s">^/kudosboards/(.*)</span>$<span class="w"> </span><span class="s">/boards/legacy/</span><span class="nv">$1</span><span class="w"> </span><span class="s">redirect</span><span class="p">;</span>
 <span class="p">}</span>
