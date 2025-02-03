@@ -49,6 +49,9 @@ It also includes a proxy rewrite rule, to serve the migrated Board when the lega
     RewriteEngine On
     RewriteRule ^/activities/service/html/(.*)$ /boards/activities/service/html/$1  [R]
 
+    # Optional if you have a legacy Kudos Boards Websphere URLs
+    RewriteRule ^/kudosboards/(.*)$ /boards/legacy/$1  [R]
+
     #Huddo Boards
     ProxyPass "/boards" "http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/boards"
     ProxyPassReverse "/boards" "http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/boards"
