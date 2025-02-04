@@ -52,9 +52,9 @@ Build #1189
 
     This update includes minor schema migrations. Please take a Mongo database back-up before performing this update.
 
-
 Improvements:
 
+-   Default to use WebSockets (best) and fall back to polling if WebSockets are not available
 -   Licence encryption - use `crypto.createCipheriv` for enhanced security and to replace the deprecated `createCipher` function
 
 #### 2025-01-07
