@@ -22,6 +22,10 @@ Improvements:
     -   exclude archived boards on page load (default)
     -   remove unused data returned to improve responsiveness
 
+Fixes:
+
+-   Styling of Search component integrated into CR8 (min-width etc)
+
 ### January
 
 2025-01-14
