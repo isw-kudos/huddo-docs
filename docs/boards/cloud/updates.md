@@ -4,6 +4,24 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2025
 
+### February
+
+2025-02-05
+
+Improvements:
+
+-   Performance
+
+    -   reduce load times of Boards/Cards with large datasets (e.g. comments) in Board, Todos view, Archive, Dependencies etc
+    -   reduce load times of comment feed (improved pagination)
+    -   reduce data lookups during ACL checks
+
+-   Content Admin
+
+    -   allow searching Boards by ID
+    -   exclude archived boards on page load (default)
+    -   remove unused data returned to improve responsiveness
+
 ### January
 
 2025-01-14
