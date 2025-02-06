@@ -6,6 +6,18 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### February
 
+2025-02-06
+
+Improvements:
+
+-   Enable Bookmark URL editing
+-   User Options & Assign Members Accessibility
+
+Fixes:
+
+-   Issue with editing list title in Activities View breaks expanding
+-   Create Board button missing in small community widget
+
 2025-02-05
 
 Improvements:
