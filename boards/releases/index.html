@@ -2500,11 +2500,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2025-02-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      2025-02-06
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2025-01-14" class="md-nav__link">
     <span class="md-ellipsis">
       2025-01-14
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2025-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongo-v36-unsupported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mongo v3.6 unsupported
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -6633,11 +6657,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2025-02-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      2025-02-06
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2025-01-14" class="md-nav__link">
     <span class="md-ellipsis">
       2025-01-14
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2025-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongo-v36-unsupported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mongo v3.6 unsupported
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -7050,10 +7098,6 @@
 
 <h1 id="boards-self-hosted-releases-change-log">Boards Self-Hosted Releases (change log)<a class="headerlink" href="#boards-self-hosted-releases-change-log" title="Permanent link">&para;</a></h1>
 <h2 id="how-to-upgrade">How To Upgrade<a class="headerlink" href="#how-to-upgrade" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Important - new image hosting</p>
-<p>As of January 2023 we have moved our image hosting. Please <a href="../images/">follow this guide</a> to configure your Kubernetes with access to our images hosted in Quay.io. We have provided new <a href="../helm-charts/">Huddo charts</a> to utilise these images.</p>
-</div>
 <p>Please use the appropriate update command with the latest <a href="../helm-charts/">helm chart</a>. For example:</p>
 <ol>
 <li>
@@ -7087,8 +7131,45 @@ chown 1000:1000 -R .
 <p>Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.</p>
 </div>
 <h3 id="2025">2025<a class="headerlink" href="#2025" title="Permanent link">&para;</a></h3>
+<h4 id="2025-02-06">2025-02-06<a class="headerlink" href="#2025-02-06" title="Permanent link">&para;</a></h4>
+<p>Build #1196</p>
+<p>Improvements:</p>
+<ul>
+<li>Ability to sort Board tiles by creation date</li>
+<li>Enable Bookmark URL editing</li>
+<li>Accessibility of User Options &amp; Assign Members popup</li>
+<li>
+<p>Performance</p>
+<ul>
+<li>reduce load times of Boards/Cards with large datasets (e.g. comments) in Board, Todos view, Archive, Dependencies etc</li>
+<li>reduce load times of comment feed (improved pagination)</li>
+<li>reduce data lookups during ACL checks</li>
+<li>reduce load times of group (e.g. community) with large number of members</li>
+<li>reduce group member lookups</li>
+</ul>
+</li>
+<li>
+<p>Content Admin</p>
+<ul>
+<li>allow searching Boards by ID</li>
+<li>exclude archived boards on page load (default)</li>
+<li>remove unused data returned to improve responsiveness</li>
+</ul>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Issue with editing list title in Activities View breaks expanding</li>
+<li>Create Board button missing in small community widget</li>
+<li>Styling of Search component integrated into CR8 (min-width etc)</li>
+</ul>
 <h4 id="2025-01-14">2025-01-14<a class="headerlink" href="#2025-01-14" title="Permanent link">&para;</a></h4>
 <p>Build #1189</p>
+<h5 id="mongo-v36-unsupported">Mongo v3.6 unsupported<a class="headerlink" href="#mongo-v36-unsupported" title="Permanent link">&para;</a></h5>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Mongo v3.x is now an unsupported configuration as per <a href="https://support.hcl-software.com/csm?id=kb_article&amp;sysparm_article=KB0085090">CNX 7.0 CP</a>. Please upgrade to Mongo v4.x or later before updating to this image date or later.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This update includes minor schema migrations. Please take a Mongo database back-up before performing this update.</p>
@@ -7967,7 +8048,7 @@ chown 1000:1000 -R .
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-02-04
+    2025-02-06
   </span>
 
     
