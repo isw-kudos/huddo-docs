@@ -12,6 +12,10 @@ Improvements:
 
 -   Enable Bookmark URL editing
 -   User Options & Assign Members Accessibility
+-   Performance
+
+    -   reduce load times of group (e.g. community) with large number of members
+    -   reduce group member lookups
 
 Fixes:
 
@@ -33,6 +37,10 @@ Improvements:
     -   allow searching Boards by ID
     -   exclude archived boards on page load (default)
     -   remove unused data returned to improve responsiveness
+
+Improvements:
+
+-   Ability to sort Board tiles by creation date
 
 Fixes:
 
