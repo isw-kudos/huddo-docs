@@ -2,10 +2,6 @@
 
 ## How To Upgrade
 
-!!! warning "Important - new image hosting"
-
-    As of January 2023 we have moved our image hosting. Please [follow this guide](images.md) to configure your Kubernetes with access to our images hosted in Quay.io. We have provided new [Huddo charts](helm-charts.md) to utilise these images.
-
 Please use the appropriate update command with the latest [helm chart](helm-charts.md). For example:
 
 1.  Huddo Boards in Kubernetes
@@ -44,9 +40,44 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-02-06
+
+Build #1196
+
+Improvements:
+
+-   Ability to sort Board tiles by creation date
+-   Enable Bookmark URL editing
+-   Accessibility of User Options & Assign Members popup
+-   Performance
+
+    -   reduce load times of Boards/Cards with large datasets (e.g. comments) in Board, Todos view, Archive, Dependencies etc
+    -   reduce load times of comment feed (improved pagination)
+    -   reduce data lookups during ACL checks
+    -   reduce load times of group (e.g. community) with large number of members
+    -   reduce group member lookups
+
+-   Content Admin
+
+    -   allow searching Boards by ID
+    -   exclude archived boards on page load (default)
+    -   remove unused data returned to improve responsiveness
+
+Fixes:
+
+-   Issue with editing list title in Activities View breaks expanding
+-   Create Board button missing in small community widget
+-   Styling of Search component integrated into CR8 (min-width etc)
+
 #### 2025-01-14
 
 Build #1189
+
+##### Mongo v3.6 unsupported
+
+!!! danger
+
+    Mongo v3.x is now an unsupported configuration as per [CNX 7.0 CP](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0085090). Please upgrade to Mongo v4.x or later before updating to this image date or later.
 
 !!! note
 
