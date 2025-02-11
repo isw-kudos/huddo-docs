@@ -68,6 +68,7 @@ Fixes:
 -   Issue with editing list title in Activities View breaks expanding
 -   Create Board button missing in small community widget
 -   Styling of Search component integrated into CR8 (min-width etc)
+-   XSS vulnerability in bookmarks
 
 #### 2025-01-14
 
