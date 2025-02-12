@@ -37,7 +37,7 @@ Example
       Repository: https://github.com/kubernetes/ingress-nginx
     -------------------------------------------------------------------------------
 
-As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include a regular expression which is now set as the default as of the helm chart v2.0.1. We recommend using the latest `huddo-boards-cp-1.2.1.tgz` which includes all required annotations (including socket.io cookie fix).
+As of 0.22.0 the Ingress controller rewrite-target definition changed. If Boards is installed at a context root, the format must include a regular expression which is now set as the default as of the helm chart v2.0.1. We recommend using the [latest chart](../helm-charts.md) which includes all required annotations (including socket.io cookie fix).
 
 If you have an older Ingress controller version (i.e. 0.20) you will need to apply the following customisations to fix the ingress with charts as of v2.0.1
 
@@ -81,6 +81,8 @@ Some deployments may encounter an issue where you are unable to see any real tim
 
 > Note: if you have a `core.annotations` section in your yaml configuration our updates will be overwritten. Custom annotations should only be required when customizing the context root as per above. Please remove the `annotations` section otherwise.
 
+---
+
 ### Additional for WebSphere IHS
 
 If you are using WebSphere IHS as your reverse proxy in front of Boards, please set the following environment variables to force polling instead of sockets
@@ -101,11 +103,15 @@ If the Minio service fails to start with the following error:
 
 Please update to [kudos-boards-cp-3.1.4.tgz](../../assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz) which includes a different image of Minio which supports your existing 'fs' file system.
 
+---
+
 ## React Minified Issue
 
 ![ReactMinifiedError](react-minified-issue.png)
 
 This has been successfully fixed in all reported cases by clearing the local storage of the user's browser. There is also a change to handle this better in [the 2022-12-15 release](../releases-archive.md#2022-12-15)
+
+---
 
 ## ITM Render Issue
 

@@ -107,11 +107,7 @@ When migrating very large activities sometimes you may encounter an OutOfMemory 
 
 ### Resolution
 
-Ensure you are on `v1.2.0`+ of the Migration chart, e.g.
-
-```
-helm upgrade huddo-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.2.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
-```
+Ensure you are on `v1.2.0`+ of the Migration helm chart
 
 In the migration YAML chart you can set following to increase the amount of memory available to NodeJS by adding the environment variables in the migration YAML:
 

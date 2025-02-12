@@ -16,16 +16,6 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
         To upgrade from images in the Component Pack to images hosted by us please follow [this guide](cp/latest.md).
 
-    !!! danger
-
-        New chart for Component Pack
-
-        As of `huddo-boards-cp-1.0.0.tgz` we have changed the Minio pods to run as `user 1000` instead of `root`.
-        You must perform the following command on the shared drive (`/pv-connections` file system) before using this new chart. The change is backwards compatible.
-
-            cd /pv-connections/kudos-boards-minio/
-            chown 1000:1000 -R .
-
     ```
     helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz -i -f ./boards-cp.yaml --namespace connections
     ```
