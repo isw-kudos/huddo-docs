@@ -6,6 +6,15 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### February
 
+2025-02-13
+
+Improvements:
+
+-   Board search quality - use new $text index with sort by score relevance
+-   Remove duplicate data on comments (do not need name from parent)
+-   Search Communities by name - allow partial matches
+-   Performance - improve loading public groups
+
 2025-02-06
 
 Improvements:
