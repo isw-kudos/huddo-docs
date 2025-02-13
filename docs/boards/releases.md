@@ -17,7 +17,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
         To upgrade from images in the Component Pack to images hosted by us please follow [this guide](cp/latest.md).
 
     ```
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz -i -f ./boards-cp.yaml --namespace connections
+    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.3.0.tgz -i -f ./boards-cp.yaml --namespace connections
     ```
 
 ---
@@ -29,6 +29,28 @@ Please use the appropriate update command with the latest [helm chart](helm-char
     Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.
 
 ### 2025
+
+#### 2025-02-13
+
+##### Mongo7 support
+
+!!! tip
+
+    The new `boards-cp-1.3.0.tgz` helm chart adds support for Mongo7 using the new variable `mongo-name`in the `connections-env` configMap. If you are using mongo v5.x please ensure you have this new variable set. If not set, please run the following command to add it:
+
+    ```
+    kubectl patch configmap connections-env -n connections --type merge -p '{"data":{"mongo-name":"mongo5"}}'
+    ```
+
+Build #1197
+
+Improvements:
+
+-   Support new chart (v1.3.0) for Mongo 7 (use `mongo-name` instead of `mongo5-rs-members-hosts`)
+-   Board search quality - use new $text index with sort by score relevance
+-   Remove duplicate data on comments (do not need name from parent)
+-   Search Communities by name - allow partial matches
+-   Performance - improve loading public groups
 
 #### 2025-02-06
 
@@ -68,7 +90,7 @@ Build #1189
 
 !!! danger
 
-    Mongo v3.x is now an unsupported configuration as per [CNX 7.0 CP](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0085090). Please upgrade to Mongo v4.x or later before updating to this image date or later.
+    Mongo v3.x is now an unsupported configuration as per [CNX 7.0 CP](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0085090). Please upgrade to Mongo v5.x or later before updating to this image date or later.
 
 !!! note
 
