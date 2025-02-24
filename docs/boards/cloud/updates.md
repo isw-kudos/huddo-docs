@@ -6,6 +6,16 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### February
 
+2025-02-24
+
+New Feature:
+
+-   Boards dashboard feed
+
+    -   'Latest Activity' across all your boards
+    -   Overdue tasks
+    -   Assigned to me
+
 2025-02-13
 
 Improvements:
