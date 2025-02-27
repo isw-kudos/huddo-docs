@@ -101,8 +101,6 @@ Improvements:
 -   Default to use WebSockets (best) and fall back to polling if WebSockets are not available
 -   Licence encryption - use `crypto.createCipheriv` for enhanced security and to replace the deprecated `createCipher` function
 
-#### 2025-01-07
-
 Fixes:
 
 -   Issue with live events inside framed CORs page (e.g. Microsoft Teams)
