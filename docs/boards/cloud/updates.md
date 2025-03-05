@@ -24,10 +24,10 @@ Improvements:
 
 Improvements:
 
--   Performance - remove lookups of `assignment.user` in API layer
+-   Performance - remove lookups of `assignments.user` in API layer
 -   [API](../api/index.md)
 
-    -   Streamline `node.assignment.user` - return string id instead of object
+    -   Streamline `node.assignments.user` - return string id instead of object
 
 2025-02-24
 
