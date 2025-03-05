@@ -16,7 +16,7 @@ Improvements:
 
     -   Streamline `node`/`board` objects - remove duplicate `id`
     -   Boards: `currentMember`|`userPreference`|`template`|`view`
-    -   Nodes: `assignments`|`fields`|`start`|`due`|`creator`|`created`|`updated`|`updator`
+    -   Nodes: `assignments`|`fields`|`start`|`due`|`creator`|`created`|`updated`|`updater`
 
 ### February
 
