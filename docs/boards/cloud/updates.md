@@ -4,7 +4,30 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2025
 
+### March
+
+2025-03-05
+
+Improvements:
+
+-   Comments - show save/cancel action buttons while editing
+-   Performance - reduce lookups of board members
+-   [API](../api/index.md)
+
+    -   Streamline `node`/`board` objects - remove duplicate `id`
+    -   Boards: `currentMember`|`userPreference`|`template`|`view`
+    -   Nodes: `assignments`|`fields`|`start`|`due`|`creator`|`created`|`updated`|`updator`
+
 ### February
+
+2025-02-26
+
+Improvements:
+
+-   Performance - remove lookups of `assignment.user` in API layer
+-   [API](../api/index.md)
+
+    -   Streamline `node.assignment.user` - return string id instead of object
 
 2025-02-24
 
