@@ -62,6 +62,11 @@ Fixes:
 
 -   Mindmap - show color labels on cards when no text labels set in board
 
+Activity Migration:
+
+-   use the new node `assignments.user` struture
+-   fix for issue loading users from the `boards-user` service during migration
+
 #### 2025-02-13
 
 ##### Mongo7 support
