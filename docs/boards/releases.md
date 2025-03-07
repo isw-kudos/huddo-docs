@@ -30,6 +30,38 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-03-07
+
+!!! warning
+
+    This update includes a schema migration of the `node.assignments.user`. We recommend performing a back-up of the Mongo database before you update versions.
+
+New Feature:
+
+-   Boards dashboard feed (Latest Activity)
+
+    -   Overdue tasks
+    -   Assigned to me
+
+Improvements:
+
+-   Performance
+
+    -   reduce lookups of board members
+    -   remove lookups of `assignments.user` in API layer
+
+-   Comments - show save/cancel action buttons while editing
+-   [API](./api/index.md)
+
+    -   Boards: `currentMember`|`userPreference`|`template`|`view`
+    -   Nodes: `assignments`|`fields`|`links`|`start`|`due`|`creator`|`created`|`updated`|`updater`
+    -   Streamline `node`/`board` objects - remove duplicate `id`
+    -   Streamline `node.assignments.user` - return string id instead of object
+
+Fixes:
+
+-   Mindmap - show color labels on cards when no text labels set in board
+
 #### 2025-02-13
 
 ##### Mongo7 support

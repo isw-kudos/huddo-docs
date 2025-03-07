@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2025-03-07
+
+Improvements:
+
+-   Allow collapse/expand of the new Boards dashboard feed (Latest Activity)
+-   [API](../api/index.md) - `node.links` documentation added
+
 2025-03-05
 
 Improvements:
@@ -17,6 +24,11 @@ Improvements:
     -   Streamline `node`/`board` objects - remove duplicate `id`
     -   Boards: `currentMember`|`userPreference`|`template`|`view`
     -   Nodes: `assignments`|`fields`|`start`|`due`|`creator`|`created`|`updated`|`updater`
+
+Fixes:
+
+-   Mindmap - show color labels on cards when no text labels set in board
+-   Dragging colors/labels onto Board tile
 
 ### February
 
@@ -33,7 +45,7 @@ Improvements:
 
 New Feature:
 
--   Boards dashboard feed
+-   Boards dashboard feed (Latest Activity)
 
     -   'Latest Activity' across all your boards
     -   Overdue tasks
