@@ -64,6 +64,12 @@ Use `events.env.APP_NAME` to specify the app name.<br/>Default: `Huddo Boards`
 
 The support email address can be specified in `events.env.NOTIFIER_EMAIL_SUPPORT_EMAIL`<br/>Default: `support@huddo.com`
 
+Use `events.env.SHOW_CONTACT_SUPPORT: 'false'` to hide the following line of text containing the support email address:
+
+> Need help? Email us at `events.env.NOTIFIER_EMAIL_SUPPORT_EMAIL`
+
+from the email footer.
+
 ## Email Config Example (YAML)
 
 ```yaml
