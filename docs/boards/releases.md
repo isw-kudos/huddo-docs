@@ -30,6 +30,17 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-03-19
+
+Improvements:
+
+-   Performance of redis usage to emit user presence events
+-   Ability to customise emails support contact line in footer (`SHOW_CONTACT_SUPPORT`)
+
+Activity Migration:
+
+-   Support for Oracle Thick Client and therefore Native Network Encryption (NNE)
+
 #### 2025-03-07
 
 !!! warning

@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### March
 
+2025-03-13
+
+Improvements:
+
+-   Performance of redis usage to emit user presence events
+
 2025-03-07
 
 Improvements:
