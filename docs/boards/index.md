@@ -57,17 +57,6 @@ See install details for [Kubernetes](hybrid.md) or [HCL Connections Component Pa
 
 ---
 
-<!-- ### Boards Docker (On-Premise) in Docker Swarm
-Our Boards Cloud product, installed locally in your infrastructure. This is designed for those without existing Kubernetes environments.
-
-__Advantages__
-
-- Lightweight, on-premise clustered deployment.
-- Control over your own data and backup strategies
-- Simple to update
-
---- -->
-
 ### Boards Hybrid
 
 (Cloud integrated with HCL Connections On-Premise.)
