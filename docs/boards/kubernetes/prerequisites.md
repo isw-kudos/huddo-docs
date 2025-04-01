@@ -12,11 +12,11 @@ This solution is ideal if you already have kubernetes (or IBM Component Pack for
 
 In addition to the above, Huddo Boards for Kubernetes is able to take advantage of existing services in your network, if you have any of the following and would like to take advantage of them, please ensure you have all relevant access documented.
 
-| Service    | Requirements                                                    |
-| ---------- | --------------------------------------------------------------- |
-| MongoDB    | URL, username and password                                      |
-| S3 Storage | URL, Bucket name, username and password                         |
-| NFS Server | IP address or hostname, must be accessible to all swarm servers |
+| Service    | Requirements                                                   |
+| ---------- | -------------------------------------------------------------- |
+| MongoDB    | URL, username and password                                     |
+| S3 Storage | URL, Bucket name, username and password                        |
+| NFS Server | IP address or hostname, must be accessible to all node servers |
 
 ---
 
@@ -60,7 +60,7 @@ Huddo Boards is designed to be integrated into your current user management syst
 | HCL Connections (on premise) | [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/r_admin_common_oauth_manage_list.html) |
 | IBM Connections Cloud        | [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSL3JX/admin/bss/topics/manage_custom_apps.html)                |
 | Microsoft 365                | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)                         |
-| Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                                              |
+| Google                       | [Instructions](../google/instructions.md)                                                                                             |
 | LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                                                  |
 | Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)                                 |
 
