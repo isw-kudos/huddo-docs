@@ -4,6 +4,20 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2025
 
+### April
+
+2025-04-07
+
+Improvements:
+
+- Reduce data stored in redis to improve stability in large environments
+- Reduce page size requested of HCL Connections Communities (to improve stability of Communities in large environments)
+
+Fixes:
+
+- Issue with detection of Domino admins (REST API)
+- Minor updates for Dutch translations
+
 ### March
 
 2025-03-13
