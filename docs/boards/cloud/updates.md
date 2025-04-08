@@ -6,17 +6,31 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### April
 
+2025-04-08
+
+Improvements:
+
+-   Activity Feed updates
+
+    -   add new default filter level of "my boards"
+    -   badge showing the number of unread items
+    -   save feed expansion state
+
+Fixes:
+
+-   Issue where incorrectly returned 400 error on history when no boards found
+
 2025-04-07
 
 Improvements:
 
-- Reduce data stored in redis to improve stability in large environments
-- Reduce page size requested of HCL Connections Communities (to improve stability of Communities in large environments)
+-   Reduce data stored in redis to improve stability in large environments
+-   Reduce page size requested of HCL Connections Communities (to improve stability of Communities in large environments)
 
 Fixes:
 
-- Issue with detection of Domino admins (REST API)
-- Minor updates for Dutch translations
+-   Issue with detection of Domino admins (REST API)
+-   Minor updates for Dutch translations
 
 ### March
 
