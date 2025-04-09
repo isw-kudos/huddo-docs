@@ -30,6 +30,22 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-04-09
+
+-   Reduce data stored in redis to improve stability in large environments
+-   Reduce page size requested of HCL Connections Communities (to improve stability of Communities in large environments)
+-   Activity Feed updates
+
+    -   add new default filter level of "my boards"
+    -   badge showing the number of unread items
+    -   save feed expansion state
+
+Fixes:
+
+-   Issue with detection of Domino admins (REST API)
+-   Minor updates for Dutch translations
+-   Issue where incorrectly returned 400 error on history when no boards found
+
 #### 2025-03-19
 
 Improvements:
