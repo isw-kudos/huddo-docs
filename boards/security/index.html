@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://docs.huddo.com/boards/security/">
       
       
+        <link rel="prev" href="../msgraph/sharepoint/">
+      
+      
+        <link rel="next" href="../">
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Boards Cloud Security - Huddo Docs</title>
+        <title>Security - Huddo Docs</title>
       
     
     
@@ -118,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Boards Cloud Security
+              Security
             
           </span>
         </div>
@@ -239,10 +243,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -382,6 +388,8 @@
       
   
   
+    
+  
   
   
     
@@ -413,14 +421,17 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -437,13 +448,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Boards
@@ -455,6 +466,8 @@
               
                 
   
+  
+    
   
   
   
@@ -469,6 +482,8 @@
       
         
       
+        
+      
     
     
     
@@ -476,11 +491,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -503,7 +518,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Boards Cloud
@@ -1087,6 +1102,200 @@
             
           </ul>
         </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-an-end-user-login-to-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does an end user login to Boards?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-kind-of-provider-collab-cloud-office365-etc-data-will-be-stored-by-boards-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      What kind of Provider (Collab Cloud, Office365 etc) data will be stored by Boards Cloud?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-security-of-data-in-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the security of data in motion?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is the security of data in motion?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requests-between-the-user-and-boards-cloud-servers-are-secured-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requests between the User and Boards Cloud servers are secured by:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requests-between-boards-cloud-servers-and-mongo-database-are-secured-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requests between Boards Cloud servers and Mongo database are secured by:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requests-between-boards-cloud-servers-and-google-cloud-s3-object-storage-are-secured-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requests between Boards Cloud servers and Google Cloud S3 Object Storage are secured by:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requests-between-boards-cloud-servers-and-providers-connections-office365-etc-are-secured-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requests between Boards Cloud servers and providers (Connections, Office365 etc) are secured by:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other remarks:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-security-of-data-at-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the security of data at rest?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is the security of data at rest?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-atlas-is-secured-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      MongoDB Atlas is secured by:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-cloud-object-storage-is-secured-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Cloud Object storage is secured by:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#are-there-any-passwords-saved-by-boards-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Are there any passwords saved by Boards Cloud?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-your-privacy-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is your Privacy Policy
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6255,9 +6464,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-kind-of-provider-connections-cloud-office365-etc-data-will-be-stored-by-boards-cloud" class="md-nav__link">
+  <a href="#what-kind-of-provider-collab-cloud-office365-etc-data-will-be-stored-by-boards-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      What kind of Provider (Connections Cloud, Office365 etc) data will be stored by Boards Cloud?
+      What kind of Provider (Collab Cloud, Office365 etc) data will be stored by Boards Cloud?
     </span>
   </a>
   
@@ -6365,6 +6574,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-your-privacy-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is your Privacy Policy
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6388,14 +6606,14 @@
 
 <h3 id="how-does-an-end-user-login-to-boards">How does an end user login to Boards?<a class="headerlink" href="#how-does-an-end-user-login-to-boards" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Users login by authenticating via OAuth 2.0 with Connections Cloud, Office365, Facebook, Google, LinkedIn, Connections on-premise or Auth0.</li>
+<li>Users login by authenticating via OAuth 2.0 with Collab Cloud, Office365, Facebook, Google, LinkedIn, AppleID, Microsoft AD, HCL Domino, HCL DX, HCL Connections on-premise or Auth0.</li>
 <li>This starts a token-based session with Boards Cloud used to authenticates all future requests.</li>
 </ul>
-<h3 id="what-kind-of-provider-connections-cloud-office365-etc-data-will-be-stored-by-boards-cloud">What kind of Provider (Connections Cloud, Office365 etc) data will be stored by Boards Cloud?<a class="headerlink" href="#what-kind-of-provider-connections-cloud-office365-etc-data-will-be-stored-by-boards-cloud" title="Permanent link">&para;</a></h3>
+<h3 id="what-kind-of-provider-collab-cloud-office365-etc-data-will-be-stored-by-boards-cloud">What kind of Provider (Collab Cloud, Office365 etc) data will be stored by Boards Cloud?<a class="headerlink" href="#what-kind-of-provider-collab-cloud-office365-etc-data-will-be-stored-by-boards-cloud" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Basic user profile data (display name, email, subscriberId, customerId)</li>
-<li>User/community photo</li>
-<li>Community/Space name and members</li>
+<li>User/Community photo</li>
+<li>Community/Space/Group name and members</li>
 <li>Links to Files</li>
 <li>Clone of Connections Activities data after imported by the user</li>
 </ul>
@@ -6430,7 +6648,7 @@
 <li>CSRF is not a threat as all our APIs are strictly JSON and we don't support CORS.</li>
 <li>We use token based express-sessions and helmetJS for express to provide additional security around XSS, framing, and sessions. Tokens are JWT encoded with secret keys.</li>
 <li>SQL injection is not relevant as we are not using any SQL dbs.</li>
-<li>We use Content-Security-Policy headers to limit framing to only be self and Connections Cloud to prevent clickjacking</li>
+<li>We use Content-Security-Policy headers to limit framing to only be self and Collab Cloud to prevent clickjacking</li>
 <li>We add X-Content-Type header 'nosniff' to prevent Content sniffing</li>
 <li>We use a standard REST API pattern. Entity IDs are passed as URL params where applicable for all http requests (GET, POST, PUT, DELETE). No actual data is passed as URL params or query params.</li>
 </ul>
@@ -6455,6 +6673,10 @@
 </ul>
 <h3 id="are-there-any-passwords-saved-by-boards-cloud">Are there any passwords saved by Boards Cloud?<a class="headerlink" href="#are-there-any-passwords-saved-by-boards-cloud" title="Permanent link">&para;</a></h3>
 <p>There are NO passwords stored by the app.</p>
+<h3 id="what-is-your-privacy-policy">What is your Privacy Policy<a class="headerlink" href="#what-is-your-privacy-policy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Our privacy policy is outlined on our website here: https://www.huddo.com/privacy-policy</li>
+</ul>
 
 
 
@@ -6475,7 +6697,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2020-12-17
+    2025-04-14
   </span>
 
     
