@@ -31,6 +31,7 @@ nav:
                   - Teams: boards/msgraph/teams/install/index.md
                   - Outlook: boards/msgraph/outlook/index.md
                   - Sharepoint: boards/msgraph/sharepoint/index.md
+          - Security: boards/security.md
       - Boards Self-Hosted:
           - boards/index.md
           - a) For HCL Connections: boards/cp/index.md

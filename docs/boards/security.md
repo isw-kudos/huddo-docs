@@ -5,13 +5,13 @@
 <!-- /TOC -->
 
 ### How does an end user login to Boards?
-- Users login by authenticating via OAuth 2.0 with Connections Cloud, Office365, Facebook, Google, LinkedIn, Connections on-premise or Auth0.
+- Users login by authenticating via OAuth 2.0 with Collab Cloud, Office365, Facebook, Google, LinkedIn, AppleID, Microsoft AD, HCL Domino, HCL DX, HCL Connections on-premise or Auth0.
 - This starts a token-based session with Boards Cloud used to authenticates all future requests.
 
-### What kind of Provider (Connections Cloud, Office365 etc) data will be stored by Boards Cloud?
+### What kind of Provider (Collab Cloud, Office365 etc) data will be stored by Boards Cloud?
 - Basic user profile data (display name, email, subscriberId, customerId)
-- User/community photo
-- Community/Space name and members
+- User/Community photo
+- Community/Space/Group name and members
 - Links to Files
 - Clone of Connections Activities data after imported by the user
 
@@ -41,7 +41,7 @@
 - CSRF is not a threat as all our APIs are strictly JSON and we don't support CORS.
 - We use token based express-sessions and helmetJS for express to provide additional security around XSS, framing, and sessions. Tokens are JWT encoded with secret keys.
 - SQL injection is not relevant as we are not using any SQL dbs.
-- We use Content-Security-Policy headers to limit framing to only be self and Connections Cloud to prevent clickjacking
+- We use Content-Security-Policy headers to limit framing to only be self and Collab Cloud to prevent clickjacking
 - We add X-Content-Type header 'nosniff' to prevent Content sniffing
 - We use a standard REST API pattern. Entity IDs are passed as URL params where applicable for all http requests (GET, POST, PUT, DELETE). No actual data is passed as URL params or query params.
 
@@ -65,3 +65,7 @@ Most data is stored in MongoDB hosted by MongoDB Atlas in a Google Cloud datacen
 
 ### Are there any passwords saved by Boards Cloud?
 There are NO passwords stored by the app.
+
+### What is your Privacy Policy
+
+- Our privacy policy is outlined on our website here: https://www.huddo.com/privacy-policy
