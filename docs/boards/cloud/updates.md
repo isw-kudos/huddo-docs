@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### April
 
+2025-04-28
+
+Fixes:
+
+-   Ensure correct member role select options for group/community owned boards
+-   @mentions - pop up member list - show board members even if they do not have a user profile link/URL
+
 2025-04-08
 
 Improvements:
