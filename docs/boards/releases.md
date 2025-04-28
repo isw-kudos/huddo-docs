@@ -30,6 +30,17 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-04-28
+
+Improvements
+
+-   Email customisations - remove logo/banner image size restrictions
+
+Fixes:
+
+-   Ensure correct member role select options for group/community owned boards
+-   @mentions - pop up member list - show board members even if they do not have a user profile link/URL
+
 #### 2025-04-09
 
 -   Reduce data stored in redis to improve stability in large environments

@@ -5,7 +5,7 @@ global:
   # setup authentication by following https://docs.huddo.com/boards/images/
   imagePullSecret: quay-username-pull-secret
   # find the latest release date https://docs.huddo.com/boards/releases/
-  imageTag: 2025-04-09
+  imageTag: 2025-04-28
   env:
     APP_URI: https://connections.example.com/boards
     API_GATEWAY: https://connections.example.com/api-boards
