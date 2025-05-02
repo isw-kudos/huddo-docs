@@ -4,6 +4,27 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2025
 
+### May
+
+2025-05-02
+
+Improvements:
+
+-   Organisation Board admin performance - opt-in to showing card count
+-   My Board History performance - better query/indexes
+
+2025-05-01
+
+Improvements:
+
+-   Better error boundaries to prevent entire page crashes
+
+Fixes:
+
+-   Webhook trigger when completing 'my' task which is also assigned to you
+-   Add missing string for history - mark assignment as incomplete
+-   Issue with default tile colors (prevent deleting default, fix out of bounds exception)
+
 ### April
 
 2025-04-28
