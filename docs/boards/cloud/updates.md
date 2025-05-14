@@ -6,6 +6,13 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2025-05-14
+
+Fixes:
+
+-   Drag and drop cards between windows
+-   Handling of failed request on Organisation Board admin page
+
 2025-05-02
 
 Improvements:
