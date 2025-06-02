@@ -30,6 +30,22 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-06-02
+
+Improvements:
+
+-   Organisation Board admin performance - opt-in to showing card count
+-   My Board History performance - better query/indexes
+-   Better error boundaries to prevent entire page crashes
+
+Fixes:
+
+-   Drag and drop cards between windows
+-   Handling of failed request on Organisation Board admin page
+-   Webhook trigger when completing 'my' task which is also assigned to you
+-   Add missing string for history - mark assignment as incomplete
+-   Issue with default tile colors (prevent deleting default, fix out of bounds exception)
+
 #### 2025-04-28
 
 Improvements
