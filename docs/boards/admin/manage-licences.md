@@ -29,11 +29,11 @@ For users accessing Huddo Boards via O365, HCL Connections (hybrid and collab.cl
 Navigate to `Admin Settings` and then select to 'Buy Online'.
 
 - Specify your type of licence - Named Users Licence or Open Licences.
-- Select your billing preference - Monthly or Annually (note: annual subscriptions include a 15% discount)
+- Select your billing preference - Monthly or Annually
 - Quantity of licences to purchase
 - Review your order summary, agree to the terms and conditions and select Continue, to move to the online check out.
 
-![](img/licence-subscription-purchase.png)  
+![](img/licence-subscription-purchase.png)
 
 Your subscription will be updated automatically.
 
@@ -51,15 +51,14 @@ Click Organisation to see your org details.
 
 Under 'Licences' select to 'Buy Online.'
 
- ![](img/buy-kudosboards-msteams3.png)
+![](img/buy-kudosboards-msteams3.png)
 
- - Specify your type of licence - Named Users Licence or Open Licences.
- - Select your billing preference - Monthly or Annually (note: annual subscriptions include a 15% discount)
- - Quantity of licences to purchase
- - Review your order summary, agree to the terms and conditions and select Continue, to move to the online check out.
+- Specify your type of licence - Named Users Licence or Open Licences.
+- Select your billing preference - Monthly or Annually
+- Quantity of licences to purchase
+- Review your order summary, agree to the terms and conditions and select Continue, to move to the online check out.
 
- ![](img/buy-kudosboards-msteams4.png)
-
+![](img/buy-kudosboards-msteams4.png)
 
 ## Request a Quote or Invoice for Payment
 
@@ -70,9 +69,5 @@ Huddo Boards cloud users can request a quote via Huddo Boards Admin Settings in 
 In addition to online check out, we can receive purchase orders and provide invoices for payment.
 
 Pricing can be found here https://www.huddo.com/pricing
-
-
-
-
 
 ---
