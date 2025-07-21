@@ -208,3 +208,5 @@ For example
         helm delete huddo-boards-cp-activity-migration --purge
 
 1.  Turn off the Activities application in WebSphere ISC
+
+> **Note:** There are reports that in some environments that the following Connections services are affected by this: seedlists, homepage, desktop plugin, email notifications and search message bus
