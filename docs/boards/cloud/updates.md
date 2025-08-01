@@ -17,7 +17,7 @@ Fixes:
 
 -   Issue with text color in dark mode with HCL Connections 8.0 CR10
 -   Race condition sending DueDate reminders (prevent sending duplicates)
--   Issue with user not attached when checking organisation acl
+-   Issue with user not attached when checking taskstat org acl
 
 ### July
 
