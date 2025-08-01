@@ -4,6 +4,29 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2025
 
+### August
+
+2025-08-01
+
+Improvements:
+
+-   Support for @mentions in brackets
+-   Reduce data selection in DueDate reminders (less memory usage)
+
+Fixes:
+
+-   Issue with text color in dark mode with HCL Connections 8.0 CR10
+-   Race condition sending DueDate reminders (prevent sending duplicates)
+-   Issue with user not attached when checking organisation acl
+
+### July
+
+2025-07-07
+
+Fixes:
+
+-   Issue where 'my' comments not loaded correctly in Board after home page loads other users comments in the Boards dashboard feed (Latest Activity)
+
 ### May
 
 2025-05-14
