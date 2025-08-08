@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2025-08-08
+
+Improvements:
+
+-   Performance of Calendar feeds
+
+    -   faster ical generator
+    -   less memory usage (smaller data selection, downscale/reuse assignment images)
+    -   add assignment initial avatars when no profile image set
+    -   Personal feed - include tasks created by me but not assigned to anyone
+
 2025-08-01
 
 Improvements:

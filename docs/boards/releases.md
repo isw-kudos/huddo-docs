@@ -30,6 +30,27 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-08-08
+
+Improvements:
+
+-   Performance of Calendar feeds
+
+    -   faster ical generator
+    -   less memory usage (smaller data selection, downscale/reuse assignment images)
+    -   add assignment initial avatars when no profile image set
+    -   Personal feed - include tasks created by me but not assigned to anyone
+
+-   Support for @mentions in brackets
+-   Reduce data selection in DueDate reminders (less memory usage)
+
+Fixes:
+
+-   Issue with text color in dark mode with HCL Connections 8.0 CR10
+-   Race condition sending DueDate reminders (prevent sending duplicates)
+-   Issue with user not attached when checking taskstat org acl
+-   Issue where 'my' comments not loaded correctly in Board after home page loads other users comments in the Boards dashboard feed (Latest Activity)
+
 #### 2025-06-02
 
 Improvements:
