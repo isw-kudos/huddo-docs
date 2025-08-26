@@ -22,7 +22,7 @@ Drag and drop your Notes emails directly in Huddo Boards with the new sidebar wi
 
 To install for a custom Boards deployment you must do the following:
 
-1. Download the <a href="./boards-cloud.nsf" download>xpage iframe nsf file</a>
+1. Download the <a href="./boards_cloud.nsf" download>xpage iframe nsf file</a>
 1. Modify the nsf file (in Domino Designer) to point to your own Huddo Boards instance URL
 1. Place the modified nsf file into your HCL Notes server - copy the `notes://` URL to this file
 1. Download the <a href="./boards-cloud-widget.xml" download>widget xml file</a>
