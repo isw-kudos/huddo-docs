@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <webcontextConfiguration version="1.1">
-<palleteItem contributeTabOnStartup="false" contributeToSideshelfOnStartup="true" hideThumbnail="false" id="1933012664" imageUrl="" providerId="com.ibm.notes.toolbox.provider.XPagesPalleteProvider" singletonSidebar="false" title="Huddo Boards Cloud" url="notes://allegri.isw.net.au/databases/demos/Boards_Cloud.nsf/HuddoBoards.xsp?OpenXPage" viewImageUrl="">
+<palleteItem contributeTabOnStartup="false" contributeToSideshelfOnStartup="true" hideThumbnail="false" id="1933012664" imageUrl="" providerId="com.ibm.notes.toolbox.provider.XPagesPalleteProvider" singletonSidebar="false" title="Huddo Boards Cloud" url="notes://brahms.isw.net.au/databases/demos/Boards_Cloud.nsf/HuddoBoards.xsp?OpenXPage" viewImageUrl="">
 <preferences/>
 <data/>
 </palleteItem>
