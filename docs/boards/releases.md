@@ -30,6 +30,17 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-08-26
+
+Improvements:
+
+-   Allow user to add themself to a Board (if high enough access via group)
+
+Fixes:
+
+-   Issue with Community Files
+-   Issue with posting to Community Activity Stream
+
 #### 2025-08-08
 
 Improvements:

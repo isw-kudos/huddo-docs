@@ -6,6 +6,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### August
 
+2025-08-26
+
+Improvements:
+
+-   Allow user to add themself to a Board (if high enough access via group)
+
+2025-08-20
+
+Fixes:
+
+-   Issue with Community Files
+-   Issue with posting to Community Activity Stream
+
 2025-08-08
 
 Improvements:
