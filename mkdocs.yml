@@ -22,6 +22,7 @@ nav:
                   - Customizer Extensions: boards/connections/customizer/integrations.md
                   - Mobile App: boards/connections/mobile-app-hybrid.md
                   - Security: boards/connections/security.md
+              - HCL Notes: boards/notes/index.md
               - HCL Verse: boards/verse/verse-extension.md
               - HCL Domino: boards/domino/cloud.md
               - Microsoft 365:
@@ -71,6 +72,7 @@ nav:
                   - Authentication: boards/dx/auth/websphere.md
                   - Portlet: boards/dx/portlet/index.md
                   - Proxy: boards/dx/auth/proxy.md
+              - HCL Notes: boards/notes/index.md
               - HCL Verse: boards/verse/verse-extension.md
               - Microsoft 365:
                   - boards/msgraph/auth/index.md
