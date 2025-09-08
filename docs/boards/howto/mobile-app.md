@@ -21,4 +21,10 @@ You are in! Now you see all your existing Activities and Boards and can immediat
 
 ## Huddo Boards On-Prem
 
+### Install Video
+
+!!! note
+
+    Click the image to go through to the video
+
 [![how-to-install](http://img.youtube.com/vi/0p14S4UAwUY/0.jpg)](http://www.youtube.com/watch?v=0p14S4UAwUY)
