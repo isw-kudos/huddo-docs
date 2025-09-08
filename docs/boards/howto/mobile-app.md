@@ -23,10 +23,4 @@ You are in! Now you see all your existing Activities and Boards and can immediat
 
 ### Install Video
 
-!!! note
-
-    Click the image to go through to the video
-
-[![how-to-install](http://img.youtube.com/vi/0p14S4UAwUY/0.jpg)](http://www.youtube.com/watch?v=0p14S4UAwUY)
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0p14S4UAwUY?si=6f9yZ3I3c6I41rxi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
