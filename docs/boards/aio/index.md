@@ -8,7 +8,11 @@
 
 You may run all services including database and file storage on one server, or you can use an external Mongo database or S3 file store.
 
-RHEL (or Centos 7) server with:
+RHEL server with:
+
+!!! note
+
+    The primary replacements for the now-unsupported CentOS Linux are Rocky Linux and AlmaLinux
 
 |              | Minimum |
 | ------------ | ------- |
