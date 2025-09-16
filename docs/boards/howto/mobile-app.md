@@ -21,6 +21,13 @@ You are in! Now you see all your existing Activities and Boards and can immediat
 
 ## Huddo Boards On-Prem
 
-### Install Video
+Huddo Boards on-premise customers can access Huddo Boards via their mobile device by creating a homepage shortcut to the Huddo Boards app.
+See how to create a homepage shortcut in Android and iPhone via the videos below.
+
+### Android Install Video
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0p14S4UAwUY?si=6f9yZ3I3c6I41rxi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### iPhone Install Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BmdMWMk950Q?si=a1bUPB67E_m8pM3S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
