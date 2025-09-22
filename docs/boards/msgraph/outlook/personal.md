@@ -6,28 +6,27 @@
 
 1. Open Outlook and click `New Message`
 
-      ![example](personal1.png)
-
+    ![example](personal1.png)
 
 1. Click the `...` menu -> `Get Add-ins`
 
-      ![example](personal2.png)
+    ![example](personal2.png)
 
 1. Click `My Add-ins` then `Add a custom add-in` -> `Add from URL`
 
-      ![example](personal3.png)
+    ![example](personal3.png)
 
 1. Provide the url: `https://boards.huddo.com/office/outlook/add-in.xml` and click OK.
 
-      ![example](personal4.png)
+    ![example](personal4.png)
 
 1. Click `Install` then close the add-in dialogue.
 
-      ![example](personal5.png)
+    ![example](personal5.png)
 
 1. Verify the add-in is installed by clicking the `...` menu again.
 
-      ![example](personal6.png)
+    ![example](personal6.png)
 
 1. You will now be able to:
 
@@ -37,4 +36,4 @@
 
     Attach boards, lists and cards to an email.
 
-    ![Attach](attach.png){ style="border: 1px solid #ccc;" }
+    ![Attach](attach.png)
