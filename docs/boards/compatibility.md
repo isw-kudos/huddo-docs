@@ -2,13 +2,13 @@
 
 ## Known Compatible
 
-Huddo Boards Docker has been tested and confirmed working with the following versions
+The latest Huddo Boards images have been tested and confirmed working with the following versions
 
-|            | Minimum | Maximum   | Notes                                             |
-| ---------- | ------- | --------- | ------------------------------------------------- |
-| Kubernetes | `v1.16` | `v1.31.5` |                                                   |
-| MongoDB    | `v4.0`  | `v7.0.x`  | Last supported images for `v3.6` was `2024-12-19` |
-| Redis      | `v4.0`  | `v7.0`    |                                                   |
+|            | Minimum | Maximum   | Notes                                                                                                          |
+| ---------- | ------- | --------- | -------------------------------------------------------------------------------------------------------------- |
+| Kubernetes | `v1.16` | `v1.33.5` |                                                                                                                |
+| MongoDB    | `v5.0`  | `v7.0.x`  | See [MongoDB Lifecycles](https://www.mongodb.com/legal/support-policy/lifecycles) for official recommendations |
+| Redis      | `v4.0`  | `v7.0`    |                                                                                                                |
 
 ---
 
