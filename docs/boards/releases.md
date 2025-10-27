@@ -30,6 +30,25 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-10-27
+
+Features:
+
+-   Org Admin user management - replace user functionality
+
+Improvements:
+
+-   Member dialog icons
+
+    -   change user section icon from search to filter
+    -   add search icon to main input
+
+-   Replace deprecated `ldapjs` with `ldapts` (used for MSAD)
+
+Fixes:
+
+-   auth popup - fallback to open in tab if new window cannot be opened
+
 #### 2025-08-26
 
 Improvements:
