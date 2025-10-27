@@ -146,6 +146,7 @@ nav:
           - Manage Config: boards/admin/org-config.md
           - Boards Content and Member Management: boards/admin/content-member-management.md
           - Manage Licences: boards/admin/manage-licences.md
+          - Replace Users: boards/admin/replace-users/index.md
           - Revoke Users: boards/admin/revoke-users.md
           - Transition Providers:
               - Overview: boards/admin/transition-between-providers.md

@@ -34,7 +34,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 Features:
 
--   Org Admin user management - replace user functionality
+-   Org Admin user management - [replace user functionality](./admin/replace-user/index.md)
 
 Improvements:
 
