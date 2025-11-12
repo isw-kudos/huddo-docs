@@ -130,6 +130,7 @@ nav:
                   - boards/howto/timeline/index.md
               - Task Dependencies:
                   - boards/howto/dependencies/index.md
+              - Keyboard Shortcuts: boards/howto/kb-shortcuts.md
           - iCalendar Feed:
               - Personal: boards/howto/ical/personal.md
               - Board: boards/howto/ical/board.md
