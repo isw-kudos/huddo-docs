@@ -43,7 +43,7 @@ Once you have your customised Teams app and advice from the Huddo team:
 
     [HCL Component Pack](../../cp/index.md#install-boards-helm-chart)
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.3.0.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 

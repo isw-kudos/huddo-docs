@@ -17,7 +17,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
         To upgrade from images in the Component Pack to images hosted by us please follow [this guide](cp/latest.md).
 
     ```
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.3.0.tgz -i -f ./boards-cp.yaml --namespace connections
+    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz -i -f ./boards-cp.yaml --namespace connections
     ```
 
 ---

@@ -41,6 +41,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 -   [1.2.0](../assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz) - Added readiness probes on each service
 -   [1.2.1](../assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz) - Fix ingress session cookie samesite (polling in a CORs frame, e.g. Teams)
 -   [1.3.0](../assets/config/kubernetes/huddo-boards-cp-1.3.0.tgz) - Support CNX 8 Mongo 7 (use configMap `mongo-name` instead of `mongo5-rs-members-hosts`) with images after date `2025-02-13`
+-   [1.3.1](../assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz) - Change ingress.pathType to ImplementationSpecific to allow regex rewrites
 
 ### huddo-boards-cp-activity-migration
 
