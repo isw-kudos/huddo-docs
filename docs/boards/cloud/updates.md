@@ -30,7 +30,7 @@ Fixes:
 
 Features:
 
--   Org Admin user management - [replace user functionality](./admin/replace-user/index.md)
+-   Org Admin user management - [replace user functionality](../admin/replace-user/index.md)
 
 Improvements:
 
