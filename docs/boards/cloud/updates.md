@@ -4,6 +4,47 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2025
 
+### November
+
+2025-11-24
+
+Features:
+
+-   Ability for Organisation to block upload of files by extension
+
+    ![block upload](../admin/img/org-block-file-extensions.png)
+
+Improvements
+
+-   Node search API - return object with paging information. Better structure
+
+Fixes:
+
+-   Rebuild Search app for Connections Search integration
+-   Add invite as selected (dont find user with similar email)
+-   Issue with checkbox/toggle not working with Cnx8 css (Archived button on content admin page)
+
+### September
+
+2025-09-22
+
+Features:
+
+-   Org Admin user management - [replace user functionality](./admin/replace-user/index.md)
+
+Improvements:
+
+-   Member dialog icons
+
+    -   change user section icon from search to filter
+    -   add search icon to main input
+
+-   Replace deprecated `ldapjs` with `ldapts` (used for MSAD)
+
+Fixes:
+
+-   auth popup - fallback to open in tab if new window cannot be opened
+
 ### August
 
 2025-08-26
