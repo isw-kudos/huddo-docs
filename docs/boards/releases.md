@@ -30,7 +30,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
-#### 2025-11-24
+#### 2025-11-28
 
 Features:
 
