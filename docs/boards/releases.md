@@ -30,6 +30,24 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2025
 
+#### 2025-11-24
+
+Features:
+
+-   Ability for Organisation to block upload of files by extension
+
+    ![block upload](../admin/img/org-block-file-extensions.png)
+
+Improvements
+
+-   Node search API - return object with paging information. Better structure
+
+Fixes:
+
+-   Rebuild Search app for Connections Search integration
+-   Add invite as selected (dont find user with similar email)
+-   Issue with checkbox/toggle not working with Cnx8 css (Archived button on content admin page)
+
 #### 2025-10-27
 
 Features:
