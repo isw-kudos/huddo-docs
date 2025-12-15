@@ -634,6 +634,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#december" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        December
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#november" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -750,7 +761,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#december" class="md-nav__link">
+  <a href="#december_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         December
@@ -899,7 +910,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#december_1" class="md-nav__link">
+  <a href="#december_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         December
@@ -7908,6 +7919,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#december" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        December
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#november" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8024,7 +8046,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#december" class="md-nav__link">
+  <a href="#december_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         December
@@ -8173,7 +8195,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#december_1" class="md-nav__link">
+  <a href="#december_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         December
@@ -8340,6 +8362,12 @@
 <h1 id="boards-cloud-updates">Boards Cloud Updates<a class="headerlink" href="#boards-cloud-updates" title="Permanent link">&para;</a></h1>
 <p>Please see here for recent changes to <a href="https://boards.huddo.com">Huddo Boards Cloud</a></p>
 <h2 id="2025">2025<a class="headerlink" href="#2025" title="Permanent link">&para;</a></h2>
+<h3 id="december">December<a class="headerlink" href="#december" title="Permanent link">&para;</a></h3>
+<p>2025-12-16</p>
+<p>Fixes:</p>
+<ul>
+<li>Issue where pasting note using list menu created a list</li>
+</ul>
 <h3 id="november">November<a class="headerlink" href="#november" title="Permanent link">&para;</a></h3>
 <p>2025-11-24</p>
 <p>Features:</p>
@@ -8369,10 +8397,12 @@
 <ul>
 <li>
 <p>Member dialog icons</p>
-<ul>
-<li>change user section icon from search to filter</li>
-<li>add search icon to main input</li>
-</ul>
+</li>
+<li>
+<p>change user section icon from search to filter</p>
+</li>
+<li>
+<p>add search icon to main input</p>
 </li>
 <li>
 <p>Replace deprecated <code>ldapjs</code> with <code>ldapts</code> (used for MSAD)</p>
@@ -8399,13 +8429,13 @@
 <ul>
 <li>
 <p>Performance of Calendar feeds</p>
-<ul>
-<li>faster ical generator</li>
+</li>
+<li>
+<p>faster ical generator</p>
+</li>
 <li>less memory usage (smaller data selection, downscale/reuse assignment images)</li>
 <li>add assignment initial avatars when no profile image set</li>
 <li>Personal feed - include tasks created by me but not assigned to anyone</li>
-</ul>
-</li>
 </ul>
 <p>2025-08-01</p>
 <p>Improvements:</p>
@@ -8461,12 +8491,12 @@
 <ul>
 <li>
 <p>Activity Feed updates</p>
-<ul>
-<li>add new default filter level of "my boards"</li>
+</li>
+<li>
+<p>add new default filter level of "my boards"</p>
+</li>
 <li>badge showing the number of unread items</li>
 <li>save feed expansion state</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -8502,12 +8532,12 @@
 <li>Performance - reduce lookups of board members</li>
 <li>
 <p><a href="../../api/">API</a></p>
-<ul>
-<li>Streamline <code>node</code>/<code>board</code> objects - remove duplicate <code>id</code></li>
+</li>
+<li>
+<p>Streamline <code>node</code>/<code>board</code> objects - remove duplicate <code>id</code></p>
+</li>
 <li>Boards: <code>currentMember</code>|<code>userPreference</code>|<code>template</code>|<code>view</code></li>
 <li>Nodes: <code>assignments</code>|<code>fields</code>|<code>start</code>|<code>due</code>|<code>creator</code>|<code>created</code>|<code>updated</code>|<code>updater</code></li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -8521,9 +8551,9 @@
 <li>Performance - remove lookups of <code>assignments.user</code> in API layer</li>
 <li>
 <p><a href="../../api/">API</a></p>
-<ul>
-<li>Streamline <code>node.assignments.user</code> - return string id instead of object</li>
-</ul>
+</li>
+<li>
+<p>Streamline <code>node.assignments.user</code> - return string id instead of object</p>
 </li>
 </ul>
 <p>2025-02-24</p>
@@ -8531,12 +8561,12 @@
 <ul>
 <li>
 <p>Boards dashboard feed (Latest Activity)</p>
-<ul>
-<li>'Latest Activity' across all your boards</li>
+</li>
+<li>
+<p>'Latest Activity' across all your boards</p>
+</li>
 <li>Overdue tasks</li>
 <li>Assigned to me</li>
-</ul>
-</li>
 </ul>
 <p>2025-02-13</p>
 <p>Improvements:</p>
@@ -8553,11 +8583,11 @@
 <li>User Options &amp; Assign Members Accessibility</li>
 <li>
 <p>Performance</p>
-<ul>
-<li>reduce load times of group (e.g. community) with large number of members</li>
-<li>reduce group member lookups</li>
-</ul>
 </li>
+<li>
+<p>reduce load times of group (e.g. community) with large number of members</p>
+</li>
+<li>reduce group member lookups</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -8569,20 +8599,22 @@
 <ul>
 <li>
 <p>Performance</p>
-<ul>
-<li>reduce load times of Boards/Cards with large datasets (e.g. comments) in Board, Todos view, Archive, Dependencies etc</li>
+</li>
+<li>
+<p>reduce load times of Boards/Cards with large datasets (e.g. comments) in Board, Todos view, Archive, Dependencies etc</p>
+</li>
 <li>reduce load times of comment feed (improved pagination)</li>
-<li>reduce data lookups during ACL checks</li>
-</ul>
+<li>
+<p>reduce data lookups during ACL checks</p>
 </li>
 <li>
 <p>Content Admin</p>
-<ul>
-<li>allow searching Boards by ID</li>
+</li>
+<li>
+<p>allow searching Boards by ID</p>
+</li>
 <li>exclude archived boards on page load (default)</li>
 <li>remove unused data returned to improve responsiveness</li>
-</ul>
-</li>
 </ul>
 <p>Improvements:</p>
 <ul>
@@ -8608,7 +8640,7 @@
 <li>Issue where Collab clients with invalid cnxfronturl overwrites Client.providerURL</li>
 </ul>
 <h2 id="2024">2024<a class="headerlink" href="#2024" title="Permanent link">&para;</a></h2>
-<h3 id="december">December<a class="headerlink" href="#december" title="Permanent link">&para;</a></h3>
+<h3 id="december_1">December<a class="headerlink" href="#december_1" title="Permanent link">&para;</a></h3>
 <p>2024-12-19</p>
 <p>Improvements:</p>
 <ul>
@@ -8698,18 +8730,14 @@
 <ul>
 <li>close nav drawer when todos is clicked</li>
 <li>card details title textarea - make auto width with no resize to avoid overflow or small width issues</li>
-<li>assignment roles<ul>
+<li>assignment roles</li>
 <li>role icon search issue</li>
 <li>colours used based on colour scheme</li>
-</ul>
-</li>
-<li>drag and drop<ul>
+<li>drag and drop</li>
 <li>touch drag and view/list scroll issues</li>
 <li>prevent dragging anchor and images when read only</li>
 <li>prevent touch drag opening context menu</li>
 <li>timeline - orange border for drag preview</li>
-</ul>
-</li>
 <li>dependency arrow calculation fix for bordering cards</li>
 </ul>
 <h3 id="september_1">September<a class="headerlink" href="#september_1" title="Permanent link">&para;</a></h3>
@@ -8761,8 +8789,10 @@
 </li>
 <li>
 <p>Welcome Tours in</p>
-<ul>
-<li>Bulgarian (bg)</li>
+</li>
+<li>
+<p>Bulgarian (bg)</p>
+</li>
 <li>Catalan (ca)</li>
 <li>Chinese (Simplified) (zh)</li>
 <li>Chinese (Traditional) (zh-TW)</li>
@@ -8780,8 +8810,6 @@
 <li>Slovak (sk)</li>
 <li>Slovenian (sl)</li>
 <li>Spanish (es)</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -8804,13 +8832,13 @@
 <ul>
 <li>
 <p>Organisation content administration.</p>
-<ul>
-<li>Delete functionality for Boards which user is not an owner of</li>
+</li>
+<li>
+<p>Delete functionality for Boards which user is not an owner of</p>
+</li>
 <li>Search by board name - case insensitive</li>
 <li>Sort by Archive column</li>
 <li>Select all only selects visible</li>
-</ul>
-</li>
 </ul>
 <p>2024-08-16</p>
 <p>Fixes:</p>
@@ -8833,8 +8861,10 @@
 <li>Cache theme colour palettes for faster rendering</li>
 <li>
 <p>Added missing translations for the following languages:</p>
-<ul>
-<li>Bulgarian (bg)</li>
+</li>
+<li>
+<p>Bulgarian (bg)</p>
+</li>
 <li>Catalan (ca)</li>
 <li>Chinese (Simplified) (zh)</li>
 <li>Chinese (Traditional) (zh-TW)</li>
@@ -8851,8 +8881,6 @@
 <li>Slovak (sk)</li>
 <li>Slovenian (sl)</li>
 <li>Spanish (es)</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -9025,14 +9053,16 @@
 <li>Timeline: add zoom -+ controls that increment zoom levels</li>
 <li>
 <p>Mindmap accessibility</p>
-<ul>
-<li>1st tab selects board node, allow arrow key nav, and tab to access actions from there</li>
+</li>
+<li>
+<p>1st tab selects board node, allow arrow key nav, and tab to access actions from there</p>
+</li>
 <li>sidebar controls - use mui checkboxes + ensure hover effects on buttons</li>
 <li>clear node selection on escape keypress</li>
 <li>fix text cutoff/ensure ellipsis on longer node titles</li>
 <li>add help link to sidebar</li>
-<li>allow keyboard pan and zoom using shift+arrow and +- keys</li>
-</ul>
+<li>
+<p>allow keyboard pan and zoom using shift+arrow and +- keys</p>
 </li>
 <li>
 <p>add contact support button to error catch page</p>
@@ -9068,11 +9098,9 @@
 <p>2024-04-24</p>
 <p>Improvements:</p>
 <ul>
-<li>card details view improvements<ul>
+<li>card details view improvements</li>
 <li>show card fields/data in defined sections in a grid formation with headings and add buttons</li>
 <li>change "add a comment" action to start as a button</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -9099,12 +9127,12 @@
 <li>New Board Wizard - more specific label for board name and template name</li>
 <li>
 <p>Activity view improvements</p>
-<ul>
-<li>styling (shadows, spacing, border edges when expanded/collapsed)</li>
+</li>
+<li>
+<p>styling (shadows, spacing, border edges when expanded/collapsed)</p>
+</li>
 <li>drop cards on list header (highlight like shadow)</li>
 <li>add card at top hides the bottom add card</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -9132,16 +9160,16 @@
 <ul>
 <li>
 <p>Emoji reactions on comments</p>
-<ul>
+</li>
 <li>
 <p>Quick selection</p>
-<p><img alt="emoji quick" src="../../howto/reactions/quick.png" /></p>
+<div class="highlight"><pre><span></span><code>![emoji quick](../howto/reactions/quick.png)
+</code></pre></div>
 </li>
 <li>
 <p>Picker</p>
-<p><img alt="emoji picker" src="../../howto/reactions/picker.png" /></p>
-</li>
-</ul>
+<div class="highlight"><pre><span></span><code>![emoji picker](../howto/reactions/picker.png)
+</code></pre></div>
 </li>
 </ul>
 <p>Improvements:</p>
@@ -9233,22 +9261,18 @@
 <p>2024-02-14</p>
 <p>Fixes:</p>
 <ul>
-<li>Translation fixes<ul>
+<li>Translation fixes</li>
 <li>Move translations inside functions to help prevent premature translate calls</li>
 <li>Use date-fns locales to show months in user's language</li>
 <li>German translation amendments</li>
 <li>Other translation fixes and improvements</li>
 </ul>
-</li>
-</ul>
 <p>2024-02-08</p>
 <p>Fixes:</p>
 <ul>
-<li>Microsoft Teams private channels<ul>
+<li>Microsoft Teams private channels</li>
 <li>Link to File will now show the private channel's files.</li>
 <li>Owner/Author access level was setting all members to Author.</li>
-</ul>
-</li>
 <li>Microsoft Teams Mobile: Removed licence related cards in org admin view.</li>
 <li>Microsoft Teams: Removed obsolete "Disable Notifications" button.</li>
 <li>Rich text editor dialog - allow scroll on overflow</li>
@@ -9271,10 +9295,12 @@
 <ul>
 <li>
 <p>Microsoft Teams integrations</p>
-<ul>
-<li>UI redesign when adding new Boards tab</li>
-<li>Onboarding Tours</li>
-</ul>
+</li>
+<li>
+<p>UI redesign when adding new Boards tab</p>
+</li>
+<li>
+<p>Onboarding Tours</p>
 </li>
 <li>
 <p>faster opening of cards</p>
@@ -9301,7 +9327,7 @@
 </ul>
 <hr />
 <h2 id="2023">2023<a class="headerlink" href="#2023" title="Permanent link">&para;</a></h2>
-<h3 id="december_1">December<a class="headerlink" href="#december_1" title="Permanent link">&para;</a></h3>
+<h3 id="december_2">December<a class="headerlink" href="#december_2" title="Permanent link">&para;</a></h3>
 <p>2023-12-22</p>
 <p>Fixes:</p>
 <ul>
@@ -9388,13 +9414,13 @@
 <ul>
 <li>
 <p>Accessibility</p>
-<ul>
-<li>more consistent tooltips (for screen readers and better explanation of functionality)</li>
+</li>
+<li>
+<p>more consistent tooltips (for screen readers and better explanation of functionality)</p>
+</li>
 <li>Keyboard navigation (particularly in the Board Tiles, Kanban view, Card dialog) - (vision &amp; motor impaired)</li>
 <li>better screen reader information (vision impaired)</li>
 <li>improved colour contrast (low vision users)</li>
-</ul>
-</li>
 </ul>
 <p>2023-11-09</p>
 <p>Improvements:</p>
@@ -9564,12 +9590,12 @@
 <li>Added tooltips to Assignment Role avatars</li>
 <li>
 <p>Microsoft Teams</p>
-<ul>
-<li>detect members in private sub channels (OAuth Admin consent must be certified again)</li>
+</li>
+<li>
+<p>detect members in private sub channels (OAuth Admin consent must be certified again)</p>
+</li>
 <li>fix for creating Board in private sub channels</li>
 <li>loading spinner positioning</li>
-</ul>
-</li>
 </ul>
 <p>Fixes:</p>
 <ul>
@@ -9642,11 +9668,13 @@
 <ul>
 <li>
 <p>Drag and drop of lists</p>
-<ul>
-<li>drag by header</li>
+</li>
+<li>
+<p>drag by header</p>
+</li>
 <li>fix blank list when scrolled and dragged</li>
-<li>prevent scrolling of list in drag mode</li>
-</ul>
+<li>
+<p>prevent scrolling of list in drag mode</p>
 </li>
 <li>
 <p>Cards can be Archived+Deleted from the card modal toolbar.</p>
@@ -9661,10 +9689,12 @@
 <li>Board Tiles sidebar shadow regression bug</li>
 <li>
 <p>Card drag and drop</p>
-<ul>
-<li>issue where a duplicate card appears when drag to end</li>
-<li>issue where card jumps back to top when dragging a card to end of same list</li>
-</ul>
+</li>
+<li>
+<p>issue where a duplicate card appears when drag to end</p>
+</li>
+<li>
+<p>issue where card jumps back to top when dragging a card to end of same list</p>
 </li>
 <li>
 <p>Button for copying a template says "Copy Template" instead of "Copy Board"</p>
@@ -9679,12 +9709,14 @@
 <ul>
 <li>
 <p>Organisation view of members &amp; groups</p>
-<ul>
-<li>loading feedback</li>
+</li>
+<li>
+<p>loading feedback</p>
+</li>
 <li>virtualised scroll for faster render</li>
 <li>show membership of linked aliases</li>
-<li>prevent duplicates of invites to org</li>
-</ul>
+<li>
+<p>prevent duplicates of invites to org</p>
 </li>
 <li>
 <p>localised format of dates in CSV export</p>
@@ -9814,7 +9846,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-11-24
+    2025-12-16
   </span>
 
     
