@@ -4,6 +4,14 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2025
 
+### December
+
+2025-12-16
+
+Fixes:
+
+- Issue where pasting note using list menu created a list
+
 ### November
 
 2025-11-24
