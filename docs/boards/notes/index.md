@@ -1,4 +1,4 @@
-# Huddo Boards Cloud widget for HCL Notes
+# Huddo Boards widget for HCL Notes
 
 Drag and drop your Notes emails directly in Huddo Boards with the new sidebar widget!
 
