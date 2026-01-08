@@ -2,6 +2,16 @@
 
 Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.com)
 
+## 2026
+
+### January
+
+2026-01-09
+
+Fixes:
+
+- Mentions in descriptions in node view
+
 ## 2025
 
 ### December
