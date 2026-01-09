@@ -12,6 +12,10 @@ Fixes:
 
 - Mentions in descriptions in node view
 
+Improvements: 
+
+- API for OAuth
+
 ## 2025
 
 ### December
