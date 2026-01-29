@@ -1,6 +1,8 @@
 
 # Creating Columns with Drag and Drop
 
+![A page with a two-column layout](./images/page-with-columns.png){ style="max-width: 75%; outline: 1px solid black; display: block; margin: 0 auto;" }
+
 Columns allow you to arrange content side-by-side in your wiki pages. Instead of
 using menus or toolbars, you create columns naturally by dragging content where
 you want it. This is perfect for comparisons, layouts with images alongside
