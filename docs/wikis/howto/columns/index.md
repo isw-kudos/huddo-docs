@@ -1,5 +1,3 @@
-<!-- this document has purposfully omitted UI screenshots as the UI is expected to change rapidly -->
-
 
 # Creating Columns with Drag and Drop
 
@@ -12,6 +10,8 @@ text, or any time you need a multi-column design.
 
 ### Using the Drag Handle
 
+![The drag handle appearing on the left of a block](./images/drag-handle.png){ style="max-width: 75%; outline: 1px solid black; display: block; margin: 0 auto;" }
+
 Every block of content in the editor has a drag handle that appears when you
 hover near it.
 
@@ -22,6 +22,8 @@ hover near it.
 ---
 
 ### Creating a Two-Column Layout
+
+![A block being dragged to the right of another](./images/drag-right.png){ style="max-width: 75%; outline: 1px solid black; display: block; margin: 0 auto;" }
 
 To create your first column layout, drag one block next to another.
 
@@ -39,12 +41,16 @@ becomes the right column.
 
 You can add up to six columns in a single column block.
 
-**Adding to the edges:**
+#### Adding to the edges
+
+![A block being dragged to add another column on the left](./images/add-column-left.png){ style="max-width: 75%; outline: 1px solid black; display: block; margin: 0 auto;" }
 
 1. Drag content toward the left or right edge of an existing column block
 1. When you see the drop indicator at the edge, release to add a new column
 
-**Inserting between columns:**
+#### Inserting between columns
+
+![A block being dragged to add another column in the centre](./images/add-column-centre.png){ style="max-width: 75%; outline: 1px solid black; display: block; margin: 0 auto;" }
 
 1. Drag content into the gap between two existing columns
 1. A vertical indicator appears in the gap
@@ -57,6 +63,8 @@ You can add up to six columns in a single column block.
 ---
 
 ### Moving Content Within Columns
+
+![A block within a column showing a drag handle](./images/drag-handle-inside.png){ style="max-width: 75%; outline: 1px solid black; display: block; margin: 0 auto;" }
 
 Once you have columns, you can reorganise content within them.
 
