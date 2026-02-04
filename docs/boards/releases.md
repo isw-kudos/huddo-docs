@@ -38,6 +38,11 @@ Improvements:
 - API documentation updates (node data type for create/update, OAuth routes)
 - Security updates (nodejs v24 etc)
 
+Fixes:
+
+- Mentions in descriptions in node view
+- Issue where pasting note using list menu created a list
+
 ### 2025
 
 #### 2025-11-27
