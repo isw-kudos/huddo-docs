@@ -4,6 +4,16 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2026
 
+### February
+
+2026-02-04
+
+Improvements:
+
+- Performance (mongo indexing, reduced database queries)
+- API documentation updates (node data type for create/update, OAuth routes)
+- Security updates (nodejs v24 etc)
+
 ### January
 
 2026-01-09
@@ -12,7 +22,7 @@ Fixes:
 
 - Mentions in descriptions in node view
 
-Improvements: 
+Improvements:
 
 - API for OAuth
 
