@@ -39,6 +39,16 @@ To mount the certificate in the pods:
               mountPath: /etc/ssl/certs/internal-ca.pem
               subPath: cert.pem
 
+    app:
+        volumes:
+            - name: ssl-cert-vol
+              secret:
+                  secretName: internal-ca
+        volumeMounts:
+            - name: ssl-cert-vol
+              mountPath: /etc/ssl/certs/internal-ca.pem
+              subPath: cert.pem
+
     user:
         volumes:
             - name: ssl-cert-vol
