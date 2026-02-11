@@ -30,15 +30,6 @@ webfront:
     # PRODUCT_INFO_URL: https://huddo.com/boards
     # SUPPORT_EMAIL: support@example.com
 
-events:
-  env:
-    NOTIFIER_EMAIL_HOST: smtp.example.com
-    NOTIFIER_EMAIL_USERNAME: user123
-    NOTIFIER_EMAIL_PASSWORD: passw0rd
-    # APP_NAME: Huddo Boards # Used for all notifications, e.g. Orient Me
-    # NOTIFIER_EMAIL_FROM_NAME: Huddo Boards
-    # NOTIFIER_EMAIL_FROM_EMAIL: boards@connections.example.com
-
 core:
   ingress:
     # This hostname must match other Ingresses defined in your CP environment
@@ -48,16 +39,25 @@ core:
       - "connections.example.com"
       # - "*.example.com"
 
+app:
+  env:
+
+notification:
+  env:
+
+events:
+  env:
+    NOTIFIER_EMAIL_HOST: smtp.example.com
+    NOTIFIER_EMAIL_USERNAME: user123
+    NOTIFIER_EMAIL_PASSWORD: passw0rd
+    # APP_NAME: Huddo Boards # Used for all notifications, e.g. Orient Me
+    # NOTIFIER_EMAIL_FROM_NAME: Huddo Boards
+    # NOTIFIER_EMAIL_FROM_EMAIL: boards@connections.example.com
+
 licence:
   env:
     # Register your Organisation and download your Free 'Activities Plus' licence key from store.huddo.com
     LICENCE: secret-string-you-download
-
-# https://docs.huddo.com/boards/msgraph/teams/on-prem/
-# Uncomment/configure the following 3 lines if you are using this Huddo Boards deployment from Microsoft Teams
-# provider:
-#   env:
-#     MSGRAPH_TEAMS_MANIFEST_ID: "<id attribute from your teams app manifest.json>"
 
 user:
   env:
@@ -66,6 +66,12 @@ user:
     # CONNECTIONS_CLIENT_ID: huddoboards
     CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
     CONNECTIONS_ADMINS: '["admin1@company.example.com", "boss2@company.example.com", "PROF_GUID_3"]'
+
+provider:
+  env:
+# https://docs.huddo.com/boards/msgraph/teams/on-prem/
+# Uncomment/configure the following line if you are using this Huddo Boards deployment from Microsoft Teams
+#     MSGRAPH_TEAMS_MANIFEST_ID: "<id attribute from your teams app manifest.json>"
 
 migration:
   # configure access to the Connections Shared mount
