@@ -16,10 +16,10 @@ Send an email to [support@huddo.com](mailto:support@huddo.com) with the followin
 
 > Hi! I'd like to set up the Huddo Boards Microsoft Teams app for my company, [COMPANY NAME]. Here are the details:
 >
-> -   _(optional)_ Attach the `.zip` or `manifest.json` file of any previous Huddo Boards teams app you have used or been provided before.
-> -   [ ] The Application ID of the Huddo Boards application you have already registered in Microsoft Entra. <sup>See [Authenticating Huddo Boards with Microsoft 365](../auth/index.md)</sup>
-> -   [ ] `APP_URI` value from your helm chart values.
-> -   [ ] `API_GATEWAY` value from your helm chart values.
+> - _(optional)_ Attach the `.zip` or `manifest.json` file of any previous Huddo Boards teams app you have used or been provided before.
+> - [ ] The Application ID of the Huddo Boards application you have already registered in Microsoft Entra. <sup>See [Authenticating Huddo Boards with Microsoft 365](../auth/index.md)</sup>
+> - [ ] `APP_URI` value from your helm chart values.
+> - [ ] `API_GATEWAY` value from your helm chart values.
 
 We will generate your customized Huddo Boards Teams app and provide you up-to-date guidance on how to deploy it in your environment.
 
@@ -29,7 +29,7 @@ Updates to the Huddo Boards Teams app may need to be re-deployed via another cus
 
 Once you have your customised Teams app and advice from the Huddo team:
 
-1.  Open the Boards Helm Chart config used for deployment
+1. Open the Boards Helm Chart config used for deployment
 
     Add the following environment variable to `provider` (uncomment or add the section as required):
 
@@ -39,11 +39,11 @@ Once you have your customised Teams app and advice from the Huddo team:
             MSGRAPH_TEAMS_MANIFEST_ID: "<id attribute from your teams app manifest.json>"
     ```
 
-2.  Redeploy Boards helm chart as per command for Huddo Boards:
+2. Redeploy Boards helm chart as per command for Huddo Boards:
 
     [HCL Component Pack](../../cp/index.md#install-boards-helm-chart)
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 

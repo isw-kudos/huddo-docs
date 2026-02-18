@@ -27,16 +27,16 @@ Enter the values below and click `Register`
 
 Where BOARDS_URL is the URL to access your main Huddo Boards page. For example:
 
--   `https://connections.example.com/boards/auth/msgraph/callback` OR
--   `https://boards.example.com/auth/msgraph/callback`
+- `https://connections.example.com/boards/auth/msgraph/callback` OR
+- `https://boards.example.com/auth/msgraph/callback`
 
 Click `Register`
 
 ### Configure Required Scopes
 
-1.  Open the `Manifest` section
+1. Open the `Manifest` section
 
-1.  Replace the `requiredResourceAccess` section as per below
+1. Replace the `requiredResourceAccess` section as per below
 
     ![scopes to add](appreg-scopes.png)
 
@@ -164,13 +164,13 @@ At the end of this step you should have the following:
 
 ## Configure OAuth in Boards
 
-1.  Open the `Overview` section
+1. Open the `Overview` section
 
     Copy `Application (client) ID` & `Directory (tenant) ID`
 
     ![copy guids](appreg-client-id.png)
 
-1.  Open the `Certificates & secrets` section
+1. Open the `Certificates & secrets` section
 
     Click `New client secret`
 
@@ -184,7 +184,7 @@ At the end of this step you should have the following:
 
     ![copy the secret](appreg-client-secret3.png)
 
-1.  Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
+1. Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
 
     ```yaml
     global:
@@ -194,11 +194,11 @@ At the end of this step you should have the following:
             MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
     ```
 
-1.  Redeploy Boards Helm Chart as per command for Huddo Boards:
+1. Redeploy Boards Helm Chart as per command for Huddo Boards:
 
     [HCL Component Pack](../../cp/index.md#install-boards-helm-chart)
 
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz -i -f ./boards-cp.yaml --namespace connections
+        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections
 
     [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
 

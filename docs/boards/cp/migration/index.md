@@ -132,7 +132,7 @@ The default chart values use an NFS mount. Below are examples custom configurati
 
     We recommend running the helm chart with `--dry-run --debug` to confirm the yaml output
 
-1.  Host path
+1. Host path
 
     !!! tip
 
@@ -147,7 +147,7 @@ The default chart values use an NFS mount. Below are examples custom configurati
               hostPath:
                 path: /data/shared
 
-2.  Kubernetes CIFS Volume Driver (for Samba shares).
+2. Kubernetes CIFS Volume Driver (for Samba shares).
 
     Please read the [CIFS documentation](https://k8scifsvol.morimoto.net.br/)
 
@@ -177,7 +177,7 @@ The default chart values use an NFS mount. Below are examples custom configurati
 
 Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the huddo-boards-cp chart
 
-    helm upgrade huddo-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.3.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade huddo-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > **Note:** the configuration file has changed as of the v3 chart. Please add the new `sharedDrive` parameters described above
 
@@ -203,10 +203,10 @@ For example
 
 ## After Migration Complete
 
-1.  The Migration service can be removed. Please use the following command
+1. The Migration service can be removed. Please use the following command
 
         helm delete huddo-boards-cp-activity-migration --purge
 
-1.  Turn off the Activities application in WebSphere ISC
+1. Turn off the Activities application in WebSphere ISC
 
 > **Note:** There are reports that in some environments that the following Connections services are affected by this: seedlists, homepage, desktop plugin, email notifications and search message bus
