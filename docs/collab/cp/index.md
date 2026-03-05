@@ -95,3 +95,8 @@ For Connections on-premise you have two options:
 - [Apps Menu](../connections/apps-menu/on-prem.md)
 - [Widgets](../connections/widgets-on-prem.md)
 
+---
+
+## Migrate Wikis data
+
+Please follow the [instructions here](../../wikis/shift/index.md) for WikiShift
