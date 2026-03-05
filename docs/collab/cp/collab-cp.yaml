@@ -1,0 +1,203 @@
+x-mongo-config: &mongo-config
+  volumes:
+    - name: mongo-secret-vol
+      secret:
+        secretName: mongo-secret
+        defaultMode: 420
+  volumeMounts:
+    - name: mongo-secret-vol
+      mountPath: /etc/mongodb/x509
+
+x-env-array: &env-array
+  envArray:
+    - name: CONNECTIONS_HOSTNAME
+      valueFrom:
+        configMapKeyRef:
+          name: connections-env
+          key: ic-host
+    # - name: MONGO_HOSTNAME
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: connections-env
+    #       key: mongo-name
+    #       optional: true
+    # - name: MONGO_REPLICA_SET_NAME
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: connections-env
+    #       key: mongo-rs-name
+    - name: REDIS_CACHE_HOST
+      valueFrom:
+        configMapKeyRef:
+          name: connections-env
+          key: redis-node-service-name
+    - name: REDIS_CACHE_PORT
+      valueFrom:
+        configMapKeyRef:
+          name: connections-env
+          key: redis-node-service-port
+    - name: REDIS_CACHE_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: redis-secret
+          key: secret
+    - name: REDIS_CACHE_OPTIONS
+      valueFrom:
+        configMapKeyRef:
+          name: connections-env
+          key: redis-options
+
+global:
+  # setup authentication by following https://docs.huddo.com/boards/images/
+  repository: ghcr.io/isw-kudos
+  imagePullSecret: ghcr-pull-secret
+  env:
+    # MONGO_CERT_USER: kudos-boards
+    # MONGO_PARAMS: authMechanism=MONGODB-X509&tls=true&tlsCertificateKeyFile=/certs/client.pem&tlsCAFile=/certs/ca.pem
+    # MONGODB_URI: '${MONGO_PROTOCOL}://${MONGO_USER:?error}:${MONGO_PASSWORD:?error}@${MONGO_HOST:?error}/${MONGO_DB}?${MONGO_PARAMS:?error}'
+    APP_URI: https://devconn8.internal.isw.net.au/huddo
+    PATH_EDITOR: /huddo/editor
+    MONGO_PROTOCOL: mongodb
+    MONGO_HOST: mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017
+    MONGO_USER: root
+    MONGO_PASSWORD: password
+    MONGO_PARAMS: authSource=admin&replicaSet=rs0
+    S3_ENDPOINT: huddo-boards-cp-minio-service.connections.svc.cluster.local
+    S3_ACCESS_KEY: ioueygr4t589
+    S3_SECRET_KEY: 7a863d41-2d8f-4143-bc8a-02501edbea6f
+
+core:
+  image:
+    tag: huddo-main
+  ingress:
+    hosts:
+      - devconn8.internal.isw.net.au
+    path: /huddo
+
+# acl:
+#   env:
+#     NODE_ENV: production
+
+attachments:
+  ingress:
+    hosts:
+      - devconn8.internal.isw.net.au
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /attachments/$1
+    path: /huddo/attachments/?(.*)
+    pathType: ImplementationSpecific
+  env:
+    MONGODB_URI: 'mongodb://root:password@mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017/attachments?authSource=admin&replicaSet=rs0'
+    DEBUG: 'attachments:*,shared:*,prisma:*'
+
+discussions:
+  ingress:
+    hosts:
+      - devconn8.internal.isw.net.au
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /discussions/$1
+    path: /huddo/discussions/?(.*)
+    pathType: ImplementationSpecific
+  env:
+    MONGODB_URI: 'mongodb://root:password@mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017/discussions?authSource=admin&replicaSet=rs0'
+    DEBUG: 'discussions:*,shared:*,prisma:*'
+
+ideas:
+  image:
+    tag: huddo-main
+  ingress:
+    hosts:
+      - devconn8.internal.isw.net.au
+    path: /huddo/ideas
+  env:
+    APP_URI: https://devconn8.internal.isw.net.au/huddo
+    MONGODB_URI: 'mongodb://root:password@mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017/ideas?authSource=admin&replicaSet=rs0'
+    DEBUG: 'ideas:*,shared:*,prisma:*'
+
+wikis:
+  image:
+    tag: huddo-main
+  ingress:
+    path: /huddo/wikis
+    hosts:
+      - devconn8.internal.isw.net.au
+  env:
+    APP_URI: https://devconn8.internal.isw.net.au/huddo
+    API_PAGES_ENABLE_PURGE: true
+    MONGODB_URI: 'mongodb://root:password@mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017/wikis?authSource=admin&replicaSet=rs0'
+    DEBUG: 'wikis:*,shared:*,prisma:*'
+    NEXT_PUBLIC_BASE_PATH: /huddo/wikis
+    NODE_TLS_REJECT_UNAUTHORIZED: '0'
+
+editor:
+  ingress:
+    hosts:
+      - devconn8.internal.isw.net.au
+    path: /huddo/editor
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
+
+user:
+  env:
+    CONNECTIONS_CLIENT_ID: collab
+    CONNECTIONS_CLIENT_SECRET: 3V9g7PPsLpv1Awlo69rcajB7Nu8IolXpA4Ix71IkkLWUHo6uPU22b5OypvPU
+    CONNECTIONS_ADMINS: '["awelch@isw.net.au"]'
+    CONNECTIONS_URL: https://devconn8.internal.isw.net.au
+    LOGGER_LEVEL: debug
+    NODE_TLS_REJECT_UNAUTHORIZED: '0'
+
+provider:
+  env:
+    NODE_TLS_REJECT_UNAUTHORIZED: '0'
+
+socketcluster:
+  ingress:
+    hosts:
+      - devconn8.internal.isw.net.au
+    # path: /socketcluster
+
+wikishift:
+  ingress:
+    hosts:
+      - devconn8.internal.isw.net.au
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /wikishift/$1
+    path: /huddo/wikishift/?(.*)
+    pathType: ImplementationSpecific
+  volumes:
+    - name: shared-drive
+      nfs:
+        server: 192.168.11.62
+        path: /nfs/data/shared
+  volumeMounts:
+    - name: shared-drive
+      mountPath: /data
+  envArray:
+    - name: DB2_UID
+      valueFrom:
+        secretKeyRef:
+          name: wikishift-db2 # or whatever secret name you create
+          key: uid
+    - name: DB2_PWD
+      valueFrom:
+        secretKeyRef:
+          name: wikishift-db2
+          key: pwd
+  env:
+    APP_URI: https://devconn8.internal.isw.net.au/huddo
+    MONGODB_URI: 'mongodb://root:password@mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017/wikis?authSource=admin&replicaSet=rs0'
+    MONGODB_URI_ATTACHMENTS: 'mongodb://root:password@mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017/attachments?authSource=admin&replicaSet=rs0'
+    MONGODB_URI_DISCUSSIONS: 'mongodb://root:password@mongo-mongodb-0.mongo-mongodb-headless.collab.svc.cluster.local:27017/discussions?authSource=admin&replicaSet=rs0'
+    CNX_HOSTNAME: https://devconn8.internal.isw.net.au
+    DB2_HOSTNAME: dev-c8db.internal.isw.net.au
+    DB2_DATABASE: WIKIS
+    DB2_PORT: 50000
+    # CONCURRENCY_SQL: 10
+    CONCURRENCY_WIKIS: 1
+    # CONCURRENCY_PAGES_PER_WIKI: 4
+    # CONCURRENCY_FILES_PER_WIKI: 2
+    # CONCURRENCY_COMMENTS_PER_WIKI: 8
+    DEBUG: 'wikishift:*,shared:*'
+    WIKIS_CONTENT_DIR: /data/wikis/upload
+    # PURGE_MIGRATED_IDS: c4f52a6a-0466-419a-a88f-067f7135edd9,58026f58-f679-431c-8fc6-b523fce17ba9
+    IMMEDIATELY_MIGRATE_IDS: c4f52a6a-0466-419a-a88f-067f7135edd9,58026f58-f679-431c-8fc6-b523fce17ba9
