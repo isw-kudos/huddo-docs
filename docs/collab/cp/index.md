@@ -28,7 +28,7 @@ For more details on configuring a reverse proxy, please [see below](#proxy-confi
 
 ## Setup OAuth
 
-Please follow [our instructions](../connections/auth-on-prem.md) to setup HCL Connections OAuth for Huddo Collab.
+Please follow [our instructions](./auth-on-prem.md) to setup HCL Connections OAuth for Huddo Collab.
 
 The OAuth Callback URL for this configuration is `https://[HUDDO_URL]/auth/connections/callback`
 
