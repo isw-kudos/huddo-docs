@@ -2,7 +2,7 @@
 
 ## Tools
 
-Huddo Collab has many tools available for you to use, with both Ideas and Wikis available now!
+Huddo Collab has many tools available for you to use, with both Ideas and Wikis available in beta now!
 
 1. [Ideas](../ideas/index.md)
 1. [Wikis](../wikis/index.md)
