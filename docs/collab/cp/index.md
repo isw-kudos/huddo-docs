@@ -84,7 +84,7 @@ For Connections on-premise you have two options:
 
 1. `nginx` - if you have an NGINX (e.g. customizer) in front of IHS use that instead to support websockets and use one less proxy. Follow [these instructions](../proxy/nginx.md).
 
-1. `httpd` - please follow [these instructions](../connections/httpd/index.md).
+1. `httpd` - please follow [these instructions](./httpd.md).
 
 ---
 
@@ -93,7 +93,7 @@ For Connections on-premise you have two options:
 ### HCL Connections
 
 - [Apps Menu](../connections/apps-menu/on-prem.md)
-- [Widgets](../connections/widgets-on-prem.md)
+- [Widgets](./widgets-on-prem.md)
 
 ---
 
