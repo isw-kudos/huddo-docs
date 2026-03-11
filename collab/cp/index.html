@@ -7475,6 +7475,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Mongo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploying-to-the-connections-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploying to the connections namespace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-to-a-separate-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploying to a separate namespace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-mongodb-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating the MongoDB User
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -7618,7 +7657,76 @@
 <h3 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h3>
 <p>Huddo Collab for Component Pack deploys a Minio service. Please follow <a href="minio/">S3 storage details here</a> to configure the NFS mount.</p>
 <h3 id="mongo">Mongo<a class="headerlink" href="#mongo" title="Permanent link">&para;</a></h3>
-<p>Huddo Collab uses the Mongo database already deployed inside the Component Pack. There is no configuration required.</p>
+<p>Huddo Collab uses the MongoDB database already deployed by Component Pack, authenticating via <strong>X.509 certificates</strong>.</p>
+<h4 id="deploying-to-the-connections-namespace">Deploying to the <code>connections</code> namespace<a class="headerlink" href="#deploying-to-the-connections-namespace" title="Permanent link">&para;</a></h4>
+<p>If deploying directly into the <code>connections</code> namespace, the required <code>connections-env</code> ConfigMap, <code>mongo-secret</code>, and <code>redis-secret</code> already exist. Skip ahead to <a href="#creating-the-mongodb-user">Creating the MongoDB User</a>.</p>
+<h4 id="deploying-to-a-separate-namespace">Deploying to a separate namespace<a class="headerlink" href="#deploying-to-a-separate-namespace" title="Permanent link">&para;</a></h4>
+<p>The chart references resources that live in the <code>connections</code> namespace. Copy them to your target namespace:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># ConfigMap with Connections environment config (mongo hostname, redis host/port, etc.)</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>configmap<span class="w"> </span>connections-env<span class="w"> </span>-n<span class="w"> </span>connections<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/namespace: connections/namespace: collab/&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-
+
+<span class="c1"># MongoDB x509 client certificate secret</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>mongo-secret<span class="w"> </span>-n<span class="w"> </span>connections<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/namespace: connections/namespace: collab/&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-
+
+<span class="c1"># Redis password secret</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>redis-secret<span class="w"> </span>-n<span class="w"> </span>connections<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/namespace: connections/namespace: collab/&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These are static copies. If any of these resources are updated in the <code>connections</code> namespace, they must be re-copied. Consider <a href="https://github.com/emberstack/kubernetes-reflector">Reflector</a> to keep them in sync automatically.</p>
+</div>
+<p>Then patch the hostnames to use fully qualified names so pods in your namespace can resolve them:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>patch<span class="w"> </span>configmap<span class="w"> </span>connections-env<span class="w"> </span>-n<span class="w"> </span>collab<span class="w"> </span>--type<span class="o">=</span>merge<span class="w"> </span>-p<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">  &quot;data&quot;: {</span>
+<span class="s1">    &quot;redis-node-service-name&quot;: &quot;haproxy-redis.connections.svc.cluster.local&quot;,</span>
+<span class="s1">    &quot;redis-sentinel-node-service-name&quot;: &quot;redis-sentinel.connections.svc.cluster.local&quot;,</span>
+<span class="s1">    &quot;redis-options&quot;: &quot;{\&quot;sentinels\&quot;: [{\&quot;host\&quot;: \&quot;redis-sentinel.connections.svc.cluster.local\&quot;, \&quot;port\&quot;: 26379 }]}&quot;,</span>
+<span class="s1">    &quot;mongo-name&quot;: &quot;mongo5.connections.svc.cluster.local&quot;</span>
+<span class="s1">  }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Re-apply this patch any time the <code>connections-env</code> configmap is re-copied from the <code>connections</code> namespace.</p>
+</div>
+<h4 id="creating-the-mongodb-user">Creating the MongoDB User<a class="headerlink" href="#creating-the-mongodb-user" title="Permanent link">&para;</a></h4>
+<p>You must create a dedicated X.509 user in MongoDB's <code>$external</code> database. Connect to the <strong>primary</strong> node (must not be a secondary).</p>
+<p>First, find the primary:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mongo5-0<span class="w"> </span>-c<span class="w"> </span>mongo5<span class="w"> </span>-n<span class="w"> </span>connections<span class="w"> </span>--<span class="w"> </span>mongosh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--tls<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--tlsCertificateKeyFile<span class="w"> </span>/etc/ca/user_admin.pem<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--tlsCAFile<span class="w"> </span>/etc/ca/internal-ca-chain.cert.pem<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--host<span class="w"> </span>mongo5-0.mongo5.connections.svc.cluster.local<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--authenticationMechanism<span class="o">=</span>MONGODB-X509<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--authenticationDatabase<span class="w"> </span><span class="s1">&#39;$external&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-u<span class="w"> </span><span class="s1">&#39;C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=admin,emailAddress=admin@mongodb&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--eval<span class="w"> </span><span class="s2">&quot;rs.status().members.find(m =&gt; m.stateStr === &#39;PRIMARY&#39;).name&quot;</span>
+</code></pre></div>
+<p>Then reconnect to the primary and create the user:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">getSiblingDB</span><span class="p">(</span><span class="s2">&quot;$external&quot;</span><span class="p">).</span><span class="nx">runCommand</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">createUser</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=huddo-collab,emailAddress=huddo-collab@mongodb&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;collab-attachments&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;collab-discussions&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;collab-ideas&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;collab-wikis&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;collab-user&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;collab-licence&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">writeConcern</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;majority&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">wtimeout</span><span class="o">:</span><span class="w"> </span><span class="mf">5000</span><span class="w"> </span><span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+<p>Set <code>MONGO_CERT_USER: huddo-collab</code> for each service in your <code>collab-cp.yaml</code> (see the <a href="collab-cp.yaml">config file</a>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For development environments, set <code>MONGO_CERT_USER: admin</code> to reuse the existing superuser. No database changes are required, but this grants full cluster access.</p>
+</div>
 <hr />
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
 <h3 id="update-config-file">Update Config file<a class="headerlink" href="#update-config-file" title="Permanent link">&para;</a></h3>
@@ -7705,7 +7813,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-03-10
+    2026-03-11
   </span>
 
     
