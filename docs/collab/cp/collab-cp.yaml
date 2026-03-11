@@ -7,6 +7,7 @@ global:
   env:
     APP_URI: https://[YOUR_HOSTNAME]/huddo
     PATH_EDITOR: /huddo/editor
+    MONGO_CERT_USER: kudos-boards
     S3_ENDPOINT: [S3_SERVICE_HOSTNAME]
     S3_ACCESS_KEY: [S3_ACCESS_KEY]
     S3_SECRET_KEY: [S3_SECRET_KEY]
@@ -30,8 +31,7 @@ attachments:
       nginx.ingress.kubernetes.io/rewrite-target: /attachments/$1
     path: /huddo/attachments/?(.*)
     pathType: ImplementationSpecific
-  env:
-    MONGO_CERT_USER: [MONGO_X509_USERNAME]
+  env: []
 
 discussions:
   ingress:
@@ -41,8 +41,7 @@ discussions:
       nginx.ingress.kubernetes.io/rewrite-target: /discussions/$1
     path: /huddo/discussions/?(.*)
     pathType: ImplementationSpecific
-  env:
-    MONGO_CERT_USER: [MONGO_X509_USERNAME]
+  env: []
 
 ideas:
   ingress:
@@ -50,8 +49,7 @@ ideas:
       - "[YOUR_HOSTNAME]"
     path: /huddo/ideas/?(.*)
     pathType: ImplementationSpecific
-  env:
-    MONGO_CERT_USER: [MONGO_X509_USERNAME]
+  env: []
 
 wikis:
   ingress:
@@ -60,7 +58,6 @@ wikis:
     path: /huddo/wikis/?(.*)
     pathType: ImplementationSpecific
   env:
-    MONGO_CERT_USER: [MONGO_X509_USERNAME]
     API_PAGES_ENABLE_PURGE: true
     NEXT_PUBLIC_BASE_PATH: /huddo/wikis
 
@@ -74,15 +71,13 @@ editor:
 
 user:
   env:
-    MONGO_CERT_USER: [MONGO_X509_USERNAME]
+    MONGO_DB: boards-user # shares the same DB as boards user service
     CONNECTIONS_CLIENT_ID: [CLIENT_ID]
     CONNECTIONS_CLIENT_SECRET: [CLIENT_SECRET]
     CONNECTIONS_ADMINS: '["[ADMIN_EMAIL]"]'
     CONNECTIONS_URL: https://[CONNECTIONS_URL]
 
-licence:
-  env:
-    MONGO_CERT_USER: [MONGO_X509_USERNAME]
+licence: {}
 
 socketcluster:
   ingress:
@@ -162,7 +157,6 @@ wikishift:
           name: wikishift-db2
           key: pwd
   env:
-    MONGO_CERT_USER: [MONGO_X509_USERNAME]
     CNX_HOSTNAME: https://[CONNECTIONS_URL]
     DB2_HOSTNAME: [DB2_HOSTNAME]
     DB2_DATABASE: WIKIS

@@ -108,11 +108,11 @@ kubectl exec -it mongo5-0 -c mongo5 -n connections -- mongosh \
   --eval "rs.status().members.find(m => m.stateStr === 'PRIMARY').name"
 ```
 
-Then reconnect to the primary and create the user:
+Then reconnect replacing the `--host` with the primary hostname, and grant access to the `kudos-boards` user:
 
 ```js
 db.getSiblingDB("$external").runCommand({
-  createUser: "C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=huddo-collab,emailAddress=huddo-collab@mongodb",
+  grantRolesToUser: "C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=kudos-boards,emailAddress=kudos-boards@mongodb",
   roles: [
     { role: "readWrite", db: "collab-attachments" },
     { role: "readWrite", db: "collab-discussions" },
@@ -125,7 +125,11 @@ db.getSiblingDB("$external").runCommand({
 })
 ```
 
-Set `MONGO_CERT_USER: huddo-collab` for each service in your `collab-cp.yaml` (see the [config file](./collab-cp.yaml)).
+You can validate the user was updated correctly by running:
+```
+db.getSiblingDB("$external").getUser("C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=kudos-boards,emailAddress=kudos-boards@mongodb")
+
+```
 
 !!! tip
 
@@ -141,13 +145,14 @@ Download our [config file](./collab-cp.yaml) and update all the values inside. D
 
 **Kubernetes variables**:
 
-| Key                      | Description                                                            |
-| ------------------------ | ---------------------------------------------------------------------- |
-| `global.env.APP_URI`     | `https://[HUDDO_URL]` (e.g. `https://connections.example.com/huddo`)   |
-| `webfront.ingress.hosts` | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)      |
-| `core.ingress.hosts`     | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)      |
-| `minio.nfs.server`       | IP address of the NFS Server file mount (e.g. `192.168.10.20`)         |
-| `minio.storageClassName` | (Optional) name of the storage class when using dynamic provisioning   |
+| Key                          | Description                                                          |
+|------------------------------|----------------------------------------------------------------------|
+| `global.env.APP_URI`         | `https://[HUDDO_URL]` (e.g. `https://connections.example.com/huddo`) |
+| `global.env.MONGO_CERT_USER` | `kudos-boards`                                                       |
+| `webfront.ingress.hosts`     | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)    |
+| `core.ingress.hosts`         | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)    |
+| `minio.nfs.server`           | IP address of the NFS Server file mount (e.g. `192.168.10.20`)       |
+| `minio.storageClassName`     | (Optional) name of the storage class when using dynamic provisioning |
 
 **Collab variables**:
 
