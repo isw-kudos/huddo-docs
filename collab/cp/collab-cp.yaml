@@ -4,6 +4,7 @@
 global:
   repository: quay.io/huddo
   imagePullSecret: quay
+  imageTag: collab-[BIG_ENDIAN_DATE] # e.g. collab-2026-03-12
   env:
     APP_URI: https://[YOUR_HOSTNAME]/huddo
     PATH_EDITOR: /huddo/editor
