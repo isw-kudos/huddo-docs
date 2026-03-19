@@ -7545,6 +7545,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#set-kubernetes-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set Kubernetes Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-collab-helm-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7752,27 +7763,15 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 </tr>
 <tr>
 <td><code>global.env.S3_ACCESS_KEY</code></td>
-<td>``</td>
+<td>Random string to also set in Kubernetes</td>
 </tr>
 <tr>
 <td><code>global.env.S3_SECRET_KEY</code></td>
-<td>``</td>
+<td>Random string to also set in Kubernetes</td>
 </tr>
 <tr>
 <td><code>global.env.SOCKET_CLUSTER_SECRET</code></td>
-<td>``</td>
-</tr>
-<tr>
-<td><code>global.env.WIKIS_API_KEY</code></td>
-<td>``</td>
-</tr>
-<tr>
-<td><code>global.env.IDEAS_API_KEY</code></td>
-<td>``</td>
-</tr>
-<tr>
-<td><code>global.env.DISCUSSIONS_API_KEY</code></td>
-<td>``</td>
+<td>Random string to also set in Kubernetes</td>
 </tr>
 <tr>
 <td><code>core.ingress.hosts</code></td>
@@ -7837,6 +7836,9 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 </tbody>
 </table>
 <hr />
+<h3 id="set-kubernetes-secrets">Set Kubernetes Secrets<a class="headerlink" href="#set-kubernetes-secrets" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>kubectl create secret generic myregkey -n connections --docker-server=hclcr.io/cnx --docker-username=&lt;&lt;helm_repo_username&gt;&gt; --docker-password &lt;&lt;helm_repo_password&gt;&gt;
+</code></pre></div>
 <h3 id="install-collab-helm-chart">Install Collab Helm Chart<a class="headerlink" href="#install-collab-helm-chart" title="Permanent link">&para;</a></h3>
 <p>Install the Boards services via our Helm chart</p>
 <div class="highlight"><pre><span></span><code>helm upgrade huddo-collab-cp https://docs.huddo.com/assets/config/kubernetes/huddo-collab-cp-0.1.0.tgz -i -f ./collab-cp.yaml --namespace connections --recreate-pods

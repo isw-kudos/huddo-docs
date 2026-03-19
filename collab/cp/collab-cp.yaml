@@ -14,9 +14,6 @@ global:
     S3_SECRET_KEY: [S3_SECRET_KEY]
     # These secrets should be changed from chart defaults for production
     SOCKET_CLUSTER_SECRET: [RANDOM_SECRET]
-    WIKIS_API_KEY: [RANDOM_SECRET]
-    IDEAS_API_KEY: [RANDOM_SECRET]
-    DISCUSSIONS_API_KEY: [RANDOM_SECRET]
 
 core:
   ingress:
