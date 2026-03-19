@@ -145,18 +145,31 @@ Download our [config file](./collab-cp.yaml) and update all the values inside. D
 
 **Kubernetes variables**:
 
-| Key                          | Description                                                          |
-|------------------------------|----------------------------------------------------------------------|
-| `global.env.APP_URI`         | `https://[HUDDO_URL]` (e.g. `https://connections.example.com/huddo`) |
-| `global.env.MONGO_CERT_USER` | `kudos-boards`                                                       |
-| `webfront.ingress.hosts`     | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)    |
-| `core.ingress.hosts`         | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)    |
-| `minio.nfs.server`           | IP address of the NFS Server file mount (e.g. `192.168.10.20`)       |
-| `minio.storageClassName`     | (Optional) name of the storage class when using dynamic provisioning |
-
-**Collab variables**:
-
-Are [detailed here](./common.md).
+| Key                                   | Description                                                                                                            |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| `global.env.APP_URI`                  | `https://[HUDDO_URL]` (e.g. `https://connections.example.com/huddo`)                                                   |
+| `global.env.S3_ENDPOINT`              | `https://[HUDDO_URL]` (e.g. `https://connections.example.com/huddo`)                                                   |
+| `global.env.S3_ACCESS_KEY`            | ``                                                                                                         |
+| `global.env.S3_SECRET_KEY`            | ``                                                                                                         |
+| `global.env.SOCKET_CLUSTER_SECRET`    | ``                                                                                                         |
+| `global.env.WIKIS_API_KEY`            | ``                                                                                                         |
+| `global.env.IDEAS_API_KEY`            | ``                                                                                                         |
+| `global.env.DISCUSSIONS_API_KEY`      | ``                                                                                                         |
+| `core.ingress.hosts`                  | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `attachments.ingress.hosts`           | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `discussions.ingress.hosts`           | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `ideas.ingress.hosts`                 | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `wikis.ingress.hosts`                 | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `editor.ingress.hosts`                | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `user.env.CONNECTIONS_CLIENT_ID`      | oAuth client-id, usually `collab`                                                                                      |
+| `user.env.CONNECTIONS_CLIENT_SECRET`  | oAuth client-secret as configured in [this step](./auth-on-prem.md)                                                    |
+| `user.env.CONNECTIONS_URL`            | HCL Connections URL, e.g. `https://connections.example.com`                                                            |
+| `user.env.CONNECTIONS_ADMINS`         | Emails or GUIDs of users to grant admin permissions.<br/>e.g. `"[\"admin1@company.example.com\", \"PROF_GUID_2\"]`"    |
+| `socketcluster.ingress.hosts`         | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `wikishift.ingress.hosts`             | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
+| `wikishift.volumes.nfs.server`        | `[NFS_SERVER_IP]`                                                                                                      |
+| `env.CNX_HOSTNAME`                    | `https://[CONNECTIONS_URL]` (with protocol, e.g. `https://connections.example.com`)                                    |
+| `env.DB2_HOSTNAME`                    | `[DB2_HOSTNAME]` (no protocol, e.g. `db2.example.com`)                                                                 |
 
 ---
 
