@@ -149,12 +149,9 @@ Download our [config file](./collab-cp.yaml) and update all the values inside. D
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | `global.env.APP_URI`                  | `https://[HUDDO_URL]` (e.g. `https://connections.example.com/huddo`)                                                   |
 | `global.env.S3_ENDPOINT`              | `https://[HUDDO_URL]` (e.g. `https://connections.example.com/huddo`)                                                   |
-| `global.env.S3_ACCESS_KEY`            | ``                                                                                                         |
-| `global.env.S3_SECRET_KEY`            | ``                                                                                                         |
-| `global.env.SOCKET_CLUSTER_SECRET`    | ``                                                                                                         |
-| `global.env.WIKIS_API_KEY`            | ``                                                                                                         |
-| `global.env.IDEAS_API_KEY`            | ``                                                                                                         |
-| `global.env.DISCUSSIONS_API_KEY`      | ``                                                                                                         |
+| `global.env.S3_ACCESS_KEY`            | Random string to also set in Kubernetes                                                                                |
+| `global.env.S3_SECRET_KEY`            | Random string to also set in Kubernetes                                                                                |
+| `global.env.SOCKET_CLUSTER_SECRET`    | Random string to also set in Kubernetes                                                                                |
 | `core.ingress.hosts`                  | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
 | `attachments.ingress.hosts`           | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
 | `discussions.ingress.hosts`           | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)                                                      |
@@ -172,6 +169,12 @@ Download our [config file](./collab-cp.yaml) and update all the values inside. D
 | `env.DB2_HOSTNAME`                    | `[DB2_HOSTNAME]` (no protocol, e.g. `db2.example.com`)                                                                 |
 
 ---
+
+### Set Kubernetes Secrets
+
+```
+kubectl create secret generic myregkey -n connections --docker-server=hclcr.io/cnx --docker-username=<<helm_repo_username>> --docker-password <<helm_repo_password>>
+```
 
 ### Install Collab Helm Chart
 
