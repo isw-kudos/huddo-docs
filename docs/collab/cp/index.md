@@ -200,7 +200,7 @@ For Connections on-premise you have two options:
 
 ### HCL Connections
 
-- [Apps Menu](../connections/apps-menu/on-prem.md)
+- [Apps Menu](./apps-menu-on-prem.md)
 - [Widgets](./widgets-on-prem.md)
 
 ---
