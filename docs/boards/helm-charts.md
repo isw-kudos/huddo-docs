@@ -10,11 +10,16 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 
 ## Standalone Kubernetes
 
+!!! danger
+
+    As of `huddo-boards-2.0.0.tgz` we have migrated from ingress-nginx to Traefik. Please follow our [migration guide](./traefik.md).
+
 ### huddo-boards
 
 - [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)
 - 1.1.0 - allow additionalPaths on huddo-app ingress
 - [1.1.1](../assets/config/kubernetes/huddo-boards-1.1.1.tgz) - fix for ingress session cookie samesite (polling in a CORs frame, e.g. Teams)
+- [2.0.0](../assets/config/kubernetes/huddo-boards-2.0.0.tgz) - Move from ingress-nginx to Traefik 
 
 ### huddo-boards-activity-migration
 
@@ -35,6 +40,10 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
         cd /pv-connections/kudos-boards-minio/
         chown 1000:1000 -R .
 
+!!! danger
+
+    As of `huddo-boards-cp-2.0.0.tgz` we have migrated from ingress-nginx to Traefik. Please follow our [migration guide](./traefik.md).
+
 - [1.0.0](../assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)
 - [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
 - [1.1.1](../assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz) - Support custom storageClassName instead of PV
@@ -43,6 +52,7 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 - [1.3.0](../assets/config/kubernetes/huddo-boards-cp-1.3.0.tgz) - Support CNX 8 Mongo 7 (use configMap `mongo-name` instead of `mongo5-rs-members-hosts`) with images after date `2025-02-13`
 - [1.3.1](../assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz) - Change ingress.pathType to ImplementationSpecific to allow regex rewrites
 - [1.4.0](../assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz) - Support CNX 8 CR13 cache rename - new env in configMap and secretKeyRef
+- [2.0.0](../assets/config/kubernetes/huddo-boards-cp-2.0.0.tgz) - Move from ingress-nginx to Traefik 
 
 ### huddo-boards-cp-activity-migration
 

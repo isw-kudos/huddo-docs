@@ -4,6 +4,18 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2026
 
+### March
+
+2026-03-30
+
+Fixes:
+
+- Undo/Ctrl+Z in a description clears the description
+- Comment field breaks when pressing back with unsubmitted comment
+- Tour formatting
+- Card title editing when moving cursor
+- Translation case issues
+
 ### February
 
 2026-02-04
