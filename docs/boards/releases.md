@@ -30,9 +30,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2026
 
-#### 2026-03-30
-
-2026-03-30
+#### 2026-03-29
 
 Fixes:
 
