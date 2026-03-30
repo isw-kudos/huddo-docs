@@ -8136,13 +8136,11 @@ ingress:
   -n <namespace> --ignore-not-found</p>
 </div>
 <h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Ingress objects updated</p>
-<p>Confirm CLASS shows the Traefik IngressClass for both core and webfront:</p>
-<p>kubectl get ingress -n <namespace></p>
-</li>
-</ol>
+<p>1 . Ingress objects updated</p>
+<div class="highlight"><pre><span></span><code>Confirm CLASS shows the Traefik IngressClass for both core and webfront:
+
+kubectl get ingress -n &lt;namespace&gt;
+</code></pre></div>
 <p>Expected:</p>
 <table>
 <thead>
@@ -8171,35 +8169,26 @@ ingress:
 </tr>
 </tbody>
 </table>
-<ol>
-<li>
-<p>Middleware CRDs created</p>
-<p>kubectl get middleware -n <namespace></p>
-</li>
-</ol>
+<p>2 . Middleware CRDs created</p>
+<div class="highlight"><pre><span></span><code>kubectl get middleware -n &lt;namespace\&gt;
+</code></pre></div>
 <p>Expected:</p>
 <div class="highlight"><pre><span></span><code>&lt;release&gt;-core-strip-prefix
 &lt;release&gt;-webfront-strip-prefix
 </code></pre></div>
-<ol>
-<li>Traffic routing</li>
-</ol>
+<p>3 . Traffic routing</p>
 <p>API health check — path stripping must be working for this to return 200</p>
 <div class="highlight"><pre><span></span><code>curl -sk https://&lt;your-api-hostname&gt;/api-boards/health
 </code></pre></div>
 <p>Webfront — should return the HTML shell</p>
 <div class="highlight"><pre><span></span><code>curl -sk https://&lt;your-app-hostname&gt;/boards/
 </code></pre></div>
-<ol>
-<li>
-<p>Functional verification</p>
-</li>
-<li>
-<p>Log in to Huddo Boards and confirm the board list loads</p>
-</li>
+<p>4 . Functional verification</p>
+<ul>
+<li>Log in to Huddo Boards and confirm the board list loads</li>
 <li>Create a board and confirm it persists</li>
 <li>Open a board and confirm real-time updates work (socket.io)</li>
-</ol>
+</ul>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="404-on-all-api-boards-routes">404 on all /api-boards/* routes<a class="headerlink" href="#404-on-all-api-boards-routes" title="Permanent link">&para;</a></h3>
 <p>The StripPrefix middleware strips /api-boards before forwarding to the core service. If the middleware was not created or is not referenced correctly, the request reaches core with the full path and returns 404.</p>
