@@ -30,6 +30,16 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2026
 
+#### 2026-03-29
+
+Fixes:
+
+- Undo/Ctrl+Z in a description clears the description
+- Comment field breaks when pressing back with unsubmitted comment
+- Tour formatting
+- Card title editing when moving cursor
+- Translation case issues
+
 #### 2026-02-04
 
 Improvements:
