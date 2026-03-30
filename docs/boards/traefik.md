@@ -142,7 +142,7 @@ The upgrade creates two new StripPrefix Middleware CRDs and updates the two Ingr
 
 ## Verification
 
-1. Ingress objects updated
+1 . Ingress objects updated
 
     Confirm CLASS shows the Traefik IngressClass for both core and webfront:
 
@@ -155,16 +155,16 @@ Expected:
 | <release\>-core     | <your-api-hostname\> | cnx-ingress-traefik | <ip\>   | 80, 443 |
 | <release\>-webfront | <your-app-hostname\> | cnx-ingress-traefik | <ip\>   | 80, 443 |
 
-2. Middleware CRDs created
+2 . Middleware CRDs created
 
-    kubectl get middleware -n <namespace>
+    kubectl get middleware -n <namespace\>
 
 Expected:
 
     <release>-core-strip-prefix
     <release>-webfront-strip-prefix
 
-3. Traffic routing
+3 . Traffic routing
 
 API health check — path stripping must be working for this to return 200
 
@@ -174,7 +174,7 @@ Webfront — should return the HTML shell
 
     curl -sk https://<your-app-hostname>/boards/
 
-4. Functional verification
+4 . Functional verification
 
 * Log in to Huddo Boards and confirm the board list loads
 * Create a board and confirm it persists
