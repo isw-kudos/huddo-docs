@@ -24,10 +24,8 @@ This guide assumes you have already completed Phases 1 and 2 of the HCL migratio
 
 Verify Traefik is active:
 
-    ```
     kubectl get pods -n <namespace> | grep traefik
     kubectl get ingressclass
-    ```
 
 ### IngressClass name
 
@@ -35,7 +33,6 @@ The component pack charts default to ingressClassName: cnx-ingress-traefik, whic
 
 If you installed Traefik yourself (e.g. helm install traefik traefik/traefik), the IngressClass is typically traefik and you must override it in your values file:
 
-    ```
     core:
     ingress:
         ingressClassName: traefik
@@ -43,7 +40,6 @@ If you installed Traefik yourself (e.g. helm install traefik traefik/traefik), t
     webfront:
     ingress:
         ingressClassName: traefik
-    ```
 
 ### Know your TLS configuration
 
@@ -65,7 +61,6 @@ If Traefik was installed via the HCL migration kit, update the Traefik Helm valu
 
 #### traefik-values.yaml
 
-    ```
     ports:
     websecure:
         transport:
@@ -73,17 +68,15 @@ If Traefik was installed via the HCL migration kit, update the Traefik Helm valu
             readTimeout: 3600s
             writeTimeout: 3600s
             idleTimeout: 3600s
-    ```
 
 Or via --set flags:
 
-    ```
     helm upgrade cnx-ingress traefik/traefik \
     --reuse-values \
     --set "ports.websecure.transport.respondingTimeouts.readTimeout=3600s" \
     --set "ports.websecure.transport.respondingTimeouts.writeTimeout=3600s" \
     --set "ports.websecure.transport.respondingTimeouts.idleTimeout=3600s"
-    ```
+
 Without this, the Traefik default readTimeout (60s) may terminate long-running websocket connections.
 
 !!! note
@@ -96,7 +89,6 @@ Add the following to your values file. Replace <your-hostname> / <your-tls-secre
 
 ### core (API service)
 
-    ```
     core:
     ingress:
         hosts:
@@ -108,7 +100,6 @@ Add the following to your values file. Replace <your-hostname> / <your-tls-secre
         traefik:
         stripPrefix:
             enabled: true   # creates a StripPrefix Middleware CRD and wires up the annotation automatically
-    ```
 
 !!! note
 
@@ -116,7 +107,6 @@ Add the following to your values file. Replace <your-hostname> / <your-tls-secre
 
 ### webfront (UI service)
 
-    ```
     webfront:
     ingress:
         hosts:
@@ -128,17 +118,14 @@ Add the following to your values file. Replace <your-hostname> / <your-tls-secre
         traefik:
         stripPrefix:
             enabled: true
-    ```
 
 ## Performing the upgrade
 
-    ```
     helm upgrade huddo-boards-cp \
     <path-to-chart> \
     -n <namespace> \
     --reuse-values \
     -f <your-values.yaml>
-    ```
 
 The --reuse-values flag preserves all previously deployed configuration and layers only the new values on top, consistent with the approach used by the HCL migration kit for other Component Pack charts.
 
@@ -148,12 +135,10 @@ The upgrade creates two new StripPrefix Middleware CRDs and updates the two Ingr
 
     If any Middleware CRDs already exist in the namespace from a previous migration attempt, delete them first to avoid ownership conflicts:
 
-    ```
     kubectl delete middleware \
       <release>-core-strip-prefix \
       <release>-webfront-strip-prefix \
       -n <namespace> --ignore-not-found
-    ```
 
 ## Verification
 
@@ -165,10 +150,10 @@ kubectl get ingress -n <namespace>
 
 Expected:
 
-| NAME               | HOSTS               | CLASS               | ADDRESS | PORTS   | 
-| ------------------ | ------------------- | ------------------- | ------- | ------- |
-| <release>-core     | <your-api-hostname> | cnx-ingress-traefik | <ip>    | 80, 443 |
-| <release>-webfront | <your-app-hostname> | cnx-ingress-traefik | <ip>    | 80, 443 |
+| NAME                 | HOSTS                 | CLASS               | ADDRESS | PORTS   | 
+| -------------------- | --------------------- | ------------------- | ------- | ------- |
+| \<release\>-core     | \<your-api-hostname\> | cnx-ingress-traefik | \<ip\>  | 80, 443 |
+| \<release\>-webfront | \<your-app-hostname\> | cnx-ingress-traefik | \<ip\>  | 80, 443 |
 
 1. Middleware CRDs created
 
@@ -176,10 +161,8 @@ Expected:
 
 Expected:
 
-    ```
     <release>-core-strip-prefix
     <release>-webfront-strip-prefix
-    ```
 
 1. Traffic routing
 
@@ -205,10 +188,8 @@ The StripPrefix middleware strips /api-boards before forwarding to the core serv
 
 Check:
 
-    ```
     kubectl get middleware -n <namespace>
     kubectl describe ingress <release>-core -n <namespace>
-    ```
 
 Confirm the traefik.ingress.kubernetes.io/router.middlewares annotation on the Ingress references <namespace>-<release>-core-strip-prefix@kubernetescrd.
 
@@ -220,20 +201,16 @@ Same cause for webfront. Verify <release>-webfront-strip-prefix exists and is re
 
 Confirm the sticky cookie annotations are present on the core Service (not Ingress — Traefik reads service.* annotations from the Service object):
 
-    ```
     kubectl get svc <release>-core -n <namespace> \
     -o jsonpath='{.metadata.annotations}' | tr ',' '\n' | grep sticky
-    ```
 
 Expected output:
 
-    ```
     traefik.ingress.kubernetes.io/service.sticky.cookie: "true"
     traefik.ingress.kubernetes.io/service.sticky.cookie.name: "traefik_session"
     traefik.ingress.kubernetes.io/service.sticky.cookie.secure: "true"
     traefik.ingress.kubernetes.io/service.sticky.cookie.httponly: "true"
     traefik.ingress.kubernetes.io/service.sticky.cookie.samesite: "none"
-    ```
 
 ### Legacy nginx Ingress objects remain after migration
 
@@ -251,20 +228,16 @@ Delete each legacy nginx ingress:
 
 A resource (typically the minio PersistentVolume) exists in the cluster but is not tracked by Helm. Adopt it:
 
-    ```
     kubectl patch pv <pv-name> --type=merge -p \
     '{"metadata":{"labels":{"app.kubernetes.io/managed-by":"Helm"},"annotations":{"meta.helm.sh/release-name":"<release>","meta.helm.sh/release-namespace":"<namespace>"}}}'
-    ```
-    
+
 ### Residual nginx annotations after upgrade
 
 When using --reuse-values, old nginx.ingress.kubernetes.io/* annotations from the v1.x deployment persist in the Helm release values and appear on the Ingress objects. These are ignored by Traefik and are harmless, but can be cleaned up by explicitly setting empty annotations in your values file:
 
-    ```
     core:
     ingress:
         annotations: {}
     webfront:
     ingress:
         annotations: {}
-    ```
