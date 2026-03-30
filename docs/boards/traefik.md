@@ -146,16 +146,16 @@ The upgrade creates two new StripPrefix Middleware CRDs and updates the two Ingr
 
     Confirm CLASS shows the Traefik IngressClass for both core and webfront:
 
-kubectl get ingress -n <namespace>
+    kubectl get ingress -n <namespace>
 
 Expected:
 
-| NAME                 | HOSTS                 | CLASS               | ADDRESS | PORTS   | 
-| -------------------- | --------------------- | ------------------- | ------- | ------- |
-| \<release\>-core     | \<your-api-hostname\> | cnx-ingress-traefik | \<ip\>  | 80, 443 |
-| \<release\>-webfront | \<your-app-hostname\> | cnx-ingress-traefik | \<ip\>  | 80, 443 |
+| NAME                | HOSTS                | CLASS               | ADDRESS | PORTS   | 
+| ------------------- | -------------------- | ------------------- | ------- | ------- |
+| <release\>-core     | <your-api-hostname\> | cnx-ingress-traefik | <ip\>   | 80, 443 |
+| <release\>-webfront | <your-app-hostname\> | cnx-ingress-traefik | <ip\>   | 80, 443 |
 
-1. Middleware CRDs created
+2. Middleware CRDs created
 
     kubectl get middleware -n <namespace>
 
@@ -164,7 +164,7 @@ Expected:
     <release>-core-strip-prefix
     <release>-webfront-strip-prefix
 
-1. Traffic routing
+3. Traffic routing
 
 API health check — path stripping must be working for this to return 200
 
@@ -174,11 +174,11 @@ Webfront — should return the HTML shell
 
     curl -sk https://<your-app-hostname>/boards/
 
-1. Functional verification
+4. Functional verification
 
-- Log in to Huddo Boards and confirm the board list loads
-- Create a board and confirm it persists
-- Open a board and confirm real-time updates work (socket.io)
+* Log in to Huddo Boards and confirm the board list loads
+* Create a board and confirm it persists
+* Open a board and confirm real-time updates work (socket.io)
 
 ## Troubleshooting
 

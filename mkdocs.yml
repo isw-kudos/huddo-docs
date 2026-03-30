@@ -48,6 +48,7 @@ nav:
           - Customise Help Links: boards/env/help-links.md
           - Helm Charts: boards/helm-charts.md
           - Proxy (nginx): boards/proxy/nginx.md
+          - Traefik MIgration: boards/traefik.md
           - Integrations:
               - HCL Connections:
                   - boards/connections/index.md
