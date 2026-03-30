@@ -8035,7 +8035,7 @@
 <p>The <a href="https://support.hcl-software.com/csm?id=kb_article&amp;sysparm_article=KB0129510">HCL migration guide</a> explicitly excludes Huddo Boards: "If Huddo Boards is installed, contact HCL Connections Support before proceeding. The Huddo chart is not included in the migration kit." This guide is the Huddo Boards equivalent — follow it after completing the HCL Component Pack migration steps.</p>
 </div>
 <h2 id="breaking-change-in-v200">Breaking change in v2.0.0<a class="headerlink" href="#breaking-change-in-v200" title="Permanent link">&para;</a></h2>
-<p>huddo-boards-cp v2.0.0 removes the nginx-specific ingress defaults that were previously baked into the chart (ingressClassName: nginx, regex paths, and all nginx.ingress.kubernetes.io/* annotations). Traefik is now the reference ingress controller.</p>
+<p><code>huddo-boards-cp v2.0.0</code> removes the nginx-specific ingress defaults that were previously baked into the chart (<code>ingressClassName: nginx</code>, regex paths, and all <code>nginx.ingress.kubernetes.io/*</code> annotations). Traefik is now the reference ingress controller.</p>
 <p>If you are upgrading from v1.x, you must add your ingress configuration explicitly to your values file before upgrading. See Values file changes below.</p>
 <p>If you are staying on nginx, add the nginx annotations to your own values file before upgrading — they will no longer be provided by the chart.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
@@ -8046,8 +8046,8 @@
 kubectl get ingressclass
 </code></pre></div>
 <h3 id="ingressclass-name">IngressClass name<a class="headerlink" href="#ingressclass-name" title="Permanent link">&para;</a></h3>
-<p>The component pack charts default to ingressClassName: cnx-ingress-traefik, which matches the HCL migration kit (helm upgrade cnx-ingress traefik/traefik). If you installed Traefik via the HCL guide, no override is needed.</p>
-<p>If you installed Traefik yourself (e.g. helm install traefik traefik/traefik), the IngressClass is typically traefik and you must override it in your values file:</p>
+<p>The component pack charts default to <code>ingressClassName: cnx-ingress-traefik</code>, which matches the HCL migration kit (<code>helm upgrade cnx-ingress traefik/traefik</code>). If you installed Traefik via the HCL guide, no override is needed.</p>
+<p>If you installed Traefik yourself (e.g. <code>helm install traefik traefik/traefik</code>), the IngressClass is typically traefik and you must override it in your values file:</p>
 <div class="highlight"><pre><span></span><code>core:
 ingress:
     ingressClassName: traefik
@@ -8057,13 +8057,13 @@ ingress:
     ingressClassName: traefik
 </code></pre></div>
 <h3 id="know-your-tls-configuration">Know your TLS configuration<a class="headerlink" href="#know-your-tls-configuration" title="Permanent link">&para;</a></h3>
-<p>The HCL migration kit configures TLS at the controller level via tlsStore, meaning Traefik serves a default certificate for all HTTPS traffic without requiring a tls: section on each Ingress. If your Traefik was installed this way, you can omit tls: from the values below.</p>
-<p>If you manage TLS per-ingress (e.g. a local or non-standard install), keep the tls: sections as shown.</p>
-<h3 id="body-size-limit-proxy-body-size">Body size limit (proxy-body-size)<a class="headerlink" href="#body-size-limit-proxy-body-size" title="Permanent link">&para;</a></h3>
-<p>The previous nginx chart set proxy-body-size: 50m on the core Ingress. Traefik has no default body size limit, so large uploads will work without additional configuration.</p>
-<p>Traefik's buffering middleware can enforce a body size limit, but it is incompatible with CORS preflight requests — the middleware's response reader fails on empty-body OPTIONS responses (vulcand/oxy/buffer: failed to read response, err: no data ready), returning HTTP 500. For this reason the chart does not use the buffering middleware. If a hard body size limit is required, enforce it at the application level.</p>
+<p>The HCL migration kit configures TLS at the controller level via <code>tlsStore</code>, meaning Traefik serves a default certificate for all HTTPS traffic without requiring a <code>tls:</code> section on each Ingress. If your Traefik was installed this way, you can omit <code>tls:</code> from the values below.</p>
+<p>If you manage TLS per-ingress (e.g. a local or non-standard install), keep the <code>tls:</code> sections as shown.</p>
+<h3 id="body-size-limit-proxy-body-size">Body size limit (<code>proxy-body-size</code>)<a class="headerlink" href="#body-size-limit-proxy-body-size" title="Permanent link">&para;</a></h3>
+<p>The previous nginx chart set <code>proxy-body-size: 50m</code> on the <code>core</code> Ingress. Traefik has no default body size limit, so large uploads will work without additional configuration.</p>
+<p>Traefik's <code>buffering</code> middleware can enforce a body size limit, but it is incompatible with CORS preflight requests — the middleware's response reader fails on empty-body OPTIONS responses (<code>vulcand/oxy/buffer: failed to read response, err: no data ready</code>), returning HTTP 500. For this reason the chart does not use the buffering middleware. If a hard body size limit is required, enforce it at the application level.</p>
 <h3 id="configure-traefik-entrypoint-timeouts">Configure Traefik entrypoint timeouts<a class="headerlink" href="#configure-traefik-entrypoint-timeouts" title="Permanent link">&para;</a></h3>
-<p>The previous nginx chart included proxy-read-timeout and proxy-send-timeout of 3600s (1 hour) for long-lived websocket connections. In Traefik, these are entrypoint-level settings (not per-route), so they must be configured when installing Traefik.</p>
+<p>The previous nginx chart included <code>proxy-read-timeout</code> and <code>proxy-send-timeout</code> of 3600s (1 hour) for long-lived websocket connections. In Traefik, these are entrypoint-level settings (not per-route), so they must be configured when installing Traefik.</p>
 <p>If Traefik was installed via the HCL migration kit, update the Traefik Helm values:</p>
 <h4 id="traefik-valuesyaml">traefik-values.yaml<a class="headerlink" href="#traefik-valuesyaml" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>ports:
@@ -8074,21 +8074,21 @@ websecure:
         writeTimeout: 3600s
         idleTimeout: 3600s
 </code></pre></div>
-<p>Or via --set flags:</p>
+<p>Or via <code>--set</code> flags:</p>
 <div class="highlight"><pre><span></span><code>helm upgrade cnx-ingress traefik/traefik \
 --reuse-values \
 --set &quot;ports.websecure.transport.respondingTimeouts.readTimeout=3600s&quot; \
 --set &quot;ports.websecure.transport.respondingTimeouts.writeTimeout=3600s&quot; \
 --set &quot;ports.websecure.transport.respondingTimeouts.idleTimeout=3600s&quot;
 </code></pre></div>
-<p>Without this, the Traefik default readTimeout (60s) may terminate long-running websocket connections.</p>
+<p>Without this, the Traefik default <code>readTimeout</code> (60s) may terminate long-running websocket connections.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If using --reuse-values on the Traefik chart, the HCL migration kit sets metrics.prometheus: null which may fail schema validation on newer Traefik chart versions. Work around this by also setting --set metrics.prometheus.entryPoint=metrics in the same command.</p>
+<p>If using <code>--reuse-values</code> on the Traefik chart, the HCL migration kit sets <code>metrics.prometheus: null</code> which may fail schema validation on newer Traefik chart versions. Work around this by also setting <code>--set metrics.prometheus.entryPoint=metrics</code> in the same command.</p>
 </div>
 <h2 id="values-file-changes">Values file changes<a class="headerlink" href="#values-file-changes" title="Permanent link">&para;</a></h2>
-<p>Add the following to your values file. Replace <your-hostname> / <your-tls-secret> with your environment values. The ingressClassName defaults to cnx-ingress-traefik — only override it if your Traefik uses a different IngressClass (see above).</p>
-<h3 id="core-api-service">core (API service)<a class="headerlink" href="#core-api-service" title="Permanent link">&para;</a></h3>
+<p>Add the following to your values file. Replace <code>&lt;your-hostname&gt;</code> / <code>&lt;your-tls-secret&gt;</code> with your environment values. The ingressClassName defaults to <code>cnx-ingress-traefik</code> — only override it if your Traefik uses a different IngressClass (see above).</p>
+<h3 id="core-api-service"><code>core</code> (API service)<a class="headerlink" href="#core-api-service" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>core:
 ingress:
     hosts:
@@ -8103,9 +8103,9 @@ ingress:
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Sticky sessions are enabled by default for core in v2.0.0. The chart automatically adds Traefik sticky cookie annotations (SameSite=None, Secure, HttpOnly) to the core Ingress. This matches the nginx session affinity behaviour from v1.x and is required for socket.io websocket upgrades. To disable, set core.ingress.traefik.stickyCookie.enabled: false.</p>
+<p>Sticky sessions are enabled by default for <code>core</code> in v2.0.0. The chart automatically adds Traefik sticky cookie annotations (<code>SameSite=None</code>, <code>Secure</code>, <code>HttpOnly</code>) to the core Ingress. This matches the nginx session affinity behaviour from v1.x and is required for socket.io websocket upgrades. To disable, set <code>core.ingress.traefik.stickyCookie.enabled: false</code>.</p>
 </div>
-<h3 id="webfront-ui-service">webfront (UI service)<a class="headerlink" href="#webfront-ui-service" title="Permanent link">&para;</a></h3>
+<h3 id="webfront-ui-service"><code>webfront</code> (UI service)<a class="headerlink" href="#webfront-ui-service" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>webfront:
 ingress:
     hosts:
@@ -8125,19 +8125,20 @@ ingress:
 --reuse-values \
 -f &lt;your-values.yaml&gt;
 </code></pre></div>
-<p>The --reuse-values flag preserves all previously deployed configuration and layers only the new values on top, consistent with the approach used by the HCL migration kit for other Component Pack charts.</p>
-<p>The upgrade creates two new StripPrefix Middleware CRDs and updates the two Ingress objects in place. No downtime is required beyond normal rolling pod restarts.</p>
+<p>The <code>--reuse-values</code> flag preserves all previously deployed configuration and layers only the new values on top, consistent with the approach used by the HCL migration kit for other Component Pack charts.</p>
+<p>The upgrade creates two new <code>StripPrefix</code> Middleware CRDs and updates the two Ingress objects in place. No downtime is required beyond normal rolling pod restarts.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If any Middleware CRDs already exist in the namespace from a previous migration attempt, delete them first to avoid ownership conflicts:</p>
-<p>kubectl delete middleware \
-  <release>-core-strip-prefix \
-  <release>-webfront-strip-prefix \
-  -n <namespace> --ignore-not-found</p>
+<div class="highlight"><pre><span></span><code>kubectl delete middleware \
+  &lt;release&gt;-core-strip-prefix \
+  &lt;release&gt;-webfront-strip-prefix \
+  -n &lt;namespace&gt; --ignore-not-found
+</code></pre></div>
 </div>
 <h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
 <p>1 . Ingress objects updated</p>
-<div class="highlight"><pre><span></span><code>Confirm CLASS shows the Traefik IngressClass for both core and webfront:
+<div class="highlight"><pre><span></span><code>Confirm `CLASS` shows the Traefik IngressClass for both `core` and `webfront`:
 
 kubectl get ingress -n &lt;namespace&gt;
 </code></pre></div>
@@ -8190,17 +8191,17 @@ kubectl get ingress -n &lt;namespace&gt;
 <li>Open a board and confirm real-time updates work (socket.io)</li>
 </ul>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="404-on-all-api-boards-routes">404 on all /api-boards/* routes<a class="headerlink" href="#404-on-all-api-boards-routes" title="Permanent link">&para;</a></h3>
-<p>The StripPrefix middleware strips /api-boards before forwarding to the core service. If the middleware was not created or is not referenced correctly, the request reaches core with the full path and returns 404.</p>
+<h3 id="404-on-all-api-boards-routes"><code>404</code> on all <code>/api-boards/*</code> routes<a class="headerlink" href="#404-on-all-api-boards-routes" title="Permanent link">&para;</a></h3>
+<p>The <code>StripPrefix</code> middleware strips <code>/api-boards</code> before forwarding to the <code>core</code> service. If the middleware was not created or is not referenced correctly, the request reaches <code>core</code> with the full path and returns 404.</p>
 <p>Check:</p>
 <div class="highlight"><pre><span></span><code>kubectl get middleware -n &lt;namespace&gt;
 kubectl describe ingress &lt;release&gt;-core -n &lt;namespace&gt;
 </code></pre></div>
-<p>Confirm the traefik.ingress.kubernetes.io/router.middlewares annotation on the Ingress references <namespace>-<release>-core-strip-prefix@kubernetescrd.</p>
-<h3 id="404-on-boards-routes">404 on /boards/* routes<a class="headerlink" href="#404-on-boards-routes" title="Permanent link">&para;</a></h3>
-<p>Same cause for webfront. Verify <release>-webfront-strip-prefix exists and is referenced in the Ingress annotation.</p>
+<p>Confirm the <code>traefik.ingress.kubernetes.io/router.middlewares</code> annotation on the Ingress references <code>&lt;namespace&gt;-&lt;release&gt;-core-strip-prefix@kubernetescrd</code>.</p>
+<h3 id="404-on-boards-routes"><code>404</code> on <code>/boards/*</code> routes<a class="headerlink" href="#404-on-boards-routes" title="Permanent link">&para;</a></h3>
+<p>Same cause for <code>webfron</code>t. Verify <code>&lt;release&gt;-webfront-strip-prefix</code> exists and is referenced in the Ingress annotation.</p>
 <h3 id="sessions-not-sticky-users-logged-out-unexpectedly">Sessions not sticky (users logged out unexpectedly)<a class="headerlink" href="#sessions-not-sticky-users-logged-out-unexpectedly" title="Permanent link">&para;</a></h3>
-<p>Confirm the sticky cookie annotations are present on the core Service (not Ingress — Traefik reads service.* annotations from the Service object):</p>
+<p>Confirm the sticky cookie annotations are present on the <code>core</code> Service (not Ingress — Traefik reads <code>service.*</code> annotations from the Service object):</p>
 <div class="highlight"><pre><span></span><code>kubectl get svc &lt;release&gt;-core -n &lt;namespace&gt; \
 -o jsonpath=&#39;{.metadata.annotations}&#39; | tr &#39;,&#39; &#39;\n&#39; | grep sticky
 </code></pre></div>
@@ -8212,20 +8213,20 @@ traefik.ingress.kubernetes.io/service.sticky.cookie.httponly: &quot;true&quot;
 traefik.ingress.kubernetes.io/service.sticky.cookie.samesite: &quot;none&quot;
 </code></pre></div>
 <h3 id="legacy-nginx-ingress-objects-remain-after-migration">Legacy nginx Ingress objects remain after migration<a class="headerlink" href="#legacy-nginx-ingress-objects-remain-after-migration" title="Permanent link">&para;</a></h3>
-<p>Any Ingress objects that were created outside of the Helm chart (e.g. manually applied for auth rewrites, root redirects, or login redirects) will not be removed by helm upgrade. They must be deleted manually, otherwise nginx-class routes may conflict with or shadow Traefik routes.</p>
-<p>List all ingresses and identify any with CLASS: nginx that are not managed by this chart:</p>
+<p>Any Ingress objects that were created outside of the Helm chart (e.g. manually applied for auth rewrites, root redirects, or login redirects) will not be removed by <code>helm upgrade</code>. They must be deleted manually, otherwise nginx-class routes may conflict with or shadow Traefik routes.</p>
+<p>List all ingresses and identify any with <code>CLASS: nginx</code> that are not managed by this chart:</p>
 <div class="highlight"><pre><span></span><code>kubectl get ingress -n &lt;namespace&gt;
 </code></pre></div>
 <p>Delete each legacy nginx ingress:</p>
 <div class="highlight"><pre><span></span><code>kubectl delete ingress &lt;ingress-name&gt; -n &lt;namespace&gt;
 </code></pre></div>
-<h3 id="invalid-ownership-metadata-error-on-upgrade">invalid ownership metadata error on upgrade<a class="headerlink" href="#invalid-ownership-metadata-error-on-upgrade" title="Permanent link">&para;</a></h3>
-<p>A resource (typically the minio PersistentVolume) exists in the cluster but is not tracked by Helm. Adopt it:</p>
+<h3 id="invalid-ownership-metadata-error-on-upgrade"><code>invalid ownership metadata</code> error on upgrade<a class="headerlink" href="#invalid-ownership-metadata-error-on-upgrade" title="Permanent link">&para;</a></h3>
+<p>A resource (typically the minio <code>PersistentVolume</code>) exists in the cluster but is not tracked by Helm. Adopt it:</p>
 <div class="highlight"><pre><span></span><code>kubectl patch pv &lt;pv-name&gt; --type=merge -p \
 &#39;{&quot;metadata&quot;:{&quot;labels&quot;:{&quot;app.kubernetes.io/managed-by&quot;:&quot;Helm&quot;},&quot;annotations&quot;:{&quot;meta.helm.sh/release-name&quot;:&quot;&lt;release&gt;&quot;,&quot;meta.helm.sh/release-namespace&quot;:&quot;&lt;namespace&gt;&quot;}}}&#39;
 </code></pre></div>
 <h3 id="residual-nginx-annotations-after-upgrade">Residual nginx annotations after upgrade<a class="headerlink" href="#residual-nginx-annotations-after-upgrade" title="Permanent link">&para;</a></h3>
-<p>When using --reuse-values, old nginx.ingress.kubernetes.io/* annotations from the v1.x deployment persist in the Helm release values and appear on the Ingress objects. These are ignored by Traefik and are harmless, but can be cleaned up by explicitly setting empty annotations in your values file:</p>
+<p>When using <code>--reuse-values</code>, old <code>nginx.ingress.kubernetes.io/*</code> annotations from the v1.x deployment persist in the Helm release values and appear on the Ingress objects. These are ignored by Traefik and are harmless, but can be cleaned up by explicitly setting empty annotations in your values file:</p>
 <div class="highlight"><pre><span></span><code>core:
 ingress:
     annotations: {}
