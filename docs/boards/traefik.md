@@ -12,7 +12,7 @@ The Kubernetes community has announced the retirement of the Ingress NGINX contr
 
 `huddo-boards-cp v2.0.0` removes the nginx-specific ingress defaults that were previously baked into the chart (`ingressClassName: nginx`, regex paths, and all `nginx.ingress.kubernetes.io/*` annotations). Traefik is now the reference ingress controller.
 
-If you are upgrading from v1.x, you must add your ingress configuration explicitly to your values file before upgrading. See Values file changes below.
+If you are upgrading from v1.x, you must add your ingress configuration explicitly to your values file before upgrading. See [Values file changes](#values-file-changes) below.
 
 If you are staying on nginx, add the nginx annotations to your own values file before upgrading — they will no longer be provided by the chart.
 
@@ -85,7 +85,7 @@ Without this, the Traefik default `readTimeout` (60s) may terminate long-running
 
 ## Values file changes
 
-Add the following to your values file. Replace `<your-hostname>` / `<your-tls-secret>` with your environment values. The ingressClassName defaults to `cnx-ingress-traefik` — only override it if your Traefik uses a different IngressClass (see above).
+Add the following to your values file. Replace `<your-hostname>` / `<your-tls-secret>` with your environment values. The ingressClassName defaults to `cnx-ingress-traefik` — only override it if your Traefik uses a different IngressClass (see [above](#ingressclass-name)).
 
 ### `core` (API service)
 
