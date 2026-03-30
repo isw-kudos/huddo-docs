@@ -159,7 +159,7 @@ Expected:
 
 2 . Middleware CRDs created
 
-    kubectl get middleware -n <namespace\>
+    kubectl get middleware -n <namespace>
 
 Expected:
 
