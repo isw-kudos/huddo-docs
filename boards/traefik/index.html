@@ -8036,7 +8036,7 @@
 </div>
 <h2 id="breaking-change-in-v200">Breaking change in v2.0.0<a class="headerlink" href="#breaking-change-in-v200" title="Permanent link">&para;</a></h2>
 <p><code>huddo-boards-cp v2.0.0</code> removes the nginx-specific ingress defaults that were previously baked into the chart (<code>ingressClassName: nginx</code>, regex paths, and all <code>nginx.ingress.kubernetes.io/*</code> annotations). Traefik is now the reference ingress controller.</p>
-<p>If you are upgrading from v1.x, you must add your ingress configuration explicitly to your values file before upgrading. See Values file changes below.</p>
+<p>If you are upgrading from v1.x, you must add your ingress configuration explicitly to your values file before upgrading. See <a href="#values-file-changes">Values file changes</a> below.</p>
 <p>If you are staying on nginx, add the nginx annotations to your own values file before upgrading — they will no longer be provided by the chart.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <h3 id="traefik-is-installed-and-running">Traefik is installed and running<a class="headerlink" href="#traefik-is-installed-and-running" title="Permanent link">&para;</a></h3>
@@ -8087,7 +8087,7 @@ websecure:
 <p>If using <code>--reuse-values</code> on the Traefik chart, the HCL migration kit sets <code>metrics.prometheus: null</code> which may fail schema validation on newer Traefik chart versions. Work around this by also setting <code>--set metrics.prometheus.entryPoint=metrics</code> in the same command.</p>
 </div>
 <h2 id="values-file-changes">Values file changes<a class="headerlink" href="#values-file-changes" title="Permanent link">&para;</a></h2>
-<p>Add the following to your values file. Replace <code>&lt;your-hostname&gt;</code> / <code>&lt;your-tls-secret&gt;</code> with your environment values. The ingressClassName defaults to <code>cnx-ingress-traefik</code> — only override it if your Traefik uses a different IngressClass (see above).</p>
+<p>Add the following to your values file. Replace <code>&lt;your-hostname&gt;</code> / <code>&lt;your-tls-secret&gt;</code> with your environment values. The ingressClassName defaults to <code>cnx-ingress-traefik</code> — only override it if your Traefik uses a different IngressClass (see <a href="#ingressclass-name">above</a>).</p>
 <h3 id="core-api-service"><code>core</code> (API service)<a class="headerlink" href="#core-api-service" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>core:
 ingress:
