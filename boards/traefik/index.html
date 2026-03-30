@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://docs.huddo.com/boards/traefik/">
       
       
+        <link rel="prev" href="../proxy/nginx/">
+      
+      
+        <link rel="next" href="../connections/">
       
       
         
@@ -33,7 +37,7 @@
     
     
       
-        <title>Migrate to Traefik - Huddo Docs</title>
+        <title>Traefik MIgration - Huddo Docs</title>
       
     
     
@@ -128,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migrate to Traefik
+              Traefik MIgration
             
           </span>
         </div>
@@ -249,10 +253,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -392,6 +398,8 @@
       
   
   
+    
+  
   
   
     
@@ -423,14 +431,17 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -452,13 +463,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1300,6 +1311,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1333,6 +1346,8 @@
       
         
       
+        
+      
     
     
     
@@ -1340,11 +1355,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -1372,7 +1387,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1774,6 +1789,336 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traefik MIgration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traefik MIgration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-change-in-v200" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breaking change in v2.0.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traefik-is-installed-and-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traefik is installed and running
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingressclass-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IngressClass name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#know-your-tls-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Know your TLS configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body-size-limit-proxy-body-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body size limit (proxy-body-size)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-traefik-entrypoint-timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Traefik entrypoint timeouts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Traefik entrypoint timeouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traefik-valuesyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        traefik-values.yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#values-file-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Values file changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Values file changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-api-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        core (API service)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webfront-ui-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webfront (UI service)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performing-the-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performing the upgrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#404-on-all-api-boards-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        404 on all /api-boards/* routes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#404-on-boards-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        404 on /boards/* routes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sessions-not-sticky-users-logged-out-unexpectedly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions not sticky (users logged out unexpectedly)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-nginx-ingress-objects-remain-after-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legacy nginx Ingress objects remain after migration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-ownership-metadata-error-on-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        invalid ownership metadata error on upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#residual-nginx-annotations-after-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Residual nginx annotations after upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     
@@ -1808,7 +2153,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1830,14 +2175,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_12" id="__nav_1_3_12_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_13" id="__nav_1_3_13_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_12">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_13">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1891,7 +2236,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_12_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_1" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1913,14 +2258,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_12_1" id="__nav_1_3_12_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_13_1" id="__nav_1_3_13_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_12_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_12_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_13_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2252,7 +2597,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_12_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_2" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2274,14 +2619,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_12_2" id="__nav_1_3_12_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_13_2" id="__nav_1_3_13_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_12_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_12_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_13_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2443,7 +2788,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_12_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2465,14 +2810,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_12_3" id="__nav_1_3_12_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_13_3" id="__nav_1_3_13_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_12_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_12_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_13_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2634,7 +2979,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_12_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_6" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2656,14 +3001,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_12_6" id="__nav_1_3_12_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_13_6" id="__nav_1_3_13_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_12_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_12_6">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_13_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2741,7 +3086,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_12_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2763,14 +3108,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_12_7" id="__nav_1_3_12_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_13_7" id="__nav_1_3_13_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_12_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_12_7">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_13_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -7795,9 +8140,9 @@ ingress:
 <li>
 <p>Ingress objects updated</p>
 <p>Confirm CLASS shows the Traefik IngressClass for both core and webfront:</p>
+<p>kubectl get ingress -n <namespace></p>
 </li>
 </ol>
-<p>kubectl get ingress -n <namespace></p>
 <p>Expected:</p>
 <table>
 <thead>
@@ -7811,17 +8156,17 @@ ingress:
 </thead>
 <tbody>
 <tr>
-<td>\&lt;release&gt;-core</td>
-<td>\&lt;your-api-hostname&gt;</td>
+<td>&lt;release&gt;-core</td>
+<td>&lt;your-api-hostname&gt;</td>
 <td>cnx-ingress-traefik</td>
-<td>\&lt;ip&gt;</td>
+<td>&lt;ip&gt;</td>
 <td>80, 443</td>
 </tr>
 <tr>
-<td>\&lt;release&gt;-webfront</td>
-<td>\&lt;your-app-hostname&gt;</td>
+<td>&lt;release&gt;-webfront</td>
+<td>&lt;your-app-hostname&gt;</td>
 <td>cnx-ingress-traefik</td>
-<td>\&lt;ip&gt;</td>
+<td>&lt;ip&gt;</td>
 <td>80, 443</td>
 </tr>
 </tbody>
