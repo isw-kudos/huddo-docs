@@ -34,12 +34,12 @@ The component pack charts default to `ingressClassName: cnx-ingress-traefik`, wh
 If you installed Traefik yourself (e.g. `helm install traefik traefik/traefik`), the IngressClass is typically traefik and you must override it in your values file:
 
     core:
-    ingress:
-        ingressClassName: traefik
+        ingress:
+            ingressClassName: traefik
 
     webfront:
-    ingress:
-        ingressClassName: traefik
+        ingress:
+            ingressClassName: traefik
 
 ### Know your TLS configuration
 
@@ -62,12 +62,12 @@ If Traefik was installed via the HCL migration kit, update the Traefik Helm valu
 #### traefik-values.yaml
 
     ports:
-    websecure:
-        transport:
-        respondingTimeouts:
-            readTimeout: 3600s
-            writeTimeout: 3600s
-            idleTimeout: 3600s
+        websecure:
+            transport:
+                respondingTimeouts:
+                    readTimeout: 3600s
+                    writeTimeout: 3600s
+                    idleTimeout: 3600s
 
 Or via `--set` flags:
 
