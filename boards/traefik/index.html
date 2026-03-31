@@ -8049,12 +8049,12 @@ kubectl get ingressclass
 <p>The component pack charts default to <code>ingressClassName: cnx-ingress-traefik</code>, which matches the HCL migration kit (<code>helm upgrade cnx-ingress traefik/traefik</code>). If you installed Traefik via the HCL guide, no override is needed.</p>
 <p>If you installed Traefik yourself (e.g. <code>helm install traefik traefik/traefik</code>), the IngressClass is typically traefik and you must override it in your values file:</p>
 <div class="highlight"><pre><span></span><code>core:
-ingress:
-    ingressClassName: traefik
+    ingress:
+        ingressClassName: traefik
 
 webfront:
-ingress:
-    ingressClassName: traefik
+    ingress:
+        ingressClassName: traefik
 </code></pre></div>
 <h3 id="know-your-tls-configuration">Know your TLS configuration<a class="headerlink" href="#know-your-tls-configuration" title="Permanent link">&para;</a></h3>
 <p>The HCL migration kit configures TLS at the controller level via <code>tlsStore</code>, meaning Traefik serves a default certificate for all HTTPS traffic without requiring a <code>tls:</code> section on each Ingress. If your Traefik was installed this way, you can omit <code>tls:</code> from the values below.</p>
@@ -8067,12 +8067,12 @@ ingress:
 <p>If Traefik was installed via the HCL migration kit, update the Traefik Helm values:</p>
 <h4 id="traefik-valuesyaml">traefik-values.yaml<a class="headerlink" href="#traefik-valuesyaml" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>ports:
-websecure:
-    transport:
-    respondingTimeouts:
-        readTimeout: 3600s
-        writeTimeout: 3600s
-        idleTimeout: 3600s
+    websecure:
+        transport:
+            respondingTimeouts:
+                readTimeout: 3600s
+                writeTimeout: 3600s
+                idleTimeout: 3600s
 </code></pre></div>
 <p>Or via <code>--set</code> flags:</p>
 <div class="highlight"><pre><span></span><code>helm upgrade cnx-ingress traefik/traefik \
