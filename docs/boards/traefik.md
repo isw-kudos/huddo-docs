@@ -90,16 +90,16 @@ Add the following to your values file. Replace `<your-hostname>` / `<your-tls-se
 ### `core` (API service)
 
     core:
-    ingress:
-        hosts:
-        - <your-api-hostname>
-        tls:                          # omit if using Traefik tlsStore default cert
-        - hosts:
-            - <your-api-hostname>
-            secretName: <your-tls-secret>
-        traefik:
-        stripPrefix:
-            enabled: true   # creates a StripPrefix Middleware CRD and wires up the annotation automatically
+        ingress:
+            hosts:
+                - <your-api-hostname>
+            tls:                          # omit if using Traefik tlsStore default cert
+                - hosts:
+                    - <your-api-hostname>
+                secretName: <your-tls-secret>
+            traefik:
+                stripPrefix:
+                    enabled: true   # creates a StripPrefix Middleware CRD and wires up the annotation automatically
 
 !!! note
 
@@ -108,16 +108,16 @@ Add the following to your values file. Replace `<your-hostname>` / `<your-tls-se
 ### `webfront` (UI service)
 
     webfront:
-    ingress:
-        hosts:
-        - <your-app-hostname>
-        tls:                          # omit if using Traefik tlsStore default cert
-        - hosts:
-            - <your-app-hostname>
-            secretName: <your-tls-secret>
-        traefik:
-        stripPrefix:
-            enabled: true
+        ingress:
+            hosts:
+                - <your-app-hostname>
+            tls:                          # omit if using Traefik tlsStore default cert
+                - hosts:
+                    - <your-app-hostname>
+                secretName: <your-tls-secret>
+            traefik:
+                stripPrefix:
+                    enabled: true
 
 ## Performing the upgrade
 
@@ -238,8 +238,8 @@ A resource (typically the minio `PersistentVolume`) exists in the cluster but is
 When using `--reuse-values`, old `nginx.ingress.kubernetes.io/*` annotations from the v1.x deployment persist in the Helm release values and appear on the Ingress objects. These are ignored by Traefik and are harmless, but can be cleaned up by explicitly setting empty annotations in your values file:
 
     core:
-    ingress:
-        annotations: {}
+        ingress:
+            annotations: {}
     webfront:
-    ingress:
-        annotations: {}
+        ingress:
+            annotations: {}
