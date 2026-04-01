@@ -53,32 +53,6 @@ The previous nginx chart set `proxy-body-size: 50m` on the `core` Ingress. Traef
 
 Traefik's `buffering` middleware can enforce a body size limit, but it is incompatible with CORS preflight requests — the middleware's response reader fails on empty-body OPTIONS responses (`vulcand/oxy/buffer: failed to read response, err: no data ready`), returning HTTP 500. For this reason the chart does not use the buffering middleware. If a hard body size limit is required, enforce it at the application level.
 
-### Configure Traefik entrypoint timeouts
-
-The previous nginx chart included `proxy-read-timeout` and `proxy-send-timeout` of 3600s (1 hour) for long-lived websocket connections. In Traefik, these are entrypoint-level settings (not per-route), so they must be configured when installing Traefik.
-
-If Traefik was installed via the HCL migration kit, update the Traefik Helm values:
-
-#### traefik-values.yaml
-
-    ports:
-        websecure:
-            transport:
-                respondingTimeouts:
-                    readTimeout: 3600s
-                    writeTimeout: 3600s
-                    idleTimeout: 3600s
-
-Or via `--set` flags:
-
-    helm upgrade cnx-ingress traefik/traefik \
-    --reuse-values \
-    --set "ports.websecure.transport.respondingTimeouts.readTimeout=3600s" \
-    --set "ports.websecure.transport.respondingTimeouts.writeTimeout=3600s" \
-    --set "ports.websecure.transport.respondingTimeouts.idleTimeout=3600s"
-
-Without this, the Traefik default `readTimeout` (60s) may terminate long-running websocket connections.
-
 !!! note
     
     If using `--reuse-values` on the Traefik chart, the HCL migration kit sets `metrics.prometheus: null` which may fail schema validation on newer Traefik chart versions. Work around this by also setting `--set metrics.prometheus.entryPoint=metrics` in the same command.
