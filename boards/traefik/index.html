@@ -1929,34 +1929,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#configure-traefik-entrypoint-timeouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure Traefik entrypoint timeouts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Traefik entrypoint timeouts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#traefik-valuesyaml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        traefik-values.yaml
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -7833,34 +7805,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#configure-traefik-entrypoint-timeouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure Traefik entrypoint timeouts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Traefik entrypoint timeouts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#traefik-valuesyaml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        traefik-values.yaml
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -8062,26 +8006,6 @@ webfront:
 <h3 id="body-size-limit-proxy-body-size">Body size limit (<code>proxy-body-size</code>)<a class="headerlink" href="#body-size-limit-proxy-body-size" title="Permanent link">&para;</a></h3>
 <p>The previous nginx chart set <code>proxy-body-size: 50m</code> on the <code>core</code> Ingress. Traefik has no default body size limit, so large uploads will work without additional configuration.</p>
 <p>Traefik's <code>buffering</code> middleware can enforce a body size limit, but it is incompatible with CORS preflight requests — the middleware's response reader fails on empty-body OPTIONS responses (<code>vulcand/oxy/buffer: failed to read response, err: no data ready</code>), returning HTTP 500. For this reason the chart does not use the buffering middleware. If a hard body size limit is required, enforce it at the application level.</p>
-<h3 id="configure-traefik-entrypoint-timeouts">Configure Traefik entrypoint timeouts<a class="headerlink" href="#configure-traefik-entrypoint-timeouts" title="Permanent link">&para;</a></h3>
-<p>The previous nginx chart included <code>proxy-read-timeout</code> and <code>proxy-send-timeout</code> of 3600s (1 hour) for long-lived websocket connections. In Traefik, these are entrypoint-level settings (not per-route), so they must be configured when installing Traefik.</p>
-<p>If Traefik was installed via the HCL migration kit, update the Traefik Helm values:</p>
-<h4 id="traefik-valuesyaml">traefik-values.yaml<a class="headerlink" href="#traefik-valuesyaml" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>ports:
-    websecure:
-        transport:
-            respondingTimeouts:
-                readTimeout: 3600s
-                writeTimeout: 3600s
-                idleTimeout: 3600s
-</code></pre></div>
-<p>Or via <code>--set</code> flags:</p>
-<div class="highlight"><pre><span></span><code>helm upgrade cnx-ingress traefik/traefik \
---reuse-values \
---set &quot;ports.websecure.transport.respondingTimeouts.readTimeout=3600s&quot; \
---set &quot;ports.websecure.transport.respondingTimeouts.writeTimeout=3600s&quot; \
---set &quot;ports.websecure.transport.respondingTimeouts.idleTimeout=3600s&quot;
-</code></pre></div>
-<p>Without this, the Traefik default <code>readTimeout</code> (60s) may terminate long-running websocket connections.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If using <code>--reuse-values</code> on the Traefik chart, the HCL migration kit sets <code>metrics.prometheus: null</code> which may fail schema validation on newer Traefik chart versions. Work around this by also setting <code>--set metrics.prometheus.entryPoint=metrics</code> in the same command.</p>
