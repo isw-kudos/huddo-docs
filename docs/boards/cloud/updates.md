@@ -4,6 +4,14 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2026
 
+### April
+
+2026-04-02
+
+Features:
+
+- Ability to sort list by different methods including alphabetically as well as created, updated, start and due dates 
+
 ### March
 
 2026-03-30
