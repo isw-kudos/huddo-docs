@@ -178,7 +178,7 @@ kubectl create secret generic myregkey -n connections --docker-server=hclcr.io/c
 
 ### Install Collab Helm Chart
 
-Install the Boards services via our Helm chart
+Install the Collab services via our Helm chart
 
     helm upgrade huddo-collab-cp https://docs.huddo.com/assets/config/kubernetes/huddo-collab-cp-0.1.0.tgz -i -f ./collab-cp.yaml --namespace connections --recreate-pods
 
@@ -188,11 +188,43 @@ Install the Boards services via our Helm chart
 
 ## Proxy Config
 
-For Connections on-premise you have two options:
+Please add the following location blocks to your server -> listen 443 blocks:
 
-1. `nginx` - if you have an NGINX (e.g. customizer) in front of IHS use that instead to support websockets and use one less proxy. Follow [these instructions](../proxy/nginx.md).
+    location /huddo/editor {
+      proxy_ssl_server_name on;
+      proxy_pass http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/huddo/editor;
+      proxy_redirect off;
+      proxy_pass_request_headers on;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_set_header X-Real-IP $remote_addr;
+    }
 
-1. `httpd` - please follow [these instructions](./httpd.md).
+    location /huddo {
+      proxy_pass http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/huddo;
+      proxy_pass_request_headers on;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header Host $http_host;
+    }
+
+    location /socketcluster {
+      proxy_ssl_server_name on;
+      proxy_pass http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/socketcluster;
+      proxy_redirect off;
+      proxy_pass_request_headers on;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_set_header X-Real-IP $remote_addr;
+    }
+
+Where:
+
+-   `[KUBERNETES_NAME]` is the hostname/IP of the master in your cluster</br>
+-   `[KUBERNETES_PORT]` is the port of your Ingress Controller (ie 32080)</br>
 
 ---
 
