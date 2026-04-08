@@ -27,6 +27,10 @@ Verify Traefik is active:
     kubectl get pods -n <namespace> | grep traefik
     kubectl get ingressclass
 
+### Helm Chart Downloaded
+
+[Downloaded 2.0.0 Helm Chart](./helm-charts.md) for your installation type, standalone or with Component Pack.
+
 ### IngressClass name
 
 The component pack charts default to `ingressClassName: cnx-ingress-traefik`, which matches the HCL migration kit (`helm upgrade cnx-ingress traefik/traefik`). If you installed Traefik via the HCL guide, no override is needed.
@@ -70,7 +74,7 @@ Add the following to your values file. Replace `<your-hostname>` / `<your-tls-se
             tls:                          # omit if using Traefik tlsStore default cert
                 - hosts:
                     - <your-api-hostname>
-                secretName: <your-tls-secret>
+            secretName: <your-tls-secret>
             traefik:
                 stripPrefix:
                     enabled: true   # creates a StripPrefix Middleware CRD and wires up the annotation automatically
@@ -88,7 +92,7 @@ Add the following to your values file. Replace `<your-hostname>` / `<your-tls-se
             tls:                          # omit if using Traefik tlsStore default cert
                 - hosts:
                     - <your-app-hostname>
-                secretName: <your-tls-secret>
+            secretName: <your-tls-secret>
             traefik:
                 stripPrefix:
                     enabled: true
@@ -171,7 +175,7 @@ Confirm the `traefik.ingress.kubernetes.io/router.middlewares` annotation on the
 
 ### `404` on `/boards/*` routes
 
-Same cause for `webfron`t. Verify `<release>-webfront-strip-prefix` exists and is referenced in the Ingress annotation.
+Same cause for `webfront`. Verify `<release>-webfront-strip-prefix` exists and is referenced in the Ingress annotation.
 
 ### Sessions not sticky (users logged out unexpectedly)
 
