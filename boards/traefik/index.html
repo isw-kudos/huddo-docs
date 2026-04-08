@@ -1897,6 +1897,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#helm-chart-downloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helm Chart Downloaded
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ingressclass-name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7773,6 +7784,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#helm-chart-downloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helm Chart Downloaded
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ingressclass-name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7989,6 +8011,8 @@
 <div class="highlight"><pre><span></span><code>kubectl get pods -n &lt;namespace&gt; | grep traefik
 kubectl get ingressclass
 </code></pre></div>
+<h3 id="helm-chart-downloaded">Helm Chart Downloaded<a class="headerlink" href="#helm-chart-downloaded" title="Permanent link">&para;</a></h3>
+<p><a href="../helm-charts/">Downloaded 2.0.0 Helm Chart</a> for your installation type, standalone or with Component Pack.</p>
 <h3 id="ingressclass-name">IngressClass name<a class="headerlink" href="#ingressclass-name" title="Permanent link">&para;</a></h3>
 <p>The component pack charts default to <code>ingressClassName: cnx-ingress-traefik</code>, which matches the HCL migration kit (<code>helm upgrade cnx-ingress traefik/traefik</code>). If you installed Traefik via the HCL guide, no override is needed.</p>
 <p>If you installed Traefik yourself (e.g. <code>helm install traefik traefik/traefik</code>), the IngressClass is typically traefik and you must override it in your values file:</p>
@@ -8020,7 +8044,7 @@ webfront:
         tls:                          # omit if using Traefik tlsStore default cert
             - hosts:
                 - &lt;your-api-hostname&gt;
-            secretName: &lt;your-tls-secret&gt;
+        secretName: &lt;your-tls-secret&gt;
         traefik:
             stripPrefix:
                 enabled: true   # creates a StripPrefix Middleware CRD and wires up the annotation automatically
@@ -8037,7 +8061,7 @@ webfront:
         tls:                          # omit if using Traefik tlsStore default cert
             - hosts:
                 - &lt;your-app-hostname&gt;
-            secretName: &lt;your-tls-secret&gt;
+        secretName: &lt;your-tls-secret&gt;
         traefik:
             stripPrefix:
                 enabled: true
@@ -8123,7 +8147,7 @@ kubectl describe ingress &lt;release&gt;-core -n &lt;namespace&gt;
 </code></pre></div>
 <p>Confirm the <code>traefik.ingress.kubernetes.io/router.middlewares</code> annotation on the Ingress references <code>&lt;namespace&gt;-&lt;release&gt;-core-strip-prefix@kubernetescrd</code>.</p>
 <h3 id="404-on-boards-routes"><code>404</code> on <code>/boards/*</code> routes<a class="headerlink" href="#404-on-boards-routes" title="Permanent link">&para;</a></h3>
-<p>Same cause for <code>webfron</code>t. Verify <code>&lt;release&gt;-webfront-strip-prefix</code> exists and is referenced in the Ingress annotation.</p>
+<p>Same cause for <code>webfront</code>. Verify <code>&lt;release&gt;-webfront-strip-prefix</code> exists and is referenced in the Ingress annotation.</p>
 <h3 id="sessions-not-sticky-users-logged-out-unexpectedly">Sessions not sticky (users logged out unexpectedly)<a class="headerlink" href="#sessions-not-sticky-users-logged-out-unexpectedly" title="Permanent link">&para;</a></h3>
 <p>Confirm the sticky cookie annotations are present on the <code>core</code> Service (not Ingress — Traefik reads <code>service.*</code> annotations from the Service object):</p>
 <div class="highlight"><pre><span></span><code>kubectl get svc &lt;release&gt;-core -n &lt;namespace&gt; \
@@ -8178,7 +8202,7 @@ webfront:
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-04-01
+    2026-04-08
   </span>
 
     
