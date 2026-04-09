@@ -7763,9 +7763,9 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 <span class="w">  </span><span class="nx">writeConcern</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;majority&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">wtimeout</span><span class="o">:</span><span class="w"> </span><span class="mf">5000</span><span class="w"> </span><span class="p">}</span>
 <span class="p">})</span>
 </code></pre></div>
-<p>You can validate the user was updated correctly by running:
+<p>You can validate the user was updated correctly by running:</p>
 <div class="highlight"><pre><span></span><code>db.getSiblingDB(&quot;$external&quot;).getUser(&quot;C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=kudos-boards,emailAddress=kudos-boards@mongodb&quot;)
-</code></pre></div></p>
+</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>For development environments, set <code>MONGO_CERT_USER: admin</code> to reuse the existing superuser. No database changes are required, but this grants full cluster access.</p>
@@ -7879,7 +7879,12 @@ kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w">
 <hr />
 <h2 id="proxy-config">Proxy Config<a class="headerlink" href="#proxy-config" title="Permanent link">&para;</a></h2>
 <p>Please add the following location blocks to your server -&gt; listen 443 blocks:</p>
-<div class="highlight"><pre><span></span><code>location /huddo/editor {
+<div class="highlight"><pre><span></span><code># Redirect from HCL Connections Wikis -&gt; Huddo Wikis
+location ~ ^/wikis/home/?(.*)$ {
+  rewrite ^/wikis/home/?(.*)$ /huddo/wikis/migrated/$1 redirect;
+}
+
+location /huddo/editor {
   proxy_ssl_server_name on;
   proxy_pass http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/huddo/editor;
   proxy_redirect off;
@@ -7945,7 +7950,7 @@ location /socketcluster {
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-04-02
+    2026-04-09
   </span>
 
     
