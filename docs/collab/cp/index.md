@@ -126,6 +126,7 @@ db.getSiblingDB("$external").runCommand({
 ```
 
 You can validate the user was updated correctly by running:
+
 ```
 db.getSiblingDB("$external").getUser("C=IE,ST=Ireland,L=Dublin,O=IBM,OU=Connections-Middleware-Clients,CN=kudos-boards,emailAddress=kudos-boards@mongodb")
 
@@ -190,6 +191,11 @@ Install the Collab services via our Helm chart
 
 Please add the following location blocks to your server -> listen 443 blocks:
 
+    # Redirect from HCL Connections Wikis -> Huddo Wikis
+    location ~ ^/wikis/home/?(.*)$ {
+      rewrite ^/wikis/home/?(.*)$ /huddo/wikis/migrated/$1 redirect;
+    }
+
     location /huddo/editor {
       proxy_ssl_server_name on;
       proxy_pass http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/huddo/editor;
@@ -223,8 +229,8 @@ Please add the following location blocks to your server -> listen 443 blocks:
 
 Where:
 
--   `[KUBERNETES_NAME]` is the hostname/IP of the master in your cluster</br>
--   `[KUBERNETES_PORT]` is the port of your Ingress Controller (ie 32080)</br>
+- `[KUBERNETES_NAME]` is the hostname/IP of the master in your cluster</br>
+- `[KUBERNETES_PORT]` is the port of your Ingress Controller (ie 32080)</br>
 
 ---
 
