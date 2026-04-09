@@ -6,7 +6,7 @@ The Kubernetes community has announced the retirement of the Ingress NGINX contr
 
 !!! note
 
-    The [HCL migration guide](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129510) explicitly excludes Huddo Boards: "If Huddo Boards is installed, contact HCL Connections Support before proceeding. The Huddo chart is not included in the migration kit." This guide is the Huddo Boards equivalent — follow it after completing the HCL Component Pack migration steps.
+    The [HCL migration guide](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129510) specifies more specific requirements for Component Pack. Refer to this for additional guidance.
 
 ## Breaking change in v2.0.0
 
