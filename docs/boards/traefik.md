@@ -74,7 +74,7 @@ Add the following to your values file. Replace `<your-hostname>` / `<your-tls-se
             tls:                          # omit if using Traefik tlsStore default cert
                 - hosts:
                     - <your-api-hostname>
-            secretName: <your-tls-secret>
+                  secretName: <your-tls-secret>
             traefik:
                 stripPrefix:
                     enabled: true   # creates a StripPrefix Middleware CRD and wires up the annotation automatically
@@ -92,7 +92,7 @@ Add the following to your values file. Replace `<your-hostname>` / `<your-tls-se
             tls:                          # omit if using Traefik tlsStore default cert
                 - hosts:
                     - <your-app-hostname>
-            secretName: <your-tls-secret>
+                  secretName: <your-tls-secret>
             traefik:
                 stripPrefix:
                     enabled: true
