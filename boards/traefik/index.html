@@ -7998,7 +7998,7 @@
 <p>The Kubernetes community has announced the retirement of the Ingress NGINX controller, with best-effort maintenance continuing only until March 2026. HCL Connections has adopted Traefik as the reference ingress controller and published a migration guide (<a href="https://support.hcl-software.com/csm?id=kb_article&amp;sysparm_article=KB0129510">KB0129510</a>) covering the core Component Pack charts.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <a href="https://support.hcl-software.com/csm?id=kb_article&amp;sysparm_article=KB0129510">HCL migration guide</a> explicitly excludes Huddo Boards: "If Huddo Boards is installed, contact HCL Connections Support before proceeding. The Huddo chart is not included in the migration kit." This guide is the Huddo Boards equivalent — follow it after completing the HCL Component Pack migration steps.</p>
+<p>The <a href="https://support.hcl-software.com/csm?id=kb_article&amp;sysparm_article=KB0129510">HCL migration guide</a> specifies more specific requirements for Component Pack. Refer to this for additional guidance.</p>
 </div>
 <h2 id="breaking-change-in-v200">Breaking change in v2.0.0<a class="headerlink" href="#breaking-change-in-v200" title="Permanent link">&para;</a></h2>
 <p><code>huddo-boards-cp v2.0.0</code> removes the nginx-specific ingress defaults that were previously baked into the chart (<code>ingressClassName: nginx</code>, regex paths, and all <code>nginx.ingress.kubernetes.io/*</code> annotations). Traefik is now the reference ingress controller.</p>
