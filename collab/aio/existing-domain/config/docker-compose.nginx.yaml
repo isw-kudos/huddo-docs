@@ -1,0 +1,22 @@
+# Example nginx reverse proxy for the Collab standalone stack
+#
+# Run alongside the collab stack:
+#   docker compose -f docker-compose.yaml -f docker-compose.nginx.yaml up -d
+#
+# Requires in .env:
+#   APP_HOST=collab.example.com          (hostname only, no protocol)
+#   LETSENCRYPT_DIR=/etc/letsencrypt     (directory containing live/<APP_HOST>/ certs)
+
+services:
+  proxy:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates:ro
+      - ${LETSENCRYPT_DIR}:/etc/letsencrypt:ro
+    environment:
+      APP_HOST: ${APP_HOST}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

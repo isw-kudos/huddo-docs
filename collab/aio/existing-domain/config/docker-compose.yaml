@@ -1,0 +1,474 @@
+x-service-defaults: &service-defaults
+  networks:
+    - collab-network
+  extra_hosts:
+    - '$APP_HOST:host-gateway'
+
+x-shared-environment: &shared-env
+  SINGLE_HOST: $APP_URI
+  URL_CORE: $APP_URI/huddo
+  URL_IDEAS: $APP_URI/huddo/ideas
+  URL_WIKIS: $APP_URI/huddo/wikis
+  URL_ATTACHMENTS: $APP_URI/huddo/attachments
+  URL_DISCUSSIONS: $APP_URI/huddo/discussions
+  REDIS_CACHE_HOST: redis
+  ACL_HOST: http://acl
+  LICENCE_HOST: http://licence
+  PROVIDER_HOST: http://provider
+  SOCKET_CLUSTER_HOST: socketcluster
+  SOCKET_CLUSTER_PORT: '7625'
+  USER_HOST: http://user
+
+x-db-env: &db-env
+  MONGO_USER: root
+  MONGO_PARAMS: authSource=admin&replicaSet=rs0
+
+x-s3-env: &s3-env
+  S3_ENDPOINT: s3
+  S3_PORT: '8333'
+  S3_BUCKET: collab
+  S3_SECURE: 'false'
+
+# Reverse proxy routing table (configure your proxy to forward by path):
+#   /attachments  → host:2882
+#   /huddo/editor → host:27012
+#   /huddo/ideas  → host:4332
+#   /huddo/wikis  → host:9454
+#   /huddo        → host:2655
+#   /huddo/discussions  → host:3473
+#   /socketcluster → host:7625 (WebSocket)
+
+services:
+  attachments:
+    <<: *service-defaults
+    image: quay.io/huddo/collab-attachments:$IMAGE_TAG
+    platform: linux/amd64
+    ports:
+      - '2882:2882'
+    environment:
+      <<: [*shared-env, *db-env, *s3-env]
+      MONGO_DB: attachments
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:2882/attachments/api/health'',r=>process.exit(r.statusCode===200?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      s3-init:
+        condition: service_completed_successfully
+      acl:
+        condition: service_healthy
+      licence:
+        condition: service_healthy
+      provider:
+        condition: service_healthy
+      user:
+        condition: service_healthy
+      socketcluster:
+        condition: service_healthy
+
+  core:
+    <<: *service-defaults
+    image: quay.io/huddo/collab-core:$IMAGE_TAG
+    platform: linux/amd64
+    ports:
+      - '2655:2655'
+    environment:
+      <<: [*shared-env, *db-env]
+      PORT: 2655
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:2655/'',r=>process.exit(r.statusCode<500?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      acl:
+        condition: service_healthy
+      licence:
+        condition: service_healthy
+      provider:
+        condition: service_healthy
+      user:
+        condition: service_healthy
+      socketcluster:
+        condition: service_healthy
+
+  discussions:
+    <<: *service-defaults
+    image: quay.io/huddo/collab-discussions:$IMAGE_TAG
+    platform: linux/amd64
+    ports:
+      - '3473:3473'
+    environment:
+      <<: [*shared-env, *db-env]
+      MONGO_DB: discussions
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:3473/discussions/health'',r=>process.exit(r.statusCode===200?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      acl:
+        condition: service_healthy
+      licence:
+        condition: service_healthy
+      provider:
+        condition: service_healthy
+      user:
+        condition: service_healthy
+      socketcluster:
+        condition: service_healthy
+
+  acl:
+    <<: *service-defaults
+    image: quay.io/huddo/collab-acl:$IMAGE_TAG
+    platform: linux/amd64
+    environment:
+      <<: *shared-env
+      REDIS_CACHE_PORT: 6379
+      WIKIS_HOST: http://wikis
+      IDEAS_HOST: http://ideas
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:2250/health'',r=>process.exit(r.statusCode===200?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  editor:
+    <<: *service-defaults
+    image: quay.io/huddo/collab-editor:$IMAGE_TAG
+    platform: linux/amd64
+    ports:
+      - '27012:27012'
+    environment:
+      <<: *shared-env
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:27012/'',r=>process.exit(r.statusCode<500?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      acl:
+        condition: service_healthy
+      licence:
+        condition: service_healthy
+      provider:
+        condition: service_healthy
+      user:
+        condition: service_healthy
+      socketcluster:
+        condition: service_healthy
+
+  ideas:
+    <<: *service-defaults
+    image: quay.io/huddo/collab-ideas:$IMAGE_TAG
+    platform: linux/amd64
+    ports:
+      - '4332:4332'
+    environment:
+      <<: [*shared-env, *db-env, *s3-env]
+      MONGO_DB: collab-ideas
+      PORT: 4332
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:4332/'',r=>process.exit(r.statusCode<500?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      s3-init:
+        condition: service_completed_successfully
+      acl:
+        condition: service_healthy
+      licence:
+        condition: service_healthy
+      provider:
+        condition: service_healthy
+      user:
+        condition: service_healthy
+      socketcluster:
+        condition: service_healthy
+
+  wikis:
+    <<: *service-defaults
+    image: quay.io/huddo/collab-wikis:$IMAGE_TAG
+    platform: linux/amd64
+    ports:
+      - '9454:9454'
+    environment:
+      <<: [*shared-env, *db-env, *s3-env]
+      PORT: 9454
+      MONGO_DB: collab-wikis
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:9454/'',r=>process.exit(r.statusCode<500?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      s3-init:
+        condition: service_completed_successfully
+      acl:
+        condition: service_healthy
+      licence:
+        condition: service_healthy
+      provider:
+        condition: service_healthy
+      user:
+        condition: service_healthy
+      socketcluster:
+        condition: service_healthy
+
+  wikishift:
+    <<: *service-defaults
+    profiles: [migration] # requires DB2/HCL Connections — run with: docker compose --profile migration up wikishift
+    image: quay.io/huddo/collab-wikishift:$IMAGE_TAG
+    platform: linux/amd64
+    environment:
+      <<: [*shared-env, *db-env, *s3-env]
+      MONGO_DB: collab-wikis
+      MONGO_DB_ATTACHMENTS: collab-attachments
+      MONGO_DB_DISCUSSIONS: collab-discussions
+      WIKIS_CONTENT_DIR: /content
+      # DB2 connection settings should be configured via .env file:
+      # DB2_DATABASE, DB2_HOSTNAME, DB2_PORT, DB2_UID, DB2_PWD
+    env_file:
+      - path: .env
+        required: true
+    volumes:
+      - wikis-content:/content
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      s3-init:
+        condition: service_completed_successfully
+
+  user:
+    <<: *service-defaults
+    image: quay.io/huddo/user:$IMAGE_TAG
+    platform: linux/amd64
+    environment:
+      <<: [*shared-env, *db-env, *s3-env]
+      NODE_TLS_REJECT_UNAUTHORIZED: '0'
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:2620/health'',r=>process.exit(r.statusCode===200?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+
+  licence:
+    <<: *service-defaults
+    image: quay.io/huddo/licence:$IMAGE_TAG
+    platform: linux/amd64
+    environment:
+      <<: [*shared-env, *db-env]
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:2621/health'',r=>process.exit(r.statusCode===200?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  provider:
+    <<: *service-defaults
+    image: quay.io/huddo/provider:$IMAGE_TAG
+    platform: linux/amd64
+    environment:
+      <<: *shared-env
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:2623/health'',r=>process.exit(r.statusCode===200?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  socketcluster:
+    <<: *service-defaults
+    image: quay.io/huddo/socketcluster:$IMAGE_TAG
+    platform: linux/amd64
+    ports:
+      - '7625:7625'
+    environment:
+      <<: *shared-env
+    env_file:
+      - path: .env
+        required: true
+    healthcheck:
+      test: ['CMD-SHELL', 'node -e "require(''http'').get(''http://localhost:7625/health'',r=>process.exit(r.statusCode===200?0:1)).on(''error'',()=>process.exit(1))"']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  mongo:
+    <<: *service-defaults
+    image: mongo:7
+    entrypoint:
+      - bash
+      - -c
+      - |
+        if [ ! -f /data/db/.keyfile ]; then
+          openssl rand -base64 756 > /data/db/.keyfile
+          chmod 400 /data/db/.keyfile
+          chown 999:999 /data/db/.keyfile
+        fi
+        exec docker-entrypoint.sh mongod --replSet rs0 --bind_ip_all --keyFile /data/db/.keyfile
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:-password}
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--eval', 'db.adminCommand({ping:1})', '--quiet']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  mongo-init:
+    <<: *service-defaults
+    image: mongo:7
+    restart: 'no'
+    depends_on:
+      mongo:
+        condition: service_healthy
+    entrypoint:
+      - mongosh
+      - --host
+      - mongo
+      - --username
+      - root
+      - --password
+      - ${MONGO_PASSWORD:-password}
+      - --authenticationDatabase
+      - admin
+      - --eval
+      - >-
+        try { rs.status(); print('replica set already initiated') } catch(e) {
+          print('initiating replica set');
+          rs.initiate({_id: 'rs0', members: [{_id: 0, host: 'mongo:27017'}]});
+        }
+
+  redis:
+    <<: *service-defaults
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  s3:
+    <<: *service-defaults
+    image: chrislusf/seaweedfs:4.17
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mkdir -p /etc/seaweedfs
+        printf '{"identities":[{"name":"admin","credentials":[{"accessKey":"%s","secretKey":"%s"}],"actions":["Admin","Read","Write","List","Tagging","ReadAcp","WriteAcp"]}]}\n' \
+          "${S3_ACCESS_KEY:-admin}" "${S3_SECRET_KEY:-changeme}" > /etc/seaweedfs/s3.json
+        exec weed server -dir=/data -s3 -s3.config=/etc/seaweedfs/s3.json -filer
+    env_file:
+      - path: .env
+        required: true
+    volumes:
+      - s3-data:/data
+    healthcheck:
+      test: ['CMD-SHELL', 'wget -q --spider "http://$(hostname -i):9333/cluster/status"']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+  s3-init:
+    <<: *service-defaults
+    image: amazon/aws-cli:2.34.16
+    restart: no
+    depends_on:
+      s3:
+        condition: service_healthy
+    environment:
+      AWS_ACCESS_KEY_ID: ${S3_ACCESS_KEY:-admin}
+      AWS_SECRET_ACCESS_KEY: ${S3_SECRET_KEY:-changeme}
+      AWS_DEFAULT_REGION: us-east-1
+    entrypoint:
+      - sh
+      - -c
+      - aws --endpoint-url http://s3:8333 s3 mb s3://collab --region us-east-1 || true
+
+networks:
+  collab-network:
+    driver: bridge
+
+volumes:
+  wikis-content:
+  mongo-data:
+  redis-data:
+  s3-data:

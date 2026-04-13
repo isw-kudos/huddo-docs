@@ -1,0 +1,117 @@
+# Collab reverse proxy
+# Upstream ports match the collab standalone docker-compose.yaml port mappings
+
+upstream app.core {
+  server host.docker.internal:2655;
+}
+upstream app.attachments {
+  server host.docker.internal:2882;
+}
+upstream app.discussions {
+  server host.docker.internal:3473;
+}
+upstream app.editor {
+  server host.docker.internal:27012;
+}
+upstream app.ideas {
+  server host.docker.internal:4332;
+}
+upstream app.wikis {
+  server host.docker.internal:9454;
+}
+upstream app.socketcluster {
+  server host.docker.internal:7625;
+}
+
+error_log /dev/stdout warn;
+access_log /dev/stdout;
+
+# Redirect HTTP → HTTPS
+server {
+  listen 80;
+  server_name ${APP_HOST};
+  return 301 https://${APP_HOST}$request_uri;
+}
+
+server {
+  listen 443 ssl;
+  server_name ${APP_HOST};
+
+  ssl_certificate /etc/letsencrypt/live/${APP_HOST}/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/${APP_HOST}/privkey.pem;
+
+  client_max_body_size 10m;
+
+  # Redirect / → /huddo
+  location = / {
+    return 302 https://${APP_HOST}/huddo;
+  }
+
+  # OAuth callbacks — rewrite /auth → /huddo/auth (Next.js basePath)
+  location /auth {
+    rewrite ^/auth(.*) /huddo/auth$1 break;
+    proxy_pass http://app.core;
+    proxy_pass_request_headers on;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Host $http_host;
+  }
+
+  location /huddo/editor {
+    proxy_pass http://app.editor;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+
+  location /huddo/ideas {
+    proxy_pass http://app.ideas;
+    proxy_pass_request_headers on;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Host $http_host;
+  }
+
+  location /huddo/wikis {
+    proxy_pass http://app.wikis;
+    proxy_pass_request_headers on;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Host $http_host;
+  }
+
+  location /huddo {
+    proxy_pass http://app.core;
+    proxy_pass_request_headers on;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Host $http_host;
+  }
+
+  location /huddo/attachments {
+    rewrite ^/huddo(/.*) $1 break;
+    proxy_pass http://app.attachments;
+    proxy_pass_request_headers on;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Host $http_host;
+  }
+
+  location /huddo/discussions {
+    rewrite ^/huddo(/.*) $1 break;
+    proxy_pass http://app.discussions;
+    proxy_pass_request_headers on;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Host $http_host;
+  }
+
+  location /socketcluster {
+    proxy_pass http://app.socketcluster;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}

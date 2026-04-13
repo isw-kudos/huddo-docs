@@ -1,0 +1,11 @@
+# Traefik file provider — TLS certificate config
+# Generated from tls.yaml.template by the traefik-config init service
+tls:
+  certificates:
+    - certFile: /letsencrypt/live/${APP_HOST}/fullchain.pem
+      keyFile: /letsencrypt/live/${APP_HOST}/privkey.pem
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /letsencrypt/live/${APP_HOST}/fullchain.pem
+        keyFile: /letsencrypt/live/${APP_HOST}/privkey.pem

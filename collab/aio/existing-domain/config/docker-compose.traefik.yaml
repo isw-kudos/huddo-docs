@@ -1,0 +1,128 @@
+# Traefik reverse proxy overlay
+# Usage: docker compose -f docker-compose.yaml -f docker-compose.traefik.yaml up -d
+#
+# Requires in .env:
+#   APP_HOST=collab.example.com   (hostname only, no protocol)
+#   LETSENCRYPT_DIR=/path/to/letsencrypt   (directory containing live/<domain>/ certs)
+
+services:
+  attachments:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.attachments.rule=Host(`${APP_HOST}`) && PathPrefix(`/huddo/attachments`)
+      - traefik.http.routers.attachments.entrypoints=websecure
+      - traefik.http.routers.attachments.tls=true
+      - traefik.http.routers.attachments.middlewares=strip-huddo
+      - traefik.http.services.attachments.loadbalancer.server.port=2882
+      - traefik.http.middlewares.strip-huddo.stripprefix.prefixes=/huddo
+
+  core:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.core.rule=Host(`${APP_HOST}`) && PathPrefix(`/huddo`)
+      - traefik.http.routers.core.entrypoints=websecure
+      - traefik.http.routers.core.tls=true
+      - traefik.http.services.core.loadbalancer.server.port=2655
+      # proxy /auth/* → core with /huddo prefix (Next.js basePath) for OAuth callbacks
+      - traefik.http.routers.auth-callback.rule=Host(`${APP_HOST}`) && PathPrefix(`/auth`)
+      - traefik.http.routers.auth-callback.entrypoints=websecure
+      - traefik.http.routers.auth-callback.tls=true
+      - traefik.http.routers.auth-callback.middlewares=add-huddo-prefix
+      - traefik.http.routers.auth-callback.service=core
+      - traefik.http.middlewares.add-huddo-prefix.addprefix.prefix=/huddo
+      # redirect / → /huddo
+      - traefik.http.routers.root-redirect.rule=Host(`${APP_HOST}`) && Path(`/`)
+      - traefik.http.routers.root-redirect.entrypoints=websecure
+      - traefik.http.routers.root-redirect.tls=true
+      - traefik.http.routers.root-redirect.middlewares=redirect-to-huddo
+      - traefik.http.routers.root-redirect.service=core
+      - traefik.http.middlewares.redirect-to-huddo.redirectregex.regex=^https://${APP_HOST}/?$$
+      - traefik.http.middlewares.redirect-to-huddo.redirectregex.replacement=https://${APP_HOST}/huddo
+      - traefik.http.middlewares.redirect-to-huddo.redirectregex.permanent=false
+
+  discussions:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.discussions.rule=Host(`${APP_HOST}`) && PathPrefix(`/huddo/discussions`)
+      - traefik.http.routers.discussions.entrypoints=websecure
+      - traefik.http.routers.discussions.tls=true
+      - traefik.http.routers.discussions.middlewares=strip-huddo
+      - traefik.http.services.discussions.loadbalancer.server.port=3473
+
+  editor:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.editor.rule=Host(`${APP_HOST}`) && PathPrefix(`/huddo/editor`)
+      - traefik.http.routers.editor.entrypoints=websecure
+      - traefik.http.routers.editor.tls=true
+      - traefik.http.services.editor.loadbalancer.server.port=27012
+
+  ideas:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.ideas.rule=Host(`${APP_HOST}`) && PathPrefix(`/huddo/ideas`)
+      - traefik.http.routers.ideas.entrypoints=websecure
+      - traefik.http.routers.ideas.tls=true
+      - traefik.http.services.ideas.loadbalancer.server.port=4332
+
+  wikis:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.wikis.rule=Host(`${APP_HOST}`) && PathPrefix(`/huddo/wikis`)
+      - traefik.http.routers.wikis.entrypoints=websecure
+      - traefik.http.routers.wikis.tls=true
+      - traefik.http.services.wikis.loadbalancer.server.port=9454
+
+  socketcluster:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.socketcluster.rule=Host(`${APP_HOST}`) && PathPrefix(`/socketcluster`)
+      - traefik.http.routers.socketcluster.entrypoints=websecure
+      - traefik.http.routers.socketcluster.tls=true
+      - traefik.http.services.socketcluster.loadbalancer.server.port=7625
+
+  traefik-config:
+    image: alpine:3
+    restart: "no"
+    environment:
+      APP_HOST: ${APP_HOST}
+    volumes:
+      - ./traefik/dynamic:/etc/traefik/dynamic
+    command: >
+      sh -c "apk add --no-cache gettext > /dev/null 2>&1 &&
+             envsubst < /etc/traefik/dynamic/tls.yaml.template > /etc/traefik/dynamic/tls.yaml"
+
+  traefik:
+    image: traefik:v3
+    networks:
+      - collab-network
+    platform: linux/amd64
+    command:
+      - --providers.docker=true
+      - --providers.docker.network=collab-network
+      - --providers.docker.exposedbydefault=false
+      - --providers.file.directory=/etc/traefik/dynamic
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      - --entrypoints.websecure.address=:443
+      - --accesslog=true
+      - --log.level=INFO
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/dynamic:/etc/traefik/dynamic:ro
+      - ${LETSENCRYPT_DIR}:/letsencrypt:ro
+    depends_on:
+      traefik-config:
+        condition: service_completed_successfully
+      core:
+        condition: service_started
+      wikis:
+        condition: service_started
+      ideas:
+        condition: service_started
+      editor:
+        condition: service_started
