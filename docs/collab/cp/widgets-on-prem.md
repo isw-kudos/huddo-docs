@@ -39,12 +39,12 @@ Add Huddo Collab widgets into HCL Connections on-premise environments
 
         <!-- Huddo Wikis -->
         <widgetDef defId="HuddoWikis" modes="view fullpage" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml">
-        <itemSet>
-        <item name="resourceId" value="{resourceId}"/>
-        <item name="width" value="100%"/>
-        <item name="height" value="500px"/>
-        <item name="url" value="https://[HUDDO_URL]/huddo/wikis/community/connections"/>
-        </itemSet>
+            <itemSet>
+                <item name="resourceId" value="{resourceId}"/>
+                <item name="width" value="100%"/>
+                <item name="height" value="500px"/>
+                <item name="url" value="https://[HUDDO_URL]/huddo/wikis/community/connections"/>
+            </itemSet>
         </widgetDef>
         <!-- END Huddo Wikis -->
 
