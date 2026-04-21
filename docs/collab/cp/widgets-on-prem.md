@@ -4,7 +4,7 @@ Add Huddo Collab widgets into HCL Connections on-premise environments
 
 ---
 
-### Ideas Community Widget
+### Community Widgets
 
 1.  SSH to the WAS Deployment Manager
 
@@ -22,6 +22,8 @@ Add Huddo Collab widgets into HCL Connections on-premise environments
 
     Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following, replacing `[HUDDO_URL]` with your URL:
 
+    #### Ideas
+
         <!-- Huddo Collab Ideas -->
         <widgetDef defId="CollabIdeas" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
             <itemSet>
@@ -32,6 +34,19 @@ Add Huddo Collab widgets into HCL Connections on-premise environments
             </itemSet>
         </widgetDef>
         <!-- END Huddo Collab Ideas -->
+
+    #### Wikis
+
+        <!-- Huddo Wikis -->
+        <widgetDef defId="HuddoWikis" modes="view fullpage" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml">
+        <itemSet>
+        <item name="resourceId" value="{resourceId}"/>
+        <item name="width" value="100%"/>
+        <item name="height" value="500px"/>
+        <item name="url" value="https://[HUDDO_URL]/huddo/wikis/community/connections"/>
+        </itemSet>
+        </widgetDef>
+        <!-- END Huddo Wikis -->
 
 1.  Check in the widgets-config.xml file.
 
