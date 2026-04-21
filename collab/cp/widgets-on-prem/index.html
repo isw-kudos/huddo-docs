@@ -7441,13 +7441,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ideas-community-widget" class="md-nav__link">
+  <a href="#community-widgets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ideas Community Widget
+        Community Widgets
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Community Widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wikis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wikis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7471,7 +7499,7 @@
 <h1 id="hcl-connections-widget-setup">HCL Connections Widget Setup<a class="headerlink" href="#hcl-connections-widget-setup" title="Permanent link">&para;</a></h1>
 <p>Add Huddo Collab widgets into HCL Connections on-premise environments</p>
 <hr />
-<h3 id="ideas-community-widget">Ideas Community Widget<a class="headerlink" href="#ideas-community-widget" title="Permanent link">&para;</a></h3>
+<h3 id="community-widgets">Community Widgets<a class="headerlink" href="#community-widgets" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>SSH to the WAS Deployment Manager</p>
@@ -7491,6 +7519,7 @@ ProfilesConfigService.checkOutWidgetConfig(&quot;/LCCheckedOut&quot;, AdminContr
 <li>
 <p>Edit the <code>widgets-config.xml</code> file.</p>
 <p>Find the resource element with the type of community, e.g. <code>&lt;resource ... type="community" ... &gt;</code>, then under <code>&lt;widgets&gt;</code>, then within <code>&lt;definitions&gt;</code> add the following, replacing <code>[HUDDO_URL]</code> with your URL:</p>
+<h4 id="ideas">Ideas<a class="headerlink" href="#ideas" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>&lt;!-- Huddo Collab Ideas --&gt;
 &lt;widgetDef defId=&quot;CollabIdeas&quot; modes=&quot;view fullpage&quot; url=&quot;{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml&quot; themes=&quot;wpthemeNarrow wpthemeWide wpthemeBanner&quot; uniqueInstance=&quot;true&quot;&gt;
     &lt;itemSet&gt;
@@ -7501,6 +7530,18 @@ ProfilesConfigService.checkOutWidgetConfig(&quot;/LCCheckedOut&quot;, AdminContr
     &lt;/itemSet&gt;
 &lt;/widgetDef&gt;
 &lt;!-- END Huddo Collab Ideas --&gt;
+</code></pre></div>
+<h4 id="wikis">Wikis<a class="headerlink" href="#wikis" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>&lt;!-- Huddo Wikis --&gt;
+&lt;widgetDef defId=&quot;HuddoWikis&quot; modes=&quot;view fullpage&quot; themes=&quot;wpthemeNarrow wpthemeWide wpthemeBanner&quot; uniqueInstance=&quot;true&quot; url=&quot;{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml&quot;&gt;
+&lt;itemSet&gt;
+&lt;item name=&quot;resourceId&quot; value=&quot;{resourceId}&quot;/&gt;
+&lt;item name=&quot;width&quot; value=&quot;100%&quot;/&gt;
+&lt;item name=&quot;height&quot; value=&quot;500px&quot;/&gt;
+&lt;item name=&quot;url&quot; value=&quot;https://[HUDDO_URL]/huddo/wikis/community/connections&quot;/&gt;
+&lt;/itemSet&gt;
+&lt;/widgetDef&gt;
+&lt;!-- END Huddo Wikis --&gt;
 </code></pre></div>
 </li>
 <li>
@@ -7543,7 +7584,7 @@ com.ibm.jsse2.util.h: PKIX path building failed: com.ibm.security.cert.IBMCertPa
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-03-10
+    2026-04-22
   </span>
 
     
