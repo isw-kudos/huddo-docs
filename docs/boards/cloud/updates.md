@@ -4,13 +4,39 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2026
 
+### May
+
+2026-05-19
+
+Improvements:
+
+- Security improvements - users must re-authenticate
+- @mentions avatar fallback to user initials icon
+- API documentation
+
+    - GET /user/preferences and /user/preferences/{key}
+    - GET /board/{boardId}/taskstats
+    - GET /board/{boardId}/history and /board/history/my
+    - GET /node/search and /node/cards
+    - POST /node/{nodeId}/fields
+
 ### April
+
+2026-04-17
+
+Feature:
+
+- New micro app: Select Board. Useful to embed a board in other pages
+
+Improvements:
+
+- Security: transition auth header used by UI from `token` to `Authentication`
 
 2026-04-02
 
 Features:
 
-- Ability to sort list by different methods including alphabetically as well as created, updated, start and due dates 
+- Ability to sort list by different methods including alphabetically as well as created, updated, start and due dates
 
 ### March
 
