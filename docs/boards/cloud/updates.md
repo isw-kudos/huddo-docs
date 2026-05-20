@@ -14,11 +14,11 @@ Improvements:
 - @mentions avatar fallback to user initials icon
 - API documentation
 
-    - GET /user/preferences and /user/preferences/{key}
-    - GET /board/{boardId}/taskstats
-    - GET /board/{boardId}/history and /board/history/my
-    - GET /node/search and /node/cards
-    - POST /node/{nodeId}/fields
+    - GET `/user/preferences` and `/user/preferences/{key}`
+    - GET `/board/{boardId}/taskstats`
+    - GET `/board/{boardId}/history` and `/board/history/my`
+    - GET `/node/search` and `/node/cards`
+    - POST `/node/{nodeId}/fields`
 
 ### April
 

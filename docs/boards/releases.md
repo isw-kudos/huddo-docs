@@ -30,6 +30,33 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2026
 
+#### 2026-05-20
+
+!!! warning
+
+    This update changes the default signing secret for Boards sessions. This will cause all existing sessions to be logged out. We recommend setting 'global.env.JWT_SECRET' variable to a random string before updating to this image date or later.
+
+Feature:
+
+- New micro app: Select Board. Useful to embed a board in other pages
+- Ability to sort list by different methods including alphabetically as well as created, updated, start and due dates
+
+Improvements:
+
+- Security
+
+    - see [new JWT_SECRET variable](./env/common/#shared-options)
+    - transition auth header used by UI from `token` to `Authentication`
+
+- @mentions avatar fallback to user initials icon
+- API documentation
+
+    - GET `/user/preferences` and `/user/preferences/{key}`
+    - GET `/board/{boardId}/taskstats`
+    - GET `/board/{boardId}/history` and `/board/history/my`
+    - GET `/node/search` and `/node/cards`
+    - POST `/node/{nodeId}/fields`
+
 #### 2026-03-29
 
 Fixes:
