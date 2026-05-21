@@ -32,9 +32,11 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 #### 2026-05-20
 
+##### JWT_SECRET
+
 !!! warning
 
-    This update changes the default signing secret for Boards sessions. This will cause all existing sessions to be logged out. We recommend setting 'global.env.JWT_SECRET' variable to a random string before updating to this image date or later.
+    This update changes the default signing secret for Boards sessions/tokens. This will cause all existing sessions to be logged out. We recommend setting `global.env.JWT_SECRET` variable to a random string before updating to this image date or later.
 
 Feature:
 
@@ -43,10 +45,10 @@ Feature:
 
 Improvements:
 
-- Security
+- Security updates
 
-    - see [new JWT_SECRET variable](./env/common/#shared-options)
-    - transition auth header used by UI from `token` to `Authentication`
+    - **recommended:** [set new JWT_SECRET](./env/common/#shared-options)
+    - transition authentication header used by UI from `token` to `Authentication`
 
 - @mentions avatar fallback to user initials icon
 - API documentation
