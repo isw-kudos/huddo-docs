@@ -3035,6 +3035,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2026-05-20">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt_secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT_SECRET
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -8253,6 +8270,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2026-05-20">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt_secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT_SECRET
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -8962,9 +8996,10 @@
 </div>
 <h3 id="2026">2026<a class="headerlink" href="#2026" title="Permanent link">&para;</a></h3>
 <h4 id="2026-05-20">2026-05-20<a class="headerlink" href="#2026-05-20" title="Permanent link">&para;</a></h4>
+<h5 id="jwt_secret">JWT_SECRET<a class="headerlink" href="#jwt_secret" title="Permanent link">&para;</a></h5>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This update changes the default signing secret for Boards sessions. This will cause all existing sessions to be logged out. We recommend setting 'global.env.JWT_SECRET' variable to a random string before updating to this image date or later.</p>
+<p>This update changes the default signing secret for Boards sessions/tokens. This will cause all existing sessions to be logged out. We recommend setting <code>global.env.JWT_SECRET</code> variable to a random string before updating to this image date or later.</p>
 </div>
 <p>Feature:</p>
 <ul>
@@ -8974,10 +9009,10 @@
 <p>Improvements:</p>
 <ul>
 <li>
-<p>Security</p>
+<p>Security updates</p>
 <ul>
-<li>see <a href="./env/common/#shared-options">new JWT_SECRET variable</a></li>
-<li>transition auth header used by UI from <code>token</code> to <code>Authentication</code></li>
+<li><strong>recommended:</strong> <a href="./env/common/#shared-options">set new JWT_SECRET</a></li>
+<li>transition authentication header used by UI from <code>token</code> to <code>Authentication</code></li>
 </ul>
 </li>
 <li>
