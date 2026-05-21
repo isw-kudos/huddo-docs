@@ -36,7 +36,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 !!! warning
 
-    This update changes the default signing secret for Boards sessions/tokens. This will cause all existing sessions to be logged out. We recommend setting `global.env.JWT_SECRET` variable to a random string before updating to this image date or later.
+    This update changes the default signing secret for Boards sessions/tokens. This will cause all existing sessions to be logged out. We recommend setting `user.env.JWT_SECRET` variable to a random string before updating to this image date or later.
 
 Feature:
 
