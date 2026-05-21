@@ -7479,6 +7479,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#select-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#my-next-tasks-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7561,28 +7572,40 @@
 <p>To integrate a micro app into your system, you can use an iframe. It is best practice to include authentication details required for your environment. For example:</p>
 <p><code>&lt;iframe src="https://&lt;BOARDS_URL&gt;/auth/&lt;PROVIDER&gt;/&lt;CLIENTID&gt;?redirect_to=&lt;APP_URL&gt;" width="600" height="800px"/&gt;</code></p>
 <h2 id="available-apps">Available Apps<a class="headerlink" href="#available-apps" title="Permanent link">&para;</a></h2>
+<h3 id="select-board">Select Board<a class="headerlink" href="#select-board" title="Permanent link">&para;</a></h3>
+<p>APP_URL: <code>/app/selectboard</code></p>
+<p>This app is useful in an iframe to select a board and post a message to the parent window. This is typical when integrating with third party applications that do not have a direct integration with Huddo Boards.</p>
+<p><img alt="Select Board" src="select-board.png" /> <img alt="Select Board View" src="select-board-view.png" /></p>
+<p>The format sent to the parent window is:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;select-board&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">boardId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">boardName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">view</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;kanban&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;timeline&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;activity&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;mindmap&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="my-next-tasks-summary">My Next Tasks Summary<a class="headerlink" href="#my-next-tasks-summary" title="Permanent link">&para;</a></h3>
-<p>This app displays a summary of the user's next tasks in a compact format.</p>
 <p>APP_URL: <code>/app/tasks/summary</code></p>
+<p>This app displays a summary of the user's next tasks in a compact format.</p>
 <p><img alt="My Next Tasks Summary" src="my-next-tasks-summary.png" /></p>
 <h3 id="my-next-tasks">My Next Tasks<a class="headerlink" href="#my-next-tasks" title="Permanent link">&para;</a></h3>
-<p>This app displays the user's next tasks in a list format.</p>
 <p>APP_URL: <code>/app/tasks/next</code></p>
+<p>This app displays the user's next tasks in a list format.</p>
 <p><img alt="My Next Tasks" src="my-next-tasks.png" /></p>
 <h3 id="create-card">Create Card<a class="headerlink" href="#create-card" title="Permanent link">&para;</a></h3>
-<p>This app allows users to create a new card in a specific board.</p>
 <p>APP_URL: <code>/app/createcard</code></p>
+<p>This app allows users to create a new card in a specific board.</p>
 <p><img alt="Create Card" src="create-card.png" /></p>
 <h3 id="attach-card">Attach Card<a class="headerlink" href="#attach-card" title="Permanent link">&para;</a></h3>
-<p>This app allows users to attach a link to a board, list or card. This integration is useful in applications sending email (e.g. Outlook/Verse).</p>
 <p>APP_URL: <code>/app/attachcard</code></p>
+<p>This app allows users to attach a link to a board, list or card. This integration is useful in applications sending email (e.g. Outlook/Verse).</p>
 <p>Board:</p>
 <p><img alt="Attach Board" src="attach-board.png" /></p>
 <p>Card:</p>
 <p><img alt="Attach Card" src="attach-card.png" /></p>
 <h3 id="linked-cards">Linked Cards<a class="headerlink" href="#linked-cards" title="Permanent link">&para;</a></h3>
-<p>This app displays a list of cards which have links (bookmarks) of the URL specified in the query parameter.</p>
 <p>APP_URL: <code>/app/linkedcards?url=&lt;ENCODED_URL&gt;</code></p>
+<p>This app displays a list of cards which have links (bookmarks) of the URL specified in the query parameter.</p>
 <p>Where <code>&lt;ENCODED_URL&gt;</code> is the <code>encodeURIComponent(url)</code> of the URL to search for,</p>
 <p>e.g. <code>/app/linkedcards?url=https%3A%2F%2Fgoogle.com</code></p>
 <p><img alt="Linked Cards" src="linked-cards.png" /></p>
@@ -7606,7 +7629,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2024-04-03
+    2026-05-21
   </span>
 
     
