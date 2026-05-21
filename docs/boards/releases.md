@@ -47,8 +47,9 @@ Improvements:
 
 - Security updates
 
-    - **recommended:** [set new JWT_SECRET](./env/common/#shared-options)
+    - **recommended:** [set new JWT_SECRET](./env/common.md#shared-options)
     - transition authentication header used by UI from `token` to `Authentication`
+    - support for OIDC Back-Channel Logout
 
 - @mentions avatar fallback to user initials icon
 - API documentation
