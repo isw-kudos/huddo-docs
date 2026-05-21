@@ -26,7 +26,7 @@ Improvements:
 
 Feature:
 
-- New micro app: Select Board. Useful to embed a board in other pages
+- New micro app: [Select Board](../apps/index.md#select-board)
 
 Improvements:
 

@@ -40,7 +40,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 Feature:
 
-- New micro app: Select Board. Useful to embed a board in other pages
+- New micro app: [Select Board](./apps/index.md#select-board)
 - Ability to sort list by different methods including alphabetically as well as created, updated, start and due dates
 
 Improvements:

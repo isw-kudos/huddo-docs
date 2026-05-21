@@ -10,35 +10,54 @@ To integrate a micro app into your system, you can use an iframe. It is best pra
 
 ## Available Apps
 
+### Select Board
+
+APP_URL: `/app/selectboard`
+
+This app is useful in an iframe to select a board and post a message to the parent window. This is typical when integrating with third party applications that do not have a direct integration with Huddo Boards.
+
+![Select Board](./select-board.png) ![Select Board View](./select-board-view.png)
+
+The format sent to the parent window is:
+
+```typescript
+{
+  type: 'select-board',
+  boardId: string,
+  boardName: string,
+  view: 'kanban' | 'timeline' | 'activity' | 'mindmap',
+}
+```
+
 ### My Next Tasks Summary
 
-This app displays a summary of the user's next tasks in a compact format.
-
 APP_URL: `/app/tasks/summary`
+
+This app displays a summary of the user's next tasks in a compact format.
 
 ![My Next Tasks Summary](./my-next-tasks-summary.png)
 
 ### My Next Tasks
 
-This app displays the user's next tasks in a list format.
-
 APP_URL: `/app/tasks/next`
+
+This app displays the user's next tasks in a list format.
 
 ![My Next Tasks](./my-next-tasks.png)
 
 ### Create Card
 
-This app allows users to create a new card in a specific board.
-
 APP_URL: `/app/createcard`
+
+This app allows users to create a new card in a specific board.
 
 ![Create Card](./create-card.png)
 
 ### Attach Card
 
-This app allows users to attach a link to a board, list or card. This integration is useful in applications sending email (e.g. Outlook/Verse).
-
 APP_URL: `/app/attachcard`
+
+This app allows users to attach a link to a board, list or card. This integration is useful in applications sending email (e.g. Outlook/Verse).
 
 Board:
 
@@ -50,9 +69,9 @@ Card:
 
 ### Linked Cards
 
-This app displays a list of cards which have links (bookmarks) of the URL specified in the query parameter.
-
 APP_URL: `/app/linkedcards?url=<ENCODED_URL>`
+
+This app displays a list of cards which have links (bookmarks) of the URL specified in the query parameter.
 
 Where `<ENCODED_URL>` is the `encodeURIComponent(url)` of the URL to search for,
 
