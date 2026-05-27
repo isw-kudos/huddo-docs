@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2026-05-27
+
+Improvements:
+
+- Boards Search - fallback to partial match if minimal results
+
+Fixes:
+
+- Issue authenticating when changing primary user alias
+- Issue identifying API authenticated sessions in backend
+
 2026-05-19
 
 Improvements:
