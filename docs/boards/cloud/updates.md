@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2026-05-28
+
+Fixes:
+
+- File upload to Boards
+
 2026-05-27
 
 Improvements:
