@@ -30,6 +30,19 @@ Please use the appropriate update command with the latest [helm chart](helm-char
 
 ### 2026
 
+#### 2026-05-28
+
+Improvements:
+
+- Boards Search - fallback to partial match if minimal results
+
+Fixes:
+
+- Issue authenticating when changing primary user alias
+- Issue identifying API authenticated sessions in backend
+- Issue impacting file upload to Boards (regression, likely not affecting previous on-premise releases)
+- Issue with iss verification on OIDC Back-Channel Logout url
+
 #### 2026-05-20
 
 ##### JWT_SECRET
