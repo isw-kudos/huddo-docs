@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### May
 
+2026-05-29
+
+Fixes:
+
+- Image pasting into rich-text
+
 2026-05-28
 
 Fixes:
