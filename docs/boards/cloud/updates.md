@@ -4,6 +4,14 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2026
 
+### June
+
+2026-06-03
+
+Fixes:
+
+- Community widget loading issue
+
 ### May
 
 2026-05-29
