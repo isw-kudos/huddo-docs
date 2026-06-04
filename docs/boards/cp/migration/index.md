@@ -190,7 +190,7 @@ Then run the standard [helm upgrade command](../../helm-charts.md#upgrade-comman
 
         helm uninstall huddo-boards-cp-activity-migration --namespace connections
 
-!!! note "Charts before huddo-boards-cp 2.2.0"
+??? note "Charts before huddo-boards-cp 2.2.0"
 
     The migration service was previously deployed as a separate chart with the same configuration file:
 
@@ -225,7 +225,7 @@ For example
         migration:
           enabled: false
 
-    !!! note "Charts before huddo-boards-cp 2.2.0"
+    ??? note "Charts before huddo-boards-cp 2.2.0"
 
         If you deployed the standalone migration chart, remove it with:
 
