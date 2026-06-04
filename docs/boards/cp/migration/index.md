@@ -175,11 +175,28 @@ The default chart values use an NFS mount. Below are examples custom configurati
 
 ## Deploy Helm Chart
 
-Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the huddo-boards-cp chart
+As of `huddo-boards-cp` v2.2.0 the migration service is part of the main chart as an optional component. Enable it in the same `boards-cp.yaml` file used to deploy the huddo-boards-cp chart:
 
-    helm upgrade huddo-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+```yaml
+migration:
+  enabled: true
+```
 
-> **Note:** the configuration file has changed as of the v3 chart. Please add the new `sharedDrive` parameters described above
+Then run the standard [helm upgrade command](../../helm-charts.md#upgrade-command).
+
+!!! warning
+
+    If you previously deployed the standalone `huddo-boards-cp-activity-migration` chart, uninstall it **before** enabling `migration.enabled` — both create the same PersistentVolume (`connections-shared-drive`), PersistentVolumeClaim (`connections-shared-drive-claim`) and Service (`boards-activity-migration`):
+
+        helm uninstall huddo-boards-cp-activity-migration --namespace connections
+
+??? note "Charts before huddo-boards-cp 2.2.0"
+
+    The migration service was previously deployed as a separate chart with the same configuration file:
+
+        helm upgrade huddo-boards-cp-activity-migration https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-activity-migration-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections
+
+    The configuration file changed as of the v3 chart. Please add the new `sharedDrive` parameters described above.
 
 ---
 
@@ -203,9 +220,16 @@ For example
 
 ## After Migration Complete
 
-1. The Migration service can be removed. Please use the following command
+1. The Migration service can be removed. Set the following in your `boards-cp.yaml` and re-run the [helm upgrade command](../../helm-charts.md#upgrade-command) — this removes the migration Deployment, Services, PersistentVolume and PersistentVolumeClaim:
 
-        helm delete huddo-boards-cp-activity-migration --purge
+        migration:
+          enabled: false
+
+    ??? note "Charts before huddo-boards-cp 2.2.0"
+
+        If you deployed the standalone migration chart, remove it with:
+
+            helm uninstall huddo-boards-cp-activity-migration --namespace connections
 
 1. Turn off the Activities application in WebSphere ISC
 

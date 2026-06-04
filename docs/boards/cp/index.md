@@ -89,17 +89,13 @@ Some elements of the Boards notifications that are sent out [can be customised](
 
 **Activity migration variables**:
 
-The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](migration/index.md).
+The Activity migration service is part of the main chart as of v2.2.0, disabled by default. Enable it with `migration.enabled: true` in the same config file. The variables are [described here](migration/index.md).
 
 ---
 
 ### Install Boards Helm Chart
 
-Install the Boards services via our Helm chart
-
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
-
-> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+Install the Boards services via the appropriate [helm chart command](../helm-charts.md).
 
 ---
 

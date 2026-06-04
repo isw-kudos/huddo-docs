@@ -2,12 +2,14 @@
 
 ## How To Upgrade
 
-Please use the appropriate update command with the latest [helm chart](helm-charts.md). For example:
+!!! important
+
+    See the [Helm Charts](./helm-charts.md) page for the latest version of the Helm Charts and the required migrations (e.g. [Traefik](./traefik.md), [SeaweedFS](./seaweed-fs.md)).
 
 1. Huddo Boards in Kubernetes
 
     ```
-    helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.1.1.tgz -i -f ./boards.yaml --namespace boards
+    helm upgrade huddo-boards <HELM_CHART_LINK> -i -f ./boards.yaml --namespace boards
     ```
 
 1. Component Pack (Activities Plus)
@@ -17,7 +19,7 @@ Please use the appropriate update command with the latest [helm chart](helm-char
         To upgrade from images in the Component Pack to images hosted by us please follow [this guide](cp/latest.md).
 
     ```
-    helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections
+    helm upgrade huddo-boards-cp <HELM_CHART_LINK> -i -f ./boards-cp.yaml --namespace connections
     ```
 
 ---

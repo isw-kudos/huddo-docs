@@ -194,17 +194,7 @@ At the end of this step you should have the following:
             MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
     ```
 
-1. Redeploy Boards Helm Chart as per command for Huddo Boards:
-
-    [HCL Component Pack](../../cp/index.md#install-boards-helm-chart)
-
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections
-
-    [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
-
-        helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.1.1.tgz -i -f ./boards.yaml --namespace boards
-
-    > **Note:** `--recreate-pods` is not required this time as this is only an env variable change
+1. Redeploy Boards helm chart as per your [upgrade command](../../helm-charts.md).
 
 ## Approve Permissions
 

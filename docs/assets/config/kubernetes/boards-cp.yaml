@@ -74,6 +74,7 @@ provider:
 #     MSGRAPH_TEAMS_MANIFEST_ID: "<id attribute from your teams app manifest.json>"
 
 migration:
+  enabled: false
   # configure access to the Connections Shared mount
   sharedDrive:
     # Replace with IP address for the NFS server
