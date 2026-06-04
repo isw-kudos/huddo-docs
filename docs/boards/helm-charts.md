@@ -1,10 +1,66 @@
 # Helm Chart History
 
-Release notes for each Helm chart utilised by Boards (for Component Pack vs standalone, and Activity Migration)
+Release notes for each Helm chart utilised by Boards
 
 !!! warning "Important"
 
-    As of January 2023 we have moved our image hosting. Please [follow this guide](images.md) to configure your Kubernetes with access to our images hosted in Quay.io.
+    As of January 2023 we have moved our image hosting. Please [follow this guide](./images.md) to configure your Kubernetes with access to our images hosted in Quay.io.
+
+---
+
+## For Component Pack
+
+### huddo-boards-cp
+
+!!! danger
+
+    As of `huddo-boards-cp-2.0.0.tgz` we have migrated from ingress-nginx to Traefik. Please follow our [migration guide](./traefik.md).
+
+!!! tip
+
+    As of `huddo-boards-cp-2.1.0.tgz` we have added SeaweedFS S3 storage with a migration path from MinIO. We recommend this as a replacement for MinIO. See [SeaweedFS migration guide](./seaweed-fs.md).
+
+| Version                                                          | Description                                                                                                            | Breaking Changes                                       |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [1.0.0](../assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)   | Initial release (Huddo)                                                                                                | No                                                     |
+| [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz)   | CNX 8 fix for Mongo 5                                                                                                  | No                                                     |
+| [1.1.1](../assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz)   | Support custom `storageClassName` instead of PV                                                                        | No                                                     |
+| [1.2.0](../assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz)   | Added readiness probes on each service                                                                                 | No                                                     |
+| [1.2.1](../assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz)   | Fix ingress session cookie `SameSite` setting (polling in a CORS frame, e.g. Teams)                                    | No                                                     |
+| [1.3.0](../assets/config/kubernetes/huddo-boards-cp-1.3.0.tgz)   | Support CNX 8 Mongo 7 (use ConfigMap `mongo-name` instead of `mongo5-rs-members-hosts`) with images after `2025-02-13` | No                                                     |
+| [1.3.1](../assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz)   | Change `ingress.pathType` to `ImplementationSpecific` to allow regex rewrites                                          | Potentially – may affect ingress matching behaviour    |
+| [1.4.0](../assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz)   | Support CNX 8 CR13 cache rename - new environment variables in ConfigMap and Secret references                          | No                                                     |
+| [2.0.0](../assets/config/kubernetes/huddo-boards-cp-2.0.0.tgz)   | Move from ingress-nginx to [traefik](./traefik.md)                                                                     | **Yes** – [migration required](./traefik.md)           |
+| [2.1.0](../assets/config/kubernetes/huddo-boards-cp-2.1.0.tgz)   | Add SeaweedFS S3 storage with migration path from MinIO                                                                | Optional – migration only if adopting SeaweedFS        |
+| [2.2.0](../assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz)   | Merge activity-migration as optional component (`migration.enabled`, default `false`)                                  | No – uninstall the standalone activity-migration release before enabling |
+
+#### Upgrade command
+
+```bash
+helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz -i -f ./boards-cp.yaml --namespace connections
+```
+
+!!! note
+
+    `--recreate-pods` was removed in Helm 3. If pods do not pick up new images, restart them with `kubectl rollout restart deployment -n connections -l release=huddo-boards-cp`.
+
+### huddo-boards-cp-activity-migration (DEPRECATED)
+
+!!! note
+
+    This chart is deprecated as it has been merged into `huddo-boards-cp` chart as of `v2.2.0` as an optional component. Set `migration.enabled: true` in your values file to enable it.
+
+    **Before enabling**, uninstall any existing standalone release — both create the same PersistentVolume (`connections-shared-drive`), PersistentVolumeClaim (`connections-shared-drive-claim`) and Service (`boards-activity-migration`):
+
+        helm uninstall huddo-boards-cp-activity-migration --namespace connections
+
+| Version | Description                                                                                                                                                       | Breaking Changes  |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| [1.0.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz)  | Initial release (Huddo)                                                                | No                |  
+| [1.1.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.1.0.tgz)  | CNX 8 fix for Mongo 5                                                                  | No                |
+| [1.2.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.2.0.tgz)  | Fix resource limits                                                                    | No                |
+| [1.3.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.3.0.tgz)  | Support CNX 8 Mongo 7                                                                  | No                |
+| [1.4.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.4.0.tgz)  | Support CNX 8 CR13 cache rename - new env variables in ConfigMap and Secret references | No                |
 
 ---
 
@@ -16,51 +72,29 @@ Release notes for each Helm chart utilised by Boards (for Component Pack vs stan
 
 ### huddo-boards
 
-- [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)
-- 1.1.0 - allow additionalPaths on huddo-app ingress
-- [1.1.1](../assets/config/kubernetes/huddo-boards-1.1.1.tgz) - fix for ingress session cookie samesite (polling in a CORs frame, e.g. Teams)
-- [2.0.0](../assets/config/kubernetes/huddo-boards-2.0.0.tgz) - Move from ingress-nginx to Traefik 
+| Version | Description                                                                                                                                | Breaking Changes                                       |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| [1.0.0](../assets/config/kubernetes/huddo-boards-1.0.0.tgz)   | Initial release (Huddo)                                                              | No                                                     |
+| 1.1.0                                                         | Allow additionalPaths on huddo-app ingress                                           | No                                                     |
+| [1.1.1](../assets/config/kubernetes/huddo-boards-1.1.1.tgz)   | Fix ingress session cookie `SameSite` setting (polling in a CORS frame, e.g. Teams)  | No                                                     |
+| [2.0.0](../assets/config/kubernetes/huddo-boards-2.0.0.tgz)   | Move from ingress-nginx to [traefik](./traefik.md)                                   | **Yes** – [migration required](./traefik.md)           |
+
+#### Upgrade command
+
+```bash
+helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-2.0.0.tgz -i -f ./boards.yaml --namespace boards
+```
+
+!!! note
+
+    `--recreate-pods` was removed in Helm 3. If pods do not pick up new images, restart them with `kubectl rollout restart deployment -n boards -l release=huddo-boards`.
 
 ### huddo-boards-activity-migration
 
-- [1.0.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)
-- [1.2.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.2.0.tgz) - Fix resource limits
-
----
-
-## For Component Pack
-
-### huddo-boards-cp
-
-!!! danger
-
-    As of `huddo-boards-cp-1.0.0.tgz` we have changed the Minio pods to run as `user 1000` instead of `root`.
-    You must perform the following command on the shared drive (`/pv-connections` file system) before using this new chart. The change is backwards compatible.
-
-        cd /pv-connections/kudos-boards-minio/
-        chown 1000:1000 -R .
-
-!!! danger
-
-    As of `huddo-boards-cp-2.0.0.tgz` we have migrated from ingress-nginx to Traefik. Please follow our [migration guide](./traefik.md).
-
-- [1.0.0](../assets/config/kubernetes/huddo-boards-cp-1.0.0.tgz)
-- [1.1.0](../assets/config/kubernetes/huddo-boards-cp-1.1.0.tgz) - CNX 8 fix for Mongo 5
-- [1.1.1](../assets/config/kubernetes/huddo-boards-cp-1.1.1.tgz) - Support custom storageClassName instead of PV
-- [1.2.0](../assets/config/kubernetes/huddo-boards-cp-1.2.0.tgz) - Added readiness probes on each service
-- [1.2.1](../assets/config/kubernetes/huddo-boards-cp-1.2.1.tgz) - Fix ingress session cookie samesite (polling in a CORs frame, e.g. Teams)
-- [1.3.0](../assets/config/kubernetes/huddo-boards-cp-1.3.0.tgz) - Support CNX 8 Mongo 7 (use configMap `mongo-name` instead of `mongo5-rs-members-hosts`) with images after date `2025-02-13`
-- [1.3.1](../assets/config/kubernetes/huddo-boards-cp-1.3.1.tgz) - Change ingress.pathType to ImplementationSpecific to allow regex rewrites
-- [1.4.0](../assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz) - Support CNX 8 CR13 cache rename - new env in configMap and secretKeyRef
-- [2.0.0](../assets/config/kubernetes/huddo-boards-cp-2.0.0.tgz) - Move from ingress-nginx to Traefik 
-
-### huddo-boards-cp-activity-migration
-
-- [1.0.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.0.0.tgz)
-- [1.1.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.1.0.tgz) - CNX 8 fix for Mongo 5
-- [1.2.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.2.0.tgz) - Fix resource limits
-- [1.3.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.3.0.tgz) - Support CNX 8 Mongo 7 (use configMap `mongo-name` instead of `mongo5-rs-members-hosts`) with images after date `2025-02-13`
-- [1.4.0](../assets/config/kubernetes/huddo-boards-cp-activity-migration-1.4.0.tgz) - Support CNX 8 CR13 cache rename - new env in configMap and secretKeyRef
+| Version | Description                                                                                       | Breaking Changes                                       |
+| ------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [1.0.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)   | Initial release (Huddo)  | No                                                     |  
+| [1.2.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.2.0.tgz)   | Fix resource limits      | No                                                     |
 
 ---
 

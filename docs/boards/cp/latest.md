@@ -11,10 +11,4 @@
 
         ![Example](../../quay/config-yaml.png)
 
-1. Run the Helm upgrade command with our new Huddo chart to apply the changes.
-
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections
-
-    !!! note
-
-        The chart name has changed. You may need to `helm delete kudos-boards-cp` first
+1. Run the [helm upgrade command](../helm-charts.md)

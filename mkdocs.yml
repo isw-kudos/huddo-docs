@@ -49,6 +49,7 @@ nav:
           - Helm Charts: boards/helm-charts.md
           - Proxy (nginx): boards/proxy/nginx.md
           - Traefik Migration: boards/traefik.md
+          - SeaweedFS Migration: boards/seaweed-fs.md
           - Integrations:
               - HCL Connections:
                   - boards/connections/index.md

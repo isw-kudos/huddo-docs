@@ -39,17 +39,7 @@ Once you have your customised Teams app and advice from the Huddo team:
             MSGRAPH_TEAMS_MANIFEST_ID: "<id attribute from your teams app manifest.json>"
     ```
 
-2. Redeploy Boards helm chart as per command for Huddo Boards:
-
-    [HCL Component Pack](../../cp/index.md#install-boards-helm-chart)
-
-        helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-1.4.0.tgz -i -f ./boards-cp.yaml --namespace connections
-
-    [for Docker - Kubernetes](../../kubernetes/index.md#deploy-boards-chart)
-
-        helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.1.1.tgz -i -f ./boards.yaml --namespace boards
-
-    > **Note:** `--recreate-pods` is not required this time as this is only an env variable change
+1. Redeploy Boards helm chart as per your [upgrade command](../../helm-charts.md).
 
 ---
 
