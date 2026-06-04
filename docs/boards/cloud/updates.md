@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### June
 
+2026-06-04
+
+Fixes:
+
+- Issue adding organisation guest as Board member
+
 2026-06-03
 
 Fixes:
