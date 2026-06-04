@@ -12,13 +12,17 @@
         <meta name="author" content="Andrew Reynolds">
       
       
-        <link rel="canonical" href="https://docs.huddo.com/boards/cp/dockerhub/">
+        <link rel="canonical" href="https://docs.huddo.com/boards/seaweed-fs/">
       
       
+        <link rel="prev" href="../traefik/">
+      
+      
+        <link rel="next" href="../connections/">
       
       
         
-          <link rel="alternate" href="../../../boards/cp/dockerhub/" hreflang="en">
+          <link rel="alternate" href="../../boards/seaweed-fs/" hreflang="en">
         
           <link rel="alternate" href="https://translate.goog/?_x_tr_sl=en&_x_tr_tl=ja" hreflang="ja">
         
@@ -28,19 +32,19 @@
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Latest Boards releases directly from Dockerhub - Huddo Docs</title>
+        <title>SeaweedFS Migration - Huddo Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -61,7 +65,7 @@
     
       <link rel="stylesheet" href="/assets/css/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -94,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#latest-boards-releases-directly-from-dockerhub" class="md-skip">
+        <a href="#migration-guide-minio-to-seaweedfs-huddo-boards-cp" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +112,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Huddo Docs" class="md-header__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+    <a href="../.." title="Huddo Docs" class="md-header__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -128,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Latest Boards releases directly from Dockerhub
+              SeaweedFS Migration
             
           </span>
         </div>
@@ -149,25 +153,25 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../boards/cp/dockerhub/" hreflang="en" class="md-select__link">
+            <a href="../../boards/seaweed-fs/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="https://docs-huddo-com.translate.goog/boards/cp/dockerhub/?_x_tr_sl=en&_x_tr_tl=ja" hreflang="ja" class="md-select__link">
+            <a href="https://docs-huddo-com.translate.goog/boards/seaweed-fs/?_x_tr_sl=en&_x_tr_tl=ja" hreflang="ja" class="md-select__link">
               日本語
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="https://docs-huddo-com.translate.goog/boards/cp/dockerhub/?_x_tr_sl=en&_x_tr_tl=de" hreflang="de" class="md-select__link">
+            <a href="https://docs-huddo-com.translate.goog/boards/seaweed-fs/?_x_tr_sl=en&_x_tr_tl=de" hreflang="de" class="md-select__link">
               Deutsch
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="https://docs-huddo-com.translate.goog/boards/cp/dockerhub/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="nl" class="md-select__link">
+            <a href="https://docs-huddo-com.translate.goog/boards/seaweed-fs/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="nl" class="md-select__link">
               Nederlands
             </a>
           </li>
@@ -249,11 +253,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -275,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ccm-migrator/features/" class="md-tabs__link">
+        <a href="../../ccm-migrator/features/" class="md-tabs__link">
           
   
   
@@ -304,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../analytics/install/" class="md-tabs__link">
+        <a href="../../analytics/install/" class="md-tabs__link">
           
   
   
@@ -329,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../badges/" class="md-tabs__link">
+        <a href="../../badges/" class="md-tabs__link">
           
   
   
@@ -365,7 +371,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Huddo Docs" class="md-nav__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
+    <a href="../.." title="Huddo Docs" class="md-nav__button md-logo" aria-label="Huddo Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -392,6 +398,8 @@
       
   
   
+    
+  
   
   
     
@@ -423,18 +431,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -452,13 +463,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -505,7 +516,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cloud/" class="md-nav__link ">
+            <a href="../cloud/" class="md-nav__link ">
               
   
   
@@ -549,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud/updates/" class="md-nav__link">
+      <a href="../cloud/updates/" class="md-nav__link">
         
   
   
@@ -610,7 +621,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../integrations/" class="md-nav__link ">
+            <a href="../integrations/" class="md-nav__link ">
               
   
   
@@ -654,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auth0/" class="md-nav__link">
+      <a href="../auth0/" class="md-nav__link">
         
   
   
@@ -748,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/auth-hybrid/" class="md-nav__link">
+      <a href="../connections/auth-hybrid/" class="md-nav__link">
         
   
   
@@ -776,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/header-hybrid/" class="md-nav__link">
+      <a href="../connections/header-hybrid/" class="md-nav__link">
         
   
   
@@ -804,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/apps-menu/hybrid/" class="md-nav__link">
+      <a href="../connections/apps-menu/hybrid/" class="md-nav__link">
         
   
   
@@ -832,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/widgets-hybrid/" class="md-nav__link">
+      <a href="../connections/widgets-hybrid/" class="md-nav__link">
         
   
   
@@ -860,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/customizer/integrations/" class="md-nav__link">
+      <a href="../connections/customizer/integrations/" class="md-nav__link">
         
   
   
@@ -888,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/mobile-app-hybrid/" class="md-nav__link">
+      <a href="../connections/mobile-app-hybrid/" class="md-nav__link">
         
   
   
@@ -916,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/security/" class="md-nav__link">
+      <a href="../connections/security/" class="md-nav__link">
         
   
   
@@ -952,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notes/" class="md-nav__link">
+      <a href="../notes/" class="md-nav__link">
         
   
   
@@ -980,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../verse/verse-extension/" class="md-nav__link">
+      <a href="../verse/verse-extension/" class="md-nav__link">
         
   
   
@@ -1008,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/cloud/" class="md-nav__link">
+      <a href="../domino/cloud/" class="md-nav__link">
         
   
   
@@ -1067,7 +1078,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../msgraph/" class="md-nav__link ">
+            <a href="../msgraph/" class="md-nav__link ">
               
   
   
@@ -1111,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/getting-started/" class="md-nav__link">
+      <a href="../msgraph/getting-started/" class="md-nav__link">
         
   
   
@@ -1139,7 +1150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/custom-tiles/" class="md-nav__link">
+      <a href="../msgraph/custom-tiles/" class="md-nav__link">
         
   
   
@@ -1167,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/teams/install/" class="md-nav__link">
+      <a href="../msgraph/teams/install/" class="md-nav__link">
         
   
   
@@ -1195,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/outlook/" class="md-nav__link">
+      <a href="../msgraph/outlook/" class="md-nav__link">
         
   
   
@@ -1223,7 +1234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/sharepoint/" class="md-nav__link">
+      <a href="../msgraph/sharepoint/" class="md-nav__link">
         
   
   
@@ -1267,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/" class="md-nav__link">
+      <a href="../security/" class="md-nav__link">
         
   
   
@@ -1300,6 +1311,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1335,6 +1348,8 @@
       
         
       
+        
+      
     
     
     
@@ -1342,15 +1357,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1374,7 +1389,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1394,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../cp/" class="md-nav__link">
         
   
   
@@ -1422,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   
@@ -1475,7 +1490,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../aio/" class="md-nav__link ">
+            <a href="../aio/" class="md-nav__link ">
               
   
   
@@ -1519,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aio/existing-domain/" class="md-nav__link">
+      <a href="../aio/existing-domain/" class="md-nav__link">
         
   
   
@@ -1547,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aio/subdomains/" class="md-nav__link">
+      <a href="../aio/subdomains/" class="md-nav__link">
         
   
   
@@ -1583,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../images/" class="md-nav__link">
+      <a href="../images/" class="md-nav__link">
         
   
   
@@ -1611,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../env/common/" class="md-nav__link">
+      <a href="../env/common/" class="md-nav__link">
         
   
   
@@ -1639,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compatibility/" class="md-nav__link">
+      <a href="../compatibility/" class="md-nav__link">
         
   
   
@@ -1667,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../env/notifications/" class="md-nav__link">
+      <a href="../env/notifications/" class="md-nav__link">
         
   
   
@@ -1695,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../env/help-links/" class="md-nav__link">
+      <a href="../env/help-links/" class="md-nav__link">
         
   
   
@@ -1723,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../helm-charts/" class="md-nav__link">
+      <a href="../helm-charts/" class="md-nav__link">
         
   
   
@@ -1751,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../proxy/nginx/" class="md-nav__link">
+      <a href="../proxy/nginx/" class="md-nav__link">
         
   
   
@@ -1779,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../traefik/" class="md-nav__link">
+      <a href="../traefik/" class="md-nav__link">
         
   
   
@@ -1795,6 +1810,325 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SeaweedFS Migration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SeaweedFS Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-changed-in-v210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What changed in v2.1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#know-your-current-s3-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Know your current S3 configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-deploy-seaweedfs-and-migrate-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 — Deploy SeaweedFS and migrate data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-migration-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify migration progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify data integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-cutover-to-seaweedfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 — Cutover to SeaweedFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-apps-are-using-seaweedfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Apps are using SeaweedFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-minio-is-removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. MinIO is removed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-seaweedfs-is-healthy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. SeaweedFS is healthy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-functional-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Functional verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-job-stays-in-pending-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration Job stays in Pending state
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-job-fails-with-nosuchbucket-on-destination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration Job fails with NoSuchBucket on destination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apps-return-errors-after-cutover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apps return errors after cutover
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rclone-is-slow-on-large-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rclone is slow on large datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reclaiming-minio-data-after-the-soak-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reclaiming MinIO data after the soak period
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1838,11 +2172,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_14" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../notes/" class="md-nav__link ">
+            <a href="../notes/" class="md-nav__link ">
               
   
   
@@ -1860,14 +2194,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_13" id="__nav_1_3_13_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_14" id="__nav_1_3_14_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_13">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_14">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1921,11 +2255,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_14_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../connections/" class="md-nav__link ">
+            <a href="../connections/" class="md-nav__link ">
               
   
   
@@ -1943,14 +2277,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_13_1" id="__nav_1_3_13_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_14_1" id="__nav_1_3_14_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_13_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_14_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_14_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1969,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/migration/" class="md-nav__link">
+      <a href="../connections/migration/" class="md-nav__link">
         
   
   
@@ -1997,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../migration/" class="md-nav__link">
+      <a href="../cp/migration/" class="md-nav__link">
         
   
   
@@ -2025,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/auth-on-prem/" class="md-nav__link">
+      <a href="../connections/auth-on-prem/" class="md-nav__link">
         
   
   
@@ -2053,7 +2387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/keycloak/" class="md-nav__link">
+      <a href="../connections/keycloak/" class="md-nav__link">
         
   
   
@@ -2081,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/header-on-prem/" class="md-nav__link">
+      <a href="../connections/header-on-prem/" class="md-nav__link">
         
   
   
@@ -2109,7 +2443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/apps-menu/on-prem/" class="md-nav__link">
+      <a href="../connections/apps-menu/on-prem/" class="md-nav__link">
         
   
   
@@ -2137,7 +2471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/widgets-on-prem/" class="md-nav__link">
+      <a href="../connections/widgets-on-prem/" class="md-nav__link">
         
   
   
@@ -2165,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/mobile-app-on-prem/" class="md-nav__link">
+      <a href="../connections/mobile-app-on-prem/" class="md-nav__link">
         
   
   
@@ -2193,7 +2527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/customizer/integrations/" class="md-nav__link">
+      <a href="../connections/customizer/integrations/" class="md-nav__link">
         
   
   
@@ -2221,7 +2555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connections/httpd/" class="md-nav__link">
+      <a href="../connections/httpd/" class="md-nav__link">
         
   
   
@@ -2282,11 +2616,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_14_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../domino/" class="md-nav__link ">
+            <a href="../domino/" class="md-nav__link ">
               
   
   
@@ -2304,14 +2638,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_13_2" id="__nav_1_3_13_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_14_2" id="__nav_1_3_14_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_13_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_14_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_14_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2330,7 +2664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/oauth/" class="md-nav__link">
+      <a href="../domino/oauth/" class="md-nav__link">
         
   
   
@@ -2358,7 +2692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/schema/" class="md-nav__link">
+      <a href="../domino/schema/" class="md-nav__link">
         
   
   
@@ -2386,7 +2720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/scope/" class="md-nav__link">
+      <a href="../domino/scope/" class="md-nav__link">
         
   
   
@@ -2414,7 +2748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../domino/migration/" class="md-nav__link">
+      <a href="../domino/migration/" class="md-nav__link">
         
   
   
@@ -2473,11 +2807,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_14_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../dx/" class="md-nav__link ">
+            <a href="../dx/" class="md-nav__link ">
               
   
   
@@ -2495,14 +2829,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_13_3" id="__nav_1_3_13_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_14_3" id="__nav_1_3_14_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_13_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_14_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_14_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2521,7 +2855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dx/auth/websphere/" class="md-nav__link">
+      <a href="../dx/auth/websphere/" class="md-nav__link">
         
   
   
@@ -2549,7 +2883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dx/portlet/" class="md-nav__link">
+      <a href="../dx/portlet/" class="md-nav__link">
         
   
   
@@ -2577,7 +2911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dx/auth/proxy/" class="md-nav__link">
+      <a href="../dx/auth/proxy/" class="md-nav__link">
         
   
   
@@ -2615,7 +2949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../verse/verse-extension/" class="md-nav__link">
+      <a href="../verse/verse-extension/" class="md-nav__link">
         
   
   
@@ -2664,11 +2998,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_14_6" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../msgraph/auth/" class="md-nav__link ">
+            <a href="../msgraph/auth/" class="md-nav__link ">
               
   
   
@@ -2686,14 +3020,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_13_6" id="__nav_1_3_13_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_14_6" id="__nav_1_3_14_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_13_6">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_14_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_14_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2714,7 +3048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msgraph/teams/on-prem/" class="md-nav__link">
+      <a href="../msgraph/teams/on-prem/" class="md-nav__link">
         
   
   
@@ -2771,11 +3105,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_13_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_14_7" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../msad/" class="md-nav__link ">
+            <a href="../msad/" class="md-nav__link ">
               
   
   
@@ -2793,14 +3127,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3_13_7" id="__nav_1_3_13_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1_3_14_7" id="__nav_1_3_14_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_13_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3_13_7">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_3_14_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_14_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2819,7 +3153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msad/relying-party-trust/" class="md-nav__link">
+      <a href="../msad/relying-party-trust/" class="md-nav__link">
         
   
   
@@ -2847,7 +3181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../msad/application-group/" class="md-nav__link">
+      <a href="../msad/application-group/" class="md-nav__link">
         
   
   
@@ -2883,7 +3217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/developing/related-tasks/" class="md-nav__link">
+      <a href="../integrations/developing/related-tasks/" class="md-nav__link">
         
   
   
@@ -2919,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../releases/" class="md-nav__link">
+      <a href="../releases/" class="md-nav__link">
         
   
   
@@ -2955,7 +3289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hybrid/" class="md-nav__link">
+      <a href="../hybrid/" class="md-nav__link">
         
   
   
@@ -3064,7 +3398,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../api/" class="md-nav__link ">
+            <a href="../api/" class="md-nav__link ">
               
   
   
@@ -3132,7 +3466,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../apps/" class="md-nav__link ">
+            <a href="../apps/" class="md-nav__link ">
               
   
   
@@ -3179,7 +3513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/powerautomate/" class="md-nav__link">
+      <a href="../api/powerautomate/" class="md-nav__link">
         
   
   
@@ -3207,7 +3541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/zapier/" class="md-nav__link">
+      <a href="../api/zapier/" class="md-nav__link">
         
   
   
@@ -3276,7 +3610,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../faq/domains/" class="md-nav__link ">
+            <a href="../faq/domains/" class="md-nav__link ">
               
   
   
@@ -3322,7 +3656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/kubectl/" class="md-nav__link">
+      <a href="../faq/kubectl/" class="md-nav__link">
         
   
   
@@ -3350,7 +3684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/languages/" class="md-nav__link">
+      <a href="../faq/languages/" class="md-nav__link">
         
   
   
@@ -3378,7 +3712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/notifications/" class="md-nav__link">
+      <a href="../faq/notifications/" class="md-nav__link">
         
   
   
@@ -3427,7 +3761,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../roles/" class="md-nav__link ">
+            <a href="../cp/roles/" class="md-nav__link ">
               
   
   
@@ -3474,7 +3808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/open-source-licences/" class="md-nav__link">
+      <a href="../faq/open-source-licences/" class="md-nav__link">
         
   
   
@@ -3510,7 +3844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../store/" class="md-nav__link">
+      <a href="../store/" class="md-nav__link">
         
   
   
@@ -3579,7 +3913,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/" class="md-nav__link ">
+            <a href="../howto/" class="md-nav__link ">
               
   
   
@@ -3623,7 +3957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/knowledgebase/" class="md-nav__link">
+      <a href="../howto/knowledgebase/" class="md-nav__link">
         
   
   
@@ -3651,7 +3985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/getting-started/" class="md-nav__link">
+      <a href="../howto/getting-started/" class="md-nav__link">
         
   
   
@@ -3679,7 +4013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/quick-tips/" class="md-nav__link">
+      <a href="../howto/quick-tips/" class="md-nav__link">
         
   
   
@@ -3707,7 +4041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/start-a-trial/" class="md-nav__link">
+      <a href="../howto/start-a-trial/" class="md-nav__link">
         
   
   
@@ -3735,7 +4069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/mobile-app/" class="md-nav__link">
+      <a href="../howto/mobile-app/" class="md-nav__link">
         
   
   
@@ -3763,7 +4097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/homepage/" class="md-nav__link">
+      <a href="../howto/homepage/" class="md-nav__link">
         
   
   
@@ -3851,7 +4185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/templates/global/" class="md-nav__link">
+      <a href="../howto/templates/global/" class="md-nav__link">
         
   
   
@@ -3879,7 +4213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/templates/creating/" class="md-nav__link">
+      <a href="../howto/templates/creating/" class="md-nav__link">
         
   
   
@@ -3907,7 +4241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/assignment-roles/assignment-roles/" class="md-nav__link">
+      <a href="../howto/assignment-roles/assignment-roles/" class="md-nav__link">
         
   
   
@@ -3935,7 +4269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/import-activity/import/" class="md-nav__link">
+      <a href="../howto/import-activity/import/" class="md-nav__link">
         
   
   
@@ -4060,7 +4394,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/adding-members/" class="md-nav__link ">
+            <a href="../howto/adding-members/" class="md-nav__link ">
               
   
   
@@ -4128,7 +4462,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/permissions/" class="md-nav__link ">
+            <a href="../howto/permissions/" class="md-nav__link ">
               
   
   
@@ -4196,7 +4530,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/archiving-and-restoring/" class="md-nav__link ">
+            <a href="../howto/archiving-and-restoring/" class="md-nav__link ">
               
   
   
@@ -4264,7 +4598,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/attaching-files/" class="md-nav__link ">
+            <a href="../howto/attaching-files/" class="md-nav__link ">
               
   
   
@@ -4332,7 +4666,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/mindmap/" class="md-nav__link ">
+            <a href="../howto/mindmap/" class="md-nav__link ">
               
   
   
@@ -4400,7 +4734,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/timeline/" class="md-nav__link ">
+            <a href="../howto/timeline/" class="md-nav__link ">
               
   
   
@@ -4468,7 +4802,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/dependencies/" class="md-nav__link ">
+            <a href="../howto/dependencies/" class="md-nav__link ">
               
   
   
@@ -4515,7 +4849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/kb-shortcuts/" class="md-nav__link">
+      <a href="../howto/kb-shortcuts/" class="md-nav__link">
         
   
   
@@ -4607,7 +4941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/ical/personal/" class="md-nav__link">
+      <a href="../howto/ical/personal/" class="md-nav__link">
         
   
   
@@ -4635,7 +4969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/ical/board/" class="md-nav__link">
+      <a href="../howto/ical/board/" class="md-nav__link">
         
   
   
@@ -4737,7 +5071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/connections/connections-ui/" class="md-nav__link">
+      <a href="../howto/connections/connections-ui/" class="md-nav__link">
         
   
   
@@ -4765,7 +5099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/use-verse/" class="md-nav__link">
+      <a href="../howto/use-verse/" class="md-nav__link">
         
   
   
@@ -4793,7 +5127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/use-auth0/" class="md-nav__link">
+      <a href="../howto/use-auth0/" class="md-nav__link">
         
   
   
@@ -4821,7 +5155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/onedrive/" class="md-nav__link">
+      <a href="../howto/microsoft/onedrive/" class="md-nav__link">
         
   
   
@@ -4849,7 +5183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/outlook/" class="md-nav__link">
+      <a href="../howto/microsoft/outlook/" class="md-nav__link">
         
   
   
@@ -4877,7 +5211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/microsoft/sharepoint/" class="md-nav__link">
+      <a href="../howto/microsoft/sharepoint/" class="md-nav__link">
         
   
   
@@ -4905,7 +5239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/teams/adding-boards/" class="md-nav__link">
+      <a href="../howto/teams/adding-boards/" class="md-nav__link">
         
   
   
@@ -4982,7 +5316,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../admin/replace-user/" class="md-nav__link ">
+            <a href="../admin/replace-user/" class="md-nav__link ">
               
   
   
@@ -5024,7 +5358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../latest/" class="md-nav__link">
+      <a href="../cp/latest/" class="md-nav__link">
         
   
   
@@ -5052,7 +5386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/org-config/" class="md-nav__link">
+      <a href="../admin/org-config/" class="md-nav__link">
         
   
   
@@ -5080,7 +5414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/content-member-management/" class="md-nav__link">
+      <a href="../admin/content-member-management/" class="md-nav__link">
         
   
   
@@ -5108,7 +5442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/manage-licences/" class="md-nav__link">
+      <a href="../admin/manage-licences/" class="md-nav__link">
         
   
   
@@ -5138,7 +5472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/revoke-users/" class="md-nav__link">
+      <a href="../admin/revoke-users/" class="md-nav__link">
         
   
   
@@ -5230,7 +5564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/transition-between-providers/" class="md-nav__link">
+      <a href="../admin/transition-between-providers/" class="md-nav__link">
         
   
   
@@ -5258,7 +5592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/sync-profiles/" class="md-nav__link">
+      <a href="../admin/sync-profiles/" class="md-nav__link">
         
   
   
@@ -5286,7 +5620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/link-users/" class="md-nav__link">
+      <a href="../admin/link-users/" class="md-nav__link">
         
   
   
@@ -5314,7 +5648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/replace-group-membership/" class="md-nav__link">
+      <a href="../admin/replace-group-membership/" class="md-nav__link">
         
   
   
@@ -5342,7 +5676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/transfer-ownership-unlink/" class="md-nav__link">
+      <a href="../admin/transfer-ownership-unlink/" class="md-nav__link">
         
   
   
@@ -5370,7 +5704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../admin/deactivate-login/" class="md-nav__link">
+      <a href="../admin/deactivate-login/" class="md-nav__link">
         
   
   
@@ -5490,7 +5824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/activities-plus-install/" class="md-nav__link">
+      <a href="../troubleshooting/activities-plus-install/" class="md-nav__link">
         
   
   
@@ -5518,7 +5852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/activity-migration/" class="md-nav__link">
+      <a href="../troubleshooting/activity-migration/" class="md-nav__link">
         
   
   
@@ -5546,7 +5880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/conn-hybrid/" class="md-nav__link">
+      <a href="../troubleshooting/conn-hybrid/" class="md-nav__link">
         
   
   
@@ -5574,7 +5908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/docker/" class="md-nav__link">
+      <a href="../troubleshooting/docker/" class="md-nav__link">
         
   
   
@@ -5602,7 +5936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/websphere/" class="md-nav__link">
+      <a href="../troubleshooting/websphere/" class="md-nav__link">
         
   
   
@@ -5651,7 +5985,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../troubleshooting/office365/" class="md-nav__link ">
+            <a href="../troubleshooting/office365/" class="md-nav__link ">
               
   
   
@@ -5698,7 +6032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/oauth/" class="md-nav__link">
+      <a href="../troubleshooting/oauth/" class="md-nav__link">
         
   
   
@@ -5726,7 +6060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/mongo/" class="md-nav__link">
+      <a href="../troubleshooting/mongo/" class="md-nav__link">
         
   
   
@@ -5754,7 +6088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/nginx/" class="md-nav__link">
+      <a href="../troubleshooting/nginx/" class="md-nav__link">
         
   
   
@@ -5782,7 +6116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/notifications/" class="md-nav__link">
+      <a href="../troubleshooting/notifications/" class="md-nav__link">
         
   
   
@@ -5810,7 +6144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/safari/" class="md-nav__link">
+      <a href="../troubleshooting/safari/" class="md-nav__link">
         
   
   
@@ -5838,7 +6172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/ssl/" class="md-nav__link">
+      <a href="../troubleshooting/ssl/" class="md-nav__link">
         
   
   
@@ -5945,7 +6279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/features/" class="md-nav__link">
+      <a href="../../ccm-migrator/features/" class="md-nav__link">
         
   
   
@@ -5973,7 +6307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/install/" class="md-nav__link">
+      <a href="../../ccm-migrator/install/" class="md-nav__link">
         
   
   
@@ -6001,7 +6335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/update/" class="md-nav__link">
+      <a href="../../ccm-migrator/update/" class="md-nav__link">
         
   
   
@@ -6029,7 +6363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/usage/" class="md-nav__link">
+      <a href="../../ccm-migrator/usage/" class="md-nav__link">
         
   
   
@@ -6057,7 +6391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/supported-data/" class="md-nav__link">
+      <a href="../../ccm-migrator/supported-data/" class="md-nav__link">
         
   
   
@@ -6085,7 +6419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ccm-migrator/export-fs/" class="md-nav__link">
+      <a href="../../ccm-migrator/export-fs/" class="md-nav__link">
         
   
   
@@ -6213,7 +6547,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../analytics/install/" class="md-nav__link ">
+            <a href="../../analytics/install/" class="md-nav__link ">
               
   
   
@@ -6257,7 +6591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/app/" class="md-nav__link">
+      <a href="../../analytics/install/app/" class="md-nav__link">
         
   
   
@@ -6285,7 +6619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/install-widgets/" class="md-nav__link">
+      <a href="../../analytics/install/install-widgets/" class="md-nav__link">
         
   
   
@@ -6313,7 +6647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/apply-changes/" class="md-nav__link">
+      <a href="../../analytics/install/apply-changes/" class="md-nav__link">
         
   
   
@@ -6341,7 +6675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/add-widgets/" class="md-nav__link">
+      <a href="../../analytics/install/add-widgets/" class="md-nav__link">
         
   
   
@@ -6369,7 +6703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/comm-properties/" class="md-nav__link">
+      <a href="../../analytics/install/comm-properties/" class="md-nav__link">
         
   
   
@@ -6397,7 +6731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/licence/" class="md-nav__link">
+      <a href="../../analytics/install/licence/" class="md-nav__link">
         
   
   
@@ -6425,7 +6759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/customising/" class="md-nav__link">
+      <a href="../../analytics/install/customising/" class="md-nav__link">
         
   
   
@@ -6453,7 +6787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/install/websphere-faq/" class="md-nav__link">
+      <a href="../../analytics/install/websphere-faq/" class="md-nav__link">
         
   
   
@@ -6520,7 +6854,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../analytics/user-guide/introduction/" class="md-nav__link ">
+            <a href="../../analytics/user-guide/introduction/" class="md-nav__link ">
               
   
   
@@ -6564,7 +6898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/using-reports/" class="md-nav__link">
+      <a href="../../analytics/user-guide/using-reports/" class="md-nav__link">
         
   
   
@@ -6592,7 +6926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/available-reports/" class="md-nav__link">
+      <a href="../../analytics/user-guide/available-reports/" class="md-nav__link">
         
   
   
@@ -6620,7 +6954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/access-reports/" class="md-nav__link">
+      <a href="../../analytics/user-guide/access-reports/" class="md-nav__link">
         
   
   
@@ -6648,7 +6982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/terms/" class="md-nav__link">
+      <a href="../../analytics/user-guide/terms/" class="md-nav__link">
         
   
   
@@ -6676,7 +7010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../analytics/user-guide/itemtype-map/" class="md-nav__link">
+      <a href="../../analytics/user-guide/itemtype-map/" class="md-nav__link">
         
   
   
@@ -6746,7 +7080,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../badges/" class="md-nav__link ">
+            <a href="../../badges/" class="md-nav__link ">
               
   
   
@@ -6837,7 +7171,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../badges/install/" class="md-nav__link ">
+            <a href="../../badges/install/" class="md-nav__link ">
               
   
   
@@ -6881,7 +7215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/app/" class="md-nav__link">
+      <a href="../../badges/install/app/" class="md-nav__link">
         
   
   
@@ -6909,7 +7243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/install-widgets/" class="md-nav__link">
+      <a href="../../badges/install/install-widgets/" class="md-nav__link">
         
   
   
@@ -6937,7 +7271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/mobile/" class="md-nav__link">
+      <a href="../../badges/install/mobile/" class="md-nav__link">
         
   
   
@@ -6965,7 +7299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/apply-changes/" class="md-nav__link">
+      <a href="../../badges/install/apply-changes/" class="md-nav__link">
         
   
   
@@ -6993,7 +7327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/add-widgets/" class="md-nav__link">
+      <a href="../../badges/install/add-widgets/" class="md-nav__link">
         
   
   
@@ -7021,7 +7355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/comm-properties/" class="md-nav__link">
+      <a href="../../badges/install/comm-properties/" class="md-nav__link">
         
   
   
@@ -7049,7 +7383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/licence/" class="md-nav__link">
+      <a href="../../badges/install/licence/" class="md-nav__link">
         
   
   
@@ -7077,7 +7411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/load-defaults/" class="md-nav__link">
+      <a href="../../badges/install/load-defaults/" class="md-nav__link">
         
   
   
@@ -7105,7 +7439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/leaderboard/" class="md-nav__link">
+      <a href="../../badges/install/leaderboard/" class="md-nav__link">
         
   
   
@@ -7133,7 +7467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/awards/" class="md-nav__link">
+      <a href="../../badges/install/awards/" class="md-nav__link">
         
   
   
@@ -7161,7 +7495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/engine/" class="md-nav__link">
+      <a href="../../badges/install/engine/" class="md-nav__link">
         
   
   
@@ -7189,7 +7523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/install/customising/" class="md-nav__link">
+      <a href="../../badges/install/customising/" class="md-nav__link">
         
   
   
@@ -7217,7 +7551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/websphere-faq/" class="md-nav__link">
+      <a href="../../badges/websphere-faq/" class="md-nav__link">
         
   
   
@@ -7278,7 +7612,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../badges/update/" class="md-nav__link ">
+            <a href="../../badges/update/" class="md-nav__link ">
               
   
   
@@ -7322,7 +7656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update/update_app/" class="md-nav__link">
+      <a href="../../badges/update/update_app/" class="md-nav__link">
         
   
   
@@ -7350,7 +7684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update/refresh_cache/" class="md-nav__link">
+      <a href="../../badges/update/refresh_cache/" class="md-nav__link">
         
   
   
@@ -7386,7 +7720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../badges/update-images/" class="md-nav__link">
+      <a href="../../badges/update-images/" class="md-nav__link">
         
   
   
@@ -7434,6 +7768,258 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-changed-in-v210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What changed in v2.1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#know-your-current-s3-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Know your current S3 configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-deploy-seaweedfs-and-migrate-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 — Deploy SeaweedFS and migrate data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-migration-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify migration progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify data integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-cutover-to-seaweedfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 — Cutover to SeaweedFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-apps-are-using-seaweedfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Apps are using SeaweedFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-minio-is-removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. MinIO is removed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-seaweedfs-is-healthy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. SeaweedFS is healthy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-functional-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Functional verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-job-stays-in-pending-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration Job stays in Pending state
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-job-fails-with-nosuchbucket-on-destination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration Job fails with NoSuchBucket on destination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apps-return-errors-after-cutover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apps return errors after cutover
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rclone-is-slow-on-large-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rclone is slow on large datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reclaiming-minio-data-after-the-soak-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reclaiming MinIO data after the soak period
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7449,47 +8035,246 @@
 
 
 
-<h1 id="latest-boards-releases-directly-from-dockerhub">Latest Boards releases directly from Dockerhub<a class="headerlink" href="#latest-boards-releases-directly-from-dockerhub" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>These instructions are in the process of being deprecated. We are moving to hosting our images in Quay.io instead of Dockerhub. Please see <a href="../latest/">these instructions</a>.</p>
-</div>
-<p>You can get the latest versions of Huddo Boards Docker by subscribing to our own repository in dockerhub as follows:</p>
-<ol>
-<li>Create a <a href="https://hub.docker.com">dockerhub</a> account if you do not already have one.</li>
-<li>Email <a href="mailto:support@huddo.com">support@huddo.com</a> requesting access to Huddo Boards Docker repository, include your dockerhub account name in the email.</li>
-<li>
-<p>Create kubernetes secret with your dockerhub account credentials</p>
-<div class="highlight"><pre><span></span><code>kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=[user] --docker-password=[password] --docker-email=[email] --namespace=connections
-</code></pre></div>
-</li>
-<li>
-<p>Once confirmed by reply email, update your <code>boards-cp.yaml</code> file as per <a href="../../../assets/config/kubernetes/boards-cp-dockerhub.yaml">this example</a>.</p>
-<ol>
-<li>
-<p>At the top set</p>
+<h1 id="migration-guide-minio-to-seaweedfs-huddo-boards-cp">Migration Guide: MinIO to SeaweedFS (huddo-boards-cp)<a class="headerlink" href="#migration-guide-minio-to-seaweedfs-huddo-boards-cp" title="Permanent link">&para;</a></h1>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>MinIO changed its licence from Apache 2.0 to AGPLv3, which introduces compliance concerns for customers deploying Huddo charts. <code>huddo-boards-cp</code> v2.1.0 introduces <a href="https://github.com/seaweedfs/seaweedfs">SeaweedFS</a> (Apache 2.0) as the replacement S3-compatible object store.</p>
+<p>SeaweedFS deploys <strong>alongside</strong> MinIO by default, so existing installations continue to work without interruption. A built-in migration Job uses <code>rclone</code> to copy data from MinIO to SeaweedFS, and the cutover is a simple values change.</p>
+<hr />
+<h2 id="what-changed-in-v210">What changed in v2.1.0<a class="headerlink" href="#what-changed-in-v210" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S3 store</td>
+<td>MinIO (AGPLv3) — always deployed</td>
+<td>MinIO (conditional, <code>minio.enabled: true</code> by default) + SeaweedFS (always deployed)</td>
+</tr>
+<tr>
+<td>S3 endpoint default</td>
+<td><code>huddo-boards-cp-minio-service:9000</code></td>
+<td>Unchanged by default — apps still point at MinIO until you switch</td>
+</tr>
+<tr>
+<td>S3 bucket default</td>
+<td><code>kudos-boards</code></td>
+<td><code>huddo-boards</code> (rebrand)</td>
+</tr>
+<tr>
+<td>New subchart</td>
+<td>—</td>
+<td><code>huddo-s3</code> (SeaweedFS, port 8333) deployed as <code>huddo-boards-cp-s3</code></td>
+</tr>
+<tr>
+<td>Migration Job</td>
+<td>—</td>
+<td><code>rclone sync</code> Job, opt-in via <code>s3.migration.enabled: true</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Upgrading to v2.1.0 alone changes nothing for your apps.</strong> MinIO remains the active S3 backend. SeaweedFS runs alongside it but receives no traffic until you explicitly redirect the apps.</p>
+<blockquote>
+<p><strong>Bucket rename:</strong> v2.1.0 changes the default S3 bucket name from <code>kudos-boards</code> to <code>huddo-boards</code>. Migration copies legacy data from MinIO <code>kudos-boards</code> to SeaweedFS <code>huddo-boards</code>. Existing installs must keep reading the legacy bucket name during Phase 1 (override <code>global.env.S3_BUCKET: kudos-boards</code>) and drop the override at cutover so apps fall back to the new default.</p>
+</blockquote>
+<hr />
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>global.imagePullSecret</code> to <code>dockerhub</code></li>
-<li>remove your customised <code>global.repository</code></li>
-<li><code>global.imageTagSuffix</code> as the date of our latest <a href="../../releases/">release</a> and uncomment it</li>
+<li><code>huddo-boards-cp</code> v2.1.0 or later</li>
+<li>Your existing MinIO is healthy and accessible</li>
+<li>Enough storage capacity for SeaweedFS to hold a copy of your data during migration</li>
 </ul>
-</li>
-<li>
-<p>Add <code>image.name</code> (blank) and <code>image.tag</code> for each service as per <a href="../../../assets/config/kubernetes/boards-cp-dockerhub.yaml">this example</a>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Some of the services (<code>app</code>, <code>provider</code>, <code>notification</code>) might not be in your <code>boards-cp.yaml</code> file, you must add them.</p>
-</div>
-<p><img alt="Example" src="../image-config-dockerhub.png" /></p>
-</li>
-</ol>
-</li>
-<li>
-<p>Run helm to apply the changes.</p>
-<div class="highlight"><pre><span></span><code>helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-3.1.4.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+<h3 id="know-your-current-s3-configuration">Know your current S3 configuration<a class="headerlink" href="#know-your-current-s3-configuration" title="Permanent link">&para;</a></h3>
+<p>Check your deployed values for the S3 settings your apps are using:</p>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>get<span class="w"> </span>values<span class="w"> </span>&lt;release&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>s3
 </code></pre></div>
-</li>
-</ol>
+<p>The v2.1.0 chart defaults are:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">S3_ENDPOINT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">huddo-boards-cp-minio-service</span>
+<span class="w">    </span><span class="nt">S3_ACCESS_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ioueygr4t589</span>
+<span class="w">    </span><span class="nt">S3_SECRET_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7a863d41-2d8f-4143-bc8a-02501edbea6f</span>
+<span class="w">    </span><span class="nt">S3_BUCKET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">huddo-boards</span><span class="w">   </span><span class="c1"># was &#39;kudos-boards&#39; in &lt;2.1.0</span>
+</code></pre></div>
+<p>If you have overridden any of these, use your actual values in the migration configuration below. Existing installs running pre-2.1.0 will have data in the legacy bucket <code>kudos-boards</code> — see the bucket rename note above.</p>
+<hr />
+<h2 id="migration-steps">Migration steps<a class="headerlink" href="#migration-steps" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-deploy-seaweedfs-and-migrate-data">Phase 1 — Deploy SeaweedFS and migrate data<a class="headerlink" href="#phase-1-deploy-seaweedfs-and-migrate-data" title="Permanent link">&para;</a></h3>
+<p>Apps continue to read and write to MinIO during this phase. SeaweedFS deploys alongside it and the migration Job copies all objects from MinIO to SeaweedFS.</p>
+<p>Add the following to your values file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Existing installs only — pin apps to the legacy MinIO bucket name during migration.</span>
+<span class="w">    </span><span class="c1"># Drop this override at cutover (Phase 2) to use the new chart default &#39;huddo-boards&#39;.</span>
+<span class="w">    </span><span class="nt">S3_BUCKET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kudos-boards</span>
+
+<span class="nt">s3</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">persistence</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># NFS (recommended for existing NFS-based installations):</span>
+<span class="w">    </span><span class="nt">nfs</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;nfs-server&gt;</span>
+<span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/pv-connections/huddo-boards-s3</span>
+<span class="w">    </span><span class="c1"># Or for dynamic storage provisioning:</span>
+<span class="w">    </span><span class="c1"># storageClassName: fast</span>
+<span class="w">  </span><span class="nt">migration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">source</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://huddo-boards-cp-minio-service:9000&quot;</span>
+<span class="w">      </span><span class="nt">accessKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ioueygr4t589</span>
+<span class="w">      </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7a863d41-2d8f-4143-bc8a-02501edbea6f</span>
+<span class="w">      </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kudos-boards</span>
+</code></pre></div>
+<p>The migration job copies <code>minio:kudos-boards</code> → <code>seaweedfs:huddo-boards</code> (the new chart-default bucket name).</p>
+<blockquote>
+<p><strong>Important:</strong> <code>s3.persistence</code> is required. Without it SeaweedFS has no durable storage and data will be lost on pod restart.</p>
+<p><strong>Note:</strong> If your MinIO secret key is stored in a Kubernetes Secret rather than in plain text, use <code>secretKeyRef</code> instead of <code>secretKey</code>:
+<div class="highlight"><pre><span></span><code><span class="nt">s3</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">migration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">source</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://huddo-boards-cp-minio-service:9000&quot;</span>
+<span class="w">      </span><span class="nt">accessKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ioueygr4t589</span>
+<span class="w">      </span><span class="nt">secretKeyRef</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-minio-secret</span>
+<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret-key</span>
+<span class="w">      </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kudos-boards</span>
+</code></pre></div></p>
+</blockquote>
+<p>Run the upgrade:</p>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>huddo-boards-cp<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-f<span class="w"> </span>&lt;your-values.yaml&gt;
+</code></pre></div>
+<h3 id="verify-migration-progress">Verify migration progress<a class="headerlink" href="#verify-migration-progress" title="Permanent link">&para;</a></h3>
+<p>The migration runs as a Kubernetes Job. Find the Job name (it includes the Helm release revision):</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>migration
+</code></pre></div>
+<p>Follow the rclone logs:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>job/&lt;job-name-from-above&gt;<span class="w"> </span>-f
+</code></pre></div>
+<p>When complete, the Job will log object counts and total size.</p>
+<h3 id="verify-data-integrity">Verify data integrity<a class="headerlink" href="#verify-data-integrity" title="Permanent link">&para;</a></h3>
+<p>Compare object counts between source and destination:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Exec into any pod with network access, or run a temporary pod:</span>
+kubectl<span class="w"> </span>run<span class="w"> </span>s3-check<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>--image<span class="o">=</span>amazon/aws-cli:latest<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--<span class="w"> </span>sh
+
+<span class="c1"># Inside the pod — count MinIO objects (legacy bucket name):</span>
+aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://kudos-boards<span class="w"> </span>--recursive<span class="w"> </span>--endpoint-url<span class="w"> </span>http://huddo-boards-cp-minio-service:9000<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># Count SeaweedFS objects (new bucket name):</span>
+aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://huddo-boards<span class="w"> </span>--recursive<span class="w"> </span>--endpoint-url<span class="w"> </span>http://huddo-boards-cp-s3:8333<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div>
+<p>For total size + object count in one shot, append <code>--summarize</code> and read the trailing <code>Total Objects</code> / <code>Total Size</code> lines.</p>
+<blockquote>
+<p><strong>Tip for large datasets:</strong> If your data is too large for a single Job run (e.g. the Job times out or the pod is evicted), you can safely run the upgrade again. The migration Job uses <code>rclone sync</code>, which is idempotent — it only copies objects that are missing or changed in the destination.</p>
+</blockquote>
+<hr />
+<h3 id="phase-2-cutover-to-seaweedfs">Phase 2 — Cutover to SeaweedFS<a class="headerlink" href="#phase-2-cutover-to-seaweedfs" title="Permanent link">&para;</a></h3>
+<p>Once you have verified the data is fully migrated, redirect the apps to SeaweedFS and disable MinIO.</p>
+<p>Update your values file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">S3_ENDPOINT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">huddo-boards-cp-s3</span>
+<span class="w">    </span><span class="nt">S3_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;8333&#39;</span>
+<span class="w">    </span><span class="nt">S3_USE_SSL</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;false&#39;</span>
+<span class="w">    </span><span class="c1"># Drop the Phase 1 &#39;S3_BUCKET: kudos-boards&#39; override here so apps fall back</span>
+<span class="w">    </span><span class="c1"># to the chart default &#39;huddo-boards&#39; (matches the SeaweedFS dest bucket).</span>
+
+<span class="nt">minio</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="nt">s3</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">migration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> If you previously had a non-default <code>S3_SECRET_KEY</code> or used <code>secretKeyRef</code> to supply credentials, ensure <code>global.env.S3_SECRET_KEY</code> (or its secret reference) is set to the same credentials you configured for SeaweedFS in Phase 1.</p>
+</blockquote>
+<p>Run the upgrade:</p>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>huddo-boards-cp<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-f<span class="w"> </span>&lt;your-values.yaml&gt;
+</code></pre></div>
+<p>This will:
+1. Update the <code>S3_ENDPOINT</code> env var in all app pods, triggering a rolling restart
+2. Remove the MinIO Deployment, Service, PVC and PV (all rendered from the conditional dependency)
+3. Remove the migration Job</p>
+<blockquote>
+<p><strong>Note:</strong> Helm prunes the MinIO PVC and PV when <code>minio.enabled: false</code> because they are rendered from the conditional <code>huddo-minio-cp</code> dependency. The underlying NFS data on the server is <strong>not</strong> affected — those files persist independently of the K8s objects, so a rollback (re-enable <code>minio.enabled: true</code>) will rebind to the same NFS path. If you want to permanently reclaim the NFS data after the soak period, delete the files on the NFS server manually:
+<div class="highlight"><pre><span></span><code><span class="c1"># On the NFS server (example path — confirm with your minio.nfs.path value):</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>/pv-connections/huddo-boards-minio
+</code></pre></div></p>
+</blockquote>
+<hr />
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<h3 id="1-apps-are-using-seaweedfs">1. Apps are using SeaweedFS<a class="headerlink" href="#1-apps-are-using-seaweedfs" title="Permanent link">&para;</a></h3>
+<p>Confirm the <code>S3_ENDPOINT</code> env var on any app pod points to <code>huddo-boards-cp-s3</code>:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>&lt;release&gt;-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].spec.containers[0].env}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A1<span class="w"> </span>S3_ENDPOINT
+</code></pre></div>
+<h3 id="2-minio-is-removed">2. MinIO is removed<a class="headerlink" href="#2-minio-is-removed" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>minio
+<span class="c1"># Should return nothing</span>
+</code></pre></div>
+<h3 id="3-seaweedfs-is-healthy">3. SeaweedFS is healthy<a class="headerlink" href="#3-seaweedfs-is-healthy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>huddo-boards-cp-s3
+<span class="c1"># Should show 1/1 Running</span>
+</code></pre></div>
+<h3 id="4-functional-verification">4. Functional verification<a class="headerlink" href="#4-functional-verification" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Log in to Huddo Boards and confirm the board list loads</li>
+<li>Open a board with file attachments and confirm files download correctly</li>
+<li>Upload a new file attachment and confirm it persists</li>
+</ul>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="migration-job-stays-in-pending-state">Migration Job stays in <code>Pending</code> state<a class="headerlink" href="#migration-job-stays-in-pending-state" title="Permanent link">&para;</a></h3>
+<p>The rclone container cannot be scheduled. Check for resource constraints:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>migration
+kubectl<span class="w"> </span>describe<span class="w"> </span>job<span class="w"> </span>&lt;job-name&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;
+</code></pre></div>
+<h3 id="migration-job-fails-with-nosuchbucket-on-destination">Migration Job fails with <code>NoSuchBucket</code> on destination<a class="headerlink" href="#migration-job-fails-with-nosuchbucket-on-destination" title="Permanent link">&para;</a></h3>
+<p>The bucket creation Job must complete before the migration Job starts. The migration Job polls and waits for SeaweedFS to be ready, but if the bucket setup Job itself failed, check its logs:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>job/huddo-boards-cp-s3-bucket-setup
+</code></pre></div>
+<p>Then re-run the upgrade.</p>
+<h3 id="apps-return-errors-after-cutover">Apps return errors after cutover<a class="headerlink" href="#apps-return-errors-after-cutover" title="Permanent link">&para;</a></h3>
+<p>If the cutover was premature (data not fully migrated), roll back by pointing apps at MinIO again:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">S3_ENDPOINT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">huddo-boards-cp-minio-service</span>
+<span class="w">    </span><span class="nt">S3_BUCKET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kudos-boards</span>
+<span class="w">    </span><span class="c1"># Remove S3_PORT and S3_USE_SSL overrides to restore defaults</span>
+
+<span class="nt">minio</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>huddo-boards-cp<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-f<span class="w"> </span>&lt;your-values.yaml&gt;
+</code></pre></div>
+<p>This immediately restores MinIO as the active backend with no data loss.</p>
+<h3 id="rclone-is-slow-on-large-datasets"><code>rclone</code> is slow on large datasets<a class="headerlink" href="#rclone-is-slow-on-large-datasets" title="Permanent link">&para;</a></h3>
+<p>The default configuration uses 8 parallel transfers and 16 checkers. For very large datasets, you can exec into the migration pod and run rclone manually with tuned settings, or increase the Job timeout by adjusting <code>spec.activeDeadlineSeconds</code>.</p>
+<p>Alternatively, run the migration outside of the Helm Job entirely:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>rclone-manual<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>--image<span class="o">=</span>rclone/rclone:latest<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>sync<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>:s3,provider<span class="o">=</span>Other,access_key_id<span class="o">=</span>&lt;key&gt;,secret_access_key<span class="o">=</span>&lt;secret&gt;,endpoint<span class="o">=</span>http://huddo-boards-cp-minio-service:9000,force_path_style<span class="o">=</span>true:kudos-boards<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>:s3,provider<span class="o">=</span>Other,access_key_id<span class="o">=</span>&lt;key&gt;,secret_access_key<span class="o">=</span>&lt;secret&gt;,endpoint<span class="o">=</span>http://huddo-boards-cp-s3:8333,force_path_style<span class="o">=</span>true:huddo-boards<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--progress<span class="w"> </span>--transfers<span class="w"> </span><span class="m">16</span><span class="w"> </span>--checkers<span class="w"> </span><span class="m">32</span>
+</code></pre></div>
+<h3 id="reclaiming-minio-data-after-the-soak-period">Reclaiming MinIO data after the soak period<a class="headerlink" href="#reclaiming-minio-data-after-the-soak-period" title="Permanent link">&para;</a></h3>
+<p>Helm prunes the MinIO PVC and PV automatically when <code>minio.enabled: false</code> (they come from the conditional <code>huddo-minio-cp</code> dependency). The NFS-backed data is <strong>not</strong> affected — files at the configured <code>minio.nfs.path</code> on the NFS server remain in place so that re-enabling MinIO rebinds to the same data. Once you are confident the SeaweedFS cutover is stable, delete the data on the NFS server manually:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example — adjust path to match your minio.nfs.path value:</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>/pv-connections/huddo-boards-minio
+</code></pre></div>
 
 
 
@@ -7510,7 +8295,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2023-11-29
+    2026-06-04
   </span>
 
     
@@ -7622,14 +8407,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="//js.hs-scripts.com/6268180.js"></script>
       
-        <script src="../../../assets/scripts/custom.js"></script>
+        <script src="../../assets/scripts/custom.js"></script>
       
     
   </body>
