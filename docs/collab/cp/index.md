@@ -179,11 +179,7 @@ kubectl create secret generic myregkey -n connections --docker-server=hclcr.io/c
 
 ### Install Collab Helm Chart
 
-Install the Collab services via our Helm chart
-
-    helm upgrade huddo-collab-cp https://docs.huddo.com/assets/config/kubernetes/huddo-collab-cp-0.1.0.tgz -i -f ./collab-cp.yaml --namespace connections --recreate-pods
-
-> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+Install the Collab services using the latest [huddo-collab-cp helm upgrade command](../helm-charts.md#upgrade-command).
 
 ---
 

@@ -56,11 +56,7 @@ You have created replacement groups in the target system and have records of the
         GROUP_MAP_SOURCE_CLIENT: 5ef2d52f6283afc12efd55a4
     ```
 
-1. Redeploy the Helm chart
-
-    For example:
-
-        helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
+1. Redeploy the Helm chart using your [helm upgrade command](../helm-charts.md#huddo-boards)
 
 1. Review the logs
 

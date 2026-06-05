@@ -42,7 +42,7 @@ helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/hud
 
 !!! note
 
-    `--recreate-pods` was removed in Helm 3. If pods do not pick up new images, restart them with `kubectl rollout restart deployment -n connections -l release=huddo-boards-cp`.
+    Boards images are date-tagged, so each release changes the global env and pods are recreated automatically on upgrade.
 
 ### huddo-boards-cp-activity-migration (DEPRECATED)
 
@@ -87,7 +87,7 @@ helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-
 
 !!! note
 
-    `--recreate-pods` was removed in Helm 3. If pods do not pick up new images, restart them with `kubectl rollout restart deployment -n boards -l release=huddo-boards`.
+    Boards images are date-tagged, so each release changes the global env and pods are recreated automatically on upgrade.
 
 ### huddo-boards-activity-migration
 

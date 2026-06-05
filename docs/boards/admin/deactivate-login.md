@@ -13,11 +13,7 @@
         # MSGRAPH_CLIENT_ID
     ```
 
-1. Redeploy the Helm chart
-
-    For example:
-
-        helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-1.0.0.tgz -i -f ./boards.yaml --namespace boards
+1. Redeploy the Helm chart using your [helm upgrade command](../helm-charts.md#huddo-boards)
 
 1. Reload webpage
 
