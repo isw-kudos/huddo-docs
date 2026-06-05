@@ -32,6 +32,12 @@
 
 ### 2026
 
+#### 2026-06-05
+
+Fixes:
+
+- Image pasting into rich-text
+
 #### 2026-05-28
 
 Improvements:
@@ -51,7 +57,7 @@ Fixes:
 
 !!! warning
 
-    This update changes the default signing secret for Boards sessions/tokens. This will cause all existing sessions to be logged out. We recommend setting `user.env.JWT_SECRET` variable to a random string before updating to this image date or later.
+    This update changes the default signing secret for Boards sessions/tokens. This will cause all existing sessions to be logged out. We recommend setting `user.env.JWT_SECRET` variable to a random >= 32 char string before updating to this image date or later.
 
 Feature:
 
