@@ -132,6 +132,8 @@ nav:
                   - boards/howto/timeline/index.md
               - Task Dependencies:
                   - boards/howto/dependencies/index.md
+              - Custom Fields:
+                  - boards/howto/custom-fields/index.md
               - Keyboard Shortcuts: boards/howto/kb-shortcuts.md
           - iCalendar Feed:
               - Personal: boards/howto/ical/personal.md
