@@ -32,6 +32,14 @@
 
 ### 2026
 
+#### 2026-06-16
+
+Fixes:
+
+- Previewing PDF files
+- Build number in /admin page
+- Issue with backchannel logout for providers with custom issuer/externalId mismatch
+
 #### 2026-06-05
 
 Fixes:
