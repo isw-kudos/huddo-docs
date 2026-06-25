@@ -22,6 +22,42 @@ Please set the following environment variables in your config file as required
 | `user.env.DISABLE_WELCOME_EMAIL`          | **Optional**: Set to disable welcome emails for users                                                                                                                                                                                                                                              |
 | `app.env.BANNED_LINK_URL_EXPRESSION`      | <div style="max-width:440px">**Optional**: A JavaScript regular expression string where matching link (Bookmark) URLs will be denied creation. Existing links that match will cause errors when updating any links on a node, unless all matching links are deleted. Default: `^javascript:`</div> |
 
+## Secrets & Certificates
+
+These options control the secrets the chart can create or mount. All are optional — the chart behaves exactly as before when they are left unset.
+
+### Image pull secret
+
+When `registry`, `username` and `password` are all set, the chart creates the image pull secret automatically, named after `global.imagePullSecret` so the deployments reference it with no further configuration. Leave them empty to manage the secret yourself. Supply the password via `--set` or an encrypted values file rather than committing it.
+
+| Key                         | Description                                               |
+| --------------------------- | --------------------------------------------------------- |
+| `imageCredentials.registry` | Container registry hostname, e.g. `quay.io` or `hclcr.io` |
+| `imageCredentials.username` | Registry username                                         |
+| `imageCredentials.password` | Registry password / token                                 |
+
+### Internal CA bundle
+
+Mounts a CA bundle into every service and sets `NODE_EXTRA_CA_CERTS` so the apps trust internal TLS endpoints (the Connections reverse proxy, MongoDB, S3, etc). Provide **either** `existingSecret` (you manage the secret) **or** `pem` (the chart creates it) — not both.
+
+| Key                                | Description                                                                                           | Default                |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------- |
+| `global.internalCa.existingSecret` | Name of an existing secret holding the CA bundle to mount. The chart does **not** create or own it.   | —                      |
+| `global.internalCa.pem`            | Alternatively, the CA bundle (PEM) itself — the chart creates the secret named `secretName` from it.  | —                      |
+| `global.internalCa.key`            | Filename/key within the secret. `NODE_EXTRA_CA_CERTS` is set to `<mountPath>/<key>`.                  | `cert.pem`             |
+| `global.internalCa.secretName`     | Name of the secret to create when `pem` is set.                                                       | `internal-ca`          |
+| `global.internalCa.mountPath`      | Directory the bundle is mounted at in every service.                                                  | `/etc/ssl/internal-ca` |
+
+See the [SSL guide](../troubleshooting/ssl.md#add-the-self-signed-certificate) for setup examples — mounting an existing secret, or having the chart create it from a PEM.
+
+### Additional resources
+
+| Key            | Description                                                                                                 |
+| -------------- | ----------------------------------------------------------------------------------------------------------- |
+| `extraObjects` | List of additional Kubernetes resource manifests to create alongside the chart (e.g. ConfigMaps, Secrets).  |
+
+---
+
 ## Provider Specific Options
 
 ### HCL Connections
