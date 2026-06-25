@@ -1697,6 +1697,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#secrets-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secrets &amp; Certificates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secrets &amp; Certificates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-pull-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image pull secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-ca-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal CA bundle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#provider-specific-options" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7684,6 +7734,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#secrets-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secrets &amp; Certificates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secrets &amp; Certificates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-pull-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image pull secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-ca-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal CA bundle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#provider-specific-options" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7834,6 +7934,87 @@
 </tr>
 </tbody>
 </table>
+<h2 id="secrets-certificates">Secrets &amp; Certificates<a class="headerlink" href="#secrets-certificates" title="Permanent link">&para;</a></h2>
+<p>These options control the secrets the chart can create or mount. All are optional — the chart behaves exactly as before when they are left unset.</p>
+<h3 id="image-pull-secret">Image pull secret<a class="headerlink" href="#image-pull-secret" title="Permanent link">&para;</a></h3>
+<p>When <code>registry</code>, <code>username</code> and <code>password</code> are all set, the chart creates the image pull secret automatically, named after <code>global.imagePullSecret</code> so the deployments reference it with no further configuration. Leave them empty to manage the secret yourself. Supply the password via <code>--set</code> or an encrypted values file rather than committing it.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>imageCredentials.registry</code></td>
+<td>Container registry hostname, e.g. <code>quay.io</code> or <code>hclcr.io</code></td>
+</tr>
+<tr>
+<td><code>imageCredentials.username</code></td>
+<td>Registry username</td>
+</tr>
+<tr>
+<td><code>imageCredentials.password</code></td>
+<td>Registry password / token</td>
+</tr>
+</tbody>
+</table>
+<h3 id="internal-ca-bundle">Internal CA bundle<a class="headerlink" href="#internal-ca-bundle" title="Permanent link">&para;</a></h3>
+<p>Mounts a CA bundle into every service and sets <code>NODE_EXTRA_CA_CERTS</code> so the apps trust internal TLS endpoints (the Connections reverse proxy, MongoDB, S3, etc). Provide <strong>either</strong> <code>existingSecret</code> (you manage the secret) <strong>or</strong> <code>pem</code> (the chart creates it) — not both.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>global.internalCa.existingSecret</code></td>
+<td>Name of an existing secret holding the CA bundle to mount. The chart does <strong>not</strong> create or own it.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>global.internalCa.pem</code></td>
+<td>Alternatively, the CA bundle (PEM) itself — the chart creates the secret named <code>secretName</code> from it.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>global.internalCa.key</code></td>
+<td>Filename/key within the secret. <code>NODE_EXTRA_CA_CERTS</code> is set to <code>&lt;mountPath&gt;/&lt;key&gt;</code>.</td>
+<td><code>cert.pem</code></td>
+</tr>
+<tr>
+<td><code>global.internalCa.secretName</code></td>
+<td>Name of the secret to create when <code>pem</code> is set.</td>
+<td><code>internal-ca</code></td>
+</tr>
+<tr>
+<td><code>global.internalCa.mountPath</code></td>
+<td>Directory the bundle is mounted at in every service.</td>
+<td><code>/etc/ssl/internal-ca</code></td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../troubleshooting/ssl/#add-the-self-signed-certificate">SSL guide</a> for setup examples — mounting an existing secret, or having the chart create it from a PEM.</p>
+<h3 id="additional-resources">Additional resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>extraObjects</code></td>
+<td>List of additional Kubernetes resource manifests to create alongside the chart (e.g. ConfigMaps, Secrets).</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="provider-specific-options">Provider Specific Options<a class="headerlink" href="#provider-specific-options" title="Permanent link">&para;</a></h2>
 <h3 id="hcl-connections">HCL Connections<a class="headerlink" href="#hcl-connections" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
@@ -8053,7 +8234,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-05-21
+    2026-06-25
   </span>
 
     

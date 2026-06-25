@@ -1,11 +1,27 @@
 # Please read every variable and replace with appropriate value
 # For details of variable meanings, please see https://docs.huddo.com/boards/cp/
 
+# Optional: have the chart create the image pull secret for you (named after
+# global.imagePullSecret) instead of creating it manually per
+# https://docs.huddo.com/boards/images/
+# imageCredentials:
+#   registry: quay.io
+#   username: your-username
+#   password: your-password-or-token
+
 global:
   # setup authentication by following https://docs.huddo.com/boards/images/
   imagePullSecret: quay-username-pull-secret
   # find the latest release date https://docs.huddo.com/boards/releases/
   imageTag: 2025-04-28
+  # Optional: trust an internal / self-signed CA across all services
+  # (private proxy, Mongo, S3 over TLS). See https://docs.huddo.com/boards/troubleshooting/ssl/
+  # internalCa:
+  #   existingSecret: internal-ca   # mount a secret you created yourself, OR
+  #   pem: |                        # have the chart create it from this PEM
+  #     -----BEGIN CERTIFICATE-----
+  #     ...
+  #     -----END CERTIFICATE-----
   env:
     APP_URI: https://connections.example.com/boards
     API_GATEWAY: https://connections.example.com/api-boards

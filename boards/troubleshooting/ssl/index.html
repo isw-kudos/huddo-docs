@@ -6031,6 +6031,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Add the self-signed certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-let-the-chart-create-the-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 — let the chart create the secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-create-the-secret-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 — create the secret yourself
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-mounting-older-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual mounting (older charts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -7660,6 +7699,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Add the self-signed certificate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-let-the-chart-create-the-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 — let the chart create the secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-create-the-secret-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 — create the secret yourself
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-mounting-older-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual mounting (older charts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -7699,81 +7777,60 @@
 <h2 id="self-signed-certificates">Self Signed Certificates<a class="headerlink" href="#self-signed-certificates" title="Permanent link">&para;</a></h2>
 <p>Issues with self-signed certificates can be resolved in 2 different ways:</p>
 <ol>
-<li>Add the self-signed certificate</li>
-<li>Disable TLS validation</li>
+<li>Add the self-signed certificate (recommended)</li>
+<li>Disable TLS validation (not recommended)</li>
 </ol>
 <h3 id="add-the-self-signed-certificate">Add the self-signed certificate<a class="headerlink" href="#add-the-self-signed-certificate" title="Permanent link">&para;</a></h3>
-<p>To mount the certificate in the pods:</p>
-<ol>
-<li>
-<p>Create a secret containing the certificate</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>internal-ca<span class="w"> </span>--from-file<span class="o">=</span>./cert.pem<span class="w"> </span>-n<span class="w"> </span>connections
-</code></pre></div>
-<p>Where:</p>
-<ul>
-<li><code>cert.pem</code> is the name of your certificate file (this is also used below as the <code>subPath</code> in the volumeMounts section)</li>
-<li><code>connections</code> is the namespace where the Boards chart is installed (replace with your namespace)</li>
-</ul>
-</li>
-<li>
-<p>Mount the secret in each applicable deployment by adding the following <code>volume</code> &amp; <code>volumeMount</code> to your existing values yaml, then redeploy the Boards helm chart.</p>
+<p>The chart can mount a CA bundle into <strong>every</strong> service and set <code>NODE_EXTRA_CA_CERTS</code> for you — you just provide the certificate one of two ways. See the <a href="../../env/common/#internal-ca-bundle">Internal CA bundle</a> reference for all available options.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Requires <code>huddo-boards &gt;= 2.1.0</code> or <code>huddo-boards-cp &gt;= 2.3.0</code>. On older charts, see <a href="#manual-mounting-older-charts">Manual mounting</a> below.</p>
+</div>
+<h4 id="option-1-let-the-chart-create-the-secret">Option 1 — let the chart create the secret<a class="headerlink" href="#option-1-let-the-chart-create-the-secret" title="Permanent link">&para;</a></h4>
+<p>Paste your CA bundle (PEM) into your values file; the chart creates and mounts the secret:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">NODE_EXTRA_CA_CERTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
+<span class="w">  </span><span class="nt">internalCa</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">pem</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">-----BEGIN CERTIFICATE-----</span>
+<span class="w">      </span><span class="no">...your CA certificate...</span>
+<span class="w">      </span><span class="no">-----END CERTIFICATE-----</span>
+</code></pre></div>
+<h4 id="option-2-create-the-secret-yourself">Option 2 — create the secret yourself<a class="headerlink" href="#option-2-create-the-secret-yourself" title="Permanent link">&para;</a></h4>
+<p>Useful if you manage certificates out of band, or share the CA with other workloads. Create the secret in the namespace Boards is installed in — <code>connections</code> for Component Pack, or your own namespace (e.g. <code>boards</code>) for standalone. The file name becomes the key, and <code>cert.pem</code> matches the chart default:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>internal-ca<span class="w"> </span>--from-file<span class="o">=</span>cert.pem<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;
+</code></pre></div>
+<p>Then reference it from your values file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">internalCa</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">existingSecret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-ca</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If your secret uses a different key/filename, a different mount path, or you let the chart create it under a different name, set <code>global.internalCa.key</code>, <code>.mountPath</code> or <code>.secretName</code> accordingly — see the <a href="../../env/common/#internal-ca-bundle">reference</a>.</p>
+</div>
+<p>In both cases, redeploy the chart and the CA bundle is mounted into all services with <code>NODE_EXTRA_CA_CERTS</code> pointed at it automatically — no per-service configuration required.</p>
+<h4 id="manual-mounting-older-charts">Manual mounting (older charts)<a class="headerlink" href="#manual-mounting-older-charts" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only required on <code>huddo-boards &lt; 2.1.0</code> / <code>huddo-boards-cp &lt; 2.3.0</code>, which lack <code>global.internalCa</code>.</p>
+</div>
+<p>Create the secret as in Option 2, then mount it into <strong>each</strong> applicable deployment (<code>core</code>, <code>app</code>, <code>user</code>, <code>provider</code>, <code>events</code>) and set <code>NODE_EXTRA_CA_CERTS</code> yourself:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">NODE_EXTRA_CA_CERTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
 
 <span class="nt">core</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">secret</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-ca</span>
-<span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
-<span class="w">          </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.pem</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
+<span class="w">      </span><span class="nt">secret</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-ca</span>
+<span class="w">  </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
+<span class="w">      </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
+<span class="w">      </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.pem</span>
 
-<span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">secret</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-ca</span>
-<span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
-<span class="w">          </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.pem</span>
-
-<span class="nt">user</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">secret</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-ca</span>
-<span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
-<span class="w">          </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.pem</span>
-
-<span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">secret</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-ca</span>
-<span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
-<span class="w">          </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.pem</span>
-
-<span class="c1"># if your email service is also using Self Signed Certificates</span>
-<span class="nt">events</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">secret</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-ca</span>
-<span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssl-cert-vol</span>
-<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/ssl/certs/internal-ca.pem</span>
-<span class="w">          </span><span class="nt">subPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.pem</span>
+<span class="c1"># repeat the same volumes / volumeMounts for app, user, provider and events</span>
 </code></pre></div>
-</li>
-</ol>
 <h3 id="disable-tls-validation">Disable TLS Validation<a class="headerlink" href="#disable-tls-validation" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -7816,7 +7873,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-02-06
+    2026-06-25
   </span>
 
     
