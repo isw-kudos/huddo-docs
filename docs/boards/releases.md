@@ -32,6 +32,13 @@
 
 ### 2026
 
+#### 2026-06-26
+
+Fixes:
+
+- Restore missing link to Connections file category - Pinned | Shared With | Shared By
+- Backchannel logout sid mismatch
+
 #### 2026-06-16
 
 Fixes:
