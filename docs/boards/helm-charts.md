@@ -34,11 +34,12 @@ Release notes for each Helm chart utilised by Boards
 | [2.1.0](../assets/config/kubernetes/huddo-boards-cp-2.1.0.tgz)   | Add SeaweedFS S3 storage with migration path from MinIO                                                                | Optional – migration only if adopting SeaweedFS        |
 | [2.2.0](../assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz)   | Merge activity-migration as optional component (`migration.enabled`, default `false`)                                  | No – uninstall the standalone activity-migration release before enabling |
 | [2.3.0](../assets/config/kubernetes/huddo-boards-cp-2.3.0.tgz)   | Auto-create secrets: CA bundle mount (`global.internalCa`), `extraObjects`, and `imageCredentials` (image pull secret) | No                                                     |
+| [2.3.1](../assets/config/kubernetes/huddo-boards-cp-2.3.1.tgz)   | Drop legacy support for removed `v1beta1` APIs (Deployment, Ingress, PodSecurityPolicy) | No                                                     |
 
 #### Upgrade command
 
 ```bash
-helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.0.tgz -i -f ./boards-cp.yaml --namespace connections
+helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.1.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
 
 !!! note
@@ -80,11 +81,12 @@ helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/hud
 | [1.1.1](../assets/config/kubernetes/huddo-boards-1.1.1.tgz)   | Fix ingress session cookie `SameSite` setting (polling in a CORS frame, e.g. Teams)  | No                                                     |
 | [2.0.0](../assets/config/kubernetes/huddo-boards-2.0.0.tgz)   | Move from ingress-nginx to [traefik](./traefik.md)                                   | **Yes** – [migration required](./traefik.md)           |
 | [2.1.0](../assets/config/kubernetes/huddo-boards-2.1.0.tgz)   | Auto-create secrets: CA bundle mount (`global.internalCa`), `extraObjects`, and `imageCredentials` (image pull secret)  | No                                                     |
+| [2.1.1](../assets/config/kubernetes/huddo-boards-2.1.1.tgz)   | Drop legacy support for removed `v1beta1` APIs (Deployment, Ingress)  | No                                                     |
 
 #### Upgrade command
 
 ```bash
-helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-2.1.0.tgz -i -f ./boards.yaml --namespace boards
+helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-2.1.1.tgz -i -f ./boards.yaml --namespace boards
 ```
 
 !!! note
@@ -97,6 +99,7 @@ helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-
 | ------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | [1.0.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.0.0.tgz)   | Initial release (Huddo)  | No                                                     |  
 | [1.2.0](../assets/config/kubernetes/huddo-boards-activity-migration-1.2.0.tgz)   | Fix resource limits      | No                                                     |
+| [1.2.1](../assets/config/kubernetes/huddo-boards-activity-migration-1.2.1.tgz)   | Drop legacy support for removed `v1beta1` Deployment API  | No                                                     |
 
 ---
 
