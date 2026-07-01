@@ -32,6 +32,15 @@
 
 ### 2026
 
+#### 2026-07-01
+
+Improvements:
+
+- Improved resilience to Redis / infrastructure disruption. Under abnormal conditions — such as a Redis master failover, or rapid pod restarts during an outage — the realtime layer could time out and, in turn, prevent boards from opening. This release hardens that path:
+    - Board loading no longer depends on realtime (Socket.IO / Redis) connectivity, so boards open reliably even when the realtime layer is degraded
+    - Redis connections are now closed cleanly on pod termination, so restarts and rollouts no longer leave stale connections behind
+    - More resilient Redis connections during a master outage/failover, including prompt reconnection and correct handling of read-only replicas
+
 #### 2026-06-26
 
 Fixes:
