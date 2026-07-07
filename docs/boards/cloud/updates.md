@@ -4,6 +4,15 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ## 2026
 
+### July
+
+2026-07-07
+
+Improvements:
+
+- Performance under heavy usage by serving read-only queries (such as reporting and history) from MongoDB secondary replicas, reducing load on the primary database.
+- Notification history is now automatically trimmed to prevent the database growing unbounded.
+
 ### June
 
 2026-06-26

@@ -32,6 +32,17 @@
 
 ### 2026
 
+#### 2026-07-07
+
+Improvements:
+
+- Performance under heavy usage by serving read-only queries (such as reporting and history) from MongoDB secondary replicas, reducing load on the primary database.
+- Notification history is now automatically trimmed to prevent the database growing unbounded.
+
+!!! important
+
+    After upgrading, notification history older than 60 days will begin to expire. To keep it indefinitely, set `NOTIFICATION_RETENTION_DAYS=0`.
+
 #### 2026-07-01
 
 Improvements:
