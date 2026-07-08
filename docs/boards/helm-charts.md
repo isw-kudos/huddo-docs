@@ -35,11 +35,12 @@ Release notes for each Helm chart utilised by Boards
 | [2.2.0](../assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz)   | Merge activity-migration as optional component (`migration.enabled`, default `false`)                                  | No – uninstall the standalone activity-migration release before enabling |
 | [2.3.0](../assets/config/kubernetes/huddo-boards-cp-2.3.0.tgz)   | Auto-create secrets: CA bundle mount (`global.internalCa`), `extraObjects`, and `imageCredentials` (image pull secret) | No                                                     |
 | [2.3.1](../assets/config/kubernetes/huddo-boards-cp-2.3.1.tgz)   | Drop legacy support for removed `v1beta1` APIs (Deployment, Ingress, PodSecurityPolicy) | No                                                     |
+| [2.3.2](../assets/config/kubernetes/huddo-boards-cp-2.3.2.tgz)   | Drop deprecated Traefik `StripPrefix` `forceSlash` option (clears the `ForceSlash` deprecation warning in Traefik logs; no behaviour change) | No                                                     |
 
 #### Upgrade command
 
 ```bash
-helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.1.tgz -i -f ./boards-cp.yaml --namespace connections
+helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.2.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
 
 !!! note
@@ -82,11 +83,12 @@ helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/hud
 | [2.0.0](../assets/config/kubernetes/huddo-boards-2.0.0.tgz)   | Move from ingress-nginx to [traefik](./traefik.md)                                   | **Yes** – [migration required](./traefik.md)           |
 | [2.1.0](../assets/config/kubernetes/huddo-boards-2.1.0.tgz)   | Auto-create secrets: CA bundle mount (`global.internalCa`), `extraObjects`, and `imageCredentials` (image pull secret)  | No                                                     |
 | [2.1.1](../assets/config/kubernetes/huddo-boards-2.1.1.tgz)   | Drop legacy support for removed `v1beta1` APIs (Deployment, Ingress)  | No                                                     |
+| [2.1.2](../assets/config/kubernetes/huddo-boards-2.1.2.tgz)   | Drop deprecated Traefik `StripPrefix` `forceSlash` option (clears the `ForceSlash` deprecation warning in Traefik logs; no behaviour change)  | No                                                     |
 
 #### Upgrade command
 
 ```bash
-helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-2.1.1.tgz -i -f ./boards.yaml --namespace boards
+helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-2.1.2.tgz -i -f ./boards.yaml --namespace boards
 ```
 
 !!! note
