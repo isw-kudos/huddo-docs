@@ -32,6 +32,23 @@
 
 ### 2026
 
+#### 2026-07-14
+
+Improvements:
+
+- Reduced memory usage under heavy load for better stability (profile and organisation images streamed rather than buffered, task queries bounded, image processing capped).
+- New Board wizard - template search now finds My and Public templates as you type, and groups them correctly.
+
+Fixes:
+
+- Blank avatars for users without a profile photo - initials now render in calendar feeds and notification emails.
+- Board calendar feed - disabling a feed now fully revokes its shared link (re-enabling issues a new one).
+- Activity feed cards overlapping the sticky Due Tasks header while scrolling.
+- New Board wizard not populating members when a template is selected.
+- Moving or copying a card to another Board failing when the card carried a deleted colour label.
+- User licence list showing empty rows instead of the user.
+- Recent activity feed not highlighting entries that involve you.
+
 #### 2026-07-07
 
 Improvements:
