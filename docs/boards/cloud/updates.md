@@ -6,6 +6,19 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2026-07-16
+
+Improvements:
+
+- Faster loading of recent Boards in the dashboard, sidebar and Board picker.
+- Faster, lighter loading of Board tiles in large organisations.
+- Template lists now show the 500 most recently updated templates, with a prompt to use search for older ones.
+- Deleting a label now removes it from all your Boards in a single, more reliable action.
+
+Fixes:
+
+- Content Admin: replacing a Board owner with a group now records the correct owner type, and owner replacement is limited to users and groups.
+
 2026-07-14
 
 Improvements:
