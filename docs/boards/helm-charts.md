@@ -43,6 +43,15 @@ Release notes for each Helm chart utilised by Boards
 helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.2.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
 
+!!! tip "Also available on Quay.io (OCI)"
+
+    The chart is also published to our Quay.io registry as an OCI artifact. Log in first with the same Quay.io credentials you use for our images (see the [image access guide](./images.md)):
+
+    ```bash
+    helm registry login quay.io
+    helm upgrade huddo-boards-cp oci://quay.io/huddo/huddo-boards-cp --version 2.3.2 -i -f ./boards-cp.yaml --namespace connections
+    ```
+
 !!! note
 
     Boards images are date-tagged, so each release changes the global env and pods are recreated automatically on upgrade.
@@ -90,6 +99,15 @@ helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/hud
 ```bash
 helm upgrade huddo-boards https://docs.huddo.com/assets/config/kubernetes/huddo-boards-2.1.2.tgz -i -f ./boards.yaml --namespace boards
 ```
+
+!!! tip "Also available on Quay.io (OCI)"
+
+    The chart is also published to our Quay.io registry as an OCI artifact. Log in first with the same Quay.io credentials you use for our images (see the [image access guide](./images.md)):
+
+    ```bash
+    helm registry login quay.io
+    helm upgrade huddo-boards oci://quay.io/huddo/huddo-boards --version 2.1.2 -i -f ./boards.yaml --namespace boards
+    ```
 
 !!! note
 
