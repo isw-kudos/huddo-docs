@@ -6,6 +6,12 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2026-07-20
+
+Improvements:
+
+- Hardened web security headers, including Content Security Policy monitoring and stricter transport security, for safer browsing and embedding.
+
 2026-07-16
 
 Improvements:
