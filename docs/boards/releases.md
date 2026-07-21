@@ -32,6 +32,12 @@
 
 ### 2026
 
+#### 2026-07-21
+
+Improvements:
+
+- New per-deployment security header controls. Lock CORS and framing to a known set of origins (`CORS_ALLOWED_ORIGINS`), tune `Strict-Transport-Security`, and validate then enforce a `Content-Security-Policy`. All are optional and unset by default, so Boards behaves exactly as before unless you opt in. See [Security Headers](./env/security.md).
+
 #### 2026-07-14
 
 Improvements:
