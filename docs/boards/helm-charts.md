@@ -36,11 +36,12 @@ Release notes for each Helm chart utilised by Boards
 | [2.3.0](../assets/config/kubernetes/huddo-boards-cp-2.3.0.tgz)   | Auto-create secrets: CA bundle mount (`global.internalCa`), `extraObjects`, and `imageCredentials` (image pull secret) | No                                                     |
 | [2.3.1](../assets/config/kubernetes/huddo-boards-cp-2.3.1.tgz)   | Drop legacy support for removed `v1beta1` APIs (Deployment, Ingress, PodSecurityPolicy) | No                                                     |
 | [2.3.2](../assets/config/kubernetes/huddo-boards-cp-2.3.2.tgz)   | Drop deprecated Traefik `StripPrefix` `forceSlash` option (clears the `ForceSlash` deprecation warning in Traefik logs; no behaviour change) | No                                                     |
+| [2.3.3](../assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz)   | SeaweedFS migration Job now verifies the sync and prints a report (totals, missing, size mismatch, orphans) to its logs (`s3.migration.verify`, default `true`); completed Job kept for 1h so the report stays readable | No                                                     |
 
 #### Upgrade command
 
 ```bash
-helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.2.tgz -i -f ./boards-cp.yaml --namespace connections
+helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz -i -f ./boards-cp.yaml --namespace connections
 ```
 
 !!! tip "Also available on Quay.io (OCI)"
@@ -49,7 +50,7 @@ helm upgrade huddo-boards-cp https://docs.huddo.com/assets/config/kubernetes/hud
 
     ```bash
     helm registry login quay.io
-    helm upgrade huddo-boards-cp oci://quay.io/huddo/huddo-boards-cp --version 2.3.2 -i -f ./boards-cp.yaml --namespace connections
+    helm upgrade huddo-boards-cp oci://quay.io/huddo/huddo-boards-cp --version 2.3.3 -i -f ./boards-cp.yaml --namespace connections
     ```
 
 !!! note

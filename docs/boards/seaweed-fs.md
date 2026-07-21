@@ -107,7 +107,7 @@ Run the upgrade:
 
 ```bash
 helm upgrade huddo-boards-cp \
-  https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz \
+  https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz \
   -n <namespace> \
   -f <your-values.yaml>
 ```
@@ -130,20 +130,44 @@ When complete, the Job will log object counts and total size.
 
 ### Verify data integrity
 
-Compare object counts between source and destination:
+As of chart `2.3.3`, the migration Job runs a verification pass after the sync (on by default via `s3.migration.verify: true`) and prints the report straight to its own logs — no separate pod needed. The Job is retained for 1 hour after it finishes, so read the report with:
 
 ```bash
-# Exec into any pod with network access, or run a temporary pod:
-kubectl run s3-check --rm -it --image=amazon/aws-cli:latest -n <namespace> -- sh
-
-# Inside the pod — count MinIO objects (legacy bucket name):
-aws s3 ls s3://kudos-boards --recursive --endpoint-url http://huddo-boards-cp-minio-service:9000 | wc -l
-
-# Count SeaweedFS objects (new bucket name):
-aws s3 ls s3://huddo-boards --recursive --endpoint-url http://huddo-boards-cp-s3:8333 | wc -l
+kubectl logs -n <namespace> job/huddo-boards-cp-s3-migration-<revision>
 ```
 
-For total size + object count in one shot, append `--summarize` and read the trailing `Total Objects` / `Total Size` lines.
+The report shows:
+
+- **Totals** — object count and total size for source and destination, side by side.
+- **Missing on destination** — source objects that were not copied. Should be `(none)`.
+- **Size mismatch** — objects that copied but differ in size (partial/corrupt copy). Should be `(none)`.
+- **Extra on destination** — objects on SeaweedFS not present in MinIO (orphans from an earlier partial run). Usually harmless, but flagged so you can spot a wrong-bucket mistake.
+
+Comparison is size-only, so it is cheap and does not download objects.
+
+```
+>> Missing on destination (source objects not copied):
+  (none)
+>> Size mismatch (partial or corrupt copy):
+  (none)
+>> Extra on destination (orphans not present in source):
+  (none)
+All three lists '(none)' => data fully migrated.
+```
+
+> **Interpreting a small difference on a busy system:** apps keep writing to MinIO *during* Phase 1, so the source can legitimately grow past the destination after the sync snapshot — a handful of "missing on destination" objects with recent timestamps is expected, not a fault. What matters is *which* objects differ (the report names them), not the raw count. Empty directory markers, zero-byte placeholders, and incomplete multipart uploads on MinIO also account for small gaps and are safe to ignore. To get a stable zero, freeze writes and run one final sync before cutover (see Phase 2).
+
+If you disabled `s3.migration.verify`, are on an older chart, or need to re-check without re-running the sync, run rclone against both endpoints from a throwaway pod (the migration pod itself is gone once the Job finishes):
+
+```bash
+kubectl run rclone-check --rm -it --image=rclone/rclone:latest -n <namespace> -- \
+  check \
+  ':s3,provider=Other,access_key_id=<key>,secret_access_key=<secret>,endpoint="http://huddo-boards-cp-minio-service:9000",force_path_style=true:kudos-boards' \
+  ':s3,provider=Other,access_key_id=<key>,secret_access_key=<secret>,endpoint="http://huddo-boards-cp-s3:8333",force_path_style=true:huddo-boards' \
+  --size-only --one-way --missing-on-dst -
+```
+
+> **Note:** the `endpoint` value contains a `:`, so it must be double-quoted inside the connection string (and the whole remote single-quoted so the shell keeps the double quotes) — otherwise rclone truncates the endpoint at the first colon and fails with ``Custom endpoint `http` was not a valid URI``.
 
 > **Tip for large datasets:** If your data is too large for a single Job run (e.g. the Job times out or the pod is evicted), you can safely run the upgrade again. The migration Job uses `rclone sync`, which is idempotent — it only copies objects that are missing or changed in the destination.
 
@@ -178,7 +202,7 @@ Run the upgrade:
 
 ```bash
 helm upgrade huddo-boards-cp \
-  https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz \
+  https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz \
   -n <namespace> \
   -f <your-values.yaml>
 ```
@@ -267,7 +291,7 @@ minio:
 
 ```bash
 helm upgrade huddo-boards-cp \
-  https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz \
+  https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz \
   -n <namespace> \
   -f <your-values.yaml>
 ```
@@ -283,8 +307,8 @@ Alternatively, run the migration outside of the Helm Job entirely:
 ```bash
 kubectl run rclone-manual --rm -it --image=rclone/rclone:latest -n <namespace> -- \
   sync \
-  :s3,provider=Other,access_key_id=<key>,secret_access_key=<secret>,endpoint=http://huddo-boards-cp-minio-service:9000,force_path_style=true:kudos-boards \
-  :s3,provider=Other,access_key_id=<key>,secret_access_key=<secret>,endpoint=http://huddo-boards-cp-s3:8333,force_path_style=true:huddo-boards \
+  ':s3,provider=Other,access_key_id=<key>,secret_access_key=<secret>,endpoint="http://huddo-boards-cp-minio-service:9000",force_path_style=true:kudos-boards' \
+  ':s3,provider=Other,access_key_id=<key>,secret_access_key=<secret>,endpoint="http://huddo-boards-cp-s3:8333",force_path_style=true:huddo-boards' \
   --progress --transfers 16 --checkers 32
 ```
 
