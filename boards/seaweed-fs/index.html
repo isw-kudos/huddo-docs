@@ -8308,7 +8308,7 @@
 </blockquote>
 <p>Run the upgrade:</p>
 <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>huddo-boards-cp<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-f<span class="w"> </span>&lt;your-values.yaml&gt;
 </code></pre></div>
@@ -8321,18 +8321,37 @@
 </code></pre></div>
 <p>When complete, the Job will log object counts and total size.</p>
 <h3 id="verify-data-integrity">Verify data integrity<a class="headerlink" href="#verify-data-integrity" title="Permanent link">&para;</a></h3>
-<p>Compare object counts between source and destination:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Exec into any pod with network access, or run a temporary pod:</span>
-kubectl<span class="w"> </span>run<span class="w"> </span>s3-check<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>--image<span class="o">=</span>amazon/aws-cli:latest<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--<span class="w"> </span>sh
-
-<span class="c1"># Inside the pod — count MinIO objects (legacy bucket name):</span>
-aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://kudos-boards<span class="w"> </span>--recursive<span class="w"> </span>--endpoint-url<span class="w"> </span>http://huddo-boards-cp-minio-service:9000<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
-
-<span class="c1"># Count SeaweedFS objects (new bucket name):</span>
-aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://huddo-boards<span class="w"> </span>--recursive<span class="w"> </span>--endpoint-url<span class="w"> </span>http://huddo-boards-cp-s3:8333<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+<p>As of chart <code>2.3.3</code>, the migration Job runs a verification pass after the sync (on by default via <code>s3.migration.verify: true</code>) and prints the report straight to its own logs — no separate pod needed. The Job is retained for 1 hour after it finishes, so read the report with:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>job/huddo-boards-cp-s3-migration-&lt;revision&gt;
 </code></pre></div>
-<p>For total size + object count in one shot, append <code>--summarize</code> and read the trailing <code>Total Objects</code> / <code>Total Size</code> lines.</p>
+<p>The report shows:</p>
+<ul>
+<li><strong>Totals</strong> — object count and total size for source and destination, side by side.</li>
+<li><strong>Missing on destination</strong> — source objects that were not copied. Should be <code>(none)</code>.</li>
+<li><strong>Size mismatch</strong> — objects that copied but differ in size (partial/corrupt copy). Should be <code>(none)</code>.</li>
+<li><strong>Extra on destination</strong> — objects on SeaweedFS not present in MinIO (orphans from an earlier partial run). Usually harmless, but flagged so you can spot a wrong-bucket mistake.</li>
+</ul>
+<p>Comparison is size-only, so it is cheap and does not download objects.</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt; Missing on destination (source objects not copied):
+  (none)
+&gt;&gt; Size mismatch (partial or corrupt copy):
+  (none)
+&gt;&gt; Extra on destination (orphans not present in source):
+  (none)
+All three lists &#39;(none)&#39; =&gt; data fully migrated.
+</code></pre></div>
 <blockquote>
+<p><strong>Interpreting a small difference on a busy system:</strong> apps keep writing to MinIO <em>during</em> Phase 1, so the source can legitimately grow past the destination after the sync snapshot — a handful of "missing on destination" objects with recent timestamps is expected, not a fault. What matters is <em>which</em> objects differ (the report names them), not the raw count. Empty directory markers, zero-byte placeholders, and incomplete multipart uploads on MinIO also account for small gaps and are safe to ignore. To get a stable zero, freeze writes and run one final sync before cutover (see Phase 2).</p>
+</blockquote>
+<p>If you disabled <code>s3.migration.verify</code>, are on an older chart, or need to re-check without re-running the sync, run rclone against both endpoints from a throwaway pod (the migration pod itself is gone once the Job finishes):</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>rclone-check<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>--image<span class="o">=</span>rclone/rclone:latest<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>check<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">&#39;:s3,provider=Other,access_key_id=&lt;key&gt;,secret_access_key=&lt;secret&gt;,endpoint=&quot;http://huddo-boards-cp-minio-service:9000&quot;,force_path_style=true:kudos-boards&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">&#39;:s3,provider=Other,access_key_id=&lt;key&gt;,secret_access_key=&lt;secret&gt;,endpoint=&quot;http://huddo-boards-cp-s3:8333&quot;,force_path_style=true:huddo-boards&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--size-only<span class="w"> </span>--one-way<span class="w"> </span>--missing-on-dst<span class="w"> </span>-
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> the <code>endpoint</code> value contains a <code>:</code>, so it must be double-quoted inside the connection string (and the whole remote single-quoted so the shell keeps the double quotes) — otherwise rclone truncates the endpoint at the first colon and fails with <code>Custom endpoint `http` was not a valid URI</code>.</p>
 <p><strong>Tip for large datasets:</strong> If your data is too large for a single Job run (e.g. the Job times out or the pod is evicted), you can safely run the upgrade again. The migration Job uses <code>rclone sync</code>, which is idempotent — it only copies objects that are missing or changed in the destination.</p>
 </blockquote>
 <hr />
@@ -8359,7 +8378,7 @@ aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s
 </blockquote>
 <p>Run the upgrade:</p>
 <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>huddo-boards-cp<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-f<span class="w"> </span>&lt;your-values.yaml&gt;
 </code></pre></div>
@@ -8418,7 +8437,7 @@ kubectl<span class="w"> </span>describe<span class="w"> </span>job<span class="w
 <span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>huddo-boards-cp<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.2.0.tgz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://docs.huddo.com/assets/config/kubernetes/huddo-boards-cp-2.3.3.tgz<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-f<span class="w"> </span>&lt;your-values.yaml&gt;
 </code></pre></div>
@@ -8428,8 +8447,8 @@ kubectl<span class="w"> </span>describe<span class="w"> </span>job<span class="w
 <p>Alternatively, run the migration outside of the Helm Job entirely:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>rclone-manual<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>--image<span class="o">=</span>rclone/rclone:latest<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>sync<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>:s3,provider<span class="o">=</span>Other,access_key_id<span class="o">=</span>&lt;key&gt;,secret_access_key<span class="o">=</span>&lt;secret&gt;,endpoint<span class="o">=</span>http://huddo-boards-cp-minio-service:9000,force_path_style<span class="o">=</span>true:kudos-boards<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>:s3,provider<span class="o">=</span>Other,access_key_id<span class="o">=</span>&lt;key&gt;,secret_access_key<span class="o">=</span>&lt;secret&gt;,endpoint<span class="o">=</span>http://huddo-boards-cp-s3:8333,force_path_style<span class="o">=</span>true:huddo-boards<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">&#39;:s3,provider=Other,access_key_id=&lt;key&gt;,secret_access_key=&lt;secret&gt;,endpoint=&quot;http://huddo-boards-cp-minio-service:9000&quot;,force_path_style=true:kudos-boards&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">&#39;:s3,provider=Other,access_key_id=&lt;key&gt;,secret_access_key=&lt;secret&gt;,endpoint=&quot;http://huddo-boards-cp-s3:8333&quot;,force_path_style=true:huddo-boards&#39;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--progress<span class="w"> </span>--transfers<span class="w"> </span><span class="m">16</span><span class="w"> </span>--checkers<span class="w"> </span><span class="m">32</span>
 </code></pre></div>
 <h3 id="reclaiming-minio-data-after-the-soak-period">Reclaiming MinIO data after the soak period<a class="headerlink" href="#reclaiming-minio-data-after-the-soak-period" title="Permanent link">&para;</a></h3>
@@ -8457,7 +8476,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span>/pv-connections/huddo-board
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-06-04
+    2026-07-21
   </span>
 
     
