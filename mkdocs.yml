@@ -42,10 +42,12 @@ nav:
               - Existing domain: boards/aio/existing-domain/index.md
               - Subdomains: boards/aio/subdomains/index.md
           - Access to Images: boards/images.md
-          - Configuration: boards/env/common.md
+          - Configuration:
+              - boards/env/common.md
+              - Emails: boards/env/notifications.md
+              - Help Links: boards/env/help-links.md
+              - Security Headers: boards/env/security.md
           - Compatibility: boards/compatibility.md
-          - Customise Emails: boards/env/notifications.md
-          - Customise Help Links: boards/env/help-links.md
           - Helm Charts: boards/helm-charts.md
           - Proxy (nginx): boards/proxy/nginx.md
           - Traefik Migration: boards/traefik.md
