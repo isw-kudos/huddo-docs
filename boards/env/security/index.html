@@ -1858,6 +1858,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Content-Security-Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-boards-needs-from-a-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Boards needs from a policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#same-domain-as-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Same domain as Connections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-host-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separate host names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standalone-no-connections-banner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standalone (no Connections banner)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -7758,6 +7808,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Content-Security-Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-boards-needs-from-a-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Boards needs from a policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#same-domain-as-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Same domain as Connections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-host-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separate host names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standalone-no-connections-banner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standalone (no Connections banner)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -7867,7 +7967,122 @@
 </tr>
 </tbody>
 </table>
-<p>Use a YAML folded block (<code>&gt;-</code>) with one directive per line, each ending in a semicolon. Start in report-only mode, then move the same value to <code>CSP</code> to enforce it:</p>
+<p>Use a YAML folded block (<code>&gt;-</code>) with one directive per line, each ending in a semicolon. Start in report-only mode, then move the same value to <code>CSP</code> to enforce it.</p>
+<h3 id="what-boards-needs-from-a-policy">What Boards needs from a policy<a class="headerlink" href="#what-boards-needs-from-a-policy" title="Permanent link">&para;</a></h3>
+<p>In the table below, <em>API host</em> is where <code>API_GATEWAY</code> points, and <em>Connections host</em> is the Connections deployment Boards is configured against. When either shares the Boards domain, <code>'self'</code> already covers it and the entry can be dropped.</p>
+<table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>Value</th>
+<th>Why Boards needs it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default-src</code></td>
+<td><code>'self'</code></td>
+<td>Safe fallback for anything not listed; Boards itself is served from its own origin.</td>
+</tr>
+<tr>
+<td><code>script-src</code></td>
+<td><code>'unsafe-inline'</code></td>
+<td>Connections/Collab banner only — it injects inline scripts. Drop it on deployments without the banner.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>'unsafe-eval'</code></td>
+<td>Connections/Collab banner only (its Dojo toolkit) — drop it on deployments without the banner.</td>
+</tr>
+<tr>
+<td></td>
+<td>Connections host</td>
+<td>Banner scripts (only when Connections is on a different origin).</td>
+</tr>
+<tr>
+<td><code>style-src</code></td>
+<td><code>'unsafe-inline'</code></td>
+<td>Rich-text formatting (text colour, alignment) is rendered as inline styles; the Connections banner also injects styles.</td>
+</tr>
+<tr>
+<td></td>
+<td>Connections host</td>
+<td>Banner stylesheets.</td>
+</tr>
+<tr>
+<td><code>img-src</code></td>
+<td><code>data:</code> <code>blob:</code></td>
+<td>Avatars and file thumbnails are fetched via the API and displayed from memory; placeholders and icons are inline data URLs.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>https:</code></td>
+<td>User content (descriptions, comments) can reference images on any host. Replace with known hosts for a tighter policy — external images then show as broken.</td>
+</tr>
+<tr>
+<td><code>connect-src</code></td>
+<td>API host + <code>wss:</code> API host</td>
+<td>All API calls, file/preview downloads and live updates (WebSocket).</td>
+</tr>
+<tr>
+<td></td>
+<td>Connections host</td>
+<td>Banner data requests and notifications.</td>
+</tr>
+<tr>
+<td><code>media-src</code></td>
+<td>API host</td>
+<td>Video/audio file preview.</td>
+</tr>
+<tr>
+<td><code>frame-src</code></td>
+<td>API host</td>
+<td>HTML file preview renders in an iframe served by the API.</td>
+</tr>
+<tr>
+<td><code>font-src</code></td>
+<td><code>data:</code></td>
+<td>Bundled fonts; some are inlined as data URLs.</td>
+</tr>
+<tr>
+<td></td>
+<td>Connections host</td>
+<td>Banner icon fonts.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>https://static2.sharepointonline.com</code> <code>https://spoprod-a.akamaihd.net</code></td>
+<td>Microsoft 365 deployments only: the Microsoft 365 header loads its fonts and icon font from these Microsoft CDNs. Without them the header falls back to system fonts and icons render blank.</td>
+</tr>
+<tr>
+<td><code>worker-src</code></td>
+<td><code>'self'</code> <code>blob:</code></td>
+<td>Offline service worker and the PDF preview worker.</td>
+</tr>
+<tr>
+<td><code>manifest-src</code></td>
+<td><code>'self'</code></td>
+<td>The web-app manifest (install/pin metadata).</td>
+</tr>
+<tr>
+<td><code>object-src</code></td>
+<td><code>'none'</code></td>
+<td>Nothing uses plugins — lock it down.</td>
+</tr>
+<tr>
+<td><code>base-uri</code></td>
+<td><code>'self'</code></td>
+<td>Restricts the page <code>&lt;base&gt;</code> URL. This directive has <strong>no</strong> <code>default-src</code> fallback, so always set it explicitly.</td>
+</tr>
+<tr>
+<td><code>frame-ancestors</code></td>
+<td><strong>do not set</strong></td>
+<td>Framing is controlled by <code>CORS_ALLOWED_ORIGINS</code> (see above), which emits its own <code>frame-ancestors</code> policy. Browsers enforce every policy — setting it here too means a parent must be allowed by <strong>both</strong>, which can block framers you meant to allow. It is also ignored in Report-Only mode, so it cannot be validated via <code>CSP_REPORT_ONLY</code> anyway.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="same-domain-as-connections">Same domain as Connections<a class="headerlink" href="#same-domain-as-connections" title="Permanent link">&para;</a></h3>
+<p>The usual Component Pack shape — Boards and its API served from the Connections domain (e.g. <code>connections.example.com/boards</code> and <code>connections.example.com/api-boards</code>). Everything is same-origin, so <code>'self'</code> covers the API <em>and</em> the Connections banner:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">webfront</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">env</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">CSP_REPORT_ONLY</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
@@ -7875,10 +8090,53 @@
 <span class="w">      </span><span class="no">script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;;</span>
 <span class="w">      </span><span class="no">style-src &#39;self&#39; &#39;unsafe-inline&#39;;</span>
 <span class="w">      </span><span class="no">img-src &#39;self&#39; data: blob: https:;</span>
-<span class="w">      </span><span class="no">connect-src &#39;self&#39; https://your-api.example.com wss://your-api.example.com;</span>
+<span class="w">      </span><span class="no">connect-src &#39;self&#39;;</span>
+<span class="w">      </span><span class="no">media-src &#39;self&#39;;</span>
 <span class="w">      </span><span class="no">frame-src &#39;self&#39;;</span>
-<span class="w">      </span><span class="no">worker-src &#39;self&#39; blob:</span>
+<span class="w">      </span><span class="no">font-src &#39;self&#39; data:;</span>
+<span class="w">      </span><span class="no">worker-src &#39;self&#39; blob:;</span>
+<span class="w">      </span><span class="no">manifest-src &#39;self&#39;;</span>
+<span class="w">      </span><span class="no">object-src &#39;none&#39;;</span>
+<span class="w">      </span><span class="no">base-uri &#39;self&#39;;</span>
 </code></pre></div>
+<h3 id="separate-host-names">Separate host names<a class="headerlink" href="#separate-host-names" title="Permanent link">&para;</a></h3>
+<p>Boards on its own host names (e.g. <code>boards.example.com</code> with the API at <code>api-boards.example.com</code>, Connections at <code>connections.example.com</code>). <code>https://*.example.com</code> covers the API and Connections hosts in one entry — replace it with the explicit host names for a tighter policy:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">webfront</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">CSP_REPORT_ONLY</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">      </span><span class="no">default-src &#39;self&#39;;</span>
+<span class="w">      </span><span class="no">script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.example.com;</span>
+<span class="w">      </span><span class="no">style-src &#39;self&#39; &#39;unsafe-inline&#39; https://*.example.com;</span>
+<span class="w">      </span><span class="no">img-src &#39;self&#39; data: blob: https:;</span>
+<span class="w">      </span><span class="no">connect-src &#39;self&#39; https://*.example.com wss://*.example.com;</span>
+<span class="w">      </span><span class="no">media-src &#39;self&#39; https://api-boards.example.com;</span>
+<span class="w">      </span><span class="no">frame-src &#39;self&#39; https://api-boards.example.com;</span>
+<span class="w">      </span><span class="no">font-src &#39;self&#39; data: https://*.example.com;</span>
+<span class="w">      </span><span class="no">worker-src &#39;self&#39; blob:;</span>
+<span class="w">      </span><span class="no">manifest-src &#39;self&#39;;</span>
+<span class="w">      </span><span class="no">object-src &#39;none&#39;;</span>
+<span class="w">      </span><span class="no">base-uri &#39;self&#39;;</span>
+</code></pre></div>
+<h3 id="standalone-no-connections-banner">Standalone (no Connections banner)<a class="headerlink" href="#standalone-no-connections-banner" title="Permanent link">&para;</a></h3>
+<p>Without the Connections/Collab banner (e.g. DX deployments), <code>script-src</code> needs no <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code> at all, and the Connections host entries go away. For a deployment at <code>boards.example.com</code> with the API at <code>api-boards.example.com</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">webfront</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">CSP_REPORT_ONLY</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">      </span><span class="no">default-src &#39;self&#39;;</span>
+<span class="w">      </span><span class="no">script-src &#39;self&#39;;</span>
+<span class="w">      </span><span class="no">style-src &#39;self&#39; &#39;unsafe-inline&#39;;</span>
+<span class="w">      </span><span class="no">img-src &#39;self&#39; data: blob: https:;</span>
+<span class="w">      </span><span class="no">connect-src &#39;self&#39; https://api-boards.example.com wss://api-boards.example.com;</span>
+<span class="w">      </span><span class="no">media-src &#39;self&#39; https://api-boards.example.com;</span>
+<span class="w">      </span><span class="no">frame-src &#39;self&#39; https://api-boards.example.com;</span>
+<span class="w">      </span><span class="no">font-src &#39;self&#39; data:;</span>
+<span class="w">      </span><span class="no">worker-src &#39;self&#39; blob:;</span>
+<span class="w">      </span><span class="no">manifest-src &#39;self&#39;;</span>
+<span class="w">      </span><span class="no">object-src &#39;none&#39;;</span>
+<span class="w">      </span><span class="no">base-uri &#39;self&#39;;</span>
+</code></pre></div>
+<p><strong>DX</strong>: no extra CSP entries. Embedding Boards <em>inside</em> DX pages is controlled by <code>CORS_ALLOWED_ORIGINS</code> (framing), not by this policy.</p>
+<p>Whatever the shape, run report-only first — violations surface anything deployment-specific (integrations, customisations) before a policy blocks it.</p>
 
 
 
@@ -7899,7 +8157,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-07-21
+    2026-07-22
   </span>
 
     
