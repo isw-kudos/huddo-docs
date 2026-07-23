@@ -1632,6 +1632,8 @@
       
         
       
+        
+      
     
     
     
@@ -1774,6 +1776,34 @@
     
   
     Security Headers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../env/sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Expiry
   
 
     
@@ -3147,6 +3177,17 @@
   
     <nav class="md-nav" aria-label="2026">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2026-07-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-07-23
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#2026-07-21" class="md-nav__link">
@@ -8542,6 +8583,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2026-07-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-07-23
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2026-07-21" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9366,6 +9418,21 @@
 <p>Updates may include minor schema migrations at any time. If you have a need to downgrade versions then we recommend performing a back-up of the Mongo database before you update versions.</p>
 </div>
 <h3 id="2026">2026<a class="headerlink" href="#2026" title="Permanent link">&para;</a></h3>
+<h4 id="2026-07-23">2026-07-23<a class="headerlink" href="#2026-07-23" title="Permanent link">&para;</a></h4>
+<p>Improvements:</p>
+<ul>
+<li>Sessions now expire automatically. Browser sessions last 90 days, after which the user simply signs in again. API keys (used for integrations and personal calendar feeds) last 12 months, and a key still in active use for a calendar feed is extended automatically so feeds keep working. The admin session list now shows when each session expires. Lifetimes are configurable — see <a href="../env/sessions/">Session Expiry</a>.</li>
+<li>The web app no longer relies on inline scripts blocked by a strict <code>Content-Security-Policy</code>, and the offline service worker is functional again.</li>
+<li>Security hardening: stricter validation of identifiers in API requests, and the API documentation page now verifies its assets with integrity checks.</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After upgrading, existing sessions are given an expiry for the first time: users whose sign-in is older than 90 days will need to sign in again. API keys older than 12 months remain valid for a 7 day grace period — keys still being used for a calendar feed are extended automatically and keep working. See <a href="../env/sessions/">Session Expiry</a>.</p>
+</div>
+<p>Fixes:</p>
+<ul>
+<li>The "Select from cloud files" and "Link to File" options are no longer offered when no provider with file access is configured.</li>
+</ul>
 <h4 id="2026-07-21">2026-07-21<a class="headerlink" href="#2026-07-21" title="Permanent link">&para;</a></h4>
 <p>Improvements:</p>
 <ul>
@@ -10610,7 +10677,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-07-21
+    2026-07-23
   </span>
 
     
