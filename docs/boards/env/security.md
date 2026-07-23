@@ -74,6 +74,9 @@ In the table below, *API host* is where `API_GATEWAY` points, and *Connections h
 |                | Connections host                     | Banner data requests and notifications.                                                                                                    |
 | `media-src`    | API host                             | Video/audio file preview.                                                                                                                  |
 | `frame-src`    | API host                             | HTML file preview renders in an iframe served by the API.                                                                                  |
+| `form-action`  | `'self'`                             | Restricts where forms may submit (prevents form-hijacking). Boards' own forms post to its own origin.                                      |
+|                | API host                             | Form submits to the API (e.g. sign-in). Drop when the API shares the Boards origin.                                                        |
+|                | Connections host                     | Connections/Collab banner forms (e.g. its search box).                                                                                     |
 | `font-src`     | `data:`                              | Bundled fonts; some are inlined as data URLs.                                                                                              |
 |                | Connections host                     | Banner icon fonts.                                                                                                                         |
 |                | `https://static2.sharepointonline.com` `https://spoprod-a.akamaihd.net` | Microsoft 365 deployments only: the Microsoft 365 header loads its fonts and icon font from these Microsoft CDNs. Without them the header falls back to system fonts and icons render blank. |
@@ -98,6 +101,7 @@ webfront:
       connect-src 'self';
       media-src 'self';
       frame-src 'self';
+      form-action 'self';
       font-src 'self' data:;
       worker-src 'self' blob:;
       manifest-src 'self';
@@ -120,6 +124,7 @@ webfront:
       connect-src 'self' https://*.example.com wss://*.example.com;
       media-src 'self' https://api-boards.example.com;
       frame-src 'self' https://api-boards.example.com;
+      form-action 'self' https://*.example.com;
       font-src 'self' data: https://*.example.com;
       worker-src 'self' blob:;
       manifest-src 'self';
@@ -142,6 +147,7 @@ webfront:
       connect-src 'self' https://api-boards.example.com wss://api-boards.example.com;
       media-src 'self' https://api-boards.example.com;
       frame-src 'self' https://api-boards.example.com;
+      form-action 'self' https://api-boards.example.com;
       font-src 'self' data:;
       worker-src 'self' blob:;
       manifest-src 'self';
