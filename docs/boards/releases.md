@@ -32,6 +32,22 @@
 
 ### 2026
 
+#### 2026-07-23
+
+Improvements:
+
+- Sessions now expire automatically. Browser sessions last 90 days, after which the user simply signs in again. API keys (used for integrations and personal calendar feeds) last 12 months, and a key still in active use for a calendar feed is extended automatically so feeds keep working. The admin session list now shows when each session expires. Lifetimes are configurable — see [Session Expiry](./env/sessions.md).
+- The web app no longer relies on inline scripts blocked by a strict `Content-Security-Policy`, and the offline service worker is functional again.
+- Security hardening: stricter validation of identifiers in API requests, and the API documentation page now verifies its assets with integrity checks.
+
+!!! important
+
+    After upgrading, existing sessions are given an expiry for the first time: users whose sign-in is older than 90 days will need to sign in again. API keys older than 12 months remain valid for a 7 day grace period — keys still being used for a calendar feed are extended automatically and keep working. See [Session Expiry](./env/sessions.md).
+
+Fixes:
+
+- The "Select from cloud files" and "Link to File" options are no longer offered when no provider with file access is configured.
+
 #### 2026-07-21
 
 Improvements:
