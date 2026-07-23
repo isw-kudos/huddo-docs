@@ -6,6 +6,17 @@ Please see here for recent changes to [Huddo Boards Cloud](https://boards.huddo.
 
 ### July
 
+2026-07-23
+
+Improvements:
+
+- Sessions now expire automatically. Browser sessions last 90 days, after which you simply sign in again — if your last sign-in was more than 90 days ago you will be asked to sign in after this update. API keys (used for integrations and personal calendar feeds) last 12 months, and a key still in active use for a calendar feed is extended automatically so feeds keep working. The admin session list now shows when each session expires.
+- Further security hardening: stricter validation of identifiers in API requests, integrity checks on the API documentation page, and the offline service worker is functional again under the strict Content Security Policy.
+
+Fixes:
+
+- The "Select from cloud files" and "Link to File" options are no longer offered when no provider with file access is configured.
+
 2026-07-20
 
 Improvements:
