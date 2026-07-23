@@ -47,6 +47,7 @@ nav:
               - Emails: boards/env/notifications.md
               - Help Links: boards/env/help-links.md
               - Security Headers: boards/env/security.md
+              - Session Expiry: boards/env/sessions.md
           - Compatibility: boards/compatibility.md
           - Helm Charts: boards/helm-charts.md
           - Proxy (nginx): boards/proxy/nginx.md
